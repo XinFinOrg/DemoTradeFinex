@@ -1,0 +1,4 @@
+mongod --port 27743 --dbpath /var/lib/mongodb
+"0xf2e1fa21a25ea4716375fe9c09e5ea11302a22c7"
+"0xcbd2cac959abd552d94be23ff884e3040a202231"
+"0x1e42545e98b52769a9ecbc9182bf98b9b739d574"
