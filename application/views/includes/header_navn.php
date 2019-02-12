@@ -58,13 +58,17 @@
 						<li class="hidden-xs hidden-sm"> | </li>
 						<li> <a href="javascript:void(0)" data-toggle="modal" data-target="#login" title="Submit Project">Submit Project</a> </li>
 						<li class="hidden-xs hidden-sm"> | </li>
-						<li> <a href="javascript:void(0)" title="">Solutions</a>
-							<ul class="submenu">
-							    <li> <a href="<?=base_url();?>publicv/finance_solutions" title="Know about finance">Finance Solutions</a> </li>
-								<li> <a href="<?=base_url();?>publicv/trade_solutions" title="Know about trade">Trade Solutions</a> </li>
-								<li> <a href="<?=base_url();?>publicv/financier" title="Know about financier">Financier</a> </li>
+						<li class="hassubs"> <a href="javascript:void(0)" title="">Solutions</a>
+							<ul class="dropdown">
+							    <li  class="subs hassubs"> 
+									<a href="javascript:void(0)"title="">MSME's Finance Instruments</a> 
+								<ul class="dropdown">
+								<li class="subs "> <a href="<?=base_url();?>publicv/infactor_view" title="Know about infactor">InFactor</a> </li>
+								<!-- <li> <a href="<?=base_url();?>publicv/financier" title="Know about financier">Financier</a> </li>
 								<li> <a href="<?=base_url();?>publicv/beneficiary" title="Know about beneficiary">Beneficiary</a> </li>
-								<li> <a href="<?=base_url();?>publicv/supplier" title="Know about supplier">Supplier</a> </li>
+								<li> <a href="<?=base_url();?>publicv/supplier" title="Know about supplier">Supplier</a> </li> -->
+								</ul>
+								</li>
 							</ul>
 						</li>
 						<li class="hidden-xs hidden-sm"> | </li>

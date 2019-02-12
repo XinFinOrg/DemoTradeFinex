@@ -1,4 +1,4 @@
-<section id="home_slider_banner" class="top_banner parallax parallax_block"> 
+	<section id="home_slider_banner" class="top_banner parallax parallax_block"> 
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
 			
@@ -206,12 +206,12 @@
 				</div>
 				<br>
 				<p>Asian Development Bank, “2017 Trade Finance Gaps, Growth and Jobs Survey” </p>		
-				<h3>What TradeFinex can do for you?	</h3>
+				<h3 class="home-page">What TradeFinex can do for you?	</h3>
 				<p> Access to a decentralized P2P global trade and P2P global financing solutions framework in a law of land compliant platform</p>
-				<h3>What is TradeFinex?	</h3>
+				<h3 class="home-page">What is TradeFinex?	</h3>
 				<p>TradeFinex is a decentralized peer to peer global Trade & Infrastructure Finance platform built on open standards and it provides seamless connectivity between global public investors, contract authority, project company, regulators and other key project finance stakeholders</p>
 				<p>It brings together financiers & investors, buyers, suppliers as well as government and regulatory bodies. TradeFinex aims to minimize global trade finance gap as well as infrastructure deficit by minimizing inefficiencies and increasing liquidity by leveraging Blockchain technology. Its key features include decentralized platform, smart contracting, asset tokenization, integrated wallets, real time global and cross border payments and settlements and regulatory sandbox environment – powered by XinFin’s enterprise ready hybrid blockchain protocol. TradeFinex’s Application Programming Interfaces (APIs) also provide further interoperability with other systems and platforms – thus enriching the whole trade finance ecosystem.</p>
-				<h3>Benefits of using TradeFinex</h3>
+				<h3 class="home-page">Benefits of using TradeFinex</h3>
 				<div class ="home-page"><ul style="list-style-type:disc;" ><li> Secure and transparent commerce amongst trusted participants</li>
 				<li>Enhanced access to finance and global biz opportunities</li>
 				<li>Reduced costs via process efficiencies and disintermediation</li>

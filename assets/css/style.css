@@ -207,11 +207,29 @@ h3 {
 	font-size: 20px;
 	line-height: 24px;
 	font-weight: 500;
+	text-align: center;
+}
+ h3.home-page{
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 500;
 	text-align: left;
 }
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }
 h4 {
 	font-size: 16px;
 	line-height: 24px;
+	
+}
+h4.infactor{
+	font-size: 16px;
+	line-height: 26px;
+	color: #fff;
 }
 select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], input[type="email"] {
 	font-family: 'open_sansregular';
@@ -457,6 +475,110 @@ footer {
 	color: #3a5b77;
 }
 /* Submenu */
+ .dropdown {
+	position: absolute;
+	z-index: 1;
+	background-color: #fff;
+	width: 250px;
+	top: 80px;
+	right:0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	transition-delay: 0.75s;
+	border: 1px solid #f3f3f3;
+  }
+
+  #mainnav .menu > li > .dropdown > li > a {
+	color: #282c3f;
+	display: inline;
+	padding: 0px 0px 0px 15px;
+	line-height: 50px;
+	font-family: 'open_sansregular';
+	font-size: 15px;
+}
+
+  .subs {
+	opacity: 1;
+	z-index: 9999;
+	display: inline; 
+	color: #282c3f;
+	top: 0px;
+	padding: 0px 0px 0px 15px;
+	line-height: 50px;
+	font-family: 'open_sansregular';
+	font-size: 15px;
+	width:200px;
+	/* visibility: visible; */
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+  }
+  .subs:last-child {
+	border: none !important;
+	border-top: 0px;
+  }
+  .hassubs:hover .dropdown,
+  .hassubs .hassubs:hover .dropdown {
+	opacity: 1;
+	visibility:visible;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+  }
+  .mainnav li:hover ul a,
+.mainnav li:hover ul li ul li a {
+  color: #282c3f;
+}
+.mainnav li ul li:hover,
+.mainnav li ul li ul li:hover {
+  background-color: #fff;
+  /* color: #354f65; */
+  padding-left: 20px;
+  transition: ease-in-out 0.35s;
+  -moz-transition: ease-in-out 0.35s;
+  -webkit-transition: ease-in-out 0.35s;
+  
+}
+/*Second Level*/
+.hassubs .hassubs .dropdown .subs {
+  left: 25px;
+  position: relative;
+  width: 165px;
+  top: 0px;
+}
+.hassubs .hassubs .dropdown {
+  position: absolute;
+  width: 150px;
+  left: 200px;
+  top: 50px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out; 
+  /* opacity: 0;
+	z-index: 1;
+	top: 0px;
+	width: 150px;
+  left: 120px;
+	visibility: hidden;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out; */
+}
 
 #mainnav .menu > li > .submenu {
 	opacity: 0;
