@@ -207,7 +207,7 @@ h3 {
 	font-size: 20px;
 	line-height: 24px;
 	font-weight: 500;
-	text-align: center;
+	
 }
  h3.home-page{
 	font-size: 20px;
@@ -1782,7 +1782,7 @@ to {
 }
 .want_to_be h2 {
 	color: #fff;
-	font-size: 31px;
+	font-size: 27px;
 	text-transform: uppercase;
 	font-family: 'open_sanssemibold';
 	margin: 20px 0px;
@@ -6771,6 +6771,12 @@ left:16px;
 }
 .videos_video_content p:first-child {
 	margin: 0px;
+	
+}
+.videos_video_contentt p:first-child {
+	margin: -10px;
+	margin-left: 270px;
+	margin-top: -2px;
 }
 .videos_video_content p {
 	font-size: 15px;

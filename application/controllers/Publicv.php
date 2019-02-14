@@ -1396,7 +1396,7 @@ class Publicv extends CI_Controller {
 		$this->load->view('pages_scripts/common_scripts', $data);
 		$this->load->view('includes/footern');
 	}
-	public function infactor_view(){
+	public function infactor(){
 		
 		$data = array();
 		
