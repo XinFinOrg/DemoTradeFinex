@@ -68,6 +68,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 	padding: 0;
 	border: 0;
 	outline: 0;
+	
 	background: transparent;
 }
 .browse_file_name{
@@ -98,7 +99,7 @@ table {
 img {
 	border: 0;
 	-ms-interpolation-mode: bicubic;
-	vertical-align: middle;
+	vertical-align: left;
 }
 legend {
 	white-space: normal;
@@ -924,7 +925,11 @@ text-align: justify;
 }
 /* Widget Categories */
 .widget-categories {
-	margin-left: -1px;
+	margin-left: -15px;
+}
+.widget-categoriess {
+	margin-left: -15px;
+	color:white;
 }
 .widget-categories h3.widget-title, .widget-contact h3.widget-title {
 	margin-bottom: 15px;
@@ -5916,7 +5921,7 @@ padding:.65rem .9rem;
 }
 .finance_solutions h3 {
 	color: #fff;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-family: 'open_sansregular';
 	font-size: 36px;
 }
@@ -6410,6 +6415,7 @@ padding:.65rem .9rem;
 	text-align: center;
 	line-height: 32px;
 	width: 60%;
+	text-transform: capitalize;
 	margin: 10px auto;
 	margin-bottom: 50px;
 	font-size: 24px;
@@ -7910,7 +7916,8 @@ div.dataTables_wrapper div.dataTables_info {
 	background: #f9f9f9;
 	float: right;
 }
-#frame .content .messages ul li img {
+#frame .content .messages ul li 
+ {
 	width: 22px;
 	border-radius: 50%;
 	float: left;

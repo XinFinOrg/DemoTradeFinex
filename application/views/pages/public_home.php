@@ -189,15 +189,15 @@
 	//$this->load->view('includes/block_features');	
 
 ?> -->
-<section id="consortium" class="about_us padding_50">
+<section id="tradefinex" class="about_us padding_50">
 	<div class="container text-center">
 		
 			<!-- <p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>-->
 			
 			<div class="common_sec">
-				<h2>TradeFinex </h2>
+				<h2>TradeFinex </h2><br>
                 <p>
-				Trade Finance is a foundational stone of any economy.  Over the last few years, the trade finance ecosystem has continued to leverage new technologies and adapt to evolving regulatory conditions. However even as change progresses, huge trade finance gaps persist. Here are some figures from Asian Development Bank’s report </p>
+				Trade Finance is a foundational stone of any economy.  Over the last few years, the trade finance ecosystem has continued to leverage new technologies and adapt to evolving regulatory conditions. However even as change progresses, huge trade finance gaps persist. Here are some figures from Asian Development Bank’s report *</p>
 				<div class ="home-page"><ul style="list-style-type:disc;" ><li> $1.5 trillion global trade finance gap</li>
 				<li>40% of the gap originates in Asia and the Pacific</li>
 				<li>SMEs and mid-cap firms account for 74% of rejected trade finance transactions</li>
@@ -205,7 +205,7 @@
 				<li>A 10% increase in trade finance could boost employment by 1%</li></ul>
 				</div>
 				<br>
-				<p>Asian Development Bank, “2017 Trade Finance Gaps, Growth and Jobs Survey” </p>		
+				<p>*Asian Development Bank, “2017 Trade Finance Gaps, Growth and Jobs Survey” </p>		
 				<h3 class="home-page">What TradeFinex can do for you?	</h3>
 				<p> Access to a decentralized P2P global trade and P2P global financing solutions framework in a law of land compliant platform</p>
 				<h3 class="home-page">What is TradeFinex?	</h3>

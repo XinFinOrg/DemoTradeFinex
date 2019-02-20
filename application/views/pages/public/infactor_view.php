@@ -27,7 +27,7 @@
                 <p>Financier is the factoring individual or company that buys the invoices at a percentage of their total value and it is their responsibility to collect the invoice payments from suppliers’ customers.</p>
                 <p>Consider a Small and Medium sized Enterprise (SME) that has been addressing cash flow issues due to rigid payment terms of 30 to 120 days from its customers. SME puts a request for factoring/discounting its invoices on InFactor platform. SME here becomes the Seller/Supplier, SME’s client/customer becomes Buyer and the factoring individual or company that pays money (minus their fee after risk assessment) to the supplier becomes the Financier.</p>
                 <h3 class="home-page"> What problems is InFactor addressing?</h3><br>
-                <p>InFactor is going to implement:</p>
+                
                 
                                             <p><b>Fraud Prevention </b></p><p>Invoices can be fake and stretched. Sometimes, the same invoice is sent to two or more invoice factoring companies (also called as double invoicing). By putting invoice factoring on blockchain, InFactor will store the entire transaction data and will assign a unique fingerprint to every invoice. InFactor is a blockchain solution that agrees with the common standard for factoring invoices and share their data to protect them from double invoicing. In a nutshell, InFactor will automatize the verification process against double invoicing leading to fraud prevention.</p>
                                             <p><b>Standardization </b></p><p>Centralized banking systems disable smaller companies or companies with poor credit or with no financial track record from availing factoring. Most of the times, these smaller segments are turned down by banks because of the apparent level of risk involved. InFactor will be putting all the companies’ track record onto blockchain injecting transparency and standardization in the system. With ISO20022 standard in place, InFactor will be capturing the existing data sets from banks and institutions and then making it accessible to global factors. The ISO20022 messaging protocol will allow suppliers, financiers and buyers to interact with each other on an open platform and get access to the required data leading to standardization.</p>
@@ -46,10 +46,11 @@
                 </div>
             <br>
                 <h3>Workflow for InFactor</h3><br>
-                <img src="<?=base_url()?>assets/images/img/InFactor.png" alt="icon" ><br><br>
+                <img src="<?=base_url()?>assets/images/img/InFactor.png" alt="icon"  ><br><br>
                 <h3 class="home-page">How does InFactor platform work?</h3><br>
             <p>In order to factor an invoice:</p>
-            <div class ="home-page"><ul style="list-style-type:decimal;" ><li>Supplier will upload his invoice details on the platform.</li>
+			<div class ="home-page"><ul style="list-style-type:decimal;" >
+			<li>Supplier will upload his invoice details on the platform.</li>
             <li> Buyer verifies the invoice.</li>
             <li>Approved invoices are made visible to all the Financiers registered on the platform.</li>
             <li> Financiers send factoring proposals to any verified invoice they choose.</li> 
@@ -59,7 +60,7 @@
             <li>Upon successful payment by buyer, Financier pays balance invoice amount to the supplier.</li> 
             <li> Financier and buyers must have the required balance in their wallets to make the payments.</li>    
             <li>On completion, Financier and Supplier rate each other.</li></ul>
-        </div><br>
+        	</div><br>
         <p>*All participants on the InFactor platform are provided with a built-in XDC wallet (with ERC20 standards). Discounting logic is prebuilt in the smart contract which automatically calculates interest, prepayment and post payment amounts based on the factoring terms.
 		</p>
 		<div class="videos_video_wrap" >
@@ -83,143 +84,13 @@
         Watch <a href="https://www.youtube.com/watch?v=GIp_h7U9aRQ">demo video</a> to know step by step process of how to proceed with InFactor. 
         <p><b> Developers</b></p>
         <p>Do you have any ideas and suggestions to enhance and/or build upon the InFactor platform? We actively seek and encourage collaborative initiatives for the same. Click <a href="http://infactor.io/docs/">here </a> and read all instructions about how to effectively use and integrate with InFactor API.</p>
-        <p>Want to collaborate on or adopt open source code or fork code or share ideas on InFactor? Visit our GitHub Repository <a href="https://github.com/XinFinOrg/ifactor-poc">here.</a></p>
+        <p>Want to collaborate on or adopt open source code or fork code or share ideas on InFactor? </p>
+		<p>Visit our GitHub Repository <a href="https://github.com/XinFinOrg/ifactor-poc">here.</a></p>
 		</div>	
 		<!-- <p>Click <a href="https://www.youtube.com/watch?v=GIp_h7U9aRQ">here</a> to watch the </p> -->
         </div>
             
-			<!-- <p class="red_icon"><img src="<?=base_url()?>assets/images/icon/line.png" alt="icon"></p>
-			<h2 class="black_sec_title">Finance workflow</h2> -->
-			<!-- <div class="steps_vertical">
-				<div class="col-md-5 col-sm-5 col-xs-12">
-                	<div class="total_similar_left_section">
-					<div class="left_content">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_1.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Buyer raise trade query on Tradefinex.org</p>
-						</div>
-					</div>
-                    
-                    <div class="right_content hidden-md hidden-lg hidden-sm left_inside_right_phone ">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_6.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Suppliers review query and submit proposals</p>
-						</div>
-					</div>
-                    
-					<div class="left_content">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_2.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Buyers and Suppliers accept proposal</p>
-						</div>
-					</div>
-                    
-                    <div class="right_content hidden-md hidden-lg hidden-sm left_inside_right_phone">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_7.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Buyer and Supplier enter in to Blockchain based smart contract</p>
-						</div>
-					</div>
-                    
-					<div class="left_content">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_3.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Buyer and Supplier wallet integration in smart contract</p>
-						</div>
-					</div>
-                    <div class="right_content hidden-md hidden-lg hidden-sm left_inside_right_phone">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_8.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Buyer deposits funds in to escrow account of smart contract</p>
-						</div>
-					</div>
-                    
-					<div class="left_content">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_4.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Supplier completes contractual milestones and submits to smart contract </p>
-						</div>
-					</div>
-                    <div class="right_content hidden-md hidden-lg hidden-sm left_inside_right_phone">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_9.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Buyer deposits funds in to escrow account of smart contract</p>
-						</div>
-					</div>
-					<div class="left_content">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_5.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Trade completion and closure of smart contract</p>
-						</div>
-					</div>
-                    </div>
-				</div>
-				<div class="col-md-1 col-sm-1 col-xs-12 hidden-xs">
-					<ol class="list-group vertical-steps">
-						<li class="list-group-item completed"></li>
-						<li class="list-group-item completed"></li>
-						<li class="list-group-item completed"></li>
-						<li class="list-group-item completed"></li>
-						<li class="list-group-item completed"></li>
-						<li class="list-group-item completed"></li>
-						<li class="list-group-item completed"></li>
-						<li class="list-group-item completed"></li>
-						<li class="list-group-item completed"></li>
-					</ol>
-				</div>
-				<div class="col-md-5 col-sm-5 col-xs-12">
-                	<div class="total_similar_right_section hidden-xs">
-					<div class="right_content">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_6.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Suppliers review query and submit proposals</p>
-						</div>
-					</div>
-					<div class="right_content">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_7.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Buyer and Supplier enter in to Blockchain based smart contract</p>
-						</div>
-					</div>
-					<div class="right_content">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_8.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Buyer deposits funds in to escrow account of smart contract</p>
-						</div>
-					</div>
-					<div class="right_content">
-						<div class="col-md-4 col-sm-4 col-xs-4 common_left_img"> <img class="img-responsive" src="<?=base_url()?>assets/images/page/finance_step_img_9.png"/> </div>
-						<div class="col-md-8 col-sm-8 col-xs-8 common_right_content">
-							<p>Buyer deposits funds in to escrow account of smart contract</p>
-						</div>
-					</div>
-                    </div>
-				</div>
-			</div> -->
-		</div>
-	</section>
-	<!-- <section class="flat-row flat-main-blog blog_style explore_now">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="flat-row-title center">
-						<p><img src="<?=base_url()?>assets/images/icon/line.png" alt="icon"></p>
-						<h2>Explore Now</h2>
-						<p> Learn more, schedule a demo, or speak with a member of our team. </p>
-					</div>
-					<!-- /.flat-row-title --> 
-				</div>
-				<!-- /.col-md-12 --> 
-			</div>
-			<!-- <div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12 ">
-					<div class="btn-more create_supplier"> <a href="<?=base_url()?>registration">Create Account <span class="icon_right_margin"> <img src="<?=base_url()?>assets/images/icon/arrow.png" alt="icon"></span></a> </div>
-				</div>
-			</div> -->
-			<!-- /.row --> 
-		</div>
-		<!-- /.container --> 
-	<!-- </section>  -->
+			
 </div>	
 <?php
 	$this->load->view('includes/login_modal');

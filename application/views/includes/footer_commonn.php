@@ -145,6 +145,15 @@
 								</div>
 								<input type="hidden" id="log_user_id" value="<?=(isset($user_id) ? $user_id : 0);?>" />
 								<input type="hidden" id="log_user_type" value="<?=(isset($user_type_ref) ? $user_type_ref : 0);?>" />
+								<div class="col-md-2 col-xs-6 col-sm-3 footer_sec_oppo">
+									<div class="widget widget-categories">
+										<ul class="one-half">
+											<li> <a href="<?=base_url();?>" title="">Home </a> </li>
+										</ul>
+									</div>
+							<!-- /.widget-categories --> 
+								</div>
+								
 								<h3 class="widget-title keep_in_touch">KEEP IN TOUCH</h3>
 								<ul class="social-ft">
 									<li> <a href="https://www.linkedin.com/in/tradefinex/"> <img src="<?=base_url('assets/images/icon/lkdn.png');?>" alt="icon"></a> </li>
