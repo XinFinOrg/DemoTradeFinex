@@ -99,7 +99,7 @@ table {
 img {
 	border: 0;
 	-ms-interpolation-mode: bicubic;
-	vertical-align: left;
+	vertical-align: middle;
 }
 legend {
 	white-space: normal;
