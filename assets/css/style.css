@@ -524,6 +524,7 @@ footer {
   .subs:last-child {
 	border: none !important;
 	border-top: 0px;
+	color:#282c3f;
   }
   .hassubs:hover .dropdown,
   .hassubs .hassubs:hover .dropdown {
@@ -537,8 +538,9 @@ footer {
   }
   .mainnav li:hover ul a,
 .mainnav li:hover ul li ul li a {
-  color: #282c3f;
+  color: #2aa3ef;
 }
+
 .mainnav li ul li:hover,
 .mainnav li ul li ul li:hover {
   background-color: #fff;
@@ -549,6 +551,7 @@ footer {
   -webkit-transition: ease-in-out 0.35s;
   
 }
+
 /*Second Level*/
 .hassubs .hassubs .dropdown .subs {
   left: 25px;
