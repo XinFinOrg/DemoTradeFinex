@@ -87,7 +87,7 @@
 							</div>
 						</div>-->
 						<div class="form-group focus-group">
-							<textarea class="input-focus input-focus-notr" rows="5" id="mmsg" name="mmsg"></textarea>
+							<textarea class="input-focus input-focus-notr" rows="5" id="mmsg" name="mmsg" data-required-error="" tabindex="5"></textarea>
 							<span class="form-name floating-label">Comments</span> 
 						</div>
 						<div class="form-group">

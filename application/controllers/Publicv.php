@@ -117,6 +117,46 @@ class Publicv extends CI_Controller {
 		$this->load->view('pages_scripts/common_scripts', $data);
 		$this->load->view('includes/footern');
 	}
+
+	public function bond_create(){
+		
+		$data = array();
+		
+		$data['page'] = 'bond_create';
+		$data['msg'] = '';
+		$data['user_id'] = 0;
+		$data['user_type'] = '';
+		$data['full_name'] = '';
+		$data['ufname'] = '';
+		$data['ulname'] = '';
+		$data['uemail'] = '';
+		$data['ucontact'] = '';
+		$data['uaddress'] = '';
+		$data['uname'] = '';
+		$data['upass'] = '';
+		$data['uprofpic'] = '';
+		
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+		
+		
+		
+		
+		
+		$this->load->view('includes/headern', $data);
+		$this->load->view('includes/header_publicn', $data);
+		$this->load->view('pages/public/bond_create_view', $data);
+		$this->load->view('includes/footer_commonn', $data);
+		$this->load->view('pages_scripts/common_scripts', $data);
+		$this->load->view('includes/footern');
+	}
+	
 	
 	public function beneficiary(){
 		

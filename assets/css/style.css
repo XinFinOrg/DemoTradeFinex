@@ -551,7 +551,57 @@ footer {
   -webkit-transition: ease-in-out 0.35s;
   
 }
-
+/* Center the loader */
+#loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+	position: relative;
+	-webkit-animation-name: animatebottom;
+	-webkit-animation-duration: 1s;
+	animation-name: animatebottom;
+	animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+	from { bottom:-100px; opacity:0 } 
+	to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+	from{ bottom:-100px; opacity:0 } 
+	to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+	display: none;
+	text-align: center;
+  }
 /*Second Level*/
 .hassubs .hassubs .dropdown .subs {
   left: 25px;
@@ -4546,6 +4596,126 @@ to {
 .advertise_form .form-group {
 	margin: 0px;
 }
+/*bond form*/
+
+.trade_bond {
+	background: #154162 url(../images/background/trade-contract.png) no-repeat center;
+	width: 100%;
+	padding: 60px 0px;
+	background-size: cover;
+}
+.trade_bond h3 {
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'open_sanssemibold';
+	font-size: 24px;
+}
+.trade_bond p {
+	color: #fff;
+	font-family: 'open_sanssemibold';
+	font-size: 15px;
+	margin-top: 20px;
+}
+.bond_form {
+	width: 350px;
+	margin: 30px auto;
+	margin-bottom: 0px;
+}
+.bond_form textarea {
+	height: 100px;
+}
+.bond_form_block .right_side .title {
+	font-size: 22px;
+	color: #282c3f;
+	font-family: 'open_sansregular';
+	text-align: center;
+	text-transform: uppercase;
+}
+.trade_bond .btn-more {
+	margin-top: 30px;
+	float: left;
+}
+.bond_form .btn-more {
+	margin-top: 20px;
+}
+.trade_bond .btn-more button {
+	min-width: 180px;
+	height: 44px;
+	border-radius: 30px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	position: relative;
+	z-index: 99;
+	font-family: 'open_sanssemibold';
+}
+.bond_form_block {
+	background: #fafafa;
+	width: 100%;
+	padding: 30px 0px;
+	background-size: 100%;
+	min-height: 535px;
+}
+.bond_form_block .left_side .con_block {
+	width: 100%;
+	background: #fff;
+	padding: 30px;
+	box-shadow: 1px 1px 6px #dadada;
+	margin-bottom: 30px;
+	float: left;
+}
+.bond_form_block .left_side .con_block .title {
+	color: #282c3f;
+	font-family: 'open_sanssemibold';
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.bond_form_block .left_side .con_block .content {
+	color: #787b85;
+	line-height: 24px;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	margin-top: 22px;
+	clear: both;
+	float: left;
+}
+.bond_form_block .left_side .con_block img {
+	margin-top: 5px;
+}
+.bond_position {
+	position: relative;
+	margin-top: -180px;
+}
+.bond_form_block .right_side {
+	background: #fff;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 100%;
+	box-shadow: 1px 1px 6px #dadada;
+}
+.bond_form .form-group {
+	margin: 0px;
+}
+.bond_form_block .left_side .con_block ul {
+	float: left;
+	width: 100%;
+	margin-top: 15px;
+	padding-left: 15px;
+}
+.bond_form_block .left_side .con_block ul li {
+	float: left;
+	width: 100%;
+	margin-top: 14px;
+	color: #2aa3ef;
+	list-style-type: initial;
+	line-height: 24px;
+}
+.bond_form_block .left_side .con_block ul li a {
+	color: #787b85;
+}
+.last_sec_con_block {
+	margin-bottom: 0px !important;
+}
 /*career*/
 
 
@@ -6583,7 +6753,7 @@ textarea.input-focus, textarea.input-focus-notr {
 	position: absolute;
 	pointer-events: none;
 	left: 16px;
-	top: 20px;
+	top: 10px;
 	transition: 0.2s ease all;
 }
 .input-focus-notr:focus ~ .floating-label {

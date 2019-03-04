@@ -149,6 +149,7 @@
 									<div class="widget widget-categories">
 										<ul class="one-half">
 											<li> <a href="<?=base_url();?>" title="">Home </a> </li>
+											<li> <a href="<?=base_url();?>publicv/bond_create" title="">Bond Creation </a> </li>
 										</ul>
 									</div>
 							<!-- /.widget-categories --> 

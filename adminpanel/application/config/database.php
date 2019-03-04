@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'trade',
+	'database' => 'tradefinex',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => 'tf_',
 	'pconnect' => FALSE,
@@ -91,6 +91,6 @@ $db['default'] = array(
 	'encrypt' => FALSE,
 	'compress' => FALSE,
 	'stricton' => FALSE,
-	'failover' => array(),
+	'failover' => array(), 
 	'save_queries' => TRUE
 );

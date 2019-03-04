@@ -1,78 +1,84 @@
-$(function(){
-		
+$(function () {
+
 	var site_url = $('#site_url').val();
 	var csrf_name = $('#csrf_tokens').attr('name');
 	var csrf_value = $('#csrf_tokens').val();
 	var uemail = $('#uemail').val();
-	
-		jQuery.validator.addMethod("LetterOnly", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /^(?!(\s))([a-zA-Z\s])*$/.test( value );
-	}, 'The text must start with a letter and should not contain special characters.'); 
-	
-	jQuery.validator.addMethod("LettersWithDotHiphen", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	   return this.optional( element ) || /^([a-zA-Z]?)([a-zA-Z-.\s])*$/.test( value );
+
+	jQuery.validator.addMethod("LetterOnly", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^(?!(\s))([a-zA-Z\s])*$/.test(value);
+	}, 'The text must start with a letter and should not contain special characters.');
+
+	jQuery.validator.addMethod("LettersWithDotHiphen", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^([a-zA-Z]?)([a-zA-Z-.\s])*$/.test(value);
 	}, 'The text must start with a letter and not only special characters except[.-]');
-	
-	jQuery.validator.addMethod("LettersWithspecialChars", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	   return this.optional( element ) || /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$#!&*%])[0-9a-zA-Z@$#!&*%]{8,}$/.test( value );
+
+	jQuery.validator.addMethod("LettersWithspecialChars", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$#!&*%])[0-9a-zA-Z@$#!&*%]{8,}$/.test(value);
 	}, 'The text must start with a letter and should contain 1 uppercase,1 number and 1 special character');
 
-	
-	jQuery.validator.addMethod("EmailGeneral", function(value, element) {
+
+	jQuery.validator.addMethod("EmailGeneral", function (value, element) {
 		var re = /^([a-zA-Z])(.*[a-z])(.*[a-z0-9_\+-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*\.([a-z]{2,})$/;
 		return re.test(String(value).toLowerCase());
 	}, 'You have entered an Invalid email address');
-	
-	jQuery.validator.addMethod("startsLetterOnly", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /^([a-zA-Z]?)([a-z0-9\-]{2,})*$/.test( value );
-	}, 'The text must start with a letter'); 
-	
-	jQuery.validator.addMethod("messageFormat1", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /^([a-zA-Z]{1,})([a-zA-Z0-9.,:-\s$%])*$/.test( value );
+
+	jQuery.validator.addMethod("startsLetterOnly", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^([a-zA-Z]?)([a-z0-9\-]{2,})*$/.test(value);
+	}, 'The text must start with a letter');
+
+	jQuery.validator.addMethod("messageFormat1", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^([a-zA-Z]{1,})([a-zA-Z0-9.,:-\s$%])*$/.test(value);
 	}, 'The text should start with letters and not contain any special characters except[.,:-$%]');
-	
-	jQuery.validator.addMethod("messageFormat2", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /^([a-zA-Z]?)([a-zA-Z0-9.,\s():=>])*$/.test( value );
+
+	jQuery.validator.addMethod("messageFormat2", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^([a-zA-Z]?)([a-zA-Z0-9.,\s():=>])*$/.test(value);
 	}, 'The text should start with letters and not contain any special characters except[.,():=>]');
-	
+
 	/* (?!(\d|\`|\~|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\+|\=|\[|\{|\]|\}|\||\\|\'|\<|\,|\.|\>|\?|\/|\""|\;|\:|\s)) */
-	
-	jQuery.validator.addMethod("alphanumericOnly", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /^([a-zA-Z])([a-zA-Z0-9\s])+$/i.test( value );
-	}, 'The text must combination of letter and numbers; Not started with number; should not contain special characters'); 
-	
-	jQuery.validator.addMethod("CalphanumericOnly", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /^([a-zA-Z]{1,})([a-zA-Z0-9\.\,\s])+$/.test( value );
-	}, 'The text must combination of letter and numbers; Not started with number; should not contain special characters except[.]'); 
-	
-	jQuery.validator.addMethod("webUrl", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test( value );
-	}, 'The input value is not a correct URL'); 
-	
-	jQuery.validator.addMethod("LinkedinUrl", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /(http|https):\/\/?(?:(www|\w\w)\.)?linkedin.com(\w+:{0,1}\w*@)?(\S+)(:([0-9])+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/.test( value );
-	}, 'The input value is not a correct Linkedin URL'); 
-	
-	jQuery.validator.addMethod("numberOnly", function(value, element) {
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /^[0-9+\s]+$/.test( value );
+
+	jQuery.validator.addMethod("alphanumericOnly", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^([a-zA-Z])([a-zA-Z0-9\s])+$/i.test(value);
+	}, 'The text must combination of letter and numbers; Not started with number; should not contain special characters');
+
+	jQuery.validator.addMethod("signedDecNumberOnly", function (value, element) {
+		console.log('valueand', this.optional(element), /^[+]?[0-15]+\.[0-9]+$/.test(value));
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^[+]?[0-15]+\.[0-9]+$/.test(value);
+	}, 'This field allows decimal number only');
+
+	jQuery.validator.addMethod("CalphanumericOnly", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^([a-zA-Z]{1,})([a-zA-Z0-9\.\,\s])+$/.test(value);
+	}, 'The text must combination of letter and numbers; Not started with number; should not contain special characters except[.]');
+
+	jQuery.validator.addMethod("webUrl", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test(value);
+	}, 'The input value is not a correct URL');
+
+	jQuery.validator.addMethod("LinkedinUrl", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /(http|https):\/\/?(?:(www|\w\w)\.)?linkedin.com(\w+:{0,1}\w*@)?(\S+)(:([0-9])+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/.test(value);
+	}, 'The input value is not a correct Linkedin URL');
+
+	jQuery.validator.addMethod("numberOnly", function (value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^[0-9+\s]+$/.test(value);
 	}, 'This field allowing number only');
 
-	jQuery.validator.addMethod("mobilenumberOnly", function(value, element) { // International Mobile Number
-	  // allow any non-whitespace characters as the host part
-	  return this.optional( element ) || /^\+\d{1,4}\s\d{6,14}$/.test( value );
+	jQuery.validator.addMethod("mobilenumberOnly", function (value, element) { // International Mobile Number
+		// allow any non-whitespace characters as the host part
+		return this.optional(element) || /^\+\d{1,4}\s\d{6,14}$/.test(value);
 	}, 'Please enter a valid mobile number');
-	
+
 	// Validate signup form on keyup and submit
 	$("#signupForm").validate({
 		rules: {
@@ -105,7 +111,7 @@ $(function(){
 				required: true,
 				EmailGeneral: true
 			},
-			register_otp : {
+			register_otp: {
 				required: true,
 				minlength: 8
 			}
@@ -134,28 +140,28 @@ $(function(){
 				equalTo: "Please enter the same password as above"
 			},
 			email: "Please enter a valid email address",
-			register_otp : {
+			register_otp: {
 				required: "Please enter a valid OTP",
 				minlength: "Your OTP must be 8 characters long"
 			}
 		},
-		onkeyup: function(elem) {
-			
-			
+		onkeyup: function (elem) {
+
+
 		}
 	});
 
-	
-	$('#register_otp').unbind('keyup change').bind('keyup change', function (){
-		
+
+	$('#register_otp').unbind('keyup change').bind('keyup change', function () {
+
 		var otpval = $(this).val();
-		
+
 		$('.reg_otp').find('.loader').show();
-		
+
 		var recheck = new RegExp("^([a-zA-Z0-9!@#$%~]+)$");
-		
+
 		var otpstat = '';
-		
+
 		if (recheck.test(otpval)) {
 			// console.log("Valid");
 			otpstat = 'valid';
@@ -163,56 +169,56 @@ $(function(){
 			// console.log("Invalid");
 			otpstat = 'invalid';
 		}
-		
-		if(parseInt(otpval.length) == 8 && otpstat == 'valid'){
-		
+
+		if (parseInt(otpval.length) == 8 && otpstat == 'valid') {
+
 			$.ajax({
-				url: site_url+"registration/get_regotp",
+				url: site_url + "registration/get_regotp",
 				type: "POST",
-				data: {'action' : 'match_otp', 'otpval' : otpval, csrf_name : csrf_value},
+				data: { 'action': 'match_otp', 'otpval': otpval, csrf_name: csrf_value },
 				success: function (data) {
-					
+
 					var jsona = $.parseJSON(data);
 					$('.reg_otp').find('.loader').hide();
-					
-					if(jsona['oerror'] == 0 && jsona['oused'] == 0){
-						
+
+					if (jsona['oerror'] == 0 && jsona['oused'] == 0) {
+
 						$('#signupSubmit').attr('type', 'submit');
 						$('#signupSubmit').removeAttr('disabled');
 						$('.reg_otp').find('.otp_sucess').show();
 						$('.otp_error').text('');
-												
-					}else{
-						
-						if(jsona['oerror'] == 1 && jsona['oused'] == 0){
-							
-							$('.otp_error').html("Don't have Access code? Please <a href='"+site_url+"publicv/contact'>click here</a> to contact us.");
-							setTimeout(function() {$('.otp_error').text('');}, 18000);
+
+					} else {
+
+						if (jsona['oerror'] == 1 && jsona['oused'] == 0) {
+
+							$('.otp_error').html("Don't have Access code? Please <a href='" + site_url + "publicv/contact'>click here</a> to contact us.");
+							setTimeout(function () { $('.otp_error').text(''); }, 18000);
 							$('.reg_otp').find('.otp_sucess').hide();
 							$('#signupSubmit').attr('type', 'button');
 							$('#signupSubmit').attr('disabled', true);
 						}
-						
-						if(jsona['oerror'] == 1 && jsona['oused'] == 1){
-							
-							$('.otp_error').html("Code was already used! Try another one or <a href='"+site_url+"publicv/contact'>click here</a> to contact us.");
-							setTimeout(function() {$('.otp_error').text('');}, 18000);
+
+						if (jsona['oerror'] == 1 && jsona['oused'] == 1) {
+
+							$('.otp_error').html("Code was already used! Try another one or <a href='" + site_url + "publicv/contact'>click here</a> to contact us.");
+							setTimeout(function () { $('.otp_error').text(''); }, 18000);
 							$('.reg_otp').find('.otp_sucess').hide();
 							$('#signupSubmit').attr('type', 'button');
 							$('#signupSubmit').attr('disabled', true);
 						}
 					}
 				}
-			});	
-		}else{
-			$('.otp_error').html("Don't have Access code? Please <a href='"+site_url+"publicv/contact'>click here</a> to contact us.");
+			});
+		} else {
+			$('.otp_error').html("Don't have Access code? Please <a href='" + site_url + "publicv/contact'>click here</a> to contact us.");
 			$('.reg_otp').find('.otp_sucess').hide();
-			setTimeout(function() {$('.otp_error').text('');}, 23000);
+			setTimeout(function () { $('.otp_error').text(''); }, 23000);
 			$('#signupSubmit').attr('type', 'button');
 			$('#signupSubmit').attr('disabled', true);
 		}
 	});
-	
+
 	$("#loginForm").validate({
 		rules: {
 			user_name: {
@@ -237,135 +243,135 @@ $(function(){
 			}
 		}
 	});
-	
-	$('.login_click').unbind('click').bind('click', function(){
-		
+
+	$('.login_click').unbind('click').bind('click', function () {
+
 		$('#sign_up').hide();
 		$('#log_in').slideDown();
 		$('#log_in').addClass('in');
 		$('#sign_up').removeClass('in');
 		// $('#log_in').fadeIn();
-		
+
 	});
-	
-	$('.panel-heading').click(function(){
-			
-		if($(this).find('.panel-title').hasClass('accord_active')){
-			
+
+	$('.panel-heading').click(function () {
+
+		if ($(this).find('.panel-title').hasClass('accord_active')) {
+
 			$('.accord_active').removeClass('accord_active');
 			$('.collapsed_child_block').removeClass('collapsed_child_block');
-					
-		}else{
+
+		} else {
 			$('.accord_active').removeClass('accord_active');
 			$('.collapsed_child_block').removeClass('collapsed_child_block');
 			$(this).find('.panel-title').addClass('accord_active');
 			$(this).parent().find('.collapse').addClass('collapsed_child_block');
 		}
-		
+
 	});
-			
-	$('.show-hide').bind('click', function(){
-	
-		
-				
-		if($(this).parent().hasClass('attrshow')){
+
+	$('.show-hide').bind('click', function () {
+
+
+
+		if ($(this).parent().hasClass('attrshow')) {
 			$(this).parent().removeClass('attrshow');
 			$(this).parent().addClass('attrhide');
 			$(this).parent().find('input[type="text"]').attr('type', 'password');
 			$(this).find('a').text('SHOW');
-		}else{
+		} else {
 			$(this).parent().addClass('attrshow');
 			$(this).parent().removeClass('attrhide');
 			$(this).parent().find('input[type="password"]').attr('type', 'text');
 			$(this).find('a').text('HIDE');
 		}
 	});
-	
-	$('.appearance_back').each(function(e){
-		
+
+	$('.appearance_back').each(function (e) {
+
 		var selv = $(this).val();
-		
-		if(selv){
-			
+
+		if (selv) {
+
 			$(this).parent().find('.floating-label').addClass('select-focus');
-			
-		}else{
-		
+
+		} else {
+
 			$(this).parent().find('.floating-label').removeClass('select-focus');
 		}
-		
+
 	});
-	
-	$('.appearance_back').change(function(){
-		
+
+	$('.appearance_back').change(function () {
+
 		var selv = $(this).val();
-		
-		if(selv){
-			
+
+		if (selv) {
+
 			$(this).parent().find('.floating-label').addClass('select-focus');
-			
-		}else{
-		
+
+		} else {
+
 			$(this).parent().find('.floating-label').removeClass('select-focus');
 		}
-		
+
 	});
-	
-	
-	$('.read_more_click').unbind('click').bind('click', function(){
-		
-		if($(this).hasClass('collapsed_child')){
-			
+
+
+	$('.read_more_click').unbind('click').bind('click', function () {
+
+		if ($(this).hasClass('collapsed_child')) {
+
 			$(this).removeClass('collapsed_child');
 			$(this).find('span').text('Read More');
 			$(this).find('.fa').removeClass('fa-arrow-circle-up');
 			$(this).find('.fa').addClass('fa-arrow-circle-down');
-			
-		}else{
+
+		} else {
 			$(this).addClass('collapsed_child');
 			$(this).find('span').text('Read Less');
 			$(this).find('.fa').removeClass('fa-arrow-circle-down');
 			$(this).find('.fa').addClass('fa-arrow-circle-up');
 		}
-		
+
 	});
-		
-	$('.signup_click').unbind('click').bind('click', function(){
-		
+
+	$('.signup_click').unbind('click').bind('click', function () {
+
 		$('#log_in').hide();
 		$('#sign_up').slideDown();
 		$('#sign_up').addClass('in');
 		$('#log_in').removeClass('in');
 		// $('#sign_up').fadeIn();
-		
+
 	});
-			
-	$('.close_modal').unbind('click').bind('click', function(){
+
+	$('.close_modal').unbind('click').bind('click', function () {
 		$('.modal').removeClass('in');
 		$('.modal').hide();
 		$('.modal-backdrop').removeClass('in');
 		$('.modal-backdrop').hide();
 	});
-	
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > 4){  
-			$('header').addClass("sticky_header"); 
+
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 4) {
+			$('header').addClass("sticky_header");
 		}
-		else{
+		else {
 			$('header').removeClass("sticky_header");
 		}
 	});
-			
+
 	var captchav = $('#defaultReal').attr('captchav');
-	
+
 	if (typeof captchav === "undefined") {
 		// ...
-	}else{
-	
-		var decryptval = CryptoJS.AES.decrypt($('#defaultReal').attr('captchav'), "/"+5381).toString(CryptoJS.enc.Utf8);
+	} else {
+
+		var decryptval = CryptoJS.AES.decrypt($('#defaultReal').attr('captchav'), "/" + 5381).toString(CryptoJS.enc.Utf8);
 		$('#captcha_val').val(decryptval);
 	}
-			
+
 	$("#contact-form").validate({
 		rules: {
 			mname: {
@@ -380,15 +386,15 @@ $(function(){
 			},
 			mmob: {
 				required: true,
-				numberOnly : true,
+				numberOnly: true,
 				mobilenumberOnly: true,
-				
+
 			},
 			mcomp: {
 				required: true,
 				minlength: 3,
 				maxlength: 40,
-				CalphanumericOnly : true
+				CalphanumericOnly: true
 			},
 			musertype: "required",
 			menquiry: "required",
@@ -426,32 +432,229 @@ $(function(){
 			},
 			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
 		},
-		onkeyup: function(elem) {
-			
+		onkeyup: function (elem) {
+
 			var element_id = $(elem).attr('id');
-			
-			if(element_id == 'mname' || element_id == 'mmsg' || element_id == 'mcomp'){
-				
-				var strv = $('#'+element_id).val();
-	
-				$('#'+element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
-								
+
+			if (element_id == 'mname' || element_id == 'mmsg' || element_id == 'mcomp') {
+
+				var strv = $('#' + element_id).val();
+
+				$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
+
 			}
-			
-			if(element_id == 'mmob'){
-				
-				var tval = $('#'+element_id).val();
+
+			if (element_id == 'mmob') {
+
+				var tval = $('#' + element_id).val();
 				tvala = tval.split(' ');
 			}
 		},
-		success: function(elem) {
-			
-			
+		success: function (elem) {
+
+
 		},
-		error: function(elem) {
-			
+		error: function (elem) {
+
 		}
 	});
+
+	function showLoader() {
+		document.getElementById("loader").style.display = "block";
+    }						
+
+    function hideLoader() {
+		document.getElementById("loader").style.display = "none";
+	}						
+
+	$("#bond_create-form").validate({
+		rules: {
+			tokenName: {
+				required: true,
+				minlength: 2,
+				maxlength: 15,
+				LetterOnly: true
+			},
+			tokenSymbol: {
+				required: true,
+				minlength: 2,
+				maxlength: 10,
+				LetterOnly: true
+			},
+			tokenSupply: {
+				required: true,
+				minlength: 2,
+				maxlength: 30,
+				numberOnly: true
+			},
+			ethRate: {
+				required: true,
+				minlength: 1,
+				maxlength: 30,
+				numberOnly: true
+			},
+			bonusRate: {
+				required: true,
+				minlength: 2,
+				maxlength: 30,
+				numberOnly: true
+			},
+			coupon: {
+				required: true,
+				minlength: 1,
+				maxlength: 2,
+				numberOnly: true
+			},
+			tenure: {
+				required: true,
+				minlength: 1,
+				maxlength: 30,
+				numberOnly: true
+			},
+
+		},
+		messages: {
+			tokenName: {
+				required: "Please enter bond name",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			tokenSymbol: {
+				required: "Please enter bond symbol",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 10"
+			},
+			tokenSupply: {
+				required: "Please enter issuance size",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 30"
+			},
+			ethRate: {
+				required: "Please enter face value",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 30"
+			},
+			bonusRate: {
+				required: "Please enter minimum contribution",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 30"
+			},
+			coupon: {
+				required: "Please enter coupon",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 30"
+			},
+			tenure: {
+				required: "Please enter tenure",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 30"
+			},
+			dvalue: {
+				required: "Please enter discount value",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 30"
+			},
+		},
+		onkeyup: function (elem) {
+
+			var element_id = $(elem).attr('id');
+
+			if (element_id == 'tokenName' || element_id == 'tokenSymbol') {
+
+				var strv = $('#' + element_id).val();
+
+				$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
+
+			}
+
+			var ethRate = $('#ethRate').val();
+			var coupon = $('#coupon').val();
+			var tenure = $('#tenure').val();
+			var dvalue = (ethRate / ((1 + (coupon/100)) ** tenure));
+			$('#dvalue').val(dvalue);
+
+		},
+		success: function (elem) {
+		},
+		error: function (elem) {
+		},
+		submitHandler: function (form) {
+			$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+				//console.log(res);
+				localStorage.setItem("token", res.token);
+				var formData = $(form).serialize();
+				const formObj = formData.trim().split('&');
+				var formDataObj = {};
+				$.each(formObj, function (k, v) {
+					v = v.split('=');
+					formDataObj[v[0]] = v[1];
+				})
+				//console.log('formDataObj', formDataObj);
+				localStorage.setItem("formData", formData);
+				var token = localStorage.getItem("token", res.token);
+				//console.log(token);
+				showLoader();
+				if (res.token != null && res.token == token) {
+					var settings = {
+						"async": true,
+						"crossDomain": true,
+						"url": "https://api.mycontract.co/v1/smartcontract/ERC20",
+						"method": "POST",
+						"headers": {
+							"content-type": "application/json",
+							"authorization":token
+						},
+						"processData": false,
+						"data": JSON.stringify(formDataObj)
+					}
+					
+
+					$.ajax(settings).done(function (response) {
+						//console.log( response);
+						hideLoader();
+						$("#contract").modal("show");
+							$('#contractData').html('<p>'+response+'</p>');
+							//console.log('formdata done:', formDataObj.tokenName);
+							const coinData = {
+								"coinName": formDataObj.tokenName,
+								"network" : "testnet"
+							};
+
+							$("#deploy_contract").on('click', function (e) {
+								showLoader();
+								var deploy = {
+									"async": true,
+									"crossDomain": true,
+									"url": "https://api.mycontract.co/v1/smartcontract/deploy",
+									"method": "POST",
+									"headers": {
+										"content-type": "application/json",
+										"authorization":token
+									},
+									"processData": false,
+									"data": JSON.stringify(coinData)
+								}
+										
+								$.ajax(deploy).done(function(response){
+									//console.log(response);
+									hideLoader();
+									$("#thankyou").modal("show");
+								})
+						})
+					});
+				}
+			})
+				
+				.fail(function () {
+					alert("error");
+				});
+
+		}
+
+
+	});
+
+
 
 	$("#advertise-form").validate({
 		rules: {
@@ -466,8 +669,8 @@ $(function(){
 				required: true
 			},
 			mmob: {
-				required: true,    
-				numberOnly : true,
+				required: true,
+				numberOnly: true,
 				mobilenumberOnly: true
 			},
 			mcomp: {
@@ -504,25 +707,25 @@ $(function(){
 				required: "Please type your message",
 				minlength: "Text length should be atleast 5",
 				maxlength: "Characters length should not exceeded than 140"
-			},   
+			},
 			mmob: {
 				required: "Please enter a valid mobile number"
 			},
 			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
 		},
-		onkeyup: function(elem) {
-			
+		onkeyup: function (elem) {
+
 			var element_id = $(elem).attr('id');
-			
-			if(element_id == 'mname' || element_id == 'mmsg' || element_id == 'mcomp'){
-				
-				var strv = $('#'+element_id).val();
-	
-				$('#'+element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
+
+			if (element_id == 'mname' || element_id == 'mmsg' || element_id == 'mcomp') {
+
+				var strv = $('#' + element_id).val();
+
+				$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
 			}
 		}
 	});
-	
+
 	$("#consortium-form").validate({
 		rules: {
 			mname: {
@@ -554,7 +757,7 @@ $(function(){
 			mmsg: {
 				required: false,
 				minlength: 5,
-				maxlength:140,
+				maxlength: 140,
 				messageFormat1: true
 			},
 			defaultReal: {
@@ -573,32 +776,32 @@ $(function(){
 				minlength: "Characters length should be atleast 3",
 				maxlength: "Characters length exceeded not exceeded than 40"
 			},
-		/*	musertype: "Please choose a user type",
-			murl: "Please enter a valid URL",
-			mmsg: {
-				required: "Please type your message",
-				minlength: "Text length should be atleast 5",
-				maxlength: "Characters length exceeded not exceeded than 140"
-			},*/
+			/*	musertype: "Please choose a user type",
+				murl: "Please enter a valid URL",
+				mmsg: {
+					required: "Please type your message",
+					minlength: "Text length should be atleast 5",
+					maxlength: "Characters length exceeded not exceeded than 140"
+				},*/
 			mmob: {
 				required: "Please enter a valid mobile number"
 			},
 			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
 		},
-		onkeyup: function(elem) {
-			
+		onkeyup: function (elem) {
+
 			var element_id = $(elem).attr('id');
-			
-			if(element_id == 'mname' || element_id == 'mmsg' || element_id == 'mcomp'){
-				
-				var strv = $('#'+element_id).val();
-	
-				$('#'+element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
-								
+
+			if (element_id == 'mname' || element_id == 'mmsg' || element_id == 'mcomp') {
+
+				var strv = $('#' + element_id).val();
+
+				$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
+
 			}
 		}
 	});
-		
+
 	$("#careers-form").validate({
 		rules: {
 			mfname: {
@@ -613,12 +816,12 @@ $(function(){
 			},
 			mmob: {
 				required: true,
-				numberOnly : true,
+				numberOnly: true,
 				mobilenumberOnly: true
 			},
 			mlinkurl: {
 				required: true,
-				LinkedinUrl : true
+				LinkedinUrl: true
 			},
 			mcoverl: {
 				required: true,
@@ -650,85 +853,85 @@ $(function(){
 			},
 			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
 		},
-		onkeyup: function(elem) {
-			
+		onkeyup: function (elem) {
+
 			var element_id = $(elem).attr('id');
-			
-			if(element_id == 'mfname' || element_id == 'mcoverl'){
-				
-				var strv = $('#'+element_id).val();
-	
-				$('#'+element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
-								
+
+			if (element_id == 'mfname' || element_id == 'mcoverl') {
+
+				var strv = $('#' + element_id).val();
+
+				$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
+
 			}
 		}
 	});
-	
-	$('#mfile').change(function(){
+
+	$('#mfile').change(function () {
 		/* here we take the file extension and set an array of valid extensions */
 		var res = $('#mfile').val();
 		var arr = res.split("\\");
-		var filename=arr.slice(-1)[0];
-		filextension=filename.split(".");
-		filext="."+filextension.slice(-1)[0];
+		var filename = arr.slice(-1)[0];
+		filextension = filename.split(".");
+		filext = "." + filextension.slice(-1)[0];
 		filesize = this.files[0].size;
-				
-		valid=[".pdf"]; // ".doc",".txt",".rtf",".docx",".ppt",".pptx",".pps",".xls",".xlsx",
+
+		valid = [".pdf"]; // ".doc",".txt",".rtf",".docx",".ppt",".pptx",".pps",".xls",".xlsx",
 		/* if file is not valid we show the error icon, the red alert, and hide the submit button */
-		if (valid.indexOf(filext.toLowerCase())==-1){
-			$( ".imgupload" ).hide("slow");
-			$( ".imgupload.ok" ).hide("slow");
-			$( ".imgupload.stop" ).show("slow");
-		  
-			$('#namefile').css({"color":"red"});
-			$(this).val(''); 
-			if(parseFloat(filesize) > 2097152){
-				
+		if (valid.indexOf(filext.toLowerCase()) == -1) {
+			$(".imgupload").hide("slow");
+			$(".imgupload.ok").hide("slow");
+			$(".imgupload.stop").show("slow");
+
+			$('#namefile').css({ "color": "red" });
+			$(this).val('');
+			if (parseFloat(filesize) > 2097152) {
+
 				$('#namefile').html("File Size must be less than 2MB!");
-				
-			}else{
-			
-				$('#namefile').html(filename+" is Invalid format!");
+
+			} else {
+
+				$('#namefile').html(filename + " is Invalid format!");
 			}
-			
-		}else if(parseFloat(filesize) > 2097152){
-			
-			$( ".imgupload" ).hide("slow");
-			$( ".imgupload.ok" ).hide("slow");
-			$( ".imgupload.stop" ).show("slow");
-		  
-			$('#namefile').css({"color":"red"});
-			$(this).val(''); 
-			
+
+		} else if (parseFloat(filesize) > 2097152) {
+
+			$(".imgupload").hide("slow");
+			$(".imgupload.ok").hide("slow");
+			$(".imgupload.stop").show("slow");
+
+			$('#namefile').css({ "color": "red" });
+			$(this).val('');
+
 			$('#namefile').html("File Size must be less than 2MB!");
-			
-		}else{
+
+		} else {
 			/* if file is valid we show the green alert and show the valid submit */
-			$( ".imgupload" ).hide("slow");
-			$( ".imgupload.stop" ).hide("slow");
-			$( ".imgupload.ok" ).show("slow");
-		  
-			$('#namefile').css({"color":"green"});
+			$(".imgupload").hide("slow");
+			$(".imgupload.stop").hide("slow");
+			$(".imgupload.ok").show("slow");
+
+			$('#namefile').css({ "color": "green" });
 			$('#namefile').html(filename);
-		  
+
 		}
 	});
-	
-	$('.cat_select').bind('click', function(){
-		
-		var colname = $(this).attr('colname'); 
-		var catid = $(this).attr('catid'); 
-		
-		if(catid !== ''){
-			$('<form id="search_form" action="'+site_url+'listing/search" method="post"><input type="hidden" name="col_name" value="'+colname+'" ><input type="hidden" name="col_val" value="'+catid+'" ><input type="hidden" name="action" value="search" /><input type="hidden" name="'+csrf_name+'" value="'+csrf_value+'" /></form>').appendTo('body').submit();
+
+	$('.cat_select').bind('click', function () {
+
+		var colname = $(this).attr('colname');
+		var catid = $(this).attr('catid');
+
+		if (catid !== '') {
+			$('<form id="search_form" action="' + site_url + 'listing/search" method="post"><input type="hidden" name="col_name" value="' + colname + '" ><input type="hidden" name="col_val" value="' + catid + '" ><input type="hidden" name="action" value="search" /><input type="hidden" name="' + csrf_name + '" value="' + csrf_value + '" /></form>').appendTo('body').submit();
 		}
 	});
-	
-	$('.reactivate_account').bind('click', function(){
-		
+
+	$('.reactivate_account').bind('click', function () {
+
 		var uemail = $(this).attr('uemail');
-		
-		$('<form id="search_form" action="'+site_url+'login/reactivate_account" method="post"><input type="hidden" name="user_name" value="'+uemail+'" /><input type="hidden" name="action" value="reset_password" /><input type="hidden" name="'+csrf_name+'" value="'+csrf_value+'" /></form>').appendTo('body').submit();
-		
-	});	
+
+		$('<form id="search_form" action="' + site_url + 'login/reactivate_account" method="post"><input type="hidden" name="user_name" value="' + uemail + '" /><input type="hidden" name="action" value="reset_password" /><input type="hidden" name="' + csrf_name + '" value="' + csrf_value + '" /></form>').appendTo('body').submit();
+
+	});
 });
