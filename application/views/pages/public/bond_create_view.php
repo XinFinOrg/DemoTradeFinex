@@ -106,10 +106,10 @@
 							<div class="captcha-error has-error" style="display:none"><div class="help-block col-xs-12 col-sm-reset inline"><font color="red" style="margin-left: -10px;">Enter Letters Shown Above.</font></div></div><!-- Invalid Captcha ! -->
 						</div>
 						<div class="form-group"><input type="hidden" name="action" value="send_mail" /><input type="hidden" id="captcha_val" /></div>
-						
+												
 						<div class="form-group">
 							<div class="btn-more">
-								<button type="submit" id="bond_create" class="btn btn-info" tabindex="9"> Create Bond</button>
+							<button type="submit" id="bond_create" class="btn btn-info" tabindex="9"> Create Bond</button>
 							</div>
 						</div>
 						</form>

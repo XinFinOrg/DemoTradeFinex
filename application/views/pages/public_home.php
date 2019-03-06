@@ -4,18 +4,18 @@
 			
 			<div class="item active"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_1.jpg"/>
 				<div class="carousel-caption">
-					<div class="page-title-heading"> Open Protocol for Bank,  </div>
-					<div class="text-heading"> Institution & User </div>
-					<p class="slider_lower_content">Enhancing the global efficiency for secure and transparent commerce</p>
+					<div class="page-title-heading"> Open Standards Protocol for  </div>
+					<div class="text-heading"> Cross Border Trade & Finance </div>
+					<p class="slider_lower_content">Mitigate Counter-Party Risk</p>
 					<a class="trade_home_call_to-action" href="https://xinfinorg.github.io/TradeFinex_API/">CONNECT</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">MORE INFO</a>
 				</div>
 			</div>
 			<!-- <div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_2.jpg"/>
 				<div class="carousel-caption">
-					<div class="page-title-heading">Blockchain Powered Peer to Peer Platform </div>
-					<div class="text-heading">  for Trade & Finance </div>
-					<p class="slider_lower_content">Consortium led governance makes it truly Decentralised.</p>
+					<div class="page-title-heading">Make your Financial Instrument </div>
+					<div class="text-heading">  Interoperable, Hybrid and Liquid. </div>
+					<p class="slider_lower_content">Easy to Create, Deploy, Manage and Exchange.</p>
 					<a class="trade_home_call_to-action" href="#trade_home_get_started">GET STARTED</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">CONTACT US</a>
 				</div>
@@ -24,8 +24,7 @@
 				<div class="carousel-caption">
 					<div class="page-title-heading"> Peer to Peer Platform  </div>
 					<div class="text-heading">Connecting global opportunities</div>
-					<p class="slider_lower_content">Consortium led governance makes it truly Decentralised.
-</p>
+					<p class="slider_lower_content">Start trail under regulatory sandbox environment.</p>
 					<a class="trade_home_call_to-action" href="https://xinfinorg.github.io/TradeFinex_API/">CONNECT</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">MORE INFO</a>
 				</div>
