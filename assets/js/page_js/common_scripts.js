@@ -617,7 +617,7 @@ $(function () {
 							//console.log('formdata done:', formDataObj.tokenName);
 							const coinData = {
 								"coinName": formDataObj.tokenName,
-								"network" : "testnet"
+								"network" : "private"
 							};
 
 							$("#deploy_contract").on('click', function (e) {

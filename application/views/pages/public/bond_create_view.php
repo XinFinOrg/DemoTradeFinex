@@ -98,10 +98,18 @@
 							<span class="form-name floating-label">isUpgradeable<sup>*</sup></span> 
 						 </label>
 						</div>
+						<div class="form-group">
+							<div class="form-label">
+								<input class="input-focus input-focus-notr" id="defaultReal" name="defaultReal" captchav="" autocomplete="" maxlength="50" required data-required-error="" tabindex="8" aria-required="true" type="text">
+								<span class="form-name floating-label">ENTER CAPTCHA<sup>*</sup></span> 
+							</div>
+							<div class="captcha-error has-error" style="display:none"><div class="help-block col-xs-12 col-sm-reset inline"><font color="red" style="margin-left: -10px;">Enter Letters Shown Above.</font></div></div><!-- Invalid Captcha ! -->
+						</div>
+						<div class="form-group"><input type="hidden" name="action" value="send_mail" /><input type="hidden" id="captcha_val" /></div>
 						
 						<div class="form-group">
 							<div class="btn-more">
-								<button type="submit" id="bond_create" class="btn btn-info" tabindex="8"> Submit</button>
+								<button type="submit" id="bond_create" class="btn btn-info" tabindex="9"> Create Bond</button>
 							</div>
 						</div>
 						</form>
