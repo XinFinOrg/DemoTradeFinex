@@ -636,9 +636,13 @@ $(function () {
 								}
 										
 								$.ajax(deploy).done(function(response){
-									//console.log(response);
+									console.log('response', response, response.crowdsaleReceipt.transactionHash);
+									$('#deployDataTHash').html(response.crowdsaleReceipt.transactionHash);
+									$('#deployDataCAddress').html(response.crowdsaleReceipt.contractAddress);
 									hideLoader();
 									$("#thankyou").modal("show");
+
+									$('#deployData').html('<p>'+response+'</p>');
 								})
 						})
 					});

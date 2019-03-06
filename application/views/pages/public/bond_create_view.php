@@ -152,7 +152,7 @@
 
 <div id="loader" style="display: none;"></div>
 <div class="modal fade" id="thankyou" role="dialog" tabindex="-1" >
-		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:80%;max-width: 20%">
+		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:80%;max-width: 50%">
 			<!-- Modal content-->
 
 			<div class="modal-content">
@@ -160,7 +160,8 @@
 				<div class="modal-body">
 
 						<p>Your contract has successfully been deployed.</p>
-		
+						<p><span><b>Transaction Hash:</b></span> <span id="deployDataTHash"></span></p>
+						<p><span><b>Contract Address:</b></span> <span id="deployDataCAddress"></span></p>
 						<div class="btn-more">
 							<a href="<? base_url();?>" type="submit" class="btn btn-info" data-dismiss='modal' data-backdrop="static" data-keyboard="false"> Ok </a> 
 						</div>						
