@@ -57,7 +57,7 @@
 						
 						<li> <a href="javascript:void(0)" data-toggle="modal" data-target="#login" title="Submit Project">Submit Project</a> </li>
 						<li class="hidden-xs hidden-sm"> | </li>
-						<li class="hassubs"> <a href="javascript:void(0)" title="">Solutions</a>
+						<li class="hassubs"> <a href="javascript:void(0)" title="">Financial Instruments Supported</a>
 							<ul class="dropdown">
 							    <li  class="subs hassubs"> 
 									<a href="javascript:void(0)"title="">MSME's Finance Instruments</a> 
