@@ -4,8 +4,8 @@
 			
 			<div class="item active"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_1.jpg"/>
 				<div class="carousel-caption">
-					<div class="page-title-heading"> Open Standards Protocol for  </div>
-					<div class="text-heading"> Cross Border Trade & Finance </div>
+					<div class="page-title-heading">Open Standards Protocol for Cross Border Trade & Finance </div>
+					<div class="text-heading">Make your Financial Instruments Interoperable and Liquid and</div>
 					<p class="slider_lower_content">Mitigate Counter-Party Risk</p>
 					<a class="trade_home_call_to-action" href="https://xinfinorg.github.io/TradeFinex_API/">CONNECT</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">MORE INFO</a>
@@ -14,7 +14,7 @@
 			<!-- <div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_2.jpg"/>
 				<div class="carousel-caption">
 					<div class="page-title-heading">Easy to Create, Deploy, Manage and Exchange </div>
-					<div class="text-heading"> Start trial under regulatory sandbox environment.  </div>
+					<div class="text-heading">Start trial under regulatory sandbox environment.</div>
 					<p class="slider_lower_content">.</p>
 					<a class="trade_home_call_to-action" href="#trade_home_get_started">Get Started: Conduct a PoC</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">CONTACT US</a>
