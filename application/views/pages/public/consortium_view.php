@@ -32,6 +32,8 @@
                                     
                             <p class="content">To join the consortium or request more information, please complete the Contact For Membership form.</p>
                             </div>
+			    <p class="content">To know about consortium Event Click: http://events.tradefinex.org/</p>
+                            </div>
 						
 						</div>
 						<div class="con_block last_sec_con_block hide">
