@@ -22,9 +22,9 @@
 			</div> -->
 			<div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_3.jpg"/>
 				<div class="carousel-caption">
-					<div class="page-title-heading">Easy to Create, Deploy, Manage and Exchange </div>
-					<div class="text-heading">Connecting global opportunities</div>
-					<p class="slider_lower_content">Start trail under regulatory sandbox environment.</p>
+					<div class="page-title-heading">Connecting global opportunities</div>
+					<div class="text-heading">Easy to Create, Deploy, Manage and Exchange .</div>
+					<p class="slider_lower_content">Start trail under regulatory sandbox environment</p>
 					<a class="trade_home_call_to-action" href="https://xinfinorg.github.io/TradeFinex_API/">CONNECT</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">MORE INFO</a>
 				</div>
