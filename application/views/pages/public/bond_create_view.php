@@ -160,8 +160,8 @@
 				<div class="modal-body">
 
 						<p>Your contract has successfully been deployed.</p>
-						<p><span>Transaction Hash:</span> <span id="deployDataTHash"></span></p>
-						<p><span>Contract Address:</span> <span id="deployDataCAddress"></span></p>
+						<p><span><b>Transaction Hash:</b></span> <span id="deployDataTHash"></span></p>
+						<p><span><b>Contract Address:</b></span> <span id="deployDataCAddress"></span></p>
 						<div class="btn-more">
 							<a href="<? base_url();?>" type="submit" class="btn btn-info" data-dismiss='modal' data-backdrop="static" data-keyboard="false"> Ok </a> 
 						</div>						
