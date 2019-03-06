@@ -52,7 +52,7 @@
 			<div class="nav-wrap">
 				<nav id="mainnav" class="mainnav">
 					<ul class="menu">
-					    <li> <a  <?='href="'.base_url().'#consortium"'?> title="Consortium">Consortium</a> </li>
+					    <li> <a  <?='href="https://demo.tradefinex.org/publicv/consortium"'?> title="Consortium">Consortium</a> </li>
 					    <li class="hidden-xs hidden-sm"> | </li>
 						
 				
