@@ -5,8 +5,8 @@
 			<div class="item active"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_1.jpg"/>
 				<div class="carousel-caption">
 					<div class="page-title-heading">Open Standards Protocol for Cross Border Trade & Finance </div>
-					<div class="text-heading">Make your Financial Instruments Interoperable and Liquid and</div>
-					<p class="slider_lower_content">Mitigate Counter-Party Risk</p>
+					<div class="text-heading">Mitigate Counter-Party Risk by making your</div>
+					<p class="slider_lower_content">Financial Instruments Interoperable and Liquid</p>
 					<a class="trade_home_call_to-action" href="https://xinfinorg.github.io/TradeFinex_API/">CONNECT</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">MORE INFO</a>
 				</div>
