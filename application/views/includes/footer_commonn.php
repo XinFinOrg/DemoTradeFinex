@@ -148,7 +148,7 @@
 								<div class="col-md-2 col-xs-6 col-sm-3 footer_sec_oppo">
 									<div class="widget widget-categories">
 										<ul class="one-half">
-											<li> <a href="<?=base_url();?>" title="">Home </a> </li>
+											<li> <a href="<?=base_url();?>" title="">Start POC </a> </li>
 											<li> <a href="<?=base_url();?>publicv/bond_create" title="">Bond Creation </a> </li>
 										</ul>
 									</div>
