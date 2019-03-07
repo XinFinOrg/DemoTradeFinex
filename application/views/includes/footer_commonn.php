@@ -104,6 +104,8 @@
 								<ul class="one-half">
 									<li> <a href="<?=base_url();?>publicv/contact" title="">Contact Us </a> </li>
 									<li> <a href="<?=base_url();?>publicv/faq" title="">FAQs</a> </li>
+									<li> <a href="<?=base_url();?>" title="">Start POC </a> </li>
+											<li> <a href="<?=base_url();?>publicv/bond_create" title="">Bond Creation </a> </li>
 								</ul>
 							</div>
 							<!-- /.widget-categories --> 
@@ -138,20 +140,7 @@
 						<div class="col-md-3 col-sm-4 footer_sec_stay">
 							<div class="widget widget-contact">
 								<!--<h3 class="widget-title">Stay Connected</h3>-->
-								<div id="footer_subscrip" class="col-md-12 col-xs-12 sub_box">
-									
-								</div>
-								<input type="hidden" id="log_user_id" value="<?=(isset($user_id) ? $user_id : 0);?>" />
-								<input type="hidden" id="log_user_type" value="<?=(isset($user_type_ref) ? $user_type_ref : 0);?>" />
-								<div class="col-md-2 col-xs-6 col-sm-3 footer_sec_oppo">
-									<div class="widget widget-categories">
-										<ul class="one-half">
-											<li> <a href="<?=base_url();?>" title="">Start POC </a> </li>
-											<li> <a href="<?=base_url();?>publicv/bond_create" title="">Bond Creation </a> </li>
-										</ul>
-									</div>
-							<!-- /.widget-categories --> 
-								</div>
+								
 								
 								<h3 class="widget-title keep_in_touch">KEEP IN TOUCH</h3>
 								<ul class="social-ft">
