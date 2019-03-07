@@ -104,8 +104,6 @@
 								<ul class="one-half">
 									<li> <a href="<?=base_url();?>publicv/contact" title="">Contact Us </a> </li>
 									<li> <a href="<?=base_url();?>publicv/faq" title="">FAQs</a> </li>
-									<li> <a href="<?=base_url();?>publicv/privacy_policy" title="">Privacy Policy </a> </li>
-									<li> <a href="<?=base_url();?>publicv/terms_condition" title="">Terms & Conditions </a> </li>
 								</ul>
 							</div>
 							<!-- /.widget-categories --> 
@@ -181,7 +179,7 @@
 					<div class="row">
 						<div class="col-md-12"> 
 							<!-- /.social-ft -->
-							<div class="copyright"> Copyright &copy; 2019 TradeFinex.org, All rights reserved. </div>
+							<div class="copyright"> Copyright &copy; 2019 TradeFinex.org, All rights reserved.  <a href="<?=base_url();?>publicv/privacy_policy" title="">Privacy Policy </a> and  <a href="<?=base_url();?>publicv/terms_condition" title="">Terms & Conditions </a> </li> </div>
 							<!-- /.copyright --> 
 						</div>
 						<!-- /.col-md-12 --> 
