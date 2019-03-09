@@ -54,19 +54,17 @@
 					<ul class="menu">
 					    <li> <a  <?='href="https://demo.tradefinex.org/publicv/consortium"'?> title="Consortium">Consortium</a> </li>
 					    <li class="hidden-xs hidden-sm"> | </li>
-						
 				
 						<li class="hassubs"> <a href="javascript:void(0)" title="">Financial Instruments Supported</a>
-							<ul class="dropdown">
-							    <li  class="subs hassubs"> 
-									<a href="javascript:void(0)"title="">MSME's Finance Instruments</a> 
-								<ul class="dropdown">
-								<li class="subs "> <a href="<?=base_url();?>publicv/infactor" title="Know about infactor">InFactor</a> </li>
-								<!-- <li> <a href="<?=base_url();?>publicv/financier" title="Know about financier">Financier</a> </li>
-								<li> <a href="<?=base_url();?>publicv/beneficiary" title="Know about beneficiary">Beneficiary</a> </li>
-								<li> <a href="<?=base_url();?>publicv/supplier" title="Know about supplier">Supplier</a> </li> -->
-								</ul>
-								</li>
+							<ul class="submenu">
+							    <li class=""><a href="<?=base_url();?>publicv/bont_create" title="Bond Creation">Bond</a></li>
+                                <li class=""><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">Invoice</a></li>
+                                <!--<ul class="dropdown">
+									<li class="subs"><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">InFactor</a></li>
+									<li><a href="<?=base_url();?>publicv/financier" title="Know about financier">Financier</a></li>
+									<li><a href="<?=base_url();?>publicv/beneficiary" title="Know about beneficiary">Beneficiary</a></li>
+									<li><a href="<?=base_url();?>publicv/supplier" title="Know about supplier">Supplier</a></li>
+								</ul>-->
 							</ul>
 						</li>
 						<li class="hidden-xs hidden-sm"> | </li>
