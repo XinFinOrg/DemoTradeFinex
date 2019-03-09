@@ -6,7 +6,7 @@
 				<div class="carousel-caption">
 					<div class="page-title-heading">Open Standards Protocol for global Trade & Finance </div>
 					<div class="text-heading"> </div>
-					<p class="slider_lower_content">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable and Liquid</p>
+					<p class="slider_lower_content">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
 					<a class="trade_home_call_to-action" href="https://xinfinorg.github.io/TradeFinex_API/">CONNECT</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">MORE INFO</a>
 				</div>
