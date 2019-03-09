@@ -128,6 +128,11 @@
 							<div class="widget widget-contact">
 								<h3 class="widget-title">KEEP IN TOUCH</h3>
 								<ul class="social-ft">
+                                    <li><a href="https://www.linkedin.com/in/tradefinex/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://twitter.com/TradeFinex" target="_blank"><i class="fa fa-twitter"></i></a></li>                                    <li><a href="https://www.youtube.com/channel/UCKzL0MI7gS_vlEKsUfiWuvA?view_as=subscriber" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                                
+                                <!--<ul class="social-ft">
                                     <li><a href="https://twitter.com/XinFin_Official" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="https://www.facebook.com/XinFinHybridBlockchain/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="https://github.com/XinFinorg" target="_blank"><i class="fa fa-github"></i></a></li>
@@ -138,7 +143,7 @@
                                     <li><a href="https://www.reddit.com/r/xinfin/" target="_blank"><i class="fa fa-reddit"></i></a></li>
                                     <li><a href="https://www.meetup.com/members/270624533/" target="_blank"><i class="fa fa-meetup"></i></a></li>
                                     <li><a href="https://medium.com/xinfin" target="_blank"><i class="fa fa-medium"></i></a></li>
-                                </ul>
+                                </ul>-->
 
 
 							</div>
