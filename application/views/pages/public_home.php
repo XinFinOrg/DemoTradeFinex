@@ -25,7 +25,7 @@
 				<div class="carousel-caption">
 					<div class="page-title-heading">Create Bridge & Gain access to global finаnciаl network</div>
 					<div class="text-heading">  .</div>
-					<p class="slider_lower_content">Start trail under regulatory sandbox environment</p>
+					<p class="slider_lower_content">Start trial under regulatory sandbox environment</p>
 					<a class="trade_home_call_to-action" href="<?=base_url('href="/publicv/bond_create');?>">Start POC</a>
 				</div>
 			</div> 
