@@ -106,7 +106,7 @@
                                 
 									<li> <a href="<?=base_url();?>publicv/infactor" title="">Invoice</a></li>	
 									<li> <a href="<?=base_url();?>publicv/consortium" title="">Consortium</a></li>
-									<li> <a href="<http://events.tradefinex.org/" title="">Consortium Event</a></li>
+									<li> <a href="http://events.tradefinex.org/" title="">Consortium Event</a></li>
                                     					<!--<li> <a href="<?=base_url();?>" title="">Start POC</a></li>-->
 								</ul>
 							</div>
