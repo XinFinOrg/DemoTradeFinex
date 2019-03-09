@@ -136,8 +136,7 @@
 							<li> <a href="https://www.linkedin.com/in/tradefinex/"> <img src="<?php echo base_url() ?>assets/images/icon/lkdn.png" alt="icon"></a> </li>
 							<li> <a href="https://twitter.com/TradeFinex"> <img src="<?php echo base_url() ?>assets/images/icon/twr.png" alt="icon"></a> </li>
 							<li> <a href="https://www.youtube.com/channel/UCKzL0MI7gS_vlEKsUfiWuvA?view_as=subscriber"> <img src="<?php echo base_url() ?>assets/images/icon/youtube.png" alt="icon"></a> </li>
-							<!--<li> <a href="https://www.instagram.com/tradefinex/"> <img src="<?php echo base_url() ?>assets/images/icon/ins.png" alt="icon"></a> </li>-->
-							<li> <a href="https://t.me/tradefinex"> <img src="<?php echo base_url() ?>assets/images/icon/tel.png" alt="icon"></a> </li>
+											
 						</ul>
 					</div>
 				</div>
