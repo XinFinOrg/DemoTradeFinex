@@ -15,7 +15,7 @@
 			<!-- <div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_2.jpg"/>
 				<div class="carousel-caption">
 					<div class="page-title-heading">Easy to Create, Deploy, Manage and Exchange </div>
-					<div class="text-heading">Start trial under regulatory sandbox environment.</div>
+					<div class="text-heading">Start Trial under regulatory sandbox environment.</div>
 					<p class="slider_lower_content">.</p>
 					<a class="trade_home_call_to-action" href="#trade_home_get_started">Get Started: Conduct a PoC</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">CONTACT US</a>
