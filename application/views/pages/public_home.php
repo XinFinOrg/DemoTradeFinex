@@ -10,6 +10,7 @@
 					<a class="trade_home_call_to-action" href="https://xinfinorg.github.io/TradeFinex_API/">CONNECT</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">MORE INFO</a>
 				</div>
+				
 			</div>
 			<!-- <div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_2.jpg"/>
 				<div class="carousel-caption">
