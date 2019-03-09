@@ -115,9 +115,10 @@
 							<div class="widget widget-categories">
 								<h3 class="widget-title">Others</h3>
 								<ul class="one-half">
-									<li> <a href="https://xinfinorg.github.io/TradeFinex_API/" title="">API</a></li>
-                                    <li> <a href="<?=base_url();?>publicv/contact" title="">Contact Us</a></li>
-                                    <li> <a href="<?=base_url();?>publicv/media_center" title="">Media Center</a></li>
+				<li> <a href="https://xinfinorg.github.io/TradeFinex_API/" title="">API</a></li>
+                                <li> <a href="<?=base_url();?>publicv/media_center" title="">Media Center</a></li>
+				<li> <a href="<?=base_url();?>publicv/contact" title="">Contact Us</a></li>
+                                    
 									<!--<li> <a href="<?=base_url();?>publicv/videos" title="">Videos</a></li>-->									
 								</ul>
 							</div>
