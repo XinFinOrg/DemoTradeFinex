@@ -93,63 +93,54 @@
 			<footer>
 				<div class="container">
 					<div class="row">
-						<div class="col-md-3 col-xs-12 col-sm-3 hidden-sm footer_sec_logo">
+						<div class="col-md-3 col-xs-12 col-sm-3 hidden-sm footer_sec_logo mb-20">
 							<div class="widget widget-logo">
 								<div class="logo-ft"> <a href="<?=base_url();?>" title=""><img src="<?=base_url();?>assets/images/img/footer-logo.png" alt="logo"> </a> </div>
 							</div>
 						</div>
-						<div class="col-md-2 col-xs-6 col-sm-3 footer_sec_support">
-							<div class="widget widget-categories">
-								<h3 class="widget-title">Support</h3>
-								<ul class="one-half">
-									<li> <a href="<?=base_url();?>publicv/contact" title="">Contact Us </a> </li>
-									<li> <a href="<?=base_url();?>publicv/faq" title="">FAQs</a> </li>
-									<li> <a href="<?=base_url();?>" title="">Start POC </a> </li>
-											<li> <a href="<?=base_url();?>publicv/bond_create" title="">Bond Creation </a> </li>
-								</ul>
-							</div>
-							<!-- /.widget-categories --> 
-						</div>
-						<!-- /.col-md-3 -->
-						<div class="col-md-2 col-xs-6 col-sm-3 footer_sec_oppo">
+						<div class="col-md-3 col-xs-6 col-sm-3 footer_sec_support mb-20">
 							<div class="widget widget-categories">
 								<h3 class="widget-title">Explore</h3>
 								<ul class="one-half">
-									<li> <a href="<?=base_url();?>publicv/consortium" title="">Consortium </a> </li>
-									<li> <a href="<?=base_url();?>publicv/media_center" title="">Media Center </a> </li>
-									<li> <a href="<?=base_url();?>publicv/videos" title="">Videos </a> </li>
-									<li> <a href="https://xinfinorg.github.io/TradeFinex_API/" title="">API</a> </li>
+									<li> <a href="<?=base_url();?>publicv/bond_create" title="">Bond Creation</a></li>
+                                    <li> <a href="<?=base_url();?>publicv/consortium" title="">Consortium</a></li>
+									<li> <a href="<?=base_url();?>publicv/faq" title="">FAQ's</a></li>									
+                                    <!--<li> <a href="<?=base_url();?>" title="">Start POC</a></li>-->
 								</ul>
 							</div>
 							<!-- /.widget-categories --> 
 						</div>
 						<!-- /.col-md-3 -->
-						<!--<div class="col-md-2 col-xs-12 col-sm-2 footer_sec_res">-->
-						<!--	<div class="widget widget-categories">-->
-						<!--		<h3 class="widget-title">Resources</h3>-->
-						<!--		<ul class="one-half">-->
-						<!--			<li> <a href="<?=base_url();?>publicv/media_center" title="">Media Center </a> </li>-->
-						<!--			<li> <a href="<?=base_url();?>publicv/case_study" title="">Case Study </a> </li>-->
-						<!--			<li> <a href="javascript:void(0)" title="">Mobile Apps (<span style="font-size: 10px;">Coming Soon</span>)</a> </li>-->
-						<!--		</ul>-->
-						<!--	</div>-->
+						<div class="col-md-3 col-xs-6 col-sm-3 footer_sec_oppo mb-20">
+							<div class="widget widget-categories">
+								<h3 class="widget-title">Others</h3>
+								<ul class="one-half">
+									<li> <a href="https://xinfinorg.github.io/TradeFinex_API/" title="">API</a></li>
+                                    <li> <a href="<?=base_url();?>publicv/contact" title="">Contact Us</a></li>
+                                    <li> <a href="<?=base_url();?>publicv/media_center" title="">Media Center</a></li>
+									<!--<li> <a href="<?=base_url();?>publicv/videos" title="">Videos</a></li>-->									
+								</ul>
+							</div>
 							<!-- /.widget-categories --> 
-						<!--</div>-->
+						</div>
 						<!-- /.col-md-3 -->
-						<a class="jump_to" href="#footer_subscrip"></a>
 						<div class="col-md-3 col-sm-4 footer_sec_stay">
 							<div class="widget widget-contact">
-								<!--<h3 class="widget-title">Stay Connected</h3>-->
-								
-								
-								<h3 class="widget-title keep_in_touch">KEEP IN TOUCH</h3>
+								<h3 class="widget-title">KEEP IN TOUCH</h3>
 								<ul class="social-ft">
-									<li> <a href="https://www.linkedin.com/in/tradefinex/"> <img src="<?=base_url('assets/images/icon/lkdn.png');?>" alt="icon"></a> </li>
-									<li> <a href="https://twitter.com/TradeFinex"> <img src="<?=base_url('assets/images/icon/twr.png');?>" alt="icon"></a> </li>
-									<li> <a href="https://www.youtube.com/channel/UCKzL0MI7gS_vlEKsUfiWuvA?view_as=subscriber"> <img src="<?=base_url('assets/images/icon/youtube.png');?>" alt="icon"></a> </li>
-									<!--<li> <a href="https://www.instagram.com/tradefinex/"> <img src="<?=base_url('assets/images/icon/ins.png');?>" alt="icon"></a> </li>-->
-									
-								</ul>
+                                    <li><a href="https://twitter.com/XinFin_Official" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.facebook.com/XinFinHybridBlockchain/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://github.com/XinFinorg" target="_blank"><i class="fa fa-github"></i></a></li>
+                                    <li><a href="https://bitcointalk.org/index.php?topic=1989818.0" target="_blank"><i class="fa fa-btc"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/xinfin/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCQaL6FixEQ80RJC0B2egX6g" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                    <li><a href="https://t.me/xinfintalk" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+                                    <li><a href="https://www.reddit.com/r/xinfin/" target="_blank"><i class="fa fa-reddit"></i></a></li>
+                                    <li><a href="https://www.meetup.com/members/270624533/" target="_blank"><i class="fa fa-meetup"></i></a></li>
+                                    <li><a href="https://medium.com/xinfin" target="_blank"><i class="fa fa-medium"></i></a></li>
+                                </ul>
+
+
 							</div>
 							<!-- /.widget-contact --> 
 						</div>
@@ -166,9 +157,19 @@
 			<div class="footer-bottom">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-12"> 
-							<!-- /.social-ft -->
+						<!--<div class="col-md-12">
 							<div class="copyright"> Copyright &copy; 2019 TradeFinex.org, All rights reserved.  <a href="<?=base_url();?>publicv/privacy_policy" title="">Privacy Policy </a> and  <a href="<?=base_url();?>publicv/terms_condition" title="">Terms & Conditions </a> </li> </div>
+						</div>-->
+                        
+                        <div class="col-md-6 col-sm-6"> 
+							<!-- /.social-ft -->
+							<div class="copyright">Copyright &copy; 2019 TradeFinex.org, All rights reserved.</div>
+							<!-- /.copyright --> 
+						</div>
+						<!-- /.col-md-12 -->                        
+                        <div class="col-md-6 col-sm-6"> 
+							<!-- /.social-ft -->
+							<div class="copyright pull-right"><a href="<?=base_url();?>publicv/privacy_policy" title="">Privacy Policy</a> | <a href="<?=base_url();?>publicv/terms_condition" title="">Terms & Conditions</a></div>
 							<!-- /.copyright --> 
 						</div>
 						<!-- /.col-md-12 --> 
