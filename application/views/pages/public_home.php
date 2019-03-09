@@ -17,7 +17,7 @@
 					<div class="page-title-heading">Easy to Create, Deploy, Manage and Exchange </div>
 					<div class="text-heading">Start Trial under regulatory sandbox environment.</div>
 					<p class="slider_lower_content">.</p>
-					<a class="trade_home_call_to-action" href="/publicv/bond_create">Get Started: Start a PoC</a>
+					<a class="trade_home_call_to-action" href="/publicv/bond_create">Start a PoC</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">CONTACT US</a>
 				</div>
 			</div> -->
