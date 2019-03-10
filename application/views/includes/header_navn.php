@@ -57,7 +57,7 @@
 				
 						<li class="hassubs"> <a href="javascript:void(0)" title="">Financial Instruments Supported</a>
 							<ul class="submenu">
-							<li class=""><a href="<?=base_url();?>publicv/bond_create" title="Bond Creation">Bond</a></li>
+							<li class=""><a href="<?=base_url();?>publicv/bond_create" title="Bond Creation">Digital Bond</a></li>
                                 			<li class=""><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">Invoice</a></li>
 								<li class=""><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">Corda Bridge (Coming Soon)</a></li>
                                 				
