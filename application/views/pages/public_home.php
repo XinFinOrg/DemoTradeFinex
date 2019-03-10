@@ -245,7 +245,7 @@
 				<div class="col-xs-8 col-md-12 col-sm-8">
 					<h3>Digital Bond</h3>
 					<p>Create, Manage & Liquidate Bonds instrument Online. A fully digital solution on blockchain eliminate counterparty delays, and allow instant settlement.</p>
-					<a href="<?=base_url('publicv/financier');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
+					<a href="</publicv/bond_create>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
 			</div>
 			<div class="common margin_right_35">
