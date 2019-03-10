@@ -244,7 +244,7 @@
 				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/financier_icon.svg" alt="icon"> </div>
 				<div class="col-xs-8 col-md-12 col-sm-8">
 					<h3>Bond</h3>
-					<p>Create, Manage & Liquidate Bonds Online | A fully digital solution on blockchain </p>
+					<p>Create, Manage & Liquidate Bonds instrument Online. A fully digital solution on blockchain </p>
 					<a href="<?=base_url('publicv/financier');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
 			</div>
