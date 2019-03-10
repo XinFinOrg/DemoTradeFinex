@@ -233,7 +233,7 @@
 	<div class="container text-center">
 		<div class="row">
 			<p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>
-			<h2>Get Started</h2>
+			<h2>Start POC</h2>
 		</div>
 	</div>
 </section>
@@ -243,7 +243,7 @@
 		    <div class="common margin_right_35">
 				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/financier_icon.svg" alt="icon"> </div>
 				<div class="col-xs-8 col-md-12 col-sm-8">
-					<h3>For Financiers</h3>
+					<h3>Bond</h3>
 					<p>Governments, Funds, Private Equity, Venture Capitalists, Financial Institutions</p>
 					<a href="<?=base_url('publicv/financier');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
@@ -251,7 +251,7 @@
 			<div class="common margin_right_35">
 				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/beneficiary_icon.svg" alt="icon"> </div>
 				<div class="col-xs-8 col-md-12 col-sm-8">
-					<h3>For Beneficiaries</h3>
+					<h3>Invoice</h3>
 					<p>Governments, Local Bodies, Communities, Corporates, Financial Institutions</p>
 					<a href="<?=base_url('publicv/beneficiary');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
@@ -259,7 +259,7 @@
 			<div class="common">
 				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/suppliers_icon.svg" alt="icon"> </div>
 				<div class="col-xs-8 col-md-12 col-sm-8">
-					<h3>For Suppliers</h3>
+					<h3>Corda Bridge</h3>
 					<p>Product and services suppliers across the globe</p>
 					<a href="<?=base_url('publicv/supplier');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
