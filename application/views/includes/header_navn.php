@@ -57,7 +57,7 @@
 				
 						<li class="hassubs"> <a href="javascript:void(0)" title="">Financial Instruments Supported</a>
 							<ul class="submenu">
-							    <li class=""><a href="<?=base_url();?>publicv/bont_create" title="Bond Creation">Bond</a></li>
+							    <li class=""><a href="<?=base_url();?>publicv/bond_create" title="Bond Creation">Bond</a></li>
                                 <li class=""><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">Invoice</a></li>
                                 <!--<ul class="dropdown">
 									<li class="subs"><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">InFactor</a></li>
@@ -68,7 +68,7 @@
 							</ul>
 						</li>
 						<li class="hidden-xs hidden-sm"> | </li>
-						<li> <a href="https://docs.tradefinex.org/faq/general/" title="Submit Project">FAQ</a> </li>
+						<li> <a href="https://docs.tradefinex.org/faq/general/" title="FAQ">FAQ</a> </li>
 				
 						<li class="hidden-xs hidden-sm"> | </li>
 						<li> <a href="<?=base_url();?>publicv/contact" title="">Contact us </a> </li>

@@ -484,13 +484,13 @@
 			e.stopPropagation();
 		});
 		
-		$(document).on("click", function(e) {
-			if ($(e.target).is("#search") === false && $(".form-control").val().length == 0) {
-				$("#search").removeClass("sb-search-open");
-				$("#search").find('input[type="text"]').removeClass('toggle_search');
-				/* $(".form-group").removeClass("sb-search-open"); */
-			}
-		});
+		// $(document).on("click", function(e) {
+		// 	if ($(e.target).is("#search") === false && $(".form-control").val().length == 0) {
+		// 		$("#search").removeClass("sb-search-open");
+		// 		$("#search").find('input[type="text"]').removeClass('toggle_search');
+		// 		/* $(".form-group").removeClass("sb-search-open"); */
+		// 	}
+		// });
 		
 		$(".form-control-submit").click(function(e){
 			$(".form-control").each(function(){
