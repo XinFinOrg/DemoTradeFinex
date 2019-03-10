@@ -243,7 +243,7 @@
 		    <div class="common margin_right_35">
 				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/financier_icon.svg" alt="icon"> </div>
 				<div class="col-xs-8 col-md-12 col-sm-8">
-					<h3>Bond</h3>
+					<h3>Digital Bond</h3>
 					<p>Create, Manage & Liquidate Bonds instrument Online. A fully digital solution on blockchain </p>
 					<a href="<?=base_url('publicv/financier');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
@@ -260,7 +260,7 @@
 				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/suppliers_icon.svg" alt="icon"> </div>
 				<div class="col-xs-8 col-md-12 col-sm-8">
 					<h3>R3 Corda Bridge</h3>
-					<p>Connect Corda State with Public blockchain (Coming Soon)</p>
+					<p>Connect Corda State with Public blockchain. Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid (Coming Soon)</p>
 					<a href="<?=base_url('publicv/supplier');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
 			</div>
