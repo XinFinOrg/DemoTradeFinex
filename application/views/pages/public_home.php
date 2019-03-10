@@ -252,7 +252,7 @@
 				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/beneficiary_icon.svg" alt="icon"> </div>
 				<div class="col-xs-8 col-md-12 col-sm-8">
 					<h3>Invoice</h3>
-					<p>InFactor is a platform for factoring Trade Instruments(mainly invoices)</p>
+					<p>InFactor is a platform for factoring Trade Instruments(mainly invoices).Tradfinex Blockchain Bridge opens the doors for everyone to participate in an alternative finance marketplace.</p>
 					<a href="<?=base_url('publicv/beneficiary');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
 			</div>
