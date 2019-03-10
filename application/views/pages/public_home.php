@@ -252,7 +252,7 @@
 				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/beneficiary_icon.svg" alt="icon"> </div>
 				<div class="col-xs-8 col-md-12 col-sm-8">
 					<h3>Invoice</h3>
-					<p>Tradfinex's Invoice Factoring Platform opens the doors for everyone to participate in an alternative finance marketplace.</p>
+					<p>Tradfinex's Invoice Factoring Platform opens the doors for everyone to participate in an alternative finance marketplace with fully transparent way.</p>
 					<a href="<?=base_url('publicv/beneficiary');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
 			</div>
