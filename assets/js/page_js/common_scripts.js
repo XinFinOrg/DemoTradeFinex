@@ -71,7 +71,7 @@ $(function () {
 
 	jQuery.validator.addMethod("numberOnly", function (value, element) {
 		// allow any non-whitespace characters as the host part
-		return this.optional(element) || /^[0-9+\s]+$/.test(value);
+		return this.optional(element) || /^[0-9]+$/.test(value);
 	}, 'This field allowing number only');
 
 	jQuery.validator.addMethod("mobilenumberOnly", function (value, element) { // International Mobile Number
@@ -386,7 +386,7 @@ $(function () {
 			},
 			mmob: {
 				required: true,
-				numberOnly: true,
+				//numberOnly: true,
 				mobilenumberOnly: true,
 
 			},
@@ -511,6 +511,9 @@ $(function () {
 				maxlength: 30,
 				numberOnly: true
 			},
+			defaultReal: {
+				equalTo: '#captcha_val'
+			}
 
 		},
 		messages: {
@@ -526,33 +529,33 @@ $(function () {
 			},
 			tokenSupply: {
 				required: "Please enter issuance size",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			ethRate: {
 				required: "Please enter face value",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			bonusRate: {
 				required: "Please enter minimum contribution",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			coupon: {
 				required: "Please enter coupon",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			tenure: {
 				required: "Please enter tenure",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			dvalue: {
 				required: "Please enter discount value",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 		},
 		onkeyup: function (elem) {
@@ -674,7 +677,7 @@ $(function () {
 			},
 			mmob: {
 				required: true,
-				numberOnly: true,
+				//numberOnly: true,
 				mobilenumberOnly: true
 			},
 			mcomp: {
@@ -750,7 +753,7 @@ $(function () {
 			},
 			mmob: {
 				required: true,
-				numberOnly: true,
+				//numberOnly: true,
 				mobilenumberOnly: true
 			},
 			/*musertype: "required",
@@ -820,7 +823,7 @@ $(function () {
 			},
 			mmob: {
 				required: true,
-				numberOnly: true,
+				//numberOnly: true,
 				mobilenumberOnly: true
 			},
 			mlinkurl: {

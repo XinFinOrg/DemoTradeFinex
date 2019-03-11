@@ -23,7 +23,7 @@
 			</div> -->
 			<div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_3.jpg"/>
 				<div class="carousel-caption">
-					<div class="page-title-heading">Create Bridge & Gain access to global finаnciаl ecosystem.</div>
+					<div class="page-title-heading">Create Bridge & Gain access to global Financial ecosystem.</div>
 					<div class="text-heading"> </div>
 					<p class="slider_lower_content">Start trial under regulatory sandbox environment.</p>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Start POC</a>
@@ -245,7 +245,7 @@
 				<div class="col-xs-8 col-md-12 col-sm-8">
 					<h3>Digital Bond</h3>
 					<p>Create, Manage & Liquidate Bonds instrument Online. A fully digital solution on blockchain eliminate counterparty delays, and allow instant settlement.</p>
-					<a href="</publicv/bond_create">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
+					<a href="<?=base_url('publicv/bond_create');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
 			</div>
 			<div class="common margin_right_35">
@@ -253,17 +253,18 @@
 				<div class="col-xs-8 col-md-12 col-sm-8">
 					<h3>Invoice</h3>
 					<p>Tradfinex's Invoice Factoring Platform opens the doors for everyone to participate in an alternative finance marketplace with fully transparent way.</p>
-					<a href="</publicv/infactor">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
+					<a href="<?=base_url('publicv/infactor');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
 			</div>
-			<div class="common">
+			<div class="common ">
 				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/suppliers_icon.svg" alt="icon"> </div>
 				<div class="col-xs-8 col-md-12 col-sm-8">
 					<h3>R3 Corda Bridge</h3>
-					<p>Connect R3 Corda State with Public blockchain. Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid (Coming Soon)</p>
+					<p>Connect R3 Corda State with Public blockchain. Mitigate Counter - Party Risk by making your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
 					<a href="<?=base_url('publicv/supplier');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
 				</div>	
 			</div>
+			
 		</div>
 	</div>
 </section>

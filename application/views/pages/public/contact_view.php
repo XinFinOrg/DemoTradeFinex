@@ -130,7 +130,7 @@
 							</div>
 						</form>
 					</div>
-					<div class="keep_in_touch">
+					<!-- <div class="keep_in_touch">
 						<h3 class="title">Keep in touch</h3>
 						<ul class="social-ft">
 							<li> <a href="https://www.linkedin.com/in/tradefinex/"> <img src="<?php echo base_url() ?>assets/images/icon/lkdn.png" alt="icon"></a> </li>
@@ -138,7 +138,7 @@
 							<li> <a href="https://www.youtube.com/channel/UCKzL0MI7gS_vlEKsUfiWuvA?view_as=subscriber"> <img src="<?php echo base_url() ?>assets/images/icon/youtube.png" alt="icon"></a> </li>
 											
 						</ul>
-					</div>
+					</div> -->
 				</div>
 				<div class="col-md-7 col-sm-7 col-xs-12 hidden-md hidden-lg">
 					<div class="left_side">
