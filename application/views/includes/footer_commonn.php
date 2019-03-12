@@ -276,4 +276,9 @@
 		</script>
 			
 		<script src="<?=base_url('assets/js/page_js/footer_common.js');?>"></script>
+        
+        
+        <!-- bxslider Banner script js -->
+        <script src="assets/banner-assets/js/bxslider.min.js"></script>
+        <script src="assets/banner-assets/js/custom.js"></script>
 	
