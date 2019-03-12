@@ -1,4 +1,4 @@
-	<section id="home_slider_banner" class="top_banner parallax parallax_block"> 
+	<!--<section id="home_slider_banner" class="top_banner parallax parallax_block"> 
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
 			
@@ -12,7 +12,7 @@
 				</div>
 				
 			</div>
-			<!-- <div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_2.jpg"/>
+			<div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_2.jpg"/>
 				<div class="carousel-caption">
 					<div class="page-title-heading">Easy to Create, Deploy, Manage and Exchange </div>
 					<div class="text-heading">Start Trial under regulatory sandbox environment.</div>
@@ -20,7 +20,7 @@
 					<a class="trade_home_call_to-action" href="/publicv/bond_create">Start a PoC</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">CONTACT US</a>
 				</div>
-			</div> -->
+			</div> 
 			<div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_3.jpg"/>
 				<div class="carousel-caption">
 					<div class="page-title-heading">Create Bridge & Gain access to global Financial ecosystem.</div>
@@ -33,7 +33,86 @@
 		</div>
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span> </a>
 	</div>
-</section>
+</section>-->
+        
+        
+        
+        
+        
+        
+        <section class="banner-outer">
+            <div class="banner-slider">
+                <div class="banner banner2 slide1">
+                    <div class="container">
+                        <div class="row cnt-block">
+                            <div class="col-md-12 text-center">
+                                <div class="bannerHeader">
+                                    <h1 class="animated fadeInDown delay-02s">Open Standards Protocol for global Trade & Finance</h1>
+                                    <p class="animated fadeInDown delay-03s">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
+                                    </div>
+                                    <div class="button-box">
+                                	<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
+                                	<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <figure class="animated fadeInUp delay-06s"><img src="assets/banner-assets/images/banner-slide1.png" class="img-responsive" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner slide2">
+                    <div class="container">
+                        <div class="row cnt-block">
+                            <div class="col-md-12 text-center">
+                                <div class="bannerHeader">
+                                    <h1 class="animated fadeInDown delay-02s">Create Bridge & Gain access to global Financial ecosystem</h1>
+                                    <p class="animated fadeInDown delay-03s">Start trial under regulatory sandbox environment</p>
+                                    </div>
+                                    <div class="button-box">
+                                	<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-04s">Start POC</a>
+                                	<a href="https://docs.tradefinex.org/faq/general" class="get-started animated fadeInDown delay-05s">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <figure class="animated fadeInUp delay-06s"><img src="assets/banner-assets/images/banner-slide2.gif" class="img-responsive" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="banner slide3">
+                    <div class="container">
+                        <div class="row cnt-block">
+                            <div class="col-md-12 text-center">
+                                <div class="bannerHeader">
+                                    <h1 class="animated fadeInDown delay-02s">The Perfect SaaS Template</h1>
+                                    <p class="animated fadeInDown delay-03s">Developed for SaaS and Web Applications!</p>
+                                    </div>
+                                    <div class="button-box">
+                                	<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInRight delay-02s">Invoice</a>
+                                	<a href="<?=base_url('publicv/bond');?>" class="get-started animated fadeInRight delay-03s">Bond</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <figure class="animated fadeInUp delay-05s"><img src="assets/banner-assets/images/banner-slide1.png" class="img-responsive" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </section>
+
+
+
+
+
+
 
 <!-- Home_Slider -->
 <!-- <section class="why_pay padding_70">
@@ -197,7 +276,7 @@
 			<div class="common_sec">
 				<h2>TradeFinex </h2><br>
                 <p>
-				Trade Finance is a foundational stone of any economy.  Over the last few years, the trade finance ecosystem has continued to leverage new technologies and adapt to evolving regulatory conditions. However even as change progresses, huge trade finance gaps persist. Here are some figures from Asian Development Bank’s report *</p>
+				Trade Finance is a foundational stone of any economy.  Over the last few years, the trade finance ecosystem has continued to leverage new technologies and adapt to evolving regulatory conditions. However even as change progresses, huge trade finance gaps persist. Here are some figures from Asian Development Bank's report *</p>
 				<div class ="home-page"><ul style="list-style-type:disc;" ><li> $1.5 trillion global trade finance gap</li>
 				<li>40% of the gap originates in Asia and the Pacific</li>
 				<li>SMEs and mid-cap firms account for 74% of rejected trade finance transactions</li>
@@ -205,12 +284,12 @@
 				<li>A 10% increase in trade finance could boost employment by 1%</li></ul>
 				</div>
 				<br>
-				<p>*Asian Development Bank, “2017 Trade Finance Gaps, Growth and Jobs Survey” </p>		
+				<p>*Asian Development Bank, "2017 Trade Finance Gaps, Growth and Jobs Survey" </p>		
 				<h3 class="home-page">What TradeFinex can do for you?	</h3>
 				<p> Access to a decentralized P2P global trade and P2P global financing solutions framework in a law of land compliant platform</p>
 				<h3 class="home-page">What is TradeFinex?	</h3>
 				<p>TradeFinex is a decentralized peer to peer global Trade & Infrastructure Finance platform built on open standards and it provides seamless connectivity between global public investors, contract authority, project company, regulators and other key project finance stakeholders</p>
-				<p>It brings together financiers & investors, buyers, suppliers as well as government and regulatory bodies. TradeFinex aims to minimize global trade finance gap as well as infrastructure deficit by minimizing inefficiencies and increasing liquidity by leveraging Blockchain technology. Its key features include decentralized platform, smart contracting, asset tokenization, integrated wallets, real time global and cross border payments and settlements and regulatory sandbox environment – powered by XinFin’s enterprise ready hybrid blockchain protocol. TradeFinex’s Application Programming Interfaces (APIs) also provide further interoperability with other systems and platforms – thus enriching the whole trade finance ecosystem.</p>
+				<p>It brings together financiers & investors, buyers, suppliers as well as government and regulatory bodies. TradeFinex aims to minimize global trade finance gap as well as infrastructure deficit by minimizing inefficiencies and increasing liquidity by leveraging Blockchain technology. Its key features include decentralized platform, smart contracting, asset tokenization, integrated wallets, real time global and cross border payments and settlements and regulatory sandbox environment – powered by XinFin's enterprise ready hybrid blockchain protocol. TradeFinex's Application Programming Interfaces (APIs) also provide further interoperability with other systems and platforms – thus enriching the whole trade finance ecosystem.</p>
 				<h3 class="home-page">Benefits of using TradeFinex</h3>
 				<div class ="home-page"><ul style="list-style-type:disc;" ><li> Secure and transparent commerce amongst trusted participants</li>
 				<li>Enhanced access to finance and global biz opportunities</li>
