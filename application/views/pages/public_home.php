@@ -9,6 +9,7 @@
 					<p class="slider_lower_content">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/infactor');?>">Invoice</a>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Bond</a>
+					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">R3 Corda Bridge</a>
 				</div>
 				
 			</div>
