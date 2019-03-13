@@ -102,7 +102,7 @@
 							<div class="widget widget-categories">
 								<h3 class="widget-title">Explore</h3>
 								<ul class="one-half">
-									<li> <a href="<?=base_url();?>publicv/bond_create" title="">Bond</a></li>
+									<li> <a href="<?=base_url();?>publicv/bond_create" title="">Digital Bond</a></li>
                                 
 									<li> <a href="<?=base_url();?>publicv/infactor" title="">Invoice</a></li>	
 								
