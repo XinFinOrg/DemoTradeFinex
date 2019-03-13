@@ -8,8 +8,7 @@
 					<div class="text-heading"> </div>
 					<p class="slider_lower_content">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/infactor');?>">Invoice</a>
-					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Digital Bond</a>
-					<a class="trade_home_call_to-action" href="<?=base_url('publicv/infactor_view.php');?>">R3 Corda Bridge</a>
+					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Bond</a>
 				</div>
 				
 			</div>
@@ -53,8 +52,7 @@
                                     </div>
                                     <div class="button-box">
                                 	<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
-                                	<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Digital Bond</a>
-					    <a href="<?=base_url('publicv/corda_create');?>" class="get-started animated fadeInDown delay-05s">R3 Corda Bridge</a>
+                                	<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="banner slide2">
+                <!--<div class="banner slide2">
                     <div class="container">
                         <div class="row cnt-block">
                             <div class="col-md-12 text-center">
@@ -86,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="banner slide3">
+                <div class="banner slide3">
                     <div class="container">
                         <div class="row cnt-block">
                             <div class="col-md-12 text-center">
@@ -97,8 +95,7 @@
                                     <div class="button-box">
                                 	<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInRight delay-02s">Invoice</a>
                                 	<a href="<?=base_url('publicv/bond');?>" class="get-started animated fadeInRight delay-03s">Bond</a>
-					<a href="<?=base_url('publicv/bond');?>" class="get-started animated fadeInRight delay-03s">R3 Corda Bridge</a>                                
-</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -114,6 +111,85 @@
 
 
 
+
+
+<section class="create-bridge white-bg padding-lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-2 cnt-block">
+                        <h2>Create Bridge & Gain access to global Financial ecosystem</h2>
+                        <p>Start trial under regulatory sandbox environment.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since been.</p>
+                        <!--<a href="#" class="know-more"> Start POC</a>-->
+                        <a href="#" class="btn get-started">Start POC</a>
+                    </div>
+                    <div class="col-lg-6 right">
+                        <figure class="img"><img src="assets/banner-assets/images/banner-slide2.gif" class="img-responsive" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+</section>
+        
+        
+        
+<section class="digital-bond grey-bg padding-lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <figure class="img"><img src="assets/banner-assets/images/create-bond.png" class="img-responsive" alt=""></figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="cnt-block padd-left">
+                            <h2>Digital Bond</h2>
+                            <p>Create, Manage & Liquidate Bonds Instrument Online. A Fully Digital Solution On Blockchain Eliminate Counterparty Delays, And Allow Instant Settlement.</p>
+                            <a href="#" class="btn get-started">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+
+
+
+<section class="invoice-factoring white-bg padding-lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 order-lg-2 cnt-block">
+                        <h2>Invoice Factoring</h2>
+                        <p>Tradfinex's Invoice Factoring Platform Opens The Doors For Everyone To Participate In An Alternative Finance Marketplace With Fully Transparent Way.</p>
+                        <!--<a href="#" class="know-more"> Start POC</a>-->
+                        <a href="#" class="btn get-started">Explore Now</a>
+                    </div>
+                    <div class="col-lg-7 right">
+                        <a class="play-btn video" href="https://www.youtube.com/watch?v=GIp_h7U9aRQ"><span class="fa fa-play-circle"></span></a>
+                        <figure class="img"><img src="assets/banner-assets/images/infactor.png" class="img-responsive" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+</section>
+
+
+<section class="digital-bond grey-bg padding-lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <figure class="img"><img src="assets/banner-assets/images/r3-corda.jpg" class="img-responsive" alt=""></figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="cnt-block padd-left">
+                            <h2>R3 Corda Bridge</h2>
+                            <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
+                            <a href="#" class="btn get-started">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+
+
+
+
+                
 
 
 
