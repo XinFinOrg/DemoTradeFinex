@@ -131,13 +131,13 @@ select:focus {
 }
 .btn {
 	display: inline-block;
-	padding: 14px 45px;
+	padding: 12px 30px;
 	background: #57bce2;
-	font-size: 16px;
+	font-size: 14px;
 	color: #fff;
-	font-weight: 700;
+	font-weight: 500;
 	text-transform: uppercase;
-	border-radius: 5px;
+	border-radius: 50px;
 }
 .btn:hover {
 	background: #f29a32;
@@ -162,7 +162,8 @@ figure {
 /* ================================================== */
 .banner {
 	display: block;
-	min-height: 760px;
+	/*min-height: 760px;*/
+	min-height: 700px;
 }
 .banner .container {
 	position: relative;
@@ -203,7 +204,7 @@ figure {
 	display: inline-block;
 	padding: 10px 30px;	
 	font-size: 14px;
-	font-weight: 700;
+	font-weight: 500;
 	text-transform: uppercase;
 	color: #fff;
 	border-radius: 50px;
@@ -720,7 +721,7 @@ ul.marketing-list3 li a:hover {
 	background: #f2f2f2;
 }
 .digital-bond .cnt-block {
-	padding-top: 110px;
+	padding-top: 90px;
 }
 .digital-bond .cnt-block.padd-left {
 	padding-left: 40px;
@@ -728,8 +729,11 @@ ul.marketing-list3 li a:hover {
 .digital-bond .cnt-block h2 {
 	padding-bottom: 25px;
 }
+.digital-bond .cnt-block h3 {
+	padding-bottom: 25px;
+}
 .digital-bond .cnt-block p {
-	padding: 0 4% 25px 0;
+	padding: 0 4% 15px 0;
 }
 .digital-bond .margin {
 	margin-right: -100px;
@@ -743,11 +747,14 @@ ul.marketing-list3 li a:hover {
 .create-bridge.padding-lg {
 	padding-bottom: 0px;
 }
+.create-bridge .cnt-block {
+	padding-top: 45px;
+}
 .create-bridge h2 {
 	padding-bottom: 30px;
 }
 .create-bridge p {
-	padding-bottom: 25px;
+	padding-bottom: 15px;
 }
 .create-bridge p.padd-sm {
 	padding-bottom: 20px;
@@ -762,13 +769,16 @@ ul.marketing-list3 li a:hover {
 	padding-bottom: 0px;
 }
 .invoice-factoring .cnt-block {
-	padding-top: 20px;
+	padding-top: 90px;
 }
 .invoice-factoring .cnt-block h2 {
 	padding-bottom: 25px;
 }
+.invoice-factoring .cnt-block h3 {
+	padding-bottom: 25px;
+}
 .invoice-factoring .cnt-block p {
-	padding: 0 4% 25px 0;
+	padding: 0 4% 15px 0;
 }
 .invoice-factoring .right {
 	position: relative;
@@ -4762,16 +4772,6 @@ ul.our-values li .text-area p {
 .button-box a:first-child {
     margin-right: 10px!important;
 }
-.button-box a {
-	width: 160px;
-	padding: 6px 8px;
-	border-radius: 3px;
-	text-align: center;
-	display: inline-block;
-	margin: 0 10px;
-	background: #1b1e1f;
-	color: #fff;
-}
 .download-box.dark .button-box a {
 	background: #fff;
 	margin: 0 5px;
@@ -7074,15 +7074,24 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 		font-size: 20px;
 	}
 	.digital-bond .cnt-block {
-		padding-top: 80px;
+		padding-top: 45px;
 	}
 	.digital-bond .cnt-block h2 {
 		padding-bottom: 15px;
 	}
+	.digital-bond .cnt-block h3 {
+		padding-bottom: 15px;
+	}
+	.create-bridge .cnt-block {
+		padding-top: 20px;
+	}
 	.invoice-factoring .cnt-block {
-		padding-top: 0px;
+		padding-top: 45px;
 	}
 	.invoice-factoring .cnt-block h2 {
+		padding-bottom: 10px;
+	}
+	.invoice-factoring .cnt-block h3 {
 		padding-bottom: 10px;
 	}
 	.choose-pack .head-block .plan-title h3 {
@@ -7811,12 +7820,23 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 	a.know-more {
 		font-size: 14px;
 	}
-	.digital-bond .cnt-block {
-		padding-top: 60px;
+	.create-bridge .cnt-block {
+		padding-top: 30px;
 		padding-bottom: 30px;
 		text-align: center;
 	}
+	.digital-bond .cnt-block {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		text-align: center;
+	}
+	.digital-bond .cnt-block.padd-left {
+		padding-left: 0px;
+	}
 	.digital-bond .cnt-block h2 {
+		padding-bottom: 20px;
+	}
+	.digital-bond .cnt-block h3 {
 		padding-bottom: 20px;
 	}
 	.digital-bond .img {
@@ -7832,6 +7852,7 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 	.invoice-factoring .cnt-block {
 		text-align: center;
 		padding-bottom: 30px;
+		padding-top: 20px;
 	}
 	.invoice-factoring .right .img-block {
 		width: 70%;
@@ -8278,6 +8299,10 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 	ul.marketing-list2 li h3 {
 		margin: 0 auto;
 	}
+	.create-bridge .cnt-block {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 	.digital-bond .cnt-block {
 		padding-top: 40px;
 	}
@@ -8296,6 +8321,12 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 	.choose-pack h2 {
 		padding-bottom: 20px;
 	}
+	.digital-bond .cnt-block h3,
+	.create-bridge h3,
+	.invoice-factoring .cnt-block h3,
+	.choose-pack h3 {
+		padding-bottom: 20px;
+	}
 	.digital-bond.digital-bond2 {
 		padding-top: 40px;
 	}
@@ -8307,6 +8338,8 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 	}
 	.invoice-factoring .cnt-block {
 		padding-bottom: 40px;
+		padding-top: 40px;
+
 	}
 	.invoice-factoring .right .img-block img {
 		margin: 0 auto;
@@ -9719,7 +9752,7 @@ ul.Product-listing.right-sec li .bottom .add-cart{
         width: 72%;
         padding-left: 10px;
     }
-	.button-box a:first-child {
+	.button-box a {
 		margin-bottom: 10px!important;
 		margin-right: 0px!important;
 	}
@@ -9737,7 +9770,7 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 	.banner.slide2 .cnt-block {
 		padding-bottom: 71px;
 	}
-	.button-box a:first-child {
+	.button-box a {
 		margin-bottom: 10px!important;
 		margin-right: 0px!important;
 	}
