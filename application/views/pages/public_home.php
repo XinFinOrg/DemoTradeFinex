@@ -354,10 +354,10 @@
 	//$this->load->view('includes/block_features');	
 
 ?> -->
-<section id="tradefinex" class="about_us padding_50">
+<!--<section id="tradefinex" class="about_us padding_50">
 	<div class="container text-center">
 		
-			<!-- <p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>-->
+			<!-- <p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>
 			
 			<div class="common_sec">
 				<h2>TradeFinex </h2><br>	
@@ -382,7 +382,7 @@
 				</div>
 			</div>
 	</div>
-</section>
+</section>-->
 
 
 
