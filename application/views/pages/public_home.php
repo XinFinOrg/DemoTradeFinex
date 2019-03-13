@@ -53,7 +53,8 @@
                                     </div>
                                     <div class="button-box">
                                 	<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
-                                	<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
+                                	<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Digital Bond</a>
+					    <a href="<?=base_url('publicv/corda_create');?>" class="get-started animated fadeInDown delay-05s">R3 Corda Bridge</a>
                                 </div>
                             </div>
                         </div>
