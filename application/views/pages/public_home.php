@@ -48,10 +48,11 @@
                                 <div class="bannerHeader">
                                     <h1 class="animated fadeInDown delay-02s">Open Standards Protocol for global Trade & Finance</h1>
                                     <p class="animated fadeInDown delay-03s">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
-                                    </div>
+				<p class="animated fadeInDown delay-03s">Start trial under regulatory sandbox environment.</p>
+
+				    </div>
                                     <div class="button-box">
-                                	<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
-                                	<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
+                                
                                 </div>
                             </div>
                         </div>
