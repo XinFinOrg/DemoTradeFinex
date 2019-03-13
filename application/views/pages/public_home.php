@@ -7,7 +7,8 @@
 					<div class="page-title-heading">Open Standards Protocol for global Trade & Finance </div>
 					<div class="text-heading"> </div>
 					<p class="slider_lower_content">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
-					<p class="slider_lower_content">Start trial under regulatory sandbox environment.</p>
+					<a class="trade_home_call_to-action" href="<?=base_url('publicv/infactor');?>">Invoice</a>
+					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Bond</a>
 				</div>
 				
 			</div>
@@ -48,12 +49,12 @@
                                 <div class="bannerHeader">
                                     <h1 class="animated fadeInDown delay-02s">Open Standards Protocol for global Trade & Finance</h1>
                                     <p class="animated fadeInDown delay-03s">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
-				<p class="animated fadeInDown delay-03s">Start trial under regulatory sandbox environment.</p>
-
-				    </div>
-                                    <div class="button-box">
-                                
-                                </div>
+									<p class="animated fadeInDown delay-04s">Start trial under regulatory sandbox environment.</p>
+                                    </div>
+                                    <!--<div class="button-box">
+                                		<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
+                                		<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
+                                	</div>-->
                             </div>
                         </div>
                         <div class="row">
@@ -107,43 +108,24 @@
                 </div>-->
             </div>
         </section>
-
-
-
-
-
-
-<section class="create-bridge white-bg padding-lg">
+        
+        
+        
+<section class="digital-bond white-bg padding-lg">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 order-lg-2 cnt-block">
-                        <h2>Create Bridge & Gain access to global Financial ecosystem</h2>
-                        <p>Start trial under regulatory sandbox environment.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since been.</p>
-                        <!--<a href="#" class="know-more"> Start POC</a>-->
-                        <a href="#" class="btn get-started">Start POC</a>
-                    </div>
-                    <div class="col-lg-6 right">
-                        <figure class="img"><img src="assets/banner-assets/images/banner-slide2.gif" class="img-responsive" alt=""></figure>
-                    </div>
-                </div>
-            </div>
-</section>
-        
-        
-        
-<section class="digital-bond grey-bg padding-lg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <figure class="img"><img src="assets/banner-assets/images/create-bond.png" class="img-responsive" alt=""></figure>
-                    </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6 col-md-push-6">
                         <div class="cnt-block padd-left">
                             <h2>Digital Bond</h2>
                             <p>Create, Manage & Liquidate Bonds Instrument Online. A Fully Digital Solution On Blockchain Eliminate Counterparty Delays, And Allow Instant Settlement.</p>
-                            <a href="#" class="btn get-started">Explore Now</a>
+                            <div class="button-box">
+                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
+                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Explore Now</a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-md-6 col-md-pull-6">
+                        <figure class="img"><img src="assets/banner-assets/images/create-bond.png" class="img-responsive" alt=""></figure>
                     </div>
                 </div>
             </div>
@@ -151,16 +133,18 @@
 
 
 
-<section class="invoice-factoring white-bg padding-lg">
+<section class="invoice-factoring grey-bg padding-lg">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 order-lg-2 cnt-block">
+                    <div class="col-md-5 cnt-block">
                         <h2>Invoice Factoring</h2>
                         <p>Tradfinex's Invoice Factoring Platform Opens The Doors For Everyone To Participate In An Alternative Finance Marketplace With Fully Transparent Way.</p>
-                        <!--<a href="#" class="know-more"> Start POC</a>-->
-                        <a href="#" class="btn get-started">Explore Now</a>
+                        <div class="button-box">
+                        	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
+                        	<a href="<?=base_url('publicv/infactor');?>" class="btn get-started">Explore Now</a>
+                        </div>
                     </div>
-                    <div class="col-lg-7 right">
+                    <div class="col-md-7 right">
                         <a class="play-btn video" href="https://www.youtube.com/watch?v=GIp_h7U9aRQ"><span class="fa fa-play-circle"></span></a>
                         <figure class="img"><img src="assets/banner-assets/images/infactor.png" class="img-responsive" alt=""></figure>
                     </div>
@@ -169,18 +153,41 @@
 </section>
 
 
-<section class="digital-bond grey-bg padding-lg">
+<section class="digital-bond white-bg padding-lg">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <figure class="img"><img src="assets/banner-assets/images/r3-corda.jpg" class="img-responsive" alt=""></figure>
-                    </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6 col-md-push-6">
                         <div class="cnt-block padd-left">
                             <h2>R3 Corda Bridge</h2>
-                            <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk and Create Bridge to Gain access to global Financial ecosystem (Coming Soon).</p>
+                            <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
+                            <div class="button-box">
+                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
+                            	<a href="#" class="btn get-started">Explore Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-pull-6">
+                        <figure class="img"><img src="assets/banner-assets/images/r3-corda-1.jpg" class="img-responsive" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+</section>
+
+
+
+<section class="create-bridge grey-bg padding-lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 cnt-block">
+                        <h2>Create Bridge & Gain access to global Financial ecosystem</h2>
+                        <p>Start trial under regulatory sandbox environment.</p>
+                        <div class="button-box">
+                        	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
                             <a href="#" class="btn get-started">Explore Now</a>
                         </div>
+                    </div>
+                    <div class="col-md-7 right">
+                        <figure class="img"><img src="assets/banner-assets/images/banner-slide2.gif" class="img-responsive" alt=""></figure>
                     </div>
                 </div>
             </div>
@@ -377,45 +384,9 @@
 	</div>
 </section>
 
-<section id="trade_home_get_started" class="get_started">
-	<div class="container text-center">
-		<div class="row">
-			<p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>
-			<h2>Start POC</h2>
-		</div>
-	</div>
-</section>
-<section class="get_started_bottom">
-	<div class="container text-center">
-		<div class="ben_sup_fin-sec">
-		    <div class="common margin_right_35">
-				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/financier_icon.svg" alt="icon"> </div>
-				<div class="col-xs-8 col-md-12 col-sm-8">
-					<h3>Digital Bond</h3>
-					<p>Create, Manage & Liquidate Bonds instrument Online. A fully digital solution on blockchain eliminate counterparty delays, and allow instant settlement.</p>
-					<a href="<?=base_url('publicv/bond_create');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
-				</div>	
-			</div>
-			<div class="common margin_right_35">
-				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/beneficiary_icon.svg" alt="icon"> </div>
-				<div class="col-xs-8 col-md-12 col-sm-8">
-					<h3>Invoice</h3>
-					<p>Tradfinex's Invoice Factoring Platform opens the doors for everyone to participate in an alternative finance marketplace with fully transparent way.</p>
-					<a href="<?=base_url('publicv/infactor');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
-				</div>	
-			</div>
-			<div class="common ">
-				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/suppliers_icon.svg" alt="icon"> </div>
-				<div class="col-xs-8 col-md-12 col-sm-8">
-					<h3>R3 Corda Bridge</h3>
-					<p>Connect R3 Corda State with Public blockchain. Mitigate Counter - Party Risk by making your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
-					<a href="<?=base_url('');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
-				</div>	
-			</div>
-			
-		</div>
-	</div>
-</section>
+
+
+
 
 <section id="consortium" class="about_us padding_50">
 	<div class="container text-center">
@@ -515,6 +486,32 @@
 				<div class="owl-carousel owl-bottom-banner lazy slider">
 					
 					<div class="owl-item">
+						<div class="team-member" style="background-color: #fff;">
+							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/r3-logo.jpg" alt="R3" /></div>
+							
+						</div>
+					</div>
+                    
+                    <div class="owl-item">
+						<div class="team-member" style="background-color: #fff;">
+							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/adgm-logo.jpg" alt="ADGM" /></div>
+							
+						</div>
+					</div>
+                    
+                    <div class="owl-item">
+						<div class="team-member" style="background-color: #fff;">
+							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/assocham-logo.jpg" alt="Assocham" /></div>
+							
+						</div>
+					</div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="owl-item">
 						<div class="team-member" style="background-color: #fff;">
 							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/assocham-logo.jpg" alt="Assocham" /></div>
 							
