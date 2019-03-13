@@ -52,14 +52,14 @@
 			<div class="nav-wrap">
 				<nav id="mainnav" class="mainnav">
 					<ul class="menu">
-					    <li> <a  <?='href="/publicv/consortium"'?> title="Consortium & Events">Consortium Event</a> </li>
+					    <li> <a  <?='href="https://demo.tradefinex.org/publicv/consortium"'?> title="Consortium">Consortium</a> </li>
 					    <li class="hidden-xs hidden-sm"> | </li>
 				
 						<li class="hassubs"> <a href="javascript:void(0)" title="">Financial Instruments Supported</a>
 							<ul class="submenu">
-							<li class=""><a href="<?=base_url();?>publicv/bond_create" title="Bond Creation">Digital Bond</a></li>
-                                			<li class=""><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">Invoice</a></li>
-								<li class=""><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">Corda Bridge (Coming Soon)</a></li>
+								<li class=""><a href="<?=base_url();?>publicv/bond_create" title="Bond Creation">Digital Bond</a></li>
+                                <li class=""><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">Invoice</a></li>
+								<li class=""><a href="<?=base_url();?>publicv/infactor" title="Corda Bridge">Corda Bridge (Coming Soon)</a></li>
                                 				
 								<!--<ul class="dropdown">
 									<li class="subs"><a href="<?=base_url();?>publicv/infactor" title="Know about infactor">InFactor</a></li>
