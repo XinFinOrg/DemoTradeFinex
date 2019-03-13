@@ -64,6 +64,26 @@
                     </div>
                 </div>
                 <!--<div class="banner slide2">
+                        <div class="row cnt-block">
+                            <div class="col-md-12 text-center">
+                                <div class="bannerHeader">
+                                    <h1 class="animated fadeInDown delay-02s">Open Standards Protocol for global Trade & Finance</h1>
+                                    <p class="animated fadeInDown delay-03s">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
+                                    </div>
+                                    <div class="button-box">
+                                	<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
+                                	<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <figure class="animated fadeInUp delay-06s"><img src="assets/banner-assets/images/banner-slide1.png" class="img-responsive" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner slide2">
                     <div class="container">
                         <div class="row cnt-block">
                             <div class="col-md-12 text-center">
@@ -85,6 +105,7 @@
                     </div>
                 </div>
                 <div class="banner slide3">
+                <!--<div class="banner slide3">
                     <div class="container">
                         <div class="row cnt-block">
                             <div class="col-md-12 text-center">
@@ -360,7 +381,18 @@
 			<!-- <p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>
 			
 			<div class="common_sec">
-				<h2>TradeFinex </h2><br>	
+				<h2>TradeFinex </h2><br>
+				<h2>TradeFinex </h2><br>
+                <p>
+				Trade Finance is a foundational stone of any economy.  Over the last few years, the trade finance ecosystem has continued to leverage new technologies and adapt to evolving regulatory conditions. However even as change progresses, huge trade finance gaps persist. Here are some figures from Asian Development Bank's report *</p>
+				<div class ="home-page"><ul style="list-style-type:disc;" ><li> $1.5 trillion global trade finance gap</li>
+				<li>40% of the gap originates in Asia and the Pacific</li>
+				<li>SMEs and mid-cap firms account for 74% of rejected trade finance transactions</li>
+				<li>At least 36% of rejected trade finance may be fundable by other financial entities</li>
+				<li>A 10% increase in trade finance could boost employment by 1%</li></ul>
+				</div>
+				<br>
+				<p>*Asian Development Bank, "2017 Trade Finance Gaps, Growth and Jobs Survey" </p>	
 				<h3 class="home-page">What TradeFinex can do for you?	</h3>
 				<p> Access to a decentralized P2P global trade and P2P global financing solutions framework in a law of land compliant platform</p>
 				<h3 class="home-page">What is TradeFinex?	</h3>
@@ -384,9 +416,45 @@
 	</div>
 </section>-->
 
-
-
-
+<section id="trade_home_get_started" class="get_started">
+	<div class="container text-center">
+		<div class="row">
+			<p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>
+			<h2>Start POC</h2>
+		</div>
+	</div>
+</section>
+<section class="get_started_bottom">
+	<div class="container text-center">
+		<div class="ben_sup_fin-sec">
+		    <div class="common margin_right_35">
+				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/financier_icon.svg" alt="icon"> </div>
+				<div class="col-xs-8 col-md-12 col-sm-8">
+					<h3>Digital Bond</h3>
+					<p>Create, Manage & Liquidate Bonds instrument Online. A fully digital solution on blockchain eliminate counterparty delays, and allow instant settlement.</p>
+					<a href="<?=base_url('publicv/bond_create');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
+				</div>	
+			</div>
+			<div class="common margin_right_35">
+				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/beneficiary_icon.svg" alt="icon"> </div>
+				<div class="col-xs-8 col-md-12 col-sm-8">
+					<h3>Invoice</h3>
+					<p>Tradfinex's Invoice Factoring Platform opens the doors for everyone to participate in an alternative finance marketplace with fully transparent way.</p>
+					<a href="<?=base_url('publicv/infactor');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
+				</div>	
+			</div>
+			<div class="common ">
+				<div class="icon col-xs-4 col-md-12 col-sm-4"> <img src="<?php echo base_url() ?>assets/images/icon/suppliers_icon.svg" alt="icon"> </div>
+				<div class="col-xs-8 col-md-12 col-sm-8">
+					<h3>R3 Corda Bridge</h3>
+					<p>Connect R3 Corda State with Public blockchain. Mitigate Counter - Party Risk by making your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
+					<a href="<?=base_url('publicv/supplier');?>">Explore now <span><img src="<?php echo base_url() ?>assets/images/icon/arrow_icon.jpg" alt="icon"> </span></a> 
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+</section>
 
 <section id="consortium" class="about_us padding_50">
 	<div class="container text-center">

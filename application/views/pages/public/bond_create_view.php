@@ -1,160 +1,209 @@
-<div class="sub_page_wraper">
-	<section class="bond_form_block">
-		<div class="container">
-				<div class="col-md-5 col-sm-5 col-xs-12 text-center sign_up_box">
-					<div class="right_side">
-						<h3 class="title"> Create Bonds </h3>
-						<?php $attributes = array('id' => 'bond_create-form', 'class' => 'bond_form form-commom', 'method' => 'post', 'role' => 'form');
-						echo form_open_multipart(base_url().'publicv/bond_create/', $attributes); ?>
-						<div class="form-group focus-group">
-							<label class="form-label">
-								<input class="input-focus input-focus-notr" id="tokenName" name="tokenName" type="text" autocomplete="" data-required-error="" tabindex="1" aria-required="true" />
-								<span class="form-name floating-label">Bond Name<sup>*</sup></span> 
-							</label>
-						</div>
-						<div class="form-group focus-group">
-							<label class="form-label">
-								<input class="input-focus input-focus-notr" id="tokenSymbol" name="tokenSymbol" type="text" autocomplete="" data-required-error="" tabindex="2" aria-required="true" />
-								<span class="form-name floating-label">Bond Symbol<sup>*</sup></span> 
-							</label>
-						</div>
-						<div class="form-group focus-group">
-							<label class="form-label">
-								<input class="input-focus input-focus-notr" type="text" autocomplete="" data-required-error=""  aria-required="true" value="Zero Coupon" readonly="true"/>
-								<span class="form-name floating-label">Type Of Bond<sup>*</sup></span>
-								 
-							</label>
-						</div>
-						
-						<div class="form-group focus-group">
-							<label class="form-label">
-								<input class="input-focus input-focus-notr" id="tokenDecimals" name="tokenDecimals" type="text" autocomplete=""  data-required-error=""  aria-required="true" value= 18 readonly="" aria-invalid="false" />
-								<span class="form-name floating-label">Decimals<sup>*</sup></span> 
-							</label>
-						</div>
+<!-- START APP WRAPPER -->
+   
+        <!-- START TOP HEADER WRAPPER -->
+        <div class="header-wrapper">
+            
 
-						<div class="form-group focus-group">
-						<label class="form-label">
-							<input class="input-focus input-focus-notr" id="tokenSupply" name="tokenSupply" type="text" autocomplete="" data-required-error="" tabindex="3" aria-required="true" />
-							<span class="form-name floating-label">Issuance Size(Market Supply)<sup>*</sup></span> 
-							</label>
-						</div>
+            <!-- START HEADER BOTTOM -->
+            <div class="header-bottom">
+                <div class="container">
+                    <!-- START MAIN MENU -->
+                    <nav class="main-menu">
+                        <ul class="nav metismenu">
+                            <li class="sidebar-header mobile-only mobile-nav-heading"><span>&nbsp;</span></li>
+                            <li><a class="active" id="createBondHeader" ><i class="icon dripicons-document-edit"></i><span class="hide-menu">1. Create Bond</span></a></li>
+                            <li><a  id="deployHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">2. Deploy</span></a></li>
+                            <li><a  id="bondCompleteHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">3. Bonds</span></a></li>
+                            <!-- <li><a href="issue-quote.html"><i class="icon dripicons-export"></i><span class="hide-menu">Issue Quote</span></a></li>
+                            <li><a href="create-organization.html"><i class="icon dripicons-user-group"></i><span class="hide-menu">Create Organization</span></a></li>
+                            <li><a href="portfolio.html"><i class="icon dripicons-folder-open"></i><span class="hide-menu">Portfolio</span></a></li>
+                            <li><a href="syndicate.html"><i class="icon dripicons-meter"></i><span class="hide-menu">Syndicate</span></a></li> -->
+                        </ul>
+                    </nav>
+                    <!-- END MAIN MENU -->
+                </div>
+            </div>
+            <!-- END HEADER BOTTOM -->
+        </div>
+        <!-- END TOP HEADER WRAPPER -->
+        <div class="content-wrapper" id="createBondTab">
+            <div class="content container">
+                <!--START PAGE HEADER -->
+                <header class="page-header">
+                    <div class="d-flex align-items-center">
+                        <div class="mr-auto">
+                            <h1>Create Bond</h1>
+                        </div>
+                    </div>
+                </header>
+                <!--END PAGE HEADER -->
 
-						<div class="form-group focus-group">
-						 <label class="form-label">
-							<input class="input-focus input-focus-notr" id="bonusRate" name="bonusRate" type="text" autocomplete="" data-required-error="" tabindex="4" aria-required="true" />
-							<span class="form-name floating-label">Minimum Contribution<sup>*</sup></span> 
-						 </label>
-						</div>
+                <!--START PAGE CONTENT -->
+                <section class="page-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card" style="">
+                                <?php $attributes = array('id' => 'bond_create-form', 'class' => '', 'method' => 'post', 'role' => 'form');
+                            echo form_open_multipart(base_url().'publicv/bond_create/', $attributes); ?>
+                                    <div class="card-body">
 
-						<div class="form-group focus-group">
-						 <label class="form-label">
-							<input class="input-focus input-focus-notr" id="ethRate" name="ethRate" type="text" autocomplete="" data-required-error="" tabindex="5" aria-required="true" />
-							<span class="form-name floating-label">Face Value<sup>*</sup></span> 
-						 </label>
-						</div>
+                                        <div class="form-row">
+											<div class="form-group col-md-12"><div class=" form-column-headings"> Bond Details</div></div>
+                                                
+                                            <div class="form-group col-md-4">
+                                                <label for="tokenName">Bond Name</label><sup>*</sup>
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenName" name="tokenName" placeholder="Bond Name">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="tokenSymbol">Ticker</label><sup>*</sup>
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenSymbol" name="tokenSymbol" placeholder="Ticker">
+                                            </div> 
+											<div class="form-group col-md-4">
+                                                <label for="typeofbond">Type Of Bond</label><sup>*</sup>
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" value="Zero Coupon" readonly="true">
+                                            </div>
+											<div class="form-group col-lg-4 col-md-6">
+                                                <label for="decimals">Decimals</label><sup>*</sup>
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenDecimals" name="tokenDecimals" value="18" readonly="true" />
+                                            </div>
 
-						<div class="form-group focus-group">
-						 <label class="form-label">
-							<input class="input-focus input-focus-notr" id="coupon" name="coupon" type="text" autocomplete="" data-required-error="" tabindex="6" aria-required="true" />
-							<span class="form-name floating-label">Coupon (%) <sup>*</sup></span> 
-						 </label>
-						</div>
+											<div class="form-group col-lg-4 col-md-6">
+                                                <label for="tokenSupply">Token Supply</label><sup>*</sup>
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenSupply" name="tokenSupply" placeholder="Token Supply" >
+                                            </div>                                     
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <hr class="thick dashed m-b-30">
+                                        </div>
+                                        
+                                        <div class="form-row">
+											<div class="form-group col-md-12"><div class=" form-column-headings"> Coupon Details</div></div>
+                                                
+                                            <div class="form-group col-md-4">
+                                                <label for="MinimumContribution">Minimum Contribution</label><sup>*</sup>
+                                                <input type="text" class="form-control  form-controlCustom form-control-lg" id="bonusRate" name="bonusRate" placeholder="Minimum Contribution">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="FaceValue">Face Value</label><sup>*</sup>
+                                                <input type="text" class="form-control  form-controlCustom form-control-lg" id="ethRate" name="ethRate" placeholder="Face Value">
+                                            </div> 
+											<div class="form-group col-lg-4">
+                                                <label for="Coupon">Coupon (%)</label>
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="coupon" name="coupon" placeholder="Coupon">
+                                            </div>
+											<div class="form-group col-lg-4 col-md-6">
+                                                <label for="Tenure">Tenure (in Years)</label><sup>*</sup>
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="tenure" name="tenure" placeholder = "Tenure (in Years)">
+                                            </div>
+											<div class="form-group col-lg-4 col-md-6">
+                                                <label for="Discounted Value">Discounted Value</label><sup>*</sup>
+                                                <input type="text" class="form-control  form-controlCustom form-control-lg" id="dvalue" name="dvalue" placeholder = "Discounted Value">
+                                            </div>
+											</div> 
+											<div class="form-group col-md-4">
+                                                    <label class="hidden">
+                                                        <input class="input-focus input-focus-notr" id="isPausable" name="isPausable" value="true" />
+                                                        <span class="form-name floating-label">isPausable<sup>*</sup></span> 
+                                                    </label>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                    <label class="hidden">
+                                                        <input class="input-focus input-focus-notr" id="isBurnable" name="isBurnable" value="true" />
+                                                        <span class="form-name floating-label">isBurnable<sup>*</sup></span> 
+                                                    </label>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                    <label class="hidden">
+                                                        <input class="input-focus input-focus-notr" id="isMintable" name="isMintable" value="true"/>
+                                                        <span class="form-name floating-label">isMintable<sup>*</sup></span> 
+                                                    </label>
+								            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="hidden">
+                                                    <input class="input-focus input-focus-notr" id="isUpgradeable" name="isUpgradeable" value="true"/>
+                                                    <span class="form-name floating-label">isUpgradeable<sup>*</sup></span> 
+                                                </label>
+                                            </div>                                          
+                                        </div>
+                                        <div class="card-footer border-0 text-center">
+                                            <div class="form-actions">
+                                                <div class="row">
+                                                    <div class="col-md-12 footerBtns">
+                                                        <button type="submit" id="bond_create" class="btn btn-primary btn-rounded"  > Create Bond</button>
+                                                        <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button>
+													</div>
+													<br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="content-wrapper" id="deployTab" style="display: none;">
+            <div class="content container">
+                <header class="page-header">
+                    <div class="d-flex align-items-center">
+                        <div class="mr-auto">
+                            <h1>Deploy</h1>
+                        </div>
+                    </div>
+                </header>
+                <section class="page-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card" style="">
+                                
+                                <div class="card-body">
 
-						<div class="form-group focus-group">
-						 <label class="form-label">
-							<input class="input-focus input-focus-notr" id="tenure" name="tenure" type="text" autocomplete="" data-required-error="" tabindex="7" aria-required="true" />
-							<span class="form-name floating-label">Tenure (in Years)<sup>*</sup></span> 
-						 </label>
-						</div>
+                                    <div class="form-row" style="padding-top:15px">
+                                            <div class="form-group col-lg-4 col-md-12"><div class=" form-column-headings"style="margin-left:10px; width:1120px; height:450px;overflow-y:scroll;box-shadow: 0px 2px 10px #6c757d;"> 
+                                                <pre id="contractData"  >
 
-						<div class="form-group focus-group" style="border-bottom: 1px solid #eee">
-						 <label class="form-label">
-							<input class="input-focus input-focus-notr" id="dvalue" name="dvalue" type="text" autocomplete="" data-required-error=""  aria-required="true" />
-							<span class="form-name floating-label">Discounted Value <sup>*</sup></span> 
-						 </label>
-						</div>
-						<div class="form-group focus-group">
-						 <label class="hidden">
-							<input class="input-focus input-focus-notr" id="isPausable" name="isPausable" value="true" />
-							<span class="form-name floating-label">isPausable<sup>*</sup></span> 
-						 </label>
-						</div>
-						<div class="form-group focus-group">
-						 <label class="hidden">
-							<input class="input-focus input-focus-notr" id="isBurnable" name="isBurnable" value="true" />
-							<span class="form-name floating-label">isBurnable<sup>*</sup></span> 
-						 </label>
-						</div>
-						<div class="form-group focus-group">
-						 <label class="hidden">
-							<input class="input-focus input-focus-notr" id="isMintable" name="isMintable" value="true"/>
-							<span class="form-name floating-label">isMintable<sup>*</sup></span> 
-						 </label>
-						</div>
-						<div class="form-group focus-group">
-						 <label class="hidden">
-							<input class="input-focus input-focus-notr" id="isUpgradeable" name="isUpgradeable" value="true"/>
-							<span class="form-name floating-label">isUpgradeable<sup>*</sup></span> 
-						 </label>
-						</div>
-						<div class="form-group">
-							<div class="form-label">
-								<input class="input-focus input-focus-notr" id="defaultReal" name="defaultReal" captchav="" autocomplete="" maxlength="50" required data-required-error="" tabindex="8" aria-required="true" type="text">
-								<span class="form-name floating-label">ENTER CAPTCHA<sup>*</sup></span> 
-							</div>
-							<div class="captcha-error has-error" style="display:none"><div class="help-block col-xs-12 col-sm-reset inline"><font color="red" style="margin-left: -10px;">Enter Letters Shown Above.</font></div></div><!-- Invalid Captcha ! -->
-						</div>
-						<div class="form-group"><input type="hidden" name="action" value="send_mail" /><input type="hidden" id="captcha_val" /></div>
-												
-						<div class="form-group">
-							<div class="btn-more">
-							<button type="submit" id="bond_create" class="btn btn-info" tabindex="9"> Create Bond</button>
-							</div>
-						</div>
-						</form>
-					</div>
-				</div>
-				
-			</div>
-		
-	</section>
-</div>
-<?php
+                                                </pre>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-footer border-0 text-center">
+                                    <div class="form-actions">
+                                        <div class="row">
+                                            <div class="col-md-12 footerBtns">
+                                                <button type="submit" id="deploy_contract" class="btn btn-primary btn-rounded"  > Deploy</button>
+                                                <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        
+
+        
+    <?php
 	//$this->load->view('includes/block_features');
 	$this->load->view('includes/login_modal');
-?>
+	?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<div class="modal fade" id="contract" role="dialog" tabindex="-1" >
-		<div class="modal-dialog" style="width:1500px; overflow-y: scroll; margin-left  25%;max-height:80%;max-width: 50%">
-			<!-- Modal content-->
-
-			<div class="modal-content">
-
-				<div class="modal-body">
-
-						<pre id="contractData"  >
-
-						</pre>
-				
-					
-						
-						<div class="btn-more">
-							<button id="deploy_contract" type="submit" class="btn btn-info" data-dismiss='modal' data-backdrop="static" data-keyboard="false"> Deploy </button> </div>
-						
-							                                           
-			</div>
-		</div>
-	 </div>
-</div>
 
 <div id="loader" style="display: none;"></div>
 <div class="modal fade" id="thankyou" role="dialog" tabindex="-1" >
 		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:80%;max-width: 50%">
-			<!-- Modal content-->
-
+			
 			<div class="modal-content">
 
 				<div class="modal-body">
@@ -163,7 +212,7 @@
 						<p><span><b>Transaction Hash:</b></span> <span id="deployDataTHash"></span></p>
 						<p><span><b>Contract Address:</b></span> <span id="deployDataCAddress"></span></p>
 						<div class="btn-more">
-							<a href="<? base_url();?>" type="submit" class="btn btn-info" data-dismiss='modal' data-backdrop="static" data-keyboard="false"> Ok </a> 
+							<button id="ok" type="submit" class="btn btn-info"  data-keyboard="false"> Ok </button> 
 						</div>						
 							                                           
 				</div>
@@ -171,3 +220,21 @@
 	 	</div>
 </div>
   
+
+    
+   
+    
+   
+        
+
+    <!--JS SCRIPTS-->
+    <script src="assets/bond-assets/js/modernizr.custom.js"></script>
+    <script src="assets/bond-assets/js/jquery.min.js"></script>
+    <script src="assets/bond-assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/bond-assets/js/storage.js"></script>
+    <script src="assets/bond-assets/js/menu.js"></script>
+    <script src="assets/bond-assets/js/jquery.mCustomScrollbar.js"></script>
+
+    <!--MAIN JS-->
+    <script src="assets/bond-assets/js/main.js"></script>
+    

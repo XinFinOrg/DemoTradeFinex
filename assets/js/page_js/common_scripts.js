@@ -71,7 +71,7 @@ $(function () {
 
 	jQuery.validator.addMethod("numberOnly", function (value, element) {
 		// allow any non-whitespace characters as the host part
-		return this.optional(element) || /^[0-9+\s]+$/.test(value);
+		return this.optional(element) || /^[0-9]+$/.test(value);
 	}, 'This field allowing number only');
 
 	jQuery.validator.addMethod("mobilenumberOnly", function (value, element) { // International Mobile Number
@@ -386,7 +386,7 @@ $(function () {
 			},
 			mmob: {
 				required: true,
-				numberOnly: true,
+				//numberOnly: true,
 				mobilenumberOnly: true,
 
 			},
@@ -511,6 +511,9 @@ $(function () {
 				maxlength: 30,
 				numberOnly: true
 			},
+			defaultReal: {
+				equalTo: '#captcha_val'
+			}
 
 		},
 		messages: {
@@ -526,33 +529,33 @@ $(function () {
 			},
 			tokenSupply: {
 				required: "Please enter issuance size",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			ethRate: {
 				required: "Please enter face value",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			bonusRate: {
 				required: "Please enter minimum contribution",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			coupon: {
 				required: "Please enter coupon",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			tenure: {
 				required: "Please enter tenure",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			dvalue: {
 				required: "Please enter discount value",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 		},
 		onkeyup: function (elem) {
@@ -594,6 +597,7 @@ $(function () {
 				var token = localStorage.getItem("token", res.token);
 				//console.log(token);
 				showLoader();
+				$('#contractData').prop('disabled', true);
 				if (res.token != null && res.token == token) {
 					var settings = {
 						"async": true,
@@ -610,18 +614,22 @@ $(function () {
 					
 
 					$.ajax(settings).done(function (response) {
+						$('#createBondTab').hide();
+						$('#deployTab').show();
+						$('#createBondHeader').removeClass('active');
+						$('#deployHeader').addClass('active');
 						//console.log( response);
 						hideLoader();
-						$("#contract").modal("show");
-							$('#contractData').html('<p>'+response+'</p>');
-							//console.log('formdata done:', formDataObj.tokenName);
-							const coinData = {
-								"coinName": formDataObj.tokenName,
-								"network" : "private"
-							};
+						$('#contractData').html('<p>'+response+'</p>');
+						//console.log('formdata done:', formDataObj.tokenName);
+						const coinData = {
+							"coinName": formDataObj.tokenName,
+							"network" : "private"
+						};
 
 							$("#deploy_contract").on('click', function (e) {
 								showLoader();
+								$('#deploy_contract').prop('disabled', true);
 								var deploy = {
 									"async": true,
 									"crossDomain": true,
@@ -636,7 +644,11 @@ $(function () {
 								}
 										
 								$.ajax(deploy).done(function(response){
-									console.log('response', response, response.crowdsaleReceipt.transactionHash);
+									// $('#deployTab').hide();
+									// $('#bondCompleteTab').show();
+									// $('#deployHeader').removeClass('active');
+									// $('#bondCompleteHeader').addClass('active');
+									// console.log('response', response, response.crowdsaleReceipt.transactionHash);
 									$('#deployDataTHash').html(response.crowdsaleReceipt.transactionHash);
 									$('#deployDataCAddress').html(response.crowdsaleReceipt.contractAddress);
 									hideLoader();
@@ -674,7 +686,7 @@ $(function () {
 			},
 			mmob: {
 				required: true,
-				numberOnly: true,
+				//numberOnly: true,
 				mobilenumberOnly: true
 			},
 			mcomp: {
@@ -750,7 +762,7 @@ $(function () {
 			},
 			mmob: {
 				required: true,
-				numberOnly: true,
+				//numberOnly: true,
 				mobilenumberOnly: true
 			},
 			/*musertype: "required",
@@ -820,7 +832,7 @@ $(function () {
 			},
 			mmob: {
 				required: true,
-				numberOnly: true,
+				//numberOnly: true,
 				mobilenumberOnly: true
 			},
 			mlinkurl: {
@@ -937,5 +949,12 @@ $(function () {
 
 		$('<form id="search_form" action="' + site_url + 'login/reactivate_account" method="post"><input type="hidden" name="user_name" value="' + uemail + '" /><input type="hidden" name="action" value="reset_password" /><input type="hidden" name="' + csrf_name + '" value="' + csrf_value + '" /></form>').appendTo('body').submit();
 
+	});
+
+	$('#bondCreateCancel').click(function() {
+		location.reload();
+	});
+	$('#ok').click(function() {
+		location.reload();
 	});
 });
