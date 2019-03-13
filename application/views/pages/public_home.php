@@ -178,7 +178,7 @@
                     <div class="col-lg-6">
                         <div class="cnt-block padd-left">
                             <h2>R3 Corda Bridge</h2>
-                            <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
+                            <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk and Create Bridge to Gain access to global Financial ecosystem (Coming Soon).</p>
                             <a href="#" class="btn get-started">Explore Now</a>
                         </div>
                     </div>
