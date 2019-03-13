@@ -44,24 +44,23 @@
             <div class="banner-slider">
                 <div class="banner banner2 slide1">
                     <div class="container">
-                        <div class="row cnt-block">
+                        <div class="row cnt-block mt-30">
                             <div class="col-md-12 text-center">
                                 <div class="bannerHeader">
-                                    <h1 class="animated fadeInDown delay-02s">Open Standards Protocol for global Trade & Finance</h1>
+                                    <h1 class="mb-15 animated fadeInDown delay-02s">Open Standards Protocol for global Trade & Finance</h1>
                                     <p class="animated fadeInDown delay-03s">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
 									<p class="animated fadeInDown delay-04s">Start trial under regulatory sandbox environment.</p>
-                                    </div>
-                                    <!--<div class="button-box">
+                                    <div class="button-box mt-30">
                                 		<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
                                 		<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
-                                	</div>-->
+                                	</div>
                             </div>
                         </div>
-                        <div class="row">
+                        <!--<div class="row">
                             <div class="col-md-12">
                                 <figure class="animated fadeInUp delay-06s"><img src="assets/banner-assets/images/banner-slide1.png" class="img-responsive" alt=""></figure>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <!--<div class="banner slide2">
@@ -483,6 +482,13 @@
 					
 					<div class="owl-item">
 						<div class="team-member" style="background-color: #fff;">
+							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/circle-logo.jpg" alt="Circle" /></div>
+							
+						</div>
+					</div>
+                    
+                    <div class="owl-item">
+						<div class="team-member" style="background-color: #fff;">
 							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/r3-logo.jpg" alt="R3" /></div>
 							
 						</div>
@@ -493,19 +499,7 @@
 							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/adgm-logo.jpg" alt="ADGM" /></div>
 							
 						</div>
-					</div>
-                    
-                    <div class="owl-item">
-						<div class="team-member" style="background-color: #fff;">
-							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/assocham-logo.jpg" alt="Assocham" /></div>
-							
-						</div>
-					</div>
-                    
-                    
-                    
-                    
-                    
+					</div>            
                     
                     <div class="owl-item">
 						<div class="team-member" style="background-color: #fff;">
