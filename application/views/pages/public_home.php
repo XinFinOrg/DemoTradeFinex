@@ -182,8 +182,8 @@
                         <h2>TradeFinex Round table series Consortium Event</h2>
                         <p>Event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
                         <div class="button-box">
-                        	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
-                            <a href="#" class="btn get-started">Explore Now</a>
+                        	<a href="http://events.tradefinex.org/#contact" class="btn get-started">Register Now</a>
+                            <a href="http://events.tradefinex.org/" class="btn get-started">Explore Now</a>
                         </div>
                     </div>
                     <div class="col-md-7 right">
