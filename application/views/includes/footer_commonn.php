@@ -102,13 +102,12 @@
 							<div class="widget widget-categories">
 								<h3 class="widget-title">Explore</h3>
 								<ul class="one-half">
-									<li> <a href="<?=base_url();?>publicv/bond_create" title="">Digital Bond</a></li>
+									<li> <a href="<?=base_url();?>publicv/bond_create" title="">Bond</a></li>
                                 
 									<li> <a href="<?=base_url();?>publicv/infactor" title="">Invoice</a></li>	
-								
+									<li> <a href="<?=base_url();?>publicv/consortium" title="">Consortium</a></li>
 									<li> <a href="http://events.tradefinex.org/" title="">Consortium Event</a></li>
-                                    					<li> <a href="https://xinfinorg.github.io/TradeFinex_API/" title="">API</a></li>
-									<!--<li> <a href="<?=base_url();?>" title="">Start POC</a></li>-->
+                                    					<!--<li> <a href="<?=base_url();?>" title="">Start POC</a></li>-->
 								</ul>
 							</div>
 							<!-- /.widget-categories --> 
@@ -118,7 +117,7 @@
 							<div class="widget widget-categories">
 								<h3 class="widget-title">Others</h3>
 								<ul class="one-half">
-							
+							<li> <a href="https://xinfinorg.github.io/TradeFinex_API/" title="">API</a></li>
                                 			<li> <a href="<?=base_url();?>publicv/media_center" title="">Media Center</a></li>
 							<li> <a href="<?=base_url();?>publicv/faq" title="">FAQ's</a></li>
 							<li> <a href="<?=base_url();?>publicv/contact" title="">Contact Us</a></li>
@@ -282,4 +281,4 @@
         <!-- bxslider Banner script js -->
         <script src="assets/banner-assets/js/bxslider.min.js"></script>
         <script src="assets/banner-assets/js/custom.js"></script>
-	
+        <script src="assets/banner-assets/js/magnific-popup.min.js"></script>
