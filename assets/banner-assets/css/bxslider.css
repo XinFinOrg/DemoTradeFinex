@@ -791,14 +791,14 @@ ul.marketing-list3 li a:hover {
 	width: 82px;
 	padding: 8px;
 	display: inline-block;
-	background: rgba(0, 0, 0, 0.1);
+	background: #57bce2;
 	position: absolute;
 	left: 0px;
 	right: 0px;
 	top: 50%;
 	margin: -66px auto 0;
 	font-size: 62px;
-	color: #f29a32;
+	color: #FFFFFF;
 	border-radius: 50%;
 }
 .invoice-factoring .right a.play-btn2 {
@@ -809,7 +809,8 @@ ul.marketing-list3 li a:hover {
 	font-size: 54px;
 }
 .invoice-factoring .right a.play-btn:hover {
-	color: #57bce2;
+	background: #f29a32;
+	color: #FFFFFF;
 }
 /*-----------------------
 	  Choose Pack
