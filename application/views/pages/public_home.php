@@ -96,7 +96,8 @@
                                     <div class="button-box">
                                 	<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInRight delay-02s">Invoice</a>
                                 	<a href="<?=base_url('publicv/bond');?>" class="get-started animated fadeInRight delay-03s">Bond</a>
-                                </div>
+					<a href="<?=base_url('publicv/bond');?>" class="get-started animated fadeInRight delay-03s">R3 Corda Bridge</a>                                
+</div>
                             </div>
                         </div>
                         <div class="row">
