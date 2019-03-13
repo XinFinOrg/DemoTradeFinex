@@ -23,11 +23,11 @@
 			</div> 
 			<div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_3.jpg"/>
 				<div class="carousel-caption">
-					<div class="page-title-heading">TradeFinex Round table series Consortium Event</div>
+					<div class="page-title-heading">Create Bridge & Gain access to global Financial ecosystem.</div>
 					<div class="text-heading"> </div>
-					<p class="slider_lower_content">One-day roundtable event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
-					<a class="trade_home_call_to-action" href="http://events.tradefinex.org/#contact">Start POC</a>
-					<a class="trade_home_call_to-action" href="http://events.tradefinex.org/">Explore More</a>
+					<p class="slider_lower_content">Start trial under regulatory sandbox environment.</p>
+					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Start POC</a>
+					<a class="trade_home_call_to-action" href="https://docs.tradefinex.org/faq/general">Explore More</a>
 				</div>
 			</div> 
 		</div>
@@ -153,6 +153,7 @@
 </section>
 
 
+
 <section class="digital-bond white-bg padding-lg">
             <div class="container">
                 <div class="row">
@@ -162,12 +163,12 @@
                             <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
                             <div class="button-box">
                             	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
-                            	<a href="#" class="btn get-started">Explore Now</a>
+                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Explore Now</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-md-pull-6">
-                        <figure class="img"><img src="assets/banner-assets/images/r3-corda-1.jpg" class="img-responsive" alt=""></figure>
+                        <figure class="img"><img src="assets/banner-assets/images/r3-corda-bridge.gif" class="img-responsive" alt=""></figure>
                     </div>
                 </div>
             </div>
@@ -182,12 +183,12 @@
                         <h2>TradeFinex Round table series Consortium Event</h2>
                         <p>Event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
                         <div class="button-box">
-                        	<a href="http://events.tradefinex.org/#contact" class="btn get-started">Register Now</a>
-                            <a href="http://events.tradefinex.org/" class="btn get-started">Explore Now</a>
+                        	<a href="http://events.tradefinex.org/#contact" target="_blank" class="btn get-started">Register Now</a>
+                            <a href="http://events.tradefinex.org/" target="_blank" class="btn get-started">Explore Now</a>
                         </div>
                     </div>
                     <div class="col-md-7 right">
-                        <figure class="img"><img src="assets/banner-assets/images/banner-slide2.gif" class="img-responsive" alt=""></figure>
+                        <figure class="img"><img src="assets/banner-assets/images/tradefinex-roundtable-event.png" class="img-responsive" alt=""></figure>
                     </div>
                 </div>
             </div>
@@ -391,22 +392,17 @@
 <section id="consortium" class="about_us padding_50">
 	<div class="container text-center">
 		<div class="row">
-			<p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>
-			<h2 class="black_sec_title">TradeFinex Consortium</h2>
+			<!--<p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>
+			<h2 class="black_sec_title">TradeFinex Consortium</h2>-->
 			<div class="common_sec">
-                <p>
-                    Our vision of TradeFinex as an ideal global trade and finance platform is one with open standards, seamless connectivity amongst various stakeholders of the ecosystem, a frictionless access to secure big data and a free flow of value - efficient management and financing of trade assets and working capital.</p>
-                    <p>We at XinFin recognize that this can not be achieved singularly through any silo entity, irrespective of its resources. Hence, we have proposed the creation of a consortium of key stakeholders – global public investors and others - with a shared vision and ambition to participate in the development strategy of this decentralized hybrid blockchain powered global trade and finance platform, TradeFinex. We are convinced that the complementing technological, legal,  global finance and trading expertise brought in by our consortium members will accelerate development of this standards-based platform and eventual market adoption.
-                </p>
-                <p>
-                    The consortium will be initiated out of the Global Financial Innovation Network (GFIN) regulatory member - Abu Dhabi Global Markets in the regulated Sandbox RegLab environment. As an official participant of the ADGM Sandbox, XinFin can live-test TradeFinex across the MENA region with the support and regulatory assistance – thus accelerating towards its scalability and robustness.
-                </p>
+            <h2 class="black_sec_title">Videos</h2>
+                <!--<p>Our vision of TradeFinex as an ideal global trade and finance platform is one with open standards, seamless connectivity amongst various stakeholders of the ecosystem, a frictionless access to secure big data and a free flow of value - efficient management and financing of trade assets and working capital.</p>
+                <p>We at XinFin recognize that this can not be achieved singularly through any silo entity, irrespective of its resources. Hence, we have proposed the creation of a consortium of key stakeholders – global public investors and others - with a shared vision and ambition to participate in the development strategy of this decentralized hybrid blockchain powered global trade and finance platform, TradeFinex. We are convinced that the complementing technological, legal,  global finance and trading expertise brought in by our consortium members will accelerate development of this standards-based platform and eventual market adoption.</p>
+                <p>The consortium will be initiated out of the Global Financial Innovation Network (GFIN) regulatory member - Abu Dhabi Global Markets in the regulated Sandbox RegLab environment. As an official participant of the ADGM Sandbox, XinFin can live-test TradeFinex across the MENA region with the support and regulatory assistance – thus accelerating towards its scalability and robustness.</p>
                 <p>We invite infrastructure project practitioners and investors involved in essential public infrastructure projects to be consortium members.</p>
-                
 			
-				<div class="btn-more"> <a href="<?php echo base_url() ?>publicv/consortium" title="">Apply Now<span class="icon_right_margin"> <img src="<?php echo base_url() ?>assets/images/icon/arrow.png" alt="icon"></span></a> </div>
-		
-	                <br><br>
+				<div class="btn-more"> <a href="<?php echo base_url() ?>publicv/consortium" title="">Apply Now<span class="icon_right_margin"> <img src="<?php echo base_url() ?>assets/images/icon/arrow.png" alt="icon"></span></a> </div>-->
+                
                 <p>Here below are a few brief videos which you may find helpful: </p>
                 <div class="videos_video_wrap" >
 					<div class="row">
