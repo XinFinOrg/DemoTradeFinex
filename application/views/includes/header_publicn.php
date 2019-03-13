@@ -30,6 +30,10 @@
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/style_custom.css');?>" /> 
 	<!-- Reponsive -->
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/responsive.css');?>" />
+    
+    <!-- bxslider Banner CSS -->
+    <link href="assets/banner-assets/css/bxslider.css" rel="stylesheet">
+    <link href="assets/banner-assets/css/magnific-popup.css" rel="stylesheet">
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

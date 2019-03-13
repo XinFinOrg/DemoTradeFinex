@@ -1523,7 +1523,7 @@ class Publicv extends CI_Controller {
 					$data['uname'] = $uresult[0]->tfu_usern;
 					$data['upass'] = $uresult[0]->tfu_passwd;
 				}
-			}	
+			}
 			
 			$this->load->view('includes/headern', $data);
 			$this->load->view('includes/header_publicn', $data);
