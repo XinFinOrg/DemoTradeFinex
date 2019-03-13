@@ -138,6 +138,7 @@ select:focus {
 	font-weight: 500;
 	text-transform: uppercase;
 	border-radius: 50px;
+	min-width: 160px;
 }
 .btn:hover {
 	background: #f29a32;
@@ -156,14 +157,28 @@ figure {
 .grey-bg {
 	background: #f2f2f2;
 }
+.mt-5 {margin-top:5px;}
+.mt-10 {margin-top:10px;}
+.mt-15 {margin-top:15px;}
+.mt-20 {margin-top:20px;}
+.mt-25 {margin-top:25px;}
+.mt-30 {margin-top:30px;}
+
+.mb-5 {margin-bottom:5px;}
+.mb-10 {margin-bottom:10px;}
+.mb-15 {margin-bottom:15px;}
+.mb-20 {margin-bottom:20px;}
+.mb-25 {margin-bottom:25px;}
+.mb-30 {margin-bottom:30px;}
+
 
 /* ================================================== */
 /* 04. Banner */
 /* ================================================== */
 .banner {
 	display: block;
-	/*min-height: 760px;*/
-	min-height: 700px;
+	/*min-height: 700px;*/
+	min-height: 500px;
 }
 .banner .container {
 	position: relative;
@@ -7045,7 +7060,8 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 	.banner.banner2.slide1,
 	.banner.slide2,
 	.banner.slide3 {
-		min-height: 695px;
+		/*min-height: 695px;*/
+		min-height: 450px;
 	}
 	.banner.slide2 .cnt-block {
 		padding-top: 60px;
@@ -7762,7 +7778,8 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 	.banner.banner2.slide1,
 	.banner.slide2,
 	.banner.slide3 {
-		min-height: 513px;
+		/*min-height: 513px;*/
+		min-height: 450px;
 	}
 	.banner.slide2 .cnt-block {
 		padding-top: 60px;
@@ -8175,7 +8192,8 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 		right: 15px;
 	}
 	.banner {
-		min-height: 520px;
+		/*min-height: 520px;*/
+		min-height: 450px;
 	}
 	.banner.solid-bg,
 	.banner.gradient-bg {
@@ -9666,7 +9684,8 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 @media (max-width: 375px) {
 	
 	.banner {
-		min-height: 400px;
+		/*min-height: 400px;*/
+		min-height: 500px;
 	}
 	.banner.solid-bg,
 	.banner.gradient-bg {
