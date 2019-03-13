@@ -179,8 +179,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 cnt-block">
-                        <h2>Create Bridge & Gain access to global Financial ecosystem</h2>
-                        <p>Start trial under regulatory sandbox environment.</p>
+                        <h2>TradeFinex Round table series Consortium Event</h2>
+                        <p>Event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
                         <div class="button-box">
                         	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
                             <a href="#" class="btn get-started">Explore Now</a>
