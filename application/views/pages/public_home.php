@@ -25,7 +25,7 @@
 				<div class="carousel-caption">
 					<div class="page-title-heading">TradeFinex Round table series Consortium Event</div>
 					<div class="text-heading"> </div>
-					<p class="slider_lower_content">one-day roundtable event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
+					<p class="slider_lower_content">One-day roundtable event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
 					<a class="trade_home_call_to-action" href="http://events.tradefinex.org/#contact">Start POC</a>
 					<a class="trade_home_call_to-action" href="http://events.tradefinex.org/">Explore More</a>
 				</div>
