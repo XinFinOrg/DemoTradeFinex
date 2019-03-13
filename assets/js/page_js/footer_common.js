@@ -721,5 +721,37 @@
 				}
 			}); 	
 		}); 
+
+		   // Auto Hide Menu Option for Horizontal Menu
+			// ------------------------------------------------
+			if ($("body.layout-horizontal.menu-auto-hide").length > 0) {
+				// scroll is still position
+				var scroll = $(document).scrollTop();
+				var headerHeight = $('.header-bottom').outerHeight();
+				//console.log(headerHeight);
+
+				$(window).scroll(function() {
+				// scrolled is new position just obtained
+				var scrolled = $(document).scrollTop();
+
+				// optionally emulate non-fixed positioning behaviour
+
+				if (scrolled > headerHeight) {
+					$('.header-bottom').addClass('off-canvas');
+				} else {
+					$('.header-bottom').removeClass('off-canvas');
+				}
+
+				if (scrolled > scroll) {
+					// scrolling down
+					$('.header-bottom').removeClass('fixed');
+				} else {
+					//scrolling up
+					$('.header-bottom').addClass('fixed');
+				}
+
+				scroll = $(document).scrollTop();
+				});
+			}
 	}
 	

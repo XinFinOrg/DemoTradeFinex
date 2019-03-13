@@ -281,4 +281,4 @@
         <!-- bxslider Banner script js -->
         <script src="assets/banner-assets/js/bxslider.min.js"></script>
         <script src="assets/banner-assets/js/custom.js"></script>
-        <script src="assets/banner-assets/js/magnific-popup.min.js"></script>
+	

@@ -597,6 +597,7 @@ $(function () {
 				var token = localStorage.getItem("token", res.token);
 				//console.log(token);
 				showLoader();
+				$('#contractData').prop('disabled', true);
 				if (res.token != null && res.token == token) {
 					var settings = {
 						"async": true,
@@ -613,18 +614,22 @@ $(function () {
 					
 
 					$.ajax(settings).done(function (response) {
+						$('#createBondTab').hide();
+						$('#deployTab').show();
+						$('#createBondHeader').removeClass('active');
+						$('#deployHeader').addClass('active');
 						//console.log( response);
 						hideLoader();
-						$("#contract").modal("show");
-							$('#contractData').html('<p>'+response+'</p>');
-							//console.log('formdata done:', formDataObj.tokenName);
-							const coinData = {
-								"coinName": formDataObj.tokenName,
-								"network" : "private"
-							};
+						$('#contractData').html('<p>'+response+'</p>');
+						//console.log('formdata done:', formDataObj.tokenName);
+						const coinData = {
+							"coinName": formDataObj.tokenName,
+							"network" : "private"
+						};
 
 							$("#deploy_contract").on('click', function (e) {
 								showLoader();
+								$('#deploy_contract').prop('disabled', true);
 								var deploy = {
 									"async": true,
 									"crossDomain": true,
@@ -639,7 +644,11 @@ $(function () {
 								}
 										
 								$.ajax(deploy).done(function(response){
-									console.log('response', response, response.crowdsaleReceipt.transactionHash);
+									// $('#deployTab').hide();
+									// $('#bondCompleteTab').show();
+									// $('#deployHeader').removeClass('active');
+									// $('#bondCompleteHeader').addClass('active');
+									// console.log('response', response, response.crowdsaleReceipt.transactionHash);
 									$('#deployDataTHash').html(response.crowdsaleReceipt.transactionHash);
 									$('#deployDataCAddress').html(response.crowdsaleReceipt.contractAddress);
 									hideLoader();
@@ -940,5 +949,12 @@ $(function () {
 
 		$('<form id="search_form" action="' + site_url + 'login/reactivate_account" method="post"><input type="hidden" name="user_name" value="' + uemail + '" /><input type="hidden" name="action" value="reset_password" /><input type="hidden" name="' + csrf_name + '" value="' + csrf_value + '" /></form>').appendTo('body').submit();
 
+	});
+
+	$('#bondCreateCancel').click(function() {
+		location.reload();
+	});
+	$('#ok').click(function() {
+		location.reload();
 	});
 });

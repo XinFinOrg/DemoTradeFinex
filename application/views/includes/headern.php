@@ -7,12 +7,13 @@
 <head>
     <meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="TradeFinex" content="TradeFinex is a decentralized peer to peer global Trade & Infrastructure Finance platform built on open standards and it provides seamless connectivity between global public investors, contract authority, project company, regulators and other key project finance stakeholders" />
+	<meta name="Souvik Saha" content="sahasouvik9@gmail.com" />
+	<meta name="Arpan Saha" content="iksen" />
 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 	
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>TradeFinex</title>
+	<title>Tradefinex</title>
 	
 	<!-- Favicon -->
 	<link rel="icon" href="<?php echo base_url() ?>assets/images/icon/favicon.png" />
