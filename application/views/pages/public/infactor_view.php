@@ -10,7 +10,7 @@
     
     
     
-    <section class="content-marketing white-bg padding-lg">
+    <!--<section class="content-marketing white-bg padding-lg">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-md-offset-1">
@@ -98,7 +98,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section>-->
         
         
         
@@ -217,28 +217,34 @@
                 <h2>Still have questions?</h2>
                 <ul class="row features-listing">
                     <li class="col-md-4 equal-hight">
+                        <a href="support.html">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
                             <h3>Help Center</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                      		<a href="support.html" class="know-more">Know more</a>
+                      		<!--<a href="support.html" class="know-more">Know more</a>-->
                         </div>
+                        </a>
                     </li>
                     <li class="col-md-4 equal-hight">
+                        <a href="faq.html">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
                             <h3>Faqs</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                            <a href="faq.html" class="know-more">Know more</a>
+                            <!--<a href="faq.html" class="know-more">Know more</a>-->
                         </div>
+                        </a>
                     </li>
                     <li class="col-md-4 equal-hight">
+                        <a href="docs.html">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
                             <h3>Technical Documents</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                            <a href="#" class="know-more">Know more</a>
+                            <!--<a href="docs.html" class="know-more">Know more</a>-->
                         </div>
+                        </a>
                     </li>
                 </ul>
             </div>
