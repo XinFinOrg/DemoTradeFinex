@@ -2532,3 +2532,977 @@ INFO - 2019-03-13 20:02:12 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\appli
 INFO - 2019-03-13 20:02:12 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
 INFO - 2019-03-13 20:02:12 --> Final output sent to browser
 DEBUG - 2019-03-13 20:02:12 --> Total execution time: 0.2193
+INFO - 2019-03-13 20:07:25 --> Config Class Initialized
+INFO - 2019-03-13 20:07:25 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:07:25 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:25 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:25 --> URI Class Initialized
+DEBUG - 2019-03-13 20:07:25 --> No URI present. Default controller set.
+INFO - 2019-03-13 20:07:25 --> Router Class Initialized
+INFO - 2019-03-13 20:07:25 --> Output Class Initialized
+INFO - 2019-03-13 20:07:25 --> Security Class Initialized
+DEBUG - 2019-03-13 20:07:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:07:25 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:25 --> Input Class Initialized
+INFO - 2019-03-13 20:07:25 --> Language Class Initialized
+INFO - 2019-03-13 20:07:25 --> Loader Class Initialized
+INFO - 2019-03-13 20:07:25 --> Helper loaded: cache_helper
+INFO - 2019-03-13 20:07:25 --> Controller Class Initialized
+INFO - 2019-03-13 20:07:25 --> Helper loaded: form_helper
+INFO - 2019-03-13 20:07:25 --> Helper loaded: url_helper
+INFO - 2019-03-13 20:07:25 --> Helper loaded: date_helper
+INFO - 2019-03-13 20:07:25 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-13 20:07:25 --> Encrypt Class Initialized
+INFO - 2019-03-13 20:07:25 --> Model Class Initialized
+INFO - 2019-03-13 20:07:25 --> Database Driver Class Initialized
+INFO - 2019-03-13 20:07:25 --> Model Class Initialized
+ERROR - 2019-03-13 20:07:25 --> Unable to delete cache file for 
+INFO - 2019-03-13 20:07:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/headern.php
+INFO - 2019-03-13 20:07:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_navn.php
+INFO - 2019-03-13 20:07:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_publicn.php
+INFO - 2019-03-13 20:07:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/login_modal.php
+INFO - 2019-03-13 20:07:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages/public_home.php
+INFO - 2019-03-13 20:07:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footer_commonn.php
+INFO - 2019-03-13 20:07:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages_scripts/common_scripts.php
+INFO - 2019-03-13 20:07:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
+INFO - 2019-03-13 20:07:25 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:25 --> Total execution time: 0.2007
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+INFO - 2019-03-13 20:07:58 --> Loader Class Initialized
+INFO - 2019-03-13 20:07:58 --> Helper loaded: cache_helper
+INFO - 2019-03-13 20:07:58 --> Controller Class Initialized
+INFO - 2019-03-13 20:07:58 --> Helper loaded: form_helper
+INFO - 2019-03-13 20:07:58 --> Helper loaded: url_helper
+INFO - 2019-03-13 20:07:58 --> Helper loaded: date_helper
+INFO - 2019-03-13 20:07:58 --> Helper loaded: notification_helper
+INFO - 2019-03-13 20:07:58 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-13 20:07:58 --> Encrypt Class Initialized
+INFO - 2019-03-13 20:07:58 --> Email Class Initialized
+INFO - 2019-03-13 20:07:58 --> Model Class Initialized
+INFO - 2019-03-13 20:07:58 --> Database Driver Class Initialized
+INFO - 2019-03-13 20:07:58 --> Model Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Config file loaded: G:\xampp\htdocs\DemoTradeFinex\application\config/emailc.php
+INFO - 2019-03-13 20:07:58 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/headern.php
+INFO - 2019-03-13 20:07:58 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_navn.php
+INFO - 2019-03-13 20:07:58 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_publicn.php
+INFO - 2019-03-13 20:07:58 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/login_modal.php
+INFO - 2019-03-13 20:07:58 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages/public/bond_create_view.php
+INFO - 2019-03-13 20:07:58 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footer_commonn.php
+INFO - 2019-03-13 20:07:58 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages_scripts/common_scripts.php
+INFO - 2019-03-13 20:07:58 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.1071
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.0797
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.0644
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.1693
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.0921
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Config Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+INFO - 2019-03-13 20:07:58 --> Hooks Class Initialized
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+DEBUG - 2019-03-13 20:07:58 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:58 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> URI Class Initialized
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+INFO - 2019-03-13 20:07:58 --> Router Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+INFO - 2019-03-13 20:07:58 --> Output Class Initialized
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.1227
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.0484
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.0687
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.2488
+INFO - 2019-03-13 20:07:58 --> Security Class Initialized
+DEBUG - 2019-03-13 20:07:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:07:58 --> CSRF cookie sent
+INFO - 2019-03-13 20:07:58 --> Input Class Initialized
+INFO - 2019-03-13 20:07:58 --> Language Class Initialized
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.3340
+ERROR - 2019-03-13 20:07:58 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:07:58 --> Final output sent to browser
+DEBUG - 2019-03-13 20:07:58 --> Total execution time: 0.2557
+INFO - 2019-03-13 20:36:10 --> Config Class Initialized
+INFO - 2019-03-13 20:36:10 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:36:10 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:10 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:10 --> URI Class Initialized
+DEBUG - 2019-03-13 20:36:10 --> No URI present. Default controller set.
+INFO - 2019-03-13 20:36:10 --> Router Class Initialized
+INFO - 2019-03-13 20:36:10 --> Output Class Initialized
+INFO - 2019-03-13 20:36:10 --> Security Class Initialized
+DEBUG - 2019-03-13 20:36:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:10 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:10 --> Input Class Initialized
+INFO - 2019-03-13 20:36:10 --> Language Class Initialized
+INFO - 2019-03-13 20:36:10 --> Loader Class Initialized
+INFO - 2019-03-13 20:36:10 --> Helper loaded: cache_helper
+INFO - 2019-03-13 20:36:10 --> Controller Class Initialized
+INFO - 2019-03-13 20:36:10 --> Helper loaded: form_helper
+INFO - 2019-03-13 20:36:10 --> Helper loaded: url_helper
+INFO - 2019-03-13 20:36:10 --> Helper loaded: date_helper
+INFO - 2019-03-13 20:36:10 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-13 20:36:11 --> Encrypt Class Initialized
+INFO - 2019-03-13 20:36:11 --> Model Class Initialized
+INFO - 2019-03-13 20:36:11 --> Database Driver Class Initialized
+INFO - 2019-03-13 20:36:11 --> Model Class Initialized
+ERROR - 2019-03-13 20:36:11 --> Unable to delete cache file for 
+INFO - 2019-03-13 20:36:11 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/headern.php
+INFO - 2019-03-13 20:36:11 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_navn.php
+INFO - 2019-03-13 20:36:11 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_publicn.php
+INFO - 2019-03-13 20:36:11 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/login_modal.php
+INFO - 2019-03-13 20:36:11 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages/public_home.php
+INFO - 2019-03-13 20:36:11 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footer_commonn.php
+INFO - 2019-03-13 20:36:11 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages_scripts/common_scripts.php
+INFO - 2019-03-13 20:36:11 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
+INFO - 2019-03-13 20:36:11 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:11 --> Total execution time: 0.2074
+INFO - 2019-03-13 20:36:25 --> Config Class Initialized
+INFO - 2019-03-13 20:36:25 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:36:25 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:25 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:25 --> URI Class Initialized
+DEBUG - 2019-03-13 20:36:25 --> No URI present. Default controller set.
+INFO - 2019-03-13 20:36:25 --> Router Class Initialized
+INFO - 2019-03-13 20:36:25 --> Output Class Initialized
+INFO - 2019-03-13 20:36:25 --> Security Class Initialized
+DEBUG - 2019-03-13 20:36:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:25 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:25 --> Input Class Initialized
+INFO - 2019-03-13 20:36:25 --> Language Class Initialized
+INFO - 2019-03-13 20:36:25 --> Loader Class Initialized
+INFO - 2019-03-13 20:36:25 --> Helper loaded: cache_helper
+INFO - 2019-03-13 20:36:25 --> Controller Class Initialized
+INFO - 2019-03-13 20:36:25 --> Helper loaded: form_helper
+INFO - 2019-03-13 20:36:25 --> Helper loaded: url_helper
+INFO - 2019-03-13 20:36:25 --> Helper loaded: date_helper
+INFO - 2019-03-13 20:36:25 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-13 20:36:25 --> Encrypt Class Initialized
+INFO - 2019-03-13 20:36:25 --> Model Class Initialized
+INFO - 2019-03-13 20:36:25 --> Database Driver Class Initialized
+INFO - 2019-03-13 20:36:25 --> Model Class Initialized
+ERROR - 2019-03-13 20:36:25 --> Unable to delete cache file for 
+INFO - 2019-03-13 20:36:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/headern.php
+INFO - 2019-03-13 20:36:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_navn.php
+INFO - 2019-03-13 20:36:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_publicn.php
+INFO - 2019-03-13 20:36:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/login_modal.php
+INFO - 2019-03-13 20:36:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages/public_home.php
+INFO - 2019-03-13 20:36:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footer_commonn.php
+INFO - 2019-03-13 20:36:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages_scripts/common_scripts.php
+INFO - 2019-03-13 20:36:25 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
+INFO - 2019-03-13 20:36:25 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:25 --> Total execution time: 0.1034
+INFO - 2019-03-13 20:36:46 --> Config Class Initialized
+INFO - 2019-03-13 20:36:46 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:46 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:46 --> URI Class Initialized
+INFO - 2019-03-13 20:36:46 --> Router Class Initialized
+INFO - 2019-03-13 20:36:46 --> Output Class Initialized
+INFO - 2019-03-13 20:36:46 --> Security Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:46 --> Input Class Initialized
+INFO - 2019-03-13 20:36:46 --> Language Class Initialized
+INFO - 2019-03-13 20:36:46 --> Loader Class Initialized
+INFO - 2019-03-13 20:36:46 --> Helper loaded: cache_helper
+INFO - 2019-03-13 20:36:46 --> Controller Class Initialized
+INFO - 2019-03-13 20:36:46 --> Helper loaded: form_helper
+INFO - 2019-03-13 20:36:46 --> Helper loaded: url_helper
+INFO - 2019-03-13 20:36:46 --> Helper loaded: date_helper
+INFO - 2019-03-13 20:36:46 --> Helper loaded: notification_helper
+INFO - 2019-03-13 20:36:46 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-13 20:36:46 --> Encrypt Class Initialized
+INFO - 2019-03-13 20:36:46 --> Email Class Initialized
+INFO - 2019-03-13 20:36:46 --> Model Class Initialized
+INFO - 2019-03-13 20:36:46 --> Database Driver Class Initialized
+INFO - 2019-03-13 20:36:46 --> Model Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Config file loaded: G:\xampp\htdocs\DemoTradeFinex\application\config/emailc.php
+INFO - 2019-03-13 20:36:46 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/headern.php
+INFO - 2019-03-13 20:36:46 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_navn.php
+INFO - 2019-03-13 20:36:46 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_publicn.php
+INFO - 2019-03-13 20:36:46 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/login_modal.php
+INFO - 2019-03-13 20:36:46 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages/public/bond_create_view.php
+INFO - 2019-03-13 20:36:46 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footer_commonn.php
+INFO - 2019-03-13 20:36:46 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages_scripts/common_scripts.php
+INFO - 2019-03-13 20:36:46 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
+INFO - 2019-03-13 20:36:46 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:46 --> Total execution time: 0.2309
+INFO - 2019-03-13 20:36:46 --> Config Class Initialized
+INFO - 2019-03-13 20:36:46 --> Hooks Class Initialized
+INFO - 2019-03-13 20:36:46 --> Config Class Initialized
+INFO - 2019-03-13 20:36:46 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:46 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:46 --> URI Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:46 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:46 --> URI Class Initialized
+INFO - 2019-03-13 20:36:46 --> Router Class Initialized
+INFO - 2019-03-13 20:36:46 --> Output Class Initialized
+INFO - 2019-03-13 20:36:46 --> Security Class Initialized
+INFO - 2019-03-13 20:36:46 --> Config Class Initialized
+INFO - 2019-03-13 20:36:46 --> Hooks Class Initialized
+INFO - 2019-03-13 20:36:46 --> Router Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:46 --> Config Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:46 --> Output Class Initialized
+INFO - 2019-03-13 20:36:46 --> Hooks Class Initialized
+INFO - 2019-03-13 20:36:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:46 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:46 --> Config Class Initialized
+INFO - 2019-03-13 20:36:46 --> Security Class Initialized
+INFO - 2019-03-13 20:36:46 --> Input Class Initialized
+INFO - 2019-03-13 20:36:46 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:46 --> URI Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:46 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:46 --> Language Class Initialized
+INFO - 2019-03-13 20:36:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:46 --> Input Class Initialized
+INFO - 2019-03-13 20:36:46 --> Router Class Initialized
+INFO - 2019-03-13 20:36:46 --> URI Class Initialized
+INFO - 2019-03-13 20:36:46 --> Language Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:46 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:46 --> URI Class Initialized
+ERROR - 2019-03-13 20:36:46 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:46 --> Output Class Initialized
+ERROR - 2019-03-13 20:36:46 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:46 --> Router Class Initialized
+INFO - 2019-03-13 20:36:46 --> Router Class Initialized
+INFO - 2019-03-13 20:36:46 --> Final output sent to browser
+INFO - 2019-03-13 20:36:46 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:46 --> Total execution time: 0.0994
+INFO - 2019-03-13 20:36:46 --> Security Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Total execution time: 0.1029
+INFO - 2019-03-13 20:36:46 --> Output Class Initialized
+INFO - 2019-03-13 20:36:46 --> Output Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:46 --> Input Class Initialized
+INFO - 2019-03-13 20:36:46 --> Security Class Initialized
+INFO - 2019-03-13 20:36:46 --> Language Class Initialized
+INFO - 2019-03-13 20:36:46 --> Config Class Initialized
+INFO - 2019-03-13 20:36:46 --> Security Class Initialized
+INFO - 2019-03-13 20:36:46 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2019-03-13 20:36:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:46 --> Input Class Initialized
+INFO - 2019-03-13 20:36:46 --> Input Class Initialized
+ERROR - 2019-03-13 20:36:46 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:46 --> Language Class Initialized
+INFO - 2019-03-13 20:36:46 --> Final output sent to browser
+INFO - 2019-03-13 20:36:46 --> Language Class Initialized
+INFO - 2019-03-13 20:36:46 --> Config Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Total execution time: 0.1183
+DEBUG - 2019-03-13 20:36:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:46 --> Hooks Class Initialized
+INFO - 2019-03-13 20:36:46 --> Utf8 Class Initialized
+ERROR - 2019-03-13 20:36:46 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+ERROR - 2019-03-13 20:36:46 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:46 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:46 --> URI Class Initialized
+INFO - 2019-03-13 20:36:46 --> Final output sent to browser
+INFO - 2019-03-13 20:36:46 --> Utf8 Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Total execution time: 0.1234
+INFO - 2019-03-13 20:36:46 --> URI Class Initialized
+INFO - 2019-03-13 20:36:46 --> Router Class Initialized
+INFO - 2019-03-13 20:36:46 --> Router Class Initialized
+INFO - 2019-03-13 20:36:46 --> Output Class Initialized
+INFO - 2019-03-13 20:36:46 --> Output Class Initialized
+INFO - 2019-03-13 20:36:46 --> Security Class Initialized
+INFO - 2019-03-13 20:36:46 --> Security Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:46 --> CSRF cookie sent
+DEBUG - 2019-03-13 20:36:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:46 --> Input Class Initialized
+INFO - 2019-03-13 20:36:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:46 --> Input Class Initialized
+INFO - 2019-03-13 20:36:46 --> Language Class Initialized
+INFO - 2019-03-13 20:36:46 --> Language Class Initialized
+INFO - 2019-03-13 20:36:46 --> Config Class Initialized
+INFO - 2019-03-13 20:36:46 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:46 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:46 --> URI Class Initialized
+INFO - 2019-03-13 20:36:46 --> Router Class Initialized
+INFO - 2019-03-13 20:36:46 --> Output Class Initialized
+INFO - 2019-03-13 20:36:46 --> Security Class Initialized
+DEBUG - 2019-03-13 20:36:46 --> Total execution time: 0.1159
+INFO - 2019-03-13 20:36:47 --> Config Class Initialized
+ERROR - 2019-03-13 20:36:47 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:47 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:47 --> Total execution time: 0.1596
+INFO - 2019-03-13 20:36:47 --> Config Class Initialized
+INFO - 2019-03-13 20:36:47 --> Hooks Class Initialized
+INFO - 2019-03-13 20:36:47 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:36:47 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:47 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:47 --> URI Class Initialized
+INFO - 2019-03-13 20:36:47 --> Config Class Initialized
+INFO - 2019-03-13 20:36:47 --> Hooks Class Initialized
+INFO - 2019-03-13 20:36:47 --> Router Class Initialized
+DEBUG - 2019-03-13 20:36:47 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:47 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:47 --> URI Class Initialized
+ERROR - 2019-03-13 20:36:47 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:47 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:47 --> Total execution time: 0.2419
+INFO - 2019-03-13 20:36:47 --> Config Class Initialized
+INFO - 2019-03-13 20:36:47 --> Hooks Class Initialized
+INFO - 2019-03-13 20:36:47 --> Output Class Initialized
+DEBUG - 2019-03-13 20:36:47 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:47 --> Router Class Initialized
+INFO - 2019-03-13 20:36:47 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:47 --> Security Class Initialized
+INFO - 2019-03-13 20:36:47 --> Output Class Initialized
+INFO - 2019-03-13 20:36:47 --> URI Class Initialized
+DEBUG - 2019-03-13 20:36:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:47 --> CSRF cookie sent
+DEBUG - 2019-03-13 20:36:47 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:36:47 --> Security Class Initialized
+INFO - 2019-03-13 20:36:47 --> Input Class Initialized
+INFO - 2019-03-13 20:36:47 --> Router Class Initialized
+INFO - 2019-03-13 20:36:47 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:36:47 --> Language Class Initialized
+DEBUG - 2019-03-13 20:36:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:47 --> Output Class Initialized
+INFO - 2019-03-13 20:36:47 --> URI Class Initialized
+INFO - 2019-03-13 20:36:47 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:47 --> Router Class Initialized
+INFO - 2019-03-13 20:36:47 --> Input Class Initialized
+INFO - 2019-03-13 20:36:47 --> Language Class Initialized
+ERROR - 2019-03-13 20:36:47 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:47 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:47 --> Total execution time: 0.1498
+INFO - 2019-03-13 20:36:47 --> Output Class Initialized
+INFO - 2019-03-13 20:36:47 --> Security Class Initialized
+ERROR - 2019-03-13 20:36:47 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:47 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:47 --> Total execution time: 0.0972
+DEBUG - 2019-03-13 20:36:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:47 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:47 --> Input Class Initialized
+INFO - 2019-03-13 20:36:47 --> Language Class Initialized
+DEBUG - 2019-03-13 20:36:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:36:47 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:47 --> Input Class Initialized
+INFO - 2019-03-13 20:36:47 --> Language Class Initialized
+ERROR - 2019-03-13 20:36:47 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:47 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:47 --> Total execution time: 0.3478
+INFO - 2019-03-13 20:36:47 --> Security Class Initialized
+DEBUG - 2019-03-13 20:36:47 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2019-03-13 20:36:47 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:47 --> CSRF cookie sent
+INFO - 2019-03-13 20:36:47 --> Final output sent to browser
+INFO - 2019-03-13 20:36:47 --> Input Class Initialized
+DEBUG - 2019-03-13 20:36:47 --> Total execution time: 0.3934
+INFO - 2019-03-13 20:36:47 --> Language Class Initialized
+ERROR - 2019-03-13 20:36:47 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:36:47 --> Final output sent to browser
+DEBUG - 2019-03-13 20:36:47 --> Total execution time: 0.3398
+INFO - 2019-03-13 20:41:03 --> Config Class Initialized
+INFO - 2019-03-13 20:41:03 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:41:03 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:03 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:03 --> URI Class Initialized
+DEBUG - 2019-03-13 20:41:03 --> No URI present. Default controller set.
+INFO - 2019-03-13 20:41:03 --> Router Class Initialized
+INFO - 2019-03-13 20:41:03 --> Output Class Initialized
+INFO - 2019-03-13 20:41:03 --> Security Class Initialized
+DEBUG - 2019-03-13 20:41:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:03 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:03 --> Input Class Initialized
+INFO - 2019-03-13 20:41:03 --> Language Class Initialized
+INFO - 2019-03-13 20:41:03 --> Loader Class Initialized
+INFO - 2019-03-13 20:41:03 --> Helper loaded: cache_helper
+INFO - 2019-03-13 20:41:03 --> Controller Class Initialized
+INFO - 2019-03-13 20:41:03 --> Helper loaded: form_helper
+INFO - 2019-03-13 20:41:03 --> Helper loaded: url_helper
+INFO - 2019-03-13 20:41:03 --> Helper loaded: date_helper
+INFO - 2019-03-13 20:41:03 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-13 20:41:03 --> Encrypt Class Initialized
+INFO - 2019-03-13 20:41:03 --> Model Class Initialized
+INFO - 2019-03-13 20:41:03 --> Database Driver Class Initialized
+INFO - 2019-03-13 20:41:03 --> Model Class Initialized
+ERROR - 2019-03-13 20:41:03 --> Unable to delete cache file for 
+INFO - 2019-03-13 20:41:03 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/headern.php
+INFO - 2019-03-13 20:41:03 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_navn.php
+INFO - 2019-03-13 20:41:03 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_publicn.php
+INFO - 2019-03-13 20:41:03 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/login_modal.php
+INFO - 2019-03-13 20:41:03 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages/public_home.php
+INFO - 2019-03-13 20:41:03 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footer_commonn.php
+INFO - 2019-03-13 20:41:03 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages_scripts/common_scripts.php
+INFO - 2019-03-13 20:41:03 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
+INFO - 2019-03-13 20:41:03 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:03 --> Total execution time: 0.1047
+INFO - 2019-03-13 20:41:17 --> Config Class Initialized
+INFO - 2019-03-13 20:41:17 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:17 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:17 --> URI Class Initialized
+INFO - 2019-03-13 20:41:17 --> Router Class Initialized
+INFO - 2019-03-13 20:41:17 --> Output Class Initialized
+INFO - 2019-03-13 20:41:17 --> Security Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:17 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:17 --> Input Class Initialized
+INFO - 2019-03-13 20:41:17 --> Language Class Initialized
+INFO - 2019-03-13 20:41:17 --> Loader Class Initialized
+INFO - 2019-03-13 20:41:17 --> Helper loaded: cache_helper
+INFO - 2019-03-13 20:41:17 --> Controller Class Initialized
+INFO - 2019-03-13 20:41:17 --> Helper loaded: form_helper
+INFO - 2019-03-13 20:41:17 --> Helper loaded: url_helper
+INFO - 2019-03-13 20:41:17 --> Helper loaded: date_helper
+INFO - 2019-03-13 20:41:17 --> Helper loaded: notification_helper
+INFO - 2019-03-13 20:41:17 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-13 20:41:17 --> Encrypt Class Initialized
+INFO - 2019-03-13 20:41:17 --> Email Class Initialized
+INFO - 2019-03-13 20:41:17 --> Model Class Initialized
+INFO - 2019-03-13 20:41:17 --> Database Driver Class Initialized
+INFO - 2019-03-13 20:41:17 --> Model Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Config file loaded: G:\xampp\htdocs\DemoTradeFinex\application\config/emailc.php
+INFO - 2019-03-13 20:41:17 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/headern.php
+INFO - 2019-03-13 20:41:17 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_navn.php
+INFO - 2019-03-13 20:41:17 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_publicn.php
+INFO - 2019-03-13 20:41:17 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/login_modal.php
+INFO - 2019-03-13 20:41:17 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages/public/bond_create_view.php
+INFO - 2019-03-13 20:41:17 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footer_commonn.php
+INFO - 2019-03-13 20:41:17 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages_scripts/common_scripts.php
+INFO - 2019-03-13 20:41:17 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
+INFO - 2019-03-13 20:41:17 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:17 --> Total execution time: 0.1086
+INFO - 2019-03-13 20:41:17 --> Config Class Initialized
+INFO - 2019-03-13 20:41:17 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:17 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:17 --> URI Class Initialized
+INFO - 2019-03-13 20:41:17 --> Config Class Initialized
+INFO - 2019-03-13 20:41:17 --> Hooks Class Initialized
+INFO - 2019-03-13 20:41:17 --> Config Class Initialized
+INFO - 2019-03-13 20:41:17 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:17 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:17 --> Config Class Initialized
+INFO - 2019-03-13 20:41:17 --> URI Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:17 --> Hooks Class Initialized
+INFO - 2019-03-13 20:41:17 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:17 --> Router Class Initialized
+INFO - 2019-03-13 20:41:17 --> URI Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:17 --> Output Class Initialized
+INFO - 2019-03-13 20:41:17 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:17 --> Router Class Initialized
+INFO - 2019-03-13 20:41:17 --> Security Class Initialized
+INFO - 2019-03-13 20:41:17 --> URI Class Initialized
+INFO - 2019-03-13 20:41:17 --> Config Class Initialized
+INFO - 2019-03-13 20:41:17 --> Output Class Initialized
+INFO - 2019-03-13 20:41:17 --> Config Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:17 --> Hooks Class Initialized
+INFO - 2019-03-13 20:41:17 --> Router Class Initialized
+INFO - 2019-03-13 20:41:17 --> Hooks Class Initialized
+INFO - 2019-03-13 20:41:17 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:17 --> Security Class Initialized
+INFO - 2019-03-13 20:41:17 --> Output Class Initialized
+INFO - 2019-03-13 20:41:17 --> Input Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> UTF-8 Support Enabled
+DEBUG - 2019-03-13 20:41:17 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:17 --> Language Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:17 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:17 --> Security Class Initialized
+INFO - 2019-03-13 20:41:17 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:17 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:17 --> URI Class Initialized
+INFO - 2019-03-13 20:41:17 --> Input Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:17 --> URI Class Initialized
+INFO - 2019-03-13 20:41:17 --> Language Class Initialized
+INFO - 2019-03-13 20:41:17 --> Router Class Initialized
+INFO - 2019-03-13 20:41:17 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:17 --> Input Class Initialized
+ERROR - 2019-03-13 20:41:17 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:17 --> Router Class Initialized
+INFO - 2019-03-13 20:41:17 --> Final output sent to browser
+INFO - 2019-03-13 20:41:17 --> Output Class Initialized
+INFO - 2019-03-13 20:41:17 --> Language Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Total execution time: 0.0494
+INFO - 2019-03-13 20:41:17 --> Output Class Initialized
+ERROR - 2019-03-13 20:41:17 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:17 --> Final output sent to browser
+INFO - 2019-03-13 20:41:17 --> Security Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Total execution time: 0.0527
+INFO - 2019-03-13 20:41:17 --> Security Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:17 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:17 --> Input Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:17 --> Language Class Initialized
+INFO - 2019-03-13 20:41:17 --> CSRF cookie sent
+ERROR - 2019-03-13 20:41:17 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:17 --> Input Class Initialized
+INFO - 2019-03-13 20:41:17 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:17 --> Total execution time: 0.0594
+INFO - 2019-03-13 20:41:17 --> Language Class Initialized
+INFO - 2019-03-13 20:41:17 --> Router Class Initialized
+INFO - 2019-03-13 20:41:17 --> Output Class Initialized
+INFO - 2019-03-13 20:41:17 --> Security Class Initialized
+DEBUG - 2019-03-13 20:41:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:17 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:17 --> Input Class Initialized
+INFO - 2019-03-13 20:41:17 --> Language Class Initialized
+INFO - 2019-03-13 20:41:17 --> Config Class Initialized
+INFO - 2019-03-13 20:41:17 --> Hooks Class Initialized
+INFO - 2019-03-13 20:41:18 --> Config Class Initialized
+DEBUG - 2019-03-13 20:41:18 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:18 --> Utf8 Class Initialized
+ERROR - 2019-03-13 20:41:18 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:18 --> URI Class Initialized
+INFO - 2019-03-13 20:41:18 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:18 --> Total execution time: 0.0989
+INFO - 2019-03-13 20:41:18 --> Router Class Initialized
+ERROR - 2019-03-13 20:41:18 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:18 --> Output Class Initialized
+INFO - 2019-03-13 20:41:18 --> Security Class Initialized
+DEBUG - 2019-03-13 20:41:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:18 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:18 --> Input Class Initialized
+INFO - 2019-03-13 20:41:18 --> Config Class Initialized
+INFO - 2019-03-13 20:41:18 --> Hooks Class Initialized
+INFO - 2019-03-13 20:41:18 --> Config Class Initialized
+INFO - 2019-03-13 20:41:18 --> Hooks Class Initialized
+ERROR - 2019-03-13 20:41:18 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+DEBUG - 2019-03-13 20:41:18 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:18 --> Utf8 Class Initialized
+DEBUG - 2019-03-13 20:41:18 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:18 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:18 --> URI Class Initialized
+INFO - 2019-03-13 20:41:18 --> URI Class Initialized
+INFO - 2019-03-13 20:41:18 --> Router Class Initialized
+INFO - 2019-03-13 20:41:18 --> Router Class Initialized
+INFO - 2019-03-13 20:41:18 --> Output Class Initialized
+INFO - 2019-03-13 20:41:18 --> Output Class Initialized
+INFO - 2019-03-13 20:41:18 --> Security Class Initialized
+DEBUG - 2019-03-13 20:41:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:18 --> Security Class Initialized
+INFO - 2019-03-13 20:41:18 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:18 --> Input Class Initialized
+DEBUG - 2019-03-13 20:41:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:18 --> Language Class Initialized
+INFO - 2019-03-13 20:41:18 --> Final output sent to browser
+INFO - 2019-03-13 20:41:18 --> CSRF cookie sent
+DEBUG - 2019-03-13 20:41:18 --> Total execution time: 0.1420
+ERROR - 2019-03-13 20:41:18 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:18 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:18 --> Total execution time: 0.0402
+INFO - 2019-03-13 20:41:18 --> Config Class Initialized
+INFO - 2019-03-13 20:41:18 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:41:18 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:18 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:18 --> Language Class Initialized
+INFO - 2019-03-13 20:41:18 --> URI Class Initialized
+INFO - 2019-03-13 20:41:18 --> Config Class Initialized
+INFO - 2019-03-13 20:41:18 --> Router Class Initialized
+INFO - 2019-03-13 20:41:18 --> Hooks Class Initialized
+INFO - 2019-03-13 20:41:18 --> Output Class Initialized
+INFO - 2019-03-13 20:41:18 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:18 --> Total execution time: 0.2285
+DEBUG - 2019-03-13 20:41:18 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:18 --> Hooks Class Initialized
+INFO - 2019-03-13 20:41:18 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:18 --> Security Class Initialized
+INFO - 2019-03-13 20:41:18 --> URI Class Initialized
+DEBUG - 2019-03-13 20:41:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:18 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:18 --> Input Class Initialized
+DEBUG - 2019-03-13 20:41:18 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:41:18 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:41:18 --> Router Class Initialized
+INFO - 2019-03-13 20:41:18 --> Language Class Initialized
+INFO - 2019-03-13 20:41:18 --> URI Class Initialized
+INFO - 2019-03-13 20:41:18 --> Output Class Initialized
+INFO - 2019-03-13 20:41:18 --> Router Class Initialized
+INFO - 2019-03-13 20:41:18 --> Security Class Initialized
+INFO - 2019-03-13 20:41:18 --> Output Class Initialized
+ERROR - 2019-03-13 20:41:18 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+DEBUG - 2019-03-13 20:41:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:18 --> Final output sent to browser
+INFO - 2019-03-13 20:41:18 --> CSRF cookie sent
+DEBUG - 2019-03-13 20:41:18 --> Total execution time: 0.0381
+INFO - 2019-03-13 20:41:18 --> Input Class Initialized
+INFO - 2019-03-13 20:41:18 --> Security Class Initialized
+INFO - 2019-03-13 20:41:18 --> Language Class Initialized
+DEBUG - 2019-03-13 20:41:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:41:18 --> CSRF cookie sent
+INFO - 2019-03-13 20:41:18 --> Input Class Initialized
+INFO - 2019-03-13 20:41:18 --> Input Class Initialized
+INFO - 2019-03-13 20:41:18 --> Language Class Initialized
+ERROR - 2019-03-13 20:41:18 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:18 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:18 --> Total execution time: 0.1176
+INFO - 2019-03-13 20:41:18 --> Language Class Initialized
+ERROR - 2019-03-13 20:41:18 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:18 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:18 --> Total execution time: 0.0502
+ERROR - 2019-03-13 20:41:18 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:18 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:18 --> Total execution time: 0.1095
+ERROR - 2019-03-13 20:41:18 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:41:18 --> Final output sent to browser
+DEBUG - 2019-03-13 20:41:18 --> Total execution time: 0.1419
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:45 --> Output Class Initialized
+INFO - 2019-03-13 20:42:45 --> Security Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:45 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:45 --> Input Class Initialized
+INFO - 2019-03-13 20:42:45 --> Language Class Initialized
+INFO - 2019-03-13 20:42:45 --> Loader Class Initialized
+INFO - 2019-03-13 20:42:45 --> Helper loaded: cache_helper
+INFO - 2019-03-13 20:42:45 --> Controller Class Initialized
+INFO - 2019-03-13 20:42:45 --> Helper loaded: form_helper
+INFO - 2019-03-13 20:42:45 --> Helper loaded: url_helper
+INFO - 2019-03-13 20:42:45 --> Helper loaded: date_helper
+INFO - 2019-03-13 20:42:45 --> Helper loaded: notification_helper
+INFO - 2019-03-13 20:42:45 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-13 20:42:45 --> Encrypt Class Initialized
+INFO - 2019-03-13 20:42:45 --> Email Class Initialized
+INFO - 2019-03-13 20:42:45 --> Model Class Initialized
+INFO - 2019-03-13 20:42:45 --> Database Driver Class Initialized
+INFO - 2019-03-13 20:42:45 --> Model Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> Config file loaded: G:\xampp\htdocs\DemoTradeFinex\application\config/emailc.php
+INFO - 2019-03-13 20:42:45 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/headern.php
+INFO - 2019-03-13 20:42:45 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_navn.php
+INFO - 2019-03-13 20:42:45 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/header_publicn.php
+INFO - 2019-03-13 20:42:45 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/login_modal.php
+INFO - 2019-03-13 20:42:45 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages/public/bond_create_view.php
+INFO - 2019-03-13 20:42:45 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footer_commonn.php
+INFO - 2019-03-13 20:42:45 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\pages_scripts/common_scripts.php
+INFO - 2019-03-13 20:42:45 --> File loaded: G:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
+INFO - 2019-03-13 20:42:45 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:45 --> Total execution time: 0.1484
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:45 --> Output Class Initialized
+INFO - 2019-03-13 20:42:45 --> Security Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+INFO - 2019-03-13 20:42:45 --> Input Class Initialized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:45 --> Output Class Initialized
+INFO - 2019-03-13 20:42:45 --> Output Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:45 --> Security Class Initialized
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:45 --> Security Class Initialized
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+INFO - 2019-03-13 20:42:45 --> CSRF cookie sent
+DEBUG - 2019-03-13 20:42:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:45 --> Input Class Initialized
+INFO - 2019-03-13 20:42:45 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:45 --> Input Class Initialized
+INFO - 2019-03-13 20:42:45 --> Language Class Initialized
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:45 --> Language Class Initialized
+INFO - 2019-03-13 20:42:45 --> Output Class Initialized
+INFO - 2019-03-13 20:42:45 --> Output Class Initialized
+INFO - 2019-03-13 20:42:45 --> Security Class Initialized
+INFO - 2019-03-13 20:42:45 --> Security Class Initialized
+ERROR - 2019-03-13 20:42:45 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:45 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:45 --> Total execution time: 0.0624
+INFO - 2019-03-13 20:42:45 --> Language Class Initialized
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+ERROR - 2019-03-13 20:42:45 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:45 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:45 --> Total execution time: 0.1024
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:45 --> Output Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:45 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+INFO - 2019-03-13 20:42:45 --> Security Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:45 --> Output Class Initialized
+INFO - 2019-03-13 20:42:45 --> Security Class Initialized
+INFO - 2019-03-13 20:42:45 --> Input Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2019-03-13 20:42:45 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:45 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:45 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:45 --> Final output sent to browser
+INFO - 2019-03-13 20:42:45 --> Input Class Initialized
+INFO - 2019-03-13 20:42:45 --> Input Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> Total execution time: 0.2021
+INFO - 2019-03-13 20:42:45 --> Language Class Initialized
+INFO - 2019-03-13 20:42:45 --> Language Class Initialized
+ERROR - 2019-03-13 20:42:45 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:45 --> Final output sent to browser
+ERROR - 2019-03-13 20:42:45 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+DEBUG - 2019-03-13 20:42:45 --> Total execution time: 0.1351
+INFO - 2019-03-13 20:42:45 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:45 --> Total execution time: 0.1907
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:45 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:45 --> Output Class Initialized
+INFO - 2019-03-13 20:42:45 --> Security Class Initialized
+INFO - 2019-03-13 20:42:45 --> Language Class Initialized
+INFO - 2019-03-13 20:42:45 --> Config Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:45 --> Hooks Class Initialized
+INFO - 2019-03-13 20:42:45 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:45 --> Input Class Initialized
+INFO - 2019-03-13 20:42:45 --> Language Class Initialized
+DEBUG - 2019-03-13 20:42:45 --> UTF-8 Support Enabled
+DEBUG - 2019-03-13 20:42:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:45 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:45 --> URI Class Initialized
+INFO - 2019-03-13 20:42:45 --> Input Class Initialized
+ERROR - 2019-03-13 20:42:45 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:45 --> Language Class Initialized
+INFO - 2019-03-13 20:42:45 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:45 --> Total execution time: 0.2273
+ERROR - 2019-03-13 20:42:45 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:45 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:45 --> Total execution time: 0.0444
+ERROR - 2019-03-13 20:42:45 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:45 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:45 --> Total execution time: 0.0974
+INFO - 2019-03-13 20:42:45 --> Router Class Initialized
+INFO - 2019-03-13 20:42:46 --> Config Class Initialized
+INFO - 2019-03-13 20:42:46 --> Hooks Class Initialized
+INFO - 2019-03-13 20:42:46 --> Config Class Initialized
+INFO - 2019-03-13 20:42:46 --> Hooks Class Initialized
+DEBUG - 2019-03-13 20:42:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:46 --> Utf8 Class Initialized
+DEBUG - 2019-03-13 20:42:46 --> UTF-8 Support Enabled
+INFO - 2019-03-13 20:42:46 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:46 --> URI Class Initialized
+INFO - 2019-03-13 20:42:46 --> URI Class Initialized
+INFO - 2019-03-13 20:42:46 --> Router Class Initialized
+INFO - 2019-03-13 20:42:46 --> Router Class Initialized
+INFO - 2019-03-13 20:42:46 --> Output Class Initialized
+INFO - 2019-03-13 20:42:46 --> Utf8 Class Initialized
+INFO - 2019-03-13 20:42:46 --> Output Class Initialized
+INFO - 2019-03-13 20:42:46 --> Output Class Initialized
+INFO - 2019-03-13 20:42:46 --> URI Class Initialized
+INFO - 2019-03-13 20:42:46 --> Security Class Initialized
+INFO - 2019-03-13 20:42:46 --> Security Class Initialized
+INFO - 2019-03-13 20:42:46 --> Router Class Initialized
+DEBUG - 2019-03-13 20:42:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:46 --> CSRF cookie sent
+DEBUG - 2019-03-13 20:42:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:46 --> Input Class Initialized
+INFO - 2019-03-13 20:42:46 --> Language Class Initialized
+INFO - 2019-03-13 20:42:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:46 --> Output Class Initialized
+INFO - 2019-03-13 20:42:46 --> Input Class Initialized
+INFO - 2019-03-13 20:42:46 --> Language Class Initialized
+INFO - 2019-03-13 20:42:46 --> Security Class Initialized
+DEBUG - 2019-03-13 20:42:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:46 --> Input Class Initialized
+ERROR - 2019-03-13 20:42:46 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:46 --> Language Class Initialized
+INFO - 2019-03-13 20:42:46 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:46 --> Total execution time: 0.0366
+ERROR - 2019-03-13 20:42:46 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:46 --> Final output sent to browser
+INFO - 2019-03-13 20:42:46 --> Security Class Initialized
+ERROR - 2019-03-13 20:42:46 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:46 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:46 --> Total execution time: 0.0964
+DEBUG - 2019-03-13 20:42:46 --> Total execution time: 0.0403
+DEBUG - 2019-03-13 20:42:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-13 20:42:46 --> CSRF cookie sent
+INFO - 2019-03-13 20:42:46 --> Input Class Initialized
+INFO - 2019-03-13 20:42:46 --> Language Class Initialized
+ERROR - 2019-03-13 20:42:46 --> Severity: Warning --> call_user_func_array() expects parameter 1 to be a valid callback, class 'Error' does not have a method 'p404' G:\xampp\htdocs\DemoTradeFinex\system\core\CodeIgniter.php 532
+INFO - 2019-03-13 20:42:46 --> Final output sent to browser
+DEBUG - 2019-03-13 20:42:46 --> Total execution time: 0.3229

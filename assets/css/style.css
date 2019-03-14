@@ -8666,8 +8666,8 @@ div.dataTables_wrapper div.dataTables_info {
     border-color: #007bff;
 }
 .btn-primary:hover, a.btn-primary:hover, a:visited.btn-primary a:link.btn-primary:hover {
-    background-color: #2f74ba!important;
-    border: 1px solid #2f74ba!important;
+    background-color: #2aa3ef!important;
+    border: 1px solid #2aa3ef!important;
     box-shadow: 0 5px 10px rgba(99,94,190,.4)!important;
     color: #fff;
 }
@@ -8836,5 +8836,5 @@ hr {
 .card-body {
 	display: flex;
 	flex-direction: column;
-	padding: 15px;
+	padding: 30px;
 }
