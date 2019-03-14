@@ -23,30 +23,30 @@
                 <ul class="row marketing-list">
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
-                            <figure><img src="images/scalable-link-ico.png" class="img-fluid" alt=""></figure>
+                            <figure><img src="../assets/banner-assets/images/scalable-link-ico.png" class="img-responsive" alt=""></figure>
                             <h3>Scalable Link Building Solutions</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since been</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
-                            <figure><img src="images/seo-success-ico.png" class="img-fluid" alt=""></figure>
-                            <h3>Clear And Ethical GuidanceTo SEO Success</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since been</p>
+                            <figure><img src="../assets/banner-assets/images/seo-success-ico.png" class="img-responsive" alt=""></figure>
+                            <h3>Easy and fast integration</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
-                            <figure><img src="images/content-marketing-ico.png" class="img-fluid" alt=""></figure>
-                            <h3>Audience First Content Marketing</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since been</p>
+                            <figure><img src="../assets/banner-assets/images/content-marketing-ico.png" class="img-responsive" alt=""></figure>
+                            <h3>Active support and regular updates</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
-                            <figure><img src="images/content-marketing-ico.png" class="img-fluid" alt=""></figure>
-                            <h3>Audience First Content Marketing</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since been</p>
+                            <figure><img src="../assets/banner-assets/images/scalable-link-ico.png" class="img-responsive" alt=""></figure>
+                            <h3>Always in control of your privacy</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
                 </ul>
@@ -62,6 +62,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Overview on Infactor Market</h2>
+                            <div class="bb-line-orange"></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
                         </div>
                     </div>
@@ -69,39 +70,98 @@
                 <ul class="row features-listing ico-bg">
                     <li class="col-md-3">
                         <div class="inner">
-                            <h3>Data Analytics</h3>
+                            <h3>Scalable Link Building Solutions</h3>
+                            <div class="bb-line-orange"></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
                         </div>
                     </li>
                     <li class="col-md-3">
                         <div class="inner">
-                            <h3>Fully Responsive</h3>
+                            <h3>Easy and fast integration</h3>
+                            <div class="bb-line-orange"></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
                         </div>
                     </li>
                     <li class="col-md-3">
                         <div class="inner">
-                            <h3>Advanced Solution</h3>
+                            <h3>Active support and regular updates</h3>
+                            <div class="bb-line-orange"></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
                         </div>
                     </li>
                     <li class="col-md-3">
                         <div class="inner">
-                            <h3>Additional Functions</h3>
+                            <h3>Always in control of your privacy</h3>
+                            <div class="bb-line-orange"></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
+        
+        
+        
+        
+        <section class="content-marketing content-marketing3 white-bg padding-lg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="head-block">
+                            <h2>Overview on Infactor Market</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="row marketing-list3">
+                    <li class="col-md-6">
+                        <div class="equal-hight clearfix">
+                            <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="cnt-block">
+                                <h3>Scalable Link Building Solutions</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-6">
+                        <div class="equal-hight clearfix">
+                            <div class="ico-block"><img src="../assets/banner-assets/images/seo-succes-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="cnt-block">
+                                <h3>Easy and fast integration</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-6">
+                        <div class="equal-hight clearfix">
+                            <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="cnt-block">
+                                <h3>Active support and regular updates</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-6">
+                        <div class="equal-hight clearfix">
+                            <div class="ico-block"><img src="../assets/banner-assets/images/privacy-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="cnt-block">
+                                <h3>Always in control of your privacy</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
     
     
     
     
-    <section class="more-features white-bg padding-lg">
+    <section class="more-features grey-bg padding-lg">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-sm-6 col-md-6">
                         <h2>Invoice Factoring Solution</h2>
                         <p>Invoice Factoring is an accepted form of working capital management solution. It does so by converting your unpaid invoices to cash. Invoice Factoring allows companies to receive cash instantly, customers to live by friendly payment terms and investors (the factor) to earn some profits in terms of fee.</p>
                         <ul class="more-features-list">
@@ -109,7 +169,7 @@
                             <li>Built in XDC Wallet and smart contracts make invoice factoring easier, transparent and secure.</li>
                         </ul>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-sm-6 col-md-6">
                         <div class="videos_video_wrap">
                     <div class="row">
                         <div class="col-md-12 videos_video_wraper">
@@ -125,9 +185,9 @@
         
         
         
-        <section class="generate-forms padding-lg">
+        <section class="generate-forms white-bg padding-lg">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row text-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Overview on Infactor Market</h2>
@@ -156,23 +216,29 @@
             <div class="container">
                 <h2>Still have questions?</h2>
                 <ul class="row features-listing">
-                    <li class="col-md-4 equal-hight" style="height: 295.859px;">
-                        <div class="info-content"> <span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
+                    <li class="col-md-4 equal-hight">
+                        <div class="info-content">
+                        	<span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
                             <h3>Help Center</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                      <a href="support.html" class="know-more">Know more</a> </div>
+                      		<a href="support.html" class="know-more">Know more</a>
+                        </div>
                     </li>
-                    <li class="col-md-4 equal-hight" style="height: 295.859px;">
-                        <div class="info-content"> <span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
+                    <li class="col-md-4 equal-hight">
+                        <div class="info-content">
+                        	<span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
                             <h3>Faqs</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                            <a href="faq.html" class="know-more">Know more</a> </div>
+                            <a href="faq.html" class="know-more">Know more</a>
+                        </div>
                     </li>
-                    <li class="col-md-4 equal-hight" style="height: 295.859px;">
-                        <div class="info-content"> <span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
+                    <li class="col-md-4 equal-hight">
+                        <div class="info-content">
+                        	<span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
                             <h3>Technical Documents</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                            <a href="#" class="know-more">Know more</a> </div>
+                            <a href="#" class="know-more">Know more</a>
+                        </div>
                     </li>
                 </ul>
             </div>

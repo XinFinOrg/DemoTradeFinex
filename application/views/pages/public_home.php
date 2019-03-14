@@ -63,6 +63,7 @@
                         </div>-->
                     </div>
                 </div>
+                </div>
                 <!--<div class="banner slide2">
                     <div class="container">
                         <div class="row cnt-block">
@@ -83,34 +84,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="banner slide3">
-                    <div class="container">
-                        <div class="row cnt-block">
-                            <div class="col-md-12 text-center">
-                                <div class="bannerHeader">
-                                    <h1 class="animated fadeInDown delay-02s">The Perfect SaaS Template</h1>
-                                    <p class="animated fadeInDown delay-03s">Developed for SaaS and Web Applications!</p>
-                                    </div>
-                                    <div class="button-box">
-                                	<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInRight delay-02s">Invoice</a>
-                                	<a href="<?=base_url('publicv/bond');?>" class="get-started animated fadeInRight delay-03s">Bond</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <figure class="animated fadeInUp delay-05s"><img src="assets/banner-assets/images/banner-slide1.png" class="img-responsive" alt=""></figure>
-                            </div>
-                        </div>
-                    </div>
                 </div>-->
             </div>
         </section>
         
         
         
-<section class="digital-bond white-bg padding-lg">
+		<section class="digital-bond white-bg padding-lg">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-push-6">
@@ -128,11 +108,11 @@
                     </div>
                 </div>
             </div>
-</section>
+		</section>
 
 
 
-<section class="invoice-factoring grey-bg padding-lg">
+		<section class="invoice-factoring grey-bg padding-lg">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 cnt-block">
@@ -149,11 +129,11 @@
                     </div>
                 </div>
             </div>
-</section>
+		</section>
 
 
 
-<section class="digital-bond white-bg padding-lg">
+		<section class="digital-bond white-bg padding-lg">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-push-6">
@@ -171,11 +151,11 @@
                     </div>
                 </div>
             </div>
-</section>
+		</section>
 
 
 
-<section class="create-bridge grey-bg padding-lg">
+		<section class="create-bridge grey-bg padding-lg">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 cnt-block">
@@ -191,7 +171,7 @@
                     </div>
                 </div>
             </div>
-</section>
+		</section>
 
 
 

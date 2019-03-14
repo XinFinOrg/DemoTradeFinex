@@ -4,23 +4,6 @@
 
     win.on("load", function() {
 
-        /*****************************
-         *  Responsive Equal Height  *
-         *****************************/
-        var $element = $('.equal-hight');
-        if ($element.length > 0) {
-            var $viewportWidth = win
-                .width();
-            if ($viewportWidth > 767) {
-                $element.matchHeight();
-            }
-            win.on('resize', function() {
-                if ($viewportWidth > 767) {
-                    $element.matchHeight();
-                }
-            });
-        }
-
         /*********************
          *  Banner Carousel  *
          *********************/

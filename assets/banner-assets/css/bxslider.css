@@ -616,6 +616,7 @@ ul.marketing-list li:last-child:after {
 }
 ul.marketing-list li img {
 	margin: 0 auto;
+	max-width: 100px;
 }
 ul.marketing-list li h3 {
 	display: block;
@@ -692,15 +693,17 @@ ul.marketing-list3 li {
 	margin-bottom: 30px;
 }
 ul.marketing-list3 li .equal-hight {
-	padding: 45px 12% 0 8%;
+	padding: 30px;
 	background: #fff;
-	border: 1px #e0e5e9 solid;
-	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+	border: 1px #f0f3f5 solid;
+	box-shadow: 0px 0px 20px rgba(100, 100, 100, 0.1);
 	border-radius: 5px;
 	position: relative;
+	
+	min-height: 180px;
 }
 ul.marketing-list3 li .ico-block {
-	width: 20%;
+	width: 18%;
 	float: left;
 }
 ul.marketing-list3 li .cnt-block {
@@ -716,7 +719,7 @@ ul.marketing-list3 li h3 {
 	line-height: 28px;
 }
 ul.marketing-list3 li p {
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 }
 ul.marketing-list3 li a {
 	position: absolute;
@@ -1154,7 +1157,9 @@ ul.features-listing li h3 {
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 28px;
+	color: #000;
 }
+
 ul.features-listing.ico-bg li .icon {
 	background: #57bce2;
 	font-family: 'FontAwesome';
@@ -2505,7 +2510,7 @@ ul.team-listing li ul.follow-us li a:hover {
 	padding-bottom: 20px;
 }
 ul.more-features-list {
-	max-width: 430px;
+	/*max-width: 430px;*/
 	padding: 20px 0 0 0;
 }
 ul.more-features-list li {
@@ -6919,9 +6924,9 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 /*------------ 14/03/19 ------------*/
 .finance_solutions {float: none!important;}
 
+.rounded-circle {border-radius: 50%!important;}
 
-
-
+.bb-line-orange {width:75px;height:2px;background-color:#000;margin-left:auto;margin-right:auto;margin-top:-10px;margin-bottom:10px;}
 
 
 
@@ -7840,6 +7845,7 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 	}
 	ul.marketing-list3 li .equal-hight {
 		padding: 45px 13% 0 8%;
+		min-height: 190px;
 	}
 	ul.marketing-list3 li .cnt-block {
 		padding-left: 15px;
@@ -8313,7 +8319,7 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 		font-size: 20px;
 	}
 	ul.marketing-list3 li p {
-		padding-bottom: 15px;
+		padding-bottom: 10px;
 	}
 	ul.marketing-list3 li a {
 		position: relative;
