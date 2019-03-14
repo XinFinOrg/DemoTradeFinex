@@ -37,6 +37,22 @@
             });
         }
 		
+		
+		/***************************
+         *  Features-carousel  *
+         ***************************/
+        var owl = $(".features-carousel-sec .owl-carousel");
+        if (owl.length > 0) {
+            owl.owlCarousel({
+                items: 1,
+                navText: ['<i class="icon-know-more-arrow" ></i>', '<i class="icon-know-more-arrow " ></i>'],
+                navigation: true,
+                controls: true,
+                autoPlay: true
+            });
+        }
+		
+		
 		/***************************
          *  Video popup  *
          ***************************/

@@ -133,7 +133,7 @@ select:focus {
 	padding: 12px 30px;
 	background: #57bce2;
 	font-size: 14px;
-	color: #fff;
+	color: #fff!important;
 	font-weight: 500;
 	text-transform: uppercase;
 	border-radius: 50px;
@@ -640,11 +640,11 @@ a.know-more:before {
 	font-family: 'FontAwesome';
 	font-size: 24px;
 	content: "\f144";
-	color: #f29a32;
+	color: #57bce2;
 	transition: all 0.3s ease 0s;
 }
 a.know-more:hover:before {
-	color: #57bce2;
+	color: #f29a32;
 }
 ul.marketing-list li a:hover {
 	color: #f29a32;
@@ -1096,7 +1096,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', end
 .choose-pack .cnt-block ul li:before {
 	display: inline-block;
 	margin-right: 15px;
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 16px;
 	content: "\e902";
 	color: #c0ced2;
@@ -1150,14 +1150,14 @@ ul.features-listing li .icon {
 	box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.1);
 }
 ul.features-listing li h3 {
-	padding: 30px 0 20px 0;
+	padding: 20px 0 20px 0;
 	font-size: 22px;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 28px;
 }
 ul.features-listing.ico-bg li .icon {
 	background: #57bce2;
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 32px;
 	color: #fff;
 	text-align: center;
@@ -1237,7 +1237,7 @@ ul.speak-listing li figure img {
 ul.speak-listing li .icon-quote {
 	display: block;
 	padding-bottom: 25px;
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 20px;
 	content: "\e903";
 	color: #57bce2;
@@ -1337,7 +1337,7 @@ ul.speak-listing.opt2 li p {
 }
 .client-speak #bx-pager .client-detail .icon-quote {
 	display: block;
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 18px;
 	content: "\e903";
 	color: #57bce2;
@@ -1510,7 +1510,7 @@ ul.speak-listing.opt4 li .client-detail {
 	vertical-align: middle;
 	margin-top: -2px;
 	margin-right: 10px;
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 18px;
 	color: #57bce2;
 	content: "\e913";
@@ -1611,7 +1611,7 @@ ul.speak-listing.opt4 li .client-detail {
 	display: block;
 	position: absolute;
 	left: 14px;
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 22px;
 	content: "\e906";
 	color: #c8ede7;
@@ -1924,7 +1924,7 @@ a.ovelay-icon {
 	vertical-align: middle;
 	margin-top: -2px;
 	margin-right: 10px;
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 18px;
 	color: #c1d0da;
 	content: "\e904";
@@ -1970,7 +1970,7 @@ a.ovelay-icon {
 	right: 0px;
 	top: 50%;
 	transform: translateY(-50%);
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 20px;
 	content: "\e90a";
 	color: #fff;
@@ -2319,7 +2319,7 @@ ul.who-listing li:before {
 	position: absolute;
 	left: 0px;
 	top: 4px;
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	content: "\e927";
 	font-size: 20px;
 	color: #42d79e;
@@ -2520,10 +2520,10 @@ ul.more-features-list li:before {
 	position: absolute;
 	top: 18px;
 	left: -40px;
-	content: "\e927";
-	font-family: 'icomoon';
+	content: "\f058";
+	font-family: 'FontAwesome';
 	font-size: 30px;
-	color: #42d79e;
+	color: #f29a32;
 }
 ul.more-features-list li:last-child {
 	border-bottom: none;
@@ -2887,7 +2887,7 @@ opacity:0.5;
 	width: auto;
 }
 .info-content .icon-holder img {
-	max-width: 100%;
+	max-width: 60px;
 }
 .info-content h3 {
 	font-size: 22px;
@@ -3375,7 +3375,7 @@ p.time span {
 }
 p.time:before {
 	content: "\e912";
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 16px;
 	color: #b2b2b2;
 	position: absolute;
@@ -3423,7 +3423,7 @@ ul.blog-info li:before {
 	font-size: 23px;
 	color: #42d79e;
 	left: 15px;
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 }
 ul.blog-info li.comment:before {
 	content: "\e90b";
@@ -3567,7 +3567,7 @@ ul.blog-tag li a:hover {
 }
 .blog-sidebar .cmn-box.archive ul li a:before {
 	content: "\e90c";
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	position: absolute;
 	top: 16px;
 	left: 0;
@@ -3905,7 +3905,7 @@ ul.blog-info li:before {
 	top: 50%;
 	transform: translateY(-50%);
 	content: "\e91e";
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 20px;
 	color: #9db5c0;
 	transition: all 0.3s ease 0s;
@@ -4206,7 +4206,7 @@ ul.our-values li {
 	top: 20px;
 	left: 0;
 	content: "\e927";
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 24px;
 	color: #42d79e;
 }
@@ -4465,7 +4465,7 @@ ul.our-values li .text-area p {
 .career-accordian .card-header:after {
 	color: #b9bec3;
 	content: "\e90d";
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	float: right;
 	font-size: 13px;
 	margin-left: 5px;
@@ -4960,7 +4960,7 @@ ul.our-values li .text-area p {
 	left: 0;
 	top: 0;
 	content: "";
-	font-family: 'icomoon';
+	font-family: 'FontAwesome';
 	font-size: 19px;
 	color: #c7d0d3;
 }
@@ -5704,7 +5704,7 @@ ul.our-values li .text-area p {
 .popup-outer ul.popup-menu li a:hover {
 	background: #f29a32;
 }
-.modal-content {
+/*.modal-content {
 	border-radius: 0px;
 }
 .modal-dialog {
@@ -5731,7 +5731,7 @@ button.close {
 	background: #f29a32;
 	color: #fff;
 	opacity: 1;
-}
+}*/
 .popup-img {
 	max-width: 740px;
 	margin: 0 auto;
@@ -6257,7 +6257,7 @@ html .ui-button.ui-state-disabled:active{
     vertical-align: middle;
     margin-top: -2px;
     padding-right: 6px;
-    font-family: 'icomoon';
+    font-family: 'FontAwesome';
     font-size: 10px;
     color: #93aab3;
     content: "\e911";
@@ -6441,7 +6441,7 @@ ul.Product-listing.right-sec li .bottom .add-cart{
     margin-bottom: 0px;
 }
 .related-products .owl-nav div{
-    font-family: 'icomoon';
+    font-family: 'FontAwesome';
     font-size: 20px;
     color: #c7d0d5;
     position: absolute;
@@ -6911,6 +6911,19 @@ ul.Product-listing.right-sec li .bottom .add-cart{
 .shipping-address .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
 	border-color: transparent transparent #d8dfe3;
 }
+
+
+
+
+
+/*------------ 14/03/19 ------------*/
+.finance_solutions {float: none!important;}
+
+
+
+
+
+
 
 /* ================================================== */
 /* 29. Responsive */
@@ -10606,3 +10619,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3edc93', end
 		margin-bottom: 10px!important;
 	}
 }
+
+
+
+
+
+
+
+
+

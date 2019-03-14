@@ -279,6 +279,8 @@
         
         
         <!-- bxslider Banner script js -->
-        <script src="assets/banner-assets/js/bxslider.min.js"></script>
-        <script src="assets/banner-assets/js/custom.js"></script>
-        <script src="assets/banner-assets/js/magnific-popup.min.js"></script>
+        <script src="<?=base_url('assets/banner-assets/js/bxslider.min.js');?>"></script>
+        <script src="<?=base_url('assets/banner-assets/js/custom.js');?>"></script>
+        <script src="<?=base_url('assets/banner-assets/js/magnific-popup.min.js');?>"></script>
+        
+        <script src="<?=base_url('assets/js/owl.carousel.min.js');?>"></script>
