@@ -1,7 +1,7 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 $config['$econfig'] = array(
-			'protocol' => 'smtp',
+			'protocol' => 'tls',
 			'smtp_host' => 'ssl://demo.tradefinex.org',
 			'smtp_port' => 465,
 			'smtp_user' => 'admin@demo.tradefinex.org', 
