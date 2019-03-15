@@ -136,7 +136,7 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>The annual market size USD 5 Trillion.</h3>
+                                <h3>leverage USD 5 Trillion annual Market.</h3>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                             </div>
                         </div>
@@ -162,7 +162,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        <h2>Invoice Factoring Solution</h2>
+                        <h2>Invoice Factoring: How it work ?</h2>
                         <p>Invoice Factoring is an accepted form of working capital management solution. It does so by converting your unpaid invoices to cash. Invoice Factoring allows companies to receive cash instantly, customers to live by friendly payment terms and investors (the factor) to earn some profits in terms of fee.</p>
                         <ul class="more-features-list">
                             <li>InFactor is a platform for factoring Trade Instruments, mainly invoices.</li>
@@ -190,8 +190,8 @@
                 <div class="row text-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Overview on Infactor Market</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
+                            <h2>Get an overview</h2>
+                            <p>Connect to your Financier in a whole new way. Here is the Product Overview.</p>
                         </div>
                     </div>
                 </div>
