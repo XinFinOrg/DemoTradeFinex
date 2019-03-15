@@ -16,7 +16,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Overview on Infactor Market</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
+                            <p>global framework for Invoice factoring or financial instruments discounting that lets buyers, sellers and financiers, share invoices, convert them into digital assets and enable financing using XDC Protocol as a channel for relaying standardised Data and liquidity between fiat currencies.</p>
                         </div>
                     </div>
                 </div>
