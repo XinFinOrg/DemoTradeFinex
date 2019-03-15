@@ -229,7 +229,7 @@
                         </a>
                     </li>
                     <li class="col-md-4 equal-hight">
-                        <a href="http://docs.infactor.io">
+                        <a href="http://docs.infactor.io/faq/General/">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
                             <h3>Faqs</h3>
