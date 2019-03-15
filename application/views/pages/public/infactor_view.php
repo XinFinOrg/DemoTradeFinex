@@ -3,7 +3,7 @@
         <div class="container">
             <h3>InFactor</h3>
             <br>
-            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure</h4>
+            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure using blockchain technology</h4>
         </div>
     </section>
     
@@ -70,7 +70,7 @@
                 <ul class="row features-listing ico-bg">
                     <li class="col-md-3">
                         <div class="inner">
-                            <h3>Scalable Link Building Solutions</h3>
+                            <h3>Leverage Smart Contract facility</h3>
                             <div class="bb-line-orange"></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
                         </div>
