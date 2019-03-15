@@ -150,18 +150,10 @@
             </div>
         </section>
 </div>
-<?php
-	$this->load->view('includes/login_modal');
-?>
-=======
-<div class="sub_page_wraper">
-    <section class="finance_solutions">
-        <div class="container">
-            <h3>Digital Bond</h3>
-            <br>
-            <h4 class="infactor">Create, Manage & Liquidate Bonds Instrument On Blockchain </h4>
-        </div>
-    </section>
+
+
+
+
     
     
     
