@@ -219,7 +219,7 @@
                 <h2>Still have questions?</h2>
                 <ul class="row features-listing">
                     <li class="col-md-4 equal-hight">
-                        <a href="support.html">
+                        <a href="http://docs.infactor.io">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
                             <h3>Help Center</h3>
@@ -239,7 +239,7 @@
                         </a>
                     </li>
                     <li class="col-md-4 equal-hight">
-                        <a href="docs.html">
+                        <a href="http://docs.infactor.io/Guide/API/">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
                             <h3>Technical Documents</h3>
