@@ -3,20 +3,19 @@
         <div class="container">
             <h3>R3 Corda Bridge</h3>
             <br>
-            <h4 class="infactor">Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid</h4>
+            <h4 class="infactor">Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid.</h4>
         </div>
     </section>
     
-    
-    
+   
     
     <section class="content-marketing content-marketing3 white-bg padding-lg">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Overview on R3 Corda Bridge</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
+                            <h2>Connect R3 Corda Bridge State with Public Network</h2>
+                            <p>The Relayer Bridge deploys Corda Smart ContractState —>[Onto]-> XinFin Network Smart Contract State</p>
                         </div>
                     </div>
                 </div>
