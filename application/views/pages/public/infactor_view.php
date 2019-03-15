@@ -191,7 +191,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Get an overview</h2>
-                            <p>Connect to your Financier in a whole new way.</p>
+                            <p>Connect to more financier in a whole new way.</p>
                         </div>
                     </div>
                 </div>
