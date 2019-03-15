@@ -162,7 +162,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        <h2>Invoice Factoring: How it work ?</h2>
+                        <h2>How it work ?</h2>
                         <p>Invoice Factoring is an accepted form of working capital management solution. It does so by converting your unpaid invoices to cash. Invoice Factoring allows companies to receive cash instantly, customers to live by friendly payment terms and investors (the factor) to earn some profits in terms of fee.</p>
                         <ul class="more-features-list">
                             <li>InFactor is a platform for factoring Trade Instruments, mainly invoices.</li>
