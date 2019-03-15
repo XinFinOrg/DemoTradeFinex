@@ -99,7 +99,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Get an overview on Digital bond Platform</h2>
-                         
+ 
                         </div>
                     </div>
                 </div>
