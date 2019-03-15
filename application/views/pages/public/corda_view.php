@@ -15,7 +15,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Connect R3 Corda Bridge State with Public Network</h2>
-                            <p>The Relayer Bridge deploys Corda Smart ContractState —>[Onto]-> XinFin Network Smart Contract State</p>
+                            <p>The Relayer Bridge deploys Corda Smart ContractState to XinFin Network Smart Contract State</p>
                         </div>
                     </div>
                 </div>
@@ -33,8 +33,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/seo-succes-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Easy and fast integration</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <h3>Easy and fast integration using API</h3>
+                                <p>Easy Integration with in a Click. Easy plugin available for R3 Corda user.</p>
                             </div>
                         </div>
                     </li>
@@ -42,8 +42,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Active support and regular updates</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <h3>Leverage the Power of Smart Contract</h3>
+                                <p>Automate Transfer and settlement cycle using power of blockchain </p>
                             </div>
                         </div>
                     </li>
@@ -51,8 +51,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/privacy-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Always in control of your privacy</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <h3>Efficient Process & automation</h3>
+                                <p>Enabling Automatic and efficient settlement using smart contracts</p>
                             </div>
                         </div>
                     </li>
@@ -68,11 +68,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        <h2>Create, Manage & Liquidate Bonds Instrument Online</h2>
-                        <p>Invoice Factoring is an accepted form of working capital management solution. It does so by converting your unpaid invoices to cash. Invoice Factoring allows companies to receive cash instantly, customers to live by friendly payment terms and investors (the factor) to earn some profits in terms of fee.</p>
+                        <h2>R3 Corda-XinFin Bridge connectivity</h2>
+                        <p>The Relayer Bridge deploys Corda Smart ContractState OntoXinFin Network Smart Contract State (ContractInstance)</p>
                         <ul class="more-features-list">
-                            <li>InFactor is a platform for factoring Trade Instruments, mainly invoices.</li>
-                            <li>Built in XDC Wallet and smart contracts make invoice factoring easier, transparent and secure.</li>
+                            <li>Atomic Swap (Include Hash of the transaction)</li>
+                            <li>Built in XDC Wallet and smart contracts makes transaction easier, transparent and secure.</li>
                         </ul>
                         <div class="more-features-btn-holder"><a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a></div>
                     </div>
