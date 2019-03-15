@@ -137,7 +137,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>leverage USD 5 Trillion annual Market.</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p>Connect to your Financier in a whole new way. Get access to more financing options.</p>
                             </div>
                         </div>
                     </li>
@@ -146,7 +146,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/privacy-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Leverage the Power of Smart Contract</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p>Automate repayment and settlement cycle using power of blockchain</p>
                             </div>
                         </div>
                     </li>
@@ -191,7 +191,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Get an overview</h2>
-                            <p>Connect to your Financier in a whole new way. Here is the Product Overview.</p>
+                            <p>Connect to your Financier in a whole new way.</p>
                         </div>
                     </div>
                 </div>
