@@ -52,7 +52,7 @@
 									<p class="animated fadeInDown delay-04s">Start trial under regulatory sandbox environment.</p>
                                     <div class="button-box mt-30">
                                 		<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
-                                		<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
+                                		<a href="<?=base_url('publicv/digital_bond');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
                                 	</div>
                             </div>
                         </div>
@@ -98,13 +98,13 @@
                             <h2>Digital Bond</h2>
                             <p>Create, Manage & Liquidate Bonds Instrument Online. A Fully Digital Solution On Blockchain Eliminate Counterparty Delays, And Allow Instant Settlement.</p>
                             <div class="button-box">
-                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
-                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Explore Now</a>
+                            	<a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a>
+                            	<a href="<?=base_url('publicv/digital_bond');?>" class="get-started">Explore Now</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-md-pull-6">
-                        <figure class="img"><img src="assets/banner-assets/images/create-bond.png" class="img-responsive" alt=""></figure>
+                        <figure class="img"><img src="assets/banner-assets/images/digital-bond-screen-1.png" class="img-responsive" alt=""></figure>
                     </div>
                 </div>
             </div>
@@ -119,8 +119,8 @@
                         <h2>Invoice Factoring</h2>
                         <p>Tradfinex's Invoice Factoring Platform Opens The Doors For Everyone To Participate In An Alternative Finance Marketplace With Fully Transparent Way.</p>
                         <div class="button-box">
-                        	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
-                        	<a href="<?=base_url('publicv/infactor');?>" class="btn get-started">Explore Now</a>
+                        	<a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a>
+                        	<a href="<?=base_url('publicv/infactor');?>" class="get-started">Explore Now</a>
                         </div>
                     </div>
                     <div class="col-md-7 right">
@@ -141,8 +141,8 @@
                             <h2>R3 Corda Bridge</h2>
                             <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
                             <div class="button-box">
-                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
-                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Explore Now</a>
+                            	<a href="#" class="get-started">Start POC</a>
+                            	<a href="<?=base_url('publicv/corda_bridge');?>" class="get-started">Explore Now</a>
                             </div>
                         </div>
                     </div>
@@ -162,8 +162,8 @@
                         <h2>TradeFinex Round table series Consortium Event</h2>
                         <p>Event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
                         <div class="button-box">
-                        	<a href="http://events.tradefinex.org/#contact" target="_blank" class="btn get-started">Register Now</a>
-                            <a href="http://events.tradefinex.org/" target="_blank" class="btn get-started">Explore Now</a>
+                        	<a href="http://events.tradefinex.org/#contact" target="_blank" class="get-started">Register Now</a>
+                            <a href="http://events.tradefinex.org/" target="_blank" class="get-started">Explore Now</a>
                         </div>
                     </div>
                     <div class="col-md-7 right">

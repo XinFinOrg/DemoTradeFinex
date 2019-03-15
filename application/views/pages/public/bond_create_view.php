@@ -101,17 +101,6 @@
                                                 <input type="text" class="form-control  form-controlCustom form-control-lg" id="dvalue" name="dvalue" placeholder = "Discounted Value">
                                             </div>
 											</div> 
-                                            <div class="card-footer border-0 text-center">
-                                            <div class="form-actions">
-                                                <div class="row">
-                                                    <div class="col-md-12 footerBtns">
-                                                        <button type="submit" id="bond_create" class="btn btn-primary btn-rounded"  > Create Bond</button>
-                                                        <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button>
-													</div>
-													<br>
-                                                </div>
-                                            </div>
-                                        
 											<div class="form-group col-md-4">
                                                     <label class="hidden">
                                                         <input class="input-focus input-focus-notr" id="isPausable" name="isPausable" value="true" />
@@ -137,7 +126,17 @@
                                                 </label>
                                             </div>                                          
                                         </div>
-                                    </div>
+                                        <div class="card-footer border-0 text-center">
+                                            <div class="form-actions">
+                                                <div class="row">
+                                                    <div class="col-md-12 footerBtns">
+                                                        <button type="submit" id="bond_create" class="btn btn-primary btn-rounded"  > Create Bond</button>
+                                                        <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button>
+													</div>
+													<br>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -163,7 +162,7 @@
                                 <div class="card-body">
 
                                     <div class="form-row" style="padding-top:15px">
-                                            <div class="form-group col-lg-4 col-md-12"><div class=" form-column-headings"style="margin-left:7px; width:1070px; height:450px;overflow-y:scroll;box-shadow: 0px 2px 10px #6c757d;"> 
+                                            <div class="form-group col-lg-4 col-md-12"><div class=" form-column-headings"style="margin-left:10px; width:1120px; height:450px;overflow-y:scroll;box-shadow: 0px 2px 10px #6c757d;"> 
                                                 <pre id="contractData"  >
 
                                                 </pre>

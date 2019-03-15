@@ -47,8 +47,6 @@
     <!-- bxslider Banner CSS -->
     <link rel="stylesheet" type="text/css" href="<?=base_url('assets/banner-assets/css/bxslider.css');?>" />
     <link rel="stylesheet" type="text/css" href="<?=base_url('assets/banner-assets/css/magnific-popup.css');?>" />
-
-	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/owl.carousel.min.css');?>" />
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

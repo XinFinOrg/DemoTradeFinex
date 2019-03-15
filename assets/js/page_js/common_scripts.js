@@ -48,10 +48,10 @@ $(function () {
 		return this.optional(element) || /^([a-zA-Z])([a-zA-Z0-9\s])+$/i.test(value);
 	}, 'The text must combination of letter and numbers; Not started with number; should not contain special characters');
 
-	jQuery.validator.addMethod("DecNumberOnly", function (value, element) {
+	jQuery.validator.addMethod("signedDecNumberOnly", function (value, element) {
 		console.log('valueand', this.optional(element), /^[+]?[0-15]+\.[0-9]+$/.test(value));
 		// allow any non-whitespace characters as the host part
-		return this.optional(element) || /^[0-9]+(\.[0-9]{1,2})?$/.test(value);
+		return this.optional(element) || /^[+]?[0-15]+\.[0-9]+$/.test(value);
 	}, 'This field allows decimal number only');
 
 	jQuery.validator.addMethod("CalphanumericOnly", function (value, element) {
@@ -71,7 +71,7 @@ $(function () {
 
 	jQuery.validator.addMethod("numberOnly", function (value, element) {
 		// allow any non-whitespace characters as the host part
-		return this.optional(element) || /^[0-9]*$/.test(value);
+		return this.optional(element) || /^[0-9]+$/.test(value);
 	}, 'This field allowing number only');
 
 	jQuery.validator.addMethod("mobilenumberOnly", function (value, element) { // International Mobile Number
@@ -483,38 +483,36 @@ $(function () {
 			},
 			tokenSupply: {
 				required: true,
-				min:10,
 				minlength: 2,
-				maxlength: 15,
+				maxlength: 30,
 				numberOnly: true
 			},
 			ethRate: {
 				required: true,
-				min:1,
 				minlength: 1,
-				maxlength: 15,
+				maxlength: 30,
 				numberOnly: true
 			},
 			bonusRate: {
 				required: true,
-				min:1,
-				minlength: 1,
-				maxlength: 15,
+				minlength: 2,
+				maxlength: 30,
 				numberOnly: true
 			},
 			coupon: {
 				required: true,
-				min:0.1,
-				max:100.00,
-				DecNumberOnly: true
+				minlength: 1,
+				maxlength: 2,
+				numberOnly: true
 			},
 			tenure: {
 				required: true,
-				min:1,
-				max:100,
 				minlength: 1,
-				maxlength: 15,
+				maxlength: 30,
 				numberOnly: true
+			},
+			defaultReal: {
+				equalTo: '#captcha_val'
 			}
 
 		},
@@ -523,7 +521,6 @@ $(function () {
 				required: "Please enter bond name",
 				minlength: "Characters length should be atleast 2",
 				maxlength: "Characters length should not exceeded than 15"
-			
 			},
 			tokenSymbol: {
 				required: "Please enter bond symbol",
@@ -531,44 +528,34 @@ $(function () {
 				maxlength: "Characters length should not exceeded than 10"
 			},
 			tokenSupply: {
-				required: "Please enter issuance size",				
-				minlength: "Digits length should be atleast 1",
-				maxlength: "Digits length should not exceeded than 15"
-				
+				required: "Please enter issuance size",
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			ethRate: {
 				required: "Please enter face value",
-				min: "Please enter more value more than 0",
-				minlength: "Digits length should be atleast 1",
-				maxlength: "Digits length should not exceeded than 15"
-
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			bonusRate: {
 				required: "Please enter minimum contribution",
-				min: "Please enter more value more than 0",
-				minlength: "Digits length should be atleast 1",
-				maxlength: "Digits length should not exceeded than 15"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			coupon: {
 				required: "Please enter coupon",
-				min: "Please enter more value more than 0.1",
-				max: "Please enter more value more than 100.00",
-				minlength: "Digits length should be atleast 1",
-				maxlength: "Digits length should not exceeded than 15",
-				DecNumberOnly: "Only Decimals are allowed"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			tenure: {
 				required: "Please enter tenure",
-				min: "Please enter more value more than 0",
-				max: "Please enter more value more than 100",
-				minlength: "Digits length should be atleast 1",
-				maxlength: "Digits length should not exceeded than 15",
-				numberOnly : "Only Digits are allowed"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 			dvalue: {
 				required: "Please enter discount value",
-				minlength: "Digits length should be atleast 2",
-				maxlength: "Digits length should not exceeded than 15"
+				minlength: "Numbers length should be atleast 2",
+				maxlength: "Numbers length should not exceeded than 30"
 			},
 		},
 		onkeyup: function (elem) {
@@ -637,7 +624,7 @@ $(function () {
 						//console.log('formdata done:', formDataObj.tokenName);
 						const coinData = {
 							"coinName": formDataObj.tokenName,
-							"network" : "testnet"
+							"network" : "private"
 						};
 
 							$("#deploy_contract").on('click', function (e) {

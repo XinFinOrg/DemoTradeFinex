@@ -3,12 +3,12 @@
         <div class="container">
             <h3>InFactor</h3>
             <br>
-            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure</h4>
+            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure using blockchain technology. Create Interoperable State & get access to wide financial ecosystem</h4>
         </div>
     </section>
     
     
-    
+  
     
     <!--<section class="content-marketing white-bg padding-lg">
             <div class="container">
@@ -16,7 +16,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Overview on Infactor Market</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
+                            <p>global framework for Invoice factoring or financial instruments discounting that lets buyers, sellers and financiers, share invoices, convert them into digital assets and enable financing using XDC Protocol as a channel for relaying standardised Data and liquidity between fiat currencies.</p>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
                             <figure><img src="../assets/banner-assets/images/scalable-link-ico.png" class="img-responsive" alt=""></figure>
-                            <h3>Scalable Link Building Solutions</h3>
+                            <h3>The annual market size USD 5 Trillion.</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
@@ -38,15 +38,15 @@
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
                             <figure><img src="../assets/banner-assets/images/content-marketing-ico.png" class="img-responsive" alt=""></figure>
-                            <h3>Active support and regular updates</h3>
+                            <h3>Build on ISO20022 standard </h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
                             <figure><img src="../assets/banner-assets/images/scalable-link-ico.png" class="img-responsive" alt=""></figure>
-                            <h3>Always in control of your privacy</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+                            <h3>Connect using easy API Access</h3>
+                            <p>Easy Integration with in a Click. Easy plugin available for Quickbooks, SAP and other platform</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
                 </ul>
@@ -61,7 +61,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Overview on Infactor Market</h2>
+                            <h2>Get more Financing option to your unpaid invoice</h2>
                             <div class="bb-line-orange"></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
                         </div>
@@ -70,7 +70,7 @@
                 <ul class="row features-listing ico-bg">
                     <li class="col-md-3">
                         <div class="inner">
-                            <h3>Scalable Link Building Solutions</h3>
+                            <h3>Leverage Smart Contract facility</h3>
                             <div class="bb-line-orange"></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
                         </div>
@@ -108,8 +108,8 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Overview on Infactor Market</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
+                            <h2>Get more Financing option to your unpaid invoice</h2>
+                            <p>Leverage Power of the Blockchain and make your financial instruments Liquid and Interoperable</p>
                         </div>
                     </div>
                 </div>
@@ -118,8 +118,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Scalable Link Building Solutions</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <h3>Build on ISO20022 standard </h3>
+                                <p>Invoice Factoring Build on ISO 20022 Standard</p>
                             </div>
                         </div>
                     </li>
@@ -127,8 +127,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/seo-succes-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Easy and fast integration</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <h3>Easy and fast integration using API</h3>
+                                <p>Easy Integration with in a Click. Easy plugin available for Quickbooks user.</p>
                             </div>
                         </div>
                     </li>
@@ -136,8 +136,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Active support and regular updates</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <h3>leverage USD 5 Trillion annual Market.</h3>
+                                <p>Connect to your financer in a whole new way. Get access to more financing options.</p>
                             </div>
                         </div>
                     </li>
@@ -145,8 +145,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/privacy-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Always in control of your privacy</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <h3>Leverage the Power of Smart Contract</h3>
+                                <p>Automate repayment and settlement cycle using power of blockchain</p>
                             </div>
                         </div>
                     </li>
@@ -162,12 +162,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        <h2>Invoice Factoring Solution</h2>
+                        <h2>How it work ?</h2>
                         <p>Invoice Factoring is an accepted form of working capital management solution. It does so by converting your unpaid invoices to cash. Invoice Factoring allows companies to receive cash instantly, customers to live by friendly payment terms and investors (the factor) to earn some profits in terms of fee.</p>
                         <ul class="more-features-list">
                             <li>InFactor is a platform for factoring Trade Instruments, mainly invoices.</li>
                             <li>Built in XDC Wallet and smart contracts make invoice factoring easier, transparent and secure.</li>
                         </ul>
+                        <div class="more-features-btn-holder"><a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a></div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="videos_video_wrap">
@@ -190,17 +191,18 @@
                 <div class="row text-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Overview on Infactor Market</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
+                            <h2>Get an overview</h2>
+                            <p>Connect to more financier in a whole new way.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Start: Caurosel -->
                 <div class="features-carousel-sec">
                     <div class="owl-carousel owl-feature">
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
+                        <div class="item"><img src="../assets/banner-assets/images/infactor-screen-1.png" alt=""></div>
+                        <div class="item"><img src="../assets/banner-assets/images/infactor-screen-2.png" alt=""></div>
+                        <div class="item"><img src="../assets/banner-assets/images/infactor-screen-3.png" alt=""></div>
+                        <div class="item"><img src="../assets/banner-assets/images/infactor-screen-4.png" alt=""></div>
                     </div>
                 </div>
                 <!-- End: Caurosel --> 
@@ -221,7 +223,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
                             <h3>Help Center</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+                            <p>Your questions or feedback</p>
                       		<!--<a href="support.html" class="know-more">Know more</a>-->
                         </div>
                         </a>
@@ -231,7 +233,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
                             <h3>Faqs</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+                            <p>General and Technical Frequently asked questions Resource Link</p>
                             <!--<a href="faq.html" class="know-more">Know more</a>-->
                         </div>
                         </a>
@@ -241,7 +243,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
                             <h3>Technical Documents</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+                            <p>Technical Resource, API link, Example code and Release note </p>
                             <!--<a href="docs.html" class="know-more">Know more</a>-->
                         </div>
                         </a>
@@ -277,14 +279,12 @@
                 <p>Consider a Small and Medium sized Enterprise (SME) that has been addressing cash flow issues due to rigid payment terms of 30 to 120 days from its customers. SME puts a request for factoring/discounting its invoices on InFactor platform. SME here becomes the Seller/Supplier, SME's client/customer becomes Buyer and the factoring individual or company that pays money (minus their fee after risk assessment) to the supplier becomes the Financier.</p>
                 <h3 class="home-page"> What problems is InFactor addressing?</h3>
                 <br>
-
                 <p><b>Fraud Prevention </b></p>
                 <p>Invoices can be fake and stretched. Sometimes, the same invoice is sent to two or more invoice factoring companies (also called as double invoicing). By putting invoice factoring on blockchain, InFactor will store the entire transaction data and will assign a unique fingerprint to every invoice. InFactor is a blockchain solution that agrees with the common standard for factoring invoices and share their data to protect them from double invoicing. In a nutshell, InFactor will automatize the verification process against double invoicing leading to fraud prevention.</p>
                 <p><b>Standardization </b></p>
                 <p>Centralized banking systems disable smaller companies or companies with poor credit or with no financial track record from availing factoring. Most of the times, these smaller segments are turned down by banks because of the apparent level of risk involved. InFactor will be putting all the companies' track record onto blockchain injecting transparency and standardization in the system. With ISO20022 standard in place, InFactor will be capturing the existing data sets from banks and institutions and then making it accessible to global factors. The ISO20022 messaging protocol will allow suppliers, financiers and buyers to interact with each other on an open platform and get access to the required data leading to standardization.</p>
                 <p><b>Interoperability </b></p>
                 <p>Interoperability of systems is a major problem when it comes to financing. InFactor platform is designed to be interoperable with ERP systems and SWIFT banking systems so that data can be fetched automatically onto blockchain for factoring. InFactor will also be interoperable with all compliance systems of buyers/vendors/suppliers making data sharing easier between all participants. Built on XinFin protocol, InFactor will operate smoothly with centralized switching and different kind of data making it interoperable with not only existing legacy systems but the blockchain based platforms too.</p>
-
                 <br>
                 <h3 class="home-page">Benefits of InFactor platform</h3>
                 <br>
@@ -294,7 +294,6 @@
                     <li>Factoring is less expensive than turning to bank financing and equity investors that adds up to a company's debts or tie up collateral.</li>
                     <li> Since factor assesses risk before submitting the request for factoring, supplier is assured of secure payments.</li>
                     <li>Paperless, blockchain-based factoring makes process transparent, inexpensive and real-time.</li>
-
                 </div>
                 <br>
                 <h3>Workflow for InFactor</h3>
@@ -351,7 +350,6 @@
                 </div>
                 <!-- <p>Click <a href="https://www.youtube.com/watch?v=GIp_h7U9aRQ">here</a> to watch the </p> 
             </div>
-
         </div>
     </section>-->
 </div>
