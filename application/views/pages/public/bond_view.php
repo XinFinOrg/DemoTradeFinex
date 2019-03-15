@@ -1,9 +1,9 @@
 <div class="sub_page_wraper">
     <section class="finance_solutions">
         <div class="container">
-            <h3>Digital Bond</h3>
+            <h3>R3 Corda Bridge</h3>
             <br>
-            <h4 class="infactor">Create, Manage & Liquidate Bonds Instrument On Blockchain </h4>
+            <h4 class="infactor">Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid</h4>
         </div>
     </section>
     
@@ -15,8 +15,8 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Creating Global Bond Standard</h2>
-                            <p>Connecting Traditional Bond Market with Digital Bond Standard.</p>
+                            <h2>Overview on R3 Corda Bridge</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
                         </div>
                     </div>
                 </div>
@@ -25,8 +25,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Efficient Process & automation</h3>
-                                <p>Enabling Automatic and efficient bond settlement</p>
+                                <h3>Scalable Link Building Solutions</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                             </div>
                         </div>
                     </li>
@@ -34,8 +34,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/seo-succes-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Faster and more transparent </h3>
-                                <p>Transparent and secure using blockchain technology.</p>
+                                <h3>Easy and fast integration</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                             </div>
                         </div>
                     </li>
@@ -43,8 +43,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Avoid single point  failure risk </h3>
-                                <p>Blockchains don't have a single point of failure </p>
+                                <h3>Active support and regular updates</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                             </div>
                         </div>
                     </li>
@@ -52,8 +52,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/privacy-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Leverage the Power of Smart Contract</h3>
-                                <p>Automate Transfer and settlement cycle using power of blockchain </p>
+                                <h3>Always in control of your privacy</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                             </div>
                         </div>
                     </li>
@@ -70,10 +70,10 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
                         <h2>Create, Manage & Liquidate Bonds Instrument Online</h2>
-                        <p>A Fully Digital Solution On Blockchain Eliminate Counterparty Delays, And Allow Instant Settlement.</p>
+                        <p>Invoice Factoring is an accepted form of working capital management solution. It does so by converting your unpaid invoices to cash. Invoice Factoring allows companies to receive cash instantly, customers to live by friendly payment terms and investors (the factor) to earn some profits in terms of fee.</p>
                         <ul class="more-features-list">
-                            <li>Digital Bond platform for Broker-dealer and license entity</li>
-                            <li>Digital platforms enhance secondary market liquidity</li>
+                            <li>InFactor is a platform for factoring Trade Instruments, mainly invoices.</li>
+                            <li>Built in XDC Wallet and smart contracts make invoice factoring easier, transparent and secure.</li>
                         </ul>
                         <div class="more-features-btn-holder"><a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a></div>
                     </div>
@@ -89,38 +89,13 @@
                 </div>
             </div>
         </section>
-        
-        
-        
-        
-        <section class="generate-forms white-bg padding-lg">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="head-block">
-                            <h2>Get an overview on Digital bond Platform</h2>
- 
-                        </div>
-                    </div>
-                </div>
-                <!-- Start: Caurosel -->
-                <div class="features-carousel-sec">
-                    <div class="owl-carousel owl-feature">
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                    </div>
-                </div>
-                <!-- End: Caurosel --> 
-            </div>
-        </section>
 
         
         
         
         
         
-        <section class="still-hav-qtns-outer grey-bg padding-lg">
+        <section class="still-hav-qtns-outer white-bg padding-lg">
             <div class="container">
                 <h2>Still have questions?</h2>
                 <ul class="row features-listing">
@@ -129,8 +104,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
                             <h3>Help Center</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                      		<!--<a href="support.html" class="know-more">Know more</a>-->
+                            <p>Your questions or feedback</p>
                         </div>
                         </a>
                     </li>
@@ -139,8 +113,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
                             <h3>Faqs</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                            <!--<a href="faq.html" class="know-more">Know more</a>-->
+                            <p>General and Technical Frequently asked questions Resource Link</p>
                         </div>
                         </a>
                     </li>
@@ -149,8 +122,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
                             <h3>Technical Documents</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                            <!--<a href="docs.html" class="know-more">Know more</a>-->
+                            <p>Technical Resource, API link, Example code and Release note </p>
                         </div>
                         </a>
                     </li>
