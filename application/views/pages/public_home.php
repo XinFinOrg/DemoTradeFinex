@@ -19,7 +19,7 @@
 					<div class="text-heading">Start Trial under regulatory sandbox environment.</div>
 					<p class="slider_lower_content">.</p>
 					<a class="trade_home_call_to-action" href="/publicv/bond_create">Start a PoC</a>
-					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">CONTACT US</a>
+					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_view');?>">CONTACT US</a>
 				</div>
 			</div> 
 			<div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_3.jpg"/>
@@ -28,7 +28,7 @@
 					<div class="text-heading"> </div>
 					<p class="slider_lower_content">Start trial under regulatory sandbox environment.</p>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Start POC</a>
-					<a class="trade_home_call_to-action" href="https://docs.tradefinex.org/faq/general">Explore More</a>
+					<a class="trade_home_call_to-action" href=<?=base_url('publicv/bond_create');?>">Explore More</a>
 				</div>
 			</div> 
 		</div>
