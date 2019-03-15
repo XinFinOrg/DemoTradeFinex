@@ -168,6 +168,7 @@
                             <li>InFactor is a platform for factoring Trade Instruments, mainly invoices.</li>
                             <li>Built in XDC Wallet and smart contracts make invoice factoring easier, transparent and secure.</li>
                         </ul>
+                        <div class="more-features-btn-holder"><a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a></div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="videos_video_wrap">
@@ -277,14 +278,12 @@
                 <p>Consider a Small and Medium sized Enterprise (SME) that has been addressing cash flow issues due to rigid payment terms of 30 to 120 days from its customers. SME puts a request for factoring/discounting its invoices on InFactor platform. SME here becomes the Seller/Supplier, SME's client/customer becomes Buyer and the factoring individual or company that pays money (minus their fee after risk assessment) to the supplier becomes the Financier.</p>
                 <h3 class="home-page"> What problems is InFactor addressing?</h3>
                 <br>
-
                 <p><b>Fraud Prevention </b></p>
                 <p>Invoices can be fake and stretched. Sometimes, the same invoice is sent to two or more invoice factoring companies (also called as double invoicing). By putting invoice factoring on blockchain, InFactor will store the entire transaction data and will assign a unique fingerprint to every invoice. InFactor is a blockchain solution that agrees with the common standard for factoring invoices and share their data to protect them from double invoicing. In a nutshell, InFactor will automatize the verification process against double invoicing leading to fraud prevention.</p>
                 <p><b>Standardization </b></p>
                 <p>Centralized banking systems disable smaller companies or companies with poor credit or with no financial track record from availing factoring. Most of the times, these smaller segments are turned down by banks because of the apparent level of risk involved. InFactor will be putting all the companies' track record onto blockchain injecting transparency and standardization in the system. With ISO20022 standard in place, InFactor will be capturing the existing data sets from banks and institutions and then making it accessible to global factors. The ISO20022 messaging protocol will allow suppliers, financiers and buyers to interact with each other on an open platform and get access to the required data leading to standardization.</p>
                 <p><b>Interoperability </b></p>
                 <p>Interoperability of systems is a major problem when it comes to financing. InFactor platform is designed to be interoperable with ERP systems and SWIFT banking systems so that data can be fetched automatically onto blockchain for factoring. InFactor will also be interoperable with all compliance systems of buyers/vendors/suppliers making data sharing easier between all participants. Built on XinFin protocol, InFactor will operate smoothly with centralized switching and different kind of data making it interoperable with not only existing legacy systems but the blockchain based platforms too.</p>
-
                 <br>
                 <h3 class="home-page">Benefits of InFactor platform</h3>
                 <br>
@@ -294,7 +293,6 @@
                     <li>Factoring is less expensive than turning to bank financing and equity investors that adds up to a company's debts or tie up collateral.</li>
                     <li> Since factor assesses risk before submitting the request for factoring, supplier is assured of secure payments.</li>
                     <li>Paperless, blockchain-based factoring makes process transparent, inexpensive and real-time.</li>
-
                 </div>
                 <br>
                 <h3>Workflow for InFactor</h3>
@@ -351,7 +349,6 @@
                 </div>
                 <!-- <p>Click <a href="https://www.youtube.com/watch?v=GIp_h7U9aRQ">here</a> to watch the </p> 
             </div>
-
         </div>
     </section>-->
 </div>
