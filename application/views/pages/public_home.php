@@ -141,7 +141,7 @@
                             <h2>R3 Corda Bridge</h2>
                             <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
                             <div class="button-box">
-                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
+                            	<a href="#" class="btn get-started">Start POC</a>
                             	<a href="<?=base_url('publicv/corda_bridge');?>" class="btn get-started">Explore Now</a>
                             </div>
                         </div>
