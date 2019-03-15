@@ -26,7 +26,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Efficient Process & automation</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p>Enabling Automatic and efficient bond settlement</p>
                             </div>
                         </div>
                     </li>
@@ -35,7 +35,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/seo-succes-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Faster and more transparent </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p>Transparent and secure using blockchain technology.</p>
                             </div>
                         </div>
                     </li>
@@ -44,7 +44,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Avoid single point  failure risk </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p>Blockchains don't have a single point of failure </p>
                             </div>
                         </div>
                     </li>
@@ -72,8 +72,8 @@
                         <h2>Create, Manage & Liquidate Bonds Instrument Online</h2>
                         <p>Invoice Factoring is an accepted form of working capital management solution. It does so by converting your unpaid invoices to cash. Invoice Factoring allows companies to receive cash instantly, customers to live by friendly payment terms and investors (the factor) to earn some profits in terms of fee.</p>
                         <ul class="more-features-list">
-                            <li>InFactor is a platform for factoring Trade Instruments, mainly invoices.</li>
-                            <li>Built in XDC Wallet and smart contracts make invoice factoring easier, transparent and secure.</li>
+                            <li>Digital Bond platform for Broker-dealer and license entity</li>
+                            <li>Digital platforms enhance secondary market liquidity</li>
                         </ul>
                         <div class="more-features-btn-holder"><a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a></div>
                     </div>
@@ -98,7 +98,7 @@
                 <div class="row text-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Overview on Infactor Market</h2>
+                            <h2>Get an overview on Digital bond</h2>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
                         </div>
                     </div>
