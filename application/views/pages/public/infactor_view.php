@@ -61,7 +61,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Overview on Infactor Market</h2>
+                            <h2>Get more Financing option to your unpaid invoice</h2>
                             <div class="bb-line-orange"></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
                         </div>
@@ -119,7 +119,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Build on ISO20022 standard </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p>Invoice Factoring Build on ISO 20022 Standard/p>
                             </div>
                         </div>
                     </li>
@@ -128,7 +128,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/seo-succes-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Easy and fast integration using API</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p>Easy Integration with in a Click. Easy plugin available for Quickbooks user.</p>
                             </div>
                         </div>
                     </li>
@@ -137,7 +137,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>leverage USD 5 Trillion annual Market.</h3>
-                                <p>Connect to your Financier in a whole new way. Get access to more financing options.</p>
+                                <p>Connect to your financer in a whole new way. Get access to more financing options.</p>
                             </div>
                         </div>
                     </li>
