@@ -51,7 +51,7 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/privacy-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Efficient Process & automation</h3>
+                                <h3>Efficient Process and automation</h3>
                                 <p>Enabling Automatic and efficient settlement using smart contracts</p>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                             <li>Atomic Swap (Include Hash of the transaction)</li>
                             <li>Built in XDC Wallet and smart contracts makes transaction easier, transparent and secure.</li>
                         </ul>
-                        <div class="more-features-btn-holder"><a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a></div>
+                        <div class="more-features-btn-holder"><a href="<?=base_url('#');?>" class="get-started">Start POC</a></div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <img src="../assets/banner-assets/images/coming-soon-video.jpg" class="img-responsive" alt="">
