@@ -221,7 +221,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
                             <h3>Help Center</h3>
-                            <p>Welcome your questions on feedback</p>
+                            <p>Your questions or feedback</p>
                       		<!--<a href="support.html" class="know-more">Know more</a>-->
                         </div>
                         </a>
@@ -231,7 +231,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
                             <h3>Faqs</h3>
-                            <p>Frequently asked questions Resource</p>
+                            <p>General and Technical Frequently asked questions Resource Link</p>
                             <!--<a href="faq.html" class="know-more">Know more</a>-->
                         </div>
                         </a>
@@ -241,7 +241,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
                             <h3>Technical Documents</h3>
-                            <p>Resource for tech support, API, Example code and Release note </p>
+                            <p>Technical Resource, API link, Example code and Release note </p>
                             <!--<a href="docs.html" class="know-more">Know more</a>-->
                         </div>
                         </a>
