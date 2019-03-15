@@ -280,6 +280,3 @@
         <script src="<?=base_url('assets/banner-assets/owl-carousel/js/owl.carousel.min.js');?>"></script>
         
 		<script src="<?=base_url('assets/js/page_js/footer_common.js');?>"></script>
-        
-        
-        

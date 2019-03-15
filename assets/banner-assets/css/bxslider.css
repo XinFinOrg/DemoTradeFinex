@@ -1844,6 +1844,46 @@ button.close {
 		/*min-height: 695px;*/
 		min-height: 450px;
 	}
+	.banner .pop-box .right-cnt h3 {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.banner.banner2 {
+		min-height: 695px;
+	}
+	/*.banner.banner2 .bannerHeader {
+		padding-top: 55px;
+	}*/
+	.banner.banner2 .bannerHeader h1 {
+		font-size: 36px;
+	}
+	.banner.banner2 .bannerHeader > p {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.banner.banner2 .cnt-row2 {
+		padding-top: 50px;
+	}
+	.banner.banner2 .cnt-block {
+		padding-top: 96px;
+	}
+	.banner.banner2 .right-sec p {
+		padding-bottom: 10px;
+		line-height: 22px;
+	}
+	.banner.banner3 .cnt-block {
+		padding-bottom: 60px;
+	}	
+	.banner.banner2.slide1 .cnt-block {
+		padding-top: 60px;
+	}
+	.banner.banner2.slide1,
+	.banner.slide2,
+	.banner.slide3 {
+		/*min-height: 695px;*/
+		min-height: 450px;
+	}
+>>>>>>> 55524c126caf506a8d36798926b0aee355135325
 	.banner.slide2 .cnt-block {
 		padding-top: 60px;
 		padding-bottom: 40px;

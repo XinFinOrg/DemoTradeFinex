@@ -169,6 +169,7 @@
                             <li>Built in XDC Wallet and smart contracts make invoice factoring easier, transparent and secure.</li>
                         </ul>
                         <div class="more-features-btn-holder"><a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a></div>
+                        <div class="more-features-btn-holder"><a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a></div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="videos_video_wrap">
