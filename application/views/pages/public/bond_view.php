@@ -70,7 +70,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
                         <h2>Create, Manage & Liquidate Bonds Instrument Online</h2>
-                        <p>Invoice Factoring is an accepted form of working capital management solution. It does so by converting your unpaid invoices to cash. Invoice Factoring allows companies to receive cash instantly, customers to live by friendly payment terms and investors (the factor) to earn some profits in terms of fee.</p>
+                        <p>A Fully Digital Solution On Blockchain Eliminate Counterparty Delays, And Allow Instant Settlement.</p>
                         <ul class="more-features-list">
                             <li>Digital Bond platform for Broker-dealer and license entity</li>
                             <li>Digital platforms enhance secondary market liquidity</li>
@@ -98,8 +98,8 @@
                 <div class="row text-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Get an overview on Digital bond</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
+                            <h2>Get an overview on Digital bond Platform</h2>
+                         
                         </div>
                     </div>
                 </div>
