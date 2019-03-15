@@ -52,8 +52,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/privacy-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Always in control of your privacy</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <h3>Leverage the Power of Smart Contract</h3>
+                                <p>Automate Transfer and settlement cycle using power of blockchain </p>
                             </div>
                         </div>
                     </li>
