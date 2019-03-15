@@ -119,7 +119,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Build on ISO20022 standard </h3>
-                                <p>Invoice Factoring Build on ISO 20022 Standard/p>
+                                <p>Invoice Factoring Build on ISO 20022 Standard</p>
                             </div>
                         </div>
                     </li>
