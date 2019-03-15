@@ -3,7 +3,7 @@
         <div class="container">
             <h3>Digital Bond</h3>
             <br>
-            <h4 class="infactor">Create, Manage & Liquidate Bonds Instrument Online</h4>
+            <h4 class="infactor">Create, Manage & Liquidate Bonds Instrument On Blockchain </h4>
         </div>
     </section>
     
@@ -25,7 +25,7 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Scalable Link Building Solutions</h3>
+                                <h3>Efficient Process & automation</h3>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/seo-succes-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Easy and fast integration</h3>
+                                <h3>Faster and more transparent </h3>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Active support and regular updates</h3>
+                                <h3>Avoid single point  failure risk </h3>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                             </div>
                         </div>
