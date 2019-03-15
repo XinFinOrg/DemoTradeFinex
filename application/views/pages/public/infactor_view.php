@@ -24,7 +24,7 @@
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
                             <figure><img src="../assets/banner-assets/images/scalable-link-ico.png" class="img-responsive" alt=""></figure>
-                            <h3>Scalable Link Building Solutions</h3>
+                            <h3>The annual market size USD 5 Trillion.</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
@@ -38,14 +38,14 @@
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
                             <figure><img src="../assets/banner-assets/images/content-marketing-ico.png" class="img-responsive" alt=""></figure>
-                            <h3>Active support and regular updates</h3>
+                            <h3>Build on ISO20022 standard </h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
                     <li class="col-sm-6 col-md-3">
                         <div class="inner">
                             <figure><img src="../assets/banner-assets/images/scalable-link-ico.png" class="img-responsive" alt=""></figure>
-                            <h3>Always in control of your privacy</h3>
+                            <h3>Connect using easy API Access</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
