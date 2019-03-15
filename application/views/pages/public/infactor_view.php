@@ -3,7 +3,7 @@
         <div class="container">
             <h3>InFactor</h3>
             <br>
-            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure using blockchain technology. Create Public State and get access to wide financial ecosystem</h4>
+            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure using blockchain technology. Create Interoperable State & get access to wide financial ecosystem</h4>
         </div>
     </section>
     
@@ -109,7 +109,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Get more Financing option to your unpaid invoice</h2>
-                            <p>Leverage Power of the Blockchain and make your financial instruments Liquid and Interoperable and Liquid</p>
+                            <p>Leverage Power of the Blockchain and make your financial instruments Liquid and Interoperable</p>
                         </div>
                     </div>
                 </div>
