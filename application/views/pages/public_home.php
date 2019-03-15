@@ -52,7 +52,7 @@
 									<p class="animated fadeInDown delay-04s">Start trial under regulatory sandbox environment.</p>
                                     <div class="button-box mt-30">
                                 		<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
-                                		<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
+                                		<a href="<?=base_url('publicv/digital_bond');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
                                 	</div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                             <p>Create, Manage & Liquidate Bonds Instrument Online. A Fully Digital Solution On Blockchain Eliminate Counterparty Delays, And Allow Instant Settlement.</p>
                             <div class="button-box">
                             	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
-                            	<a href="<?=base_url('publicv/bond');?>" class="btn get-started">Explore Now</a>
+                            	<a href="<?=base_url('publicv/digital_bond');?>" class="btn get-started">Explore Now</a>
                             </div>
                         </div>
                     </div>
