@@ -21,22 +21,24 @@
         }
 		
 		
-	/***************************
+		/***************************
          *  Features-carousel  *
          ***************************/
         var owl = $(".features-carousel-sec .owl-carousel");
         if (owl.length > 0) {
             owl.owlCarousel({
                 items: 1,
-                navText: ['<i class="icon-know-more-arrow" ></i>', '<i class="icon-know-more-arrow " ></i>'],
+                navText: ['<i class="fa fa-chevron-circle-right" ></i>', '<i class="fa fa-chevron-circle-right" ></i>'],
                 navigation: true,
                 controls: true,
-                autoPlay: true
+                autoplayTimeout: 4000,
+				loop: true,
+				autoplay: true
             });
         }
 		
 		
-	/***************************
+		/***************************
          *  Video popup  *
          ***************************/
         var $element = $('.video');
