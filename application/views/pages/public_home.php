@@ -8,8 +8,7 @@
 					<div class="text-heading"> </div>
 					<p class="slider_lower_content">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/infactor');?>">Invoice</a>
-					<a class="trade_home_call_to-action" href="<?=base_url('public/bond_view.php
-');?>">Bond</a>
+					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Bond</a>
 				</div>
 				
 			</div>
@@ -19,7 +18,7 @@
 					<div class="text-heading">Start Trial under regulatory sandbox environment.</div>
 					<p class="slider_lower_content">.</p>
 					<a class="trade_home_call_to-action" href="/publicv/bond_create">Start a PoC</a>
-					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_view');?>">CONTACT US</a>
+					<a class="trade_home_call_to-action" href="<?=base_url('publicv/contact');?>">CONTACT US</a>
 				</div>
 			</div> 
 			<div class="item"> <img src="<?=base_url();?>assets/images/slider/tradefinex_slider_3.jpg"/>
@@ -28,7 +27,7 @@
 					<div class="text-heading"> </div>
 					<p class="slider_lower_content">Start trial under regulatory sandbox environment.</p>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Start POC</a>
-					<a class="trade_home_call_to-action" href=<?=base_url('publicv/bond_create');?>">Explore More</a>
+					<a class="trade_home_call_to-action" href="https://docs.tradefinex.org/faq/general">Explore More</a>
 				</div>
 			</div> 
 		</div>
@@ -100,7 +99,7 @@
                             <p>Create, Manage & Liquidate Bonds Instrument Online. A Fully Digital Solution On Blockchain Eliminate Counterparty Delays, And Allow Instant Settlement.</p>
                             <div class="button-box">
                             	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a>
-                            	<a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Explore Now</a>
+                            	<a href="<?=base_url('publicv/bond');?>" class="btn get-started">Explore Now</a>
                             </div>
                         </div>
                     </div>
