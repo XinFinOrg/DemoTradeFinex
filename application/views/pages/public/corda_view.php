@@ -89,38 +89,13 @@
                 </div>
             </div>
         </section>
-        
-        
-        
-        
-        <section class="generate-forms white-bg padding-lg">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="head-block">
-                            <h2>Overview on Infactor Market</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Start: Caurosel -->
-                <div class="features-carousel-sec">
-                    <div class="owl-carousel owl-feature">
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                    </div>
-                </div>
-                <!-- End: Caurosel --> 
-            </div>
-        </section>
 
         
         
         
         
         
-        <section class="still-hav-qtns-outer grey-bg padding-lg">
+        <section class="still-hav-qtns-outer white-bg padding-lg">
             <div class="container">
                 <h2>Still have questions?</h2>
                 <ul class="row features-listing">
@@ -129,8 +104,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
                             <h3>Help Center</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                      		<!--<a href="support.html" class="know-more">Know more</a>-->
+                            <p>Your questions or feedback</p>
                         </div>
                         </a>
                     </li>
@@ -139,8 +113,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
                             <h3>Faqs</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                            <!--<a href="faq.html" class="know-more">Know more</a>-->
+                            <p>General and Technical Frequently asked questions Resource Link</p>
                         </div>
                         </a>
                     </li>
@@ -149,8 +122,7 @@
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
                             <h3>Technical Documents</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                            <!--<a href="docs.html" class="know-more">Know more</a>-->
+                            <p>Technical Resource, API link, Example code and Release note </p>
                         </div>
                         </a>
                     </li>
