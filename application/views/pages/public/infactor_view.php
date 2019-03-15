@@ -108,8 +108,8 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
-                            <h2>Overview on Infactor Market</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since beenLorem Ipsum is simply dummy.</p>
+                            <h2>Get more Financing option to your unpaid invoice</h2>
+                            <p>Leverage Power of the Blockchain and make your financial instruments Liquid and Interoperable and Liquid</p>
                         </div>
                     </div>
                 </div>
