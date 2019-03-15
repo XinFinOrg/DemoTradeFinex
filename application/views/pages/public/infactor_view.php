@@ -46,7 +46,7 @@
                         <div class="inner">
                             <figure><img src="../assets/banner-assets/images/scalable-link-ico.png" class="img-responsive" alt=""></figure>
                             <h3>Connect using easy API Access</h3>
-                            <p>Easy Integration with in a Click. Easy plugin available for Quickbooks user</p>
+                            <p>Easy Integration with in a Click. Easy plugin available for Quickbooks, SAP and other platform</p>
                             <a href="#" class="know-more">Know More</a> </div>
                     </li>
                 </ul>
