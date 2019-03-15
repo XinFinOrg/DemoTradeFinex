@@ -78,13 +78,7 @@
                         <div class="more-features-btn-holder"><a href="<?=base_url('publicv/bond_create');?>" class="btn get-started">Start POC</a></div>
                     </div>
                     <div class="col-sm-6 col-md-6">
-                        <div class="videos_video_wrap">
-                    <div class="row">
-                        <div class="col-md-12 videos_video_wraper">
-                            <iframe src="https://www.youtube.com/embed/GIp_h7U9aRQ?feature=oembed" gesture="media" allowfullscreen="" width="100%" height="352" frameborder="0"></iframe>
-                        </div>
-                    </div>
-                </div>
+                        <img src="../assets/banner-assets/images/coming-soon-video.jpg" class="img-responsive" alt="">
                     </div>
                 </div>
             </div>
@@ -106,9 +100,10 @@
                 <!-- Start: Caurosel -->
                 <div class="features-carousel-sec">
                     <div class="owl-carousel owl-feature">
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
-                        <div class="item"><img src="../assets/banner-assets/images/create-bond.png"  alt=""></div>
+                        <div class="item"><img src="../assets/banner-assets/images/digital-bond-screen-1.png" alt=""></div>
+                        <div class="item"><img src="../assets/banner-assets/images/digital-bond-screen-2.png" alt=""></div>
+                        <div class="item"><img src="../assets/banner-assets/images/digital-bond-screen-3.png" alt=""></div>
+                        <div class="item"><img src="../assets/banner-assets/images/digital-bond-screen-4.png" alt=""></div>
                     </div>
                 </div>
                 <!-- End: Caurosel --> 
