@@ -3,12 +3,12 @@
         <div class="container">
             <h3>InFactor</h3>
             <br>
-            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure using blockchain technology</h4>
+            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure using blockchain technology. Create Public State and get access to wide eco financial ecosystem</h4>
         </div>
     </section>
     
     
-    
+  
     
     <!--<section class="content-marketing white-bg padding-lg">
             <div class="container">
