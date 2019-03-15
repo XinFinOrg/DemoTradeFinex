@@ -224,17 +224,17 @@
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
                             <h3>Help Center</h3>
                             <p>Your questions or feedback</p>
-                      		<!--<a href="support.html" class="know-more">Know more</a>-->
+                      		<!--<a href="http://docs.infactor.io" class="know-more">Know more</a>-->
                         </div>
                         </a>
                     </li>
                     <li class="col-md-4 equal-hight">
-                        <a href="faq.html">
+                        <a href="http://docs.infactor.io">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
                             <h3>Faqs</h3>
                             <p>General and Technical Frequently asked questions Resource Link</p>
-                            <!--<a href="faq.html" class="know-more">Know more</a>-->
+                            <!--<a href="http://docs.infactor.io/faq/General/" class="know-more">Know more</a>-->
                         </div>
                         </a>
                     </li>
@@ -244,7 +244,7 @@
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
                             <h3>Technical Documents</h3>
                             <p>Technical Resource, API link, Example code and Release note </p>
-                            <!--<a href="docs.html" class="know-more">Know more</a>-->
+                            <!--<a href="http://docs.infactor.io/Guide/API/" class="know-more">Know more</a>-->
                         </div>
                         </a>
                     </li>
