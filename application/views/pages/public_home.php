@@ -8,7 +8,7 @@
 					<div class="text-heading"> </div>
 					<p class="slider_lower_content">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/infactor');?>">Invoice</a>
-					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Bond</a>
+					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Digital Bond</a>
 				</div>
 				
 			</div>
@@ -27,7 +27,7 @@
 					<div class="text-heading"> </div>
 					<p class="slider_lower_content">Start trial under regulatory sandbox environment.</p>
 					<a class="trade_home_call_to-action" href="<?=base_url('publicv/bond_create');?>">Start POC</a>
-					<a class="trade_home_call_to-action" href="https://docs.tradefinex.org/faq/general">Explore More</a>
+					<a class="trade_home_call_to-action" href="https://docs.tradefinex.org/faq/general">Explore</a>
 				</div>
 			</div> 
 		</div>
@@ -52,7 +52,7 @@
 									<p class="animated fadeInDown delay-04s">Start trial under regulatory sandbox environment.</p>
                                     <div class="button-box mt-30">
                                 		<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
-                                		<a href="<?=base_url('publicv/digital_bond');?>" class="get-started animated fadeInDown delay-05s">Bond</a>
+                                		<a href="<?=base_url('publicv/digital_bond');?>" class="get-started animated fadeInDown delay-05s">Digital Bond</a>
                                 	</div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="button-box">
                                 	<a href="<?=base_url('publicv/bond_create');?>" class="get-started animated fadeInDown delay-04s">Start POC</a>
-                                	<a href="https://docs.tradefinex.org/faq/general" class="get-started animated fadeInDown delay-05s">Explore More</a>
+                                	<a href="https://docs.tradefinex.org/faq/general" class="get-started animated fadeInDown delay-05s">Explore</a>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                             <p>Create, Manage & Liquidate Bonds Instrument Online. A Fully Digital Solution On Blockchain Eliminate Counterparty Delays, And Allow Instant Settlement.</p>
                             <div class="button-box">
                             	<a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a>
-                            	<a href="<?=base_url('publicv/digital_bond');?>" class="get-started">Explore Now</a>
+                            	<a href="<?=base_url('publicv/digital_bond');?>" class="get-started">Explore</a>
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                         <p>Tradfinex's Invoice Factoring Platform Opens The Doors For Everyone To Participate In An Alternative Finance Marketplace With Fully Transparent Way.</p>
                         <div class="button-box">
                         	<a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a>
-                        	<a href="<?=base_url('publicv/infactor');?>" class="get-started">Explore Now</a>
+                        	<a href="<?=base_url('publicv/infactor');?>" class="get-started">Explore</a>
                         </div>
                     </div>
                     <div class="col-md-7 right">
@@ -142,7 +142,7 @@
                             <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
                             <div class="button-box">
                             	<a href="#" class="get-started">Start POC</a>
-                            	<a href="<?=base_url('publicv/corda_bridge');?>" class="get-started">Explore Now</a>
+                            	<a href="<?=base_url('publicv/corda_bridge');?>" class="get-started">Explore</a>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                         <p>Event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
                         <div class="button-box">
                         	<a href="http://events.tradefinex.org/#contact" target="_blank" class="get-started">Register Now</a>
-                            <a href="http://events.tradefinex.org/" target="_blank" class="get-started">Explore Now</a>
+                            <a href="http://events.tradefinex.org/" target="_blank" class="get-started">Explore</a>
                         </div>
                     </div>
                     <div class="col-md-7 right">
