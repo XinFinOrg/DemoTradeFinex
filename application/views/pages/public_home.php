@@ -162,7 +162,7 @@
                         <h2>TradeFinex Round table series Consortium Event</h2>
                         <p>Event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
                         <div class="button-box">
-                        	<a href="http://events.tradefinex.org/#contact" target="_blank" class="get-started">Register Now</a>
+                        	<a href="http://events.tradefinex.org/#contact" target="_blank" class="get-started">Register</a>
                             <a href="http://events.tradefinex.org/" target="_blank" class="get-started">Explore</a>
                         </div>
                     </div>
