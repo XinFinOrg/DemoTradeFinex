@@ -119,7 +119,7 @@
                         <h2>Invoice Factoring</h2>
                         <p>Tradfinex's Invoice Factoring Platform Opens The Doors For Everyone To Participate In An Alternative Finance Marketplace With Fully Transparent Way.</p>
                         <div class="button-box">
-                        	<a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a>
+                        	<a href="https://docs.xinfin.org/docs/dapp/infactor.io/conduct-a-poc" class="get-started">Start POC</a>
                         	<a href="<?=base_url('publicv/infactor');?>" class="get-started">Explore</a>
                         </div>
                     </div>
