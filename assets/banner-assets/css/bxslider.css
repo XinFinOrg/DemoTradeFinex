@@ -672,7 +672,7 @@ ul.marketing-list3 li {
 	margin-bottom: 30px;
 }
 ul.marketing-list3 li .equal-hight {
-	padding: 30px;
+	padding: 25px;
 	background: #fff;
 	border: 1px #f0f3f5 solid;
 	box-shadow: 0px 0px 20px rgba(100, 100, 100, 0.1);
@@ -694,7 +694,7 @@ ul.marketing-list3 li h3 {
 	display: block;
 	padding-bottom: 10px;
 	font-size: 22px;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 28px;
 }
 ul.marketing-list3 li p {
@@ -855,7 +855,7 @@ ul.features-listing li .icon {
 	box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.1);
 }
 ul.features-listing li h3 {
-	padding: 20px 0 20px 0;
+	padding: 15px 0 15px 0;
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 28px;
@@ -2268,7 +2268,7 @@ button.close {
 		line-height: 24px;
 	}
 	ul.marketing-list3 li .equal-hight {
-		padding: 45px 13% 0 8%;
+		padding: 25px;
 		min-height: 190px;
 	}
 	ul.marketing-list3 li .cnt-block {
@@ -2477,10 +2477,10 @@ button.close {
 		padding-bottom: 10px;
 	}
 	ul.marketing-list3 li .equal-hight {
-		padding: 30px 20px 15px 20px;
+		padding: 25px;
 	}
 	ul.marketing-list3 li .ico-block {
-		width: 103px;
+		width: 90px;
 		float: none;
 		margin: 0 auto 20px;
 	}
@@ -2570,8 +2570,9 @@ button.close {
 		margin: -50px auto 0;
 	}
 	ul.features-listing li,
+	ul.features-listing li:nth-last-child(2),
 	ul.features-listing li:nth-last-child(3) {
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 	}
 	ul.features-listing li h3 {
 		font-size: 20px;
