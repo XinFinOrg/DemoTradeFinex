@@ -223,7 +223,21 @@
 	var removePreloader=function(){$(window).load(function(){setTimeout(function(){$('.preloader').hide();},500);});};
 		
 	$(document).ready(function(){
-			
+		$('#bondCompleteHeader').click(function() {
+			$('#createBondHeader').removeClass('active');
+			$('#bondCompleteHeader').addClass('active')
+			$('#createBondTab').hide();
+			$('#deployTab').hide();
+			$('#bondCompleteTab').show();
+		});	
+
+		$('#createBondHeader').click(function() {
+			$('#createBondHeader').addClass('active');
+			$('#bondCompleteHeader').removeClass('active')
+			$('#createBondTab').show();
+			$('#deployTab').hide();
+			$('#bondCompleteTab').hide()
+		});	
 		searchButton();goTop();removePreloader();responsiveMenu();/* slideTeam(); */
 		
 		$('.lazy').slick({
@@ -753,5 +767,6 @@
 				scroll = $(document).scrollTop();
 				});
 			}
+
 	}
 	

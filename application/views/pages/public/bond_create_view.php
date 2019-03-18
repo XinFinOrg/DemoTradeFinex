@@ -1,5 +1,8 @@
 <!-- START APP WRAPPER -->
-   
+        <header>
+            <link rel="stylesheet" href="<?=base_url();?>assets/bond-assets/css/main.css" />
+            <link rel="stylesheet" href="<?=base_url();?>assets/bond-assets/css/auto-hide.css" />
+        </header>
         <!-- START TOP HEADER WRAPPER -->
         <div class="header-wrapper">
             
@@ -13,7 +16,7 @@
                             <li class="sidebar-header mobile-only mobile-nav-heading"><span>&nbsp;</span></li>
                             <li><a class="active" id="createBondHeader" ><i class="icon dripicons-document-edit"></i><span class="hide-menu">1. Create Bond</span></a></li>
                             <li><a  id="deployHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">2. Deploy</span></a></li>
-                            <li><a  id="bondCompleteHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">3. Bonds</span></a></li>
+                            <li><a  id="bondCompleteHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">3. Discover Bonds</span></a></li>
                             <!-- <li><a href="issue-quote.html"><i class="icon dripicons-export"></i><span class="hide-menu">Issue Quote</span></a></li>
                             <li><a href="create-organization.html"><i class="icon dripicons-user-group"></i><span class="hide-menu">Create Organization</span></a></li>
                             <li><a href="portfolio.html"><i class="icon dripicons-folder-open"></i><span class="hide-menu">Portfolio</span></a></li>
@@ -101,19 +104,32 @@
                                                 <input type="text" class="form-control  form-controlCustom form-control-lg" id="dvalue" name="dvalue" placeholder = "Discounted Value">
                                             </div>
 											</div> 
-											<div class="form-group col-md-4">
+
+                                            <div class="card-footer border-0 text-center">
+                                            <div class="form-actions">
+                                                <div class="row">
+                                                    <div class="col-md-12 footerBtns">
+                                                        <button type="submit" id="bond_create" class="btn btn-primary btn-rounded"  > Create Bond</button>
+                                                        <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
+													</div>
+													<br>
+                                                </div>
+                                            </div>
+                                        
+
+											<div class="">
                                                     <label class="hidden">
                                                         <input class="input-focus input-focus-notr" id="isPausable" name="isPausable" value="true" />
                                                         <span class="form-name floating-label">isPausable<sup>*</sup></span> 
                                                     </label>
                                                     </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="">
                                                     <label class="hidden">
                                                         <input class="input-focus input-focus-notr" id="isBurnable" name="isBurnable" value="true" />
                                                         <span class="form-name floating-label">isBurnable<sup>*</sup></span> 
                                                     </label>
                                                     </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="">
                                                     <label class="hidden">
                                                         <input class="input-focus input-focus-notr" id="isMintable" name="isMintable" value="true"/>
                                                         <span class="form-name floating-label">isMintable<sup>*</sup></span> 
@@ -126,17 +142,7 @@
                                                 </label>
                                             </div>                                          
                                         </div>
-                                        <div class="card-footer border-0 text-center">
-                                            <div class="form-actions">
-                                                <div class="row">
-                                                    <div class="col-md-12 footerBtns">
-                                                        <button type="submit" id="bond_create" class="btn btn-primary btn-rounded"  > Create Bond</button>
-                                                        <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button>
-													</div>
-													<br>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </form>
                             </div>
@@ -162,7 +168,7 @@
                                 <div class="card-body">
 
                                     <div class="form-row" style="padding-top:15px">
-                                            <div class="form-group col-lg-4 col-md-12"><div class=" form-column-headings"style="margin-left:10px; width:1120px; height:450px;overflow-y:scroll;box-shadow: 0px 2px 10px #6c757d;"> 
+                                            <div class="form-group col-lg-4 col-md-12"><div class=" form-column-headings"style="margin-left:10px; width:1090px; height:450px;overflow-y:scroll;box-shadow: 0px 2px 10px #6c757d;"> 
                                                 <pre id="contractData"  >
 
                                                 </pre>
@@ -175,7 +181,7 @@
                                     <div class="form-actions">
                                         <div class="row">
                                             <div class="col-md-12 footerBtns">
-                                                <button type="submit" id="deploy_contract" class="btn btn-primary btn-rounded"  > Deploy</button>
+                                                <button type="submit" id="deploy_contract" class="btn btn-primary btn-rounded"  > Deploy</button><br>
                                                 <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
                                             </div>
                                             <br>
@@ -189,6 +195,63 @@
             </div>
         </div>
 
+        <div class="content-wrapper" id="bondCompleteTab" style="display: none;">
+            <div class="content container">
+                <header class="page-header">
+                    <div class="d-flex align-items-center">
+                        <div class="mr-auto">
+                            <h1>Discover Bonds</h1>
+                        </div>
+                    </div>
+                </header>
+                <section class="page-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    
+                                    <div class="form-row" >
+                                    <!-- <div class="form-group col-md-4 mb-4">
+                                            <div class="input-group discoverBondInput">
+                                                <input type="search" class="form-control form-controlCustom" placeholder="Search...">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary discoverBtn" type="button">Go</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <button type="submit" id="refreshBondsList" class="btn btn-primary btn-rounded" style = "float:right" > Refresh </button>
+                                    <div class="table-responsive">
+                                        <table id="bonds_listing" class="table " cellspacing="0" width="100%" >
+                                            <thead>
+                                                <tr>
+                                                    <th>Bond Name</th>
+                                                    <th>Total Supply</th>
+                                                    <th>Discounted value</th>
+                                                    <th>Status</th>
+                                                    <th>Address</th>
+                                                    
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody id="discoverBondTable">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                </div>
+
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
         
 
         
@@ -197,22 +260,65 @@
 	$this->load->view('includes/login_modal');
 	?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> -->
+   
 
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript"  src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+  <script>
+     
+    // $('#bonds_listing').DataTable( {      
+    //      "searching": false,
+    //      "paging": true, 
+    //      "info": false,         
+    //      "lengthChange":false 
+    // } );
+//     $('#bonds_listing').DataTable();
+//   $('.dataTables_length').addClass('bs-select');
+
+
+    $("#bonds_listing").DataTable({
+        "bPaginate": true,
+        "bInfo": true,
+        "bFilter": false,
+        "bLengthChange": false,
+        "iDisplayLength": 0
+    });
+ 
+
+  </script>
 
 <div id="loader" style="display: none;"></div>
-<div class="modal fade" id="thankyou" role="dialog" tabindex="-1" >
-		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:80%;max-width: 50%">
+<div class="modal fade" id="contractexists" role="dialog" tabindex="-1" >
+		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">
 			
 			<div class="modal-content">
 
 				<div class="modal-body">
 
-						<p>Your contract has successfully been deployed.</p>
-						<p><span><b>Transaction Hash:</b></span> <span id="deployDataTHash"></span></p>
-						<p><span><b>Contract Address:</b></span> <span id="deployDataCAddress"></span></p>
+						<p>Sorry!!Bond Name already exists.</p>
+						<p>Try another Bond Name.</p>
+						
 						<div class="btn-more">
-							<button id="ok" type="submit" class="btn btn-info"  data-keyboard="false"> Ok </button> 
+							<button id="sorry" type="submit" class="btn btn-info "  data-keyboard="false"> Ok </button> 
+						</div>						
+							                                           
+				</div>
+			</div>
+	 	</div>
+</div>
+<div id="loader" style="display: none;"></div>
+<div class="modal fade" id="thankyou" role="dialog" tabindex="-1" >
+		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">
+			
+			<div class="modal-content">
+
+				<div class="modal-body">
+
+						<p>Contract Deployment in process.</p>
+						
+						<div class="btn-more">
+							<button id="DeployBtn" type="submit" class="btn btn-info"  data-keyboard="false"> Ok </button> 
 						</div>						
 							                                           
 				</div>
@@ -228,13 +334,13 @@
         
 
     <!--JS SCRIPTS-->
-    <script src="assets/bond-assets/js/modernizr.custom.js"></script>
-    <script src="assets/bond-assets/js/jquery.min.js"></script>
-    <script src="assets/bond-assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/bond-assets/js/storage.js"></script>
-    <script src="assets/bond-assets/js/menu.js"></script>
-    <script src="assets/bond-assets/js/jquery.mCustomScrollbar.js"></script>
+    <script src="../assets/bond-assets/js/modernizr.custom.js"></script>
+    <script src="../assets/bond-assets/js/jquery.min.js"></script>
+    <script src="../assets/bond-assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/bond-assets/js/storage.js"></script>
+    <script src="../assets/bond-assets/js/menu.js"></script>
+    <script src="../assets/bond-assets/js/jquery.mCustomScrollbar.js"></script>
 
     <!--MAIN JS-->
-    <script src="assets/bond-assets/js/main.js"></script>
+    <script src="../assets/bond-assets/js/main.js"></script>
     
