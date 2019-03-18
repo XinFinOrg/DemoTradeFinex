@@ -305,8 +305,8 @@ input[type="checkbox"] {
  textarea:-moz-placeholder, textarea::-moz-placeholder, input:-moz-placeholder, input::-moz-placeholder {
  opacity: 1;
 }
- input:-ms-input-placeholder {
-}
+ /* input:-ms-input-placeholder {
+} */
  textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
  opacity: 1;
 }
@@ -1013,9 +1013,9 @@ text-align: justify;
 	color: #c2c2c2;
 }
 /* Widget Categories */
-.widget-categories {
+/* .widget-categories { */
 	/*margin-left: -15px;*/
-}
+/* } */
 .widget-categoriess {
 	margin-left: -15px;
 	color:white;
@@ -1413,8 +1413,8 @@ to {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-.iconbox:hover .box-header .iconbox-icon {
-}
+/* .iconbox:hover .box-header .iconbox-icon {
+} */
 .iconbox .box-content {
 	padding: 0 20px;
 	font-family: 'open_sansregular';
@@ -1457,8 +1457,8 @@ to {
 .flat-row-title {
 	margin-bottom: 35px;
 }
-.flat-row-title h2 {
-}
+/* .flat-row-title h2 {
+} */
 .flat-row-title p {
 	font-size: 16px;
 }
@@ -1494,8 +1494,8 @@ to {
 	opacity: 1;
 	z-index: -2;
 }
-.btn-more > a:hover:before {
-}
+/* .btn-more > a:hover:before {
+} */
 .btn-more > a:visited, .btn-more > a:focus {
 	color: #fff;
 }
@@ -2849,9 +2849,9 @@ to {
 	clear: both;
 	margin-bottom: 10px;
 }
-.submit_form_sec .common_form_sec .sec_row:last-child {
+/* .submit_form_sec .common_form_sec .sec_row:last-child { */
 	/* margin-bottom: 0px; */
-}
+/* } */
 .sec_row .checkbox label {
 	color: #999999;
 }
@@ -4074,8 +4074,8 @@ to {
 }
 /* Submit Proposal */
 
-.submit_proposal {
-}
+/* .submit_proposal {
+} */
 .submit_proposal .submit_form_sec {
 	margin-bottom: 0px;
 	box-shadow: none;
@@ -6861,8 +6861,8 @@ input.error~ .floating-label, textarea.error~ .floating-label, select.error ~ .f
 	color: #13B5EA !important;
 	z-index: 99;
 }
-.submit_form_sec .multiselect-drop_sec .floating-label-sector {
-}
+/* .submit_form_sec .multiselect-drop_sec .floating-label-sector {
+} */
 #form_post_project .submit_form_sec:first-child .input-focus:focus ~ .floating-label, #form_post_project .input-focus:not(:focus):valid ~ .floating-label, #form_post_project .select-focus {
 left:16px;
 }
@@ -7140,9 +7140,9 @@ left:16px;
 	margin-bottom: 15px;
 	font-family: 'open_sanssemibold';
 }
-.publish_job, .pdraft {
+/* .publish_job, .pdraft { */
 	/* float: left; */
-}
+/* } */
 #ulinkedin {
 	padding-right: 50px;
 }
