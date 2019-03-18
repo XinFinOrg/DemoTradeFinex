@@ -23,34 +23,34 @@
                 <ul class="row marketing-list3">
                     <li class="col-md-6">
                         <div class="equal-hight clearfix">
-                            <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="ico-block"><img src="../assets/banner-assets/images/avoid-failure-risk-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Efficient Process & automation</h3>
-                                <p>Enabling Automatic and efficient bond settlement</p>
+                                <h3>Avoid single point  failure risk </h3>
+                                <p>Blockchains don't have a single point of failure </p>
                             </div>
                         </div>
-                    </li>
+                    </li>                    
                     <li class="col-md-6">
                         <div class="equal-hight clearfix">
-                            <div class="ico-block"><img src="../assets/banner-assets/images/seo-succes-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="ico-block"><img src="../assets/banner-assets/images/easy-fast-integration-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Faster and more transparent </h3>
+                                <h3>Faster and more transparent</h3>
                                 <p>Transparent and secure using blockchain technology.</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-6">
                         <div class="equal-hight clearfix">
-                            <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="ico-block"><img src="../assets/banner-assets/images/process-automation-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Avoid single point  failure risk </h3>
-                                <p>Blockchains don't have a single point of failure </p>
+                                <h3>Efficient Process and automation</h3>
+                                <p>Enabling Automatic and efficient bond settlement</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-6">
                         <div class="equal-hight clearfix">
-                            <div class="ico-block"><img src="../assets/banner-assets/images/privacy-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="ico-block"><img src="../assets/banner-assets/images/power-smart-contract-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Leverage the Power of Smart Contract</h3>
                                 <p>Automate Transfer and settlement cycle using power of blockchain </p>

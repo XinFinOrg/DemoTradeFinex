@@ -116,7 +116,7 @@
                 <ul class="row marketing-list3">
                     <li class="col-md-6">
                         <div class="equal-hight clearfix">
-                            <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="ico-block"><img src="../assets/banner-assets/images/iso20022-standard-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Build on ISO20022 standard </h3>
                                 <p>Invoice Factoring Build on ISO 20022 Standard</p>
@@ -125,7 +125,7 @@
                     </li>
                     <li class="col-md-6">
                         <div class="equal-hight clearfix">
-                            <div class="ico-block"><img src="../assets/banner-assets/images/seo-succes-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="ico-block"><img src="../assets/banner-assets/images/easy-fast-integration-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Easy and fast integration using API</h3>
                                 <p>Easy Integration with in a Click. Easy plugin available for Quickbooks user.</p>
@@ -134,16 +134,16 @@
                     </li>
                     <li class="col-md-6">
                         <div class="equal-hight clearfix">
-                            <div class="ico-block"><img src="../assets/banner-assets/images/audience-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="ico-block"><img src="../assets/banner-assets/images/leverage-annual-market-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>leverage USD 5 Trillion annual Market.</h3>
+                                <h3>Leverage USD 5 Trillion annual Market</h3>
                                 <p>Connect to your financer in a whole new way. Get access to more financing options.</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-6">
                         <div class="equal-hight clearfix">
-                            <div class="ico-block"><img src="../assets/banner-assets/images/privacy-ico.png" class="rounded-circle img-responsive" alt=""></div>
+                            <div class="ico-block"><img src="../assets/banner-assets/images/power-smart-contract-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Leverage the Power of Smart Contract</h3>
                                 <p>Automate repayment and settlement cycle using power of blockchain</p>
