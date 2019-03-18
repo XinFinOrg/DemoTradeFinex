@@ -24,8 +24,8 @@
                         <div class="equal-hight clearfix">
                             <div class="ico-block"><img src="../assets/banner-assets/images/link-building-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
-                                <h3>Efficient Process & automation</h3>
-                                <p>Enabling Automatic and efficient settlement using powerful smart contracts</p>
+                                <h3>Avoid single point failure risk </h3>
+                                <p>Blockchains don't have a single point of failure </p>
                             </div>
                         </div>
                     </li>

@@ -120,7 +120,7 @@
                 <h2>Still have questions?</h2>
                 <ul class="row features-listing">
                     <li class="col-md-4 equal-hight">
-                        <a href="support.html">
+                        <a href="https://docs.tradefinex.org/FinIns/Bonds/">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/help-icon.png" alt=""></span>
                             <h3>Help Center</h3>
@@ -129,7 +129,7 @@
                         </a>
                     </li>
                     <li class="col-md-4 equal-hight">
-                        <a href="faq.html">
+                        <a href="https://docs.tradefinex.org/FinIns/Bonds/">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/faqs-icon.png" alt=""></span>
                             <h3>Faqs</h3>
@@ -138,7 +138,7 @@
                         </a>
                     </li>
                     <li class="col-md-4 equal-hight">
-                        <a href="docs.html">
+                        <a href="https://docs.tradefinex.org/FinIns/Bonds/">
                         <div class="info-content">
                         	<span class="icon-holder"><img src="../assets/banner-assets/images/techdoc-icon.png" alt=""></span>
                             <h3>Technical Documents</h3>
