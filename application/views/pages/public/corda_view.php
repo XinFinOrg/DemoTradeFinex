@@ -15,7 +15,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Connect R3 Corda Bridge State with Public Network</h2>
-                            <p>The Relayer Bridge deploys Corda Smart ContractState to XinFin Network Smart Contract State. (Coming Soon)</p>
+                            <p>The Relayer Bridge deploys Corda Smart Contract State to XinFin Network Smart Contract State. (Coming Soon)</p>
                         </div>
                     </div>
                 </div>
