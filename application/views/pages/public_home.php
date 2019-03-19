@@ -49,7 +49,7 @@
                                 <div class="bannerHeader">
                                     <h1 class="mb-15 animated fadeInDown delay-02s">Open Standards Protocol for global Trade & Finance</h1>
                                     <p class="animated fadeInDown delay-03s">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
-									<p class="animated fadeInDown delay-04s">Start trial under regulatory sandbox environment.</p>
+									<p class="animated fadeInDown delay-04s">Start trial under regulatory sandbox environment</p>
                                     <div class="button-box mt-30">
                                 		<a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
                                 		<a href="<?=base_url('publicv/digital_bond');?>" class="get-started animated fadeInDown delay-05s">Digital Bond</a>
@@ -96,7 +96,7 @@
                     <div class="col-md-6 col-md-push-6">
                         <div class="cnt-block padd-left">
                             <h2>Digital Bond</h2>
-                            <p>Create, Manage & Liquidate Bonds Instrument Online. A Fully Digital Solution On Blockchain Eliminate Counterparty Delays, And Allow Instant Settlement.</p>
+                            <p>Create, Manage and Liquidate Bond Instruments Online. A Fully Digital Blockchain Solution Eliminates Counterparty Delays Provides Instant Settlement.</p>
                             <div class="button-box">
                             	<a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a>
                             	<a href="<?=base_url('publicv/digital_bond');?>" class="get-started">Explore</a>
@@ -117,7 +117,7 @@
                 <div class="row">
                     <div class="col-md-5 cnt-block">
                         <h2>Invoice Factoring</h2>
-                        <p>Tradfinex's Invoice Factoring Platform Opens The Doors For Everyone To Participate In An Alternative Finance Marketplace With Fully Transparent Way.</p>
+                        <p>The TradeFinex Invoice Factoring Platform Equips Participants With An Alternative Financial Marketplace That Operates In A Fully Transparent Environment.</p>
                         <div class="button-box">
                         	<a href="https://docs.xinfin.org/docs/dapp/infactor.io/conduct-a-poc" class="get-started">Start POC</a>
                         	<a href="<?=base_url('publicv/infactor');?>" class="get-started">Explore</a>
@@ -139,7 +139,7 @@
                     <div class="col-md-6 col-md-push-6">
                         <div class="cnt-block padd-left">
                             <h2>R3 Corda Bridge</h2>
-                            <p>Connect R3 Corda State With Public Blockchain. Mitigate Counter - Party Risk By Making Your Financial Instruments Interoperable & Liquid (Coming Soon).</p>
+                            <p>Connect To The R3-Corda Public Blockchain. Mitigate Counterparty Risk By Making Your Financial Instruments Interoperable and Liquid. (Coming Soon)</p>
                             <div class="button-box">
                             	<a href="#" class="get-started">Start POC</a>
                             	<a href="<?=base_url('publicv/corda_bridge');?>" class="get-started">Explore</a>
@@ -160,7 +160,7 @@
                 <div class="row">
                     <div class="col-md-5 cnt-block">
                         <h2>TradeFinex Round table series Consortium Event</h2>
-                        <p>Event that brings together trade and infrastructure finance stakeholders on one single platform to address the increasing global trade finance gap as well as infrastructure deficit by leveraging blockchain technology.</p>
+                        <p>This Roundtable Event Places The Trade And Finance Stakeholder And Infrastructure Financier On One Stage To Address The Increasing Global Trade Gap As Well As Infrastructure Deficit While Discussing The Promises Of Blockchain.</p>
                         <div class="button-box">
                         	<a href="http://events.tradefinex.org/#contact" target="_blank" class="get-started">Register</a>
                             <a href="http://events.tradefinex.org/" target="_blank" class="get-started">Explore</a>
@@ -427,8 +427,8 @@
 			<div class="col-md-12">
 				<div class="flat-row-title center">
 					<p><img src="<?php echo base_url() ?>assets/images/icon/line.png" alt="icon"></p>
-					<h2>Want To Be A Consortium Member?</h2>
-					<p>Be the part of change by becoming a consortium founding member</p>
+					<h2>INTERESTED IN CONSORTIUM MEMBERSHIP?</h2>
+					<p>Be a part of the change as a Consortium Founding Member.</p>
 				</div>
 				<!-- /.flat-row-title --> 
 			</div>

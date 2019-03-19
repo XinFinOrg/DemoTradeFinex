@@ -3,7 +3,7 @@
         <div class="container">
             <h3>InFactor</h3>
             <br>
-            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure using blockchain technology. Create Interoperable State & get access to wide financial ecosystem</h4>
+            <h4 class="infactor">Factoring your unpaid invoices becomes easy, transparent and secure using blockchain technology. Create Interoperable State & get access to wide financial ecosystem.</h4>
         </div>
     </section>
     
@@ -109,7 +109,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Get more Financing option to your unpaid invoice</h2>
-                            <p>Leverage Power of the Blockchain and make your financial instruments Liquid and Interoperable</p>
+                            <p>Leverage Power of the Blockchain and make your financial instruments Liquid and Interoperable.</p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/iso20022-standard-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Build on ISO20022 standard </h3>
-                                <p>Invoice Factoring Build on ISO 20022 Standard</p>
+                                <p>Invoice Factoring Build on ISO 20022 Standard.</p>
                             </div>
                         </div>
                     </li>
@@ -146,7 +146,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/power-smart-contract-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Leverage the Power of Smart Contract</h3>
-                                <p>Automate repayment and settlement cycle using power of blockchain</p>
+                                <p>Automate repayment and settlement cycle using power of blockchain.</p>
                             </div>
                         </div>
                     </li>

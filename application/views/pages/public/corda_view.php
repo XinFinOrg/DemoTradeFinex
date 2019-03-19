@@ -15,7 +15,7 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="head-block">
                             <h2>Connect R3 Corda Bridge State with Public Network</h2>
-                            <p>The Relayer Bridge deploys Corda Smart ContractState to XinFin Network Smart Contract State (Coming Soon)</p>
+                            <p>The Relayer Bridge deploys Corda Smart ContractState to XinFin Network Smart Contract State. (Coming Soon)</p>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/avoid-failure-risk-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Avoid single point failure risk </h3>
-                                <p>Blockchains don't have a single point of failure </p>
+                                <p>Blockchains don't have a single point of failure.</p>
                             </div>
                         </div>
                     </li>
@@ -43,7 +43,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/process-automation-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Efficient Process and automation</h3>
-                                <p>Enabling Automatic and efficient settlement using smart contracts</p>
+                                <p>Enabling Automatic and efficient settlement using smart contracts.</p>
                             </div>
                         </div>
                     </li>
@@ -52,7 +52,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/power-smart-contract-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Leverage the Power of Smart Contract</h3>
-                                <p>Automate Transfer and settlement cycle using power of blockchain </p>
+                                <p>Automate Transfer and settlement cycle using power of blockchain.</p>
                             </div>
                         </div>
                     </li>

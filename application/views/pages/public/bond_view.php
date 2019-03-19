@@ -3,7 +3,7 @@
         <div class="container">
             <h3>Digital Bond</h3>
             <br>
-            <h4 class="infactor">Create, Manage & Liquidate Bonds Instrument On Blockchain </h4>
+            <h4 class="infactor">Create, Manage & Liquidate Bonds Instrument On Blockchain.</h4>
         </div>
     </section>
     
@@ -26,7 +26,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/avoid-failure-risk-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Avoid single point  failure risk </h3>
-                                <p>Blockchains don't have a single point of failure </p>
+                                <p>Blockchains don't have a single point of failure.</p>
                             </div>
                         </div>
                     </li>                    
@@ -44,7 +44,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/process-automation-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Efficient Process and automation</h3>
-                                <p>Enabling Automatic and efficient bond settlement</p>
+                                <p>Enabling Automatic and efficient bond settlement.</p>
                             </div>
                         </div>
                     </li>
@@ -53,7 +53,7 @@
                             <div class="ico-block"><img src="../assets/banner-assets/images/power-smart-contract-ico.png" class="rounded-circle img-responsive" alt=""></div>
                             <div class="cnt-block">
                                 <h3>Leverage the Power of Smart Contract</h3>
-                                <p>Automate Transfer and settlement cycle using power of blockchain </p>
+                                <p>Automate Transfer and settlement cycle using power of blockchain.</p>
                             </div>
                         </div>
                     </li>
