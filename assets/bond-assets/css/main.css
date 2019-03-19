@@ -51,6 +51,6 @@ form select option:first-of-type {
 input[type="search"]::-webkit-search-cancel-button {-webkit-appearance: searchfield-cancel-button;}
 
 .table {font-size: 0.85rem;}
-.table td, .table th {text-align: center;}
+.table td, .table th {text-align: left;}
 
 .btn-block .btn{margin-top:3px;margin-bottom:3px;}

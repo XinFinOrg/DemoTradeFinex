@@ -1,4 +1,7 @@
 $(function () {
+	// var jQueryScript = document.createElement('script');  
+	// jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
+	// document.head.appendChild(jQueryScript);
 
 	var site_url = $('#site_url').val();
 	var csrf_name = $('#csrf_tokens').attr('name');
@@ -490,7 +493,7 @@ $(function () {
 								<tr class="bondRow">
 									<td>`+v.coinName+`</td>
 									<td>`+v.tokenSupply+`</td>
-									<td class="truncate">`+v.ETHRate+`</td>
+									<td>`+v.ETHRate+`</td>
 									<td>`+status+`</td>
 									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/tx/`+v.tokenContractHash+`" target="_blank" >`+v.tokenContractHash+`</a><span></td>
 								</tr>
@@ -498,6 +501,13 @@ $(function () {
 		});
 
 		$('#discoverBondTable').html(discoverBondTable);
+		$("#bonds_listing").DataTable({
+			"bSort": false,
+			"dom": "Bfrtip",
+			"bDestroy": true,
+			"pageLength": 10
+			
+		});
 	}
 
 	// Split the array into halves and merge them recursively 
@@ -555,11 +565,11 @@ $(function () {
 				"data": ""
 			
 			}
-
 			$.ajax(discover).done(function(response){
 				console.log(response);
 				// response.projects
 				bondList(response.projects);
+				
 			})
 		});
 	 });
@@ -619,7 +629,7 @@ $(function () {
 			bonusRate: {
 				required: true,
 				min:1,
-				minlength: 2,
+				minlength: 1,
 				numberOnly: true
 			},
 			coupon: {
@@ -756,6 +766,7 @@ $(function () {
 						if(response.status == false) {
 							$('#createBondTab').show();
 							$('#contractexists').modal('show');
+							$('#deployTab').hide();
 							
 						} else {
 							// console.log('response else', response)
@@ -763,7 +774,8 @@ $(function () {
 							$('#deployTab').show();
 							
 							$('#createBondHeader').removeClass('active');
-							$('#createBondHeader').off('click');
+							// $('#createBondHeader').off('click');
+							$('#createBondHeader').css('pointer-events', 'none');
 							$('#deployHeader').addClass('active');
 							//console.log( response);
 							hideLoader();
@@ -802,7 +814,8 @@ $(function () {
 											$('#deployTab').hide();
 											$('#deployHeader').removeClass('active');
 											$('#bondCompleteHeader').addClass('active');
-											$('#createBondHeader').on('click');
+											// $('#createBondHeader').on('click');
+											$('#createBondHeader').css('pointer-events', 'auto');
 											$('#bondCompleteTab').show();
 										
 											var discover = {
@@ -823,6 +836,7 @@ $(function () {
 												// console.log(response);
 												// response.projects
 												bondList(response.projects);
+												// $('#createBondHeader').on('click');
 											})
 										});
 									}
@@ -837,6 +851,7 @@ $(function () {
 								})
 
 							})
+							
 						}
 
 
@@ -1137,6 +1152,11 @@ $(function () {
 
 	$('#bondCreateCancel').click(function() {
 		location.reload();
+	});
+
+	$('#createBondHeader').click(function() {
+		//console.log('alert')
+		$('#bond_create-form').find("input[type=text], textarea").val("");
 	});
 	
 	$('#sorry').click(function() {

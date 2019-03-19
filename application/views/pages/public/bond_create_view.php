@@ -2,6 +2,9 @@
         <header>
             <link rel="stylesheet" href="<?=base_url();?>assets/bond-assets/css/main.css" />
             <link rel="stylesheet" href="<?=base_url();?>assets/bond-assets/css/auto-hide.css" />
+            <link rel="stylesheet" type="text/css" href="<?=base_url('assets/bond-assets/css/datatables/dataTables.bootstrap.1.10.15.min.css');?>" />
+            <link rel="stylesheet" type="text/css" href="<?=base_url('assets/bond-assets/css/datatables/fixedHeader.bootstrap.3.1.2.min.css');?>" />
+            <link rel="stylesheet" type="text/css" href="<?=base_url('assets/bond-assets/css/datatables/responsive.bootstrap.2.1.1.min.css');?>" />
         </header>
         <!-- START TOP HEADER WRAPPER -->
         <div class="header-wrapper">
@@ -181,7 +184,8 @@
                                     <div class="form-actions">
                                         <div class="row">
                                             <div class="col-md-12 footerBtns">
-                                                <button type="submit" id="deploy_contract" class="btn btn-primary btn-rounded"  > Deploy</button><br>
+                                                <p>It may take few seconds to deploy on public blockchain network.</p>
+                                                <button type="submit" id="deploy_contract" class="btn btn-primary btn-rounded"  > Your Smart Contract is Ready To Deploy</button><br>
                                                 <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
                                             </div>
                                             <br>
@@ -210,39 +214,42 @@
                             <div class="card">
                                 <div class="card-body">
                                     
-                                    <div class="form-row" >
-                                    <!-- <div class="form-group col-md-4 mb-4">
-                                            <div class="input-group discoverBondInput">
-                                                <input type="search" class="form-control form-controlCustom" placeholder="Search...">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-primary discoverBtn" type="button">Go</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
+                                    
+                                    <div class="form-group col-md-12 mb-4">
+                                            <!-- <label class="right-inner-addon">
+                                                <i class="  fa fa-search"></i>
+                                                <input type="search" class="form-controlCustom input-sm" aria-controls="bonds_listing" placeholder="Search...">
+                                                
+                                            </label> -->
+                                            <div class="dynamic_table   ">
+                                            <button type="submit" id="refreshBondsList" class="btn btn-primary btn-rounded" style = "float:right" > Refresh </button>
+                                   
+                                       
+                               
 
-                                    <button type="submit" id="refreshBondsList" class="btn btn-primary btn-rounded" style = "float:right" > Refresh </button>
                                     <div class="table-responsive">
-                                        <table id="bonds_listing" class="table " cellspacing="0" width="100%" >
-                                            <thead>
-                                                <tr>
-                                                    <th>Bond Name</th>
-                                                    <th>Total Supply</th>
-                                                    <th>Discounted value</th>
-                                                    <th>Status</th>
-                                                    <th>Address</th>
-                                                    
-                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody id="discoverBondTable">
+                                        
+                                       
+                                            <table id="bonds_listing" class="table " cellspacing="0" width="100%" >
+                                                <thead>
+                                                    <tr>
+                                                        <th>Bond Name</th>
+                                                        <th>Total Supply</th>
+                                                        <th>Face Value</th>
+                                                        <th class="text-center"style="width:14%;">Status</th>
+                                                        <th>Address</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="discoverBondTable">
 
-                                            </tbody>
-                                        </table>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                     
                                 </div>
-
+                                </div>
                                 </div>
                                 
                                 
@@ -264,7 +271,7 @@
    
 
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-  <script type="text/javascript"  src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+  <!-- <script type="text/javascript"  src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script> -->
   <script>
      
     // $('#bonds_listing').DataTable( {      
@@ -276,27 +283,22 @@
 //     $('#bonds_listing').DataTable();
 //   $('.dataTables_length').addClass('bs-select');
 
-
-    $("#bonds_listing").DataTable({
-        "bPaginate": true,
-        "bInfo": true,
-        "bFilter": false,
-        "bLengthChange": false,
-        "iDisplayLength": 0
-    });
+    var tableContent = $('#discoverBondTable').html();
+    // console.log('table content', tableContent)
+    // $("#bonds_listing").DataTable();
  
 
   </script>
 
 <div id="loader" style="display: none;"></div>
-<div class="modal fade" id="contractexists" role="dialog" tabindex="-1" >
+<div class="modal fade" id="contractexists" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static" >
 		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">
 			
 			<div class="modal-content">
 
 				<div class="modal-body">
 
-						<p>Sorry!!Bond Name already exists.</p>
+						<p>Sorry!! Bond Name already exists.</p>
 						<p>Try another Bond Name.</p>
 						
 						<div class="btn-more">
@@ -308,7 +310,7 @@
 	 	</div>
 </div>
 <div id="loader" style="display: none;"></div>
-<div class="modal fade" id="thankyou" role="dialog" tabindex="-1" >
+<div class="modal fade" id="thankyou" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">
 			
 			<div class="modal-content">
@@ -340,6 +342,7 @@
     <script src="../assets/bond-assets/js/storage.js"></script>
     <script src="../assets/bond-assets/js/menu.js"></script>
     <script src="../assets/bond-assets/js/jquery.mCustomScrollbar.js"></script>
+    
 
     <!--MAIN JS-->
     <script src="../assets/bond-assets/js/main.js"></script>
