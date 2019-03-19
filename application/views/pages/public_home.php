@@ -139,7 +139,7 @@
                     <div class="col-md-6 col-md-push-6">
                         <div class="cnt-block padd-left">
                             <h2>R3 Corda Bridge</h2>
-                            <p>Connect to the R3-Corda Public Blockchain. Mitigate counterparty risk by making your financial instruments interoperable and liquid. (Coming Soon)</p>
+                            <p>Connect to the R3-Corda Private State to Blockchain. Mitigate counterparty risk by making your financial instruments interoperable and liquid. (Coming Soon)</p>
                             <div class="button-box">
                             	<a href="#" class="get-started">Start POC</a>
                             	<a href="<?=base_url('publicv/corda_bridge');?>" class="get-started">Explore</a>
