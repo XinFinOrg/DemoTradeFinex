@@ -387,7 +387,9 @@
 					<div class="row">
 		    			<div class="col-md-4 col-sm-4 col-xs-12 videos_video_wraper">
 							<div class="home_consortium_video">
-								<iframe src="https://www.youtube.com/embed/mjrhTnZ16f8?feature=oembed" gesture="media" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>
+								<!--<iframe src="https://www.youtube.com/embed/mjrhTnZ16f8?feature=oembed" gesture="media" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>-->
+                                <div class="embed-responsive embed-responsive-16by9 embed-div">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mjrhTnZ16f8?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
 								<div class="videos_video_content">
 									<p>Presenting TradeFInex and Consortium introduction at "Blockchain for Finance Conference 2018" Boston</p>
 									<br>
@@ -396,7 +398,9 @@
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12 videos_video_wraper">
 							<div class="home_consortium_video">
-								<iframe src="https://www.youtube.com/embed/jLaqms1IHWE?feature=oembed" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>
+								<!--<iframe src="https://www.youtube.com/embed/jLaqms1IHWE?feature=oembed" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>-->
+                                <div class="embed-responsive embed-responsive-16by9 embed-div">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jLaqms1IHWE?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
 								<div class="videos_video_content">
 									<p>Leveraging XinFin Blockchain to address global infrastructure deficit</p>
 									<br><br>
@@ -405,7 +409,9 @@
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12 videos_video_wraper">
 							<div class="home_consortium_video">
-								<iframe src="https://www.youtube.com/embed/3INyDwUFQgs?feature=oembed" gesture="media" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>
+								<!--<iframe src="https://www.youtube.com/embed/3INyDwUFQgs?feature=oembed" gesture="media" allowfullscreen="" width="100%" height="150" frameborder="0"></iframe>-->
+                                <div class="embed-responsive embed-responsive-16by9 embed-div">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3INyDwUFQgs?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
 								<div class="videos_video_content">
 									<p>IAC Consortium /
 									Project Sandbox introduction at Official Monetary and Financial Institutions Forum (OMFIF)</p>
