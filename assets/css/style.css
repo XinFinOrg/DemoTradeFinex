@@ -2300,7 +2300,7 @@ to {
 	font-size: 13px;
 	padding: 0px 5px;
 }
-.sub_box_right .btn {
+/*.sub_box_right .btn {
 	background: #1da1f2;
 	color: #fff;
 	border-radius: 4px;
@@ -2311,6 +2311,18 @@ to {
 	padding: 5px;
 	width: 100%;
 	letter-spacing: 1px;
+}*/
+.sub_box_right .btn {
+    background: #1da1f2;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 13px!important;
+    font-family: 'open_sanssemibold';
+    height: 29px!important;
+    text-align: center;
+    padding: 5px!important;
+    width: 100%;
+    letter-spacing: 1px;
 }
 .ben_sup_fin-sec .common:hover {
 	z-index: 2;
