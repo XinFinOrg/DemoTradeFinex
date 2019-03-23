@@ -59,7 +59,7 @@
 				</div>
 				<div class="col-md-5 col-sm-5 col-xs-12 career_position">
 					<div class="right_side">
-						<h3 class="title"> Be a part of Consortium </h3>
+						<h3 class="title"> Consortium Inquiry</h3>
 						<?php $attributes = array('id' => 'consortium-form', 'class' => 'consortium_form form-commom', 'method' => 'post', 'role' => 'form');
 						echo form_open_multipart(base_url().'publicv/consortium/', $attributes); ?>
 						<div class="form-group focus-group">
