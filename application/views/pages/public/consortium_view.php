@@ -31,9 +31,23 @@
                                      <p class="content">* Your company logo and link in TradeFinex ecosystem partners</p>
                                      <p class="content">* A PoC completion press release to create awareness for your company.</p>
 	
-                            	<p class="content"><strong>Subscribe to consortium Membership.</strong></p>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="XPXLS3L3KDGBJ" /> <input alt="PayPal &ndash; The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_GB/SG/i/btn/btn_subscribeCC_LG.gif" type="image" /> <img src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" alt="" width="1" height="1" border="0" /></form>
-									
+                            	<p class="content">&nbsp;</p>
+<table style="width: 156.667px;">
+<tbody>
+<tr style="height: 119px;">
+<td style="width: 158.667px; height: 119px;">
+<table style="width: 149px; height: 133px;">
+<tbody>
+<tr>
+<td style="width: 140.333px;"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="XPXLS3L3KDGBJ" /> <input alt="PayPal &ndash; The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_GB/SG/i/btn/btn_subscribeCC_LG.gif" type="image" /> <img src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" alt="" width="1" height="1" border="0" /></form></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>									
 									
                             </div>
 			    
