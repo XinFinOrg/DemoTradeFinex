@@ -23,7 +23,7 @@
                             </p>
                             
                             <p class="content">Participate, co-develop and share in the following benefits of the TradeFinex blockchain powered platform membership:</p>
-                            <p class="content">* de-risk new infrastructure project finance</p>
+                           
                                      <p class="content">* Conduct Unlimited online Proof of Concepts</p>
                                      <p class="content">* Get Monthly newsletters on activity in Trade and Finance</p>
                                      <p class="content">* Get Free virtual Pass (Sky Business Meeting) access to yearly Roundtable of TradeFinex (Normal cost USD 200/per event access )</p>
