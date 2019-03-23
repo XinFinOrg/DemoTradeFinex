@@ -30,6 +30,7 @@
                                      <p class="content">* Get to interact with Trade Finance Ecosystem participants around the world for growing your business.</p>
                                      <p class="content">* Your company logo and link in TradeFinex ecosystem partners</p>
                                      <p class="content">* A PoC completion press release to create awareness for your company.</p>
+				<p class="content">* Become Member now. (offer for limited time. )</p>
 	
                             	<p class="content">&nbsp;</p>
 <table style="width: 156.667px;">
