@@ -18,18 +18,18 @@
 						<div class="con_block">
 						    
 								<div class="col-md-12 col-xs-12 col-sm-12">
-							<h2 class="title"> Want to join the Consortium?</h2>
+							<h2 class="title">Consortium Membership</h2>
 							<p class="content">You can participate in this consortium by joining as either a founding member or extended member of the consortium. As a member, you will be part of the ecosystem and will contribute to the evolution of TradeFinex platform. Your contribution in terms of best practices, driving the standardization and working with regulators will help you to influence the future of your industry. A consortium-led governance makes the platform truly decentralized which is in sync with the core philosophy of blockchain.
                             </p>
                             
-                            <p class="content">Participate, co-develop and share in the following benefits of the TradeFinex blockchain powered platform:</p>
+                            <p class="content">Participate, co-develop and share in the following benefits of the TradeFinex blockchain powered platform membership:</p>
                             <p class="content">* de-risk new infrastructure project finance</p>
-                                     <p class="content">* lower transaction costs</p>
-                                     <p class="content">* standardise contracts & instruments</p>
-                                     <p class="content">* incubate and accelerate infrastructure project pipeline</p>
-                                     <p class="content">* rack infrastructure asset performance data</p>
-                                     <p class="content">* securitize and trade tokenized infrastructure assets</p>
-                                    
+                                     <p class="content">* Conduct Unlimited online Proof of Concepts</p>
+                                     <p class="content">* Get Monthly newsletters on activity in Trade and Finance</p>
+                                     <p class="content">* Get Free virtual Pass (Sky Business Meeting) access to yearly Roundtable of TradeFinex (Normal cost USD 200/per event access )</p>
+                                     <p class="content">* Get to interact with Trade Finance Ecosystem participants around the world for growing your business.</p>
+                                     <p class="content">* Your company logo and link in TradeFinex ecosystem partners</p>
+                                     <p class="content">* A PoC completion press release to create awareness for your company.</p>
                             <p class="content">To join the consortium fill up the Membership form or get more information on consortium Event at: http://Events.tradefinex.org </p>
                             </div>
 			    
