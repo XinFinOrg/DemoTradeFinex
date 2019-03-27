@@ -141,6 +141,13 @@ figure {
 .mt-20 {margin-top:20px;}
 .mt-25 {margin-top:25px;}
 .mt-30 {margin-top:30px;}
+.mt-40 {margin-top:40px;}
+.mt-50 {margin-top:50px;}
+.mt-60 {margin-top:60px;}
+.mt-70 {margin-top:70px;}
+.mt-80 {margin-top:80px;}
+.mt-90 {margin-top:90px;}
+.mt-100 {margin-top:100px;}
 
 .mb-5 {margin-bottom:5px;}
 .mb-10 {margin-bottom:10px;}
@@ -148,6 +155,13 @@ figure {
 .mb-20 {margin-bottom:20px;}
 .mb-25 {margin-bottom:25px;}
 .mb-30 {margin-bottom:30px;}
+.mb-40 {margin-bottom:40px;}
+.mb-50 {margin-bottom:50px;}
+.mb-60 {margin-bottom:60px;}
+.mb-70 {margin-bottom:70px;}
+.mb-80 {margin-bottom:80px;}
+.mb-90 {margin-bottom:90px;}
+.mb-100 {margin-bottom:100px;}
 
 
 /* ================================================== */
@@ -1162,7 +1176,7 @@ ul.team-listing li ul.follow-us li a:hover {
 .awesome-design h2 {
 	padding-bottom: 28px;
 }
-.more-features .more-features-btn-holder {margin-bottom:0px;}
+.more-features .more-features-btn-holder {margin-bottom:0px;margin-top:10px;}
 .more-features .img-holder {
 	max-width: 620px;
 	position: relative;
@@ -1218,19 +1232,20 @@ ul.more-features-list {
 }
 ul.more-features-list li {
 	display: block;
-	padding: 15px 15px 15px 0;
+	padding: 12px 12px 12px 0;
 	border-bottom: 1px #d6d7d7 solid;
 	position: relative;
-	margin-left: 40px;
+	margin-left: 35px;
+	line-height: 20px;
 }
 ul.more-features-list li:before {
 	width: 40px;
 	position: absolute;
-	top: 18px;
-	left: -40px;
+	top: 12px;
+	left: -35px;
 	content: "\f058";
 	font-family: 'FontAwesome';
-	font-size: 30px;
+	font-size: 26px;
 	color: #f29a32;
 }
 ul.more-features-list li:last-child {
@@ -1725,6 +1740,136 @@ button.close {
 	background: #f29a32;
 	border-color: #f29a32;
 }
+
+
+
+/*-----------------------------------
+	 Consortium
+------------------------------------*/
+.consortium-sec {
+	padding: 70px 0 40px;
+}
+.consortium-sec h3 {
+	font-size: 24px;
+	font-weight: 500;
+	padding: 30px 0 40px;
+}
+ul.consortium {
+	margin: 0 -10px;
+}
+ul.consortium li {
+	list-style: none;
+	padding: 0 10px 45px 10px;
+}
+.our-perks {
+	border: 1px solid #d0dbe1;
+	border-radius: 10px;
+	padding: 40px 22px;
+	box-shadow: 2px -3px 10px -3px rgba(0, 0, 0, 0.1);
+}
+.consortium-sec .our-perks h3 {
+	text-align: left;
+	padding: 0;
+}
+.icon-tik-list {
+	max-width: 430px;
+}
+.icon-tik-list li {
+	list-style: none;
+	padding: 20px 0 20px 40px;
+	border-bottom: 1px #d6d7d7 solid;
+	position: relative;
+}
+.icon-tik-list li:before {
+	width: 30px;
+	height: 100%;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	content: "\e927";
+	font-family: 'icomoon';
+	font-size: 24px;
+	color: #42d79e;
+}
+.icon-tik-list li:last-child {
+	border-bottom: none;
+	padding-bottom: 0px;
+}
+.icon-tik-list li h6 {
+	font-size: 16px;
+	color: #22333a;
+	font-weight: 600;
+	padding: 0 0 5px;
+}
+.icon-tik-list li p {
+	line-height: 24px;
+	font-weight: 400;
+}
+ul.consortium li .icon {
+	width: 22%;
+	display: inline-block;
+	vertical-align: top;
+	max-width: 65px;
+	padding-right: 10px;
+	font-size: 42px;
+	color: #68c3e5;
+	text-align: center;
+}
+ul.consortium li .icon span {
+	font-size: 44px;
+	color: #68c3e5;
+}
+ul.consortium li .text-area {
+	width: 90%;
+	display: inline-block;
+	vertical-align: top;
+}
+ul.consortium.opt2 li .text-area {
+	width: 90%;
+}
+ul.consortium li .text-area h6 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #22333a;
+	line-height: 20px;
+	padding: 0 0 8px;
+}
+ul.consortium li .text-area p {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+
+
+/*----- image block wrapper -----*/
+
+.image-block-wrapper {
+    padding: 0px;
+    position: relative;
+}
+.image-block-wrapper .image-block {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    padding: 0px;
+    top: 0px;
+}
+.image-block-wrapper .image-block .image-block-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+.image-block-wrapper .image-block .image-block-bg.bg1 {
+	background-image: url(../images/membership.jpg);
+}
+.image-block-wrapper .image-block .image-block-bg.bg2 {
+	background-image: url(../images/membership.jpg);
+}
+
 
 
 /* ================================================== */
