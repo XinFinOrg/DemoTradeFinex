@@ -5415,3 +5415,41 @@ INFO - 2019-03-27 19:55:45 --> File loaded: C:\xampp\htdocs\DemoTradeFinex\appli
 INFO - 2019-03-27 19:55:45 --> File loaded: C:\xampp\htdocs\DemoTradeFinex\application\views\includes/footern.php
 INFO - 2019-03-27 19:55:45 --> Final output sent to browser
 DEBUG - 2019-03-27 19:55:45 --> Total execution time: 0.0898
+INFO - 2019-03-27 20:01:55 --> Config Class Initialized
+INFO - 2019-03-27 20:01:55 --> Hooks Class Initialized
+DEBUG - 2019-03-27 20:01:55 --> UTF-8 Support Enabled
+INFO - 2019-03-27 20:01:55 --> Utf8 Class Initialized
+INFO - 2019-03-27 20:01:55 --> URI Class Initialized
+INFO - 2019-03-27 20:01:55 --> Router Class Initialized
+INFO - 2019-03-27 20:01:55 --> Output Class Initialized
+INFO - 2019-03-27 20:01:55 --> Security Class Initialized
+DEBUG - 2019-03-27 20:01:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-27 20:01:55 --> CSRF cookie sent
+INFO - 2019-03-27 20:01:55 --> Input Class Initialized
+INFO - 2019-03-27 20:01:55 --> Language Class Initialized
+INFO - 2019-03-27 20:01:55 --> Loader Class Initialized
+INFO - 2019-03-27 20:01:55 --> Helper loaded: cache_helper
+INFO - 2019-03-27 20:01:55 --> Controller Class Initialized
+INFO - 2019-03-27 20:01:55 --> Helper loaded: form_helper
+INFO - 2019-03-27 20:01:55 --> Helper loaded: url_helper
+INFO - 2019-03-27 20:01:55 --> Helper loaded: date_helper
+INFO - 2019-03-27 20:01:55 --> Helper loaded: notification_helper
+INFO - 2019-03-27 20:01:55 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-27 20:01:56 --> Encrypt Class Initialized
+INFO - 2019-03-27 20:01:56 --> Email Class Initialized
+INFO - 2019-03-27 20:01:56 --> Model Class Initialized
+INFO - 2019-03-27 20:01:56 --> Database Driver Class Initialized
+ERROR - 2019-03-27 20:01:56 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'demotrad_admin'@'localhost' (using password: YES) C:\xampp\htdocs\DemoTradeFinex\system\database\drivers\mysqli\mysqli_driver.php 201
+ERROR - 2019-03-27 20:01:56 --> Unable to connect to the database
+INFO - 2019-03-27 20:01:56 --> Model Class Initialized
+INFO - 2019-03-27 20:01:56 --> Database Driver Class Initialized
+ERROR - 2019-03-27 20:01:56 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'demotrad_admin'@'localhost' (using password: YES) C:\xampp\htdocs\DemoTradeFinex\system\database\drivers\mysqli\mysqli_driver.php 201
+ERROR - 2019-03-27 20:01:56 --> Unable to connect to the database
+DEBUG - 2019-03-27 20:01:56 --> Config file loaded: C:\xampp\htdocs\DemoTradeFinex\application\config/emailc.php
+INFO - 2019-03-27 20:01:56 --> File loaded: C:\xampp\htdocs\DemoTradeFinex\application\views\includes/headern.php
+ERROR - 2019-03-27 20:01:56 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'demotrad_admin'@'localhost' (using password: YES) C:\xampp\htdocs\DemoTradeFinex\system\database\drivers\mysqli\mysqli_driver.php 201
+ERROR - 2019-03-27 20:01:56 --> Unable to connect to the database
+ERROR - 2019-03-27 20:01:56 --> Query error: Access denied for user 'demotrad_admin'@'localhost' (using password: YES) - Invalid query: SELECT *
+FROM `tf_company`
+WHERE `tfcom_user_ref` = ''
+ERROR - 2019-03-27 20:01:56 --> Severity: error --> Exception: Call to a member function result() on boolean C:\xampp\htdocs\DemoTradeFinex\application\models\Manage.php 151

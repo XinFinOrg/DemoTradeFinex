@@ -63,12 +63,12 @@
         
     <div class="wrapper">
     <div class="image-block-wrapper">
-      <div class="image-block col-md-6">
+      <div class="image-block col-md-5">
         <div class="image-block-bg bg1"></div>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-5 col-md-offset-7 mt-50 mb-50">
+          <div class="col-md-6 col-md-offset-6 mt-50 mb-50">
             <h2>What your Membership includes</h2>
 			<ul class="more-features-list">
 				<li>Get support and interaction (Slack) with Consortium Colleagues.</li>
@@ -90,7 +90,7 @@
         
         
         
-        <section class="more-features grey-bg padding-lg">
+        <!--<section class="more-features grey-bg padding-lg">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
@@ -118,7 +118,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         
         
         
