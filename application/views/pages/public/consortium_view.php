@@ -68,7 +68,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-md-offset-6 mt-50 mb-50">
+          <div class="col-md-6 col-md-offset-6 mt-70 mb-70">
             <div class="padd-left">
             <h2>What your Membership includes</h2>
 			<ul class="more-features-list">
