@@ -1870,6 +1870,10 @@ ul.consortium li .text-area p {
 	background-image: url(../images/membership.jpg);
 }
 
+.image-block-wrapper.padd-left {
+	padding-left: 40px;
+}
+
 
 
 /* ================================================== */
@@ -2509,6 +2513,11 @@ ul.consortium li .text-area p {
 	ul.our-values li .text-area {
 		width: 72%;
 	}
+	
+	.image-block-wrapper.padd-left {
+		padding-left: 0px;
+	}
+	
 }
 
 /*Small devices (landscape phones, less than 768px)*/
@@ -2858,6 +2867,10 @@ ul.consortium li .text-area p {
 	.icon-tik-list li h6 {
 		font-size: 14px;
 	}
+	
+	.image-block-wrapper.padd-left {
+		padding-left: 0px;
+	}
 }
 
 /*Extra small devices (portrait phones, less than 576px)*/
@@ -2964,6 +2977,10 @@ ul.consortium li .text-area p {
 	.custom-opacity .item figure {
 		width: 97%;
 	}
+	
+	.image-block-wrapper.padd-left {
+		padding-left: 0px;
+	}
 }
 
 /* Landscape phones and down */
@@ -3008,6 +3025,10 @@ ul.consortium li .text-area p {
 	.about-video .cnt-block h2 {
 		font-size: 32px;
 		padding: 15px 0 10px;
+	}
+	
+	.image-block-wrapper.padd-left {
+		padding-left: 0px;
 	}
 }
 
@@ -3066,6 +3087,10 @@ ul.consortium li .text-area p {
 	}
 	.about-video .cnt-block a {
 		font-size: 48px;
+	}
+	
+	.image-block-wrapper.padd-left {
+		padding-left: 0px;
 	}
 }
 	
@@ -3138,6 +3163,10 @@ ul.consortium li .text-area p {
 		margin-bottom: 10px!important;
 		margin-right: 0px!important;
 	}
+	
+	.image-block-wrapper.padd-left {
+		padding-left: 0px;
+	}
 }
 
 /* iPhone 4 */
@@ -3162,6 +3191,10 @@ ul.consortium li .text-area p {
 	}
 	.button-box a:first-child {
     	margin-right: 10px!important;
+	}
+	
+	.image-block-wrapper.padd-left {
+		padding-left: 0px;
 	}
 
 /* ================================================== */

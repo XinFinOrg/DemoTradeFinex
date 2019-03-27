@@ -69,6 +69,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-6 mt-50 mb-50">
+            <div class="padd-left">
             <h2>What your Membership includes</h2>
 			<ul class="more-features-list">
 				<li>Get support and interaction (Slack) with Consortium Colleagues.</li>
@@ -81,6 +82,7 @@
 				<li>Become Member in just USD 199. offer for a limited time only.</li>
 			</ul>
             <div class="more-features-btn-holder mt-20"><a href="#" class="get-started">Subscribe </a></div>
+            </div>
           </div>
         </div>
       </div>
