@@ -33,7 +33,7 @@
                     <li class="col-md-6">
                         <div class="text-area">
                             <h6>What is TradeFinex Consortium?</h6>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                            <p>A group made up of individuals, companies, organizations and governments to contribute towards the evolution of cross border practise (using innovative technology) under Regulatory Framework</p>
                         </div>
                     </li>
                     <li class="col-md-6">
