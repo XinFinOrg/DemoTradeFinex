@@ -33,7 +33,7 @@
                     <li class="col-md-6">
                         <div class="text-area">
                             <h6>What is TradeFinex Consortium?</h6>
-                            <p>A group made up of individuals, companies, organizations and governments to contribute towards the evolution of cross border practise (using innovative technology) under Regulatory Framework</p>
+                            <p>A group made up of individuals, companies, organizations and governments to contribute towards the evolution of cross border trade and finance practise (using innovative technology) under Regulatory Framework</p>
                         </div>
                     </li>
                     <li class="col-md-6">
