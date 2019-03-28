@@ -63,7 +63,7 @@
         
     <div class="wrapper">
     <div class="image-block-wrapper">
-      <div class="image-block col-md-5">
+      <div class="image-block col-md-6">
         <div class="image-block-bg bg1"></div>
       </div>
       <div class="container">
@@ -81,7 +81,10 @@
 				<li>A PoC completion press release to create awareness for your company.</li>
 				<li>Become Member in just USD 199. offer for a limited time only.</li>
 			</ul>
-            <div class="more-features-btn-holder mt-20"><a href="#" class="get-started">Subscribe </a></div>
+            <!--<div class="more-features-btn-holder mt-20"><a href="#" class="get-started">Subscribe </a></div>-->
+            
+            <div class="more-features-btn-holder mt-20"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="XPXLS3L3KDGBJ" /> <input alt="PayPal &ndash; The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_GB/SG/i/btn/btn_subscribeCC_LG.gif" type="image" /> <img src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" alt="" width="1" height="1" border="0" /></form></div>            
+            
             </div>
           </div>
         </div>

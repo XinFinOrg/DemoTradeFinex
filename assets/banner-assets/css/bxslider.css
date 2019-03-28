@@ -1870,7 +1870,7 @@ ul.consortium li .text-area p {
 	background-image: url(../images/membership.jpg);
 }
 
-.image-block-wrapper.padd-left {
+.image-block-wrapper .padd-left {
 	padding-left: 40px;
 }
 
@@ -2514,7 +2514,7 @@ ul.consortium li .text-area p {
 		width: 72%;
 	}
 	
-	.image-block-wrapper.padd-left {
+	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
 	
@@ -2868,7 +2868,7 @@ ul.consortium li .text-area p {
 		font-size: 14px;
 	}
 	
-	.image-block-wrapper.padd-left {
+	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
 }
@@ -2978,7 +2978,7 @@ ul.consortium li .text-area p {
 		width: 97%;
 	}
 	
-	.image-block-wrapper.padd-left {
+	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
 }
@@ -3027,7 +3027,7 @@ ul.consortium li .text-area p {
 		padding: 15px 0 10px;
 	}
 	
-	.image-block-wrapper.padd-left {
+	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
 }
@@ -3089,7 +3089,7 @@ ul.consortium li .text-area p {
 		font-size: 48px;
 	}
 	
-	.image-block-wrapper.padd-left {
+	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
 }
@@ -3164,7 +3164,7 @@ ul.consortium li .text-area p {
 		margin-right: 0px!important;
 	}
 	
-	.image-block-wrapper.padd-left {
+	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
 }
@@ -3193,7 +3193,7 @@ ul.consortium li .text-area p {
     	margin-right: 10px!important;
 	}
 	
-	.image-block-wrapper.padd-left {
+	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
 
