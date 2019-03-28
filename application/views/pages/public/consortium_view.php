@@ -33,25 +33,25 @@
                     <li class="col-md-6">
                         <div class="text-area">
                             <h6>What is TradeFinex Consortium?</h6>
-                            <p>A group made up of individuals, companies, organizations and governments to contribute towards the evolution of cross border trade and finance practise (using innovative technology) under Regulatory Framework</p>
+                            <p>A forum made up of individuals, companies, organizations and governments to contribute towards the evolution of cross border trade and finance practise (using innovative technology) under Regulatory Framework.</p>
                         </div>
                     </li>
                     <li class="col-md-6">
                         <div class="text-area">
                             <h6>Who can join the Consortium?</h6>
-                            <p>Our community includes Custodians, Banks, Broker/dealers, Payment, securities and treasury market infrastructures, Corporates, Exchanges, Clearing houses etc.</p>
+                            <p>Our community includes Custodians, Banks, Broker/dealers, Corporates, Exchanges, Clearing houses, Remittance Company, securities and treasury market infrastructures etc.</p>
                         </div>
                     </li>
                     <li class="col-md-6">
                         <div class="text-area">
                             <h6>How does this consortium operate?</h6>
-                            <p>However the entire programme will be Administered, monitored and maintained by TradeFinex Tech Pvt Ltd.</p>
+                            <p>consortium Manage and Govern by the Members only, However the entire programme will be Administered, monitored and maintained by TradeFinex Tech Pvt Ltd.</p>
                         </div>
                     </li>
                     <li class="col-md-6">
                         <div class="text-area">
                             <h6>Whom do I contact for more information on TradeFinex Consortium?</h6>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                            <p>Most of the information available on tradefinex website but if you still have question then feel free to contact at: https://demo.tradefinex.org/publicv/contact</p>
                         </div>
                     </li>
                 </ul>
