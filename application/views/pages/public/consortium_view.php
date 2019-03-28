@@ -56,56 +56,54 @@
             </div>
         </div>
     </section>
-    
-    
+
     <section class="consortium-sec padding-lg">
         <div class="container">
             <div class="row text-center">
-            	<div class="col-md-10 col-md-offset-1">
-                	<div class="head-block">
-                    	<h2>FAQs</h2>
-                	</div>
-            	</div>
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="head-block">
+                        <h2>FAQs</h2>
+                    </div>
+                </div>
             </div>
             <div class="panel-group" id="maccordion">
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseOne">What is TradeFinex Consortium?</a> </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse">
-                              <div class="panel-body">A forum made up of individuals, companies, organizations and governments to contribute towards the evolution of cross border trade and finance practise (using innovative technology) under Regulatory Framework.</div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseTwo">Who can join the Consortium?</a> </h4>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="panel-body">Our community includes Custodians, Banks, Broker/dealers, Corporates, Exchanges, Clearing houses, Remittance Company, securities and treasury market infrastructures etc.</div>
-                            </div>
-                          </div>
-                          
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseThree">How does this consortium operate?</a> </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse">
-                              <div class="panel-body">Consortium Manage and Govern by the Members only, However the entire programme will be Administered, monitored and maintained by TradeFinex Tech Pvt Ltd.</div>
-                            </div>
-                          </div>
-                          
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseFour">Whom do I contact for more information on TradeFinex Consortium?</a> </h4>
-                            </div>
-                            <div id="collapseFour" class="panel-collapse collapse">
-                              <div class="panel-body">Most of the information available on tradefinex website but if you still have question then feel free to <a href="<?=base_url('publicv/contact');?>">Contact us</a>.</div>
-                            </div>
-                          </div>
-                        </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseOne">What is TradeFinex Consortium?</a> </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">A forum made up of individuals, companies, organizations and governments to contribute towards the evolution of cross border trade and finance practise (using innovative technology) under Regulatory Framework.</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseTwo">Who can join the Consortium?</a> </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">Our community includes Custodians, Banks, Broker/dealers, Corporates, Exchanges, Clearing houses, Remittance Company, securities and treasury market infrastructures etc.</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseThree">How does this consortium operate?</a> </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">Consortium Manage and Govern by the Members only, However the entire programme will be Administered, monitored and maintained by TradeFinex Tech Pvt Ltd.</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseFour">Whom do I contact for more information on TradeFinex Consortium?</a> </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="panel-body">Most of the information available on tradefinex website but if you still have question then feel free to <a href="<?=base_url('publicv/contact');?>">Contact us</a>.</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    
 
     <!--<section class="consortium-sec grey-bg padding-lg">
         <div class="container">
@@ -144,8 +142,6 @@
             </ul>
         </div>
     </section>-->
-    
-    
 
 </div>
 <?php

@@ -1738,3 +1738,45 @@ LEFT JOIN `tf_contracts` `tct` ON `tct`.`ID` = `tpp`.`contractID`
 WHERE `tpp`.`row_deleted` = '0' AND `tpp`.`isDraft` = '0' AND `tpp`.`admin_approval` = '1'
 GROUP BY `tpp`.`ID`
 ERROR - 2019-03-28 16:48:25 --> Severity: error --> Exception: Call to a member function result() on boolean C:\xampp\htdocs\DemoTradeFinex\application\models\Plisting.php 371
+INFO - 2019-03-28 16:48:49 --> Config Class Initialized
+INFO - 2019-03-28 16:48:49 --> Hooks Class Initialized
+DEBUG - 2019-03-28 16:48:49 --> UTF-8 Support Enabled
+INFO - 2019-03-28 16:48:49 --> Utf8 Class Initialized
+INFO - 2019-03-28 16:48:49 --> URI Class Initialized
+DEBUG - 2019-03-28 16:48:49 --> No URI present. Default controller set.
+INFO - 2019-03-28 16:48:49 --> Router Class Initialized
+INFO - 2019-03-28 16:48:49 --> Output Class Initialized
+INFO - 2019-03-28 16:48:49 --> Security Class Initialized
+DEBUG - 2019-03-28 16:48:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-03-28 16:48:49 --> CSRF cookie sent
+INFO - 2019-03-28 16:48:49 --> Input Class Initialized
+INFO - 2019-03-28 16:48:49 --> Language Class Initialized
+INFO - 2019-03-28 16:48:49 --> Loader Class Initialized
+INFO - 2019-03-28 16:48:49 --> Helper loaded: cache_helper
+INFO - 2019-03-28 16:48:49 --> Controller Class Initialized
+INFO - 2019-03-28 16:48:49 --> Helper loaded: form_helper
+INFO - 2019-03-28 16:48:49 --> Helper loaded: url_helper
+INFO - 2019-03-28 16:48:49 --> Helper loaded: date_helper
+INFO - 2019-03-28 16:48:49 --> Session: Class initialized using 'files' driver.
+INFO - 2019-03-28 16:48:49 --> Encrypt Class Initialized
+INFO - 2019-03-28 16:48:49 --> Model Class Initialized
+INFO - 2019-03-28 16:48:49 --> Database Driver Class Initialized
+ERROR - 2019-03-28 16:48:49 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'demotrad_admin'@'localhost' (using password: YES) C:\xampp\htdocs\DemoTradeFinex\system\database\drivers\mysqli\mysqli_driver.php 201
+ERROR - 2019-03-28 16:48:49 --> Unable to connect to the database
+INFO - 2019-03-28 16:48:49 --> Model Class Initialized
+INFO - 2019-03-28 16:48:49 --> Database Driver Class Initialized
+ERROR - 2019-03-28 16:48:50 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'demotrad_admin'@'localhost' (using password: YES) C:\xampp\htdocs\DemoTradeFinex\system\database\drivers\mysqli\mysqli_driver.php 201
+ERROR - 2019-03-28 16:48:50 --> Unable to connect to the database
+ERROR - 2019-03-28 16:48:50 --> Unable to delete cache file for 
+ERROR - 2019-03-28 16:48:50 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'demotrad_admin'@'localhost' (using password: YES) C:\xampp\htdocs\DemoTradeFinex\system\database\drivers\mysqli\mysqli_driver.php 201
+ERROR - 2019-03-28 16:48:50 --> Unable to connect to the database
+ERROR - 2019-03-28 16:48:50 --> Query error: Access denied for user 'demotrad_admin'@'localhost' (using password: YES) - Invalid query: SELECT `tpp`.*, `tcom`.*, `tcoun`.*, `tfb`.*, `tca`.`ID` as `cat_id`, `tca`.`cName` as `cat_name`, `tca`.`imagePath` as `cat_image`, `tct`.`ID` as `cont_id`, `tct`.`cName` as `cont_name`, `tct`.`imagePath` as `cont_image`
+FROM `tf_project_posts` `tpp`
+LEFT JOIN `tf_company` `tcom` ON `tcom`.`tfcom_user_ref` = `tpp`.`userID`
+LEFT JOIN `tf_country` `tcoun` ON `tcoun`.`tfc_id` = `tpp`.`countryID`
+LEFT JOIN `tf_beneficiary` `tfb` ON `tfb`.`tfb_user_ref` = `tpp`.`userID`
+LEFT JOIN `tf_industry_categories` `tca` ON `tca`.`ID` = `tpp`.`mainCategoryId`
+LEFT JOIN `tf_contracts` `tct` ON `tct`.`ID` = `tpp`.`contractID`
+WHERE `tpp`.`row_deleted` = '0' AND `tpp`.`isDraft` = '0' AND `tpp`.`admin_approval` = '1'
+GROUP BY `tpp`.`ID`
+ERROR - 2019-03-28 16:48:50 --> Severity: error --> Exception: Call to a member function result() on boolean C:\xampp\htdocs\DemoTradeFinex\application\models\Plisting.php 371
