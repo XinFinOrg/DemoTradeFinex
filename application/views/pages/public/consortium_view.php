@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="cnt-block padd-left">
-                            <h2 class="mb-15">Consortium Membership. Let's start the journey together.</h2>
+                            <h2 class="mb-15">Let's start the journey together.</h2>
                             <p class="mb-15">You can participate in this consortium by joining as either a founding member or extended member of the consortium. As a member, you will be part of the ecosystem and will contribute to the evolution of TradeFinex platform. Your contribution in terms of best practices, driving the standardization and working with regulators will help you to influence the future of your industry. A consortium-led governance makes the platform truly decentralized which is in sync with the core philosophy of blockchain.</p>
                             <p>Participate, co-develop and share in the following benefits of the TradeFinex blockchain powered platform membership:</p>
                         </div>
