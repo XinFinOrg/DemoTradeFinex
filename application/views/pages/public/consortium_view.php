@@ -101,6 +101,14 @@
                         <div class="panel-body">Most of the information available on tradefinex website but if you still have question then feel free to <a href="<?=base_url('publicv/contact');?>">Contact us</a>.</div>
                     </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseFive">What payment methods are accepted?</a> </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse">
+                        <div class="panel-body">The TradeFinex Consortium can accept payment via PayPal only.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
