@@ -1,7 +1,7 @@
 <div class="sub_page_wraper">
     <section class="trade_career">
         <div class="container  text-center">
-            <h3>Consortium Membership for Tradefinex</h3>
+            <h3>Consortium Membership</h3>
             <!--<p>Consortium-Led Asset Tokenisation Platform Using Blockchain Technology</p>-->
             <div class="btn-more">
                 <a class="play-btn video" href="https://www.youtube.com/watch?v=mjrhTnZ16f8"><span class="fa fa-play-circle"></span> Watch Video</a>
