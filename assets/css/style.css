@@ -8657,7 +8657,7 @@ div.dataTables_wrapper div.dataTables_info {
     color: rgba(255,255,255,.9);
 }
 .btn, a:link.btn {
-    display: inline-block !important;
+    /* display: inline-block !important; */
     text-align: center !important;
     white-space: nowrap !important;
     user-select: none;
