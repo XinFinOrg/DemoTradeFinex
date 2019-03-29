@@ -139,6 +139,13 @@
                         <p>Most of the information available on tradefinex website but if you still have question then feel free to <a href="<?=base_url('publicv/contact');?>">Contact us</a>.</p>
                     </div>
                 </li>
+<li class="col-md-6">
+                    <div class="text-area">
+                        <h6>What payment methods are accepted?</h6>
+                        <p>The TradeFinex Consortium can accept payment via PayPal only.</p>
+                    </div>
+                </li>
+
             </ul>
         </div>
     </section>-->
