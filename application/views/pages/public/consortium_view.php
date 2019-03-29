@@ -80,7 +80,7 @@
                         <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#maccordion" href="#collapseTwo">Who can join the Consortium?</a> </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">Our community includes Custodians, Banks, Broker/dealers, Corporates, Exchanges, Clearing houses, Remittance Company, government body, securities Board and global infrastructure fund infrastructure Fund etc.</div>
+                        <div class="panel-body">Our community includes Custodians, Banks, Broker/dealers, Corporates, Exchanges, Clearing houses, Remittance Company, government body, securities Board and global infrastructure fund.</div>
                     </div>
                 </div>
 
