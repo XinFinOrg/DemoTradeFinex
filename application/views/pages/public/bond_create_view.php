@@ -112,7 +112,7 @@
                                             <div class="form-actions">
                                                 <div class="row">
                                                     <div class="col-md-12 footerBtns">
-                                                        <button type="submit" id="bond_create" class="btn btn-primary btn-rounded"  > Create Bond</button>
+                                                        <button type="submit" id="bond_create" class="btnn btnn-primary btnn-rounded"  > Create Bond</button>
                                                         <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
 													</div>
 													<br>
@@ -185,7 +185,7 @@
                                         <div class="row">
                                             <div class="col-md-12 footerBtns">
                                                 <p>It may take few seconds to deploy on public blockchain network.</p>
-                                                <button type="submit" id="deploy_contract" class="btn btn-primary btn-rounded"  > Your Smart Contract is Ready To Deploy</button><br>
+                                                <button type="submit" id="deploy_contract" class="btnn btnn-primary btnn-rounded"  > Your Bond is Ready To Deploy</button><br>
                                                 <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
                                             </div>
                                             <br>
@@ -222,7 +222,7 @@
                                                 
                                             </label> -->
                                             <div class="dynamic_table   ">
-                                            <button type="submit" id="refreshBondsList" class="btn btn-primary btn-rounded" style = "float:right" > Refresh </button>
+                                            <button type="submit" id="refreshBondsList" class="btnn btnn-primary btnn-rounded" style = "float:right" > Refresh </button>
                                    
                                        
                                
@@ -295,14 +295,16 @@
 		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">
 			
 			<div class="modal-content">
-
-				<div class="modal-body">
+                <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
 
 						<p>Sorry!! Bond Name already exists.</p>
 						<p>Try another Bond Name.</p>
 						
-						<div class="btn-more">
-							<button id="sorry" type="submit" class="btn btn-info "  data-keyboard="false"> Ok </button> 
+						<div class="btnn-more">
+							<button id="sorry" type="submit" class="btnn btnn-primary btnn-rounded"  data-keyboard="false"> Ok </button> 
 						</div>						
 							                                           
 				</div>
@@ -314,13 +316,15 @@
 		<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">
 			
 			<div class="modal-content">
-
-				<div class="modal-body">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
 
 						<p>Contract Deployment in process.</p>
 						
-						<div class="btn-more">
-							<button id="DeployBtn" type="submit" class="btn btn-info"  data-keyboard="false"> Ok </button> 
+						<div class="btnn-more">
+							<button id="DeployBtn" type="submit" class="btnn btnn-primary btnn-rounded"  data-keyboard="false"> Ok </button> 
 						</div>						
 							                                           
 				</div>

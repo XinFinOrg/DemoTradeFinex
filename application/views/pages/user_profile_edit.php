@@ -850,14 +850,10 @@
 				<br>
 				<div class="row">
 					<div class="col-md-4 col-sm-4 col-xs-12"><a href="https://alphaex.net" target="_blank">
-				<img class="img-responsive xinfin_logo_sign_up" width="100px"   src="<?=base_url();?>assets/images/img/alphaex_logo.jpg" alt="logo" />
+						<img class="img-responsive xinfin_logo_sign_up" width="100px"   src="<?=base_url();?>assets/images/img/alphaex_logo.jpg" alt="logo" />
 
-				<span class="forgot_passwd"><a href="https://alphaex.net" target="_blank">AlphaEx.net</a></span></div>
-				<div class="col-md-4 col-sm-4 col-xs-12 "> <a href="https://quoinex.com/" target="_blank"><img class="img-responsive xinfin_logo_sign_up" width="100px" src="<?=base_url();?>assets/images/img/quoinex_logo.jpg" alt="logo" />
-				<span class="forgot_passwd"><a href="https://quoinex.com/" target="_blank">Quoinex</a></span></div>
-
-					<div class="col-md-4 col-sm-4 col-xs-12"> <a href="https://coss.io/" target="_blank"><img class="img-responsive xinfin_logo_sign_up" width="100px" src="<?=base_url();?>assets/images/img/coss_logo.jpg" alt="logo" />
-					<span class="forgot_passwd"><a href="https://coss.io/" target="_blank">COSS.io</a></span></div></div>
+					</div>
+				</div>
 
 		</div>
 	</div>
