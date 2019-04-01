@@ -1891,7 +1891,7 @@ ul.consortium li .text-area p {
 ----------------------------------*/
 .project_listing {
 	display: block;
-	text-align: center;
+	/*text-align: center;*/
 }
 .project_listing .head-block {
 	padding-bottom: 50px;
@@ -1967,7 +1967,7 @@ ul.project_listing li h3 {
 	display: block;
 	padding-bottom: 10px;
 	color: #007c8f;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 700;
 	line-height: 16px;
 }
@@ -1981,6 +1981,91 @@ ul.project_listing li .equal-hight a {
 	color: #e2e2e2;
 }
 ul.project_listing li .equal-hight a:hover {
+	color: #f29a32;
+}
+
+
+
+
+/*--------------------------------
+	 Project Listing Details
+----------------------------------*/
+.project_listing_details {
+	display: block;
+}
+.project_listing_details .head-block {
+	padding-bottom: 50px;
+}
+.project_listing_details {
+	text-align: left;
+}
+.project_listing_details .equal-hight {
+	background: #fff;
+	border: 1px #f0f3f5 solid;
+	box-shadow: 0px 0px 20px rgba(100, 100, 100, 0.1);
+	border-radius: 5px;
+	position: relative;	
+	min-height: 180px;
+}
+
+.project-img-block {
+	position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #f8f8f8;
+}
+.project_listing_details .project_listing-img-block img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.project_listing_details .pro-description {
+    width: 100%;
+	border-bottom: 1px solid #eeeeee;
+	padding: 0px 0px 10px;
+	margin-bottom: 30px;
+}
+.project_listing_details .pro-description h3 {
+    font-size: 30px!important;
+    font-weight: 400;
+    line-height: 45px;
+	color: #687377!important;
+	padding-bottom: 10px!important;
+}
+.project_listing_details .pro-description h4 {
+    color: #959595;
+	font-size: 24px;
+}
+.project_listing_details .pro-description h4.location:before {
+    color: #959595;
+	font-family: 'fontawesome';
+    content: "\f041";
+    position: relative;
+    font-size: 1rem;
+    opacity: .6;
+    margin-right: .5rem;
+}
+
+.project_listing_details .cnt-block {
+	padding: 0px;
+}
+.project_listing_details h3 {
+	display: block;
+	padding-bottom: 10px;
+	color: #007c8f;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 16px;
+}
+.project_listing_details p {
+	padding-bottom: 20px;
+	line-height: 16px;
+}
+.project_listing_details .equal-hight a {
+	top: 50px;
+	font-size: 16px;
+	color: #e2e2e2;
+}
+.project_listing_details .equal-hight a:hover {
 	color: #f29a32;
 }
 
@@ -2981,6 +3066,8 @@ ul.project_listing li .equal-hight a:hover {
 	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
+	
+	.project_listing_details .pro-description {margin-top: 30px;}
 }
 
 /*Extra small devices (portrait phones, less than 576px)*/
@@ -3091,6 +3178,9 @@ ul.project_listing li .equal-hight a:hover {
 	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
+	
+	.project_listing_details .pro-description h3 {font-size: 24px!important;line-height:24px;}
+	.project_listing_details .pro-description h4 {font-size: 20px!important;}
 }
 
 /* Landscape phones and down */
@@ -3140,6 +3230,9 @@ ul.project_listing li .equal-hight a:hover {
 	.image-block-wrapper .padd-left {
 		padding-left: 0px;
 	}
+	
+	.project_listing_details .pro-description h3 {font-size: 22px!important;line-height:22px;}
+	.project_listing_details .pro-description h4 {font-size: 18px!important;}
 }
 
 /* Landscape iPhone 6 Plus */

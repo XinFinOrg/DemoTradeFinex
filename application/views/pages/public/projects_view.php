@@ -8,11 +8,11 @@
     
     
     
-    <section class="content-marketing project_listing white-bg padding-lg">
+    <section class="project_listing white-bg padding-lg">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="head-block">
+                    <div class="col-md-12">
+                        <div class="head-block text-center">
                             <h2>Recently Added Projects</h2>
                             <!--<p>Sub text</p>-->
                         </div>
@@ -55,7 +55,7 @@
                                 		<p>Initial Government Announcement</p>
                                     </div>
                                     <div class="col-md-12 text-center">
-                                    	<a href="#" class="get-started">View Project</a>
+                                    	<a href="<?=base_url('publicv/projects_detail');?>" class="get-started">View Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                                 		<p>Initial Government Announcement</p>
                                     </div>
                                     <div class="col-md-12 text-center">
-                                    	<a href="#" class="get-started">View Project</a>
+                                    	<a href="<?=base_url('publicv/projects_detail');?>" class="get-started">View Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                                 		<p>Initial Government Announcement</p>
                                     </div>
                                     <div class="col-md-12 text-center">
-                                    	<a href="#" class="get-started">View Project</a>
+                                    	<a href="<?=base_url('publicv/projects_detail');?>" class="get-started">View Project</a>
                                     </div>
                                 </div>
                             </div>
