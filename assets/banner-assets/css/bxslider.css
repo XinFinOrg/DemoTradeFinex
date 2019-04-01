@@ -572,7 +572,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3edc93', end
 	padding-bottom: 90px;
 }
 .content-marketing .head-block h2 {
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 }
 .content-marketing .head-block h2 span {
 	display: block;
@@ -676,7 +676,7 @@ ul.marketing-list2 li p {
 	 Content Marketing opt3
 ----------------------------------*/
 .content-marketing3 .head-block {
-	padding-bottom: 60px;
+	padding-bottom: 50px;
 }
 ul.marketing-list3 {
 	text-align: left;
@@ -779,7 +779,7 @@ ul.marketing-list3 li a:hover {
 	padding-bottom: 0px;
 }
 .generate-forms h2 {
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 }
 .generate-forms p {
 	padding-bottom: 45px;
@@ -1883,6 +1883,109 @@ ul.consortium li .text-area p {
 
 
 
+
+
+
+/*--------------------------------
+	 Project Listing
+----------------------------------*/
+.project_listing {
+	display: block;
+	text-align: center;
+}
+.project_listing .head-block {
+	padding-bottom: 50px;
+}
+ul.project_listing {
+	text-align: left;
+}
+ul.project_listing li {
+	list-style: none;
+	margin-bottom: 30px;
+}
+ul.project_listing li .equal-hight {
+	background: #fff;
+	border: 1px #f0f3f5 solid;
+	box-shadow: 0px 0px 20px rgba(100, 100, 100, 0.1);
+	border-radius: 5px;
+	position: relative;	
+	min-height: 180px;
+}
+ul.project_listing li .project-img-block {
+	position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #f8f8f8;
+}
+ul.project_listing li .project-img-block img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.project-img-block .pro-description {
+    width: 100%;
+	padding: 20px 20px 12px;
+	position: absolute;
+	bottom: 0px;
+    z-index: 1;
+}
+.project-img-block:before {
+    opacity: .8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    content: "";
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
+}
+.pro-description h3 {
+    font-size: 18px!important;
+	color: #FFFFFF!important;
+	padding-bottom: 10px!important;
+}
+.pro-description h4 {
+    color: #FFFFFF;
+	font-size: 14px;
+}
+.pro-description h4.location:before {
+    color: #FFFFFF;
+	font-family: 'fontawesome';
+    content: "\f041";
+    position: relative;
+    font-size: 1rem;
+    opacity: .6;
+    margin-right: .5rem;
+}
+
+ul.project_listing li .cnt-block {
+	padding: 20px;
+}
+ul.project_listing li h3 {
+	display: block;
+	padding-bottom: 10px;
+	color: #007c8f;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+}
+ul.project_listing li p {
+	padding-bottom: 20px;
+	line-height: 16px;
+}
+ul.project_listing li .equal-hight a {
+	top: 50px;
+	font-size: 16px;
+	color: #e2e2e2;
+}
+ul.project_listing li .equal-hight a:hover {
+	color: #f29a32;
+}
+
+
+
 /* ================================================== */
 /* 29. Responsive */
 /* ================================================== */
@@ -2615,7 +2718,7 @@ ul.consortium li .text-area p {
 		padding-top: 52px;
 	}
 	.content-marketing .head-block h2 {
-		padding-bottom: 20px;
+		padding-bottom: 10px;
 	}
 	.content-marketing .head-block p {
 		font-size: 14px;
@@ -2693,7 +2796,7 @@ ul.consortium li .text-area p {
 	.create-bridge h2,
 	.generate-forms h2,
 	.invoice-factoring .cnt-block h2 {
-		padding-bottom: 20px;
+		padding-bottom: 10px;
 	}
 	.digital-bond .cnt-block h3,
 	.create-bridge h3,
