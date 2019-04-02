@@ -22,37 +22,42 @@
                     <li class="col-md-4">
                         <div class="equal-hight clearfix">
                             <div class="project-img-block">
-                            	<img src="../assets/banner-assets/images/projects/project-1.jpg" class="img-responsive" alt="">
+                            	<img src="../assets/banner-assets/images/projects/gok-hepp.jpg" class="img-responsive" alt="HRBT AS GOK HEPP Acquisition Bond">
                                 <div class="pro-description">
-                                	<h3>The Kingston Logistics Park</h3>
-                                	<h4 class="location">Nashville, TN</h4>
+                                	<h3>HRBT AS GOK HEPP Acquisition Bond</h3>
+                                	<h4 class="location">Tarsus, Turkey</h4>
                                 </div>
                             </div>
                             <div class="cnt-block">
                                 <div class="row">
-                                	<div class="col-md-6 col-xs-6">
-                                    	<h3>Tariff (per unit)</h3>
-                                		<p>$ 0.05</p>
+                                	<div class="col-md-12 content-flex">
+                                    	<h3>Project Acquisition Cost:</h3>
+                                		<p>$20 M USD</p>
+                                    </div>
+                                    <div class="col-md-12"><div class="divider-line"></div></div>
+                                    <div class="col-md-6 col-xs-6">
+                                    	<h3>Sector</h3>
+                                		<p>Energy</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>IRR</h3>
-                                		<p>15%</p>
+                                		<p>6%</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
-                                    	<h3>Project Cost</h3>
-                                		<p>$ 484 K</p>
+                                    	<h3>Term</h3>
+                                		<p>18 Years</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>Min Investment</h3>
-                                		<p>$ 7 K</p>
-                                    </div>
-                                    <div class="col-md-6 col-xs-6">
-                                    	<h3>Sector</h3>
-                                		<p>Port</p>
+                                		<p>$10 K</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>Project Stage</h3>
-                                		<p>Initial Government Announcement</p>
+                                		<p>Operational</p>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                    	<h3>Net Income</h3>
+                                		<p>$2.2 M Annually</p>
                                     </div>
                                     <div class="col-md-12 text-center">
                                     	<a href="<?=base_url('publicv/projects_detail');?>" class="get-started">View Project</a>
@@ -63,38 +68,44 @@
                     </li>                    
                     <li class="col-md-4">
                         <div class="equal-hight clearfix">
+                            <div id="transp"><div class="under-discussion">Under Discussion</div></div>
                             <div class="project-img-block">
                             	<img src="../assets/banner-assets/images/projects/project-1.jpg" class="img-responsive" alt="">
                                 <div class="pro-description">
-                                	<h3>The Kingston Logistics Park</h3>
-                                	<h4 class="location">Nashville, TN</h4>
+                                	<h3>Project 2</h3>
+                                	<h4 class="location">Country name</h4>
                                 </div>
                             </div>
                             <div class="cnt-block">
                                 <div class="row">
-                                	<div class="col-md-6 col-xs-6">
-                                    	<h3>Tariff (per unit)</h3>
-                                		<p>$ 0.05</p>
+                                	<div class="col-md-12 content-flex">
+                                    	<h3>Project Acquisition Cost:</h3>
+                                		<p>$20 M USD</p>
+                                    </div>
+                                    <div class="col-md-12"><div class="divider-line"></div></div>
+                                    <div class="col-md-6 col-xs-6">
+                                    	<h3>Sector</h3>
+                                		<p>Energy</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>IRR</h3>
-                                		<p>15%</p>
+                                		<p>6%</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
-                                    	<h3>Project Cost</h3>
-                                		<p>$ 484 K</p>
+                                    	<h3>Term</h3>
+                                		<p>18 Years</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>Min Investment</h3>
-                                		<p>$ 7 K</p>
-                                    </div>
-                                    <div class="col-md-6 col-xs-6">
-                                    	<h3>Sector</h3>
-                                		<p>Port</p>
+                                		<p>$10 K</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>Project Stage</h3>
-                                		<p>Initial Government Announcement</p>
+                                		<p>Operational</p>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                    	<h3>Net Income</h3>
+                                		<p>$2.2 M Annually</p>
                                     </div>
                                     <div class="col-md-12 text-center">
                                     	<a href="<?=base_url('publicv/projects_detail');?>" class="get-started">View Project</a>
@@ -105,38 +116,44 @@
                     </li>
                     <li class="col-md-4">
                         <div class="equal-hight clearfix">
+                            <div id="transp"><div class="under-discussion">Under Discussion</div></div>
                             <div class="project-img-block">
                             	<img src="../assets/banner-assets/images/projects/project-1.jpg" class="img-responsive" alt="">
                                 <div class="pro-description">
-                                	<h3>The Kingston Logistics Park</h3>
-                                	<h4 class="location">Nashville, TN</h4>
+                                	<h3>Project 3</h3>
+                                	<h4 class="location">Country name</h4>
                                 </div>
                             </div>
                             <div class="cnt-block">
                                 <div class="row">
-                                	<div class="col-md-6 col-xs-6">
-                                    	<h3>Tariff (per unit)</h3>
-                                		<p>$ 0.05</p>
+                                	<div class="col-md-12 content-flex">
+                                    	<h3>Project Acquisition Cost:</h3>
+                                		<p>$20 M USD</p>
+                                    </div>
+                                    <div class="col-md-12"><div class="divider-line"></div></div>
+                                    <div class="col-md-6 col-xs-6">
+                                    	<h3>Sector</h3>
+                                		<p>Energy</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>IRR</h3>
-                                		<p>15%</p>
+                                		<p>6%</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
-                                    	<h3>Project Cost</h3>
-                                		<p>$ 484 K</p>
+                                    	<h3>Term</h3>
+                                		<p>18 Years</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>Min Investment</h3>
-                                		<p>$ 7 K</p>
-                                    </div>
-                                    <div class="col-md-6 col-xs-6">
-                                    	<h3>Sector</h3>
-                                		<p>Port</p>
+                                		<p>$10 K</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>Project Stage</h3>
-                                		<p>Initial Government Announcement</p>
+                                		<p>Operational</p>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                    	<h3>Net Income</h3>
+                                		<p>$2.2 M Annually</p>
                                     </div>
                                     <div class="col-md-12 text-center">
                                     	<a href="<?=base_url('publicv/projects_detail');?>" class="get-started">View Project</a>

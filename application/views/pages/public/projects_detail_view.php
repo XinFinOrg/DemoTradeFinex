@@ -12,44 +12,49 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        <img src="../assets/banner-assets/images/projects/project-1.jpg" class="img-responsive" alt="">
+                        <img src="../assets/banner-assets/images/projects/gok-hepp.jpg" class="img-responsive" alt="">
                     </div>
                     <div class="col-sm-6 col-md-6">
                         
                         <div class="row project_listing_details">
                     <div class="col-md-12">
                             <div class="pro-description">
-                                	<h3>The Kingston Logistics Park</h3>
-                                	<h4 class="location">Nashville, TN</h4>
+                                	<h3>HRBT AS GOK HEPP Acquisition Bond</h3>
+                                	<h4 class="location">Tarsus, Turkey</h4>
                             </div>
                             <div class="cnt-block">
                                 <div class="row">
-                                	<div class="col-md-6 col-xs-6">
-                                    	<h3>Tariff (per unit)</h3>
-                                		<p>$ 0.05</p>
+                                	<div class="col-md-12 content-flex">
+                                    	<h3>Project Acquisition Cost:</h3>
+                                		<p>$20 M USD</p>
+                                    </div>
+                                    <div class="col-md-12"><div class="divider-line"></div></div>
+                                    <div class="col-md-6 col-xs-6">
+                                    	<h3>Sector</h3>
+                                		<p>Energy</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>IRR</h3>
-                                		<p>15%</p>
+                                		<p>6%</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
-                                    	<h3>Project Cost</h3>
-                                		<p>$ 484 K</p>
+                                    	<h3>Term</h3>
+                                		<p>18 Years</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>Min Investment</h3>
-                                		<p>$ 7 K</p>
-                                    </div>
-                                    <div class="col-md-6 col-xs-6">
-                                    	<h3>Sector</h3>
-                                		<p>Port</p>
+                                		<p>$10 K</p>
                                     </div>
                                     <div class="col-md-6 col-xs-6">
                                     	<h3>Project Stage</h3>
-                                		<p>Initial Government Announcement</p>
+                                		<p>Operational</p>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                    	<h3>Net Income</h3>
+                                		<p>$2.2 M Annually</p>
                                     </div>
                                     <div class="col-md-12">
-                                    	<a href="#" class="get-started">Invest Now</a>
+                                    	<a href="<?=base_url('publicv/contact');?>" class="get-started">Invest Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -61,18 +66,54 @@
         </section>
         
         
-        <section class="more-features grey-bg padding-lg">
+        <!--<section class="more-features grey-bg padding-lg">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Project Description</h2>
-                        <p class="mb-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et bibendum ante. Etiam scelerisque orci et nisl faucibus, ut convallis tortor vestibulum. Quisque tempor ipsum metus, ac molestie felis sodales nec. Etiam malesuada consequat semper. Mauris eget commodo tortor. Praesent porta leo at sapien scelerisque, a volutpat tellus laoreet. Nulla aliquet convallis massa, quis interdum mi rhoncus ut.</p>
-                        <p>Quisque vel neque faucibus nulla interdum congue id non augue. Phasellus malesuada mi at leo aliquam, a aliquam neque tempus. In dignissim mi quis facilisis posuere. Sed interdum, nibh vel vulputate dapibus, elit neque ultrices risus, lobortis laoreet tellus nisi vitae lorem. Integer pellentesque, dolor eget sollicitudin dapibus, libero ante convallis leo, quis efficitur libero risus eu purus. In iaculis aliquam risus, eu ornare neque tempus in. Sed posuere leo in tincidunt convallis. Curabitur maximus pulvinar porta. Proin imperdiet pharetra velit, in ultricies dolor rutrum quis. Etiam feugiat a est at accumsan. Curabitur interdum auctor erat, id commodo nibh consectetur vitae. Proin ut tellus hendrerit, accumsan sapien sed, consectetur metus. Vivamus vehicula neque vel lorem pellentesque aliquam.</p>
-                        <ul class="more-features-list">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            <li>Fusce venenatis mi at nibh pellentesque, sed tempus lacus sodales.</li>
-                        </ul>
+                        <h2>Acquisition Project Description</h2>
+                        <p class="mb-15">Helse Reise og Bolig i Tyrkia AS (HRBT AS) - a private energy and  infrastructure investment company based in Norway, seeks to purchase 100% of the hydro-electric power plant (GOK HEPP) in Turkey for $20M. GOK HEPP has license guarantee to the year 2056 by the the government. GOK HEPP generates average income of $2.7M USD, average cost of $475K for a net income of $2.2M USD per year.</p>
+                      	<p class="mb-10"><strong>Acquiring Company Name:</strong> Helse Reise og Bolig i Tyrkia AS (HRBT AS)</p>
+                        <p class="mb-10"><strong>Company URL:</strong> <a href="http://www.helsebo-energy.com/index.html" target="_blank">http://www.helsebo-energy.com/index.html</a></p>
+                        <p class="mb-10"><strong>Documents:</strong> <a href="../assets/banner-assets/images/projects/Gok-HEPP.pdf" target="_blank" class="attachment-download"><i class="fa fa-download"></i> Download project</a></p>
+                        <p class="mb-10"><strong>Prospectus:</strong> pending</p>
+                      <p><strong>Instrument:</strong> Bond</p>
                     </div>
+                </div>
+            </div>
+        </section>-->
+        
+        
+        <section class="more-features grey-bg padding-lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2>Acquisition Project Description</h2>
+                        <p class="mb-15 padd-right">Helse Reise og Bolig i Tyrkia AS (HRBT AS) - a private energy and  infrastructure investment company based in Norway, seeks to purchase 100% of the hydro-electric power plant (GOK HEPP) in Turkey for $20M. GOK HEPP has license guarantee to the year 2056 by the the government. GOK HEPP generates average income of $2.7M USD, average cost of $475K for a net income of $2.2M USD per year.</p>
+                    </div>
+                    
+                    <div class="col-md-5">
+                    <div class="our-perks">
+                            <ul class="icon-tik-list">
+                                <li>
+                                    <h6>Acquiring Company Name</h6>
+                                    <p>Helse Reise og Bolig i Tyrkia AS (HRBT AS)</p>
+                                </li>
+                                <li>
+                                    <h6>Company URL</h6>
+                                    <p><a href="http://www.helsebo-energy.com/index.html" target="_blank">http://www.helsebo-energy.com/index.html</a></p>
+                                </li>
+                                <li>
+                                    <h6>Documents: <a href="../assets/banner-assets/images/projects/Gok-HEPP.pdf" target="_blank"><i class="fa fa-download"></i> Download project</a></h6>
+                                    <!--<p><a href="../assets/banner-assets/images/projects/Gok-HEPP.pdf" target="_blank" class="attachment-download"><i class="fa fa-download"></i> Download project</a></p>-->
+                                </li>
+                                <li>
+                                    <h6>Prospectus: <span>Pending</span></h6>
+                                    <!--<p>Pending</p>-->
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    
                 </div>
             </div>
         </section>
