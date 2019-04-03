@@ -47,9 +47,9 @@
                         <div class="row cnt-block mt-30">
                             <div class="col-md-12 text-center">
                                 <div class="bannerHeader">
-                                    <h1 class="mb-15 animated fadeInDown delay-02s">Open Standards Protocol for global Trade & Finance</h1>
-                                    <p class="animated fadeInDown delay-03s">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid</p>
-									<p class="animated fadeInDown delay-04s">Start trial under regulatory sandbox environment</p>
+                                    <h1 class="mb-15 animated fadeInDown delay-02s">Open Standards Protocol for Global Trade & Finance</h1>
+                                    <p class="animated fadeInDown delay-03s">Mitigate Counter-Party Risk by making your Financial Instruments Interoperable & Liquid.</p>
+									<p class="animated fadeInDown delay-04s">Start your trial in a regulatory sandbox environment</p>
                                     <div class="button-box mt-30">
                                         <a href="<?=base_url('publicv/infactor');?>" class="get-started animated fadeInDown delay-04s">Invoice</a>
                                 		<a href="<?=base_url('publicv/digital_bond');?>" class="get-started animated fadeInDown delay-05s">Digital Bond</a>
@@ -96,7 +96,7 @@
                     <div class="col-md-6 col-md-push-6">
                         <div class="cnt-block padd-left">
                             <h2>Digital Bond</h2>
-                            <p>Create, manage, and liquidate bond instruments online. A fully digital blockchain solution eliminates counterparty delays and provides instant settlement.</p>
+                            <p>Create, manage and liquidate bond instruments online. A fully digital blockchain solution eliminates counterparty delays and provides instant settlement.</p>
                             <div class="button-box">
                             	<a href="<?=base_url('publicv/bond_create');?>" class="get-started">Start POC</a>
                             	<a href="<?=base_url('publicv/digital_bond');?>" class="get-started">Explore</a>
@@ -160,7 +160,7 @@
                 <div class="row">
                     <div class="col-md-5 cnt-block">
                         <h2>TradeFinex Round Table Series Consortium Event</h2>
-                        <p>This Roundtable Event places the Trade and Finance Stakeholder and Infrastructure Financier on one stage to address the increasing global trade gap as well as Infrastructure deficit while discussing the promises of blockchain.</p>
+                        <p>This Roundtable Event places the Trade and Finance Stakeholder and Infrastructure Financier on one stage to address the increasing global trade gap as well as the Infrastructure deficit while discussing the promises of blockchain.</p>
                         <div class="button-box">
                         	<a href="http://events.tradefinex.org/#contact" target="_blank" class="get-started">Register</a>
                             <a href="http://events.tradefinex.org/" target="_blank" class="get-started">Explore</a>
