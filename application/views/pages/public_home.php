@@ -162,7 +162,7 @@
                         <h2>TradeFinex Round Table Series Consortium Event</h2>
                         <p>This Roundtable Event places the Trade and Finance Stakeholder and Infrastructure Financier on one stage to address the increasing global trade gap as well as the Infrastructure deficit while discussing the promises of blockchain.</p>
                         <div class="button-box">
-                        	<a href="http://events.tradefinex.org/#contact" target="_blank" class="get-started">Register</a>
+                        	<a href="https://www.eventbrite.sg/o/19693668397" target="_blank" class="get-started">Register</a>
                             <a href="http://events.tradefinex.org/" target="_blank" class="get-started">Explore</a>
                         </div>
                     </div>
