@@ -178,8 +178,11 @@
                                 <div class="card-body">
 
                                     <div class="form-row" style="padding-top:15px">
-                                            <div class="form-group col-lg-4 col-md-12"><div class=" form-column-headings"style="margin-left:10px; width:1090px; height:450px;overflow-y:scroll;box-shadow: 0px 2px 10px #6c757d;"> 
-                                                <pre id="contractData"  >
+                                            <div class="form-group col-md-12">
+                                            <!--<div class="form-column-headings" style="height:450px;overflow-y:scroll;box-shadow: 0px 2px 10px #6c757d;"> 
+                                                <pre id="contractData">-->
+                                            <div> 
+                                                <pre id="contractData" class="language-markup scrollable">
 
                                                 </pre>
                                                 </div>
