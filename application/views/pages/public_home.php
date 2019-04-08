@@ -468,6 +468,13 @@
 					
 					<div class="owl-item">
 						<div class="team-member" style="background-color: #fff;">
+							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/aix-logo.jpg" alt="AiX" /></div>
+							
+						</div>
+					</div>
+                    
+                    <div class="owl-item">
+						<div class="team-member" style="background-color: #fff;">
 							<div class="member-image image"><img class="img-responsive" data-lazy="../assets/images/page/circle-logo.jpg" alt="Circle" /></div>
 							
 						</div>
