@@ -130,8 +130,9 @@
                                             <div class="card-footer border-0 text-center">
                                             <div class="form-actions">
                                                 <div class="row">
-                                                    <div class="col-md-12 footerBtns">
-                                                        <button type="submit" id="bond_create" class="btnn btnn-primary btnn-rounded"  > Create Bond</button>
+                                                    <!--<div class="col-md-12 footerBtns">-->
+                                                    <div class="col-md-12">
+                                                        <button type="submit" id="bond_create" class="btnn btnn-primary btnn-rounded"> Create Bond</button>
                                                         <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
 													</div>
 													<br>
@@ -243,7 +244,7 @@
                                                 
                                             </label> -->
                                             <div class="dynamic_table">
-                                            <button type="submit" id="refreshBondsList" class="btnn btnn-primary btnn-rounded" style = "float:right" > Refresh </button>
+                                            <button type="submit" id="refreshBondsList" class="btnn btnn-primary btnn-rounded"> Refresh </button>
                                
 
                                     <div class="table-responsive">

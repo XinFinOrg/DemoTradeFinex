@@ -8743,8 +8743,20 @@ div.dataTables_wrapper div.dataTables_info {
 }
 .btnn.btnn-rounded, a:link.btnn.btnn-rounded {
     border-radius: 50px;
-    padding: 6px 25px;
+    padding: 6px 20px!important;
+	height: 40px!important;
+	float:right;
 }
+
+
+
+#bonds_listing_wrapper {margin-top: 50px;}
+#bonds_listing_filter {margin-top: -40px;}
+div.dataTables_wrapper div.dataTables_filter {text-align:left!important;}
+@media screen and (max-width: 767px) {#bonds_listing_filter {margin-top:0px!important;}}
+
+
+
 .btnn-light {
     background-color: #fff;
     border-color: rgba(141,166,195,.5) !important;
@@ -8917,8 +8929,8 @@ hr {
 
 #bondCompleteTab .dynamic_table label {
 	margin-top: -48px;
-    position: absolute;
-    /* left: 480px; */
+    /*position: absolute;
+    left: 480px; */
     font-size: 14px;
     text-transform: uppercase;
     color: #282c3f;

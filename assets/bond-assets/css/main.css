@@ -22,8 +22,10 @@ body .top-toolbar-wrapper .top-toolbar ul li>a>i,body .top-toolbar-wrapper .top-
 
 
 
-
-
+.card .card-footer {
+    padding: 2rem 0rem 1rem 0px!important;
+    background-color: transparent!important;
+}
 form select option:first-of-type {
 	color: #a0afca;
 }
