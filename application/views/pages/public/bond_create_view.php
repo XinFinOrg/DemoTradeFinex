@@ -1,5 +1,6 @@
 <!-- START APP WRAPPER -->
         <header>
+            <link rel="stylesheet" href="<?=base_url();?>assets/bond-assets/css/bootstrap.css" />
             <link rel="stylesheet" href="<?=base_url();?>assets/bond-assets/css/main.css" />
             <link rel="stylesheet" href="<?=base_url();?>assets/bond-assets/css/auto-hide.css" />
             <link rel="stylesheet" type="text/css" href="<?=base_url('assets/bond-assets/css/datatables/dataTables.bootstrap.1.10.15.min.css');?>" />
@@ -233,19 +234,16 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
-                                <div class="card-body">
-                                    
-                                    
-                                    <div class="form-group col-md-12 mb-4">
+                                <div class="card-body">                                   
+                                   
+                                   <div class="form-group col-md-12 mb-4">
                                             <!-- <label class="right-inner-addon">
                                                 <i class="  fa fa-search"></i>
                                                 <input type="search" class="form-controlCustom input-sm" aria-controls="bonds_listing" placeholder="Search...">
                                                 
                                             </label> -->
-                                            <div class="dynamic_table   ">
+                                            <div class="dynamic_table">
                                             <button type="submit" id="refreshBondsList" class="btnn btnn-primary btnn-rounded" style = "float:right" > Refresh </button>
-                                   
-                                       
                                
 
                                     <div class="table-responsive">
@@ -258,19 +256,17 @@
                                                         <th>Total Supply</th>
                                                         <th>Face Value</th>
                                                         <th class="text-center"style="width:14%;">Status</th>
-                                                        <th>Address</th>
-                                                        
+                                                        <th>Address</th>                                                        
                                                     </tr>
                                                 </thead>
                                                 <tbody id="discoverBondTable">
-
                                                 </tbody>
                                             </table>
                                         </div>
-                                    </div>
-                                    
+                                    </div>                                    
                                 </div>
                                 </div>
+                                
                                 </div>
                                 
                                 
