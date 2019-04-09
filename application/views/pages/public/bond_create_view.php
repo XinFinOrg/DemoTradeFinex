@@ -9,7 +9,18 @@
         <!-- START TOP HEADER WRAPPER -->
         <div class="header-wrapper">
             
-
+			<div class="header-top">
+                <!-- START MOBILE MENU TRIGGER -->
+                <ul class="mobile-only navbar-nav nav-left">
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-toggle-state="aside-left-open">
+                            <i class="icon dripicons-align-justify"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- END MOBILE MENU TRIGGER -->
+            </div>
+            
             <!-- START HEADER BOTTOM -->
             <div class="header-bottom">
                 <div class="container">
@@ -18,8 +29,8 @@
                         <ul class="nav metismenu">
                             <li class="sidebar-header mobile-only mobile-nav-heading"><span>&nbsp;</span></li>
                             <li><a class="active" id="createBondHeader" ><i class="icon dripicons-document-edit"></i><span class="hide-menu">1. Create Bond</span></a></li>
-                            <li><a  id="deployHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">2. Deploy</span></a></li>
-                            <li><a  id="bondCompleteHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">3. Discover Bonds</span></a></li>
+                            <li><a id="deployHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">2. Deploy</span></a></li>
+                            <li><a id="bondCompleteHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">3. Discover Bonds</span></a></li>
                             <!-- <li><a href="issue-quote.html"><i class="icon dripicons-export"></i><span class="hide-menu">Issue Quote</span></a></li>
                             <li><a href="create-organization.html"><i class="icon dripicons-user-group"></i><span class="hide-menu">Create Organization</span></a></li>
                             <li><a href="portfolio.html"><i class="icon dripicons-folder-open"></i><span class="hide-menu">Portfolio</span></a></li>
