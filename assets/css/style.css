@@ -8972,5 +8972,43 @@ span .current {
 	cursor: pointer;
 }
 
+.hauth input[type="text"],
+.hauth input[type="password"] {
+	height: 60px;
+	border: none;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+#provider-list {	
+	display: flex;
+	list-style:none;
+	margin:0;
+	padding:0px ;
+	height:57px;
+}
+
+#provider-list a:link, a:visited {
+	position: relative;;
+	width:auto;
+	float: left;
+	margin:0 10px;
+	padding:12px 30px;
+	/* background:#f8f8f8; */
+	background-color: #57bce2;
+	border-radius: 50px!important;
+	color: #FFF;
+  	text-align: center;
+  	text-decoration: none;
+  	
+}
+#provider-list a:hover, a:active {
+	background-color: #f29a32;
+  }
+
+/* #provider-list a.connected {
+	padding-left:35px;
+} */
+
+
 
 
