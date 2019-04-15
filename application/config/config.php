@@ -52,7 +52,7 @@ date_default_timezone_set('Asia/Kolkata');
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol']	= 'AUTO';
 
 /*
 |--------------------------------------------------------------------------
@@ -182,6 +182,7 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 | use segment based URLs.
 |
 */
+
 $config['enable_query_strings'] = FALSE;
 $config['controller_trigger'] = 'c';
 $config['function_trigger'] = 'm';
@@ -223,7 +224,7 @@ $config['allow_get_array'] = TRUE;
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 4;
+$config['log_threshold'] = 2;
 
 /*
 |--------------------------------------------------------------------------
@@ -377,13 +378,16 @@ $config['encryption_key'] = 'Slick50!';
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
 */
-$config['sess_driver'] = 'files';
+$config['sess_driver'] = "database";
 $config['sess_cookie_name'] = 'ci_session';
-$config['sess_expiration'] = 7200;
-$config['sess_save_path'] =  __DIR__.'/session';
-$config['sess_match_ip'] = FALSE;
+$config['sess_expiration']  = 7200;
+// $config['sess_save_path']   =  __DIR__.'/session';
+$config['sess_table_name']	= 'tf_ci_sessions';
+$config['sess_match_ip']    = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -453,7 +457,7 @@ $config['csrf_token_name'] = 'csrf_iksen_tslick50';
 $config['csrf_cookie_name'] = 'csrf_iksen_cslick50';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = FALSE;
-$config['csrf_exclude_uris'] = array('user/update_log', 'user/update_visibility', 'user/update_notification', 'notify/listing_count', 'notify/listing_ui', 'notify/mlisting_ui', 'notify/mlisting_count', 'listing/details', 'listing/search' , 'notify/update_notifyc', 'project/cancel_invite', 'registration/get_regotp','user/edit','user/update_membership');
+$config['csrf_exclude_uris'] = array('user/update_log', 'user/update_visibility', 'user/update_notification', 'notify/listing_count', 'notify/listing_ui', 'notify/mlisting_ui', 'notify/mlisting_count', 'listing/details', 'listing/search' , 'notify/update_notifyc', 'project/cancel_invite', 'registration/get_regotp');
 
 /*
 |--------------------------------------------------------------------------
@@ -502,7 +506,7 @@ $config['time_reference'] = 'local';
 | Note: You need to have eval() enabled for this to work.
 |
 */
-$config['rewrite_short_tags'] = FALSE;
+$config['rewrite_short_tags'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -521,3 +525,8 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+function __autoload($class) {
+    if (file_exists(APPPATH."core/".$class.'.php')) {
+        include_once(APPPATH."core/".$class.'.php');
+    }
+}
