@@ -32,20 +32,20 @@ $config =
 			"Google" => array (
 				"enabled" => true,
 				"keys"    => array ( "id" => "974340167294-4tm547181uu7v0gtqj4d1bv4gp1ffugq.apps.googleusercontent.com", "secret" => "s1gEY7eIayJBjcYHbsvnA8Ha" ),
-				"redirect_uri"=> "http://localhost/demotrade/hauth/?hauth.done=google",
+				"redirect_uri"=> "https://demo.tradefinex.org/hauth/?hauth.done=google",
 
 			),
 
 			"Facebook" => array (
 				"enabled" => true,
 				"keys"    => array ( "id" => "2080555445396680", "secret" => "e169cd179a489dfc3901a69f9771d29e" ),
-				"redirect_uri"=> "http://demotradefinex.org/hauth",
+				"redirect_uri"=> "https://demo.tradefinex.org/hauth",
 			),
 
 			"GitHub" => array (
 				"enabled" => true,
 				"keys" => array("id" => "9165e7bb6bc76709e42e", "secret" =>"587a7cb2b2901967518ff28cfde11cf89b37ece4"),
-				"redirect_uri"=>"	http://localhost/demotrade/hauth/?hauth.done=Github",
+				"redirect_uri"=>"	https://demo.tradefinex/hauth/?hauth.done=Github",
 
 			),
 
