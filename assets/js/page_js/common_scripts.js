@@ -1045,7 +1045,7 @@ $(function () {
 						"url": "https://api.mycontract.co/v1/invoice/quickbook/uploadInvoice",
 						"method": "POST",
 						"headers": {
-							"content-type": "multipart/form-data;"
+							"content-type": "multipart/form-data"
 						},
 						"processData": false,
 						"data": fileData
