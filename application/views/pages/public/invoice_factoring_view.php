@@ -317,13 +317,13 @@
         
 
         <!--JS SCRIPTS-->
-        <script src="assets/js/modernizr.custom.js"></script>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/storage.js"></script>
-        <script src="assets/js/menu.js"></script>
-        <script src="assets/js/jquery.mCustomScrollbar.js"></script>
+        <script src="assets/bond-assets/js/modernizr.custom.js"></script>
+        <script src="assets/bond-assets/js/jquery.min.js"></script>
+        <script src="assets/bond-assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/bond-assets/js/storage.js"></script>
+        <script src="assets/bond-assets/js/menu.js"></script>
+        <script src="assets/bond-assets/js/jquery.mCustomScrollbar.js"></script>
 
         <!--MAIN JS-->
-        <script src="assets/js/main.js"></script>
+        <script src="assets/bond-assets/js/main.js"></script>
 
