@@ -1039,7 +1039,7 @@ $(function () {
 				}
 				var fileHash;
 				if (res.token != null && res.token == token) {
-					var settings = {
+					var invoice = {
 						"async": true,
 						"crossDomain": true,
 						"url": "https://api.mycontract.co/v1/invoice/quickbook/uploadInvoice",
@@ -1052,7 +1052,7 @@ $(function () {
 					}
 					
 
-					$.ajax(settings).done(function (response) {
+					$.ajax(invoice).done(function (response) {
 						console.log('response>>>>', response);
 						fileHash = response.hash;
 
