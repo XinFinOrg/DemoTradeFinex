@@ -1038,7 +1038,7 @@ $(function () {
 					console.log('filedata>>>>', fileData)
 				}
 				var fileHash;
-				if (res.token != null && res.token == token) {
+				
 					var invoice = {
 						"async": true,
 						"crossDomain": true,
@@ -1183,7 +1183,7 @@ $(function () {
 					
 				}
 					});
-				}
+				
 
 				
 			})
