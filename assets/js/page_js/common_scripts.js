@@ -1055,10 +1055,11 @@ $(function () {
 					$.ajax(settings).done(function (response) {
 						console.log('response>>>>', response);
 						fileHash = response.hash;
-					});
-				}
 
-				formDataObj['hash'] = fileHash;
+
+
+						// after file upload make erc721 call
+						formDataObj['hash'] = fileHash;
 
 				if (res.token != null && res.token == token) {
 					var settings = {
@@ -1181,6 +1182,10 @@ $(function () {
 					});
 					
 				}
+					});
+				}
+
+				
 			})
 				
 				.fail(function () {
