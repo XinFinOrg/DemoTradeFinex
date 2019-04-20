@@ -608,12 +608,76 @@ $(function () {
 				maxlength: 15,
 				LetterOnly: true
 			},
+			industry:{
+				required: true,
+				minlength: 1,
+				maxlength: 15,
+				LetterOnly: true
+			},
 			tokenSymbol: {
 				required: true,
 				minlength: 2,
 				maxlength: 10,
 				LetterOnly: true
 			},
+			isin: {
+				required: true,
+				minlength: 2,
+				maxlength: 10,
+				alphanumericOnly: true
+			},
+			cusip: {
+				required: true,
+				minlength: 2,
+				maxlength: 10,
+				alphanumericOnly: true
+			},
+			moodys: {
+				required: true,
+				minlength: 2,
+				maxlength: 10,
+				alphanumericOnly: true
+			},
+			snp: {
+				required: true,
+				minlength: 2,
+				maxlength: 10,
+				alphanumericOnly: true
+			},
+			fitch: {
+				required: true,
+				minlength: 2,
+				maxlength: 10,
+				alphanumericOnly: true
+			},
+			fsDate: {
+				required: true,
+			},
+			maturityDate: {
+				required: true,
+			},
+			amtstanding: {
+				required: true,
+				minlength: 2,
+				maxlength: 10,
+				LetterOnly: true
+			},
+			frequency: {
+				required: true,
+				minlength: 2,
+				maxlength: 10,
+				LetterOnly: true
+			},
+			firstDate: {
+				required: true,
+			},
+			benchmark: {
+				required: true,
+				minlength: 2,
+				maxlength: 10,
+				alphanumericOnly: true
+			},
+			
 			tokenSupply: {
 				required: true,
 				min:1,
@@ -639,13 +703,7 @@ $(function () {
 				minlength: 1,
 				DecNumberOnly: true
 			},
-			tenure: {
-				required: true,
-				min:1,
-				max:100,
-				minlength: 1,
-				numberOnly: true
-			},
+			
 			defaultReal: {
 				equalTo: '#captcha_val'
 			}
@@ -657,6 +715,77 @@ $(function () {
 				minlength: "Characters length should be atleast 2",
 				maxlength: "Characters length should not exceeded than 15"
 			},
+			industry: {
+				required: "Please enter Industry",
+				minlength: "Characters length should be atleast 1",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			isin: {
+				required: "Please enter ISIN",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			cusip: {
+				required: "Please enter CUSIP",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			moodys: {
+				required: "Please enter Moody's",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			snp: {
+				required: "Please enter S&P",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			fitch: {
+				required: "Please enter Fitch",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			fsDate: {
+				required: "Please enter First Settle Date",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			maturityDate: {
+				required: "Please enter Maturity Date",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			ethRate: {
+				required: "Please enter Face Value",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			bonusRate: {
+				required: "Please enter Amount Outstanding",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			frequency: {
+				required: "Please enter frequency",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			firstDate: {
+				required: "Please enter First Date",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			coupon: {
+				required: "Please enter coupon",
+				min:"Please enter value more than 0.1",
+				minlength: "Digits length should be atleast 2"
+			},
+			benchmark: {
+				required: "Please enter Benchmark",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			
 			tokenSymbol: {
 				required: "Please enter bond symbol",
 				minlength: "Characters length should be atleast 2",
@@ -667,33 +796,8 @@ $(function () {
 				min:"Please enter value more than 0",
 				minlength: "Digits length should be atleast 2"
 			},
-			ethRate: {
-				required: "Please enter face value",
-				min:"Please enter value more than 0",
-				minlength: "Digits length should be atleast 2"
-			},
-			bonusRate: {
-				required: "Please enter minimum contribution",
-				min:"Please enter value more than 0",
-				minlength: "Digits length should be atleast 2",
-				maxlength: "Digits length should not exceeded than 15"
-			},
-			coupon: {
-				required: "Please enter coupon",
-				min:"Please enter value more than 0.1",
-				minlength: "Digits length should be atleast 2"
-			},
-			tenure: {
-				required: "Please enter tenure",
-				min:"Please enter value more than 0",
-				minlength: "Digits length should be atleast 2",
-				
-			},
-			dvalue: {
-				required: "Please enter discount value",
-				minlength: "Digits length should be atleast 2",
-				maxlength: "Digits length should not exceeded than 15"
-			},
+			defaultReal:"Please enter correct captcha (Letters are Case sensitive)."
+			
 		},
 		onkeyup: function (elem) {
 
@@ -868,78 +972,300 @@ $(function () {
 
 
 	});
-
-
-
-	$("#advertise-form").validate({
+	$("#invoice_factoring-form").validate({
 		rules: {
-			mname: {
+			tokenName:{
 				required: true,
 				minlength: 2,
-				maxlength: 30,
+				maxlength: 15,
 				LetterOnly: true
 			},
-			memail: {
-				EmailGeneral: true,
-				required: true
-			},
-			mmob: {
+			tokenSymbol:{
 				required: true,
-				//numberOnly: true,
-				mobilenumberOnly: true
-			},
-			mcomp: {
-				required: true,
-				minlength: 3,
-				maxlength: 40,
-				CalphanumericOnly: true
-			},
-			musertype: "required",
-			mmsg: {
-				required: true,
-				minlength: 5,
-				maxlength: 5,
-				messageFormat1: true
+				minlength: 2,
+				maxlength: 10,
+				LetterOnly: true
 			},
 			defaultReal: {
 				equalTo: '#captcha_val'
 			}
+
 		},
 		messages: {
-			mname: {
-				required: "Please enter Your full name",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
-			},
-			memail: "Please enter a valid email",
-			mcomp: {
-				required: "Please enter company name",
-				minlength: "Characters length should be atleast 3",
-				maxlength: "Characters length should not exceeded than 40"
-			},
-			musertype: "Please choose a user type",
-			mmsg: {
-				required: "Please type your message",
-				minlength: "Text length should be atleast 5",
-				maxlength: "Characters length should not exceeded than 140"
-			},
-			mmob: {
-				required: "Please enter a valid mobile number"
-			},
-			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
+			
+			defaultReal:"Please enter correct captcha (Letters are Case sensitive)."
+			
 		},
 		onkeyup: function (elem) {
 
 			var element_id = $(elem).attr('id');
 
-			if (element_id == 'mname' || element_id == 'mmsg' || element_id == 'mcomp') {
+			if (element_id == 'tokenName' || element_id == 'tokenSymbol') {
 
 				var strv = $('#' + element_id).val();
 
 				$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
+
 			}
+
+		},
+		success: function (elem) {
+		},
+		error: function (elem) {
+		},
+		submitHandler: function (form) {
+			$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {0
+				// console.log(res);
+				localStorage.setItem("token", res.token);
+				var formData = $(form).serialize();
+				const formObj = formData.trim().split('&');
+				var formDataObj = {};
+				$.each(formObj, function (k, v) {
+					v = v.split('=');
+					formDataObj[v[0]] = v[1];
+				});
+				
+				// console.log('formDataObj', formDataObj);
+				localStorage.setItem("formData", formData);
+				var token = localStorage.getItem("token", res.token);
+				// console.log(token);
+				showLoader();
+				$('#invoiceData').prop('disabled', true);
+				var input = document.querySelector('input[type="file"]');
+				var fileData;
+				for (const file of input.files) {
+					fileData = file;
+					console.log('filedata>>>>', fileData)
+				}
+				var fileHash;
+				if (res.token != null && res.token == token) {
+					var settings = {
+						"async": true,
+						"crossDomain": true,
+						"url": "https://api.mycontract.co/v1/invoice/quickbook/uploadInvoice",
+						"method": "POST",
+						"headers": {
+							"content-type": "multipart/form-data;"
+						},
+						"processData": false,
+						"data": fileData
+					}
+					
+
+					$.ajax(settings).done(function (response) {
+						console.log('response>>>>', response);
+						fileHash = response.hash;
+					});
+				}
+
+				formDataObj['hash'] = fileHash;
+
+				if (res.token != null && res.token == token) {
+					var settings = {
+						"async": true,
+						"crossDomain": true,
+						"url": "https://api.mycontract.co/v1/smartcontract/ERC721",
+						"method": "POST",
+						"headers": {
+							"content-type": "application/json",
+							"authorization":token
+						},
+						"processData": false,
+						"data": formDataObj
+					}
+					
+
+					$.ajax(settings).done(function (response) {
+
+						$('#uploadinvoiceTab').hide();
+						$('#invoicedeployTab').show();
+						$('#uploadeinvoiceHeader').removeClass('active');
+						$('#invoicedeployHeader').addClass('active');
+						$('#uploadmanform').hide();
+						//console.log( response);
+						hideLoader();
+						$('#invoiceData').html('<p>'+response+'</p>');
+						// console.log('formdata done:', formDataObj.tokenName);
+						
+
+						// console.log('response', response);
+						if(response.status == false) {
+							$('#uploadinvoiceTab').show();
+							$('#invoiceexists').modal('show');
+							$('#invoicedeployTab').hide();
+							
+						} 
+						else {
+							// console.log('response else', response)
+							$('#uploadinvoiceTab').hide();
+							$('#invoicedeployTab').show();							
+							$('#uploadeinvoiceHeader').removeClass('active');
+							// $('#createBondHeader').off('click');
+							$('#uploadeinvoiceHeader').css('pointer-events', 'none');
+							$('#invoicedeployHeader').addClass('active');
+							//console.log( response);
+							hideLoader();
+							$('#invoiceData').html('<p>'+response+'</p>');
+							//console.log('formdata done:', formDataObj.tokenName);
+							const coinData = {
+								"coinName": formDataObj.tokenName,
+								"network" : "testnet"
+							};
+
+
+							$("#deploy_invoice").on('click', function (e) {
+								showLoader();
+								$('#deploy_invoice').prop('disabled', true);
+								var deploy = {
+									"async": true,
+									"crossDomain": true,
+									"url": "https://api.mycontract.co/v1/smartcontract/deploy",
+									"method": "POST",
+									"headers": {
+										"content-type": "application/json",
+										"authorization":token
+									},
+									"processData": false,
+									"data": JSON.stringify(coinData)
+								}
+								
+										
+								$.ajax(deploy).done(function(response){
+
+									if (response.status == true){
+										hideLoader();
+										$("#thankyouin").modal("show");
+										$('#DeployBtnn').click(function() {
+											$("#thankyouin").modal("hide");
+											$('#invoicedeployTab').hide();
+											$('#invoicedeployHeader').removeClass('active');
+											$('#invoiceCompleteHeader').addClass('active');
+											// $('#createBondHeader').on('click');
+											$('#uploadeinvoiceHeader').css('pointer-events', 'auto');
+											$('#invoiceCompleteTab').show();
+										
+											// var discover = {
+											// 		"async": true,
+											// 		"crossDomain": true,
+											// 		"url": "https://api.mycontract.co/v1/smartcontract/contracts",
+											// 		"method": "POST",
+											// 		"headers": {
+											// 			"content-type": "application/json",
+											// 			"authorization":token
+											// 		},
+											// 		"processData": false,
+											// 		"data": ""
+												
+											// }
+
+											// $.ajax(discover).done(function(response){
+											// 	// console.log(response);
+											// 	// response.projects
+											// 	bondList(response.projects);
+											// 	// $('#createBondHeader').on('click');
+											// })
+										});
+									}
+									// console.log('response', response, response.crowdsaleReceipt.transactionHash);
+									else{
+										alert("Oops!!Something went wrong");
+										location.reload();
+									}
+							
+								});
+						
+							
+							});
+
+							}		
+					});
+					
+				}
+			})
+				
+				.fail(function () {
+					alert("error");
+				});
+
 		}
+
+
 	});
+
+
+	$('#uploadman').click(function() {
+		$('#uploadinvoiceTab').hide();
+		$('#uploadmanform').show();
+	})
+	// $("#advertise-form").validate({
+	// 	rules: {
+	// 		mname: {
+	// 			required: true,
+	// 			minlength: 2,
+	// 			maxlength: 30,
+	// 			LetterOnly: true
+	// 		},
+	// 		memail: {
+	// 			EmailGeneral: true,
+	// 			required: true
+	// 		},
+	// 		mmob: {
+	// 			required: true,
+	// 			//numberOnly: true,
+	// 			mobilenumberOnly: true
+	// 		},
+	// 		mcomp: {
+	// 			required: true,
+	// 			minlength: 3,
+	// 			maxlength: 40,
+	// 			CalphanumericOnly: true
+	// 		},
+	// 		musertype: "required",
+	// 		mmsg: {
+	// 			required: true,
+	// 			minlength: 5,
+	// 			maxlength: 5,
+	// 			messageFormat1: true
+	// 		},
+	// 		defaultReal: {
+	// 			equalTo: '#captcha_val'
+	// 		}
+	// 	},
+	// 	messages: {
+	// 		mname: {
+	// 			required: "Please enter Your full name",
+	// 			minlength: "Characters length should be atleast 2",
+	// 			maxlength: "Characters length should not exceeded than 30"
+	// 		},
+	// 		memail: "Please enter a valid email",
+	// 		mcomp: {
+	// 			required: "Please enter company name",
+	// 			minlength: "Characters length should be atleast 3",
+	// 			maxlength: "Characters length should not exceeded than 40"
+	// 		},
+	// 		musertype: "Please choose a user type",
+	// 		mmsg: {
+	// 			required: "Please type your message",
+	// 			minlength: "Text length should be atleast 5",
+	// 			maxlength: "Characters length should not exceeded than 140"
+	// 		},
+	// 		mmob: {
+	// 			required: "Please enter a valid mobile number"
+	// 		},
+	// 		defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
+	// 	},
+	// 	onkeyup: function (elem) {
+
+	// 		var element_id = $(elem).attr('id');
+
+	// 		if (element_id == 'mname' || element_id == 'mmsg' || element_id == 'mcomp') {
+
+	// 			var strv = $('#' + element_id).val();
+
+	// 			$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
+	// 		}
+	// 	}
+	// });
 
 	$("#consortium-form").validate({
 		rules: {
@@ -1017,70 +1343,70 @@ $(function () {
 		}
 	});
 
-	$("#careers-form").validate({
-		rules: {
-			mfname: {
-				required: true,
-				minlength: 2,
-				maxlength: 30,
-				LetterOnly: true
-			},
-			memail: {
-				required: true,
-				EmailGeneral: true
-			},
-			mmob: {
-				required: true,
-				//numberOnly: true,
-				mobilenumberOnly: true
-			},
-			mlinkurl: {
-				required: true,
-				LinkedinUrl: true
-			},
-			mcoverl: {
-				required: true,
-				minlength: 5,
-				maxlength: 150,
-				messageFormat2: true
-			},
-			mfile: "required",
-			defaultReal: {
-				equalTo: '#captcha_val'
-			}
-		},
-		messages: {
-			mfname: {
-				required: "Please enter Your full name",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30"
-			},
-			memail: "Please enter a valid email",
-			mlinkurl: "Please enter a valid Linkedin URL",
-			mcoverl: {
-				required: "Please write few words about Yourself",
-				minlength: "Characters length should be atleast 5",
-				maxlength: "Characters length should not exceeded than 150"
-			},
-			mfile: "Please upload Your resume(.pdf only)",
-			mmob: {
-				required: "Please enter a valid mobile number"
-			},
-			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
-		},
-		onkeyup: function (elem) {
+	// $("#careers-form").validate({
+	// 	rules: {
+	// 		mfname: {
+	// 			required: true,
+	// 			minlength: 2,
+	// 			maxlength: 30,
+	// 			LetterOnly: true
+	// 		},
+	// 		memail: {
+	// 			required: true,
+	// 			EmailGeneral: true
+	// 		},
+	// 		mmob: {
+	// 			required: true,
+	// 			//numberOnly: true,
+	// 			mobilenumberOnly: true
+	// 		},
+	// 		mlinkurl: {
+	// 			required: true,
+	// 			LinkedinUrl: true
+	// 		},
+	// 		mcoverl: {
+	// 			required: true,
+	// 			minlength: 5,
+	// 			maxlength: 150,
+	// 			messageFormat2: true
+	// 		},
+	// 		mfile: "required",
+	// 		defaultReal: {
+	// 			equalTo: '#captcha_val'
+	// 		}
+	// 	},
+	// 	messages: {
+	// 		mfname: {
+	// 			required: "Please enter Your full name",
+	// 			minlength: "Characters length should be atleast 2",
+	// 			maxlength: "Characters length should not exceeded than 30"
+	// 		},
+	// 		memail: "Please enter a valid email",
+	// 		mlinkurl: "Please enter a valid Linkedin URL",
+	// 		mcoverl: {
+	// 			required: "Please write few words about Yourself",
+	// 			minlength: "Characters length should be atleast 5",
+	// 			maxlength: "Characters length should not exceeded than 150"
+	// 		},
+	// 		mfile: "Please upload Your resume(.pdf only)",
+	// 		mmob: {
+	// 			required: "Please enter a valid mobile number"
+	// 		},
+	// 		defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
+	// 	},
+	// 	onkeyup: function (elem) {
 
-			var element_id = $(elem).attr('id');
+	// 		var element_id = $(elem).attr('id');
 
-			if (element_id == 'mfname' || element_id == 'mcoverl') {
+	// 		if (element_id == 'mfname' || element_id == 'mcoverl') {
 
-				var strv = $('#' + element_id).val();
+	// 			var strv = $('#' + element_id).val();
 
-				$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
+	// 			$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
 
-			}
-		}
-	});
+	// 		}
+	// 	}
+	// });
 
 	$('#mfile').change(function () {
 		/* here we take the file extension and set an array of valid extensions */
@@ -1163,3 +1489,7 @@ $(function () {
 		location.reload();
 	});
 });
+
+
+
+

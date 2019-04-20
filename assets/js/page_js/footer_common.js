@@ -238,6 +238,23 @@
 			$('#deployTab').hide();
 			$('#bondCompleteTab').hide()
 		});	
+		
+		$('#invoiceCompleteHeader').click(function() {
+			$('#uploadeinvoiceHeader').removeClass('active');
+			$('#invoiceCompleteHeader').addClass('active')
+			$('#uploadinvoiceTab').hide();
+			$('#invoicedeployTab').hide();
+			$('#invoiceCompleteTab').show();
+		});	
+
+		$('#uploadeinvoiceHeader').click(function() {
+			$('#uploadeinvoiceHeader').addClass('active');
+			$('#invoiceCompleteHeader').removeClass('active')
+			$('#uploadinvoiceTab').show();
+			$('#invoicedeployTab').hide();
+			$('#invoiceCompleteTab').hide()
+		});	
+		
 		searchButton();goTop();removePreloader();responsiveMenu();/* slideTeam(); */
 		
 		$('.lazy').slick({

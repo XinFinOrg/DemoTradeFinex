@@ -1988,6 +1988,57 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/footern');
 	}
 	
+	public function invoice_factoring(){
+		
+		$data = array();
+		
+		$data['page'] = 'invoice_factoring';
+		$data['msg'] = '';
+		$data['user_id'] = 0;
+		$data['user_type'] = '';
+		$data['full_name'] = '';
+		$data['ufname'] = '';
+		$data['ulname'] = '';
+		$data['uemail'] = '';
+		$data['ucontact'] = '';
+		$data['uaddress'] = '';
+		$data['uname'] = '';
+		$data['upass'] = '';
+		$data['uprofpic'] = '';
+		
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+				
+		
+		
+		$data['notifications'] = array();
+		$data['notifications'] = get_initial_notification_status();
+		
+		if($data['user_id'] <> 0){
+			
+			$options = array();
+			$options['user_id'] = $data['user_id'];
+			$options['user_type'] = $data['user_type_ref'];
+			
+			$data['notifications'] = get_notification_status($options);
+		}
+		
+		$this->load->view('includes/headern', $data);
+		$this->load->view('includes/header_publicn', $data);
+		
+		$this->load->view('pages/public/invoice_factoring_view', $data);
+		$this->load->view('includes/footer_commonn', $data);
+		$this->load->view('pages_scripts/common_scripts', $data);
+		$this->load->view('includes/footern');
+	}
+	
+
 	public function news(){
 		
 		$data = array();
