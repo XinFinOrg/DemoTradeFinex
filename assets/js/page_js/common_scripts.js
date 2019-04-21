@@ -1253,7 +1253,7 @@ $(function () {
 											var discover = {
 												"async": true,
 												"crossDomain": true,
-												"url": "https://api.mycontract.co/v1/smartcontract/contracts",
+												"url": "https://api.mycontract.co/v1/smartcontract/invoices",
 												"method": "POST",
 												"headers": {
 													"content-type": "application/json",
