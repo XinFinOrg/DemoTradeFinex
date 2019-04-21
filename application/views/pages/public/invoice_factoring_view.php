@@ -208,6 +208,12 @@
                                                             <span class="form-name floating-label">isOwnable<sup>*</sup></span> 
                                                         </label>
 								                    </div>
+                                                    <div class="">
+                                                        <label class="hidden">
+                                                            <input class="input-focus input-focus-notr" id="type" name="type" value="invoice"/>
+                                                            <span class="form-name floating-label">type<sup>*</sup></span> 
+                                                        </label>
+								                    </div>
                                                         
                                     </div>
                                 
@@ -292,7 +298,7 @@
                                                 
                                             </label> -->
                                             <div class="dynamic_table">
-                                            <button type="submit" id="refreshBondsList" class="btnn btnn-primary btnn-rounded float-right"> Refresh </button>
+                                            <button type="submit" id="refreshinvoiceList" class="btnn btnn-primary btnn-rounded float-right"> Refresh </button>
                                
 
                                     <div class="table-responsive">
@@ -302,14 +308,14 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Invoice ID</th>
-                                                        <th>Contract ID</th>
-                                                        <th>Invoice Hash</th>
-                                                        <th class="text-center"style="width:14%;">Status</th>
+                                                        <th style="width:14%;">Contract ID</th>
+                                                        <th class=""style="width:14%;">Status</th>
                                                         <th>Date/Time</th>
+                                                        <th style="width:25%;">Invoice Hash</th>
                                                         <th>Address</th>                                                        
                                                     </tr>
                                                 </thead>
-                                                <tbody id="discoverBondTable">
+                                                <tbody id="discoverinvoiceTable">
                                                 </tbody>
                                             </table>
                                         </div>
@@ -325,6 +331,38 @@
                 </section>
             </div>
         </div>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+  <script>
+   
+
+    var tableContent = $('#discoverinvoiceTable').html();
+    
+ 
+
+  </script>
+
+        <div id="loader" style="display: none;"></div>
+<div class="modal fade" id="invoiceexists" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static" >
+		<div class="modal-dialog">
+		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
+			<div class="modal-content">
+                <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
+
+						<p>Sorry!! Bond Name already exists.</p>
+						<p>Try another Bond Name.</p>
+						
+						<div class="btnn-more">
+							<button id="sorry" type="submit" class="btnn btnn-primary btnn-rounded"  data-keyboard="false"> Ok </button> 
+						</div>						
+							                                           
+				</div>
+			</div>
+	 	</div>
+</div>
+
 
 <div id="loader" style="display: none;"></div>
 <div class="modal fade" id="invoiceprocess" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">

@@ -484,7 +484,7 @@ $(function () {
 		var mergeSortedData = mergeSort(data);
 		$.each(mergeSortedData, function(k,v) {
 			// console.log('timestamp:',new Date(v.createdAt));
-			if(v.tokenContractHash == null) {
+			if(v.tokenContractAddress == null) {
 				status = "Pending";
 			} else {
 				status = "Deployed";
@@ -493,10 +493,10 @@ $(function () {
 								<tr class="bondRow">
 									<td>`+v.coinName+`</td>
 									<td>`+v.coinSymbol+`</td>
-									<td class="truncate"><td>`+v.hash+`</td>
 									<td>`+status+`</td>
 									<td>`+v.createdAt+`</td>
-									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/tx/`+v.tokenContractHash+`" target="_blank" >`+v.tokenContractHash+`</a><span></td>
+									<td class="truncate"><span><a href = "https://gateway.ipfs.io/ipfs/`+v.ipfsHash+`" target="_blank" >`+v.ipfsHash+`</a><span></td>
+									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/address/`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractHash+`</a><span></td>
 								</tr>
 								`;
 		});
@@ -639,6 +639,34 @@ $(function () {
 				console.log(response);
 				// response.projects
 				bondList(response.projects);
+				
+			})
+		});
+	 });
+
+	 $('#refreshinvoiceList').click(function() {
+		showLoader
+		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+				//console.log(res);
+			localStorage.setItem("token", res.token);
+			var token = localStorage.getItem("token");
+			var discover = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.mycontract.co/v1/smartcontract/invoices",
+				"method": "POST",
+				"headers": {
+					"content-type": "application/json",
+					"authorization":token
+				},
+				"processData": false,
+				"data": ""
+			
+			}
+			$.ajax(discover).done(function(response){
+				console.log(response);
+				// response.projects
+				invoiceList(response.projects);
 				
 			})
 		});
@@ -957,7 +985,8 @@ $(function () {
 							//console.log('formdata done:', formDataObj.tokenName);
 							const coinData = {
 								"coinName": formDataObj.tokenName,
-								"network" : "testnet"
+								"network" : "testnet",
+								"type" : "erc20"
 							};
 
 
@@ -1198,6 +1227,7 @@ $(function () {
 						if(response.status == false) {
 							$('#uploadinvoiceTab').show();
 							$('#invoiceexists').modal('show');
+							$('#invoiceexists').css('opacity', '1')
 							$('#invoicedeployTab').hide();
 							
 						} 
@@ -1215,7 +1245,8 @@ $(function () {
 							//console.log('formdata done:', formDataObj.tokenName);
 							const coinData = {
 								"coinName": formDataObj.tokenName,
-								"network" : "testnet"
+								"network" : "testnet",
+								"type" : "erc721"
 							};
 
 
