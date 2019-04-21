@@ -185,7 +185,7 @@
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <button id="invoice_factoring" type="submit" class="btnn btnn-primary btnn-rounded">UPLOAD</button>
-                                                            <button class="btnn btn-light btnn-rounded btn-outline">CANCEL</button>
+                                                            <!-- <button class="btnn btn-light btnn-rounded btn-outline">CANCEL</button> -->
                                                         </div>
                                                     </div>
                                                 </div>
