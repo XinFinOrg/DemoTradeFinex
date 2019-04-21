@@ -257,7 +257,7 @@
                                         <div class="row">
                                             <div class="col-md-12 footerBtns">
                                                 <p>It may take few seconds to deploy on public blockchain network.</p>
-                                                <button type="submit" id="deploy_invoice" class="btnn btnn-primary btnn-rounded"  > Your Bond is Ready To Deploy</button><br>
+                                                <button type="submit" id="deploy_invoice" class="btnn btnn-primary btnn-rounded"  > Your Invoice is Ready To Deploy</button><br>
                                                 <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
                                             </div>
                                             <br>
@@ -271,29 +271,9 @@
             </div>
     </div>
 
-<div id="loader" style="display: none;"></div>
-<div class="modal fade" id="invoiceexists" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static" >
-		<div class="modal-dialog">
-		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
-			<div class="modal-content">
-                <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
-                </div>
-				<div class="modal-body text-center">
 
-						<p>Sorry!! Invoice Name already exists.</p>
-						<p>Try another Invoice Name.</p>
-						
-						<div class="btnn-more">
-							<button id="sorry" type="submit" class="btnn btnn-primary btnn-rounded"  data-keyboard="false"> Ok </button> 
-						</div>						
-							                                           
-				</div>
-			</div>
-	 	</div>
-</div>
 <div id="loader" style="display: none;"></div>
-<div class="modal fade" id="thankyouin" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+<div class="modal fade" id="invoiceprocess" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog" style="">
 		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
 			<div class="modal-content">
@@ -305,7 +285,7 @@
 						<p>Invoice Deployment in process.</p>
 						
 						<div class="btnn-more">
-							<button id="DeployBtnn" type="submit" class="btnn btnn-primary btnn-rounded"  data-keyboard="false"> Ok </button> 
+							<button id="invoicebtn" type="submit" class="btnn btnn-primary btnn-rounded"  data-keyboard="false"> Ok </button> 
 						</div>						
 							                                           
 				</div>

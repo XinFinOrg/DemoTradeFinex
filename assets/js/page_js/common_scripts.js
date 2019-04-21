@@ -1032,26 +1032,24 @@ $(function () {
 				showLoader();
 				$('#invoiceData').prop('disabled', true);
 				var input = document.querySelector('input[type="file"]');
-				var fileData;
-				for (const file of input.files) {
-					fileData = file;
-					console.log('filedata>>>>', fileData)
-				}
+				var formData = new FormData();
+				formData.append("file", input.files[0]);
+				console.log('formdata>>>>', formData)
 				var fileHash;
-				
-					var invoice = {
-						"async": true,
-						"crossDomain": true,
-						"url": "https://api.mycontract.co/v1/invoice/quickbook/uploadInvoice",
-						"method": "POST",
-						"headers": {
-							"content-type": "multipart/form-data"
-						},
-						"processData": false,
-						"data": fileData
-					}
-					
 
+				var invoice = {
+					"async": true,
+					"crossDomain": true,
+					"url": "https://api.mycontract.co/v1/invoice/quickbook/uploadinvoice",
+					"method": "POST",
+					"async": true,
+					"data": formData,
+					"cache": false,
+					"contentType": false,
+					"processData": false,
+					"timeout": 60000
+				}
+				
 					$.ajax(invoice).done(function (response) {
 						console.log('response>>>>', response);
 						fileHash = response.hash;
@@ -1060,20 +1058,20 @@ $(function () {
 
 						// after file upload make erc721 call
 						formDataObj['hash'] = fileHash;
-
-				if (res.token != null && res.token == token) {
-					var settings = {
-						"async": true,
-						"crossDomain": true,
-						"url": "https://api.mycontract.co/v1/smartcontract/ERC721",
-						"method": "POST",
-						"headers": {
-							"content-type": "application/json",
-							"authorization":token
-						},
-						"processData": false,
-						"data": formDataObj
-					}
+						console.log('formdataobj', formDataObj)
+						if (res.token != null && res.token == token) {
+							var settings = {
+								"async": true,
+								"crossDomain": true,
+								"url": "https://api.mycontract.co/v1/smartcontract/ERC721",
+								"method": "POST",
+								"headers": {
+									"content-type": "application/json",
+									"authorization":token
+								},
+								"processData": false,
+								"data": JSON.stringify(formDataObj)
+							}
 					
 
 					$.ajax(settings).done(function (response) {
@@ -1100,9 +1098,9 @@ $(function () {
 							// console.log('response else', response)
 							$('#uploadinvoiceTab').hide();
 							$('#invoicedeployTab').show();							
-							$('#uploadeinvoiceHeader').removeClass('active');
+							$('#uploadinvoiceHeader').removeClass('active');
 							// $('#createBondHeader').off('click');
-							$('#uploadeinvoiceHeader').css('pointer-events', 'none');
+							$('#uploadinvoiceHeader').css('pointer-events', 'none');
 							$('#invoicedeployHeader').addClass('active');
 							//console.log( response);
 							hideLoader();
@@ -1132,39 +1130,20 @@ $(function () {
 								
 										
 								$.ajax(deploy).done(function(response){
-
+									console.log('response deploy>>', response)
 									if (response.status == true){
 										hideLoader();
-										$("#thankyouin").modal("show");
-										$('#DeployBtnn').click(function() {
-											$("#thankyouin").modal("hide");
+										$("#invoiceprocess").modal("show");
+										$('#invoiceprocess').css('opacity', '1')
+										$('#invoicebtn').click(function() {
+											$("#invoiceprocess").modal("hide");
 											$('#invoicedeployTab').hide();
 											$('#invoicedeployHeader').removeClass('active');
-											$('#invoiceCompleteHeader').addClass('active');
+											$('#uploadinvoiceHeader').addClass('active');
 											// $('#createBondHeader').on('click');
 											$('#uploadeinvoiceHeader').css('pointer-events', 'auto');
-											$('#invoiceCompleteTab').show();
+											$('#uploadinvoiceTab').show();
 										
-											// var discover = {
-											// 		"async": true,
-											// 		"crossDomain": true,
-											// 		"url": "https://api.mycontract.co/v1/smartcontract/contracts",
-											// 		"method": "POST",
-											// 		"headers": {
-											// 			"content-type": "application/json",
-											// 			"authorization":token
-											// 		},
-											// 		"processData": false,
-											// 		"data": ""
-												
-											// }
-
-											// $.ajax(discover).done(function(response){
-											// 	// console.log(response);
-											// 	// response.projects
-											// 	bondList(response.projects);
-											// 	// $('#createBondHeader').on('click');
-											// })
 										});
 									}
 									// console.log('response', response, response.crowdsaleReceipt.transactionHash);
@@ -1182,13 +1161,13 @@ $(function () {
 					});
 					
 				}
+					}).fail(function(error) {
+						console.log(error);
 					});
 				
 
 				
-			})
-				
-				.fail(function () {
+			}).fail(function () {
 					alert("error");
 				});
 
