@@ -478,6 +478,75 @@ $(function () {
 		document.getElementById("loader").style.display = "none";
 	}
 	
+	function invoiceList(data) {
+		var discoverinvoiceTable = "";
+		var status = "Deployed";
+		var mergeSortedData = mergeSort(data);
+		$.each(mergeSortedData, function(k,v) {
+			// console.log('timestamp:',new Date(v.createdAt));
+			if(v.tokenContractHash == null) {
+				status = "Pending";
+			} else {
+				status = "Deployed";
+			}
+			discoverinvoiceTable += `
+								<tr class="bondRow">
+									<td>`+v.coinName+`</td>
+									<td>`+v.coinSymbol+`</td>
+									<td class="truncate"><td>`+v.hash+`</td>
+									<td>`+status+`</td>
+									<td>`+v.createdAt+`</td>
+									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/tx/`+v.tokenContractHash+`" target="_blank" >`+v.tokenContractHash+`</a><span></td>
+								</tr>
+								`;
+		});
+
+		$('#discoverinvoiceTable').html(discoverinvoiceTable);
+		$("#bonds_listing").DataTable({
+			"bSort": false,
+			"dom": "Bfrtip",
+			"bDestroy": true,
+			"pageLength": 10
+			
+		});
+	}
+
+	// Split the array into halves and merge them recursively 
+	function mergeSort (arr) {
+		if (arr.length === 1) {
+		// return once we hit an array with a single item
+		return arr
+		}
+	
+		const middle = Math.floor(arr.length / 2) // get the middle item of the array rounded down
+		const left = arr.slice(0, middle) // items on the left side
+		const right = arr.slice(middle) // items on the right side
+	
+		return merge(
+		mergeSort(left),
+		mergeSort(right)
+		)
+	}
+	
+	// compare the arrays item by item and return the concatenated result
+	function merge (left, right) {
+		let result = []
+		let indexLeft = 0
+		let indexRight = 0
+	
+		while (indexLeft < left.length && indexRight < right.length) {
+		if (new Date(left[indexLeft].createdAt).getTime() > new Date(right[indexRight].createdAt).getTime()) {
+			result.push(left[indexLeft])
+			indexLeft++
+		} else {
+			result.push(right[indexRight])
+			indexRight++
+		}
+		}
+	
+		return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight))
+	}
+
 	function bondList(data) {
 		var discoverBondTable = "";
 		var status = "Deployed";
@@ -545,6 +614,7 @@ $(function () {
 	
 		return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight))
 	}
+
 
 	$('#refreshBondsList').click(function() {
 		showLoader
@@ -972,6 +1042,33 @@ $(function () {
 
 
 	});
+
+	$('#invoiceCompleteHeader').click(function() {
+		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+			//console.log(res);
+			localStorage.setItem("token", res.token);
+			var token = localStorage.getItem("token");
+			var discover = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.mycontract.co/v1/smartcontract/contracts",
+				"method": "POST",
+				"headers": {
+					"content-type": "application/json",
+					"authorization":token
+				},
+				"processData": false,
+				"data": ""
+			
+			}
+
+			$.ajax(discover).done(function(response){
+				 console.log(response);
+				// response.projects
+				invoiceList(response.projects);
+			})
+		});
+ 	});
 	$("#invoice_factoring-form").validate({
 		rules: {
 			tokenName:{
@@ -992,6 +1089,16 @@ $(function () {
 
 		},
 		messages: {
+			tokenName:{
+				required: "Please enter Invoice ID",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			tokenSymbol:{
+				required: "Please enter Contract ID",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 10"
+			},
 			
 			defaultReal:"Please enter correct captcha (Letters are Case sensitive)."
 			
@@ -1078,7 +1185,7 @@ $(function () {
 
 						$('#uploadinvoiceTab').hide();
 						$('#invoicedeployTab').show();
-						$('#uploadeinvoiceHeader').removeClass('active');
+						$('#uploadinvoiceHeader').removeClass('active');
 						$('#invoicedeployHeader').addClass('active');
 						$('#uploadmanform').hide();
 						//console.log( response);
@@ -1099,7 +1206,7 @@ $(function () {
 							$('#uploadinvoiceTab').hide();
 							$('#invoicedeployTab').show();							
 							$('#uploadinvoiceHeader').removeClass('active');
-							// $('#createBondHeader').off('click');
+							
 							$('#uploadinvoiceHeader').css('pointer-events', 'none');
 							$('#invoicedeployHeader').addClass('active');
 							//console.log( response);
@@ -1139,10 +1246,30 @@ $(function () {
 											$("#invoiceprocess").modal("hide");
 											$('#invoicedeployTab').hide();
 											$('#invoicedeployHeader').removeClass('active');
-											$('#uploadinvoiceHeader').addClass('active');
+											$('#invoiceCompleteHeader').addClass('active');
+											$('#uploadinvoiceHeader').css('pointer-events', 'auto');
+											$('#invoiceCompleteTab').show();
+
+											var discover = {
+												"async": true,
+												"crossDomain": true,
+												"url": "https://api.mycontract.co/v1/smartcontract/contracts",
+												"method": "POST",
+												"headers": {
+													"content-type": "application/json",
+													"authorization":token
+												},
+												"processData": false,
+												"data": ""
+											
+										}
+
+										$.ajax(discover).done(function(response){
+											// console.log(response);
+											// response.projects
+											invoiceList(response.projects);
 											// $('#createBondHeader').on('click');
-											$('#uploadeinvoiceHeader').css('pointer-events', 'auto');
-											$('#uploadinvoiceTab').show();
+										})
 										
 										});
 									}
@@ -1460,15 +1587,16 @@ $(function () {
 
 	});
 
-	$('#bondCreateCancel').click(function() {
-		location.reload();
-	});
+	
 
 	$('#createBondHeader').click(function() {
 		//console.log('alert')
 		location.reload();
 	});
-	
+	$('#uploadinvoiceHeader').click(function() {
+		//console.log('alert')
+		location.reload();
+	});
 	$('#sorry').click(function() {
 		location.reload();
 	});

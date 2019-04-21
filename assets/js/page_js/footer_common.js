@@ -238,17 +238,17 @@
 			$('#deployTab').hide();
 			$('#bondCompleteTab').hide()
 		});	
-		
+
 		$('#invoiceCompleteHeader').click(function() {
-			$('#uploadeinvoiceHeader').removeClass('active');
+			$('#uploadinvoiceHeader').removeClass('active');
 			$('#invoiceCompleteHeader').addClass('active')
 			$('#uploadinvoiceTab').hide();
 			$('#invoicedeployTab').hide();
 			$('#invoiceCompleteTab').show();
 		});	
 
-		$('#uploadeinvoiceHeader').click(function() {
-			$('#uploadeinvoiceHeader').addClass('active');
+		$('#uploadinvoiceHeader').click(function() {
+			$('#uploadinvoiceHeader').addClass('active');
 			$('#invoiceCompleteHeader').removeClass('active')
 			$('#uploadinvoiceTab').show();
 			$('#invoicedeployTab').hide();

@@ -152,18 +152,18 @@
                                                           
                                                     
                                                 <div class="form-group col-md-6">
-                                                    <label for="industry">Invoice Name</label>
-                                                    <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenName" name = "tokenName" placeholder="Invoice Name">
+                                                    <label for="industry">Invoice ID</label>
+                                                    <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenName" name = "tokenName" placeholder="Invoice ID">
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="ticker">Ticker</label>
-                                                    <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenSymbol" name = "tokenSymbol" placeholder="Ticker">
+                                                    <label for="ticker">Contract ID</label>
+                                                    <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenSymbol" name = "tokenSymbol" placeholder="Contract ID">
                                                 </div> 
                                                                                             
                                     </div>
                                     <div class="form-row">                                            
                                                 <div class="form-group col-md-6">
-                                                    <label for="validatedCustomLabel">File Upload</label>
+                                                    <label for="validatedCustomLabel">Upload Document</label>
                                                     <div class="custom-file">
                                                         <input type="file" class="custom-file-input form-control form-controlCustom form-control-lg" multiple="" style="cursor:pointer;" placeholder="Choose file..." id="validatedCustomFile" required="">
                                                         <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
@@ -184,7 +184,7 @@
                                                 <div class="form-actions">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <button id="invoice_factoring" type="submit" class="btnn btnn-primary btnn-rounded">UPLOAD</button>
+                                                            <button id="invoice_factoring" type="submit" class="btnn btnn-primary btnn-rounded">Create Contract</button>
                                                             <!-- <button class="btnn btn-light btnn-rounded btn-outline">CANCEL</button> -->
                                                         </div>
                                                     </div>
@@ -257,7 +257,7 @@
                                         <div class="row">
                                             <div class="col-md-12 footerBtns">
                                                 <p>It may take few seconds to deploy on public blockchain network.</p>
-                                                <button type="submit" id="deploy_invoice" class="btnn btnn-primary btnn-rounded"  > Your Invoice is Ready To Deploy</button><br>
+                                                <button type="submit" id="deploy_invoice" class="btnn btnn-primary btnn-rounded"  >  Invoice Contract is Ready To Deploy</button><br>
                                                 <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
                                             </div>
                                             <br>
@@ -270,7 +270,61 @@
                 </section>
             </div>
     </div>
+    <div class="content-wrapper" id="invoiceCompleteTab" style="display: none;">
+            <div class="content container">
+                <header class="page-header">
+                    <div class="d-flex align-items-center">
+                        <div class="mr-auto">
+                            <h1>Discover Bonds</h1>
+                        </div>
+                    </div>
+                </header>
+                <section class="page-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">                                   
+                                   
+                                   <div class="form-group col-md-12 mb-4">
+                                            <!-- <label class="right-inner-addon">
+                                                <i class="  fa fa-search"></i>
+                                                <input type="search" class="form-controlCustom input-sm" aria-controls="bonds_listing" placeholder="Search...">
+                                                
+                                            </label> -->
+                                            <div class="dynamic_table">
+                                            <button type="submit" id="refreshBondsList" class="btnn btnn-primary btnn-rounded float-right"> Refresh </button>
+                               
 
+                                    <div class="table-responsive">
+                                        
+                                       
+                                            <table id="bonds_listing" class="table " cellspacing="0" width="100%" >
+                                                <thead>
+                                                    <tr>
+                                                        <th>Invoice ID</th>
+                                                        <th>Contract ID</th>
+                                                        <th>Invoice Hash</th>
+                                                        <th class="text-center"style="width:14%;">Status</th>
+                                                        <th>Date/Time</th>
+                                                        <th>Address</th>                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="discoverBondTable">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                </div>
+                                
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
 
 <div id="loader" style="display: none;"></div>
 <div class="modal fade" id="invoiceprocess" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
