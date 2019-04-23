@@ -1390,7 +1390,7 @@ $(function () {
 	})
 
 	$('#quickbooks').click(function() {
-		console.log("Quickbook");
+		console.log("Quickbooksss");
 		$('#uploadinvoiceTab').hide();
 		// $('#quickbooksTab').show();
 	})
