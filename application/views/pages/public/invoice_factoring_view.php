@@ -41,7 +41,10 @@
                         <ul class="nav metismenu">
                             <li class="sidebar-header mobile-only mobile-nav-heading"><span>&nbsp;</span></li>
                             <li><a class="active" id="uploadinvoiceHeader" ><i class="icon dripicons-document-edit"></i><span class="hide-menu">1. Upload Document</span></a></li>
-                            <li><a id="invoicedeployHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">2. Deploy</span></a></li>
+                            <li><a id="invoicedeployHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">2. Review Contract
+
+
+                            </span></a></li>
                             <li><a id="invoiceCompleteHeader"><i class="icon dripicons-cart"></i><span class="hide-menu">3. Get Details</span></a></li>
                             <!-- <li><a href="issue-quote.html"><i class="icon dripicons-export"></i><span class="hide-menu">Issue Quote</span></a></li>
                             <li><a href="create-organization.html"><i class="icon dripicons-user-group"></i><span class="hide-menu">Create Organization</span></a></li>
@@ -99,7 +102,7 @@
                                                             
                                                             <div class="card-footer border-0 text-center">
                                             
-                                                                <button class="btnn btnn-primary btn-quickbook btnn-rounded" disabled> Connect with QuickBooks</button>
+                                                                <button class="btnn btnn-primary btn-quickbook btnn-rounded" id ="quickbooks"> Connect with QuickBooks</button>
                                                             </div>
                                                         </div>
 												</div>
@@ -111,12 +114,12 @@
 														<div class="card-body text-center">
 															<div class="card-heading">
 															<div class="card-title">
-																<span class="title text-primary">Upload Invoice Mannualy</span>
+																<span class="title text-primary">Upload Invoice Manually</span>
 															</div>
 														    </div>
                                                             <p>We help QuickBook Suppliers to create a non fungible token on base of their Invoices.</p>
                                                             <div class="card-footer border-0 text-center">
-                                                                <button class="btnn btnn-primary btnn-rounded" id="uploadman">Upload Invoice Mannualy</button>
+                                                                <button class="btnn btnn-primary btnn-rounded" id="uploadman">Upload Invoice Manually</button>
                                                             <div>
                                                         </div>
 												</div>
@@ -130,6 +133,73 @@
             </div>
         </div>
         <!-- END CONTENT WRAPPER -->
+        <div class="content-wrapper" id="quickbooksTab" style= "display:none" >
+            <div class="content container">
+                <!--START PAGE HEADER -->
+                <header class="page-header">
+                    <div class="d-flex align-items-center">
+                        <div class="mr-auto">
+                            <h1>Quickbooks</h1>
+                        </div>
+                    </div>  
+                </header>
+                <!--END PAGE HEADER -->
+
+                <!--START PAGE CONTENT -->
+                <section class="page-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <!-- <div class="form-row">                                            
+                                        <div class="form-group col-md-4 mb-4">
+                                            <div class="input-group">
+                                                <input type="search" class="form-control" placeholder="Search...">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="button">Go</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>INVOICE ID</th>
+                                                    <th>INVOICE NAME</th>
+                                                    <th>INVOICE TITLE</th>
+                                                    <th>AMOUNT</th>
+                                                    <th>DUE DATE</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>INV</td>
+                                                    <td>T1 5/8 05/15/26 Govt</td>
+                                                    <td>101.25 / 101.75</td>
+                                                    <td>2.489 / 2.457</td>
+                                                    <td>22:26</td>
+                                                    <td><button id="quotes" class="btnn btnn-light btnn-rounded btnn-outline btnn-sm">Create Contract</button></td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <!--END PAGE CONTENT -->
+                </div>
+
+            </div>
+            <!-- END CONTENT WRAPPER -->
+        </div>
+        <!-- END APP WRAPPER -->
 
         <div class="content-wrapper" id="uploadmanform" style= "display:none" >
             <div class="content container">
@@ -234,7 +304,7 @@
                 <header class="page-header">
                     <div class="d-flex align-items-center">
                         <div class="mr-auto">
-                            <h1>Deploy</h1>
+                            <h1>Review Contract</h1>
                         </div>
                     </div>
                 </header>
@@ -263,6 +333,7 @@
                                         <div class="row">
                                             <div class="col-md-12 footerBtns">
                                                 <p>It may take few seconds to deploy on public blockchain network.</p>
+                                                <br>
                                                 <button type="submit" id="deploy_invoice" class="btnn btnn-primary btnn-rounded"  >  Invoice Contract is Ready To Deploy</button><br>
                                                 <!-- <button class="btn btn-light btn-rounded btn-outline" id="bondCreateCancel">Cancel</button> -->
                                             </div>
@@ -281,7 +352,7 @@
                 <header class="page-header">
                     <div class="d-flex align-items-center">
                         <div class="mr-auto">
-                            <h1>Discover Bonds</h1>
+                            <h1>Discover Documents</h1>
                         </div>
                     </div>
                 </header>
@@ -331,6 +402,10 @@
                 </section>
             </div>
         </div>
+        <?php
+	//$this->load->view('includes/block_features');
+	$this->load->view('includes/login_modal');
+	?>
         <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
   <script>
    
