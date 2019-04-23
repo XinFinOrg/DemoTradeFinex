@@ -2,7 +2,7 @@ $(function () {
 	// var jQueryScript = document.createElement('script');  
 	// jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
 	// document.head.appendChild(jQueryScript);
-
+	console.log("Quickbook updated");
 	var site_url = $('#site_url').val();
 	var csrf_name = $('#csrf_tokens').attr('name');
 	var csrf_value = $('#csrf_tokens').val();
@@ -1341,6 +1341,7 @@ $(function () {
 	})
 
 	$('#quickbooks').click(function() {
+		console.log("Quickbook");
 		$('#uploadinvoiceTab').hide();
 		$('#quickbooksTab').show();
 	})
