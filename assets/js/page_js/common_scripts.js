@@ -1,3 +1,52 @@
+$(document).ready(function(){
+	var link = "";
+	$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+				//console.log(res);
+			localStorage.setItem("token", res.token);
+			var token = localStorage.getItem("token");
+			var discover = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.mycontract.co/v1/invoice/quickbook/login",
+				"method": "GET",
+				"headers": {
+					"content-type": "application/json",
+					"authorization":token
+				},
+				"processData": false,
+				"data": ""
+			
+			}
+			$.ajax(discover).done(function(response){
+				console.log(response);
+				// response.projects
+				// bondList(response.projects);
+				if(response.status == true){
+					// var discovery = {
+					// 	"async": true,
+					// 	"crossDomain": true,
+					// 	"url": "https://api.mycontract.co/v1/invoice/quickbook/logincheck",
+					// 	"method": "GET",
+					// 	"headers": {
+					// 		"content-type": "application/json",
+					// 		"authorization":token
+					// 	},
+					// 	"processData": false,
+					// 	"data": ""
+					
+					// }
+					// $.ajax(discovery).done(function(response){
+					// 	console.log(response);
+					// });
+
+					var href = document.getElementById('quickbooks');
+					href.href = response.login_url;
+					link = response.login_url;
+				}
+				
+			})
+		});
+})
 $(function () {
 	// var jQueryScript = document.createElement('script');  
 	// jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
@@ -1343,7 +1392,7 @@ $(function () {
 	$('#quickbooks').click(function() {
 		console.log("Quickbook");
 		$('#uploadinvoiceTab').hide();
-		$('#quickbooksTab').show();
+		// $('#quickbooksTab').show();
 	})
 
 	$('#quotes').click(function(form){

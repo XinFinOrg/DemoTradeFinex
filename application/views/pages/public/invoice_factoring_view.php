@@ -102,7 +102,7 @@
                                                             
                                                             <div class="card-footer border-0 text-center">
                                             
-                                                                <button class="btnn btnn-primary btn-quickbook btnn-rounded" id ="quickbooks"> Connect with QuickBooks</button>
+                                                                <a href="#" class="btnn btnn-primary btn-quickbook btnn-rounded" id ="quickbooks"> Connect with QuickBooks</a>
                                                             </div>
                                                         </div>
 												</div>
@@ -178,11 +178,11 @@
                                             <tbody>
                                                 <tr>
                                                     <td>INV</td>
-                                                    <td>T1 5/8 05/15/26 Govt</td>
-                                                    <td>101.25 / 101.75</td>
-                                                    <td>2.489 / 2.457</td>
-                                                    <td>22:26</td>
-                                                    <td><button id="quotes" class="btnn btnn-light btnn-rounded btnn-outline btnn-sm">Create Contract</button></td>
+                                                    <td>Demo INV</td>
+                                                    <td>Demo</td>
+                                                    <td>1000</td>
+                                                    <td>2019-04-23</td>
+                                                    <td><button id="quotes" class="btnn btnn-light btnn-rounded btnn-outline btnn-sm">View Contract</button></td>
                                                 </tr>
                                                 
                                             </tbody>
