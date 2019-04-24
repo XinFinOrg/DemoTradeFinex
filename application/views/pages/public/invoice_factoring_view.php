@@ -102,7 +102,8 @@
                                                             
                                                             <div class="card-footer border-0 text-center">
                                             
-                                                                <a href="#" class="btnn btnn-primary btn-quickbook btnn-rounded" id ="quickbooks"> Connect with QuickBooks</a>
+                                                                <a href="#" class="btnn btnn-primary btn-quickbook btnn-rounded" id ="quickbooks" style=" background-color: #2da11c!important;
+    border-color: #2da11c!important; color:#fff; "> Connect with QuickBooks</a>
                                                             </div>
                                                         </div>
 												</div>

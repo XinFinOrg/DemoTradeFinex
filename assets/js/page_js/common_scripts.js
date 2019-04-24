@@ -755,76 +755,12 @@ $(function () {
 				maxlength: 15,
 				LetterOnly: true
 			},
-			industry:{
-				required: true,
-				minlength: 1,
-				maxlength: 15,
-				LetterOnly: true
-			},
 			tokenSymbol: {
 				required: true,
 				minlength: 2,
 				maxlength: 10,
 				LetterOnly: true
 			},
-			isin: {
-				required: true,
-				minlength: 2,
-				maxlength: 10,
-				alphanumericOnly: true
-			},
-			cusip: {
-				required: true,
-				minlength: 2,
-				maxlength: 10,
-				alphanumericOnly: true
-			},
-			moodys: {
-				required: true,
-				minlength: 2,
-				maxlength: 10,
-				alphanumericOnly: true
-			},
-			snp: {
-				required: true,
-				minlength: 2,
-				maxlength: 10,
-				alphanumericOnly: true
-			},
-			fitch: {
-				required: true,
-				minlength: 2,
-				maxlength: 10,
-				alphanumericOnly: true
-			},
-			fsDate: {
-				required: true,
-			},
-			maturityDate: {
-				required: true,
-			},
-			amtstanding: {
-				required: true,
-				minlength: 2,
-				maxlength: 10,
-				LetterOnly: true
-			},
-			frequency: {
-				required: true,
-				minlength: 2,
-				maxlength: 10,
-				LetterOnly: true
-			},
-			firstDate: {
-				required: true,
-			},
-			benchmark: {
-				required: true,
-				minlength: 2,
-				maxlength: 10,
-				alphanumericOnly: true
-			},
-			
 			tokenSupply: {
 				required: true,
 				min:1,
@@ -850,7 +786,13 @@ $(function () {
 				minlength: 1,
 				DecNumberOnly: true
 			},
-			
+			tenure: {
+				required: true,
+				min:1,
+				max:100,
+				minlength: 1,
+				numberOnly: true
+			},
 			defaultReal: {
 				equalTo: '#captcha_val'
 			}
@@ -862,77 +804,6 @@ $(function () {
 				minlength: "Characters length should be atleast 2",
 				maxlength: "Characters length should not exceeded than 15"
 			},
-			industry: {
-				required: "Please enter Industry",
-				minlength: "Characters length should be atleast 1",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			isin: {
-				required: "Please enter ISIN",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			cusip: {
-				required: "Please enter CUSIP",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			moodys: {
-				required: "Please enter Moody's",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			snp: {
-				required: "Please enter S&P",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			fitch: {
-				required: "Please enter Fitch",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			fsDate: {
-				required: "Please enter First Settle Date",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			maturityDate: {
-				required: "Please enter Maturity Date",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			ethRate: {
-				required: "Please enter Face Value",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			bonusRate: {
-				required: "Please enter Amount Outstanding",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			frequency: {
-				required: "Please enter frequency",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			firstDate: {
-				required: "Please enter First Date",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			coupon: {
-				required: "Please enter coupon",
-				min:"Please enter value more than 0.1",
-				minlength: "Digits length should be atleast 2"
-			},
-			benchmark: {
-				required: "Please enter Benchmark",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
-			},
-			
 			tokenSymbol: {
 				required: "Please enter bond symbol",
 				minlength: "Characters length should be atleast 2",
@@ -942,6 +813,33 @@ $(function () {
 				required: "Please enter issuance size",
 				min:"Please enter value more than 0",
 				minlength: "Digits length should be atleast 2"
+			},
+			ethRate: {
+				required: "Please enter face value",
+				min:"Please enter value more than 0",
+				minlength: "Digits length should be atleast 2"
+			},
+			bonusRate: {
+				required: "Please enter minimum contribution",
+				min:"Please enter value more than 0",
+				minlength: "Digits length should be atleast 2",
+				maxlength: "Digits length should not exceeded than 15"
+			},
+			coupon: {
+				required: "Please enter coupon",
+				min:"Please enter value more than 0.1",
+				minlength: "Digits length should be atleast 2"
+			},
+			tenure: {
+				required: "Please enter tenure",
+				min:"Please enter value more than 0",
+				minlength: "Digits length should be atleast 2",
+				
+			},
+			dvalue: {
+				required: "Please enter discount value",
+				minlength: "Digits length should be atleast 2",
+				maxlength: "Digits length should not exceeded than 15"
 			},
 			defaultReal:"Please enter correct captcha (Letters are Case sensitive)."
 			
