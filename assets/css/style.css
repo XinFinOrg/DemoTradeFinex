@@ -8983,7 +8983,11 @@ span .current {
 
 #connect-upload .card-header {
     font-size: 2rem;
+	font-weight: 500;
     border: none;
+}
+#connect-upload .card-body {
+    padding-top: 0;
 }
 .card .card-header {
 	padding: 15px 20px;
