@@ -666,7 +666,7 @@ $(function () {
 
 
 	$('#refreshBondsList').click(function() {
-		showLoader
+		showLoader();
 		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
 				//console.log(res);
 			localStorage.setItem("token", res.token);
@@ -694,7 +694,7 @@ $(function () {
 	 });
 
 	 $('#refreshinvoiceList').click(function() {
-		showLoader
+		showLoader();
 		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
 				//console.log(res);
 			localStorage.setItem("token", res.token);
@@ -915,6 +915,7 @@ $(function () {
 						if(response.status == false) {
 							$('#createBondTab').show();
 							$('#contractexists').modal('show');
+							$('#contractexists').css('opacity', '1')
 							$('#deployTab').hide();
 							
 						} else {
@@ -959,6 +960,7 @@ $(function () {
 									if (response.status == true){
 										hideLoader();
 										$("#thankyou").modal("show");
+										$('#thankyou').css('opacity', '1')
 										$('#DeployBtn').click(function() {
 											$("#thankyou").modal("hide");
 											$('#deployTab').hide();
@@ -1285,12 +1287,63 @@ $(function () {
 	$('#uploadman').click(function() {
 		$('#uploadinvoiceTab').hide();
 		$('#uploadmanform').show();
+		$('#invoiceCompleteHeader').css('pointer-events', 'none');
+										
+		
+		// $('#uploadmanform').hide();
+		// $('#invoiceCompleteTab').show();
 	})
 
 	$('#quickbooks').click(function() {
 		console.log("Quickbooksss");
 		$('#uploadinvoiceTab').hide();
-		// $('#quickbooksTab').show();
+		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+				//console.log(res);
+			localStorage.setItem("token", res.token);
+			var token = localStorage.getItem("token");
+			var discover = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.mycontract.co/v1/invoice/quickbook/login",
+				"method": "GET",
+				"headers": {
+					"content-type": "application/json",
+					"authorization":token
+				},
+				"processData": false,
+				"data": ""
+			
+			}
+			$.ajax(discover).done(function(response){
+				console.log(response);
+				// response.projects
+				// bondList(response.projects);
+				if(response.status == true){
+					// var discovery = {
+					// 	"async": true,
+					// 	"crossDomain": true,
+					// 	"url": "https://api.mycontract.co/v1/invoice/quickbook/logincheck",
+					// 	"method": "GET",
+					// 	"headers": {
+					// 		"content-type": "application/json",
+					// 		"authorization":token
+					// 	},
+					// 	"processData": false,
+					// 	"data": ""
+					
+					// }
+					// $.ajax(discovery).done(function(response){
+					// 	console.log(response);
+					// });
+
+					var href = document.getElementById('quickbooks');
+					href.href = response.login_url;
+					link = response.login_url;
+				}
+				
+			})
+		});
+		
 	})
 
 	$('#quotes').click(function(form){
