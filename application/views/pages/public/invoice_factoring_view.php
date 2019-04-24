@@ -11,7 +11,7 @@
      
     
     <!-- ICONS STYLES -->
-    <link rel="stylesheet" href="assets/css/icons/dripicons.min.css">
+    <link rel="stylesheet" href="assets/bond-assets/css/icons/dripicons.min.css">
 
 </header>
 
@@ -403,6 +403,7 @@
                 </section>
             </div>
         </div>
+</div>
         <?php
 	//$this->load->view('includes/block_features');
 	$this->load->view('includes/login_modal');
