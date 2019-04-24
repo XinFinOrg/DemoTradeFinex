@@ -8757,6 +8757,9 @@ div.dataTables_wrapper div.dataTables_info {
 #bonds_listing_wrapper {margin-top: 50px;}
 #bonds_listing_filter {margin-top: -40px;}
 div.dataTables_wrapper div.dataTables_filter {text-align:left!important;}
+
+#bonds_listing {margin-top: 10px;}
+
 @media screen and (max-width: 767px) {#bonds_listing_filter {margin-top:0px!important;}}
 
 
