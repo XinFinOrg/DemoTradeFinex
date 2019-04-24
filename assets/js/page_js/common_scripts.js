@@ -948,7 +948,8 @@ $(function () {
 									"method": "POST",
 									"headers": {
 										"content-type": "application/json",
-										"authorization":token
+										"authorization":token,
+										"type":"erc20"
 									},
 									"processData": false,
 									"data": JSON.stringify(coinData)
