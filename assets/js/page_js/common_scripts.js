@@ -1035,7 +1035,7 @@ $(function () {
 							const coinData = {
 								"coinName": formDataObj.tokenName,
 								"network" : "testnet",
-								"type" : "erc20"
+								// "type" : "erc20"
 							};
 
 

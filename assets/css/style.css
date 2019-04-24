@@ -514,7 +514,7 @@ footer {
 	line-height: 50px;
 	font-family: 'open_sansregular';
 	font-size: 15px;
-	width:200px;
+	/* width:200px; */
 	/* visibility: visible; */
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -6273,7 +6273,7 @@ padding:.65rem .9rem;
 	color: #555;
 	content: counter(step-counter);
 	display: inline-block;
-	float: left;
+	/* float: left; */
 	height: 30px;
 	line-height: 30px;
 	margin-left: -35px;
@@ -8166,7 +8166,7 @@ div.dataTables_wrapper div.dataTables_info {
 #frame .content .messages ul li {
 	display: inline-block;
 	clear: both;
-	float: left;
+	/* float: left; */
 	margin: 15px 15px 5px 15px;
 	width: calc(100% - 25px);
 	font-size: 0.9em;
@@ -9000,6 +9000,7 @@ span .current {
 	text-align: center;
 	font-size: 22px;
 }
+
 .btn-quickbook {
 	color: #fff;
 	background-color: #2da11c!important;
@@ -9011,6 +9012,7 @@ span .current {
 .btn-quickbook:before {
 	content: "";
 	width: 20px;
+	color: #fff;
 	height: 20px;
 	display: inline-block;
 	margin-right: 5px;
@@ -9023,4 +9025,18 @@ span .current {
 	color: #fff;
 	background-color: #1a820f!important;
 	border-color: #1a820f!important;
+}
+
+.btnn.btnn-sm, a:link.btnn.btnn-sm {
+	padding: .45rem .85rem!important;
+	font-size: .85rem!important;
+	height: 32px!important;
+	line-height: 1.2!important;
+	font-weight: 400!important;
+}
+
+.btnn-light, a:link.btnn-light {
+	background-color: #fff!important;
+	border-color: rgba(141,166,195,.5)!important;
+	color: #839bb3!important;
 }
