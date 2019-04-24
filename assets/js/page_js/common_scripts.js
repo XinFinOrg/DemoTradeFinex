@@ -666,7 +666,7 @@ $(function () {
 
 
 	$('#refreshBondsList').click(function() {
-		showLoader();
+		// showLoader();
 		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
 				//console.log(res);
 			localStorage.setItem("token", res.token);
@@ -694,7 +694,7 @@ $(function () {
 	 });
 
 	 $('#refreshinvoiceList').click(function() {
-		showLoader();
+		// showLoader();
 		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
 				//console.log(res);
 			localStorage.setItem("token", res.token);

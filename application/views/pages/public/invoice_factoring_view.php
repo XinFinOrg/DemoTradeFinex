@@ -41,11 +41,8 @@
                         <ul class="nav metismenu">
                             <li class="sidebar-header mobile-only mobile-nav-heading"><span>&nbsp;</span></li>
                             <li><a class="active" id="uploadinvoiceHeader" ><i class="icon dripicons-document-edit"></i><span class="hide-menu">1. Upload Document</span></a></li>
-                            <li><a id="invoicedeployHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">2. Review Contract
-
-
-                            </span></a></li>
-                            <li><a id="invoiceCompleteHeader"><i class="icon dripicons-cart"></i><span class="hide-menu">3. Get Details</span></a></li>
+                            <li><a id="invoicedeployHeader"><i class="icon dripicons-document-new"></i><span class="hide-menu">2. Review Contract</span></a></li>
+                            <li><a id="invoiceCompleteHeader"><i class="icon  dripicons-document-new"></i><span class="hide-menu">3. Get Details</span></a></li>
                             <!-- <li><a href="issue-quote.html"><i class="icon dripicons-export"></i><span class="hide-menu">Issue Quote</span></a></li>
                             <li><a href="create-organization.html"><i class="icon dripicons-user-group"></i><span class="hide-menu">Create Organization</span></a></li>
                             <li><a href="portfolio.html"><i class="icon dripicons-folder-open"></i><span class="hide-menu">Portfolio</span></a></li>
@@ -376,7 +373,7 @@
                                     <div class="table-responsive">
                                         
                                        
-                                            <table id="bonds_listing" class="table " cellspacing="0" width="100%" >
+                                            <table id="invoice_listing" class="table " cellspacing="0" width="100%" >
                                                 <thead>
                                                     <tr>
                                                         <th>Invoice ID</th>
@@ -428,8 +425,8 @@
                 </div>
 				<div class="modal-body text-center">
 
-						<p>Sorry!! Bond Name already exists.</p>
-						<p>Try another Bond Name.</p>
+						<p>Sorry!! Invoice ID already exists.</p>
+						<p>Try another Invoice ID.</p>
 						
 						<div class="btnn-more">
 							<button id="sorry" type="submit" class="btnn btnn-primary btnn-rounded"  data-keyboard="false"> Ok </button> 
