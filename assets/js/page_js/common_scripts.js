@@ -1,5 +1,5 @@
-$(document).ready(function(){
-	$("#quickbooks").click(function() {
+$("#quickbooks").click(function() {
+		// alert('quickboook')
 		var link = "";
 	$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
 				//console.log(res);
@@ -19,6 +19,7 @@ $(document).ready(function(){
 			}
 			$.ajax(login).done(function(response){
 				console.log(response);
+				// alert('response')
 				if(response.status == true){
 					window.location.href = response.login_url;
 				}
@@ -26,7 +27,7 @@ $(document).ready(function(){
 			})
 		});
 	});
-})
+
 $(function () {
 	var jQueryScript = document.createElement('script');  
 	jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
