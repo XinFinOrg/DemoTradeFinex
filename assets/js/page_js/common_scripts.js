@@ -1,4 +1,4 @@
-$("#quickbooks").ready(function(){
+$(document).ready(function(){
 	var link = "";
 	$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
 				//console.log(res);
