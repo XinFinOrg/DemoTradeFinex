@@ -554,13 +554,13 @@ footer {
 }
 /* Center the loader */
 #loader {
-	position: absolute;
+	position: fixed;
 	left: 50%;
 	top: 70%;
 	z-index: 1;
 	width: 150px;
 	height: 150px;
-	margin: -75px 0 0 -75px;
+	margin: -50px 0 0 -50px;
 	border: 16px solid #fff;
 	border-radius: 50%;
 	border-top: 16px solid rgb(42, 163, 239);
@@ -3912,6 +3912,7 @@ to {
 .modal-dialog .modal-content {
 	border-radius: 0px;
 	padding: 0px 40px 30px 40px;
+	margin-top: 204px!important;
 }
 .modal-dialog .modal-content .modal-header {
 	padding: 0px;
@@ -8896,9 +8897,10 @@ hr {
 	text-overflow: ellipsis;
 }
 .truncate:hover {
-	transform: scale(1.1);
+	/* transform: scale(1.1); */
 	/* box-shadow: 0px 2px 8px #777; */
-	text-overflow: initial;
+	color: #00b050;
+	text-overflow: clip;
 }
 
 #bondCompleteTab .dynamic_table label {
@@ -8910,7 +8912,15 @@ hr {
     color: #282c3f;
     font-family: 'open_sanssemibold';
 }
-
+#invoiceCompleteTab .dynamic_table label {
+	margin-top: -48px;
+    position: absolute;
+    left: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #282c3f;
+    font-family: 'open_sanssemibold';
+}
 
 @media only screen and (min-width: 1300px) {
     #bondCompleteTab .dynamic_table label {
