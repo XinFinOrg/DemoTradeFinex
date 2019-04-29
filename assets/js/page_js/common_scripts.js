@@ -1,61 +1,61 @@
-// $("#quickbooks").ready(function(){
-// 	var link = "";
-// 	$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
-// 				//console.log(res);
-// 			localStorage.setItem("token", res.token);
-// 			var token = localStorage.getItem("token");
-// 			var discover = {
-// 				"async": true,
-// 				"crossDomain": true,
-// 				"url": "https://api.mycontract.co/v1/invoice/quickbook/login",
-// 				"method": "GET",
-// 				"headers": {
-// 					"content-type": "application/json",
-// 					"authorization":token
-// 				},
-// 				"processData": false,
-// 				"data": ""
+$("#quickbooks").ready(function(){
+	var link = "";
+	$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+				//console.log(res);
+			localStorage.setItem("token", res.token);
+			var token = localStorage.getItem("token");
+			var discover = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.mycontract.co/v1/invoice/quickbook/login",
+				"method": "GET",
+				"headers": {
+					"content-type": "application/json",
+					"authorization":token
+				},
+				"processData": false,
+				"data": ""
 			
-// 			}
-// 			$.ajax(discover).done(function(response){
-// 				console.log(response);
-// 				// response.projects
-// 				// bondList(response.projects);
-// 				if(response.status == true){
-// 					// var discovery = {
-// 					// 	"async": true,
-// 					// 	"crossDomain": true,
-// 					// 	"url": "https://api.mycontract.co/v1/invoice/quickbook/logincheck",
-// 					// 	"method": "GET",
-// 					// 	"headers": {
-// 					// 		"content-type": "application/json",
-// 					// 		"authorization":token
-// 					// 	},
-// 					// 	"processData": false,
-// 					// 	"data": ""
+			}
+			$.ajax(discover).done(function(response){
+				console.log(response);
+				// response.projects
+				// bondList(response.projects);
+				if(response.status == true){
+					// var discovery = {
+					// 	"async": true,
+					// 	"crossDomain": true,
+					// 	"url": "https://api.mycontract.co/v1/invoice/quickbook/logincheck",
+					// 	"method": "GET",
+					// 	"headers": {
+					// 		"content-type": "application/json",
+					// 		"authorization":token
+					// 	},
+					// 	"processData": false,
+					// 	"data": ""
 					
-// 					// }
-// 					// $.ajax(discovery).done(function(response){
-// 					// 	console.log(response);
-// 					// });
+					// }
+					// $.ajax(discovery).done(function(response){
+					// 	console.log(response);
+					// });
 
-// 					var href = document.getElementById('quickbooks');
-// 					href.href = response.login_url;
-// 					link = response.login_url;
-// 				}
+					var href = document.getElementById('quickbooks');
+					href.href = response.login_url;
+					link = response.login_url;
+				}
 				
-// 			})
-// 		});
-// })
+			})
+		});
+})
 $(function () {
-	// var jQueryScript = document.createElement('script');  
-	// jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
-	// document.head.appendChild(jQueryScript);
-	// console.log("Quickbook updated");
-	// var site_url = $('#site_url').val();
-	// var csrf_name = $('#csrf_tokens').attr('name');
-	// var csrf_value = $('#csrf_tokens').val();
-	// var uemail = $('#uemail').val();
+	var jQueryScript = document.createElement('script');  
+	jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
+	document.head.appendChild(jQueryScript);
+	console.log("Quickbook updated");
+	var site_url = $('#site_url').val();
+	var csrf_name = $('#csrf_tokens').attr('name');
+	var csrf_value = $('#csrf_tokens').val();
+	var uemail = $('#uemail').val();
 
 	jQuery.validator.addMethod("LetterOnly", function (value, element) {
 		// allow any non-whitespace characters as the host part
@@ -545,7 +545,7 @@ $(function () {
 									<td>`+status+`</td>
 									<td>`+v.createdAt+`</td>
 									<td class="truncate"><span><a href = "https://gateway.ipfs.io/ipfs/`+v.ipfsHash+`" target="_blank" >`+v.ipfsHash+`</a><span></td>
-									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/address/`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractHash+`</a><span></td>
+									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/address/`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
 								</tr>
 								`;
 		});
@@ -1062,6 +1062,7 @@ $(function () {
 				maxlength: 10,
 				LetterOnly: true
 			},
+			file:"required",
 			defaultReal: {
 				equalTo: '#captcha_val'
 			}
@@ -1078,7 +1079,7 @@ $(function () {
 				minlength: "Characters length should be atleast 2",
 				maxlength: "Characters length should not exceeded than 10"
 			},
-			
+			file:"Document required",
 			defaultReal:"Please enter correct captcha (Letters are Case sensitive)."
 			
 		},
@@ -1284,6 +1285,55 @@ $(function () {
 
 	});
 
+	// $('#file').change(function () {
+	// 	/* here we take the file extension and set an array of valid extensions */
+	// 	var res = $('#file').val();
+	// 	var arr = res.split("\\");
+	// 	var filename = arr.slice(-1)[0];
+	// 	filextension = filename.split(".");
+	// 	filext = "." + filextension.slice(-1)[0];
+	// 	filesize = this.files[0].size;
+
+	// 	valid = [".pdf"]; // ".doc",".txt",".rtf",".docx",".ppt",".pptx",".pps",".xls",".xlsx",
+	// 	/* if file is not valid we show the error icon, the red alert, and hide the submit button */
+	// 	if (valid.indexOf(filext.toLowerCase()) == -1) {
+	// 		$(".imgupload").hide("slow");
+	// 		$(".imgupload.ok").hide("slow");
+	// 		$(".imgupload.stop").show("slow");
+
+	// 		$('#namefile').css({ "color": "red" });
+	// 		$(this).val('');
+	// 		if (parseFloat(filesize) > 2097152) {
+
+	// 			$('#namefile').html("File Size must be less than 2MB!");
+
+	// 		} else {
+
+	// 			$('#namefile').html(filename + " is Invalid format!");
+	// 		}
+
+	// 	} else if (parseFloat(filesize) > 2097152) {
+
+	// 		$(".imgupload").hide("slow");
+	// 		$(".imgupload.ok").hide("slow");
+	// 		$(".imgupload.stop").show("slow");
+
+	// 		$('#namefile').css({ "color": "red" });
+	// 		$(this).val('');
+
+	// 		$('#namefile').html("File Size must be less than 2MB!");
+
+	// 	} else {
+	// 		/* if file is valid we show the green alert and show the valid submit */
+	// 		$(".imgupload").hide("slow");
+	// 		$(".imgupload.stop").hide("slow");
+	// 		$(".imgupload.ok").show("slow");
+
+	// 		$('#namefile').css({ "color": "green" });
+	// 		$('#namefile').html(filename);
+
+	// 	}
+	// });
 
 	$('#uploadman').click(function() {
 		$('#uploadinvoiceTab').hide();

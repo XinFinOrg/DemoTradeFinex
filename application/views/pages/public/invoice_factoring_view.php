@@ -99,7 +99,7 @@
                                                             
                                                             <div class="card-footer border-0 text-center">
                                             
-                                                                <a href="#" class="btnn btnn-primary btn-quickbook btnn-rounded" id ="quickbooks" style=" background-color: #2da11c!important;
+                                                                <a href="<?=base_url('publicv/quickbook_dashboard/?accesstoken=');?>" class="btnn btnn-primary btn-quickbook btnn-rounded" id ="" style=" background-color: #2da11c!important;
     border-color: #2da11c!important; color:#fff; "> Connect with QuickBooks</a>
                                                             </div>
                                                         </div>
@@ -149,55 +149,52 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body">
+                                    <div class="form-group col-md-12 mb-4">
+                                           
+                                        <div class="dynamic_table">
+                                            <button type="submit" id="refreshinvoiceList" class="btnn btnn-primary btnn-rounded float-right"> Refresh </button>
+                               
 
-                                    <!-- <div class="form-row">                                            
-                                        <div class="form-group col-md-4 mb-4">
-                                            <div class="input-group">
-                                                <input type="search" class="form-control" placeholder="Search...">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-primary" type="button">Go</button>
-                                                </div>
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>INVOICE ID</th>
+                                                            <th>INVOICE NAME</th>
+                                                            <th>INVOICE TITLE</th>
+                                                            <th>AMOUNT</th>
+                                                            <th>DUE DATE</th>
+                                                            <th>&nbsp;</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>INV</td>
+                                                            <td>Demo INV</td>
+                                                            <td>Demo</td>
+                                                            <td>1000</td>
+                                                            <td>2019-04-23</td>
+                                                            <td><button id="quotes" class="btnn btnn-light btnn-rounded btnn-outline btnn-sm">View Contract</button></td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
                                             </div>
+                                        
                                         </div>
-                                    </div> -->
-
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>INVOICE ID</th>
-                                                    <th>INVOICE NAME</th>
-                                                    <th>INVOICE TITLE</th>
-                                                    <th>AMOUNT</th>
-                                                    <th>DUE DATE</th>
-                                                    <th>&nbsp;</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>INV</td>
-                                                    <td>Demo INV</td>
-                                                    <td>Demo</td>
-                                                    <td>1000</td>
-                                                    <td>2019-04-23</td>
-                                                    <td><button id="quotes" class="btnn btnn-light btnn-rounded btnn-outline btnn-sm">View Contract</button></td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </section>
                 <!--END PAGE CONTENT -->
-                </div>
-
             </div>
-            <!-- END CONTENT WRAPPER -->
+
         </div>
-        <!-- END APP WRAPPER -->
+            <!-- END CONTENT WRAPPER -->
+       
+        
 
         <div class="content-wrapper" id="uploadmanform" style= "display:none" >
             <div class="content container">
@@ -233,7 +230,7 @@
                                                 <div class="form-group col-md-6">
                                                     <label for="validatedCustomLabel">Upload Document</label>
                                                     <div class="custom-file">
-                                                        <input type="file" class="custom-file-input form-control form-controlCustom form-control-lg" multiple="" style="cursor:pointer;" placeholder="Choose file..." id="validatedCustomFile" required="">
+                                                        <input type="file" class="custom-file-input form-control form-controlCustom form-control-lg" multiple="" style="cursor:pointer;" placeholder="Choose file..." id="validatedCustomFile" name="file" required="">
                                                         <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                                                         <!-- <div class="invalid-feedback">Example custom file feedback</div> -->
                                                     </div>
