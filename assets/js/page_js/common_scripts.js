@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	var link = "";
+	$("#quickbooks").click(function() {
+		var link = "";
 	$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
 				//console.log(res);
 			localStorage.setItem("token", res.token);
@@ -18,30 +19,13 @@ $(document).ready(function(){
 			}
 			$.ajax(login).done(function(response){
 				console.log(response);
-				// response.projects
-				// bondList(response.projects);
 				if(response.status == true){
-					// var discovery = {
-					// 	"async": true,
-					// 	"crossDomain": true,
-					// 	"url": "https://api.mycontract.co/v1/invoice/quickbook/logincheck",
-					// 	"method": "GET",
-					// 	"headers": {
-					// 		"content-type": "application/json",
-					// 		"authorization":token
-					// 	},
-					// 	"processData": false,
-					// 	"data": ""
-					
-					// }
-					// $.ajax(discovery).done(function(response){
-					// 	console.log(response);
-					// });
-					window.location.href= response.login_url;
+					window.location.href = response.login_url;
 				}
 				
 			})
 		});
+	});
 })
 $(function () {
 	var jQueryScript = document.createElement('script');  
