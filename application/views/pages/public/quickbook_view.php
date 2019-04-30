@@ -92,7 +92,7 @@
                                                     <th class="text-right">TotalAmt</th>
                                                     <th class="text-center">DUE DATE</th>
                                                     <th class="text-center">BLOCKCHAIN UPLOAD</th>
-                                                    <td><div class="btn-block"> <a href="#" class="btn btn-primary btn-rounded btn-sm">Upload</a></div></td>
+                                                    
                                                 </tr>
                                             </thead>
 

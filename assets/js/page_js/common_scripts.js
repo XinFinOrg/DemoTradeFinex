@@ -1308,6 +1308,7 @@ $(function () {
 									<td>`+v.Line[0].Description+`</td>
 									<td>`+v.TotalAmt+`</td>
 									<td>`+v.DueDate+`</td>
+									<td><div class="btn-block"> <a href="#" class="btn btn-primary btn-rounded btn-sm">Upload</a></div></td>
 								</tr>
 								`;
 		});
