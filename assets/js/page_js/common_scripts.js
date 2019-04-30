@@ -1313,14 +1313,14 @@ $(function () {
 								`;
 		});
 
-		$('#discoverquickbookTable').html(discoverquickbookTable);
-		// $("#quickbook_listing").DataTable({
-		// 	"bSort": false,
-		// 	"dom": "Bfrtip",
-		// 	"bDestroy": true,
-		// 	"pageLength": 10
+		$('#quickbook_listing').html(discoverquickbookTable);
+		$("#quickbook_listing").DataTable({
+			"bSort": false,
+			"dom": "Bfrtip",
+			"bDestroy": true,
+			"pageLength": 10
 			
-		// });
+		});
 	}
 
 	$("#quickbooks").click(function() {
