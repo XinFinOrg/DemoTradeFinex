@@ -73,6 +73,15 @@
                         <div class="col-md-12">
                             <div class="card">
                                     <div class="card-body">
+                                    <div class="form-group col-md-12 mb-4">
+                                            <!-- <label class="right-inner-addon">
+                                                <i class="  fa fa-search"></i>
+                                                <input type="search" class="form-controlCustom input-sm" aria-controls="bonds_listing" placeholder="Search...">
+                                                
+                                            </label> -->
+                                            <div class="dynamic_table">
+                                            <!-- <button type="submit" id="refreshinvoiceList" class="btnn btnn-primary btnn-rounded float-right"> Refresh </button> -->
+                               
                                     	<div class="table-responsive" data-pattern="priority-columns">
                                         <table id="quickbook_listing" class="table " cellspacing="0" width="100%" >
                                             <thead>
@@ -90,6 +99,7 @@
                                         </table>
                                     </div>                                        
                                     </div>
+</div>
                             </div>
                         </div>
                     </div>
