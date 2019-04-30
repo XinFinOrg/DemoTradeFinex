@@ -1296,7 +1296,7 @@ $(function () {
 	})
 
 	function quickbookList(data) {
-		console.log('data>>', data)
+		// console.log('data>>', data)
 		var discoverquickbookTable = "";
 		$.each(data, function(k,v) {
 			// console.log('timestamp:',new Date(v.createdAt));
@@ -1314,13 +1314,13 @@ $(function () {
 		});
 
 		$('#discoverquickbookTable').html(discoverquickbookTable);
-		$("#quickbook_listing").DataTable({
-			"bSort": false,
-			"dom": "Bfrtip",
-			"bDestroy": true,
-			"pageLength": 10
+		// $("#quickbook_listing").DataTable({
+		// 	"bSort": false,
+		// 	"dom": "Bfrtip",
+		// 	"bDestroy": true,
+		// 	"pageLength": 10
 			
-		});
+		// });
 	}
 
 	$("#quickbooks").click(function() {
