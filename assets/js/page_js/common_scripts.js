@@ -1,36 +1,8 @@
-$("#quickbooks").click(function() {
-		// alert('quickboook')
-		var link = "";
-	$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
-				//console.log(res);
-			localStorage.setItem("token", res.token);
-			var token = localStorage.getItem("token");
-			var login = {
-				"async": true,
-				"crossDomain": true,
-				"url": "https://api.mycontract.co/v1/invoice/quickbook/login",
-				"method": "GET",
-				"headers": {
-					"authorization":token
-				},
-				"processData": false,
-				"data": ""
-			
-			}
-			$.ajax(login).done(function(response){
-				console.log(response);
-				// alert('response')
-				if(response.status == true){
-					window.location.href = response.login_url;
-				}
-				
-			})
-		});
-	});
+
 
 $(function () {
 	var jQueryScript = document.createElement('script');  
-	jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
+	// jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
 	document.head.appendChild(jQueryScript);
 	console.log("Quickbook updated");
 	var site_url = $('#site_url').val();
@@ -1320,66 +1292,64 @@ $(function () {
 		$('#uploadinvoiceTab').hide();
 		$('#uploadmanform').show();
 		$('#invoiceCompleteHeader').css('pointer-events', 'none');
-										
-		
-		// $('#uploadmanform').hide();
-		// $('#invoiceCompleteTab').show();
+								
 	})
 
-	// $('#quickbooks').click(function() {
-	// 	console.log("Quickbooksss");
-	// 	$('#uploadinvoiceTab').hide();
-	// 	$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
-	// 			//console.log(res);
-	// 		localStorage.setItem("token", res.token);
-	// 		var token = localStorage.getItem("token");
-	// 		var discover = {
-	// 			"async": true,
-	// 			"crossDomain": true,
-	// 			"url": "https://api.mycontract.co/v1/invoice/quickbook/login",
-	// 			"method": "GET",
-	// 			"headers": {
-	// 				"content-type": "application/json",
-	// 				"authorization":token
-	// 			},
-	// 			"processData": false,
-	// 			"data": ""
+	$("#quickbooks").click(function() {
+		// alert('quickboook')
+		var link = "";
+		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+				//console.log(res);
+			localStorage.setItem("token", res.token);
+			var token = localStorage.getItem("token");
+			var login = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.mycontract.co/v1/invoice/quickbook/login",
+				"method": "GET",
+				"headers": {
+					"authorization":token
+				},
+				"processData": false,
+				"data": ""
 			
-	// 		}
-	// 		$.ajax(discover).done(function(response){
-	// 			console.log(response);
-	// 			// response.projects
-	// 			// bondList(response.projects);
-	// 			if(response.status == true){
-	// 				// var discovery = {
-	// 				// 	"async": true,
-	// 				// 	"crossDomain": true,
-	// 				// 	"url": "https://api.mycontract.co/v1/invoice/quickbook/logincheck",
-	// 				// 	"method": "GET",
-	// 				// 	"headers": {
-	// 				// 		"content-type": "application/json",
-	// 				// 		"authorization":token
-	// 				// 	},
-	// 				// 	"processData": false,
-	// 				// 	"data": ""
-					
-	// 				// }
-	// 				// $.ajax(discovery).done(function(response){
-	// 				// 	console.log(response);
-	// 				// });
-
-	// 				var href = document.getElementById('quickbooks');
-	// 				href.href = response.login_url;
-	// 				link = response.login_url;
-	// 			}
+			}
+			$.ajax(login).done(function(response){
+				// console.log(response);
+				// alert('response')
+				if(response.status == true){
+					window.location.href = response.login_url;
+				}
 				
-	// 		})
-	// 	});
-		
-	// })
+			})
+		});
+	});
 
+	if(window.location.href.indexOf("quickbook_dashboard") > -1) {
+		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+			localStorage.setItem("token", res.token);
+			var token = localStorage.getItem("token");
+			var dashboard = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.mycontract.co/v1/invoice/quickbook/dashboard",
+				"method": "GET",
+				"headers": {
+					"authorization":token
+				},
+				"processData": false,
+				"data": ""
+			
+			}
+			$.ajax(dashboard).done(function(response){
+				console.log(response);
+				
+			})
+		});
+	}
+	
 	$('#quotes').click(function(form){
-		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {0
+		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
 				// console.log(res);
 				localStorage.setItem("token", res.token);
 				var formData = $(form).serialize();
