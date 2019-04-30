@@ -74,85 +74,19 @@
                             <div class="card">
                                     <div class="card-body">
                                     	<div class="table-responsive" data-pattern="priority-columns">
-                                        <table id="example-1" class="table dt-responsive display">
+                                        <table id="quickbook_listing" class="table dt-responsive display">
                                             <thead>
                                                 <tr>
-                                                    <th>REQUEST NO</th>
-                                                    <th>BUYER NAME</th>
-                                                    <th>PO TITLE</th>
-                                                    <th class="text-right">AMOUNT</th>
+                                                    <th>DocNumber</th>
+                                                    <th>CustomerRef.name</th>
+                                                    <th>Line</th>
+                                                    <th class="text-right">TotalAmt</th>
                                                     <th class="text-center">DUE DATE</th>
                                                     <th class="text-center">BLOCKCHAIN UPLOAD</th>
                                                 </tr>
                                             </thead>
 
-                                            <tbody>
-                                                <tr>
-                                                    <td>1001</td>
-                                                    <td>
-                                                        <div id="buyer-logo">
-                                                            <i><img src="../assets/bond-assets/img/crossref.jpg" alt="" class="img-circle circle-border"></i>
-                                                            <span>Amy's Bird Sanctuary</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>Weekly Gardening Service</td>
-                                                    <td class="text-right"><i class="fa fa-dollar" aria-hidden="true"></i> 108</td>
-                                                    <td class="text-center">2019-04-24</td>
-                                                    <td class="text-center"><button id="quotes" class="btnn btnn-primary btnn-rounded">Upload</button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1002</td>
-                                                    <td>
-                                                        <div id="buyer-logo">
-                                                            <i><img src="../assets/bond-assets/img/crossref-india-pvt-ltd.jpg" alt="" class="img-circle circle-border"></i>
-                                                            <span>Bill's Windsurf Shop</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>Weekly Gardening Service</td>
-                                                    <td class="text-right"><i class="fa fa-dollar" aria-hidden="true"></i> 107</td>
-                                                    <td class="text-center">2019-04-18</td>
-                                                    <td class="text-center"><button id="quotes" class="btnn btnn-primary btnn-rounded">Upload</button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1003</td>
-                                                    <td>
-                                                        <div id="buyer-logo">
-                                                            <i><img src="../assets/bond-assets/img/crossref-india-pvt-ltd.jpg" alt="" class="img-circle circle-border"></i>
-                                                            <span>Cool Cars</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>Sprinkler Heads</td>
-                                                    <td class="text-right"><i class="fa fa-dollar" aria-hidden="true"></i> 2369.52</td>
-                                                    <td class="text-center">2019-04-10</td>
-                                                    <td class="text-center"><button id="quotes" class="btnn btnn-primary btnn-rounded">Upload</button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1004</td>
-                                                    <td>
-                                                        <div id="buyer-logo">
-                                                            <i><img src="../assets/bond-assets/img/crossref.jpg" alt="" class="img-circle circle-border"></i>
-                                                            <span>John Melton</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>Custom Design</td>
-                                                    <td class="text-right"><i class="fa fa-dollar" aria-hidden="true"></i> 750</td>
-                                                    <td class="text-center">2019-04-05</td>
-                                                    <td class="text-center"><button id="quotes" class="btnn btnn-primary btnn-rounded">Upload</button></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1005</td>
-                                                    <td>
-                                                        <div id="buyer-logo">
-                                                            <i><img src="../assets/bond-assets/img/crossref-india-pvt-ltd.jpg" alt="" class="img-circle circle-border"></i>
-                                                            <span>55 Twin Lane</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>Weekly Gardening Service</td>
-                                                    <td class="text-right"><i class="fa fa-dollar" aria-hidden="true"></i> 86.4</td>
-                                                    <td class="text-center">2019-03-25</td>
-                                                    <td class="text-center"><button id="quotes" class="btnn btnn-primary btnn-rounded">Upload</button></td>
-                                                </tr>
-                                            </tbody>
+                                           
                                         </table>
                                     </div>                                        
                                     </div>

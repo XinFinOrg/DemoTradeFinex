@@ -1295,6 +1295,34 @@ $(function () {
 								
 	})
 
+	function quickbookList(data) {
+		var discoverquickbookTable = "";
+		var mergeSortedData = mergeSort(data);
+		$.each(mergeSortedData, function(k,v) {
+			// console.log('timestamp:',new Date(v.createdAt));
+			
+			discoverquickbookTable += `
+								<tr class="bondRow">
+									<td>`+v.DocNumber+`</td>
+									<td>`+v.CustomerRef.name+`</td>
+									<td>`+Line.Description+`</td>
+									<td>`+v.TotalAmt+`</td>
+									<td>`+v.DueDate+`</td>
+									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/address/`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
+								</tr>
+								`;
+		});
+
+		$('#discoverquickbookTable').html(discoverquickbookTable);
+		$("#quickbook_listing").DataTable({
+			"bSort": false,
+			"dom": "Bfrtip",
+			"bDestroy": true,
+			"pageLength": 10
+			
+		});
+	}
+
 	$("#quickbooks").click(function() {
 		// alert('quickboook')
 		var link = "";
@@ -1343,6 +1371,7 @@ $(function () {
 			}
 			$.ajax(dashboard).done(function(response){
 				console.log(response);
+				quickbookList(response.projects);
 				
 			})
 		});
