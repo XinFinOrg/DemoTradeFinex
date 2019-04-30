@@ -1296,6 +1296,7 @@ $(function () {
 	})
 
 	function quickbookList(data) {
+		console.log('data>>', data)
 		var discoverquickbookTable = "";
 		$.each(data, function(k,v) {
 			// console.log('timestamp:',new Date(v.createdAt));
@@ -1304,7 +1305,7 @@ $(function () {
 								<tr class="bondRow">
 									<td>`+v.DocNumber+`</td>
 									<td>`+v.CustomerRef.name+`</td>
-									<td>`+Line.Description+`</td>
+									<td>`+v.Line[0].Description+`</td>
 									<td>`+v.TotalAmt+`</td>
 									<td>`+v.DueDate+`</td>
 									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/address/`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
@@ -1370,7 +1371,7 @@ $(function () {
 			}
 			$.ajax(dashboard).done(function(response){
 				console.log(response);
-				quickbookList(response.projects);
+				quickbookList(response.data);
 				
 			})
 		});
