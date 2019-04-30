@@ -74,7 +74,7 @@
                             <div class="card">
                                     <div class="card-body">
                                     	<div class="table-responsive" data-pattern="priority-columns">
-                                        <table id="quickbook_listing" class="table dt-responsive display">
+                                        <table id="quickbook_listing" class="table " cellspacing="0" width="100%" >
                                             <thead>
                                                 <tr>
                                                     <th>DocNumber</th>

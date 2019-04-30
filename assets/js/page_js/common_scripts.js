@@ -1297,8 +1297,7 @@ $(function () {
 
 	function quickbookList(data) {
 		var discoverquickbookTable = "";
-		var mergeSortedData = mergeSort(data);
-		$.each(mergeSortedData, function(k,v) {
+		$.each(data, function(k,v) {
 			// console.log('timestamp:',new Date(v.createdAt));
 			
 			discoverquickbookTable += `
