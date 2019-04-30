@@ -1308,7 +1308,6 @@ $(function () {
 									<td>`+v.Line[0].Description+`</td>
 									<td>`+v.TotalAmt+`</td>
 									<td>`+v.DueDate+`</td>
-									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/address/`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
 								</tr>
 								`;
 		});
