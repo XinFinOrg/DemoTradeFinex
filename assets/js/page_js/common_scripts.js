@@ -1314,13 +1314,8 @@ $(function () {
 		});
 
 		$('#quickbook_listing').html(discoverquickbookTable);
-		$("#quickbook_listing").DataTable({
-			"bSort": false,
-			"dom": "Bfrtip",
-			"bDestroy": true,
-			"pageLength": 10
-			
-		});
+		debugger;
+		$("#quickbook_listing").DataTable();
 	}
 
 	$("#quickbooks").click(function() {
