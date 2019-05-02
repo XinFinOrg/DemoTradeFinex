@@ -1308,7 +1308,7 @@ $(function () {
 									<td>`+v.Line[0].Description+`</td>
 									<td>`+v.TotalAmt+`</td>
 									<td>`+v.DueDate+`</td>
-									<td><div class="btn-block"> <button onClick="uploadInvoice(this, `+k+`)" class="btnn btnn-primary btnn-rounded btn-sm">Upload</button></div></td>
+									<td><div class="btn-block"> <button id="uploadInvoice_`+k+`" class="btnn btnn-primary btnn-rounded btn-sm">Upload</button></div></td>
 								</tr>
 								`;
 		});
@@ -1323,10 +1323,12 @@ $(function () {
 		});
 	}
 
-	function uploadInvoice(e, val) {
-		console.log('uploadINvoive>>>', e.target, val)
-		alert(val)
-	}
+	$('[id^="uploadInvoice_"]').each(function() {
+		$(this).click(function(){
+			 console.log('this>>>>>>', this)
+		});
+	});
+
 
 	
 
