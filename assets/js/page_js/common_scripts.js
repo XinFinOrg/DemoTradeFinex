@@ -1323,6 +1323,11 @@ $(function () {
 		});
 	}
 
+	$('#uploadInvoice_0').click(function() {
+		console.log('clicked upload')
+		alert('click')
+	});
+
 	$('[id^="uploadInvoice_"]').each(function() {
 		$(this).click(function(){
 			 console.log('this>>>>>>', this)
