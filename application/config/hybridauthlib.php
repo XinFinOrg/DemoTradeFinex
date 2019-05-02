@@ -32,7 +32,7 @@ $config =
 			"Google" => array (
 				"enabled" => true,
 				"keys"    => array ( "id" => "974340167294-4tm547181uu7v0gtqj4d1bv4gp1ffugq.apps.googleusercontent.com", "secret" => "s1gEY7eIayJBjcYHbsvnA8Ha" ),
-				"redirect_uri"=> "https://demo.tradefinex.org/hauth/?hauth.done=google",
+				"redirect_uri"=> "https://demo.tradefinex.org/publicv/bond_create/?hauth.done=google",
 
 			),
 
@@ -45,7 +45,7 @@ $config =
 			"GitHub" => array (
 				"enabled" => true,
 				"keys" => array("id" => "9165e7bb6bc76709e42e", "secret" =>"587a7cb2b2901967518ff28cfde11cf89b37ece4"),
-				"redirect_uri"=>"	https://demo.tradefinex/hauth/?hauth.done=Github",
+				"redirect_uri"=>"https://demo.tradefinex.org/publicv/bond_create/?hauth.done=Github",
 
 			),
 
@@ -80,6 +80,8 @@ $config =
 		"debug_mode" => (ENVIRONMENT == 'development'),
 
 		"debug_file" => APPPATH.'/logs/hybridauth.log',
+
+		
 	);
 
 

@@ -192,6 +192,7 @@ class Hybrid_Provider_Adapter {
 	 */
 	public function isUserConnected() {
 		return $this->adapter->isUserConnected();
+		
 	}
 
 	// --------------------------------------------------------------------
@@ -256,6 +257,7 @@ class Hybrid_Provider_Adapter {
 			"refresh_token" => $this->adapter->token("refresh_token"), // OAuth refresh token
 			"expires_in" => $this->adapter->token("expires_in"), // OPTIONAL. The duration in seconds of the access token lifetime
 			"expires_at" => $this->adapter->token("expires_at"), // OPTIONAL. Timestamp when the access_token expire. if not provided by the social api, then it should be calculated: expires_at = now + expires_in
+			
 		);
 	}
 

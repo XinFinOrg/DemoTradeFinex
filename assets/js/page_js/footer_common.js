@@ -753,6 +753,8 @@
 			}); 	
 		}); 
 
+		
+
 		   // Auto Hide Menu Option for Horizontal Menu
 			// ------------------------------------------------
 			if ($("body.layout-horizontal.menu-auto-hide").length > 0) {
