@@ -841,7 +841,7 @@ $(function () {
 					var settings = {
 						"async": true,
 						"crossDomain": true,
-						"url": "https://api.mycontract.co/v1/smartcontract/ERC20",
+						"url": "https://api.mycontract.co/v1/smartcontract/ZEROBond",
 						"method": "POST",
 						"headers": {
 							"content-type": "application/json",
@@ -1302,13 +1302,13 @@ $(function () {
 			// console.log('timestamp:',new Date(v.createdAt));
 			
 			discoverquickbookTable += `
-								<tr class="bondRow">
+								<tr class="bondRow" id="invoiceRow-`+k+`">
 									<td>`+v.DocNumber+`</td>
 									<td>`+v.CustomerRef.name+`</td>
 									<td>`+v.Line[0].Description+`</td>
 									<td>`+v.TotalAmt+`</td>
 									<td>`+v.DueDate+`</td>
-									<td><div class="btn-block"> <a href="#" class="btn btn-primary btn-rounded btn-sm">Upload</a></div></td>
+									<td><div class="btn-block"> <button onClick="uploadInvoice(this, `+k+`)" class="btnn btnn-primary btnn-rounded btn-sm">Upload</button></div></td>
 								</tr>
 								`;
 		});
@@ -1322,6 +1322,13 @@ $(function () {
 			
 		});
 	}
+
+	function uploadInvoice(e, val) {
+		console.log('uploadINvoive>>>', e.target, val)
+		alert(val)
+	}
+
+	
 
 	$("#quickbooks").click(function() {
 		// alert('quickboook')
@@ -1370,7 +1377,7 @@ $(function () {
 			
 			}
 			$.ajax(dashboard).done(function(response){
-				console.log(response);
+				// console.log(response);
 				quickbookList(response.data);
 				
 			})
@@ -1398,7 +1405,7 @@ $(function () {
 				var input = document.querySelector('input[type="file"]');
 				var formData = new FormData();
 				formData.append("file", input.files[0]);
-				console.log('formdata>>>>', formData)
+				// console.log('formdata>>>>', formData)
 				var fileHash;
 
 				var invoice = {
