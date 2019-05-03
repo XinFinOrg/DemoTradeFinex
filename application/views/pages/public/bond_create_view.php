@@ -120,18 +120,20 @@
                                         <div class="form-group col-md-12"><div class=" form-column-headings"> Bond Details</div></div>
                                             <div class="form-group col-lg-3 col-md-6">
                                                 <label for="firstSettleDate">First Settle Date</label>
-                                                <input type="date" style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="fsDate"  name= "fsDate" placeholder="dd/mm/yyyy">
+                                                <input type="date" style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="fsDate"  name= "fsdate" placeholder="dd/mm/yyyy">
                                             </div>
                                             <div class="form-group col-lg-3 col-md-6">
                                                 <label for="maturityDate">Maturity Date</label>
-                                                <input type="date" style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="maturityDate" name= "maturityDate"  placeholder="dd/mm/yyyy">
+                                                <input type="date" style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="maturityDate" name= "maturitydate"  placeholder="dd/mm/yyyy">
                                             </div>
                                             <div class="form-group col-lg-3 col-md-6">
                                                 <label for="faceValue">Face Value</label>
                                                 <input type="text" class="form-control form-controlCustom form-control-lg" id="ethRate"  name= "ethRate" placeholder="Face Value">
                                             </div>
-                                            
-
+                                            <div class="form-group col-lg-3 col-md-6">
+                                                <label for="amountOutstanding">Amount Outstanding</label>
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="amtstanding" name="amtstanding" placeholder="Amount Outstanding">
+                                            </div>
                                         </div>
                                         
                                         <hr class="thick dashed m-b-30">
@@ -168,7 +170,7 @@
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="1stDate">1st Date</label>
-                                                <input type="date"  style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="firstDate"  name= "firstDate" placeholder="dd/mm/yyyy">
+                                                <input type="date"  style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="firstDate"  name= "firstdate" placeholder="dd/mm/yyyy">
                                             </div>
                                         </div>
                                         <div class="form-row">
@@ -176,9 +178,13 @@
                                                 <label for="rate">Rate</label>
                                                 <input type="text" class="form-control form-controlCustom form-control-lg" id="coupon"  name= "coupon" placeholder="Rate">
                                             </div>
-                                            <div class="form-group col-md-8">
+                                            <div class="form-group col-md-4">
                                                 <label for="benchmark">Benchmark</label>
                                                 <input type="text" class="form-control form-controlCustom form-control-lg" id="benchmark"  name= "benchmark" placeholder="Benchmark">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="benchmark">Minimum Contribution</label>
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="bonusrate"  name= "bonusRate" placeholder="Minimum Contribution">
                                             </div>
                                         </div>
                                         
@@ -188,7 +194,7 @@
                                         <div class="form-group col-md-12"><div class=" form-column-headings"> Bond Token</div></div>
                                             <div class="form-group col-md-6">
                                                 <label for="tokenDecimals">Token Decimals</label>
-                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenDecimals" placeholder="Token Decimals"  value="18" readonly="true" >
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="tokenDecimals" name = "tokenDecimals" placeholder="Token Decimals"  value="18" readonly="true" >
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="marketSupply">Market Supply</label>
@@ -196,7 +202,7 @@
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="tokenDecimals">Type</label>
-                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="type" placeholder="Type"  value="Zero Coupon" readonly="true" >
+                                                <input type="text" class="form-control form-controlCustom form-control-lg" id="type" name="type"   value="Zero Coupon" readonly="true" >
                                             </div>
                                             <div class="form-group  col-md-6">
                                                     <label for="captcha">Enter Captcha</label><sup>*</sup>
@@ -228,12 +234,6 @@
                                                         <label class="hidden">
                                                             <input class="input-focus input-focus-notr" id="isBurnable" name="isBurnable" value="true" />
                                                             <span class="form-name floating-label">isBurnable<sup>*</sup></span> 
-                                                        </label>
-                                                    </div>
-                                                    <div class="">
-                                                        <label class="hidden">
-                                                            <input class="input-focus input-focus-notr" id="bonusRate" name="amtstanding" value="amtstanding" />
-                                                            <span class="form-name floating-label">bonus Rate<sup>*</sup></span> 
                                                         </label>
                                                     </div>
                                         

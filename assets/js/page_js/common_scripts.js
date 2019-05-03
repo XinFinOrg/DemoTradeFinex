@@ -829,9 +829,15 @@ $(function () {
 				var formDataObj = {};
 				$.each(formObj, function (k, v) {
 					v = v.split('=');
-					formDataObj[v[0]] = v[1];
+					if(v[0] === "fsdate" || v[0] === "maturitydate" || v[0] === "firstdate") {
+						var date = v[1].split('-');
+						date = date[2] + `/` + date[1] + '/' + date[0];
+						formDataObj[v[0]] = date;
+					} else {
+						formDataObj[v[0]] = v[1];
+					}
 				})
-				//console.log('formDataObj', formDataObj);
+				console.log('formDataObj>>>>>>>', formDataObj);
 				localStorage.setItem("formData", formData);
 				var token = localStorage.getItem("token", res.token);
 				//console.log(token);
@@ -887,7 +893,7 @@ $(function () {
 							const coinData = {
 								"coinName": formDataObj.tokenName,
 								"network" : "testnet",
-								// "type" : "erc20"
+								"type" : "erc20"
 							};
 
 
@@ -902,7 +908,7 @@ $(function () {
 									"headers": {
 										"content-type": "application/json",
 										"authorization":token,
-										"type":"erc20"
+										// "type":"erc20"
 									},
 									"processData": false,
 									"data": JSON.stringify(coinData)
@@ -910,6 +916,7 @@ $(function () {
 								
 										
 								$.ajax(deploy).done(function(response){
+									console.log('response deploy>>>>>>>>', response)
 
 									if (response.status == true){
 										hideLoader();
@@ -939,7 +946,7 @@ $(function () {
 											}
 
 											$.ajax(discover).done(function(response){
-												// console.log(response);
+												console.log('contract>>>>>>>>>>>>>>', response);
 												// response.projects
 												bondList(response.projects);
 												// $('#createBondHeader').on('click');
@@ -1324,13 +1331,13 @@ $(function () {
 	}
 
 	$('#uploadInvoicea').click(function() {
-		console.log('clicked upload')
-		alert('click')
+		console.log('clicked upload');
+		alert('click');
 	});
 
 	$('[id^="uploadInvoice_"]').each(function() {
 		$(this).click(function(){
-			 console.log('this>>>>>>', this)
+			 console.log('this>>>>>>', this);
 		});
 	});
 
