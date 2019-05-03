@@ -734,41 +734,41 @@ $(function () {
 			},
 			moodys: {
 				required: true,
-				minlength: 2,
+				minlength: 1,
 				maxlength: 10,
-				alphanumericOnly: true
+				LetterOnly: true
 			},
 			snp: {
 				required: true,
-				minlength: 2,
+				minlength: 1,
 				maxlength: 10,
-				alphanumericOnly: true
+				LetterOnly: true
 			},
 			fitch: {
 				required: true,
-				minlength: 2,
+				minlength: 1,
 				maxlength: 10,
-				alphanumericOnly: true
+				LetterOnly: true
 			},
-			fsDate: {
+			fsdate: {
 				required: true,
 			},
-			maturityDate: {
+			maturitydate: {
 				required: true,
 			},
 			amtstanding: {
 				required: true,
 				minlength: 2,
 				maxlength: 10,
-				LetterOnly: true
+				numberOnly: true
 			},
 			frequency: {
 				required: true,
 				minlength: 2,
 				maxlength: 10,
-				LetterOnly: true
+				numberOnly: true
 			},
-			firstDate: {
+			firstdate: {
 				required: true,
 			},
 			benchmark: {
@@ -861,12 +861,17 @@ $(function () {
 				maxlength: "Characters length should not exceeded than 15"
 			},
 			bonusRate: {
-				required: "Please enter Amount Outstanding",
+				required: "Please enter Minimum Contribution",
 				minlength: "Characters length should be atleast 2",
 				maxlength: "Characters length should not exceeded than 15"
 			},
 			frequency: {
 				required: "Please enter frequency",
+				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 15"
+			},
+			amtstanding: {
+				required: "Please enter Amount Outstanding",
 				minlength: "Characters length should be atleast 2",
 				maxlength: "Characters length should not exceeded than 15"
 			},
