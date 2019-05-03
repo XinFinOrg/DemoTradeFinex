@@ -775,7 +775,7 @@ $(function () {
 				required: true,
 				minlength: 2,
 				maxlength: 10,
-				alphanumericOnly: true
+				numberOnly: true
 			},
 			
 			tokenSupply: {
