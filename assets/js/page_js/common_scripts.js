@@ -722,14 +722,14 @@ $(function () {
 			},
 			isin: {
 				required: true,
-				minlength: 2,
-				maxlength: 10,
+				minlength: 8,
+				maxlength: 8,
 				alphanumericOnly: true
 			},
 			cusip: {
 				required: true,
-				minlength: 2,
-				maxlength: 10,
+				minlength: 8,
+				maxlength: 8,
 				alphanumericOnly: true
 			},
 			moodys: {
@@ -758,13 +758,13 @@ $(function () {
 			},
 			amtstanding: {
 				required: true,
-				minlength: 2,
+				minlength: 1,
 				maxlength: 10,
 				numberOnly: true
 			},
 			frequency: {
 				required: true,
-				minlength: 2,
+				minlength: 1,
 				maxlength: 10,
 				numberOnly: true
 			},
@@ -773,7 +773,7 @@ $(function () {
 			},
 			benchmark: {
 				required: true,
-				minlength: 2,
+				minlength: 1,
 				maxlength: 10,
 				numberOnly: true
 			},
@@ -822,63 +822,60 @@ $(function () {
 			},
 			isin: {
 				required: "Please enter ISIN",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Characters length should be atleast 8",
+				maxlength: "Characters length should not exceeded than 8"
 			},
 			cusip: {
 				required: "Please enter CUSIP",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Characters length should be atleast 8",
+				maxlength: "Characters length should not exceeded than 8"
 			},
 			moodys: {
 				required: "Please enter Moody's",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Characters length should be atleast 1",
+				maxlength: "Characters length should not exceeded than 4"
 			},
 			snp: {
 				required: "Please enter S&P",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Characters length should be atleast 1",
+				maxlength: "Characters length should not exceeded than 4"
 			},
 			fitch: {
 				required: "Please enter Fitch",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Characters length should be atleast 1",
+				maxlength: "Characters length should not exceeded than 4"
 			},
 			fsDate: {
 				required: "Please enter First Settle Date",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				
 			},
 			maturityDate: {
 				required: "Please enter Maturity Date",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				
 			},
 			ethRate: {
 				required: "Please enter Face Value",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Digits length should be atleast 1",
+				maxlength: "Digits length should not exceeded than 10"
 			},
 			bonusRate: {
 				required: "Please enter Minimum Contribution",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Digits length should be atleast 1",
+				maxlength: "Digits length should not exceeded than 10"
 			},
 			frequency: {
 				required: "Please enter frequency",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Digits length should be atleast 1",
+				maxlength: "Digits length should not exceeded than 10"
 			},
 			amtstanding: {
 				required: "Please enter Amount Outstanding",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Digits length should be atleast 2",
+				maxlength: "Digits length should not exceeded than 10"
 			},
 			firstDate: {
 				required: "Please enter First Date",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				
 			},
 			coupon: {
 				required: "Please enter coupon",
@@ -887,14 +884,14 @@ $(function () {
 			},
 			benchmark: {
 				required: "Please enter Benchmark",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 15"
+				minlength: "Digits length should be atleast 2",
+				maxlength: "Digits length should not exceeded than 10"
 			},
 			
 			tokenSymbol: {
 				required: "Please enter bond symbol",
 				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 10"
+				maxlength: "Characters length should not exceeded than 15"
 			},
 			tokenSupply: {
 				required: "Please enter issuance size",
