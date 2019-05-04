@@ -254,6 +254,20 @@
 			$('#invoicedeployTab').hide();
 			$('#invoiceCompleteTab').hide()
 		});	
+		$('#quickCompleteHeader').click(function() {
+			$('#QuickbookHeader').removeClass('active');
+			$('#quickCompleteHeader').addClass('active')
+			$('#quickbookT').hide();
+			$('#quickdeployTab').hide();
+			$('#quickCompleteTab').show();
+		});	
+		$('#QuickbookHeader').click(function() {
+			$('#QuickbookHeader').addClass('active');
+			$('#invoiceCompleteHeader').removeClass('active')
+			$('#quickbookT').show();
+			$('#quickdeployTab').hide();
+			$('#quickCompleteTab').hide()
+		});	
 		
 		searchButton();goTop();removePreloader();responsiveMenu();/* slideTeam(); */
 		

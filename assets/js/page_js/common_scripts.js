@@ -1,4 +1,236 @@
+function showLoader() {
+	document.getElementById("loader").style.display = "block";
+}						
 
+function hideLoader() {
+	document.getElementById("loader").style.display = "none";
+}
+
+// Split the array into halves and merge them recursively 
+function mergeSort (arr) {
+	if (arr.length === 1) {
+	// return once we hit an array with a single item
+	return arr
+	}
+
+	const middle = Math.floor(arr.length / 2) // get the middle item of the array rounded down
+	const left = arr.slice(0, middle) // items on the left side
+	const right = arr.slice(middle) // items on the right side
+
+	return merge(
+	mergeSort(left),
+	mergeSort(right)
+	)
+}
+
+// compare the arrays item by item and return the concatenated result
+function merge (left, right) {
+	let result = []
+	let indexLeft = 0
+	let indexRight = 0
+
+	while (indexLeft < left.length && indexRight < right.length) {
+	if (new Date(left[indexLeft].createdAt).getTime() > new Date(right[indexRight].createdAt).getTime()) {
+		result.push(left[indexLeft])
+		indexLeft++
+	} else {
+		result.push(right[indexRight])
+		indexRight++
+	}
+	}
+
+	return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight))
+}
+
+function invoiceList(data) {
+	var discoverinvoiceTable = "";
+	var status = "Deployed";
+	var mergeSortedData = mergeSort(data);
+	$.each(mergeSortedData, function(k,v) {
+		// console.log('timestamp:',new Date(v.createdAt));
+		if(v.tokenContractAddress == null) {
+			status = "Pending";
+		} else {
+			status = "Deployed";
+		}
+		discoverinvoiceTable += `
+							<tr class="bondRow">
+								<td>`+v.coinName+`</td>
+								<td>`+v.coinSymbol+`</td>
+								<td>`+status+`</td>
+								<td>`+v.createdAt+`</td>
+								<td class="truncate"><span><a href = "https://gateway.ipfs.io/ipfs/`+v.ipfsHash+`" target="_blank" >`+v.ipfsHash+`</a><span></td>
+								<td class="truncate"><span><a href = "https://ropsten.etherscan.io/address/`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
+							</tr>
+							`;
+	});
+
+	$('#discoverinvoiceTable').html(discoverinvoiceTable);
+	$("#invoice_listing").DataTable({
+		"bSort": false,
+		"dom": "Bfrtip",
+		"bDestroy": true,
+		"pageLength": 10
+		
+	});
+}
+
+function uploadInvoice(data) {
+	var uploadInvoiceObj = {
+		"tokenSymbol": $('#dNum_'+ data)[0].innerText,
+		"tokenName": $('#cName_'+ data)[0].innerText,
+		"type":"invoice",
+		"isOwnable":"true",
+		"isBurnable":"true",
+		"isPausable":"true",
+		"amount":$('#amount_'+ data)[0].innerText,
+		"date":$('#date_'+ data)[0].innerText
+	};
+	$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+				// console.log(res);
+				
+				localStorage.setItem("token", res.token);
+				var token = localStorage.getItem("token", res.token);
+				
+					var invoice = {
+						"async": true,
+						"crossDomain": true,
+						"url": "https://api.mycontract.co/v1/invoice/quickbook/upload",
+						"method": "GET",
+						"headers": {
+							// "content-type": "application/json",
+							"authorization":token
+						},
+						"processData": false
+					}
+				
+					$.ajax(invoice).done(function (response) {
+						// console.log('response>>>>', response);
+						
+						var fileHashh = response.hash;	
+						// after file upload make erc721 call
+						uploadInvoiceObj['hash'] = fileHashh;		
+						// console.log(uploadInvoiceObj)				
+							if (res.token != null && res.token == token) {
+									var quick = {
+										"async": true,
+										"crossDomain": true,
+										"url": "https://api.mycontract.co/v1/smartcontract/ERC721",
+										"method": "POST",
+										"headers": {
+											"content-type": "application/json",
+											"authorization":token
+										},
+										"processData": false,
+										"data": JSON.stringify(uploadInvoiceObj)
+									}
+									$.ajax(quick).done(function(response){
+										// console.log('resposne>>>>>',response);
+										$('#quickbookT').hide();
+										$('#quickdeployTab').show();
+										$('#QuickbookHeader').removeClass('active');
+										$('#quickdeployHeader').addClass('active');
+									
+										$('#invoiceData').html('<p>'+response+'</p>');
+										
+										if(response.status == false) {
+											$('#quickbookT').show();
+											$('#invoiceexists').modal('show');
+											$('#invoiceexists').css('opacity', '1')
+											$('#quickdeployTab').hide();	
+										} 
+										else {
+											$('#quickbookT').hide();
+											$('#quickdeployTab').show();							
+											$('#QuickbookHeader').removeClass('active');
+											
+											$('#QuickbookHeader').css('pointer-events', 'none');
+											$('#quickdeployHeader').addClass('active');
+											//console.log( response);
+											
+											$('#invoiceData').html('<p>'+response+'</p>');
+											//console.log('formdata done:', formDataObj.tokenName);
+											const coinData = {
+												"coinName": uploadInvoiceObj.tokenName,
+												"network" : "testnet",
+												"type" : "erc721"
+											};
+
+
+											$("#deploy_invoice").on('click', function (e) {
+												showLoader();
+												$('#deploy_invoice').prop('disabled', true);
+												var deploy = {
+													"async": true,
+													"crossDomain": true,
+													"url": "https://api.mycontract.co/v1/smartcontract/deploy",
+													"method": "POST",
+													"headers": {
+														"content-type": "application/json",
+														"authorization":token
+													},
+													"processData": false,
+													"data": JSON.stringify(coinData)
+												}
+												
+														
+												$.ajax(deploy).done(function(response){
+													console.log('response deploy>>', response)
+													if (response.status == true){
+														
+														hideLoader();
+														$("#invoiceprocess").modal("show");
+														$('#invoiceprocess').css('opacity', '1')
+														$('#invoicebtn').click(function() {
+															$("#invoiceprocess").modal("hide");
+															$('#quickdeployTab').hide();
+															$('#quickdeployHeader').removeClass('active');
+															$('#quickCompleteHeader').addClass('active');
+															$('#QuickbookHeader').css('pointer-events', 'auto');
+															$('#quickCompleteTab').show();
+
+															var discover = {
+																"async": true,
+																"crossDomain": true,
+																"url": "https://api.mycontract.co/v1/smartcontract/invoices",
+																"method": "POST",
+																"headers": {
+																	"content-type": "application/json",
+																	"authorization":token
+																},
+																"processData": false,
+																"data": ""
+															
+														}
+
+														$.ajax(discover).done(function(response){
+															console.log('invicelist ',response);
+															// response.projects
+															invoiceList(response.projects);
+															// $('#createBondHeader').on('click');
+														})
+														
+													})
+
+							
+					
+							}
+						});
+	
+		
+
+					console.log('uploadInvoice>>>>', uploadInvoiceObj);
+	
+
+											});
+										
+									
+										}
+									})
+						};
+					});
+				})
+}
 
 $(function () {
 	var jQueryScript = document.createElement('script');  
@@ -472,82 +704,7 @@ $(function () {
 		}
 	});
 
-	function showLoader() {
-		document.getElementById("loader").style.display = "block";
-    }						
-
-    function hideLoader() {
-		document.getElementById("loader").style.display = "none";
-	}
 	
-	function invoiceList(data) {
-		var discoverinvoiceTable = "";
-		var status = "Deployed";
-		var mergeSortedData = mergeSort(data);
-		$.each(mergeSortedData, function(k,v) {
-			// console.log('timestamp:',new Date(v.createdAt));
-			if(v.tokenContractAddress == null) {
-				status = "Pending";
-			} else {
-				status = "Deployed";
-			}
-			discoverinvoiceTable += `
-								<tr class="bondRow">
-									<td>`+v.coinName+`</td>
-									<td>`+v.coinSymbol+`</td>
-									<td>`+status+`</td>
-									<td>`+v.createdAt+`</td>
-									<td class="truncate"><span><a href = "https://gateway.ipfs.io/ipfs/`+v.ipfsHash+`" target="_blank" >`+v.ipfsHash+`</a><span></td>
-									<td class="truncate"><span><a href = "https://ropsten.etherscan.io/address/`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
-								</tr>
-								`;
-		});
-
-		$('#discoverinvoiceTable').html(discoverinvoiceTable);
-		$("#invoice_listing").DataTable({
-			"bSort": false,
-			"dom": "Bfrtip",
-			"bDestroy": true,
-			"pageLength": 10
-			
-		});
-	}
-
-	// Split the array into halves and merge them recursively 
-	function mergeSort (arr) {
-		if (arr.length === 1) {
-		// return once we hit an array with a single item
-		return arr
-		}
-	
-		const middle = Math.floor(arr.length / 2) // get the middle item of the array rounded down
-		const left = arr.slice(0, middle) // items on the left side
-		const right = arr.slice(middle) // items on the right side
-	
-		return merge(
-		mergeSort(left),
-		mergeSort(right)
-		)
-	}
-	
-	// compare the arrays item by item and return the concatenated result
-	function merge (left, right) {
-		let result = []
-		let indexLeft = 0
-		let indexRight = 0
-	
-		while (indexLeft < left.length && indexRight < right.length) {
-		if (new Date(left[indexLeft].createdAt).getTime() > new Date(right[indexRight].createdAt).getTime()) {
-			result.push(left[indexLeft])
-			indexLeft++
-		} else {
-			result.push(right[indexRight])
-			indexRight++
-		}
-		}
-	
-		return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight))
-	}
 
 	function bondList(data) {
 		var discoverBondTable = "";
@@ -1111,6 +1268,32 @@ $(function () {
 				invoiceList(response.projects);
 			})
 		});
+	 });
+	 $('#quickCompleteHeader').click(function() {
+		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
+			//console.log(res);
+			localStorage.setItem("token", res.token);
+			var token = localStorage.getItem("token");
+			var discover = {
+				"async": true,
+				"crossDomain": true,
+				"url": "https://api.mycontract.co/v1/smartcontract/invoices",
+				"method": "POST",
+				"headers": {
+					"content-type": "application/json",
+					"authorization":token
+				},
+				"processData": false,
+				"data": ""
+			
+			}
+
+			$.ajax(discover).done(function(response){
+				 console.log(response);
+				// response.projects
+				invoiceList(response.projects);
+			})
+		});
  	});
 	$("#invoice_factoring-form").validate({
 		rules: {
@@ -1165,7 +1348,7 @@ $(function () {
 		error: function (elem) {
 		},
 		submitHandler: function (form) {
-			$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {0
+			$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
 				// console.log(res);
 				localStorage.setItem("token", res.token);
 				var formData = $(form).serialize();
@@ -1414,12 +1597,12 @@ $(function () {
 			
 			discoverquickbookTable += `
 								<tr class="bondRow" id="invoiceRow-`+k+`">
-									<td>`+v.DocNumber+`</td>
-									<td>`+v.CustomerRef.name+`</td>
-									<td>`+v.Line[0].Description+`</td>
-									<td>`+v.TotalAmt+`</td>
-									<td>`+v.DueDate+`</td>
-									<td><div class="btn-block"> <button id="uploadInvoicea`+k+`" class="btnn btnn-primary btnn-rounded btn-sm">Upload</button></div></td>
+									<td id="dNum_`+k+`">`+v.DocNumber+`</td>
+									<td id="cName_`+k+`">`+v.CustomerRef.name+`</td>
+									<td id="line_`+k+`">`+v.Line[0].Description+`</td>
+									<td id="amount_`+k+`">`+v.TotalAmt+`</td>
+									<td id="date_`+k+`">`+v.DueDate+`</td>
+									<td><div class="btn-block"> <button  onclick="uploadInvoice('`+k+`');" class="btnn btnn-primary btnn-rounded btn-sm">Upload</button></div></td>
 								</tr>
 								`;
 		});
@@ -1433,20 +1616,6 @@ $(function () {
 			
 		});
 	}
-
-	$('#uploadInvoicea').click(function() {
-		console.log('clicked upload');
-		alert('click');
-	});
-
-	$('[id^="uploadInvoice_"]').each(function() {
-		$(this).click(function(){
-			 console.log('this>>>>>>', this);
-		});
-	});
-
-
-	
 
 	$("#quickbooks").click(function() {
 		// alert('quickboook')
@@ -1502,187 +1671,7 @@ $(function () {
 		});
 	}
 	
-	$('#quotes').click(function(form){
-		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
-				// console.log(res);
-				localStorage.setItem("token", res.token);
-				var formData = $(form).serialize();
-				const formObj = formData.trim().split('&');
-				var formDataObj = {};
-				$.each(formObj, function (k, v) {
-					v = v.split('=');
-					formDataObj[v[0]] = v[1];
-				});
-				
-				// console.log('formDataObj', formDataObj);
-				localStorage.setItem("formData", formData);
-				var token = localStorage.getItem("token", res.token);
-				// console.log(token);
-				showLoader();
-				$('#invoiceData').prop('disabled', true);
-				var input = document.querySelector('input[type="file"]');
-				var formData = new FormData();
-				formData.append("file", input.files[0]);
-				// console.log('formdata>>>>', formData)
-				var fileHash;
-
-				var invoice = {
-					"async": true,
-					"crossDomain": true,
-					"url": "https://api.mycontract.co/v1/invoice/quickbook/uploadinvoice",
-					"method": "POST",
-					"async": true,
-					"data": formData,
-					"cache": false,
-					"contentType": false,
-					"processData": false,
-					"timeout": 60000
-				}
-				
-					$.ajax(invoice).done(function (response) {
-						console.log('response>>>>', response);
-						fileHash = response.hash;
-
-
-
-						// after file upload make erc721 call
-						formDataObj['hash'] = fileHash;
-						console.log('formdataobj', formDataObj)
-						if (res.token != null && res.token == token) {
-							var settings = {
-								"async": true,
-								"crossDomain": true,
-								"url": "https://api.mycontract.co/v1/smartcontract/ERC721",
-								"method": "POST",
-								"headers": {
-									"content-type": "application/json",
-									"authorization":token
-								},
-								"processData": false,
-								"data": JSON.stringify(formDataObj)
-							}
-					
-
-					$.ajax(settings).done(function (response) {
-
-						$('#uploadinvoiceTab').hide();
-						$('#invoicedeployTab').show();
-						$('#uploadinvoiceHeader').removeClass('active');
-						$('#invoicedeployHeader').addClass('active');
-						$('#uploadmanform').hide();
-						//console.log( response);
-						hideLoader();
-						$('#invoiceData').html('<p>'+response+'</p>');
-						// console.log('formdata done:', formDataObj.tokenName);
-						
-
-						// console.log('response', response);
-						if(response.status == false) {
-							$('#uploadinvoiceTab').show();
-							$('#invoiceexists').modal('show');
-							$('#invoiceexists').css('opacity', '1')
-							$('#invoicedeployTab').hide();
-							
-						} 
-						else {
-							// console.log('response else', response)
-							$('#uploadinvoiceTab').hide();
-							$('#invoicedeployTab').show();							
-							$('#uploadinvoiceHeader').removeClass('active');
-							
-							$('#uploadinvoiceHeader').css('pointer-events', 'none');
-							$('#invoicedeployHeader').addClass('active');
-							//console.log( response);
-							hideLoader();
-							$('#invoiceData').html('<p>'+response+'</p>');
-							//console.log('formdata done:', formDataObj.tokenName);
-							const coinData = {
-								"coinName": formDataObj.tokenName,
-								"network" : "testnet",
-								"type" : "erc721"
-							};
-
-
-							$("#deploy_invoice").on('click', function (e) {
-								showLoader();
-								$('#deploy_invoice').prop('disabled', true);
-								var deploy = {
-									"async": true,
-									"crossDomain": true,
-									"url": "https://api.mycontract.co/v1/smartcontract/deploy",
-									"method": "POST",
-									"headers": {
-										"content-type": "application/json",
-										"authorization":token
-									},
-									"processData": false,
-									"data": JSON.stringify(coinData)
-								}
-								
-										
-								$.ajax(deploy).done(function(response){
-									console.log('response deploy>>', response)
-									if (response.status == true){
-										hideLoader();
-										$("#invoiceprocess").modal("show");
-										$('#invoiceprocess').css('opacity', '1')
-										$('#invoicebtn').click(function() {
-											$("#invoiceprocess").modal("hide");
-											$('#invoicedeployTab').hide();
-											$('#invoicedeployHeader').removeClass('active');
-											$('#invoiceCompleteHeader').addClass('active');
-											$('#uploadinvoiceHeader').css('pointer-events', 'auto');
-											$('#invoiceCompleteTab').show();
-
-											var discover = {
-												"async": true,
-												"crossDomain": true,
-												"url": "https://api.mycontract.co/v1/smartcontract/invoices",
-												"method": "POST",
-												"headers": {
-													"content-type": "application/json",
-													"authorization":token
-												},
-												"processData": false,
-												"data": ""
-											
-										}
-
-										$.ajax(discover).done(function(response){
-											// console.log(response);
-											// response.projects
-											invoiceList(response.projects);
-											// $('#createBondHeader').on('click');
-										})
-										
-										});
-									}
-									// console.log('response', response, response.crowdsaleReceipt.transactionHash);
-									else{
-										alert("Oops!!Something went wrong");
-										location.reload();
-									}
-							
-								});
-						
-							
-							});
-
-							}		
-					});
-					
-				}
-					}).fail(function(error) {
-						console.log(error);
-					});
-				
-
-				
-			}).fail(function () {
-					alert("error");
-				});
-
-	})
+	
 	// $("#advertise-form").validate({
 	// 	rules: {
 	// 		mname: {
@@ -1969,6 +1958,10 @@ $(function () {
 		location.reload();
 	});
 	$('#uploadinvoiceHeader').click(function() {
+		//console.log('alert')
+		location.reload();
+	});
+	$('#QuickbookHeader').click(function() {
 		//console.log('alert')
 		location.reload();
 	});

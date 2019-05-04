@@ -8913,7 +8913,16 @@ hr {
     font-family: 'open_sanssemibold';
 }
 #invoiceCompleteTab .dynamic_table label {
-	margin-top: -48px;
+		margin-top: -48px;
+    position: absolute;
+    left: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #282c3f;
+    font-family: 'open_sanssemibold';
+}
+#quickbookT .dynamic_table label {
+		margin-top: -48px;
     position: absolute;
     left: 15px;
     font-size: 14px;
@@ -8922,6 +8931,15 @@ hr {
     font-family: 'open_sanssemibold';
 }
 
+#quickCompleteTab .dynamic_table label {
+	margin-top: -48px;
+    position: absolute;
+    left: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #282c3f;
+    font-family: 'open_sanssemibold';
+}
 @media only screen and (min-width: 1300px) {
     #bondCompleteTab .dynamic_table label {
 		left: 1%;
