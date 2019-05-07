@@ -1303,6 +1303,15 @@ $(function () {
 				maxlength: 15,
 				LetterOnly: true
 			},
+			date:{
+				required: true
+			},
+			amount:{
+				required: true,
+				minlength: 1,
+				maxlength: 15,
+				numberOnly: true
+			},
 			tokenSymbol:{
 				required: true,
 				minlength: 2,
@@ -1324,6 +1333,14 @@ $(function () {
 			tokenSymbol:{
 				required: "Please enter Contract ID",
 				minlength: "Characters length should be atleast 2",
+				maxlength: "Characters length should not exceeded than 10"
+			},
+			date:{
+				required: "Please enter Date"
+			},
+			amount:{
+				required: "Please enter Amount",
+				minlength: "Characters length should be atleast 1",
 				maxlength: "Characters length should not exceeded than 10"
 			},
 			file:"Document required",
