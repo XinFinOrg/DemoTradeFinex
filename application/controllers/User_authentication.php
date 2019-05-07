@@ -39,7 +39,7 @@ class User_Authentication extends CI_Controller {
         $this->session->sess_destroy();
         
         // Redirect to login page
-        redirect('googlelogin/');
+        redirect('sociallogin/');
     }
     
 }
