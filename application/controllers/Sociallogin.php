@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Googlelogin extends CI_Controller {
+class Sociallogin extends CI_Controller {
 
 public function __construct()
 {
@@ -9,19 +9,31 @@ public function __construct()
 	require_once APPPATH.'third_party/src/Google_Client.php';
 	require_once APPPATH.'third_party/src/contrib/Google_Oauth2Service.php';
 	$this->load->model('user');
+	$this->load->model(array('manage', 'plisting'));
+	$this->output->delete_cache();
+	$this->load->library(array('session', 'encrypt'));
+		
+	$this->load->helper('form','url','date');
 }
 	
 	public function index()
 	{
+		$data = array();
+		$this->load->view('includes/headern', $data);
+		$this->load->view('includes/header_publicn', $data);
 		$this->load->view('login_view');
+		$this->load->view('includes/footer_commonn', $data);
+		$this->load->view('pages_scripts/common_scripts', $data);
+		$this->load->view('includes/footern', $data);	
+		
 	}
 	
 	public function login()
 	{
-	
+		
 		$clientId = '974340167294-4tm547181uu7v0gtqj4d1bv4gp1ffugq.apps.googleusercontent.com'; //Google client ID
 		$clientSecret = 's1gEY7eIayJBjcYHbsvnA8Ha'; //Google client secret
-		$redirectURL = base_url() .'googlelogin/login';
+		$redirectURL = base_url().'googlelogin/login';
 		
 		//https://curl.haxx.se/docs/caextract.html
 
@@ -63,6 +75,7 @@ public function __construct()
 			$this->session->set_userdata('loggedIn', true);
 			$this->session->set_userdata('userData', $userData);
 
+			
 			redirect('user_authentication/profile/');
 			// $this->load->view('user_authentication/profile',$userData);
 
@@ -78,7 +91,6 @@ public function __construct()
             exit;
 		}
 		
-
 		
 	}	
 }
