@@ -33,7 +33,7 @@ public function __construct()
 		
 		$clientId = '974340167294-4tm547181uu7v0gtqj4d1bv4gp1ffugq.apps.googleusercontent.com'; //Google client ID
 		$clientSecret = 's1gEY7eIayJBjcYHbsvnA8Ha'; //Google client secret
-		$redirectURL = base_url().'googlelogin/login';
+		$redirectURL = base_url().'sociallogin/login';
 		
 		//https://curl.haxx.se/docs/caextract.html
 
