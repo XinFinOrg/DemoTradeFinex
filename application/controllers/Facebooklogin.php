@@ -10,9 +10,11 @@ public function __construct()
 	$this->load->library('facebook');
 
 	$this->load->model('user');
+	$this->load->helper('url');
 }
 	
 public function index(){
+	// $this->load->view('login_view');
 	$userData = array();
 	
 	// Check if user is logged in

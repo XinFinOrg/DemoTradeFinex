@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class User extends CI_Model {
     
     function __construct() {
-        $this->tableName = 'users';
+        $this->tableName = 'tf_users';
         $this->primaryKey = 'id';
     }
     
