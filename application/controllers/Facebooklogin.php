@@ -16,6 +16,12 @@ public function __construct()
 public function index(){
 	// $this->load->view('login_view');
 	$userData = array();
+	$this->load->view('includes/headern', $data);
+	$this->load->view('includes/header_publicn', $data);
+	$this->load->view('login_view');
+	$this->load->view('includes/footer_commonn', $data);
+	$this->load->view('pages_scripts/common_scripts', $data);
+	$this->load->view('includes/footern', $data);	
 	
 	// Check if user is logged in
 	if($this->facebook->is_authenticated()){
