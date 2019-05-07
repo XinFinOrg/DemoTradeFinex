@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['google']['client_id']        = '974340167294-4tm547181uu7v0gtqj4d1bv4gp1ffugq.apps.googleusercontent.com';
 $config['google']['client_secret']    = 's1gEY7eIayJBjcYHbsvnA8Ha';
-$config['google']['redirect_uri']     = 'https://demo.tradefinex.org/user_authentication/';
+$config['google']['redirect_uri']     = 'https://demo.tradefinex.org/sociallogin/login/';
 $config['google']['application_name'] = 'Login to CodexWorld.com';
 $config['google']['api_key']          = '';
 $config['google']['scopes']           = array();
