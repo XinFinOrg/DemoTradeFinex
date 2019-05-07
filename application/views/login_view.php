@@ -6,8 +6,8 @@
 						<h3 >Login Using Google Accounts</h3>
 						<!-- <span class="signbox"><a href="<?=base_url()?>googlelogin/login"><img src="<?=base_url()?>assets/images/google-btn.png" alt=""/></a></span> -->
 
-						<span ><a href="http://localhost/codeigniter/googlelogin/login"><img src="<?php echo base_url() ?>assets/images/img/google-btn.png" alt=""></a></span>
-						<span ><a href="http://localhost/codeigniter/facebooklogin/login"><img src="<?php echo base_url() ?>assets/images/img/fb-login-btn.png" alt=""></a></span>
+						<span ><a href="https://demo.tradefinex.org/googlelogin/login"><img src="<?php echo base_url() ?>assets/images/img/google-btn.png" alt=""></a></span>
+						<span ><a href="https://demo.tradefinex.org/facebooklogin/login"><img src="<?php echo base_url() ?>assets/images/img/fb-login-btn.png" alt=""></a></span>
 						
 					</div>
 				</div>
