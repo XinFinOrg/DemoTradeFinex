@@ -9,15 +9,19 @@ class Facebooklogin extends CI_Controller {
         $this->load->library('facebook');
         
         //Load user model
-        $this->load->model('user');
+		$this->load->model('user');
+		// $this->load->library(array('session', 'encrypt'));
+		
+		// $this->load->helper('form','url','date');
     }
     
     public function index(){
 		$userData = array();
 		
-		// echo "<pre>";
-		// print_r('hellllllo');
-		// die;
+		if(!isset($this->session)):
+			echo "<pre>";
+			print_r('$this->facebook->is_authenticated()');
+		endif;
         // Check if user is logged in
         if($this->facebook->is_authenticated()){
             // Get user facebook profile details
@@ -39,7 +43,8 @@ class Facebooklogin extends CI_Controller {
             // Check user data insert or update status
             if(!empty($userID)){
                 $data['userData'] = $userData;
-                $this->session->set_userdata('userData', $userData);
+				$this->session->set_userdata('userData', $userData);
+				redirect('user_authentication/facebook_profile/');
             }else{
                $data['userData'] = array();
             }
@@ -47,13 +52,20 @@ class Facebooklogin extends CI_Controller {
             // Get logout URL
             $data['logoutURL'] = $this->facebook->logout_url();
         }else{
-            // Get login URL
-            $data['authURL'] =  $this->facebook->login_url();
+			// Get login URL
+			// echo "<pre>";
+			// print_r($this->facebook->login_url());
+			// die;
+			$data['authURL'] =  $this->facebook->login_url();
+			// header($data);
+			
         }
         
-        // Load login & profile view
-        $this->load->view('user_authentication/index',$data);
-    }
+		// Load login & profile view
+		$this->load->view('user_authentication/facebook',$data);
+		
+    
+        }
 
     public function logout() {
         // Remove local Facebook session
@@ -61,6 +73,6 @@ class Facebooklogin extends CI_Controller {
         // Remove user data from session
         $this->session->unset_userdata('userData');
         // Redirect to login page
-        redirect('user_authentication');
+        redirect('facebooklogin');
     }
 }
