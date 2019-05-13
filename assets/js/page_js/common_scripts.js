@@ -251,7 +251,7 @@ function alphaex(data) {
 		"processData": false
 	}
 	$.ajax(alphaex).done(function (response) {
-		console.log(JSON.parse(response).message);
+		// console.log(JSON.parse(response).message);
 		$('#alphaexshow').modal("show");
 		$('#alphaexshow').css('opacity', '1')
 		$('#alphaexData').html('<p>'+JSON.parse(response).message+'</p>');
@@ -262,7 +262,7 @@ $(function () {
 	var jQueryScript = document.createElement('script');  
 	// jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
 	document.head.appendChild(jQueryScript);
-	console.log("Quickbook updated");
+	// console.log("Quickbook updated");
 	var site_url = $('#site_url').val();
 	var csrf_name = $('#csrf_tokens').attr('name');
 	var csrf_value = $('#csrf_tokens').val();
@@ -2010,6 +2010,9 @@ $(function () {
 		location.reload();
 	});
 	$('#sorry').click(function() {
+		location.reload();
+	});
+	$('#alphaexok').click(function() {
 		location.reload();
 	});
 });

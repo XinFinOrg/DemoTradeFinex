@@ -443,12 +443,12 @@
                 </div>
 				<div class="modal-body text-center">
 
-                <pre id="alphaexData" class="language-markup scrollable">
+                <p id="alphaexData"></p>
 						
-						
-						<div class="btnn-more">
-							<button id="DeployBtn" type="submit" class="btnn btnn-primary btnn-rounded"  data-keyboard="false"> Ok </button> 
-						</div>						
+				<div class="btnn-more">
+					<button id="alphaexok" type="submit" class="btnn btnn-primary btnn-rounded"  data-keyboard="false"> Ok </button> 
+				</div>				
+										
 							                                           
 				</div>
 			</div>
