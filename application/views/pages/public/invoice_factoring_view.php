@@ -78,7 +78,7 @@
 
 									<h5 class="card-header">Connect Invoice to Blockchain State</h5>
 									<div class="card-body">
-										<p>Lorem Ipsum simply dumm text Lorem Ipsum simply dumm text Lorem Ipsum simply dumm text Lorem Ipsum simply dumm text </p>
+										<!-- <p>Lorem Ipsum simply dumm text Lorem Ipsum simply dumm text Lorem Ipsum simply dumm text Lorem Ipsum simply dumm text </p> -->
 									</div>
 
 								</div>
