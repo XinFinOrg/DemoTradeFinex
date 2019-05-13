@@ -906,14 +906,14 @@ $(function () {
 			},
 			isin: {
 				required: true,
-				minlength: 8,
-				maxlength: 8,
+				minlength: 12,
+				maxlength: 12,
 				alphanumericOnly: true
 			},
 			cusip: {
 				required: true,
-				minlength: 8,
-				maxlength: 8,
+				minlength: 12,
+				maxlength: 12,
 				alphanumericOnly: true
 			},
 			moodys: {
@@ -1006,13 +1006,13 @@ $(function () {
 			},
 			isin: {
 				required: "Please enter ISIN",
-				minlength: "Characters length should be atleast 8",
-				maxlength: "Characters length should not exceeded than 8"
+				minlength: "Characters length should be atleast 12",
+				maxlength: "Characters length should not exceeded than 12"
 			},
 			cusip: {
 				required: "Please enter CUSIP",
-				minlength: "Characters length should be atleast 8",
-				maxlength: "Characters length should not exceeded than 8"
+				minlength: "Characters length should be atleast 12",
+				maxlength: "Characters length should not exceeded than 12"
 			},
 			moodys: {
 				required: "Please enter Moody's",
