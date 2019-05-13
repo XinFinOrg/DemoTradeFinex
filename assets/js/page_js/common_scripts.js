@@ -243,7 +243,7 @@ function alphaex(data) {
 	var alphaex = {
 		"async": true,
 		"crossDomain": true,
-		"url": "https://uat.alphaex.net/api/add_erc20",
+		"url": "http://uat.alphaex.net/api/add_erc20",
 		"method": "POST",
 		"contentType": false,
 		"mimeType": "multipart/form-data",
