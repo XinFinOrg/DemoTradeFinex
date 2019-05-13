@@ -238,7 +238,7 @@ function alphaex(data) {
 	form.append("symbol", $('#alphaCN_'+ data).data('symbol'));
 	form.append("token_decimals", "18");
 	form.append("requested_by", "TradeFinex");
-	form.append("logo_url", "http://uat.alphaex.net/front/assets/imgs/USDC.png");
+	form.append("logo_url", "https://uat.alphaex.net/front/assets/imgs/USDC.png");
 	form.append("email_id", "mansi@xinfin.org");		
 	var alphaex = {
 		"async": true,
