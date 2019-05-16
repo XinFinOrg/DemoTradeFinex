@@ -882,8 +882,36 @@ $(function () {
 				bondList(response.projects);
 			})
 		});
- 	});
+	 });
+	
+	$('#mtdate').datepicker({
+		dateFormat: "dd-mm-yy" ,
+		onSelect: function(date){   
+			var date1 = $('#mtdate').datepicker('getDate'); 
+			newDate = new Date( Date.parse( date1 ) );  
+			$('#firstDate').datepicker("option","maxDate",newDate);
+		} 
+	});
+	$('#firstDate').datepicker({
+		dateFormat: "dd-mm-yy" 
+	});
 
+	$("#fsdate").datepicker({
+		dateFormat: "dd-mm-yy", 
+		minDate:  0,
+		onSelect: function(date){            
+			var date1 = $('#fsdate').datepicker('getDate');           
+			var date = new Date( Date.parse( date1 ) ); 
+			date.setDate( date.getDate() + 1 );        
+			var newDate = date.toDateString(); 
+			newDate = new Date( Date.parse( newDate ) );                      
+			$('#mtdate').datepicker("option","minDate",newDate); 
+			$('#firstDate').datepicker("option","minDate",newDate); 
+			
+		}
+	});
+	
+	
 	$("#bond_create-form").validate({
 		rules: {
 			tokenName: {
@@ -1103,6 +1131,8 @@ $(function () {
 			var dvalue = (ethRate / ((1 + (coupon/100)) ** tenure));
 			$('#dvalue').val(dvalue);
 
+			
+
 		},
 		success: function (elem) {
 		},
@@ -1269,6 +1299,7 @@ $(function () {
 
 
 	});
+
 
 	$('#invoiceCompleteHeader').click(function() {
 		$.post("https://api.mycontract.co/v1/client/login", { "email": "mansi@xinfin.org", "password": "manuvora" }, function (res) {
