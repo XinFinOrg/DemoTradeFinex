@@ -7,7 +7,7 @@
 						<!-- <span class="signbox"><a href="<?=base_url()?>googlelogin/login"><img src="<?=base_url()?>assets/images/google-btn.png" alt=""/></a></span> -->
 
 						<span ><a href="sociallogin/login"><img src="<?php echo base_url() ?>assets/images/img/google-btn.png" alt=""></a></span>
-						<span ><a href="facebooklogin"><img src="<?php echo base_url() ?>assets/images/img/fb-login-btn.png" alt=""></a></span>
+						<span><a href="facebooklogin" style="pointer-events: none;  cursor: default;"><img src="<?php echo base_url() ?>assets/images/img/fb-login-btn.png" alt=""></a></span>
 						
 					</div>
 				</div>

@@ -36,8 +36,7 @@ public function __construct()
 		$redirectURL = base_url().'sociallogin/login';
 		$redirectURL = 'http://localhost/DemoTradeFinex/sociallogin/login';
 			
-		//https://curl.haxx.se/docs/caextract.html
-
+		
 		//Call Google API
 		$gClient = new Google_Client();
 		$gClient->setApplicationName('Login');
@@ -77,7 +76,7 @@ public function __construct()
 			$this->session->set_userdata('userData', $userData);
 
 			
-			redirect('user_authentication/profile/');
+			redirect('publicv/bond_create');
 			// $this->load->view('user_authentication/profile',$userData);
 
 			// echo "<pre>";
