@@ -120,11 +120,11 @@
                                         <div class="form-group col-md-12"><div class=" form-column-headings"> Bond Details</div></div>
                                             <div class="form-group col-lg-3 col-md-6">
                                                 <label for="firstSettleDate">First Settle Date</label>
-                                                <input type="date" style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="fsDate"  name= "fsdate" placeholder="dd/mm/yyyy">
+                                                <input type="date" style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="closing_date"  name= "fsdate" min="<?php echo date('Y-m-d'); ?>" placeholder="dd/mm/yyyy">
                                             </div>
                                             <div class="form-group col-lg-3 col-md-6">
                                                 <label for="maturityDate">Maturity Date</label>
-                                                <input type="date" style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="maturityDate" name= "maturitydate"  placeholder="dd/mm/yyyy">
+                                                <input type="date" style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" parsley-trigger="change" id="maturityDate" name= "maturitydate" min="<?=date('Y-m-d', strtotime('+1 days')) ?>">
                                             </div>
                                             <div class="form-group col-lg-3 col-md-6">
                                                 <label for="faceValue">Face Value</label>
@@ -170,7 +170,7 @@
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="1stDate">1st Date</label>
-                                                <input type="date"  style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="firstDate"  name= "firstdate" placeholder="dd/mm/yyyy">
+                                                <input type="date"  style = "line-height: 21px;" class="form-control form-controlCustom form-control-lg" id="firstDate"  name= "firstdate" placeholder="dd/mm/yyyy"min="<?=date('Y-m-d', strtotime('+1 days')) ?>">
                                             </div>
                                         </div>
                                         <div class="form-row">
