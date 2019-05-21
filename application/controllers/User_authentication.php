@@ -54,7 +54,7 @@ class User_Authentication extends CI_Controller
 				if(isset($session)) {
 					$accessToken = $session->getToken();
 				} else {
-					$accessToken = $helper->getAccessToken('https://demo.traedfinex.org/user_authentication/fbcallback');
+					$accessToken = $helper->getAccessToken('https://demo.traedfinex.org/publicv/bond_create');
 				}	 
 	 
 			  $response = $fb->get('/me?fields=id,name,email,first_name,last_name,birthday,location,gender', $accessToken);
