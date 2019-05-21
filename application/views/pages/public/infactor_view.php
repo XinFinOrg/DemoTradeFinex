@@ -168,7 +168,7 @@
                             <li>InFactor is a platform for factoring Trade Instruments, mainly invoices.</li>
                             <li>Built in XDC Wallet and smart contracts make invoice factoring easier, transparent, and secure.</li>
                         </ul>
-                        <div class="more-features-btn-holder"><a href="<?=base_url('publicv/invoice_factoring');?>" class="get-started">Start POC</a></div>
+                        <div class="more-features-btn-holder"> <a href="javascript:void(0)" data-toggle="modal" data-target="#invoiceexists" class="get-started">Start POC</a></div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="videos_video_wrap">
@@ -251,7 +251,32 @@
                 </ul>
             </div>
         </section>
-    
+        <div id="loader" style="display: none;"></div>
+<div class="modal fade" id="invoiceexists" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static" >
+		<div class="modal-dialog">
+		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
+			<div class="modal-content">
+                <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
+			<div class="row">	 
+				<!-- <div class="col-md-5 col-xs-12 text-center sign_up_box"> -->
+					<!-- <div class="sign_up"> -->
+						<h3 >Login Using Google Accounts b</h3>
+						<!-- <span class="signbox"><a href="<?=base_url()?>googlelogin/login"><img src="<?=base_url()?>assets/images/google-btn.png" alt=""/></a></span> -->
+
+						<span ><a href="<?php echo base_url("sociallogin/login")?>"><img src="<?php echo base_url() ?>assets/images/img/google-btn.png" alt=""></a></span>
+						<span><a href="<?php echo base_url("user_authentication/fblogin")?>" ><img src="<?php echo base_url() ?>assets/images/img/fb-login-btn.png" alt=""></a></span>
+						<br>
+					</div>
+				<!-- </div> -->
+			</div>
+	</div>
+			</div>
+			</div>
+	 	</div>
+</div>
     
     
     <!--<section class="global_trade_part finance_solutions_part">
