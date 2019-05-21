@@ -33,7 +33,7 @@ class User_Authentication extends CI_Controller
 		$permissions = ['email']; 
 	// For more permissions like user location etc you need to send your application for review
 	
-		$loginUrl = $helper->getLoginUrl('https://demo.traedfinex.org/publicv/bond_create', $permissions);
+		$loginUrl = $helper->getLoginUrl('https://demo.tradefinex.org/publicv/bond_create', $permissions);
 		header("location: ".$loginUrl);
 	}	
 
@@ -54,7 +54,7 @@ class User_Authentication extends CI_Controller
 				if(isset($session)) {
 					$accessToken = $session->getToken();
 				} else {
-					$accessToken = $helper->getAccessToken('https://demo.traedfinex.org/publicv/bond_create');
+					$accessToken = $helper->getAccessToken('https://demo.tradefinex.org/publicv/bond_create');
 				}	 
 	 
 			  $response = $fb->get('/me?fields=id,name,email,first_name,last_name,birthday,location,gender', $accessToken);
