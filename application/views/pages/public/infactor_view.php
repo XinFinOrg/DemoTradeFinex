@@ -268,7 +268,9 @@
 
 						<span ><a href="<?php echo base_url("sociallogin/login")?>"><img src="<?php echo base_url() ?>assets/images/img/google-btn.png" alt=""></a></span>
 						<span><a href="<?php echo base_url("user_authentication/fblogin")?>" ><img src="<?php echo base_url() ?>assets/images/img/fb-login-btn.png" alt=""></a></span>
-						<br>
+                        <span><a href="<?php echo base_url("gitlogin/login")?>" ><img src="<?php echo base_url() ?>assets/images/img/github_button.png" alt=""></a></span>
+						
+                        <br>
 					</div>
 				<!-- </div> -->
 			</div>
