@@ -33,7 +33,7 @@ class User_Authentication extends CI_Controller
 		$permissions = ['email']; 
 	// For more permissions like user location etc you need to send your application for review
 	
-		$loginUrl = $helper->getLoginUrl('https://localhost/DemoTradeFinex/user_authentication/fbcallback', $permissions);
+		$loginUrl = $helper->getLoginUrl('https://demo.traedfinex.org/publicv/bond_create', $permissions);
 		header("location: ".$loginUrl);
 	}	
 
