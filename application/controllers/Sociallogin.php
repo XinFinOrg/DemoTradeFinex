@@ -18,6 +18,7 @@ public function __construct()
 	
 	public function index()
 	{
+		$this->load->view('pages/bond_create');
 	}
 	
 	
@@ -28,6 +29,7 @@ public function __construct()
 		$clientSecret = 's1gEY7eIayJBjcYHbsvnA8Ha'; //Google client secret
 		$redirectURL = base_url().'sociallogin/login';
 		// $redirectURL = 'http://localhost/DemoTradeFinex/sociallogin/login';
+		
 			
 		
 		//Call Google API
@@ -64,7 +66,8 @@ public function __construct()
 			$userData['picture']        = !empty($gpInfo['picture'])?$gpInfo['picture']:'';
 		
 			$userID = $this->user->checkUser($userData);
-		
+			
+			
 			$this->session->set_userdata('loggedIn', true);
 			$this->session->set_userdata('userData', $userData);
 

@@ -7,7 +7,7 @@ public function __construct()
 {
 	parent::__construct();
 
-	// $this->load->library('github');
+	$this->load->model('user');
 }
 	
 public function index(){
@@ -80,8 +80,13 @@ function fetchData()
         $_SESSION['payload'] = $userPayload;
         $_SESSION['user'] = $username;
 
-		return $userPayload;
-		
+        return $userPayload;
+        $userID = $this->user->checkUser($userPayload);
+		$this->session->set_userdata('loggedIn', true);
+			$this->session->set_userdata('userData', $userPayload);
+
+			
+			redirect('publicv/bond_create');
 
     }
     else {

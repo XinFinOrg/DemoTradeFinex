@@ -36,6 +36,11 @@
                             <li><a href="create-organization.html"><i class="icon dripicons-user-group"></i><span class="hide-menu">Create Organization</span></a></li>
                             <li><a href="portfolio.html"><i class="icon dripicons-folder-open"></i><span class="hide-menu">Portfolio</span></a></li>
                             <li><a href="syndicate.html"><i class="icon dripicons-meter"></i><span class="hide-menu">Syndicate</span></a></li> -->
+                            <?php 
+                                if(isset($_SESSION["token"])){?>
+                                    <li><a href="<?php echo base_url() ?>sociallog/out">Logout</a></li>
+                            <?php } ?>
+                            
                         </ul>
                     </nav>
                     <!-- END MAIN MENU -->

@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-session_start();
+// session_start();
 require_once APPPATH.'libraries/facebook-php-sdk/autoload.php';
 
 class User_Authentication extends CI_Controller
@@ -8,12 +8,13 @@ class User_Authentication extends CI_Controller
 	public function __construct()
 	{
         parent::__construct();
-        $this->load->library('facebook');
+		$this->load->library('facebook');
+		$this->load->model('user');
 	}
 	
 	public function index()
 	{
-		$this->load->view('login_view');
+		$this->load->view('pages/public/bond_create',$_SESSION['token']);
 
 	}
 	public function fblogin()
@@ -56,24 +57,33 @@ class User_Authentication extends CI_Controller
 				} else {
 					$accessToken = $helper->getAccessToken('https://demo.tradefinex.org/publicv/bond_create');
 				}	 
-	 
+				// echo $accessToken;
+				// die;
+				$_SESSION['token'] = $accessToken;
+				// echo $_SESSION['token'];
+				// die;
 			  $response = $fb->get('/me?fields=id,name,email,first_name,last_name,birthday,location,gender', $accessToken);
 			 	
 			// User Information Retrival begins................................................
 			$me = $response->getGraphUser();
-			echo $me;
-			die;
-			$location = $me->getProperty('location');
-			echo "Full Name: ".$me->getProperty('name')."<br>";
-			echo "First Name: ".$me->getProperty('first_name')."<br>";
-			echo "Last Name: ".$me->getProperty('last_name')."<br>";
-			echo "Gender: ".$me->getProperty('gender')."<br>";
-			echo "Email: ".$me->getProperty('email')."<br>";
-			echo "location: ".$location['name']."<br>";
-			echo "Facebook ID: <a href='https://www.facebook.com/".$me->getProperty('id')."' target='_blank'>".$me->getProperty('id')."</a>"."<br>";
-			$profileid = $me->getProperty('id');
-			echo "</br><img src='//graph.facebook.com/$profileid/picture?type=large'> ";
-			echo "</br></br>Access Token : </br>".$accessToken; 
+			$userData['oauth_provider'] = 'facebook';
+			$userData['oauth_uid']      = $me->getProperty('id');
+			$userData['first_name']     = $me->getProperty('first_name');
+			$userData['last_name']      = $me->getProperty('last_name');
+			$userData['email']          = !empty($me->getProperty('email'))? $me->getProperty('email') : ' ';
+			$userData['gender']         = !empty($me->getProperty('gender'))? $me->getProperty('gender') : ' ';
+			$userData['locale']         = !empty($me->getProperty('locale'))? $me->getProperty('locale') : ' ';
+			$userData['link']           = !empty($me->getProperty('link'))? $me->getProperty('link') : ' ';
+			$userData['picture']        = !empty($me->getProperty('picture'))? $me->getProperty('picture') : ' ';
+			$userID = $this->user->checkUser($userData);
+
+			$this->session->set_userdata('loggedIn', true);
+			$this->session->set_userdata('userData', $userData);
+
+			
+			redirect('publicv/bond_create');
+			
+		 
 	}
 }
 ?>
