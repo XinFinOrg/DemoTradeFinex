@@ -54,9 +54,9 @@ $db['default']['password'] = "";
 $db['default']['database'] = "demo";*/
 
 $db['default']['hostname'] = 'Localhost';
-$db['default']['username'] = 'demotrad_admin';
-$db['default']['password'] = 'demotrad@2017!';
-$db['default']['database'] = 'demotrad_sqldata';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'demotradefinex';
 
 /*$db['default']['hostname'] = "localhost";
 $db['default']['username'] = "ilogisticscom";

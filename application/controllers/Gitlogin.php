@@ -11,24 +11,29 @@ public function __construct()
 }
 	
 public function index(){
-	$userData = array();
+	$this->load->view('pages/public/bond_create');
 	
 }
 public function login(){
 	
     $client_id = "2d264d61e985d4809d43";
-    $redirect_url = "https://demo.tradefinex.org/publicv/bond_create";
+    $redirect_url = "http://localhost/DemoTradeFinex/gitcallback";
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $url = 'https://github.com/login/oauth/authorize?client_id='. $client_id. "&redirect_url=".$redirect_url."&scope=user";
         header("location: $url");
-	}
-	
+        // $this->fetchData();
+    }
+   
+    
 }
 
-function fetchData()
+public function fetchData()
 {
+    echo "I am running";
+    die;
+
     $client_id = "2d264d61e985d4809d43";
-    $redirect_url = "https://demo.tradefinex.org/publicv/bond_create";
+    $redirect_url = "http://localhost/DemoTradeFinex/gitcallback";
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         if (isset($_GET['code'])) {
             $code = $_GET['code'];
@@ -81,6 +86,9 @@ function fetchData()
         $_SESSION['user'] = $username;
 
         return $userPayload;
+
+        echo $userPayload;
+        die;
         $userID = $this->user->checkUser($userPayload);
 		$this->session->set_userdata('loggedIn', true);
 			$this->session->set_userdata('userData', $userPayload);
@@ -93,5 +101,5 @@ function fetchData()
         die('error');
     }
     
-}
+} 
 }
