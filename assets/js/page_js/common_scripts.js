@@ -152,7 +152,7 @@ function uploadInvoice(data) {
 											//console.log('formdata done:', formDataObj.tokenName);
 											const coinData = {
 												"coinName": uploadInvoiceObj.tokenName,
-												"network" : "testnet",
+												"network" : "apothem",
 												"type" : "erc721"
 											};
 
@@ -738,7 +738,7 @@ $(function () {
 		var mergeSortedData = mergeSort(data);
 		$.each(mergeSortedData, function(k,v) {
 			// console.log('timestamp:',new Date(v.createdAt));
-			if(v.tokenContractHash == null) {
+			if(v.tokenContractAddress == null) {
 				status = "Pending";
 			} else {
 				status = "Deployed";
@@ -749,7 +749,7 @@ $(function () {
 									<td>`+v.tokenSupply+`</td>
 									<td>`+v.ETHRate+`</td>
 									<td>`+status+`</td>
-									<td id="alphaTCA_`+k+`" class="truncate"><span><a href = "https://ropsten.etherscan.io/tx/`+v.tokenContractHash+`" target="_blank" >`+v.tokenContractHash+`</a><span></td>
+									<td id="alphaTCA_`+k+`" class="truncate"><span><a href = "https://ropsten.etherscan.io/tx/`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
 									<td><div class="btn-block"> <button  onclick="alphaex('`+k+`');" class="btnn btnn-primary btnn-rounded btn-sm">Connect to AlphaEx</button></div></td>
 								</tr>
 								`;
@@ -1210,7 +1210,7 @@ $(function () {
 							//console.log('formdata done:', formDataObj.tokenName);
 							const coinData = {
 								"coinName": formDataObj.tokenName,
-								"network" : "testnet",
+								"network" : "apothem",
 								"type" : "erc20"
 							};
 
@@ -1518,7 +1518,7 @@ $(function () {
 							//console.log('formdata done:', formDataObj.tokenName);
 							const coinData = {
 								"coinName": formDataObj.tokenName,
-								"network" : "testnet",
+								"network" : "apothem",
 								"type" : "erc721"
 							};
 
