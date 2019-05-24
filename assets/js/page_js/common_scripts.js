@@ -60,7 +60,7 @@ function invoiceList(data) {
 								<td>`+status+`</td>
 								<td>`+v.createdAt+`</td>
 								<td class="truncate"><span><a href = "https://gateway.ipfs.io/ipfs/`+v.ipfsHash+`" target="_blank" >`+v.ipfsHash+`</a><span></td>
-								<td class="truncate"><span><a href = "http://apothem.network/#explorer/" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
+								<td class="truncate"><span><a href = "http://apothem.network/#explorer`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
 							</tr>
 							`;
 	});
@@ -749,7 +749,7 @@ $(function () {
 									<td>`+v.tokenSupply+`</td>
 									<td>`+v.ETHRate+`</td>
 									<td>`+status+`</td>
-									<td id="alphaTCA_`+k+`" class="truncate"><span><a href = "http://apothem.network/#explorer/" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
+									<td id="alphaTCA_`+k+`" class="truncate"><span><a href = "http://apothem.network/#explorer`+v.tokenContractAddress+`" target="_blank" >`+v.tokenContractAddress+`</a><span></td>
 									<td><div class="btn-block"> <button  onclick="alphaex('`+k+`');" class="btnn btnn-primary btnn-rounded btn-sm">Connect to AlphaEx</button></div></td>
 								</tr>
 								`;
