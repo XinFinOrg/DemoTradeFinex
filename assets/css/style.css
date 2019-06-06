@@ -7075,7 +7075,7 @@ left:16px;
 	margin: 10px 0px;
 }
 .read_more a {
-	color: #ec484b;
+	color: #ec484b!important;
 }
 .privacy_policy {
 	width: 100%;
