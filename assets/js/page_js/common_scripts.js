@@ -656,9 +656,9 @@ $(function () {
 				required: true
 			},
 			mmob: {
-				required: true,
+				// required: false,
 				//numberOnly: true,
-				mobilenumberOnly: true,
+				mobilenumberOnly: true
 
 			},
 			mcomp: {
@@ -667,7 +667,7 @@ $(function () {
 				maxlength: 40,
 				CalphanumericOnly: true
 			},
-			musertype: "required",
+			// musertype: "required",
 			menquiry: "required",
 			mmsg: {
 				required: true,
@@ -691,11 +691,11 @@ $(function () {
 				minlength: "Company name should be atleast 3 charcters long",
 				maxlength: "Characters length should not exceeded than 40"
 			},
-			musertype: "Please choose a user type",
+			// musertype: "Please choose a user type",
 			menquiry: "Please choose Your enquiry type",
-			mmob: {
-				required: "Please enter a valid mobile number"
-			},
+			// mmob: {
+			// 	required: "Please enter a valid mobile number"
+			// },
 			mmsg: {
 				required: "Please type your message",
 				minlength: "Characters length should be atleast 15.",
