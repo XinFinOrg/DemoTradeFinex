@@ -84,6 +84,18 @@
 							</div>
 							<!-- <div class="form-group focus-group">
 								<div class="select_drop"> <span class="ti-angle-down"></span>
+									<select class="form-control appearance_back" id="musertype" name="musertype">
+										<option value=""></option>
+										<option value="Supplier">Supplier</option>
+										<option value="Financier">Financier</option>
+										<option value="Buyer">Buyer</option>
+										<option value="Other">Other</option>
+									</select>
+									<span class="form-name floating-label">USER TYPE<sup>*</sup></span>  
+								</div>
+							</div> -->
+							<!-- <div class="form-group focus-group">
+								<div class="select_drop"> <span class="ti-angle-down"></span>
 									<select class="form-control appearance_back" id="menquiry" name="menquiry">
 										<option value=""></option>
 										<option value="Technical Assistance">Technical</option>
