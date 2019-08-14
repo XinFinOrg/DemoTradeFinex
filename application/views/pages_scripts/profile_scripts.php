@@ -1912,9 +1912,9 @@
 				data: {'rproject_ref' : proj_id, 'ruser_id' : user_id, 'ruser_type' : user_type_ref, 'request_type' : '', 'raction' : 'pay_beneficiary', 'action' : 'smart_contract', '<?=$csrf['name'];?>' : '<?=$csrf['hash'];?>'},
 				success: function (data) {
 				
-					console.log(data);
+					// console.log(data);
 					var jsona = $.parseJSON(data);
-					
+					console.log("php file",jsona);
 					if(!$.isEmptyObject(jsona)){
 					
 						if(jsona['status'].toLowerCase() == 'success'){
