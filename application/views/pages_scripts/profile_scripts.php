@@ -1917,7 +1917,7 @@
 					console.log("php file",jsona);
 					if(!$.isEmptyObject(jsona)){
 					
-						if(jsona['status'].toLowerCase() == 'success'){
+						if(jsona['fpayment_status'].toLowerCase() == '1'){
 							
 							$('.success_smile').show();
 							$('.payment_success').show();
@@ -1933,7 +1933,7 @@
 							}, 3000);
 						}
 						
-						if(jsona['status'].toLowerCase() == 'failed'){
+						if(jsona['fpayment_status'].toLowerCase() == '0'){
 							$('.xinfin_logo_sign_up').show();
 							$('.xinfin_payment_action_loader').hide();
 							$('.payment_error').show();
