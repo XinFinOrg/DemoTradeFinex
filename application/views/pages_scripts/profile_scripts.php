@@ -1917,7 +1917,7 @@
 					console.log("php file",jsona);
 					if(!$.isEmptyObject(jsona)){
 					
-						if(jsona['fpayment_status'].toLowerCase() == 'success'){
+						if(jsona['status'].toLowerCase() == 'success'){
 							
 							$('.success_smile').show();
 							$('.payment_success').show();
