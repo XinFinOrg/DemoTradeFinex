@@ -1933,7 +1933,7 @@
 							}, 3000);
 						}
 						
-						if(jsona['fpayment_status'].toLowerCase() == '0'){
+						if(jsona['status'].toLowerCase() == '0'){
 							$('.xinfin_logo_sign_up').show();
 							$('.xinfin_payment_action_loader').hide();
 							$('.payment_error').show();
