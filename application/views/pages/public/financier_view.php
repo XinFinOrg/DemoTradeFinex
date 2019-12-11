@@ -1,108 +1,290 @@
-<section class="financier_banner common_slider">
-	<div id="myCarousel" class="carousel slide" data-ride="carousel"> 
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active"> <img src="<?=base_url();?>assets/images/slider/financier_banner_1.jpg" />
+<!-- Inside Page Financiers -->
+<div class="sub_page_wraper">
+
+		<section class="tf-inner-banner">
+			<div class="container">
+				<h3>Finaciers</h3>
+				<h4>Expand your trade finance portfolio.</h4>
+			</div>
+		</section>
+
+		<!-- Financiers -->
+		<section id="Financiers" class="section pb-40">
+			<div class="container">
 				<div class="row">
-					<div class="carousel-caption">
-						<div class="col-md-8 col-sm-9 col-xs-12">
-							<h3>Efficient deployment of capital using Peer to peer platform</h3>
-							<p>TradeFinex: Peer to Peer trade and financing using Blockchain Technology</p>
-							<div id="video" class="btn-more">
-								<a href="<?=base_url('publicv/videos');?>">
-								    <span> <i class="fa fa-play-circle"></i> </span> <span>Watch Video</span> 
-							    </a>
+					<div class="col-md-8 col-md-offset-2">
+						<div class="section-title text-center">
+							<h2 class="mb-0">Instrument Currently Active for Funding</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-equal-height">
+					<div class="col-md-4 col-sm-6 mb-30">
+						<div class="tf-financiers-instrument_block">
+							<h2>Receivable</h2>
+							<div class="row pl-15 pr-15">
+								<div class="tf-fib_left-block">
+									Instrument Ref
+								</div>
+								<div class="tf-fib_right-block">
+									ABC-USD
+								</div>
+								<hr class="tf-hr-space">
+								<div class="tf-fib_left-block">
+									Country of Origination
+								</div>
+								<div class="tf-fib_right-block">
+									Dubai
+								</div>
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Amount
+							</div>
+							<div class="tf-fib_right-block">
+								500 K USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Date of Maturity
+							</div>
+							<div class="tf-fib_right-block">
+								22nd July 2020
+							</div>
+							<hr class="tf-hr-space">
+							<div class="text-center">
+								<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 mb-30">
+						<div class="tf-financiers-instrument_block">
+							<h2>Letter of Credit</h2>
+							<div class="tf-fib_left-block">
+								Instrument Ref
+							</div>
+							<div class="tf-fib_right-block">
+								ABC-USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Country of Origination
+							</div>
+							<div class="tf-fib_right-block">
+								London
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Amount
+							</div>
+							<div class="tf-fib_right-block">
+								900 K USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Date of Maturity
+							</div>
+							<div class="tf-fib_right-block">
+								22nd Sep 2020
+							</div>
+							<hr class="tf-hr-space">
+							<div class="text-center">
+								<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 mb-30">
+						<div class="tf-financiers-instrument_block">
+							<h2>Bank Guarantees</h2>
+							<div class="tf-fib_left-block">
+								Instrument Ref
+							</div>
+							<div class="tf-fib_right-block">
+								ABC-USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Country of Origination
+							</div>
+							<div class="tf-fib_right-block">
+								Hongkong
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Amount
+							</div>
+							<div class="tf-fib_right-block">
+								100 K USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Date of Maturity
+							</div>
+							<div class="tf-fib_right-block">
+								22nd June 2020
+							</div>
+							<hr class="tf-hr-space">
+							<div class="text-center">
+								<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 mb-30">
+						<div class="tf-financiers-instrument_block">
+							<h2>SBLC</h2>
+							<div class="tf-fib_left-block">
+								Instrument Ref
+							</div>
+							<div class="tf-fib_right-block">
+								ABC-USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Country of Origination
+							</div>
+							<div class="tf-fib_right-block">
+								Dubai
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Amount
+							</div>
+							<div class="tf-fib_right-block">
+								500 K USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Date of Maturity
+							</div>
+							<div class="tf-fib_right-block">
+								22nd July 2020
+							</div>
+							<hr class="tf-hr-space">
+							<div class="text-center">
+								<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 mb-30">
+						<div class="tf-financiers-instrument_block">
+							<h2>Warehouse Receipt</h2>
+							<div class="tf-fib_left-block">
+								Instrument Ref
+							</div>
+							<div class="tf-fib_right-block">
+								ABC-USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Country of Origination
+							</div>
+							<div class="tf-fib_right-block">
+								Dubai
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Amount
+							</div>
+							<div class="tf-fib_right-block">
+								500 K USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Date of Maturity
+							</div>
+							<div class="tf-fib_right-block">
+								22nd July 2020
+							</div>
+							<hr class="tf-hr-space">
+							<div class="text-center">
+								<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 mb-30">
+						<div class="tf-financiers-instrument_block">
+							<h2>Payable</h2>
+							<div class="tf-fib_left-block">
+								Instrument Ref
+							</div>
+							<div class="tf-fib_right-block">
+								ABC-USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Country of Origination
+							</div>
+							<div class="tf-fib_right-block">
+								Dubai
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Amount
+							</div>
+							<div class="tf-fib_right-block">
+								500 K USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Date of Maturity
+							</div>
+							<div class="tf-fib_right-block">
+								22nd July 2020
+							</div>
+							<hr class="tf-hr-space">
+							<div class="text-center">
+								<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 mb-30">
+						<div class="tf-financiers-instrument_block">
+							<h2>Other</h2>
+							<div class="tf-fib_left-block">
+								Instrument Ref
+							</div>
+							<div class="tf-fib_right-block">
+								ABC-USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Country of Origination
+							</div>
+							<div class="tf-fib_right-block">
+								Dubai
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Amount
+							</div>
+							<div class="tf-fib_right-block">
+								500 K USD
+							</div>
+							<hr class="tf-hr-space">
+							<div class="tf-fib_left-block">
+								Date of Maturity
+							</div>
+							<div class="tf-fib_right-block">
+								22nd July 2020
+							</div>
+							<hr class="tf-hr-space">
+							<div class="text-center">
+								<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="item"> <img src="<?=base_url();?>assets/images/slider/financier_banner_2.jpg" />
-				<div class="row">
-					<div class="carousel-caption">
-						<div class="col-md-8 col-sm-9 col-xs-12">
-							<h3>Secure and transparent investment in global projects</h3>
-							<p>TradeFinex: Peer to Peer trade and financing using Blockchain Technology</p>
-							<div id="video" class="btn-more">
-								<a href="<?=base_url('publicv/videos');?>">
-								    <span> <i class="fa fa-play-circle"></i> </span> <span>Watch Video</span> 
-							    </a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item"> <img src="<?=base_url();?>assets/images/slider/financier_banner_3.jpg" />
-				<div class="row">
-					<div class="carousel-caption">
-						<div class="col-md-8 col-sm-9 col-xs-12">
-							<h3>IoT enabled real time visibility on investments</h3>
-							<p>TradeFinex: Peer to Peer trade and financing using Blockchain Technology</p>
-							<div id="video" class="btn-more">
-								<a href="<?=base_url('publicv/videos');?>">
-								    <span> <i class="fa fa-play-circle"></i> </span> <span>Watch Video</span> 
-							    </a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="financier_first_icon">
-	<div class="container">
-		<div class="row">
-			<div class="first_icon_text">
-				<div class="col-md-5 col-sm-5 col-xs-12 pull-right"> <img src="<?=base_url();?>assets/images/page/financier_icon.png" class="img-responsive" /> </div>
-				<div class="col-md-7 col-sm-7 col-xs-12 pull-left">
-					<h4>Who Financiers are?</h4>
-					<p>Financiers can be an individual retail investor, venture capital or private equity fund, an organization or a financial institution whose business is providing, investing, or lending money. A financier is someone who is actively looking to invest in projects according to his sectorial alignment and risk appetite for an agreed return on investment. On TradeFinex platform, a Financier may finance full or a part of the project along with other financiers.</p>
-					<div class="btn-more float-left margin_top_25"> <a href="<?php echo base_url() ?>registration/?f" title="Get Started">Get Started</a> </div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="financier_sec_icon">
-	<div class="container">
-		<div class="row">
-			<div class="first_icon_text">
-				<div class="col-md-5 col-sm-6 col-xs-12 static_img_bottom_padd"> <img src="<?=base_url();?>assets/images/page/financier_icon_1.png" class="img-responsive" /> </div>
-				<div class="col-md-7 col-sm-6 col-xs-12">
-					<h4>How Financiers participate?</h4>
-					<p>While financiers are actively looking at global investments, lack of visibility on projects and repayment deters their investment plans. XinFin’s platform, TradeFinex aims to minimize inefficiencies in trade and finance using Blockchain Technology. Powered by XinFin’s XDC01 protocol TradeFinex, a peer to peer contract platform, can be used with existing laws of the land and payment rails or in an approved jurisdiction using underlying XDC tokens.</p>
-					<p>Financiers can participate by creating an account on TradeFinex. TradeFinex allows Financiers a global opportunity to invest in projects. Financiers can search, view and negotiate projects and create legally binding digital smart contracts over secure blockchain network. The assets financed can be digitized over Blockchain and repayment can be linked to escrow smart contracts. The disbursement can be linked to customized smart contract milestones, triggered upon milestone completion.</p>
-					<div class="btn-more float-left margin_top_25"> <a href="<?php echo base_url() ?>registration/?f" title="Get Started">Get Started</a> </div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="financier_third_icon">
-	<div class="container">
-		<div class="row">
-			<div class="third_icon_text">
-				<div class="col-md-5 col-sm-5 col-xs-12 pull-right static_img_bottom_padd"> <img src="<?=base_url();?>assets/images/page/financier_icon_2.png" class="img-responsive" /> </div>
-				<div class="col-md-7 col-sm-7 col-xs-12 pull-left">
-					<h4>How Financiers profit?</h4>
-					<p>TradeFinex aims to reduce the inefficiencies in global trade and finance thereby enhancing reach and doing commerce at fractional cost. TradeFinex platform gives financiers visibility and access to global projects and securely invest in global projects. IoT integration and smart contracts can provide financiers real time visibility on their investments. Financiers can substantially bring down their overheads and secure better returns through a network of global beneficiaries. The Hedge Pool capability protects Suppliers from volatility in the local currency. Participation incentive in form of XDC tokens from TradeFinex is an added advantage.</p>
-					<div class="btn-more float-left margin_top_25"> <a href="<?php echo base_url() ?>registration/?f" title="Get Started">Get Started</a> </div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+		</section>
+		<!-- /. Financiers -->
+
+</div>
+<!-- /. Inside Page Financiers -->
 
 <?php
 	
-	$this->load->view('includes/block_create_account');
+	// $this->load->view('includes/block_create_account');
 	//$this->load->view('includes/block_features');	
 	$this->load->view('includes/login_modal');
 	

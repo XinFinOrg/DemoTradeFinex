@@ -4,3 +4,4 @@ application/config/session/*
 package.json
 package-lock.json
 dummy.txt
+newpages/*

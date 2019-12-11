@@ -1,14 +1,14 @@
-    <!-- Inside Page Buyers / Suppliers -->
+    <!-- Inside Page Brokers Detail -->
     <div class="sub_page_wraper">
 
         <section class="tf-inner-banner">
             <div class="container">
-                <h3>Buyers / Suppliers</h3>
-                <h4>Improve cash flow. Easy Access to Trade Financing.</h4>
+                <h3>Brokers</h3>
+                <h4>Digitize and Automate Document Distribution with financiers.</h4>
             </div>
         </section>
 
-        <!-- Buyers / Suppliers Form -->
+        <!-- Brokers Form -->
         <section id="xdc-protocol-features-benefits" class="section">
             <div class="container">
                 <div class="row">
@@ -27,28 +27,33 @@
                                     <label for="instrument-type">Type of Instrument</label>
 
                                     <div id="tab" class="tf-form-tabs" data-toggle="buttons">
-                                        <a href="#select-country" class="btn btn-default" data-toggle="tab">
+                                        <a href="#broker-name" class="btn btn-default" data-toggle="tab">
                                             <input type="radio" class="" name="Receivable" value="Receivable" id="Receivable" />Receivable
                                         </a>
-                                        <a href="#select-country" class="btn btn-default" data-toggle="tab">
+                                        <a href="#broker-name" class="btn btn-default" data-toggle="tab">
                                             <input type="radio" class="" name="Letter-of-Credit" value="Letter of Credit" id="Letter-of-Credit" />Letter of Credit
                                         </a>
-                                        <a href="#select-country" class="btn btn-default" data-toggle="tab">
+                                        <a href="#broker-name" class="btn btn-default" data-toggle="tab">
                                             <input type="radio" class="" name="Bank-Guarantees" value="Bank Guarantees" id="Bank-Guarantees" />Bank Guarantees
                                         </a>
-                                        <a href="#select-country" class="btn btn-default" data-toggle="tab">
+                                        <a href="#broker-name" class="btn btn-default" data-toggle="tab">
                                             <input type="radio" class="" name="SBLC" value="SBLC" id="SBLC" />SBLC
                                         </a>
-                                        <a href="#select-country" class="btn btn-default" data-toggle="tab">
+                                        <a href="#broker-name" class="btn btn-default" data-toggle="tab">
                                             <input type="radio" class="" name="Warehouse-Receipt" value="Warehouse Receipt" id="Warehouse-Receipt" />Warehouse Receipt
                                         </a>
-                                        <a href="#select-country" class="btn btn-default" data-toggle="tab">
+                                        <a href="#broker-name" class="btn btn-default" data-toggle="tab">
                                             <input type="radio" class="" name="Payable" value="Payable" id="Payable" />Payable
                                         </a>
-                                        <a href="#select-country" class="btn btn-default" data-toggle="tab">
+                                        <a href="#broker-name" class="btn btn-default" data-toggle="tab">
                                             <input type="radio" class="" name="Other" value="Other" id="Other" />Other
                                         </a>
                                     </div>
+                                </div>
+
+                                <div id="broker-name" class="form-group">
+                                    <label for="broker-name">Broker Name</label>
+                                    <input type="text" class="form-control" id="broker-name" name="broker-name" placeholder="Broker Name">
                                 </div>
 
                                 <div id="select-country" class="form-group">
@@ -142,10 +147,10 @@
                 </div>
             </div>
         </section>
-        <!-- /. Buyers /Suppliers Form -->
+        <!-- /. Brokers Form -->
 
     </div>
-    <!-- /. Inside Page Buyers / Suppliers Detail -->
+    <!-- /. Inside Page Brokers Detail -->
 
 <?php
 	

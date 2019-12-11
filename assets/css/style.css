@@ -59,7 +59,7 @@ body {
 ::-moz-focus-inner,button::-moz-focus-inner, a::-moz-focus-inner {border:0;outline: 0;} */
 
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, caption, canvas, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, form, footer, header, hgroup, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label,legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, tt, table, tbody, textarea, tfoot, thead, time, tr, th, td, u, ul, var, video {
-	font-family: 'open_sansregular';
+	/*font-family: 'open_sansregular';*/
 	font-size: 100%;
 	font-weight: inherit;
 	font-style: inherit;
@@ -467,7 +467,7 @@ footer {
 	line-height: 80px;
 	font-size: 15px;
 	color: #3c566b;
-	font-family: 'open_sansregular';
+	/*font-family: 'open_sansregular';*/
 	cursor: pointer;
 }
 #mainnav ul.menu > li > a > .fa {
@@ -676,7 +676,7 @@ footer {
 	display: block;
 	padding: 0px 0px 0px 15px;
 	line-height: 50px;
-	font-family: 'open_sansregular';
+	/*font-family: 'open_sansregular';*/
 	font-size: 15px;
 }
 #mainnav .menu > li > .submenu > li > a:hover {
@@ -947,7 +947,7 @@ footer {
 .footer-bottom .copyright {
 	color: #c2c2c2;
 	font-size: 13px;
-	font-family: 'open_sansregular';
+	/*font-family: 'open_sansregular';*/
 	float: none;
 	/*text-align: center;*/
 }
@@ -1024,8 +1024,8 @@ text-align: justify;
 	margin-bottom: 15px;
 	margin-left: 0px;
 	font-size: 16px;
-	text-transform: uppercase;
-	font-family: 'open_sanssemibold';
+	/*text-transform: uppercase;
+	font-family: 'open_sanssemibold';*/
 	color : #fff;
 }
 .widget-categories ul.one-half {
@@ -1037,7 +1037,7 @@ text-align: justify;
 .widget-categories ul.one-half li a {
 	color: #fff;
 	font-size: 13px;
-	font-family: 'open_sansregular';
+	/*font-family: 'open_sanssemibold';*/
 }
 .widget-categories ul.one-half li a:hover {
 	color: #4ca1af;
@@ -1048,8 +1048,8 @@ text-align: justify;
 	margin-bottom: 20px;
 	margin-left: 0px;
 	font-size: 16px;
-	text-transform: uppercase;
-	font-family: 'open_sanssemibold';
+	/*text-transform: uppercase;
+	font-family: 'open_sanssemibold';*/
 	clear: both;
 }
 .widget-contact ul.contact-infomation li {

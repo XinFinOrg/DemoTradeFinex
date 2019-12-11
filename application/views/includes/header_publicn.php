@@ -44,9 +44,10 @@
 	<!-- Reponsive -->
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/responsive.css');?>" />
     
-    <!-- bxslider Banner CSS -->
-    <link rel="stylesheet" type="text/css" href="<?=base_url('assets/banner-assets/css/bxslider.css');?>" />
+    <!-- tf-style Banner CSS -->
+    <link rel="stylesheet" type="text/css" href="<?=base_url('assets/banner-assets/css/tf-style.css');?>" />
     <link rel="stylesheet" type="text/css" href="<?=base_url('assets/banner-assets/css/magnific-popup.css');?>" />
+	
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

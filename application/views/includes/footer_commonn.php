@@ -88,99 +88,75 @@
 			</div>
 		</div>
 		<!-- /Right-bar --> 
-		<?php }?>
-		<section class="footer_sec">
-			<footer>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3 col-xs-12 col-sm-3 hidden-sm footer_sec_logo mb-20">
-							<div class="widget widget-logo">
-								<div class="logo-ft"> <a href="<?=base_url();?>" title=""><img src="<?=base_url();?>assets/images/img/footer-logo.png" alt="logo"> </a> </div>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-6 col-sm-3 footer_sec_support mb-20">
-							<div class="widget widget-categories">
-								<h3 class="widget-title">Explore</h3>
-								<ul class="one-half">
-									<li> <a href="<?=base_url();?>publicv/boss_101" title="">BOSS 101</a></li>
-									<li> <a href="<?=base_url();?>publicv/invoice_factoring" title="">Invoice Factoring</a></li>	
-									<li> <a href="<?=base_url();?>publicv/consortium" title="">Consortium Membership</a></li>
-									<li> <a href="http://events.tradefinex.org/" title="">Consortium Event</a></li>
-                                    <!--<li> <a href="<?=base_url();?>" title="">Start POC</a></li>-->
-								</ul>
-							</div>
-							<!-- /.widget-categories --> 
-						</div>
-						<!-- /.col-md-3 -->
-						<div class="col-md-3 col-xs-6 col-sm-3 footer_sec_oppo mb-20">
-							<div class="widget widget-categories">
-								<h3 class="widget-title">Others</h3>
-								<ul class="one-half">
-									<li> <a href="https://xinfinorg.github.io/TradeFinex_API/" title="">API</a></li>
-                                	<li> <a href="<?=base_url();?>publicv/media_center" title="">Media Center</a></li>
-									<li> <a href="<?=base_url();?>publicv/faq" title="">FAQs</a></li>
-									<li> <a href="<?=base_url();?>publicv/contact" title="">Contact Us</a></li>
-									<!--<li> <a href="<?=base_url();?>publicv/videos" title="">Videos</a></li>-->									
-								</ul>
-							</div>
-							<!-- /.widget-categories --> 
-						</div>
-						<!-- /.col-md-3 -->
-						<div class="col-md-3 col-sm-4 footer_sec_stay">
-							<div class="widget widget-contact">
-								<h3 class="widget-title">KEEP IN TOUCH</h3>
-								<ul class="social-ft">
-                                    <li><a href="https://www.linkedin.com/in/tradefinex/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="https://twitter.com/TradeFinex" target="_blank"><i class="fa fa-twitter"></i></a></li>                                    <li><a href="https://www.youtube.com/channel/UCKzL0MI7gS_vlEKsUfiWuvA?view_as=subscriber" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                </ul>
-                                
-                                <!--<ul class="social-ft">
-                                    <li><a href="https://twitter.com/TradeFinex" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/in/tradefinex/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="https://www.youtube.com/channel/UCKzL0MI7gS_vlEKsUfiWuvA?view_as=subscriber" target="_blank"><i class="fa fa-youtube"></i></a></li>
+<?php }?>
+	  <section class="tf-footer section pb-20">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mb-40">
+                        <div class="widget widget-categories">
+                            <h4 class="footer-title">Developer Tools</h4>
+                            <ul class="footer-list">
+                                <li> <a href="<?=base_url();?>publicv/setup_masternode">Join the Network</a></li>
+                                <li> <a href="https://apidocs.xinfin.network/">XDC Ledger API’s</a></li>
+                                <li> <a href="https://explorer.xinfin.network/publicAPIDoc">Explorer API's</a></li>
+                                <li> <a href="https://st.mycontract.co/login">Stable Coin Deployment</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-40">
+                        <div class="widget widget-categories">
+                            <h4 class="footer-title">Explore Platform</h4>
+                            <ul class="footer-list">
+                                <li> <a href="http://exchange.tradefinex.org/">Electronic Trading Platform</a></li>
+                                <li> <a href="<?=base_url();?>publicv/infactor">Invoice Factoring</a></li>
+                                <li> <a href="<?=base_url();?>publicv/boss_101">Bond</a></li>
+                                <li> <a href="<?=base_url();?>publicv/financier">For Financiers</a></li>
+                                <li> <a href="<?=base_url();?>publicv/beneficiary">For Buyers</a></li>
+                                <li> <a href="<?=base_url();?>publicv/supplier">For Suppliers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-40">
+                        <div class="widget widget-categories">
+                            <h4 class="footer-title">About Us</h4>
+                            <ul class="footer-list">
+                                <li> <a href="<?=base_url();?>publicv/xdc_liquidity">XDC Liquidity</a></li>
+                                <li> <a href="http://events.tradefinex.org/">Consortium Event</a></li>
+                                <li> <a href="rollout-plan.html">Rollout Plan</a></li>
+                                <li> <a href="https://docs.tradefinex.org/faq/general/">FAQ's</a></li>
+                                <li> <a href="case-study.html">Case Study</a></li>
+                                <li> <a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="widget widget-contact">
+                            <h3 class="widget-title">Connect Us</h3>
+                            <ul class="tf-social-ft mb-30">
+                                <li><a href="https://www.linkedin.com/in/tradefinex/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://twitter.com/TradeFinex" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCKzL0MI7gS_vlEKsUfiWuvA?view_as=subscriber" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-                                </ul>-->
-
-
-							</div>
-							<!-- /.widget-contact --> 
-						</div>
-						<!-- /.col-md-3 --> 
-					</div>
-					<!-- /.row --> 
-					<input type="hidden" id="site_url" value="<?=base_url();?>" />
-					<input type="hidden" id="uemail" value="<?=(isset($uemail) ? $uemail : '');?>" />
-				</div>
-				<!-- /.container --> 
-			</footer>
-			<!-- /footer -->
-  
-			<div class="footer-bottom">
-				<div class="container">
-					<div class="row">
-						<!--<div class="col-md-12">
-							<div class="copyright"> Copyright &copy; 2019 TradeFinex.org, All rights reserved.  <a href="<?=base_url();?>publicv/privacy_policy" title="">Privacy Policy </a> and  <a href="<?=base_url();?>publicv/terms_condition" title="">Terms & Conditions </a> </li> </div>
-						</div>-->
-                        
-                        <div class="col-md-6 col-sm-6"> 
-							<!-- /.social-ft -->
-							<div class="copyright">Copyright &copy; 2019 TRADEFINEX TECH LTD (ADGM RegLab Participant), All rights reserved.</div>
-							<!-- /.copyright --> 
-						</div>
-						<!-- /.col-md-12 -->                        
-                        <div class="col-md-6 col-sm-6"> 
-							<!-- /.social-ft -->
-							<div class="copyright pull-right"><a href="<?=base_url();?>publicv/privacy_policy" title="">Privacy Policy</a> | <a href="<?=base_url();?>publicv/terms_condition" title="">Terms & Conditions</a></div>
-							<!-- /.copyright --> 
-						</div>
-						<!-- /.col-md-12 --> 
-					</div>
-					<!-- /.row --> 
-				</div>
-				<!-- /.container --> 
-			</div>
-			<!-- /.footer-bottom --> 
-		</section>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-sm-7">
+                        <div class="copyright">Copyright &copy; 2019 TRADEFINEX TECH LTD (ADGM RegLab Participant), All rights reserved.</div>
+                    </div>
+                    <div class="col-md-5 col-sm-5">
+                        <div class="copyright pull-right"><a href="https://www.tradefinex.org/publicv/privacy_policy" title="">Privacy Policy</a> | <a href="https://www.tradefinex.org/publicv/terms_condition" title="">Terms & Conditions</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
 				
 		<!-- JAVASCRIPT =============================--> 
 		<script src="<?=base_url('assets/js/jquery-core/jquery.min.js');?>"></script> 
@@ -192,6 +168,15 @@
 		<script src="<?=base_url('assets/js/slick.js');?>"></script>
 		<script src="<?=base_url('assets/js/form-validator/jquery.form-validator.min.js');?>"></script>
 		<script src="<?=base_url('assets/js/form-validator/jquery.validate.min.js');?>"></script>
+
+		<!-- bxslider Banner script js -->
+        <script src="<?=base_url('assets/banner-assets/js/bxslider.min.js');?>"></script>
+        <script src="<?=base_url('assets/banner-assets/js/custom.js');?>"></script>
+        <script src="<?=base_url('assets/banner-assets/js/magnific-popup.min.js');?>"></script>
+        
+        <script src="<?=base_url('assets/banner-assets/owl-carousel/js/owl.carousel.min.js');?>"></script>
+        
+		<script src="<?=base_url('assets/js/page_js/footer_common.js');?>"></script>
 		
 		<?php if(uri_string()){ ?>
 		
@@ -272,11 +257,4 @@
 			<?php } ?>	
 									
 		</script>
-			<!-- bxslider Banner script js -->
-        <script src="<?=base_url('assets/banner-assets/js/bxslider.min.js');?>"></script>
-        <script src="<?=base_url('assets/banner-assets/js/custom.js');?>"></script>
-        <script src="<?=base_url('assets/banner-assets/js/magnific-popup.min.js');?>"></script>
-        
-        <script src="<?=base_url('assets/banner-assets/owl-carousel/js/owl.carousel.min.js');?>"></script>
-        
-		<script src="<?=base_url('assets/js/page_js/footer_common.js');?>"></script>
+			
