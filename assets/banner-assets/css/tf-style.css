@@ -582,7 +582,7 @@ padding: 5px;opacity: 0.9;}
 
 #tf-setup-masternode .orderList{font-size:16px;}
 #tf-setup-masternode .orderList ol{margin-left:35px;display: block;list-style-type: decimal;margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px;}
-#tf-setup-masternode .orderList ol li{margin-bottom:5px;}
+#tf-setup-masternode .orderList ol li{margin-bottom:20px;}
 #tf-setup-masternode .orderList ol li strong {font-weight:700;}
 
 #tf-setup-masternode .tf-header {background:none;box-shadow:none;color:#007bff!important;padding-bottom: 6px;margin-top: 50px;text-align: left;border-bottom: 1px solid #b9b9b9;font-size:26px;line-height:32px;}
