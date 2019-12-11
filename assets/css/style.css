@@ -12,7 +12,7 @@
 	font-family: 'open_sanssemibold';
 	src: url('./fonts/opensans-semibold-webfont.woff2') format('woff2'), url('./fonts/opensans-semibold-webfont.woff') format('woff');
 	font-weight: normal;
-	font-style: normal;
+	font-style: normal;.widget-contact h3.widget-title
 }
 @font-face {
 	font-family: 'open_sansbold';
@@ -949,6 +949,7 @@ footer {
 	font-size: 13px;
 	/*font-family: 'open_sansregular';*/
 	float: none;
+	line-height: 18px;
 	/*text-align: center;*/
 }
 .logo-ft {
@@ -1623,7 +1624,7 @@ to {
 .go-top {
 	position: fixed !important;
 	bottom: 20px;
-	right: 20px;
+	left: 20px;
 	background-color: #fff;
 	border-radius: 3px;
 	line-height: 40px;
