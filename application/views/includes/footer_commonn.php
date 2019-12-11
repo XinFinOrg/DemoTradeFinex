@@ -98,8 +98,8 @@
                             <h4 class="footer-title">Developer Tools</h4>
                             <ul class="footer-list">
                                 <li> <a href="<?=base_url();?>publicv/setup_masternode">Join the Network</a></li>
-                                <li> <a href="https://apidocs.xinfin.network/">XDC Ledger API’s</a></li>
-                                <li> <a href="https://explorer.xinfin.network/publicAPIDoc">Explorer API's</a></li>
+                                <li> <a href="https://apidocs.xinfin.network/">XDC Ledger APIs</a></li>
+                                <li> <a href="https://explorer.xinfin.network/publicAPIDoc">Explorer APIs</a></li>
                                 <li> <a href="https://st.mycontract.co/login">Stable Coin Deployment</a></li>
                             </ul>
                         </div>
