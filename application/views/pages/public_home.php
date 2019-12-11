@@ -60,7 +60,7 @@
                                             <p></p>
                                         </div>
                                         <div class="tf-bottom-col-2">
-                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/supplier">Originate Now</a></div>
+                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/buyer_supplier">Originate Now</a></div>
                                         </div>
                                     </div>
                                 </div>

@@ -112,8 +112,8 @@
                                 <li> <a href="<?=base_url();?>publicv/infactor">Invoice Factoring</a></li>
                                 <li> <a href="<?=base_url();?>publicv/boss_101">Bond</a></li>
                                 <li> <a href="<?=base_url();?>publicv/financier">For Financiers</a></li>
-                                <li> <a href="<?=base_url();?>publicv/beneficiary">For Buyers</a></li>
-                                <li> <a href="<?=base_url();?>publicv/supplier">For Suppliers</a></li>
+                                <li> <a href="<?=base_url();?>publicv/buyer_supplier">For Buyers</a></li>
+                                <li> <a href="<?=base_url();?>publicv/buyer_supplier">For Suppliers</a></li>
                             </ul>
                         </div>
                     </div>

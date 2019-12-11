@@ -671,11 +671,11 @@ class Publicv extends CI_Controller {
 	
 	}
 	
-	public function supplier(){
+	public function buyer_supplier(){
 		
 		$data = array();
 		
-		$data['page'] = 'supplier';
+		$data['page'] = 'buyer_supplier';
 		$data['msg'] = '';
 		$data['user_id'] = 0;
 		$data['user_type'] = '';
@@ -715,7 +715,7 @@ class Publicv extends CI_Controller {
 						
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
-		$this->load->view('pages/public/supplier_view', $data);
+		$this->load->view('pages/public/buyer_supplier_view', $data);
 		$this->load->view('includes/footer_commonn', $data);
 		$this->load->view('pages_scripts/common_scripts', $data);
 		$this->load->view('includes/footern');
