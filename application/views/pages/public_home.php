@@ -41,7 +41,7 @@
                                             <p></p>
                                         </div>
                                         <div class="tf-bottom-col-2">
-                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="financiers.html">Get Started</a></div>
+                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/financier">Get Started</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@
                                             <p></p>
                                         </div>
                                         <div class="tf-bottom-col-2">
-                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="buyers-suppliers.html">Originate Now</a></div>
+                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/supplier">Originate Now</a></div>
                                         </div>
                                     </div>
                                 </div>
