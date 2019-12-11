@@ -1,0 +1,4 @@
+application/logs/*
+node_modules
+application/config/session/*
+package.json
