@@ -257,4 +257,15 @@
 			<?php } ?>	
 									
 		</script>
-			
+		<!-- Form Skip to next Heading -->
+<script type="text/javascript">
+    $(function() {
+        $('a[href*=#]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
+        });
+    });
+</script>
+<!-- Form Skip to next Heading -->
