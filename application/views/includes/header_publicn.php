@@ -45,7 +45,7 @@
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/responsive.css');?>" />
     
     <!-- tf-style Banner CSS -->
-    <link rel="stylesheet" type="text/css" href="<?=base_url('assets/banner-assets/css/tf-style.css');?>" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/tf-style.css');?>" />
     <link rel="stylesheet" type="text/css" href="<?=base_url('assets/banner-assets/css/magnific-popup.css');?>" />
 	
 	
