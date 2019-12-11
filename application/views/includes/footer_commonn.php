@@ -257,6 +257,37 @@
 			<?php } ?>	
 									
 		</script>
+		<!-- Partnership and Alliances Logo Slider-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.customer-logos').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }, {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 2
+                }
+            }]
+        });
+    });
+</script>
+<!-- Partnership and Alliances Logo Slider-->
 		<!-- Form Skip to next Heading -->
 <script type="text/javascript">
     $(function() {
