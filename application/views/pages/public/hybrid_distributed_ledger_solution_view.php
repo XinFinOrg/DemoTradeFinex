@@ -60,8 +60,8 @@
         <div class="row mt-40">
             <div class="col-md-8 col-md-offset-2">
                 <div class="text-center">
-                    <a href="https://apidocs.xinfin.network/" class="btn btn-red text-uppercase mt-10 mb-10">XDC Ledger API’s</a>
-                    <a href="https://explorer.xinfin.network/publicAPIDoc" class="btn btn-red text-uppercase mt-10 mb-10">Explorer API's</a>
+                    <a href="https://apidocs.xinfin.network/" class="btn btn-red text-uppercase mt-10 mb-10">XDC Ledger APIs</a>
+                    <a href="https://explorer.xinfin.network/publicAPIDoc" class="btn btn-red text-uppercase mt-10 mb-10">Explorer APIs</a>
                 </div>
             </div>
         </div>

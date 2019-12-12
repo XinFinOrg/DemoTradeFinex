@@ -5,3 +5,5 @@ package.json
 package-lock.json
 dummy.txt
 newpages/*
+application/config/config.php
+application/config/database.php
