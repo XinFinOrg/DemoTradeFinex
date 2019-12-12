@@ -386,7 +386,7 @@ p {font-size: 15px;color: #687377;line-height: 1.5;margin-bottom: 15px;}
 -----------------------------------------*/
 #exchange-screen {
     position: relative;
-    background: url(../images/exchange-screen_bg.jpg) no-repeat center center / cover;
+    background: url(../banner-assets/images/exchange-screen_bg.jpg) no-repeat center center / cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -487,7 +487,7 @@ p {font-size: 15px;color: #687377;line-height: 1.5;margin-bottom: 15px;}
 -----------------------------------------*/
 .tf-inner-banner {
     width: 100%;
-    background: url(../images/inner-banner/finance_solutions_back.jpg) no-repeat center;
+    background: url(../banner-assets/images/inner-banner/finance_solutions_back.jpg) no-repeat center;
     padding: 125px 0px 50px;
     background-size: cover;
     text-align: left;
@@ -670,7 +670,7 @@ pre {color: #687377;font-size: 15px;background-color: #f7f7f7;border: none;paddi
 .tf-suppliers-form .form-group label span {font-size: 12px;color: #007bff;float:right;}
 .tf-suppliers-form .form-group label span.text-green {font-size: 11px;color: #34b576;}
 .tf-suppliers-form .form-group .form-control {font-family:inherit;display: block;width: 100%;height: 45px;padding: 6px 12px;font-size: 15px;line-height: 1.42857143;color: #687377;background-color: #ffffff;background-image: none;border: 1px solid #cccccc;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: none;box-shadow: none;-webkit-transition: border-color ease-in-out .15s;-o-transition: border-color ease-in-out .15s;transition: border-color ease-in-out .15s;}
-.tf-suppliers-form select {border: 1px solid #cccccc;width: 100%;height: 50px;outline: none;padding-left: 20px;padding-right: 20px;-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;    -webkit-appearance: none;-moz-appearance: none;appearance: none;background: url(../images/innerpage-images/arrow-down.png) #FFFFFF no-repeat calc(100% - 10px) !important;}
+.tf-suppliers-form select {border: 1px solid #cccccc;width: 100%;height: 50px;outline: none;padding-left: 20px;padding-right: 20px;-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;    -webkit-appearance: none;-moz-appearance: none;appearance: none;background: url(../banner-assets/images/innerpage-images/arrow-down.png) #FFFFFF no-repeat calc(100% - 10px) !important;}
 .tf-suppliers-form select option:first-of-type {color: #a0afca;}
 .tf-suppliers-form select option {line-height:25px;}
 .tf-suppliers-form .input-group {position: relative;display: table;border-collapse: separate;}
