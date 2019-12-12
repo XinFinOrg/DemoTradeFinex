@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="tf-buyer-supplier_form-block">
-                            <form id="suppliers-form" class="tf-suppliers-form">
+                            <form id="suppliers-form" class="tf-suppliers-form" enctype="multipart/form-data" method="post">
                                 <div class="form-group">
                                     <label for="instrument-type">Type of Instrument</label>
 
@@ -53,40 +53,19 @@
 
                                 <div id="select-country" class="form-group">
                                     <label for="country-origination">Country of Origination</label>
-                                    <select class="form-control" id="country-origination">
+                                    <select class="form-control" id="pcountry" name="pcountry">
                                         <option value="" disabled="" selected="">Select Country</option>
-                                        <option value="AF">Afghanistan</option>
-                                        <option value="AL">Albania</option>
-                                        <option value="DZ">Algeria</option>
-                                        <option value="AO">Angola</option>
-                                        <option value="AI">Anguilla</option>
-                                        <option value="AQ">Antarctica</option>
-                                        <option value="AR">Argentina</option>
-                                        <option value="AU">Australia</option>
-                                        <option value="BS">Bahamas</option>
-                                        <option value="BH">Bahrain</option>
-                                        <option value="BD">Bangladesh</option>
-                                        <option value="BB">Barbados</option>
-                                        <option value="BY">Belarus</option>
-                                        <option value="BE">Belgium</option>
-                                        <option value="BZ">Belize</option>
-                                        <option value="BM">Bermuda</option>
-                                        <option value="BT">Bhutan</option>
-                                        <option value="BW">Botswana</option>
-                                        <option value="BR">Brazil</option>
-                                        <option value="BG">Bulgaria</option>
-                                        <option value="KH">Cambodia</option>
-                                        <option value="CA">Canada</option>
-                                        <option value="CN">China</option>
-                                        <option value="CO">Colombia</option>
-                                        <option value="CG">Congo</option>
-                                        <option value="CR">Costa Rica</option>
-                                        <option value="CY">Cyprus</option>
-                                        <option value="DK">Denmark</option>
-                                        <option value="DM">Dominica</option>
-                                        <option value="EG">Egypt</option>
-                                        <option value="ER">Eritrea</option>
-                                        <option value="EE">Estonia</option>
+                                            <?php
+                                                if ($pcountries && !empty($pcountries) && is_array($pcountries) && sizeof($pcountries) <> 0) {
+
+                                                    foreach ($pcountries as $prow) {
+
+                                                        echo '<option value="' . $prow->tfc_id . '" ' . ($prow->tfc_id == $pcountry ? 'selected' : '') . '>' . $prow->tfc_name . '</option>';
+                                                        
+                                                    }
+                                                }
+                                                ?>
+                                        
                                     </select>
                                 </div>
 
@@ -95,10 +74,11 @@
                                         <label for="amount">Amount</label>
                                         <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount">
                                     </div>
-                                    <div id="currency-supported" class="form-group col-md-6">
-                                        <label for="currency-supported">Currency Supported</label>
-                                        <select class="form-control" id="currency-supported">
-                                            <option value="USD" selected="USD">USD</option>
+                                    <div id="currency_supported" class="form-group col-md-6">
+                                        <label for="currency_supported">Currency Supported</label>
+                                        <select class="form-control" id="currency_supported" name="currency_supported">
+                                            <option value="" disabled="" selected="">Select Currency</option>
+                                            <option value="USD">USD</option>
                                             <option value="GBP">GBP</option>
                                             <option value="GBP">JPY</option>
                                             <option value="GBP">XDC</option>
@@ -108,18 +88,7 @@
 
                                 <div class="form-group">
                                     <label for="maturity-date">Instrument Maturity Date</label>
-                                    <input type="date" class="form-control" id="maturity-date" placeholder="dd/mm/yyyy">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="supporting-document">Upload Supporting Document <span class="text-green">( PDF/ JPG, GIF Only )</span></label>
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-										<span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                                        <input name="uploaded_file" onChange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file">
-                                        </span>
-                                        <span class="form-control"></span>
-                                    </div>
+                                    <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">
                                 </div>
 
                                 <div class="tf-notice">
@@ -129,8 +98,21 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label for="supporting-document">Upload Supporting Document <span class="text-green">( PDF/ JPG, PNG Only )</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                        <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
+                                        <input name="uploaded_file" id = "uploaded_file" accept=".jpg,.png,.pdf"  onchange="Filevalidation()"    style="display: none;" type="file">
+                                        </span>
+                                        <span class="form-control"></span>
+                                    </div>
+                                    <label for="supporting-document" style="display:none" id="error">Please upload correct file format.</label>
+                                    <label for="supporting-document" style="display:none" id="error1">Please file less than 5MB</label>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
-                                    <input type="text" class="form-control" id="private-key" name="private-key" placeholder="Enter Private Key">
+                                    <input type="text" class="form-control" id="private_key" name="private_key" placeholder="Enter Private Key">
                                 </div>
 
                                 <div class="form-group">
@@ -146,7 +128,47 @@
 
     </div>
     <!-- /. Inside Page Buyers / Suppliers Detail -->
-
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script> 
+    Filevalidation = () => { 
+        
+        const fi = document.getElementById('uploaded_file');
+        var txt = "";
+        if ('files' in fi) {
+            if (fi.files.length == 0) {
+            txt = "Select one or more files.";
+            } else {
+            for (var i = 0; i < fi.files.length; i++) {
+                var file = fi.files[i];
+                if ('name' in file) {
+                var filename = file.name;
+                document.getElementById('uploaded_file').innerHTML = filename;
+                filextension=filename.split(".");
+			    filext="."+filextension.slice(-1)[0];
+                // /console.log(">>>>>>",file.name,filextension,filext);
+                valid=[".jpg",".png",".jpeg",".doc",".docx",".pdf"];
+                    if (valid.indexOf(filext.toLowerCase())==-1){
+                        document.getElementById("error").style.display = "block";
+                    } 
+                    else{
+                        document.getElementById("error").style.display = "none";
+                    }
+                }
+                if ('size' in file) {
+                    const fsize = file.size; 
+                    if(parseFloat(fsize) > 5097152) {
+                        document.getElementById("error1").style.display = "block";
+                    }
+                    else{
+                        document.getElementById("error1").style.display = "block";
+                    }
+                }
+            }
+            }
+        }         
+        
+    } 
+</script> 
 <?php
 	
 	// $this->load->view('includes/block_create_account');
@@ -154,15 +176,5 @@
 	$this->load->view('includes/login_modal');
 	
 ?>	
-<!-- Form Skip to next Heading -->
-<script type="text/javascript">
-    $(function() {
-        $('a[href*=#]').on('click', function(e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $($(this).attr('href')).offset().top
-            }, 500, 'linear');
-        });
-    });
-</script>
-<!-- Form Skip to next Heading -->
+
+
