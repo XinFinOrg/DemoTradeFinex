@@ -24,21 +24,21 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12 mb-20">
                         <div class="configurationsBox text-center">
-                            <img src="assets/images/innerpage-images/windows-icon.png" class="img-responsive icon-single">
+                            <img src="../assets/banner_assets/images/innerpage-images/windows-icon.png" class="img-responsive icon-single">
                             <h1>Windows (64-bit)</h1>
                             <a href="http://download.xinfin.network/XinFin-Network-installer-0-12-0.exe" class="btn btn-blue text-uppercase">Download</a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 mb-20">
                         <div class="configurationsBox text-center">
-                            <img src="assets/images/innerpage-images/linux-icon.png" class="img-responsive icon-single">
+                            <img src="../assets/banner_assets/images/innerpage-images/linux-icon.png" class="img-responsive icon-single">
                             <h1>Linux</h1>
                             <a href="http://download.xinfin.network/XinFin-Network-linux64-0-12-0.deb" class="btn btn-blue text-uppercase">Download</a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="configurationsBox text-center">
-                            <img src="assets/images/innerpage-images/mac-icon.png" class="img-responsive icon-single">
+                            <img src="../assets/banner_assets/images/innerpage-images/mac-icon.png" class="img-responsive icon-single">
                             <h1>macOS</h1>
                             <a href="https://download.xinfin.network/XinFin-Network-macosx-0-12-0.dmg" class="btn btn-blue text-uppercase">Download</a>
                         </div>
