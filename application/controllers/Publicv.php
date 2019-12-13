@@ -694,13 +694,102 @@ class Publicv extends CI_Controller {
 
 		$data_add['instrument'] = $this->input->post('instrument');
 		$data_add['pcountry'] = $this->input->post('pcountry');
+		$data_add['name'] = $this->input->post('name');
+		$data_add['amount'] = $this->input->post('amount');
+		$data_add['currency_supported'] = $this->input->post('currency_supported');
+		$data_add['maturity_date'] = $this->input->post('maturity_date');
+
+		$configf = array();
+		$configf['upload_path']   = FCPATH.'assets/instrument_files/';
+		$configf['allowed_types'] = 'pdf|jpg|jpeg|png|'; // doc|docx|
+		$configf['max_size']      = 5097152;
+			
+		if(isset($_FILES) && !empty($_FILES) && trim($_FILES["uploaded_file"]['name']) <> ''){
+			
+			$file_name = time().'_'.str_replace(" ", "-", $_FILES["uploaded_file"]['name']);
+			$configf['file_name'] = $file_name;
+			$file_namea = explode('.', $file_name);
+			$this->load->library('upload', $configf);
+
+			// log_message("info",">>>>>".$this->upload->do_upload('uploaded_file'));
+			$file_success = $this->upload->do_upload('uploaded_file');
 		
-		$this->load->view('includes/headern', $data);
-		$this->load->view('includes/header_publicn', $data);
-		$this->load->view('pages/public/buyer_supplier_view', $data);
-		$this->load->view('includes/footer_commonn', $data);
-		$this->load->view('pages_scripts/finance_doc_scripts', $data);
-		$this->load->view('includes/footern');
+			if($file_success == 0)
+			{
+				log_message("error",'Error occurred during addition. <br/>');
+			}
+			else
+			{
+				$upfile_url = base_url().'assets/instrument_files/'.$file_name;
+				$img = file_get_contents( base_url().'assets/instrument_files/'.$file_name);
+				log_message("info",'Successfully added. <br/>'.$upfile_url);
+			}
+		}
+		$data_add['uploaded_file'] = base64_encode($img);
+		$data_add['private_key'] = $this->input->post('private_key');
+
+		$url = 'http://90.0.0.84:3110/api/uploadDoc';
+		$data_string = 'data='.$data_add['uploaded_file'];
+		$curl = curl_init();
+		
+		curl_setopt_array($curl, array(
+			CURLOPT_URL => $url,
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_CUSTOMREQUEST => "POST",
+			CURLOPT_POSTFIELDS => $data_string,
+			CURLOPT_HTTPHEADER => array(
+			"Cache-Control: no-cache",
+			"cache-control: no-cache"
+			),
+		));
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+		$result = json_decode($response);
+		curl_close($curl);
+
+		$data['ipfshash'] = $result->hash;
+		if($result->status == true){
+			$url = 'http://90.0.0.84:3110/api/generateContract';
+			$data_string = 'ipfsHash='.$data['ipfshash'].'&instrumentType='.$data_add['instrument'].'&amount='.$data_add['amount'].'&currencySupported='.$data_add['currency_supported'].'&maturityDate='.$data_add['maturity_date'].'&name='.$data_add['name'].'&country='.$data_add['pcountry'];
+			$curl = curl_init();
+			
+			curl_setopt_array($curl, array(
+				CURLOPT_URL => $url,
+				CURLOPT_RETURNTRANSFER => true,
+				CURLOPT_CUSTOMREQUEST => "POST",
+				CURLOPT_POSTFIELDS => $data_string,
+				CURLOPT_HTTPHEADER => array(
+				"Cache-Control: no-cache",
+				"cache-control: no-cache"
+				),
+			));
+	
+			$response1 = curl_exec($curl);
+			$err = curl_error($curl);
+			$result1 = json_decode($response1);
+			curl_close($curl);
+	
+			// log_message("info",">>>".$result1->contract);
+	
+			$data_add['contract'] = $result1->contract;
+	
+			if($result1->status == true || $result1->status == 1 ){
+				$this->smart_contract($data_add);
+			}
+		}
+		else{
+			log_message("error","Something wrong with API");
+			$this->load->view('includes/headern', $data);
+			$this->load->view('includes/header_publicn', $data);
+			$this->load->view('pages/public/buyer_supplier_view', $data);
+			$this->load->view('includes/footer_commonn', $data);
+			$this->load->view('pages_scripts/finance_doc_scripts', $data);
+			$this->load->view('includes/footern');
+		}
+
+		
+		
 	}
 	
 	public function financier(){
@@ -3712,6 +3801,248 @@ class Publicv extends CI_Controller {
         
         
         $this->load->view('pages/public/rollout_view', $data);
+        $this->load->view('includes/footer_commonn', $data);
+        $this->load->view('pages_scripts/common_scripts', $data);
+        $this->load->view('includes/footern');
+	}
+	
+	public function smart_contract($data_add){
+        
+        $data = array();
+        
+        $data['page'] = 'smart_contract';
+        $data['msg'] = '';
+        $data['user_id'] = 0;
+        $data['user_type'] = '';
+        $data['full_name'] = '';
+        $data['ufname'] = '';
+        $data['ulname'] = '';
+        $data['uemail'] = '';
+        $data['ucontact'] = '';
+        $data['uaddress'] = '';
+        $data['uname'] = '';
+        $data['upass'] = '';
+        $data['uprofpic'] = '';
+        
+        $data['csrf'] = array();
+        
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+				
+		$user = $this->session->userdata('logged_in');
+		
+		if($user && !empty($user) && sizeof($user) <> 0){
+			$data['full_name'] = $user['user_full_name'];
+			$data['user_id'] = $user['user_id'];
+			$data['user_type_ref'] = $user['user_type_ref'];
+			// redirect(base_url().'dashboard');
+		}else{
+			// redirect(base_url().'log/out');
+			$this->load->view('includes/headern', $data);
+			$this->load->view('includes/header_publicn', $data);
+		}
+		
+		$data['notifications'] = array();
+		$data['notifications'] = get_initial_notification_status();
+		
+		if($data['user_id'] <> 0){
+			
+			$options = array();
+			$options['user_id'] = $data['user_id'];
+			$options['user_type'] = $data['user_type_ref'];
+			
+			$data['notifications'] = get_notification_status($options);
+		}
+		
+		if($data['user_id'] <> 0){
+					
+			$uresult = $this->manage->get_user_info_by_id_and_type($data['user_id'], $data['user_type_ref']);
+						
+			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
+				
+				if($data['user_type_ref'] == 1){
+					$data['ufname'] = $uresult[0]->tfsp_fname;
+					$data['ulname'] = $uresult[0]->tfsp_lname;
+					$data['uemail'] = $uresult[0]->tfsp_email;
+					$data['ucontact'] = $uresult[0]->tfsp_contact;
+					$data['uaddress'] = $uresult[0]->tfsp_address;
+					$data['uprofpic'] = $uresult[0]->tfsp_pic_file;
+					$data['uname'] = $uresult[0]->tfu_usern;
+					$data['upass'] = $uresult[0]->tfu_passwd;
+					$data['uvisibility'] = $uresult[0]->tfsp_public_visibility;
+				}
+				
+				if($data['user_type_ref'] == 2){
+					$data['ufname'] = $uresult[0]->tff_fname;
+					$data['ulname'] = $uresult[0]->tff_lname;
+					$data['uemail'] = $uresult[0]->tff_email;
+					$data['ucontact'] = $uresult[0]->tff_contact;
+					$data['uaddress'] = $uresult[0]->tff_address;
+					$data['uprofpic'] = $uresult[0]->tff_pic_file;
+					$data['uname'] = $uresult[0]->tfu_usern;
+					$data['upass'] = $uresult[0]->tfu_passwd;
+					$data['uvisibility'] = $uresult[0]->tff_public_visibility;
+				}
+				
+				if($data['user_type_ref'] == 3){
+					$data['ufname'] = $uresult[0]->tfb_fname;
+					$data['ulname'] = $uresult[0]->tfb_lname;
+					$data['uemail'] = $uresult[0]->tfb_email;
+					$data['ucontact'] = $uresult[0]->tfb_contact;
+					$data['uaddress'] = $uresult[0]->tfb_address;
+					$data['uprofpic'] = $uresult[0]->tfb_pic_file;
+					$data['uname'] = $uresult[0]->tfu_usern;
+					$data['upass'] = $uresult[0]->tfu_passwd;
+				}
+			}
+			
+			$this->load->view('includes/headern', $data);
+			$this->load->view('includes/header_publicn', $data);
+		}
+        
+		$data['display'] = $data_add;
+		
+		        
+        
+        $this->load->view('pages/public/smart_contract_view', $data);
+        $this->load->view('includes/footer_commonn', $data);
+        $this->load->view('pages_scripts/common_scripts', $data);
+        $this->load->view('includes/footern');
+	}
+	
+	public function smart_contractt($data_add){
+        
+        $data = array();
+        
+        $data['page'] = 'smart_contractt';
+        $data['msg'] = '';
+        $data['user_id'] = 0;
+        $data['user_type'] = '';
+        $data['full_name'] = '';
+        $data['ufname'] = '';
+        $data['ulname'] = '';
+        $data['uemail'] = '';
+        $data['ucontact'] = '';
+        $data['uaddress'] = '';
+        $data['uname'] = '';
+        $data['upass'] = '';
+        $data['uprofpic'] = '';
+        
+        $data['csrf'] = array();
+        
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+				
+		$user = $this->session->userdata('logged_in');
+		
+		if($user && !empty($user) && sizeof($user) <> 0){
+			$data['full_name'] = $user['user_full_name'];
+			$data['user_id'] = $user['user_id'];
+			$data['user_type_ref'] = $user['user_type_ref'];
+			// redirect(base_url().'dashboard');
+		}else{
+			// redirect(base_url().'log/out');
+			$this->load->view('includes/headern', $data);
+			$this->load->view('includes/header_publicn', $data);
+		}
+		
+		$data['notifications'] = array();
+		$data['notifications'] = get_initial_notification_status();
+		
+		if($data['user_id'] <> 0){
+			
+			$options = array();
+			$options['user_id'] = $data['user_id'];
+			$options['user_type'] = $data['user_type_ref'];
+			
+			$data['notifications'] = get_notification_status($options);
+		}
+		
+		if($data['user_id'] <> 0){
+					
+			$uresult = $this->manage->get_user_info_by_id_and_type($data['user_id'], $data['user_type_ref']);
+						
+			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
+				
+				if($data['user_type_ref'] == 1){
+					$data['ufname'] = $uresult[0]->tfsp_fname;
+					$data['ulname'] = $uresult[0]->tfsp_lname;
+					$data['uemail'] = $uresult[0]->tfsp_email;
+					$data['ucontact'] = $uresult[0]->tfsp_contact;
+					$data['uaddress'] = $uresult[0]->tfsp_address;
+					$data['uprofpic'] = $uresult[0]->tfsp_pic_file;
+					$data['uname'] = $uresult[0]->tfu_usern;
+					$data['upass'] = $uresult[0]->tfu_passwd;
+					$data['uvisibility'] = $uresult[0]->tfsp_public_visibility;
+				}
+				
+				if($data['user_type_ref'] == 2){
+					$data['ufname'] = $uresult[0]->tff_fname;
+					$data['ulname'] = $uresult[0]->tff_lname;
+					$data['uemail'] = $uresult[0]->tff_email;
+					$data['ucontact'] = $uresult[0]->tff_contact;
+					$data['uaddress'] = $uresult[0]->tff_address;
+					$data['uprofpic'] = $uresult[0]->tff_pic_file;
+					$data['uname'] = $uresult[0]->tfu_usern;
+					$data['upass'] = $uresult[0]->tfu_passwd;
+					$data['uvisibility'] = $uresult[0]->tff_public_visibility;
+				}
+				
+				if($data['user_type_ref'] == 3){
+					$data['ufname'] = $uresult[0]->tfb_fname;
+					$data['ulname'] = $uresult[0]->tfb_lname;
+					$data['uemail'] = $uresult[0]->tfb_email;
+					$data['ucontact'] = $uresult[0]->tfb_contact;
+					$data['uaddress'] = $uresult[0]->tfb_address;
+					$data['uprofpic'] = $uresult[0]->tfb_pic_file;
+					$data['uname'] = $uresult[0]->tfu_usern;
+					$data['upass'] = $uresult[0]->tfu_passwd;
+				}
+			}
+			
+			$this->load->view('includes/headern', $data);
+			$this->load->view('includes/header_publicn', $data);
+		}
+        
+		$data['display'] = $data_add;
+		log_message("info","<><><>".$isplay);
+			$url = 'http://90.0.0.84:3110/api/deployContract';
+			$data_string = 'ipfsHash='.$display['ipfshash'].'&instrumentType='.$display['instrument'].'&amount='.$display['amount'].'&currencySupported='.$display['currency_supported'].'&maturityDate='.$display['maturity_date'].'&name='.$display['name'].'&country='.$display['pcountry'].'&privKey='.$display['private_key'];
+			$curl = curl_init();
+			
+			log_message("info",">>>>".$data_string);
+	
+			curl_setopt_array($curl, array(
+				CURLOPT_URL => $url,
+				CURLOPT_RETURNTRANSFER => true,
+				CURLOPT_CUSTOMREQUEST => "POST",
+				CURLOPT_POSTFIELDS => $data_string,
+				CURLOPT_HTTPHEADER => array(
+				"Cache-Control: no-cache",
+				"cache-control: no-cache"
+				),
+			));
+	
+			$response = curl_exec($curl);
+			$err = curl_error($curl);
+			$result = json_decode($response);
+			curl_close($curl);
+		
+		        
+        
+        $this->load->view('pages/public/smart_contract_view', $data);
         $this->load->view('includes/footer_commonn', $data);
         $this->load->view('pages_scripts/common_scripts', $data);
         $this->load->view('includes/footern');

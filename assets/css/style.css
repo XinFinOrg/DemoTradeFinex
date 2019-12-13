@@ -12,7 +12,7 @@
 	font-family: 'open_sanssemibold';
 	src: url('./fonts/opensans-semibold-webfont.woff2') format('woff2'), url('./fonts/opensans-semibold-webfont.woff') format('woff');
 	font-weight: normal;
-	font-style: normal;.widget-contact h3.widget-title
+	font-style: normal;
 }
 @font-face {
 	font-family: 'open_sansbold';
@@ -542,16 +542,15 @@ footer {
   color: #2aa3ef;
 }
 
-.mainnav li ul li:hover,
+/*.mainnav li ul li:hover,
 .mainnav li ul li ul li:hover {
   background-color: #fff;
-  /* color: #354f65; */
+  color: #354f65;
   padding-left: 20px;
   transition: ease-in-out 0.35s;
   -moz-transition: ease-in-out 0.35s;
-  -webkit-transition: ease-in-out 0.35s;
-  
-}
+  -webkit-transition: ease-in-out 0.35s;  
+}*/
 /* Center the loader */
 #loader {
 	position: fixed;
@@ -673,11 +672,13 @@ footer {
 }
 #mainnav .menu > li > .submenu > li > a {
 	color: #282c3f;
+	background-color: #fff;
 	display: block;
 	padding: 0px 0px 0px 15px;
 	line-height: 50px;
 	/*font-family: 'open_sansregular';*/
 	font-size: 15px;
+	padding-left: 20px;
 }
 #mainnav .menu > li > .submenu > li > a:hover {
 	background-color: #fff;
@@ -687,6 +688,7 @@ footer {
 #mainnav .menu > li > .submenu > li > a > i {
 	margin-right: 10px;
 }
+
 /* Mobile navigation */
 #mainnav-mobi {
 	display: block;
@@ -949,7 +951,7 @@ footer {
 	font-size: 13px;
 	/*font-family: 'open_sansregular';*/
 	float: none;
-	line-height: 18px;
+	line-height: 20px;
 	/*text-align: center;*/
 }
 .logo-ft {
@@ -1046,9 +1048,12 @@ text-align: justify;
 /* Widget Contact */
 
 .widget-contact h3.widget-title {
-	margin-bottom: 20px;
 	margin-left: 0px;
 	font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 18px;
 	/*text-transform: uppercase;
 	font-family: 'open_sanssemibold';*/
 	clear: both;

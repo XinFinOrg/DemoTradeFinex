@@ -354,7 +354,7 @@
 
 
 
-<a id="home_popup" data-toggle="modal" data-target="#welcome_tradefinex"></a>
+<!-- <a id="home_popup" data-toggle="modal" data-target="#welcome_tradefinex"></a> -->
 <!-- <div id="welcome_tradefinex" class="modal fade in" role="dialog">
 	<div class="modal-dialog"> 
     

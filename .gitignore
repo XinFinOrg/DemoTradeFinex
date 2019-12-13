@@ -5,5 +5,6 @@ package.json
 package-lock.json
 dummy.txt
 newpages/*
+assets/instrument_files/*
 application/config/config.php
 application/config/database.php

@@ -668,6 +668,7 @@ pre {color: #687377;font-size: 15px;background-color: #f7f7f7;border: none;paddi
 .tf-suppliers-form {padding:0px 20px 0px 20px;}
 .tf-suppliers-form .form-group label {width:100%;font-size: 15px;font-weight: 600;color: #687377;line-height: 18px;margin-bottom:6px;}
 .tf-suppliers-form .form-group label span {font-size: 12px;color: #007bff;float:right;}
+.tf-suppliers-form .form-group .error {font-size: 12px;color: #ea212d;padding-top:5px;}
 .tf-suppliers-form .form-group label span.text-green {font-size: 11px;color: #34b576;}
 .tf-suppliers-form .form-group .form-control {font-family:inherit;display: block;width: 100%;height: 45px;padding: 6px 12px;font-size: 15px;line-height: 1.42857143;color: #687377;background-color: #ffffff;background-image: none;border: 1px solid #cccccc;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: none;box-shadow: none;-webkit-transition: border-color ease-in-out .15s;-o-transition: border-color ease-in-out .15s;transition: border-color ease-in-out .15s;}
 .tf-suppliers-form select {border: 1px solid #cccccc;width: 100%;height: 50px;outline: none;padding-left: 20px;padding-right: 20px;-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;    -webkit-appearance: none;-moz-appearance: none;appearance: none;background: url(../banner-assets/images/innerpage-images/arrow-down.png) #FFFFFF no-repeat calc(100% - 10px) !important;}
@@ -684,6 +685,7 @@ pre {color: #687377;font-size: 15px;background-color: #f7f7f7;border: none;paddi
 .tf-suppliers-form .tf-notice_content {-webkit-box-align: center;-ms-flex-align: center;align-items: center;text-align: center;padding: .7rem 1rem;}
 .tf-suppliers-form .tf-notice_content p {text-align:center;font-size:16px;font-weight: 600;margin-bottom:0px;}
 .tf-suppliers-form button {height:inherit;}
+input.error, textarea.error, select.error {border-color: #ea212d!important;}
 
 /* .tf-form-tabs {} */
 .tf-form-tabs a {position: relative!important;padding: 12px 15px!important;border-radius: 4px!important;width: 32.8%;margin-bottom:0.5rem;text-align: center;background-color:#FFFFFF;color: #454545!important;font-weight: 600;border: 2px solid #d6e9f8!important;}
@@ -739,6 +741,72 @@ pre {color: #687377;font-size: 15px;background-color: #f7f7f7;border: none;paddi
 @media (max-width: 767px) {
 	.tf-what-includes_block {padding: 25px 0px 40px 0px;}
 	.tf-valign {display: block;	}
+}
+
+
+/*---------- pre code ----------*/
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #8a8484;
+    background: none;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    font-size: 100%;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    max-height: 450px;
+    position: relative;
+}
+
+:not(pre)>code[class*="language-"],
+pre[class*="language-"] {
+    background: #FFF;
+    border: 1px solid #F0F0F0;
+    border-left: 3px solid #3BAFDA;
+    border-radius: 4px;
+}
+/* Inline code */
+:not(pre)>code[class*="language-"] {
+    padding: .1em;
+    border-radius: 4px;
+    white-space: normal;
 }
 
 /*-----------------------------------------

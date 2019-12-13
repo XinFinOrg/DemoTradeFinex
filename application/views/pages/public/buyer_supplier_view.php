@@ -28,25 +28,25 @@
 
                                     <div id="tab" class="tf-form-tabs" data-toggle="buttons">
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="Receivable" value="Receivable" id="Receivable" />Receivable
+                                            <input type="radio" class="" name="instrument" value="receivable" id="Receivable" />Receivable
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="Letter-of-Credit" value="Letter of Credit" id="Letter-of-Credit" />Letter of Credit
+                                            <input type="radio" class="" name="instrument" value="loc" id="Letter-of-Credit" />Letter of Credit
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="Bank-Guarantees" value="Bank Guarantees" id="Bank-Guarantees" />Bank Guarantees
+                                            <input type="radio" class="" name="instrument" value="bg" id="Bank-Guarantees" />Bank Guarantees
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="SBLC" value="SBLC" id="SBLC" />SBLC
+                                            <input type="radio" class="" name="instrument" value="sblc" id="SBLC" />SBLC
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="Warehouse-Receipt" value="Warehouse Receipt" id="Warehouse-Receipt" />Warehouse Receipt
+                                            <input type="radio" class="" name="instrument" value="warehouse receipt" id="Warehouse-Receipt" />Warehouse Receipt
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="Payable" value="Payable" id="Payable" />Payable
+                                            <input type="radio" class="" name="instrument" value="payable" id="Payable" />Payable
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="Other" value="Other" id="Other" />Other
+                                            <input type="radio" class="" name="instrument" value="other" id="Other" />Other
                                         </a>
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@
 
                                                     foreach ($pcountries as $prow) {
 
-                                                        echo '<option value="' . $prow->tfc_id . '" ' . ($prow->tfc_id == $pcountry ? 'selected' : '') . '>' . $prow->tfc_name . '</option>';
+                                                        echo '<option value="' . $prow->tfc_name . '" ' . ($prow->tfc_id == $pcountry ? 'selected' : '') . '>' . $prow->tfc_name . '</option>';
                                                         
                                                     }
                                                 }
@@ -78,17 +78,22 @@
                                         <label for="currency_supported">Currency Supported</label>
                                         <select class="form-control" id="currency_supported" name="currency_supported">
                                             <option value="" disabled="" selected="">Select Currency</option>
-                                            <option value="USD">USD</option>
-                                            <option value="GBP">GBP</option>
-                                            <option value="GBP">JPY</option>
-                                            <option value="GBP">XDC</option>
+                                            <option value="usd">USD</option>
+                                            <option value="gbp">GBP</option>
+                                            <option value="jpy">JPY</option>
+                                            <option value="xdc">XDC</option>
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="maturity-date">Instrument Maturity Date</label>
-                                    <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="maturity-date">Instrument Maturity Date</label>
+                                        <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="Name">Instrument Ref/Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Instrument Ref/Name">
+                                    </div>
                                 </div>
 
                                 <div class="tf-notice">
@@ -102,7 +107,7 @@
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                         <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                                        <input name="uploaded_file" id = "uploaded_file" accept=".jpg,.png,.pdf"  onchange="Filevalidation()"    style="display: none;" type="file">
+                                        <input name="uploaded_file" id = "uploaded_file"onChange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" accept=".jpg,.png,.pdf" style="display: none;" type="file">
                                         </span>
                                         <span class="form-control"></span>
                                     </div>
@@ -116,7 +121,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-blue text-uppercase">Submit</button>
+                                    <button  type="submit" class="btn btn-blue text-uppercase">Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -130,44 +135,7 @@
     <!-- /. Inside Page Buyers / Suppliers Detail -->
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script> 
-    Filevalidation = () => { 
-        
-        const fi = document.getElementById('uploaded_file');
-        var txt = "";
-        if ('files' in fi) {
-            if (fi.files.length == 0) {
-            txt = "Select one or more files.";
-            } else {
-            for (var i = 0; i < fi.files.length; i++) {
-                var file = fi.files[i];
-                if ('name' in file) {
-                var filename = file.name;
-                document.getElementById('uploaded_file').innerHTML = filename;
-                filextension=filename.split(".");
-			    filext="."+filextension.slice(-1)[0];
-                // /console.log(">>>>>>",file.name,filextension,filext);
-                valid=[".jpg",".png",".jpeg",".doc",".docx",".pdf"];
-                    if (valid.indexOf(filext.toLowerCase())==-1){
-                        document.getElementById("error").style.display = "block";
-                    } 
-                    else{
-                        document.getElementById("error").style.display = "none";
-                    }
-                }
-                if ('size' in file) {
-                    const fsize = file.size; 
-                    if(parseFloat(fsize) > 5097152) {
-                        document.getElementById("error1").style.display = "block";
-                    }
-                    else{
-                        document.getElementById("error1").style.display = "block";
-                    }
-                }
-            }
-            }
-        }         
-        
-    } 
+   
 </script> 
 <?php
 	

@@ -100,13 +100,17 @@ $(function () {
 				decnumberOnly : true
 			},
 			currency_supported: {
+				required: true
+			},
+			name: {
 				required: true,
+				LetterOnly:true
 			},
 			maturity_date: {
-				required: true,
+				required: true
 			},
 			uploaded_file: {
-				required: true,
+				required: true
 			},
 			private_key: "required",
 		},
@@ -119,6 +123,7 @@ $(function () {
 				decnumberOnly : "Enter Numbers only"
 			},
 			currency_supported: "Please choose currency supported",
+			name: "Please enter name",
 			maturity_date: "Please choose date",
 			uploaded_file: "Please upload doucment",
 			private_key: {
@@ -133,5 +138,45 @@ $(function () {
 
 		}
 	});
+
+	$('#uploaded_file').change(function(){ 
+        
+        const fi = document.getElementById('uploaded_file');
+        var txt = "";
+        if ('files' in fi) {
+            if (fi.files.length == 0) {
+            txt = "Select one or more files.";
+            } else {
+            for (var i = 0; i < fi.files.length; i++) {
+                var file = fi.files[i];
+                if ('name' in file) {
+                var filename = file.name;
+                document.getElementById('uploaded_file').innerHTML = filename;
+                filextension=filename.split(".");
+			    filext="."+filextension.slice(-1)[0];
+                // /console.log(">>>>>>",file.name,filextension,filext);
+                valid=[".jpg",".png",".jpeg",".doc",".docx",".pdf"];
+                    if (valid.indexOf(filext.toLowerCase())==-1){
+                        document.getElementById("error").style.display = "block";
+                        if ('size' in file) {
+                            const fsize = file.size; 
+                            if(parseFloat(fsize) > 5097152) {
+                                document.getElementById("error1").style.display = "block";
+                            }
+                            else{
+                                document.getElementById("error1").style.display = "none";
+                            }
+                        }
+                    } 
+                    else{
+                        document.getElementById("error").style.display = "none";
+                    }
+                }
+                
+            }
+            }
+        }         
+        
+    }); 
 	
 });
