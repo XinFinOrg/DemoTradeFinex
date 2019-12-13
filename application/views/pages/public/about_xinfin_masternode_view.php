@@ -103,7 +103,7 @@
                 <p class="tf-header mb-20">Where to operate? Mainnet vs Testnet</p>
                 <p>In XinFin, there are two networks where you can run XDC protocol: the mainnet and the testnet.</p>
                 <p>The mainnet is used to transact real XDC. The XDC's value is tied to real fiat currency via cryptocurrency exchanges.</p>
-                <p>As developers, you do not want to run application tests with real money. That is what the testnet is for. We call the testnet <a href="http://xinfin.network/" target="_blank">XinFinTestNet</a>.</p>
+                <p>As developers, you do not want to run application tests with real money. That is what the testnet is for. We call the testnet <a href="http://apothem.network/" target="_blank">XinFinTestNet</a>.</p>
             </div>
         </div>
     </div>

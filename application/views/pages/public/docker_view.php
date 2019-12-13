@@ -108,7 +108,7 @@ sudo docker-compose -f docker-services.yml up -d
                 <p class="tf-header mb-3">List of service provider to Setup Masternode</p>
                 <div class="orderList mb-3">
                     <ol>
-                        <li><strong>IndSoft.net</strong></li>
+                    <li><strong>IndSoft.net</strong>
                         <ul>
                             <li>IPv6 and tor Supported</li>
                             <li>Global geographical locations</li>
@@ -117,6 +117,7 @@ sudo docker-compose -f docker-services.yml up -d
                             <li>One time Setup Cost: Free</li>
                             <li>Monthly: 250 USD (pay in XDC, Paypal, debit, or credit card)</li>
                         </ul>
+					</li>
                     </ol>
                 </div>
             </div>

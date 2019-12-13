@@ -123,10 +123,10 @@
                             <ul class="footer-list">
                                 <li> <a href="<?=base_url();?>publicv/xdc_liquidity">XDC Liquidity</a></li>
                                 <li> <a href="http://events.tradefinex.org/">Consortium Event</a></li>
-                                <li> <a href="rollout-plan.html">Rollout Plan</a></li>
+                                <li> <a href="<?=base_url();?>publicv/rollout">Rollout Plan</a></li>
                                 <li> <a href="https://docs.tradefinex.org/faq/general/">FAQ's</a></li>
                                 <li> <a href="case-study.html">Case Study</a></li>
-                                <li> <a href="contact.html">Contact Us</a></li>
+                                <li> <a href="<?=base_url();?>publicv/contact">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
