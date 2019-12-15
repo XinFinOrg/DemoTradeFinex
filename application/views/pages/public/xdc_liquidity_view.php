@@ -101,6 +101,14 @@
                 </div>
             </div>
         </div>
+		
+		<div class="row mt-40">
+			<div class="col-md-10 col-md-offset-1">
+				<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+				<div class="coinmarketcap-currency-widget" data-currencyid="2634" data-base="USD"></div>
+			</div>
+		</div>
+				
     </div>
 </section>
 <!-- /. XDC Liquidity for Trade Finance -->

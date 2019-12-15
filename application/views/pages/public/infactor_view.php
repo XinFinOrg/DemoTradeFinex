@@ -3,7 +3,7 @@
 
     <section class="tf-inner-banner">
         <div class="container">
-            <h3>InFactor</h3>
+            <h3>Invoice Digitization</h3>
             <h4>Factoring your unpaid invoices becomes easy, transparent and secure using blockchain technology.</h4>
         </div>
     </section>

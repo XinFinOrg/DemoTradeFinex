@@ -89,48 +89,57 @@
 		</div>
 		<!-- /Right-bar --> 
 <?php }?>
-	  <section class="tf-footer section pb-20">
+	  
+	  <!-- Footer -->
+    <section class="tf-footer section pb-20">
         <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 mb-40">
                         <div class="widget widget-categories">
-                            <h4 class="footer-title">Developer Tools</h4>
+                            <h4 class="footer-title">Trade Instruments</h4>
                             <ul class="footer-list">
-                                <li> <a href="<?=base_url();?>publicv/setup_masternode">Join the Network</a></li>
-                                <li> <a href="https://apidocs.xinfin.network/">XDC Ledger APIs</a></li>
-                                <li> <a href="https://explorer.xinfin.network/publicAPIDoc">Explorer APIs</a></li>
-                                <li> <a href="https://st.mycontract.co/login">Stable Coin Deployment</a></li>
+                                <li> <a href="<?=base_url();?>publicv/financier">For Financiers</a></li>
+                                <li> <a href="<?=base_url();?>publicv/buyer_supplier">For Buyers / Suppliers</a></li>
+                                <li> <a href="<?=base_url();?>publicv/brokers">For Brokers</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-40">
                         <div class="widget widget-categories">
-                            <h4 class="footer-title">Explore Platform</h4>
+                            <h4 class="footer-title">Origination Tools</h4>
                             <ul class="footer-list">
-                                <li> <a href="http://exchange.tradefinex.org/">Electronic Trading Platform</a></li>
-                                <li> <a href="<?=base_url();?>publicv/infactor">Invoice Factoring</a></li>
+                                <li> <a href="https://infactor.io/">Invoice Factoring</a></li>
+                                <li> <a href="<?=base_url();?>publicv/infactor">Invoice Digitization</a></li>
                                 <li> <a href="<?=base_url();?>publicv/boss_101">Bond</a></li>
-                                <li> <a href="<?=base_url();?>publicv/financier">For Financiers</a></li>
-                                <li> <a href="<?=base_url();?>publicv/buyer_supplier">For Buyers</a></li>
-                                <li> <a href="<?=base_url();?>publicv/buyer_supplier">For Suppliers</a></li>
+                                <li> <a href="https://st.mycontract.co/login" target="_blank">Stable Coin</a></li>
+                                <li> <a href="<?=base_url();?>publicv/supply_chain">Supply Chain - Track & Trace</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 mb-40">
+                    <div class="col-md-2 col-sm-6 mb-40">
                         <div class="widget widget-categories">
                             <h4 class="footer-title">About Us</h4>
                             <ul class="footer-list">
                                 <li> <a href="<?=base_url();?>publicv/xdc_liquidity">XDC Liquidity</a></li>
-                                <li> <a href="http://events.tradefinex.org/">Consortium Event</a></li>
+								<li> <a href="<?=base_url();?>publicv/case_study">Case Study</a></li>
                                 <li> <a href="<?=base_url();?>publicv/rollout">Rollout Plan</a></li>
-                                <li> <a href="https://docs.tradefinex.org/faq/general/">FAQ's</a></li>
-                                <li> <a href="case-study.html">Case Study</a></li>
                                 <li> <a href="<?=base_url();?>publicv/contact">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+					<div class="col-md-2 col-sm-6 mb-40">
+                        <div class="widget widget-categories">
+                            <h4 class="footer-title">Other Links</h4>
+                            <ul class="footer-list">
+                                <li> <a href="<?=base_url();?>publicv/setup_masternode">Join The Network</a></li>
+                                <li> <a href="http://events.tradefinex.org/" target="_blank">Consortium Event</a></li>
+                                <li> <a href="https://docs.tradefinex.org/faq/general/" target="_blank">FAQ's</a></li>
+								<li> <a href="<?=base_url();?>publicv/media_center">Media Center</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
                         <div class="widget widget-contact">
                             <h3 class="widget-title">Connect Us</h3>
                             <ul class="tf-social-ft mb-30">
@@ -156,7 +165,11 @@
                 </div>
             </div>
         </div>
-      </section>
+    </section>
+    <!-- /. Footer -->
+	
+	
+	  
 				
 		<!-- JAVASCRIPT =============================--> 
 		<script src="<?=base_url('assets/js/jquery-core/jquery.min.js');?>"></script> 
