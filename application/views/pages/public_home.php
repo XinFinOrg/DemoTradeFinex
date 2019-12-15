@@ -301,7 +301,7 @@
             </div>
 
             <div class="text-center">
-                <a href="videos.html" class="btn btn-blue text-uppercase">More Videos</a>
+                <a href="<?=base_url();?>publicv/videos" class="btn btn-blue text-uppercase">More Videos</a>
             </div>
         </div>
     </section>
