@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="section-title text-center">
-                    <h2 class="mb-0">Download XinFin One Click Installer (to setup Masternode) for Windows, Linux and macOS</h2>
+                    <h2 class="mb-0">To Become a part of the Network Download One Click Installer</h2>
                 </div>
             </div>
         </div>
