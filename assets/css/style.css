@@ -452,7 +452,8 @@ footer {
 	position: relative;
 }
 #mainnav ul.menu > li {
-	margin-right: 16px;
+	/*-right: 16px;*/
+	margin-right: 10px;
 }
 #mainnav ul.menu > li:last-child {
 	margin-right: 0px;
@@ -642,7 +643,8 @@ footer {
 	width: 250px;
 	background-color: #fff;
 	top: 150px;
-	right: 0;
+	/*right: 0;*/
+	left: -15px;
 	visibility: hidden;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
