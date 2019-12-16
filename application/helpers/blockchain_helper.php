@@ -65,44 +65,6 @@ if (!function_exists('sendTokens'))
     }
 }
 
-if (!function_exists('uploadDoc'))
-{
-	function uploadDoc($options = array())
-    {
-        $CI =& get_instance();
-		$CI->load->library('curl');
-		
-		$ipfshash = '';
-		
-		$rcurlpfstatus = $CI->curl->simple_post('http://90.0.0.84:3110/api/uploadDoc', $options);
-		
-		if($rcurlpfstatus){
-            log_message("info",">>>>".$rcurlpfstatus.$$rcurlpfstatus->hash);
-			$ipfshash = $rcurlpfstatus->hash;
-		}
-		
-		return $ipfshash;
-    }
-}
 
-if (!function_exists('generateContract'))
-{
-	function generateContract($options = array())
-    {
-        $CI =& get_instance();
-		$CI->load->library('curl');
-		
-		$ipfshash = '';
-		
-		$rcurlpfstatus = $CI->curl->simple_post('http://90.0.0.84:3110/api/uploadDoc', $options);
-		
-		if($rcurlpfstatus){
-            log_message("info",">>>>".$rcurlpfstatus.$$rcurlpfstatus->hash);
-			$ipfshash = $rcurlpfstatus->hash;
-		}
-		
-		return $ipfshash;
-    }
-}
 
 

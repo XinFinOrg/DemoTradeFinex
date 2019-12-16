@@ -138,12 +138,12 @@ $(function () {
 
 		},
 		submitHandler: function (form, e) {
-			e.preventDefault();
 			var formData = $(form).serialize();
 			const formObj = formData.trim().split('&');
 			var formDataObj = {};
 			var files = document.getElementById('uploaded_file').files;
 			var dataFile;
+			var hash;
 			if (files.length > 0) {
 				getBase64(files[0]);
 			}
@@ -152,7 +152,7 @@ $(function () {
 				reader.readAsDataURL(file);
 				reader.onload = function () {
 					dataFile = reader.result;
-					dataFile = dataFile.split("base64,");
+					// dataFile = dataFile.split("base64,");
 					
 					
 					// after getting value of datafile name make the ajax call
@@ -167,27 +167,66 @@ $(function () {
 						}
 					})
 					
-					// console.log('formDataObj>>>>>>>', dataFile[1]);
-					var settings = {
-						"async": true,
+					
+					$.post("http://62.233.65.6:3110/api/uploadDoc",{
 						"crossDomain": true,
-						"url": "http://62.233.65.6:3110/api/uploadDoc",
-						"method": "POST",
-						"headers": {
-							"content-type": "application/json",
-							"Cache-Control": "no-cache",
-							// "Connection": "keep-alive",
-							"cache-control": "no-cache"
-							// "authorization":token
-						},
-						"processData": false,
-						"data": dataFile[1]
-					}
-					$.ajax(settings).done(function (response) {
-		
-						console.log('response deploy>>>>>>>>', response)
-		
-					});
+						"method": "post",
+						"data": dataFile 
+					  }).then(resp => {
+						//   console.log("response : ",resp.hash);
+						// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
+						if(resp.status == true){
+							hash = resp.hash;
+							$.post("http://62.233.65.6:3110/api/generateContract",{
+							"crossDomain": true,
+							"method": "post",
+							"ipfsHash":hash,
+							"instrumentType":formDataObj.instrument,
+							"amount":formDataObj.amount,
+							"currencySupported":formDataObj.currency_supported,
+							"maturityDate":formDataObj.maturity_date,
+							"name":formDataObj.name,
+							"country":formDataObj.pcountry
+							}).then(resp => {
+								console.log("response : ",resp);
+								if(resp.status == true){
+									console.log(">>>>",document.getElementById("createinstrument"))
+									document.getElementById("createinstrument").style.display = "none";
+									document.getElementById("deploy").style.display = "block";
+									$('#contractData').html('<p>'+resp.contract+'</p>');
+									$("#deploy_contract").on('click', function (e) {
+										$.post("http://62.233.65.6:3110/api/deployContract",{
+										"crossDomain": true,
+										"method": "post",
+										"ipfsHash":hash,
+										"instrumentType":formDataObj.instrument,
+										"amount":formDataObj.amount,
+										"currencySupported":formDataObj.currency_supported,
+										"maturityDate":formDataObj.maturity_date,
+										"name":formDataObj.name,
+										"country":formDataObj.pcountry,
+										"privKey":formDataObj.private_key
+										}).then(resp => {
+											console.log("response : ",resp);
+											if(resp.status == false){
+												$("#thankyou").modal("show");
+												$('#thankyou').css('opacity', '1');
+												$('#DeployBtn').click(function() {
+													$("#thankyou").modal("hide");
+													location.reload();
+												});
+											}
+											
+											
+										})
+									})
+								}
+								
+								
+							})
+						}
+						
+					  })
 				};
 				reader.onerror = function (error) {
 				  console.log('Error: ', error);

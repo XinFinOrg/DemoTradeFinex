@@ -9,8 +9,8 @@
         </section>
 
         <!-- Buyers / Suppliers Form -->
-        <section id="xdc-protocol-features-benefits" class="section">
-            <div class="container">
+        <section id="xdc-protocol-features-benefits" class="section" >
+            <div class="container"id="createinstrument"style="display:block;">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="section-title text-center pb-30">
@@ -128,15 +128,45 @@
                     </div>
                 </div>
             </div>
+            <div class="container"id="deploy" style="display:none;">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="section-title text-center pb-30">
+                            <h2 class="mb-0">Deploy</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="tf-buyer-supplier_form-block">
+                            
+
+                                <div class="form-group">
+                                        <label for="contract">Contract</label>
+                                        <pre id="contractData" class="language-markup scrollable"disabled="disabled">
+                                        
+									</pre>
+                                </div>
+
+                               
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-blue text-uppercase"id="deploy_contract">Deploy</button>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- /. Buyers /Suppliers Form -->
 
     </div>
-    <!-- /. Inside Page Buyers / Suppliers Detail -->
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script> 
+
    
-</script> 
+    <!-- /. Inside Page Buyers / Suppliers Detail -->
+    
+
 <?php
 	
 	// $this->load->view('includes/block_create_account');
@@ -144,5 +174,26 @@
 	$this->load->view('includes/login_modal');
 	
 ?>	
+
+<div class="modal fade" id="thankyou" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog" style="">
+		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
+			<div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
+
+						<p>Contract Deployment in process.</p>
+						
+						<div class="form-group">
+							<button id="DeployBtn" type="submit" class="btn btn-blue text-uppercase"  data-keyboard="false"> Ok </button> 
+						</div>						
+							                                           
+				</div>
+			</div>
+	 	</div>
+</div>
+
 
 

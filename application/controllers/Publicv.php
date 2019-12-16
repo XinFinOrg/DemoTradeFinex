@@ -693,44 +693,7 @@ class Publicv extends CI_Controller {
 		if($ccountries && !empty($ccountries) && is_array($ccountries) && sizeof($ccountries) <> 0){
 			$data['pcountries'] = $ccountries;			
 		}
-			
 		
-
-		$data_add['instrument'] = $this->input->post('instrument');
-		$data_add['pcountry'] = $this->input->post('pcountry');
-		$data_add['name'] = $this->input->post('name');
-		$data_add['amount'] = $this->input->post('amount');
-		$data_add['currency_supported'] = $this->input->post('currency_supported');
-		$data_add['maturity_date'] = $this->input->post('maturity_date');
-
-		$configf = array();
-		$configf['upload_path']   = FCPATH.'assets/instrument_files/';
-		$configf['allowed_types'] = 'pdf|jpg|jpeg|png|'; // doc|docx|
-		$configf['max_size']      = 5097152;
-			
-		if(isset($_FILES) && !empty($_FILES) && trim($_FILES["uploaded_file"]['name']) <> ''){
-			
-			$file_name = time().'_'.str_replace(" ", "-", $_FILES["uploaded_file"]['name']);
-			$configf['file_name'] = $file_name;
-			$file_namea = explode('.', $file_name);
-			$this->load->library('upload', $configf);
-
-			// log_message("info",">>>>>".$this->upload->do_upload('uploaded_file'));
-			$file_success = $this->upload->do_upload('uploaded_file');
-		
-			if($file_success == 0)
-			{
-				log_message("error",'Error occurred during addition. <br/>');
-			}
-			else
-			{
-				$upfile_url = base_url().'assets/instrument_files/'.$file_name;
-				$img = file_get_contents( base_url().'assets/instrument_files/'.$file_name);
-				log_message("info",'Successfully added. <br/>'.$upfile_url);
-			}
-		}
-		$data_add['uploaded_file'] = base64_encode($img);
-		$data_add['private_key'] = $this->input->post('private_key');
 
 	
 		$this->load->view('includes/headern', $data);
