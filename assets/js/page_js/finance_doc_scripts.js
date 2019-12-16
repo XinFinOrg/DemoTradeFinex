@@ -90,7 +90,7 @@ $(function () {
 
 
 	//Buyer-Supplier Form
-	$("#suppliers-form").validate({
+	$("#suppliers_form").validate({
 		rules: {
 			pcountry: {
 				required: true
@@ -136,8 +136,68 @@ $(function () {
 		},
 		error: function (elem) {
 
+		},
+		submitHandler: function (form, e) {
+			e.preventDefault();
+			var formData = $(form).serialize();
+			const formObj = formData.trim().split('&');
+			var formDataObj = {};
+			var files = document.getElementById('uploaded_file').files;
+			var dataFile;
+			if (files.length > 0) {
+				getBase64(files[0]);
+			}
+			function getBase64(file) {
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = function () {
+					dataFile = reader.result;
+					dataFile = dataFile.split("base64,");
+					
+					
+					// after getting value of datafile name make the ajax call
+					$.each(formObj, function (k, v) {
+						v = v.split('=');
+						if(v[0] === "fsdate" || v[0] === "maturitydate" || v[0] === "firstdate") {
+							var date = v[1].split('-');
+							date = date[2] + `/` + date[1] + '/' + date[0];
+							formDataObj[v[0]] = date;
+						} else {
+							formDataObj[v[0]] = v[1];
+						}
+					})
+					
+					// console.log('formDataObj>>>>>>>', dataFile[1]);
+					var settings = {
+						"async": true,
+						"crossDomain": true,
+						"url": "http://62.233.65.6:3110/api/uploadDoc",
+						"method": "POST",
+						"headers": {
+							"content-type": "application/json",
+							"Cache-Control": "no-cache",
+							// "Connection": "keep-alive",
+							"cache-control": "no-cache"
+							// "authorization":token
+						},
+						"processData": false,
+						"data": dataFile[1]
+					}
+					$.ajax(settings).done(function (response) {
+		
+						console.log('response deploy>>>>>>>>', response)
+		
+					});
+				};
+				reader.onerror = function (error) {
+				  console.log('Error: ', error);
+				}
+			}
+
 		}
 	});
+
+	
 
 	$('#uploaded_file').change(function(){ 
         
@@ -177,6 +237,8 @@ $(function () {
             }
         }         
         
-    }); 
+	});
+	
+	
 	
 });

@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="tf-buyer-supplier_form-block">
-                            <form id="suppliers-form" class="tf-suppliers-form" enctype="multipart/form-data" method="post">
+                            <form id="suppliers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post">
                                 <div class="form-group">
                                     <label for="instrument-type">Type of Instrument</label>
 
@@ -121,7 +121,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button  type="submit" class="btn btn-blue text-uppercase">Submit</button>
+                                    <button  id = "suppliers" name = "suppliers" type="submit" class="btn btn-blue text-uppercase">Submit</button>
                                 </div>
                             </form>
                         </div>
