@@ -778,7 +778,7 @@ class Publicv extends CI_Controller {
 				$this->smart_contract($data_add);
 			}
 		}
-		else{
+		
 			log_message("error","Something wrong with API");
 			$this->load->view('includes/headern', $data);
 			$this->load->view('includes/header_publicn', $data);
@@ -786,7 +786,7 @@ class Publicv extends CI_Controller {
 			$this->load->view('includes/footer_commonn', $data);
 			$this->load->view('pages_scripts/finance_doc_scripts', $data);
 			$this->load->view('includes/footern');
-		}
+		
 
 		
 		
