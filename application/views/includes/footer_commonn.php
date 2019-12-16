@@ -134,7 +134,7 @@
                             <ul class="footer-list">
                                 <li> <a href="<?=base_url();?>publicv/setup_masternode">Join The Network</a></li>
                                 <li> <a href="http://events.tradefinex.org/" target="_blank">Consortium Event</a></li>
-                                <li> <a href="https://docs.tradefinex.org/faq/general/" target="_blank">FAQ's</a></li>
+                                <li> <a href="https://docs.tradefinex.org/faq/general/" target="_blank">FAQs</a></li>
 								<li> <a href="<?=base_url();?>publicv/media_center">Media Center</a></li>
                             </ul>
                         </div>

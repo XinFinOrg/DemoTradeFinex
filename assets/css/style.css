@@ -643,8 +643,8 @@ footer {
 	width: 250px;
 	background-color: #fff;
 	top: 150px;
-	/*right: 0;*/
-	left: -15px;
+	right: 0;
+	/*left: -15px;*/
 	visibility: hidden;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;

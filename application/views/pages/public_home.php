@@ -190,7 +190,7 @@
                 <div class="col-md-12">
                     <div class="section-title text-center">
                         <h2 class="mb-20">For Platforms</h2>
-                        <p>TradeFinex is interoperable with a wide range Trade Finance Digitization Platforms Connect to various origination platforms on a secondary market distribution marketplace. Connect your origination platforms to a wide network of funders.</p>
+                        <p>TradeFinex is interoperable with a wide range Trade Finance Digitization Platforms, Connect your origination platforms to a wide network of funders & Get Access to secondary market distribution marketplace.</p>
                     </div>
                 </div>
             </div>
