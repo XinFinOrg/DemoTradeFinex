@@ -677,7 +677,10 @@ class Publicv extends CI_Controller {
 		
 		$data['page'] = 'buyer_supplier';
 		$data['pcountry'] = 0;
-			
+		$data['user_id'] = 0;
+		$data['user_type'] = '';
+		$data['full_name'] = '';
+				
 		$data['csrf'] = array();
 		
 		$csrf = array(
@@ -686,11 +689,54 @@ class Publicv extends CI_Controller {
 		);
 		
 		$data['csrf'] = $csrf;
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
 		$ccountries = $this->plisting->get_country();
 		
 		if($ccountries && !empty($ccountries) && is_array($ccountries) && sizeof($ccountries) <> 0){
 			$data['pcountries'] = $ccountries;			
 		}
+		
+		$user = $this->session->userdata('logged_in');
+		
+		if($user && !empty($user) && sizeof($user) <> 0){
+			$data['full_name'] = $user['user_full_name'];
+			$data['user_id'] = $user['user_id'];
+			$data['user_type_ref'] = $user['user_type_ref'];
+			redirect(base_url().'dashboard');
+		}else{
+			// redirect(base_url().'log/out');
+		}
+		
+		$data['notifications'] = array();
+		$data['notifications'] = get_initial_notification_status();
+		
+		if($data['user_id'] <> 0){
+			
+			$options = array();
+			$options['user_id'] = $data['user_id'];
+			$options['user_type'] = $data['user_type_ref'];
+			
+			$data['notifications'] = get_notification_status($options);
+		}
+		
+		$data['notifications'] = array();
+		$data['notifications'] = get_initial_notification_status();
+		
+		if($data['user_id'] <> 0){
+			
+			$options = array();
+			$options['user_id'] = $data['user_id'];
+			$options['user_type'] = $data['user_type_ref'];
+			
+			$data['notifications'] = get_notification_status($options);
+		}
+			
 
 		$data_add['instrument'] = $this->input->post('instrument');
 		$data_add['pcountry'] = $this->input->post('pcountry');
@@ -728,27 +774,35 @@ class Publicv extends CI_Controller {
 		$data_add['uploaded_file'] = base64_encode($img);
 		$data_add['private_key'] = $this->input->post('private_key');
 
-		$url = 'http://90.0.0.84:3110/api/uploadDoc';
-		$data_string = 'data='.$data_add['uploaded_file'];
-		$curl = curl_init();
+		$options = array('data' => $data_add['uploaded_file']);
+		$rculrfp = uploadDoc($options);
 		
-		curl_setopt_array($curl, array(
-			CURLOPT_URL => $url,
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_CUSTOMREQUEST => "POST",
-			CURLOPT_POSTFIELDS => $data_string,
-			CURLOPT_HTTPHEADER => array(
-			"Cache-Control: no-cache",
-			"cache-control: no-cache"
-			),
-		));
+		// $url = 'http://90.0.0.84:3110/api/uploadDoc';
+		// $data_string = 'data='.$data_add['uploaded_file'];
+		// $curl = curl_init();
+		
+		// curl_setopt_array($curl, array(
+		// 	CURLOPT_URL => $url,
+		// 	CURLOPT_RETURNTRANSFER => true,
+		// 	CURLOPT_CUSTOMREQUEST => "POST",
+		// 	CURLOPT_POSTFIELDS => $data_string,
+		// 	CURLOPT_HTTPHEADER => array(
+		// 	"Cache-Control: no-cache",
+		// 	"cache-control: no-cache"
+		// 	),
+		// ));
 
-		$response = curl_exec($curl);
-		$err = curl_error($curl);
-		$result = json_decode($response);
-		curl_close($curl);
+		// $response = curl_exec($curl);
+		// $err = curl_error($curl);
+		// $result = json_decode($response);
+		// curl_close($curl);
 
-		$data['ipfshash'] = $result->hash;
+		if($rculrfp){
+			$rculrfpa = json_decode(stripslashes($rculrfp));
+			log_message("info","<<<<<????".$rcurlpfstatus.$$rcurlpfstatus->hash);
+		}
+
+		
 		if($result->status == true){
 			$url = 'http://90.0.0.84:3110/api/generateContract';
 			$data_string = 'ipfsHash='.$data['ipfshash'].'&instrumentType='.$data_add['instrument'].'&amount='.$data_add['amount'].'&currencySupported='.$data_add['currency_supported'].'&maturityDate='.$data_add['maturity_date'].'&name='.$data_add['name'].'&country='.$data_add['pcountry'];
