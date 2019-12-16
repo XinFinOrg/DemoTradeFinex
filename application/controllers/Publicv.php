@@ -768,72 +768,13 @@ class Publicv extends CI_Controller {
 		$data_add['uploaded_file'] = base64_encode($img);
 		$data_add['private_key'] = $this->input->post('private_key');
 
-		$options = array('data' => $data_add['uploaded_file']);
-		$rculrfp = uploadDoc($options);
-		
-		// $url = 'http://90.0.0.84:3110/api/uploadDoc';
-		// $data_string = 'data='.$data_add['uploaded_file'];
-		// $curl = curl_init();
-		
-		// curl_setopt_array($curl, array(
-		// 	CURLOPT_URL => $url,
-		// 	CURLOPT_RETURNTRANSFER => true,
-		// 	CURLOPT_CUSTOMREQUEST => "POST",
-		// 	CURLOPT_POSTFIELDS => $data_string,
-		// 	CURLOPT_HTTPHEADER => array(
-		// 	"Cache-Control: no-cache",
-		// 	"cache-control: no-cache"
-		// 	),
-		// ));
-
-		// $response = curl_exec($curl);
-		// $err = curl_error($curl);
-		// $result = json_decode($response);
-		// curl_close($curl);
-
-		if($rculrfp){
-			$rculrfpa = json_decode(stripslashes($rculrfp));
-			log_message("info","<<<<<????".$rcurlpfstatus.$$rcurlpfstatus->hash);
-		}
-
-		
-		if($result->status == true){
-			$url = 'http://90.0.0.84:3110/api/generateContract';
-			$data_string = 'ipfsHash='.$data['ipfshash'].'&instrumentType='.$data_add['instrument'].'&amount='.$data_add['amount'].'&currencySupported='.$data_add['currency_supported'].'&maturityDate='.$data_add['maturity_date'].'&name='.$data_add['name'].'&country='.$data_add['pcountry'];
-			$curl = curl_init();
-			
-			curl_setopt_array($curl, array(
-				CURLOPT_URL => $url,
-				CURLOPT_RETURNTRANSFER => true,
-				CURLOPT_CUSTOMREQUEST => "POST",
-				CURLOPT_POSTFIELDS => $data_string,
-				CURLOPT_HTTPHEADER => array(
-				"Cache-Control: no-cache",
-				"cache-control: no-cache"
-				),
-			));
 	
-			$response1 = curl_exec($curl);
-			$err = curl_error($curl);
-			$result1 = json_decode($response1);
-			curl_close($curl);
-	
-			// log_message("info",">>>".$result1->contract);
-	
-			$data_add['contract'] = $result1->contract;
-	
-			if($result1->status == true || $result1->status == 1 ){
-				$this->smart_contract($data_add);
-			}
-		}
-		
-			log_message("error","Something wrong with API");
-			$this->load->view('includes/headern', $data);
-			$this->load->view('includes/header_publicn', $data);
-			$this->load->view('pages/public/buyer_supplier_view', $data);
-			$this->load->view('includes/footer_commonn', $data);
-			$this->load->view('pages_scripts/finance_doc_scripts', $data);
-			$this->load->view('includes/footern');
+		$this->load->view('includes/headern', $data);
+		$this->load->view('includes/header_publicn', $data);
+		$this->load->view('pages/public/buyer_supplier_view', $data);
+		$this->load->view('includes/footer_commonn', $data);
+		$this->load->view('pages_scripts/finance_doc_scripts', $data);
+		$this->load->view('includes/footern');
 		
 
 		
