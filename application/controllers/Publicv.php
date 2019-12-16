@@ -5,7 +5,7 @@ class Publicv extends CI_Controller {
 	
 	function __construct(){
 		parent::__construct();
-        $this->load->helper(array('form', 'url', 'date', 'notification'));
+        $this->load->helper(array('form', 'url', 'date','blockchain','notification'));
 		$this->load->library(array('session', 'encrypt', 'email'));
 		$this->load->model(array('plisting', 'manage'));
 		// $this->output->cache(0.5);
