@@ -86,21 +86,21 @@
                                         <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount">
                                     </div>
                                 </div>
-                               <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <!--<label for="maturity-date">Instrument Maturity Date</label>
-                                        <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">-->
-										<label for="maturity-date">Instrument Maturity Date</label>
-										<div id="date" data-date-format="dd-mm-yyyy">
-										<input  type="text" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd-mm-yyyy">
-										<div class="input-group-addon" style="display:none"><span class="fa fa-calendar"></span></div>
-										</div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="Name">Document Ref No.</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Instrument Ref/Name">
+                                <div class="form-group">
+                                    <!--<label for="maturity-date">Instrument Maturity Date</label>
+                                    <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">-->
+                                    <label for="maturity-date">Instrument Maturity Date</label>
+                                    <div id="date" data-date-format="dd-mm-yyyy">
+                                    <input  type="text" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd-mm-yyyy"autocomplete="off">
+                                    <div class="input-group-addon" style="display:none"><span class="fa fa-calendar"></span></div>
                                     </div>
                                 </div>
+                                    
+                                
+                                <div class="form-group col-md-6"style="display:none">
+                                        <label for="Name">Document Ref No.</label>
+                                        <input type="text" class="form-control" id="docRef" name="docRef" placeholder="Instrument Ref/Name" >
+                                    </div>
 
                                 <!-- <div class="tf-notice">
                                     <div class="tf-notice_content">
@@ -188,7 +188,7 @@
 		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
 			<div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                    <button type="button" class="close" onclick="location.reload()" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
                 </div>
 				<div class="modal-body text-center">
                         <div class="deployedData_modal_block">
@@ -197,16 +197,15 @@
 							<!--<p id="deployedData" style="word-break: break-all;"></p>-->
 							
 							<div id="deployedData" style="word-break: break-all;">
-								<p><span>Contact Address: </span><br /> xdc7e21456aEC807790176075f7A04553EEA2646d26</p>
-								<p><span>Transaction Hash: </span><br /> <a href="http://explorer.apothem.network/tx/0x429626da0e739b230075f0f4b97d329bc8783065f2f6361d333e551465cde92b" target="_blank">0x429626da0e739b230075f0f4b97d329bc8783065f2f6361d333e551465cde92b</a></p>
 								
-								<div class="form-group">
+								
+                            </div>
+                            <div class="form-group">
                                     <input class="form-control" id="email" name="email" type="text" autocomplete="" aria-required="true" placeholder="Email Id">
                                 </div>
-							</div>
 							
 							<div class="form-group">
-								<button id="CopyBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Copy</button>
+								<button id="CopyBtn" type="submit" onclick="copy()" onmouseout="outFunc()" class="btn btn-blue text-uppercase" id="myTooltip"data-keyboard="false">Copy</button>
 								<button id="DownloadBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Download</button>
 								<button id="EmailBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Email</button>
 							</div>						
@@ -215,6 +214,23 @@
 			</div>
 	 	</div>
 </div>
+<script type="text/javascript">
+    function copy() {
+        var copyText = document.getElementById("deployedData");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied: " + copyText.value;
+        console.log(">>>>",copyText,copyText.value,tooltip)
+        
+        }
+        function outFunc() {
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copy to clipboard";
+            }
+</script>
 <?php
         $this->load->view('includes/footer_commonn', $data);
 		$this->load->view('pages_scripts/finance_doc_scripts', $data);

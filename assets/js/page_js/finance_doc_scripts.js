@@ -110,10 +110,6 @@ $(function () {
 			currency_supported: {
 				required: true
 			},
-			name: {
-				required: true,
-				LetterOnly:true
-			},
 			maturity_date: {
 				required: true
 			},
@@ -131,7 +127,6 @@ $(function () {
 				decnumberOnly : "Enter Numbers only"
 			},
 			currency_supported: "Please choose currency supported",
-			name: "Please enter name",
 			maturity_date: "Please choose date",
 			uploaded_file: "Please upload doucment",
 			private_key: {
@@ -151,7 +146,6 @@ $(function () {
 			var formData = $(form).serialize();
 			const formObj = formData.trim().split('&');
 			var formDataObj = {};
-			var formDataObj1 = {};
 			var files = document.getElementById('uploaded_file').files;
 			var dataFile;
 			var hash;
@@ -177,7 +171,8 @@ $(function () {
 							formDataObj[v[0]] = v[1];
 						}
 					})
-					
+					formDataObj.docRef = (new Date()).getTime();
+					console.log(">>>>",formDataObj.docRef);
 					$.ajax({
 						type:"POST",
 						dataType:"json",
@@ -201,8 +196,10 @@ $(function () {
 							"amount":formDataObj.amount,
 							"currencySupported":formDataObj.currency_supported,
 							"maturityDate":formDataObj.maturity_date,
-							"name":formDataObj.name,
-							"country":formDataObj.pcountry
+							"docRef":formDataObj.docRef,
+							"country":formDataObj.pcountry,
+							"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
+							"contractType":"commonInstrument"
 							}).then(resp => {
 								// console.log("response : ",resp);
 								if(resp.status == true){
@@ -220,8 +217,9 @@ $(function () {
 										"amount":formDataObj.amount,
 										"currencySupported":formDataObj.currency_supported,
 										"maturityDate":formDataObj.maturity_date,
-										"name":formDataObj.name,
+										"docRef":formDataObj.docRef,
 										"country":formDataObj.pcountry,
+										"contractType":"commonInstrument",
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
 											console.log("response : ",resp);
@@ -231,8 +229,173 @@ $(function () {
 												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
 												const tHtml = `
 																<p>
-																	<span>Contact Address: </span>${resp.receipt.contractAddress.toLowerCase()}</p>
-																	<span><p>Transaction Hash: </span><a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a>
+																	<span>Contact Address:</span><br>${resp.receipt.contractAddress.toLowerCase()}</p>
+																	<span><p>Transaction Hash:</span><br><a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a>
+																</p>
+																`
+												hideLoader();
+												$("#thankyou").modal("show");
+												$('#thankyou').css('opacity', '1');
+												$('#deployedData').html(tHtml);
+												$('#DeployBtn').click(function() {
+													$("#thankyou").modal("hide");
+													location.reload();
+												});
+											}
+											
+											
+										})
+									})
+								}
+								
+								
+							})
+						}
+					
+					})
+				};
+				reader.onerror = function (error) {
+				  console.log('Error: ', error);
+				}
+			}
+
+		}
+	});
+	$("#brokers_form").validate({
+		rules: {
+			pcountry: {
+				required: true
+			},
+			amount: {
+				required: true,
+				decnumberOnly : true
+			},
+			currency_supported: {
+				required: true
+			},
+			maturity_date: {
+				required: true
+			},
+			uploaded_file: {
+				required: true
+			},
+			private_key: "required",
+		},
+		messages: {
+			pcountry: {
+				required: "Please select country"
+			},
+			amount: {
+				required: "Please enter company name ",
+				decnumberOnly : "Enter Numbers only"
+			},
+			currency_supported: "Please choose currency supported",
+			maturity_date: "Please choose date",
+			uploaded_file: "Please upload doucment",
+			private_key: {
+				required: "Please enter a privateKey"
+			},
+		},
+		success: function (elem) {
+
+
+		},
+		error: function (elem) {
+
+		},
+		submitHandler: function (form, e) {
+			$('#suppliers').prop('disabled', true);
+			showLoader();
+			var formData = $(form).serialize();
+			const formObj = formData.trim().split('&');
+			var formDataObj = {};
+			var files = document.getElementById('uploaded_file').files;
+			var dataFile;
+			var hash;
+			if (files.length > 0) {
+				getBase64(files[0]);
+			}
+			function getBase64(file) {
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = function () {
+					dataFile = reader.result;
+					dataFile = dataFile.split("base64,");
+					
+					
+					// after getting value of datafile name make the ajax call
+					$.each(formObj, function (k, v) {
+						v = v.split('=');
+						if(v[0] === "fsdate" || v[0] === "maturitydate" || v[0] === "firstdate") {
+							var date = v[1].split('-');
+							date = date[2] + `/` + date[1] + '/' + date[0];
+							formDataObj[v[0]] = date;
+						} else {
+							formDataObj[v[0]] = v[1];
+						}
+					})
+					formDataObj.docRef = (new Date()).getTime();
+					console.log(">>>>",formDataObj.docRef);
+					$.ajax({
+						type:"POST",
+						dataType:"json",
+						url:"http://62.233.65.6:3110/api/uploadDoc",
+						data:{"data":dataFile[1]},
+						success: resp => {
+							// console.log("response success: ",resp)
+						},
+						error: err =>{
+							console.log("response error: ",err)
+						}
+					}).done(resp => {
+					// .then(resp => {
+						// console.log("response : ",resp);
+					// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
+						if(resp.status == true){
+							hash = resp.hash;
+							$.post("http://62.233.65.6:3110/api/generateContract",{
+							"ipfsHash":hash,
+							"instrumentType":formDataObj.instrument,
+							"amount":formDataObj.amount,
+							"currencySupported":formDataObj.currency_supported,
+							"maturityDate":formDataObj.maturity_date,
+							"docRef":formDataObj.docRef,
+							"country":formDataObj.pcountry,
+							"name":formDataObj.name,
+							"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
+							"contractType":"brokerInstrument"
+							}).then(resp => {
+								// console.log("response : ",resp);
+								if(resp.status == true){
+									// console.log(">>>>",document.getElementById("createinstrument"))
+									hideLoader();
+									document.getElementById("createinstrument").style.display = "none";
+									document.getElementById("deploy").style.display = "block";
+									$('#contractData').html('<p>'+resp.contract+'</p>');
+									$("#deploy_contract").on('click', function (e) {
+										showLoader();
+										$('#deploy_contract').prop('disabled', true);
+										$.post("http://62.233.65.6:3110/api/deployContract",{
+										"ipfsHash":hash,
+										"instrumentType":formDataObj.instrument,
+										"amount":formDataObj.amount,
+										"currencySupported":formDataObj.currency_supported,
+										"maturityDate":formDataObj.maturity_date,
+										"docRef":formDataObj.docRef,
+										"country":formDataObj.pcountry,
+										"name":formDataObj.name,
+										"contractType":"brokerInstrument",
+										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
+										}).then(resp => {
+											console.log("response : ",resp);
+											
+											
+											if(resp.status == true){
+												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
+												const tHtml = `
+																<p>
+																	<span>Contact Address:</span><br>${resp.receipt.contractAddress.toLowerCase()}</p>
+																	<span><p>Transaction Hash:</span><br><a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a>
 																</p>
 																`
 												hideLoader();
@@ -294,12 +457,12 @@ $(function () {
                 filextension=filename.split(".");
 			    filext="."+filextension.slice(-1)[0];
                 // /console.log(">>>>>>",file.name,filextension,filext);
-                valid=[".jpg",".png",".jpeg",".doc",".docx",".pdf"];
+                valid=[".pdf"];
                     if (valid.indexOf(filext.toLowerCase())==-1){
                         document.getElementById("error").style.display = "block";
                         if ('size' in file) {
                             const fsize = file.size; 
-                            if(parseFloat(fsize) > 5097152) {
+                            if(parseFloat(fsize) > 10485760) {
                                 document.getElementById("error1").style.display = "block";
                             }
                             else{
