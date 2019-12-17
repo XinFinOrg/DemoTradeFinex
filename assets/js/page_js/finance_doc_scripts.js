@@ -163,7 +163,7 @@ $(function () {
 				reader.readAsDataURL(file);
 				reader.onload = function () {
 					dataFile = reader.result;
-					// dataFile = dataFile.split("base64,");
+					dataFile = dataFile.split("base64,");
 					
 					
 					// after getting value of datafile name make the ajax call
@@ -182,7 +182,7 @@ $(function () {
 						type:"POST",
 						dataType:"json",
 						url:"http://62.233.65.6:3110/api/uploadDoc",
-						data:{"data":dataFile},
+						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
 						},
@@ -231,8 +231,8 @@ $(function () {
 												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
 												const tHtml = `
 																<p>
-																	<span>Contact Address: ${resp.receipt.contractAddress}<span></p>
-																	<span><p>Transaction Hash: <a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a></span>
+																	<span>Contact Address: </span>${resp.receipt.contractAddress.toLowerCase()}</p>
+																	<span><p>Transaction Hash: </span><a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a>
 																</p>
 																`
 												hideLoader();
