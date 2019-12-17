@@ -207,7 +207,7 @@
 							<div class="form-group">
 								<button id="CopyBtn" type="submit" onclick="copy()" onmouseout="outFunc()" class="btn btn-blue text-uppercase" id="myTooltip"data-keyboard="false">Copy</button>
 								<button id="DownloadBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Download</button>
-								<button id="EmailBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Email</button>
+								<button id="EmailBtn" type="submit" onclick="showemail()"class="btn btn-blue text-uppercase" data-keyboard="false">Email</button>
 							</div>						
 						</div>
 				</div>
@@ -225,11 +225,14 @@
         tooltip.innerHTML = "Copied: " + copyText.value;
         console.log(">>>>",copyText,copyText.value,tooltip)
         
-        }
-        function outFunc() {
-            var tooltip = document.getElementById("myTooltip");
-            tooltip.innerHTML = "Copy to clipboard";
-            }
+    }
+    function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copy to clipboard";
+    }
+    function showemail(){
+        document.getElementById("email").style.display="block";
+    }
 </script>
 <?php
         $this->load->view('includes/footer_commonn', $data);
