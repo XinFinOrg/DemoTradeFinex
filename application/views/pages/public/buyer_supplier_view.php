@@ -70,19 +70,20 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label for="amount">Amount</label>
-                                        <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount">
-                                    </div>
-                                    <div id="currency_supported" class="form-group col-md-6">
-                                        <label for="currency_supported">Currency Supported</label>
+                                <div id="currency_supported" class="form-group col-md-6">
+                                        <label for="currency_supported">Currency</label>
                                         <select class="form-control" id="currency_supported" name="currency_supported">
                                             <option value="" disabled="" selected="">Select Currency</option>
                                             <option value="usd">USD</option>
                                             <option value="gbp">GBP</option>
                                             <option value="jpy">JPY</option>
+                                            <option value="eur">EUR</option>
                                             <option value="xdc">XDC</option>
                                         </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="amount">Instrument Value</label>
+                                        <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount">
                                     </div>
                                 </div>
                                <div class="row">
@@ -96,19 +97,19 @@
 										</div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="Name">Instrument Ref/Name</label>
+                                        <label for="Name">Document Ref No.</label>
                                         <input type="text" class="form-control" id="name" name="name" placeholder="Instrument Ref/Name">
                                     </div>
                                 </div>
 
-                                <div class="tf-notice">
+                                <!-- <div class="tf-notice">
                                     <div class="tf-notice_content">
                                         <p>Origination and deal distribution fees 0.001% of instrument value.</p>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
-                                    <label for="supporting-document">Upload Supporting Document <span class="text-green">( PDF/ JPG, PNG Only )</span></label>
+                                    <label for="supporting-document">Upload All Supporting Documents as one PDF file, Max 10 MB * </label>
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                         <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
@@ -116,6 +117,7 @@
                                         </span>
                                         <span class="form-control"></span>
                                     </div>
+                                    <p>* Origination & deal distribution fees 0.001% of instrument value. This document will be encrypted & stored on Blockchain Network. Viewable to funder only after owner's permission.</p>
                                     <label for="supporting-document" style="display:none" id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" id="error1">Please file less than 5MB</label>
                                 </div>
