@@ -9,20 +9,20 @@
                     </div>
 
                     <div class="hero-tabs-desktop-container">
-                        <ul class="nav nav-pills">
-                            <li class="active"><a href="#1b" data-toggle="tab">FINANCIERS</a></li>
-                            <li><a href="#2b" data-toggle="tab">BUYERS / SUPPLIERS</a></li>
-                            <li><a href="#3b" data-toggle="tab">BROKERS</a></li>
+                        <ul class="nav nav-pills">                            
+                            <li class="active"><a href="#1b" data-toggle="tab">BUYERS / SUPPLIERS</a></li>
+                            <li><a href="#2b" data-toggle="tab">BROKERS</a></li>
+							<li><a href="#3b" data-toggle="tab">FINANCIERS</a></li>
                         </ul>
                     </div>
 
                     <div class="tf-get-started-btn mt-30"><a href="<?=base_url();?>publicv/setup_masternode" class="btn btn-red text-uppercase tf-block">Join The Network</a></div>
 
                     <div class="hero-tabs-mobile-container">
-                        <ul class="nav nav-pills">
-                            <li class="active"><a href="#1b" data-toggle="tab">FINANCIERS</a></li>
-                            <li><a href="#2b" data-toggle="tab">BUYERS / SUPPLIERS</a></li>
-                            <li><a href="#3b" data-toggle="tab">BROKERS</a></li>
+                        <ul class="nav nav-pills">                            
+                            <li class="active"><a href="#1b" data-toggle="tab">BUYERS / SUPPLIERS</a></li>
+                            <li><a href="#2b" data-toggle="tab">BROKERS</a></li>
+							<li><a href="#3b" data-toggle="tab">FINANCIERS</a></li>
                         </ul>
                     </div>
 
@@ -30,26 +30,6 @@
                 <div class="col-md-7">
                     <div class="tab-content clearfix">
                         <div class="tab-pane active" id="1b">
-
-                            <div class="tf-img-container">
-                                <img src="assets/images/banner/for-financiers_screen.jpg" alt="" />
-                                <div class="tf-bottom-box img-footer">
-                                    <div class="tf-home-hero-right-col-text">
-                                        <h2>For Financiers</h2>
-                                        <div class="tf-bottom-col-1">
-                                            <p>Expand your trade finance portfolio. TradeFinex enables Financial Institutions & Non-Bank funders to access an emerging Low-risk alternative asset class.</p>
-                                            <p></p>
-                                        </div>
-                                        <div class="tf-bottom-col-2">
-                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/financier">Get Started</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="tab-pane" id="2b">
                             <div class="tf-img-container">
                                 <img src="assets/images/banner/for-buyers-suppliers_screen.jpg" alt="" />
                                 <div class="tf-bottom-box img-footer">
@@ -66,7 +46,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="3b">
+						
+						<div class="tab-pane" id="2b">
                             <div class="tf-img-container">
                                 <img src="assets/images/banner/for-suppliers_screen.jpg" alt="" />
                                 <div class="tf-bottom-box img-footer">
@@ -83,7 +64,25 @@
                                 </div>
                             </div>
                         </div>
-
+						
+						<div class="tab-pane" id="3b">
+                            <div class="tf-img-container">
+                                <img src="assets/images/banner/for-financiers_screen.jpg" alt="" />
+                                <div class="tf-bottom-box img-footer">
+                                    <div class="tf-home-hero-right-col-text">
+                                        <h2>For Financiers</h2>
+                                        <div class="tf-bottom-col-1">
+                                            <p>Expand your trade finance portfolio. TradeFinex enables Financial Institutions & Non-Bank funders to access an emerging Low-risk alternative asset class.</p>
+                                            <p></p>
+                                        </div>
+                                        <div class="tf-bottom-col-2">
+                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/financier">Get Started</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
                     </div>
                 </div>
             </div>
@@ -346,7 +345,7 @@
                 <div class="action-text">
                     <p class="action-subtitle">Become a Partner and Offer your consulting services powered by TradeFinex Network.</p>
                 </div>
-                <div class="action-btn text-center"><a href="become-partner.html" class="btn btn-red text-uppercase">Become a Partner</a></div>
+                <div class="action-btn text-center"><a href="<?=base_url();?>publicv/contact" class="btn btn-red text-uppercase">Become a Partner</a></div>
             </div>
         </div>
     </section>

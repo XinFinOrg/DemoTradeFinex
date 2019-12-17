@@ -1,5 +1,5 @@
-   <!-- Inside Page Hybrid Distributed Ledger Solution -->
-   <div class="sub_page_wraper">
+<!-- Inside Page Hybrid Distributed Ledger Solution -->
+<div class="sub_page_wraper">
 
 <section class="tf-inner-banner">
     <div class="container">
@@ -49,8 +49,8 @@
                                         </ul>
                                     </div>
 									<div class="text-center">
-										<a href="https://apidocs.xinfin.network/" class="btn border white text-uppercase mt-10">XDC Ledger API’s</a>
-										<a href="https://explorer.xinfin.network/publicAPIDoc" class="btn border white text-uppercase mt-10">Explorer API's</a>
+										<a href="https://apidocs.xinfin.network/" class="btn border white mt-10">XDC LEDGER APIs</a>
+										<a href="https://explorer.xinfin.network/publicAPIDoc" class="btn border white mt-10">EXPLORER APIs</a>
 									</div>									
                                     <div class="info-button-block">
                                         <a class="btn info-button btn-block play-btn video" href="https://www.youtube.com/watch?v=krqBx0yGprE"><span class="fa fa-play-circle"></span> Tokenize an Lnstrument</a>

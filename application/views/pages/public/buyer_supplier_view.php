@@ -87,8 +87,13 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label for="maturity-date">Instrument Maturity Date</label>
-                                        <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">
+                                        <!--<label for="maturity-date">Instrument Maturity Date</label>
+                                        <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">-->
+										<label for="maturity-date">Instrument Maturity Date</label>
+										<div class="date" data-date-format="dd-mm-yyyy">
+										<input  type="text" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd-mm-yyyy">
+										<div class="input-group-addon" style="display:none"><span class="fa fa-calendar"></span></div>
+										</div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="Name">Instrument Ref/Name</label>

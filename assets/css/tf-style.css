@@ -271,8 +271,8 @@ p {font-size: 15px;color: #687377;line-height: 1.5;margin-bottom: 15px;}
 
 @media (max-width: 991px){
 	.tf-instrument-support_block, .tf-instrument-support_alt_block {margin-bottom:30px;}
-	.tf-instrument-support_block {min-height: 300px;}
-	.tf-instrument-support_alt_block {min-height: 300px;}
+	.tf-instrument-support_block {min-height: 315px;}
+	.tf-instrument-support_alt_block {min-height: 315px;}
 }
 @media (max-width: 767px) {
 	.tf-instrument-support_block, .tf-instrument-support_alt_block {margin-bottom:30px;}
@@ -283,7 +283,7 @@ p {font-size: 15px;color: #687377;line-height: 1.5;margin-bottom: 15px;}
 }
 @media (max-width: 576px) {
 	.tf-instrument-support_block {min-height: inherit;}
-	.tf-instrument-support_alt_block {min-height: 250px;}
+	.tf-instrument-support_alt_block {min-height: 275px;}
 	.tf-instrument-support_alt_block.alt_block_first-child {min-height: inherit!important;}
 }
 @media (max-width: 420px) {
@@ -658,7 +658,7 @@ pre {color: #687377;font-size: 15px;background-color: #f7f7f7;border: none;paddi
 .tf-suppliers-form {padding:0px 20px 0px 20px;}
 .tf-suppliers-form .form-group label {width:100%;font-size: 15px;font-weight: 600;color: #687377;line-height: 18px;margin-bottom:6px;}
 .tf-suppliers-form .form-group label span {font-size: 12px;color: #007bff;float:right;}
-.tf-suppliers-form .form-group .error {font-size: 12px;color: #ea212d;padding-top:5px;}
+.tf-suppliers-form .form-group .error {font-size: 12px;color: #ea212d;padding-top:5px;margin-bottom:0px;}
 .tf-suppliers-form .form-group label span.text-green {font-size: 11px;color: #34b576;}
 .tf-suppliers-form .form-group .form-control {font-family:inherit;display: block;width: 100%;height: 45px;padding: 6px 12px;font-size: 15px;line-height: 1.42857143;color: #687377;background-color: #ffffff;background-image: none;border: 1px solid #cccccc;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: none;box-shadow: none;-webkit-transition: border-color ease-in-out .15s;-o-transition: border-color ease-in-out .15s;transition: border-color ease-in-out .15s;}
 .tf-suppliers-form select {border: 1px solid #cccccc;width: 100%;height: 50px;outline: none;padding-left: 20px;padding-right: 20px;-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;    -webkit-appearance: none;-moz-appearance: none;appearance: none;background: url(../banner-assets/images/innerpage-images/arrow-down.png) #FFFFFF no-repeat calc(100% - 10px) !important;}
@@ -671,7 +671,7 @@ pre {color: #687377;font-size: 15px;background-color: #f7f7f7;border: none;paddi
 .tf-suppliers-form .input-group-btn:first-child>.btn {margin-right: -1px;}
 .tf-suppliers-form .input-group .form-control:last-child {border-top-left-radius: 0;border-bottom-left-radius: 0;}
 .tf-suppliers-form  input[type=file] {display:block;}
-.tf-suppliers-form .tf-notice {overflow: hidden;background: #f9fffc;border: 1px solid #34b576;border-radius: 50px;margin-top: 20px;margin-bottom: 15px;}
+.tf-suppliers-form .tf-notice {overflow: hidden;background: #f9fffc;border: 1px solid #34b576;border-radius: 50px;margin-top: 5px;margin-bottom: 15px;}
 .tf-suppliers-form .tf-notice_content {-webkit-box-align: center;-ms-flex-align: center;align-items: center;text-align: center;padding: .7rem 1rem;}
 .tf-suppliers-form .tf-notice_content p {text-align:center;font-size:16px;font-weight: 600;margin-bottom:0px;}
 .tf-suppliers-form button {height:inherit;}
@@ -794,6 +794,33 @@ pre[class*="language-"] {background: #FFF;border: 1px solid #F0F0F0;border-left:
   .tf-supply-chain_block .tf-supply-chain-text {position: relative !important;width: 90% !important;top: 0% !important;transform: perspective(1px) translateY(0%) !important;margin-left: auto;margin-right: auto;z-index:inherit;float:none;}
 }
 
+
+
+
+/*-- Contact Form --*/
+.tf-contact-us_form-block {border-radius: 4px;background-color: #f5f8fc;padding: 35px 30px 25px 30px;position: relative;height: 100%;}
+.tf-contact-us_form {padding:0px 20px 0px 20px;}
+.tf-contact-us_form .form-group label {width:100%;font-size: 15px;font-weight: 600;color: #687377;line-height: 18px;margin-bottom:6px;}
+.tf-contact-us_form .form-group label span {font-size: 12px;color: #007bff;float:right;}
+.tf-contact-us_form .form-group .error {font-size: 12px;color: #ea212d;padding-top:5px;}
+.tf-contact-us_form .form-group .form-control {font-family:inherit;display: block;width: 100%;height: 45px;padding: 6px 12px;font-size: 15px;line-height: 1.42857143;color: #687377;background-color: #ffffff;background-image: none;border: 1px solid #cccccc;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: none;box-shadow: none;-webkit-transition: border-color ease-in-out .15s;-o-transition: border-color ease-in-out .15s;transition: border-color ease-in-out .15s;}
+.tf-contact-us_form .form-group textarea {min-height: 100px;}
+.tf-contact-us_form select {border: 1px solid #cccccc;width: 100%;height: 50px;outline: none;padding-left: 20px;padding-right: 20px;-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;    -webkit-appearance: none;-moz-appearance: none;appearance: none;background: url(../banner-assets/images/innerpage-images/arrow-down.png) #FFFFFF no-repeat calc(100% - 10px) !important;}
+.tf-contact-us_form select option:first-of-type {color: #a0afca;}
+.tf-contact-us_form select option {line-height:25px;}
+.tf-contact-us_form .input-group {position: relative;display: table;border-collapse: separate;}
+.tf-contact-us_form .input-group .form-control {padding: 6px 12px;line-height: 36px;}
+.tf-contact-us_form .input-group-btn {position: relative;font-size: 0;white-space: nowrap;}
+.tf-contact-us_form .input-group-btn .btn-primary {background:#969595;border-color:#969595;line-height:20px;height:45px;}
+.tf-contact-us_form .input-group-btn:first-child>.btn {margin-right: -1px;}
+.tf-contact-us_form .input-group .form-control:last-child {border-top-left-radius: 0;border-bottom-left-radius: 0;}
+.tf-contact-us_form input[type=file] {display:block;}
+.tf-contact-us_form button {height:inherit;}
+input.error, textarea.error, select.error {border-color: #ea212d!important;}
+@media (max-width: 576px) {
+	.tf-contact-us_form-block {padding:25px 20px 20px 20px;}
+	.tf-contact-us_form {padding:0px;}
+}
 
 /*-----------------------------------------
 	Inner Page Content

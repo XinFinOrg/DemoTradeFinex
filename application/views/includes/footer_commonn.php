@@ -98,10 +98,10 @@
                     <div class="col-md-3 col-sm-6 mb-40">
                         <div class="widget widget-categories">
                             <h4 class="footer-title">Trade Instruments</h4>
-                            <ul class="footer-list">
-                                <li> <a href="<?=base_url();?>publicv/financier">For Financiers</a></li>
+                            <ul class="footer-list">                                
                                 <li> <a href="<?=base_url();?>publicv/buyer_supplier">For Buyers / Suppliers</a></li>
                                 <li> <a href="<?=base_url();?>publicv/brokers">For Brokers</a></li>
+								<li> <a href="<?=base_url();?>publicv/financier">For Financiers</a></li>
                             </ul>
                         </div>
                     </div>
@@ -160,7 +160,7 @@
                         <div class="copyright">Copyright &copy; 2019 TRADEFINEX TECH LTD (ADGM RegLab Participant), All rights reserved.</div>
                     </div>
                     <div class="col-md-5 col-sm-5">
-                        <div class="copyright pull-right"><a href="https://www.tradefinex.org/publicv/privacy_policy" title="">Privacy Policy</a> | <a href="https://www.tradefinex.org/publicv/terms_condition" title="">Terms & Conditions</a></div>
+                        <div class="copyright pull-right"><a href="<?=base_url();?>publicv/privacy_policy">Privacy Policy</a> | <a href="<?=base_url();?>publicv/terms_condition">Terms & Conditions</a></div>
                     </div>
                 </div>
             </div>
@@ -270,7 +270,8 @@
 			<?php } ?>	
 									
 		</script>
-		<!-- Partnership and Alliances Logo Slider-->
+
+<!-- Partnership and Alliances Logo Slider-->
 <script type="text/javascript">
     $(document).ready(function() {
         $('.customer-logos').slick({
@@ -301,7 +302,8 @@
     });
 </script>
 <!-- Partnership and Alliances Logo Slider-->
-		<!-- Form Skip to next Heading -->
+
+<!-- Form Skip to next Heading -->
 <script type="text/javascript">
     $(function() {
         $('a[href*=#]').on('click', function(e) {
