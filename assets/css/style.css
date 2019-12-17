@@ -174,8 +174,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 	display: inline-block;
 	color: #fff;
 	padding: 0px 27px 0 27px;
-	height: 48px;
-	line-height: 48px;
+	height: 44px;
+	line-height: 21px;
 	font-size: 14px;
 	color: #fff;
 	background: #2aa3ef;

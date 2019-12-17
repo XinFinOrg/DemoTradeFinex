@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="section-title text-center pb-30">
-                            <h2 class="mb-0">Get Started</h2>
+                            <h2 class="mb-0">Apply for Funding</h2>
                         </div>
                     </div>
                 </div>

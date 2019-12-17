@@ -9,7 +9,7 @@
 </section>
 
 <!-- Case Study -->
-<section id="private-distributed-ledger-solution" class="section">
+<section id="case-study" class="section">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -21,8 +21,10 @@
         </div>
 
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                
+            <div class="col-md-12">
+                <div class="text-center">
+                	<a href="#" class="btn btn-blue text-uppercase tf-btn-download"><i class="fa fa-download"></i> Download Document</a>
+            	</div>
             </div>
         </div>
     </div>

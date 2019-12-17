@@ -14,321 +14,187 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="section-title text-center">
-					<h2 class="mb-0">Instrument Currently Active for Funding</h2>
+					<h2 class="mb-20">Instrument Currently Active for Funding</h2>
 				</div>
 			</div>
 		</div>
 
-		<div class="row row-equal-height">
-			<div class="col-md-4 col-sm-6 mb-30">
-				<div class="tf-financiers-instrument_block">
-					<h2>Receivable</h2>
-					<div class="row pl-15 pr-15">
-						<div class="tf-fib_left-block">
-							Instrument Ref
-						</div>
-						<div class="tf-fib_right-block">
-							ABC-USD
-						</div>                                
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-							Country of Origination
-					</div>
-					<div class="tf-fib_right-block">
-							Dubai
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Amount
-					</div>
-					<div class="tf-fib_right-block">
-						500 K USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Date of Maturity
-					</div>
-					<div class="tf-fib_right-block">
-						22nd July 2020
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="text-center">
-						<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 mb-30">
-				<div class="tf-financiers-instrument_block">
-					<h2>Letter of Credit</h2>
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Instrument Ref
-					</div>
-					<div class="tf-fib_right-block">
-						ABC-USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Country of Origination
-					</div>
-					<div class="tf-fib_right-block">
-						London
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Amount
-					</div>
-					<div class="tf-fib_right-block">
-						900 K USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Date of Maturity
-					</div>
-					<div class="tf-fib_right-block">
-						22nd Sep 2020
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="text-center">
-						<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 mb-30">
-				<div class="tf-financiers-instrument_block">
-					<h2>Bank Guarantees</h2>
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Instrument Ref
-					</div>
-					<div class="tf-fib_right-block">
-						ABC-USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">                            
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Country of Origination
-					</div>
-					<div class="tf-fib_right-block">
-						Hongkong
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Amount
-					</div>
-					<div class="tf-fib_right-block">
-						100 K USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Date of Maturity
-					</div>
-					<div class="tf-fib_right-block">
-						22nd June 2020
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="text-center">
-						<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 mb-30">
-				<div class="tf-financiers-instrument_block">
-					<h2>SBLC</h2>
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Instrument Ref
-					</div>
-					<div class="tf-fib_right-block">
-						ABC-USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Country of Origination
-					</div>
-					<div class="tf-fib_right-block">
-						Dubai
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Amount
-					</div>
-					<div class="tf-fib_right-block">
-						500 K USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">                            
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Date of Maturity
-					</div>
-					<div class="tf-fib_right-block">
-						22nd July 2020
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="text-center">
-						<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 mb-30">
-				<div class="tf-financiers-instrument_block">
-					<h2>Warehouse Receipt</h2>
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Instrument Ref
-					</div>
-					<div class="tf-fib_right-block">
-						ABC-USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Country of Origination
-					</div>
-					<div class="tf-fib_right-block">
-						Dubai
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Amount
-					</div>
-					<div class="tf-fib_right-block">
-						500 K USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Date of Maturity
-					</div>
-					<div class="tf-fib_right-block">
-						22nd July 2020
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="text-center">
-						<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 mb-30">
-				<div class="tf-financiers-instrument_block">
-					<h2>Payable</h2>
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Instrument Ref
-					</div>
-					<div class="tf-fib_right-block">
-						ABC-USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Country of Origination
-					</div>
-					<div class="tf-fib_right-block">
-						Dubai
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Amount
-					</div>
-					<div class="tf-fib_right-block">
-						500 K USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Date of Maturity
-					</div>
-					<div class="tf-fib_right-block">
-						22nd July 2020
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="text-center">
-						<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 mb-30">
-				<div class="tf-financiers-instrument_block">
-					<h2>Other</h2>
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Instrument Ref
-					</div>
-					<div class="tf-fib_right-block">
-						ABC-USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Country of Origination
-					</div>
-					<div class="tf-fib_right-block">
-						Dubai
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Amount
-					</div>
-					<div class="tf-fib_right-block">
-						500 K USD
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="row pl-15 pr-15">
-					<div class="tf-fib_left-block">
-						Date of Maturity
-					</div>
-					<div class="tf-fib_right-block">
-						22nd July 2020
-					</div>
-					</div>
-					<hr class="tf-hr-space">
-					<div class="text-center">
-						<a href="#" class="btn btn-blue text-uppercase">Click to Get Access</a>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="row">
+                    <div class="col-md-12">
+                        <div class="tf-financier-table tf-element">
+                            <div class="overflow-fade left on"></div>
+                            <div class="overflow-fade right on"></div>
+                            <div class="table">
+                                <div class="table-head">
+                                    <div class="cell-wrapper">
+                                        <div class="table-cell" style="width: 16%;"><span>Instrument Type</span></div>
+                                    </div>
+									<div class="cell-wrapper">
+                                        <div class="table-cell" style="width: 16%;"><span>Instrument Ref</span></div>
+                                    </div>
+                                    <div class="cell-wrapper">
+                                        <div class="table-cell" style="width: 17%;"><span>Country of Origination</span></div>
+                                    </div>
+                                    <div class="cell-wrapper">
+                                        <div class="table-cell" style="width: 15%;"><span>Amount</span></div>
+                                    </div>
+                                    <div class="cell-wrapper">
+                                        <div class="table-cell" style="width: 16%;"><span>Date of Maturity</span></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="table-row collapsed">
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 16%;"><span>Receivable</span></div>
+                                        </div>
+										<div class="cell-wrapper">
+                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
+                                        </div>
+                                        <div class="table-cell" style="width: 16%;">
+											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
+										</div>
+                                    </div>
+									
+                                    <div class="table-row collapsed">
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 16%;"><span>Letter of Credit</span></div>
+                                        </div>
+										<div class="cell-wrapper">
+                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 17%;"><span>London</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 15%;"><span>$ 900 K</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 16%;"><span>22-09-2020</span></div>
+                                        </div>
+                                        <div class="table-cell" style="width: 16%;">
+											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
+										</div>
+                                    </div>
+									
+									<div class="table-row collapsed">
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 16%;"><span>Bank Guarantees</span></div>
+                                        </div>
+										<div class="cell-wrapper">
+                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 17%;"><span>Hongkong</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 15%;"><span>$ 100 K</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 16%;"><span>22-06-2020</span></div>
+                                        </div>
+                                        <div class="table-cell" style="width: 16%;">
+											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
+										</div>
+                                    </div>
+									
+									<div class="table-row collapsed">
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 16%;"><span>SBLC</span></div>
+                                        </div>
+										<div class="cell-wrapper">
+                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
+                                        </div>
+                                        <div class="table-cell" style="width: 16%;">
+											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
+										</div>
+                                    </div>
+									
+									<div class="table-row collapsed">
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 16%;"><span>Warehouse Receipt</span></div>
+                                        </div>
+										<div class="cell-wrapper">
+                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
+                                        </div>
+                                        <div class="table-cell" style="width: 16%;">
+											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
+										</div>
+                                    </div>
+									
+									<div class="table-row collapsed">
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 16%;"><span>Payable</span></div>
+                                        </div>
+										<div class="cell-wrapper">
+                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
+                                        </div>
+                                        <div class="table-cell" style="width: 16%;">
+											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
+										</div>
+                                    </div>
+									
+									<div class="table-row collapsed">
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 16%;"><span>Other</span></div>
+                                        </div>
+										<div class="cell-wrapper">
+                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
+                                        </div>
+                                        <div class="cell-wrapper">
+                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
+                                        </div>
+                                        <div class="table-cell" style="width: 16%;">
+											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
+										</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 	</div>
 </section>
 <!-- /. Financiers -->
