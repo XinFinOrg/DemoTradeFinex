@@ -448,7 +448,7 @@
 			}
 		});
                 
-                $('#file-upload-comp').change(function(){
+        $('#file-upload-comp').change(function(){
 			/* here we take the file extension and set an array of valid extensions */
 			var res = $(this).val();
 			var arr = res.split("\\");

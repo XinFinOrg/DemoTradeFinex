@@ -303,15 +303,6 @@
 </script>
 <!-- Partnership and Alliances Logo Slider-->
 
-<!-- Form Skip to next Heading -->
-<script type="text/javascript">
-    $(function() {
-        $('a[href*=#]').on('click', function(e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $($(this).attr('href')).offset().top
-            }, 500, 'linear');
-        });
-    });
-</script>
-<!-- Form Skip to next Heading -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>

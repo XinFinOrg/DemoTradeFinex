@@ -699,9 +699,7 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
 		$this->load->view('pages/public/buyer_supplier_view', $data);
-		$this->load->view('includes/footer_commonn', $data);
-		$this->load->view('pages_scripts/finance_doc_scripts', $data);
-		$this->load->view('includes/footern');
+		
 		
 
 		
@@ -3608,9 +3606,7 @@ class Publicv extends CI_Controller {
         
         
         $this->load->view('pages/public/brokers_view', $data);
-        $this->load->view('includes/footer_commonn', $data);
-        $this->load->view('pages_scripts/common_scripts', $data);
-        $this->load->view('includes/footern');
+       
 	}
 	
 	public function rollout(){

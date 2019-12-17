@@ -159,6 +159,11 @@
 	$this->load->view('includes/login_modal');
 	
 ?>	
+<?php
+        $this->load->view('includes/footer_commonn', $data);
+		$this->load->view('pages_scripts/finance_doc_scripts', $data);
+        $this->load->view('includes/footern');
+?>
 <!-- Form Skip to next Heading -->
 <script type="text/javascript">
     $(function() {

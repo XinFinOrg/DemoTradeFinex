@@ -1,3 +1,11 @@
+
+function showLoader() {
+	document.getElementById("loader").style.display = "block";
+}						
+
+function hideLoader() {
+	document.getElementById("loader").style.display = "none";
+}
 $(function () {
 	var jQueryScript = document.createElement('script');  
 	// jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
@@ -138,9 +146,12 @@ $(function () {
 
 		},
 		submitHandler: function (form, e) {
+			$('#suppliers').prop('disabled', true);
+			showLoader();
 			var formData = $(form).serialize();
 			const formObj = formData.trim().split('&');
 			var formDataObj = {};
+			var formDataObj1 = {};
 			var files = document.getElementById('uploaded_file').files;
 			var dataFile;
 			var hash;
@@ -167,19 +178,24 @@ $(function () {
 						}
 					})
 					
-					
-					$.post("http://62.233.65.6:3110/api/uploadDoc",{
-						"crossDomain": true,
-						"method": "post",
-						"data": dataFile 
-					  }).then(resp => {
-						//   console.log("response : ",resp.hash);
-						// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
+					$.ajax({
+						type:"POST",
+						dataType:"json",
+						url:"http://62.233.65.6:3110/api/uploadDoc",
+						data:{"data":dataFile},
+						success: resp => {
+							// console.log("response success: ",resp)
+						},
+						error: err =>{
+							console.log("response error: ",err)
+						}
+					}).done(resp => {
+					// .then(resp => {
+						// console.log("response : ",resp);
+					// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
 						if(resp.status == true){
 							hash = resp.hash;
 							$.post("http://62.233.65.6:3110/api/generateContract",{
-							"crossDomain": true,
-							"method": "post",
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -188,16 +204,17 @@ $(function () {
 							"name":formDataObj.name,
 							"country":formDataObj.pcountry
 							}).then(resp => {
-								console.log("response : ",resp);
+								// console.log("response : ",resp);
 								if(resp.status == true){
-									console.log(">>>>",document.getElementById("createinstrument"))
+									// console.log(">>>>",document.getElementById("createinstrument"))
+									hideLoader();
 									document.getElementById("createinstrument").style.display = "none";
 									document.getElementById("deploy").style.display = "block";
 									$('#contractData').html('<p>'+resp.contract+'</p>');
 									$("#deploy_contract").on('click', function (e) {
+										showLoader();
+										$('#deploy_contract').prop('disabled', true);
 										$.post("http://62.233.65.6:3110/api/deployContract",{
-										"crossDomain": true,
-										"method": "post",
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -205,12 +222,23 @@ $(function () {
 										"maturityDate":formDataObj.maturity_date,
 										"name":formDataObj.name,
 										"country":formDataObj.pcountry,
-										"privKey":formDataObj.private_key
+										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
 											console.log("response : ",resp);
-											if(resp.status == false){
+											
+											
+											if(resp.status == true){
+												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
+												const tHtml = `
+																<p>
+																	<span>Contact Address: ${resp.receipt.contractAddress}<span></p>
+																	<span><p>Transaction Hash: <a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a></span>
+																</p>
+																`
+												hideLoader();
 												$("#thankyou").modal("show");
 												$('#thankyou').css('opacity', '1');
+												$('#deployedData').html(tHtml);
 												$('#DeployBtn').click(function() {
 													$("#thankyou").modal("hide");
 													location.reload();
@@ -225,8 +253,8 @@ $(function () {
 								
 							})
 						}
-						
-					  })
+					
+					})
 				};
 				reader.onerror = function (error) {
 				  console.log('Error: ', error);
@@ -236,6 +264,18 @@ $(function () {
 		}
 	});
 
+	$('#maturity_date').datepicker({
+			format: "dd-mm-yyyy",
+			minDate:0,
+			autoclose: true,
+			// todayHighlight: true,
+			startDate: '-0m'
+        //endDate: '+2d'
+		}).on('changeDate', function(ev){
+			$('#sDate1').text($('#datepicker').data('date'));
+			$('#datepicker').datepicker('hide');
+		});
+		
 	
 
 	$('#uploaded_file').change(function(){ 

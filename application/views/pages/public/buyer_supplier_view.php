@@ -85,12 +85,12 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="row">
+                               <div class="row">
                                     <div class="form-group col-md-6">
                                         <!--<label for="maturity-date">Instrument Maturity Date</label>
                                         <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">-->
 										<label for="maturity-date">Instrument Maturity Date</label>
-										<div class="date" data-date-format="dd-mm-yyyy">
+										<div id="date" data-date-format="dd-mm-yyyy">
 										<input  type="text" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd-mm-yyyy">
 										<div class="input-group-addon" style="display:none"><span class="fa fa-calendar"></span></div>
 										</div>
@@ -133,6 +133,7 @@
                     </div>
                 </div>
             </div>
+            <div id="loader" style="display: none;"></div>
             <div class="container"id="deploy" style="display:none;">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -149,7 +150,7 @@
 
                                 <div class="form-group">
                                         <label for="contract">Contract</label>
-                                        <pre id="contractData" class="language-markup scrollable"disabled="disabled">
+                                        <pre id="contractData" class="language-markup scrollable" disabled>
                                         
 									</pre>
                                 </div>
@@ -179,7 +180,7 @@
 	$this->load->view('includes/login_modal');
 	
 ?>	
-
+<div id="loader" style="display: none;"></div>
 <div class="modal fade" id="thankyou" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog" style="">
 		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
@@ -189,7 +190,8 @@
                 </div>
 				<div class="modal-body text-center">
 
-						<p>Contract Deployment in process.</p>
+                        <p>Contract Deployment Successfully.</p><p><strong>Please save the contract address for further use.<strong></p>
+                        <p id="deployedData" style="word-break: break-all;" ></p>
 						
 						<div class="form-group">
 							<button id="DeployBtn" type="submit" class="btn btn-blue text-uppercase"  data-keyboard="false"> Ok </button> 
@@ -199,6 +201,24 @@
 			</div>
 	 	</div>
 </div>
+<?php
+        $this->load->view('includes/footer_commonn', $data);
+		$this->load->view('pages_scripts/finance_doc_scripts', $data);
+        $this->load->view('includes/footern');
+?>
+<!-- Form Skip to next Heading -->
+<script type="text/javascript">
+    $(function() {
+        $('a[href*=#]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
+        });
+    });
+</script>
+<!-- Form Skip to next Heading -->
+
 
 
 
