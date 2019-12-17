@@ -660,6 +660,7 @@ pre {color: #687377;font-size: 15px;background-color: #f7f7f7;border: none;paddi
 .tf-suppliers-form .form-group label span {font-size: 12px;color: #007bff;float:right;}
 .tf-suppliers-form .form-group .error {font-size: 12px;color: #ea212d;padding-top:5px;margin-bottom:0px;}
 .tf-suppliers-form .form-group label span.text-green {font-size: 11px;color: #34b576;}
+.tf-suppliers-form .form-group p {font-size: 13px;padding-top:5px;margin-bottom:0px;}
 .tf-suppliers-form .form-group .form-control {font-family:inherit;display: block;width: 100%;height: 45px;padding: 6px 12px;font-size: 15px;line-height: 1.42857143;color: #687377;background-color: #ffffff;background-image: none;border: 1px solid #cccccc;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: none;box-shadow: none;-webkit-transition: border-color ease-in-out .15s;-o-transition: border-color ease-in-out .15s;transition: border-color ease-in-out .15s;}
 .tf-suppliers-form select {border: 1px solid #cccccc;width: 100%;height: 50px;outline: none;padding-left: 20px;padding-right: 20px;-webkit-transition: all 0.3s ease 0s;-moz-transition: all 0.3s ease 0s;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease 0s;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;    -webkit-appearance: none;-moz-appearance: none;appearance: none;background: url(../banner-assets/images/innerpage-images/arrow-down.png) #FFFFFF no-repeat calc(100% - 10px) !important;}
 .tf-suppliers-form select option:first-of-type {color: #a0afca;}
@@ -682,6 +683,14 @@ input.error, textarea.error, select.error {border-color: #ea212d!important;}
 .tf-form-tabs a:last-child {margin-bottom:0px;}
 .tf-form-tabs a:hover {background-color: #f6fbff;}
 .tf-form-tabs a.active {color: #007bff!important;border-color: #007bff!important;background-color: #f6fbff!important;box-shadow:none;}
+
+.deployedData_modal_block {padding:0px;margin:-10px;}
+.deployedData_modal_block h1 {font-size:22px;font-weight:500;line-height:26px;color:#494949;margin-bottom:10px;}
+.deployedData_modal_block p {font-size:14px!important;font-weight:400!important;color: #687377!important;}
+.deployedData_modal_block p span {font-weight:600!important;}
+.deployedData_modal_block p a {color: #007bff!important;}
+.deployedData_modal_block .form-group .form-control {font-family: inherit;display: block;width: 100%;height: 45px;padding: 6px 12px;font-size: 15px;line-height: 1.42857143;color: #687377;background-color: #ffffff;background-image: none;border: 1px solid #cccccc;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: none;box-shadow: none;-webkit-transition: border-color ease-in-out .15s;-o-transition: border-color ease-in-out .15s;transition: border-color ease-in-out .15s;}
+
 @media (max-width: 767px) {
 	.tf-form-tabs a {width: 32.5%;padding: 15px 2px!important;}
 }
@@ -835,7 +844,7 @@ input.error, textarea.error, select.error {border-color: #ea212d!important;}
 .tf-footer .footer-title {font-size: 16px;font-weight: 600;color: #ffffff;margin-bottom: 15px;line-height: 18px;}
 .tf-footer .footer-list {list-style: none;padding: 0;margin: 0;}
 .tf-footer .footer-list li {display: block;margin-bottom: 10px;}
-.tf-footer .footer-list li a {display: block;color: #bbc3cc;line-height: 18px;}
+.tf-footer .footer-list li a {display: block;color: #bbc3cc;line-height: 18px;font-weight:500!important;}
 .tf-footer .footer-list li a:hover, .tf-footer .footer-list li a:active {color: #FFFFFF;background-color:transparent;}
 
 .tf-social-ft {float: left;}

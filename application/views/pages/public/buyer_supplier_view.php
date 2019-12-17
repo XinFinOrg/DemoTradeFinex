@@ -191,14 +191,26 @@
                     <button type="button" class="close" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
                 </div>
 				<div class="modal-body text-center">
-
-                        <p>Contract Deployment Successfully.</p><p><strong>Please save the contract address for further use.<strong></p>
-                        <p id="deployedData" style="word-break: break-all;" ></p>
-						
-						<div class="form-group">
-							<button id="DeployBtn" type="submit" class="btn btn-blue text-uppercase"  data-keyboard="false"> Ok </button> 
-						</div>						
-							                                           
+                        <div class="deployedData_modal_block">
+							<h1>Contract Deployment Successfully.</h1>
+							<p>Please save the contract address for further use.</p>
+							<!--<p id="deployedData" style="word-break: break-all;"></p>-->
+							
+							<div id="deployedData" style="word-break: break-all;">
+								<p><span>Contact Address: </span><br /> xdc7e21456aEC807790176075f7A04553EEA2646d26</p>
+								<p><span>Transaction Hash: </span><br /> <a href="http://explorer.apothem.network/tx/0x429626da0e739b230075f0f4b97d329bc8783065f2f6361d333e551465cde92b" target="_blank">0x429626da0e739b230075f0f4b97d329bc8783065f2f6361d333e551465cde92b</a></p>
+								
+								<div class="form-group">
+                                    <input class="form-control" id="email" name="email" type="text" autocomplete="" aria-required="true" placeholder="Email Id">
+                                </div>
+							</div>
+							
+							<div class="form-group">
+								<button id="CopyBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Copy</button>
+								<button id="DownloadBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Download</button>
+								<button id="EmailBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Email</button>
+							</div>						
+						</div>
 				</div>
 			</div>
 	 	</div>
