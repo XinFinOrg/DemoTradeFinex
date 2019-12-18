@@ -482,6 +482,7 @@ $(function () {
 					} 
 					else{
 						document.getElementById("error").style.display = "none";
+						document.getElementById("suppliers").disabled = false;
 						document.getElementById("brokers").disabled = false;
 						if ('size' in file) {
 							const fsize = file.size; 
