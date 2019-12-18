@@ -832,8 +832,6 @@ pre[class*="language-"] {background: #FFF;border: 1px solid #F0F0F0;border-left:
 }
 
 
-
-
 /*-- Contact Form --*/
 .tf-contact-us_form-block {border-radius: 4px;background-color: #f5f8fc;padding: 35px 30px 25px 30px;position: relative;height: 100%;}
 .tf-contact-us_form {padding:0px 20px 0px 20px;}
@@ -858,6 +856,14 @@ input.error, textarea.error, select.error {border-color: #ea212d!important;}
 	.tf-contact-us_form-block {padding:25px 20px 20px 20px;}
 	.tf-contact-us_form {padding:0px;}
 }
+
+
+/*-- Terms & Conditions --*/
+.tf-terms-conditions_content {width: 100%;float: left;margin-bottom: 0px;}
+.tf-terms-conditions_content h4 {width: 100%;float: left;font-size: 16px;line-height: 1.5;font-weight:700;color: #494949;margin-bottom: 10px;}
+.tf-terms-conditions_content p {width: 100%;float: left;font-size: 14px;color: #687377;margin-bottom: 15px;line-height: 1.5;text-align: justify;}
+.tf-terms-conditions_content ul {margin-left: 35px;}
+.tf-terms-conditions_content ul li {list-style: disc;line-height:1.5;margin-bottom: 10px;}
 
 /*-----------------------------------------
 	Inner Page Content

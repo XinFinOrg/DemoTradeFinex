@@ -183,7 +183,7 @@
 	
 ?>	
 
-<div id="tf-loader-wrapper loader" style="display: none;"><div id="tf-loader"></div></div>
+<div id="tf-loader-wrapper" style="display: none;"><div id="tf-loader"></div></div>
 <div class="modal fade" id="thankyou" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog" style="">
 		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->

@@ -27,28 +27,32 @@
 									<?php echo $this->session->flashdata('email_sent'); ?>
 								</div>
 								
-								<div class="form-group">
-									<label for="mname">Full name <sup>*</sup></label>
-										<input class="form-control" id="mname" name="mname" type="text" autocomplete="" required data-required-error="" tabindex="1" aria-required="true" />
-									</label>
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="mname">Full Name <sup>*</sup></label>
+											<input class="form-control" id="mname" name="mname" type="text" autocomplete="" required data-required-error="" tabindex="1" aria-required="true" />
+										</label>
+									</div>
+									
+									<div class="form-group col-md-6">
+										<label for="memail">Email ID <sup>*</sup></label>
+											<input class="form-control" id="memail" name="memail" type="text" autocomplete="" required data-required-error="" tabindex="2" aria-required="true" />
+										</label>
+									</div>
 								</div>
 								
-								<div class="form-group">
-									<label for="memail">Email ID <sup>*</sup></label>
-										<input class="form-control" id="memail" name="memail" type="text" autocomplete="" required data-required-error="" tabindex="2" aria-required="true" />
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="mmob">Mobile No.</label>
+											<input class="form-control" id="mmob" name="" type="text" tabindex="3" autocomplete="" />
+										</label>
+									</div>
+									
+									<div class="form-group col-md-6">
+									<label for="mcomp">Company <sup>*</sup></label>
+										<input class="form-control" name="mcomp" id="mcomp" autocomplete="" maxlength="50" required data-required-error="" tabindex="4" aria-required="true" type="text">
 									</label>
-								</div>
-								
-								<div class="form-group">
-									<label for="mmob">Mobile No.</label>
-										<input class="form-control" id="mmob" name="" type="text" tabindex="3" autocomplete="" />
-									</label>
-								</div>
-								
-								<div class="form-group">
-								<label for="mcomp">Company <sup>*</sup></label>
-									<input class="form-control" name="mcomp" id="mcomp" autocomplete="" maxlength="50" required data-required-error="" tabindex="4" aria-required="true" type="text">
-								</label>
+									</div>
 								</div>
 								
 								<div class="form-group">
