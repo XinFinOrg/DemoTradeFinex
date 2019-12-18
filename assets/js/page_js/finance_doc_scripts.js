@@ -467,7 +467,7 @@ $(function () {
 				valid=[".pdf"];
 					if (valid.indexOf(filext.toLowerCase())==-1){
 						document.getElementById("error").style.display = "block";
-						
+						document.getElementById("suppliers").disabled = true;
 						document.getElementById("brokers").disabled = true;
 						
 						if ('size' in file) {
