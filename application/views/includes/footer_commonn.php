@@ -238,7 +238,7 @@
         <script src="<?=base_url('assets/js/datatables/pdfmake.min.js');?>"></script>
 		<script src="<?=base_url('assets/js/datatables/vfs_fonts.js');?>"></script>
         <script src="<?=base_url('assets/js/datatables/buttons.html5.min.js');?>"></script>
-        <script src="<?=base_url('assets/js/datatables/buttons.print.min.js');?>"></script>
+		<script src="<?=base_url('assets/js/datatables/buttons.print.min.js');?>"></script>
 		
 		<?php } ?>
 					
@@ -302,7 +302,7 @@
     });
 </script>
 <!-- Partnership and Alliances Logo Slider-->
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https:////cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>

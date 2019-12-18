@@ -3962,7 +3962,13 @@ class Publicv extends CI_Controller {
 			$this->load->view('includes/header_publicn', $data);
 		}
                 
-        
+        $show = cmcModule();
+		foreach($show as $sh) {
+			
+			log_message("info",$sh->price_usd) ;
+			$data['price'] = $sh->price_usd;
+			
+		}
         $this->load->view('pages/public/case_study_view', $data);
         $this->load->view('includes/footer_commonn', $data);
         $this->load->view('pages_scripts/common_scripts', $data);
@@ -3970,136 +3976,86 @@ class Publicv extends CI_Controller {
 	}
 	
 	
-	public function smart_contractt($data_add){
-        
-        $data = array();
-        
-        $data['page'] = 'smart_contractt';
-        $data['msg'] = '';
-        $data['user_id'] = 0;
-        $data['user_type'] = '';
-        $data['full_name'] = '';
-        $data['ufname'] = '';
-        $data['ulname'] = '';
-        $data['uemail'] = '';
-        $data['ucontact'] = '';
-        $data['uaddress'] = '';
-        $data['uname'] = '';
-        $data['upass'] = '';
-        $data['uprofpic'] = '';
-        
-        $data['csrf'] = array();
-        
+	
+	public function sendMail()
+	{
+		log_message("info",">>>>");
+	    $data = array();
+		$mail_data = array();
+		$result = array();
+		$encryption_key = $this->config->item('encryption_key');
+					
+		$action = $this->input->post('action');
+		$email = $this->input->post('email');
+		$deployData = $this->input->post('deployData');
+		log_message("info",">>>>1",gettype($email));
+		log_message("info",">>>>2",gettype($deployData));
+		
 		$data['csrf'] = array();
 		
 		$csrf = array(
 			'name' => $this->security->get_csrf_token_name(),
-			'hash' => $this->security->get_csrf_hash()
+			'hash' => $this->security->get_csrf_hash(),
 		);
 		
 		$data['csrf'] = $csrf;
+		
 				
-		$user = $this->session->userdata('logged_in');
-		
-		if($user && !empty($user) && sizeof($user) <> 0){
-			$data['full_name'] = $user['user_full_name'];
-			$data['user_id'] = $user['user_id'];
-			$data['user_type_ref'] = $user['user_type_ref'];
-			// redirect(base_url().'dashboard');
-		}else{
-			// redirect(base_url().'log/out');
-			$this->load->view('includes/headern', $data);
-			$this->load->view('includes/header_publicn', $data);
-		}
-		
-		$data['notifications'] = array();
-		$data['notifications'] = get_initial_notification_status();
-		
-		if($data['user_id'] <> 0){
+		if($action == 'send_mail'){
 			
-			$options = array();
-			$options['user_id'] = $data['user_id'];
-			$options['user_type'] = $data['user_type_ref'];
-			
-			$data['notifications'] = get_notification_status($options);
-		}
-		
-		if($data['user_id'] <> 0){
-					
-			$uresult = $this->manage->get_user_info_by_id_and_type($data['user_id'], $data['user_type_ref']);
+			$config = array();
+			$config = $this->config->item('$econfig');
 						
-			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
-				
-				if($data['user_type_ref'] == 1){
-					$data['ufname'] = $uresult[0]->tfsp_fname;
-					$data['ulname'] = $uresult[0]->tfsp_lname;
-					$data['uemail'] = $uresult[0]->tfsp_email;
-					$data['ucontact'] = $uresult[0]->tfsp_contact;
-					$data['uaddress'] = $uresult[0]->tfsp_address;
-					$data['uprofpic'] = $uresult[0]->tfsp_pic_file;
-					$data['uname'] = $uresult[0]->tfu_usern;
-					$data['upass'] = $uresult[0]->tfu_passwd;
-					$data['uvisibility'] = $uresult[0]->tfsp_public_visibility;
-				}
-				
-				if($data['user_type_ref'] == 2){
-					$data['ufname'] = $uresult[0]->tff_fname;
-					$data['ulname'] = $uresult[0]->tff_lname;
-					$data['uemail'] = $uresult[0]->tff_email;
-					$data['ucontact'] = $uresult[0]->tff_contact;
-					$data['uaddress'] = $uresult[0]->tff_address;
-					$data['uprofpic'] = $uresult[0]->tff_pic_file;
-					$data['uname'] = $uresult[0]->tfu_usern;
-					$data['upass'] = $uresult[0]->tfu_passwd;
-					$data['uvisibility'] = $uresult[0]->tff_public_visibility;
-				}
-				
-				if($data['user_type_ref'] == 3){
-					$data['ufname'] = $uresult[0]->tfb_fname;
-					$data['ulname'] = $uresult[0]->tfb_lname;
-					$data['uemail'] = $uresult[0]->tfb_email;
-					$data['ucontact'] = $uresult[0]->tfb_contact;
-					$data['uaddress'] = $uresult[0]->tfb_address;
-					$data['uprofpic'] = $uresult[0]->tfb_pic_file;
-					$data['uname'] = $uresult[0]->tfu_usern;
-					$data['upass'] = $uresult[0]->tfu_passwd;
-				}
+			$this->email->initialize($config);
+			// $this->email->cc('another@another-example.com');
+			// $this->email->bcc('them@their-example.com');
+			
+			$suser = $this->manage->get_superadmin();
+			
+			$from_email = 'contact@tradefinex.org'; 
+			$to_email = $email;
+					
+			$message .= '<strong>Message : </strong>'.$deployData.'<br/>';
+			
+			$this->email->from($from_email, 'Support Tradefinex'); 
+			$this->email->to($to_email);
+			$this->email->bcc($from_email);
+			$this->email->set_mailtype('html');
+			$this->email->subject('Contract Details'); 
+			$this->email->message($message);
+            		
+			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
+			if($this->email->send()){ 
+				$this->session->set_flashdata('msg_type', 'success');
+				$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Sent</h4>"); 
+				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Thank you for your query. Your query has been received. Our customer support team will respond to your query as soon as possible.</h3>"); 
+			}	
+			else{ 
+				$this->session->set_flashdata('msg_type', 'error');
+				$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Can't be Sent</h4>"); 
+				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Error in sending Email. Please try again.</h3>");
 			}
 			
-			$this->load->view('includes/headern', $data);
-			$this->load->view('includes/header_publicn', $data);
+			redirect(base_url().'thankyouc');
 		}
-        
-		$data['display'] = $data_add;
-		log_message("info","<><><>".$isplay);
-			$url = 'http://90.0.0.84:3110/api/deployContract';
-			$data_string = 'ipfsHash='.$display['ipfshash'].'&instrumentType='.$display['instrument'].'&amount='.$display['amount'].'&currencySupported='.$display['currency_supported'].'&maturityDate='.$display['maturity_date'].'&name='.$display['name'].'&country='.$display['pcountry'].'&privKey='.$display['private_key'];
-			$curl = curl_init();
+		$this->load->view('includes/headern', $data);
+		$this->load->view('includes/header_publicn', $data);
+		$this->load->view('pages/public/brokers_view', $data);
+		$this->load->view('includes/footer_commonn', $data);
+		$this->load->view('pages_scripts/common_scripts', $data);
+		$this->load->view('includes/footern');
+	}
+
+	public function getPrice()
+	{
+		$show = cmcModule();
+		foreach($show as $sh) {
 			
-			log_message("info",">>>>".$data_string);
-	
-			curl_setopt_array($curl, array(
-				CURLOPT_URL => $url,
-				CURLOPT_RETURNTRANSFER => true,
-				CURLOPT_CUSTOMREQUEST => "POST",
-				CURLOPT_POSTFIELDS => $data_string,
-				CURLOPT_HTTPHEADER => array(
-				"Cache-Control: no-cache",
-				"cache-control: no-cache"
-				),
-			));
-	
-			$response = curl_exec($curl);
-			$err = curl_error($curl);
-			$result = json_decode($response);
-			curl_close($curl);
+			log_message("info",$sh->price_usd) ;
+			$data = $sh->price_usd;
+			
+		}
 		
-		        
-        
-        $this->load->view('pages/public/smart_contract_view', $data);
-        $this->load->view('includes/footer_commonn', $data);
-        $this->load->view('pages_scripts/common_scripts', $data);
-        $this->load->view('includes/footern');
-    }
+	}
 }
 	

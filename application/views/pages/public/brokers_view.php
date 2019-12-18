@@ -116,7 +116,7 @@
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                         <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                                        <input name="uploaded_file" id = "uploaded_file"onChange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" accept=".jpg,.png,.pdf" style="display: none;" type="file">
+                                        <input name="uploaded_file" id = "uploaded_file"onChange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" accept=".pdf" style="display: none;" type="file">
                                         </span>
                                         <span class="form-control"></span>
                                     </div>
@@ -131,14 +131,14 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button  id = "suppliers" name = "suppliers" type="submit" class="btn btn-blue text-uppercase">Submit</button>
+                                    <button  id = "brokers" name = "suppliers" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="loader" style="display: none;"></div>
+            <div id="tf-loader-wrapper " style="display: none;"><div id="tf-loader"></div></div>
             <div class="container"id="deploy" style="display:none;">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -185,7 +185,7 @@
 	$this->load->view('includes/login_modal');
 	
 ?>	
-<div id="loader" style="display: none;"></div>
+<div id="tf-loader-wrapper" style="display: none;"><div id="tf-loader"></div></div>
 <div class="modal fade" id="thankyou" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog" style="">
 		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
@@ -197,19 +197,22 @@
                         <div class="deployedData_modal_block">
 							<h1>Contract Deployment Successfully.</h1>
 							<p>Please save the contract address for further use.</p>
-							<!--<p id="deployedData" style="word-break: break-all;"></p>-->
-							
+                            <!--<p id="deployedData" style="word-break: break-all;"></p>-->
+                            
 							<div id="deployedData" style="word-break: break-all;">
 								
 								
                             </div>
-                            <div class="form-group">
-                                    <input class="form-control" id="email" name="email" type="text" autocomplete="" aria-required="true" placeholder="Email Id" style="display:none">
+                            
+                                <div class="form-group"style="display:none" id="email_set">
+                                    <input class="form-control" id="email" name="email" type="text" autocomplete="" aria-required="true" placeholder="Email Id" >
+                                    <input type="hidden" name="action" value="send_mail" />
+                                    <button id="DownloadBtn" onclick="mail()" type="submit"class="btn btn-blue text-uppercase" data-keyboard="false">OK</button>
                                 </div>
-							
+                        
 							<div class="form-group">
-								<button id="CopyBtn" type="submit" onclick="copy()" onmouseout="outFunc()" class="btn btn-blue text-uppercase" id="myTooltip"data-keyboard="false">Copy</button>
-								<button id="DownloadBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Download</button>
+								<button id="CopyBtn" type="submit" onclick="copy('deployedData')" class="btn btn-blue text-uppercase" data-keyboard="false">Copy</button>
+								<button id="DownloadBtn" type="submit" onclick="PrintDiv()"class="btn btn-blue text-uppercase" data-keyboard="false">Download</button>
 								<button id="EmailBtn" type="submit" onclick="showemail()"class="btn btn-blue text-uppercase" data-keyboard="false">Email</button>
 							</div>						
 						</div>
@@ -218,24 +221,90 @@
 	 	</div>
 </div>
 <script type="text/javascript">
-    function copy() {
-        var copyText = document.getElementById("deployedData");
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);
+
+
+
+function copy(containerid) {
+    if (document.selection) { 
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById(containerid));
+    range.select().createTextRange();
+    document.execCommand("copy"); 
+    toastr.success('Copied.', {timeOut: 2500});
+
+    } 
+    else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().addRange(range);
         document.execCommand("copy");
-        
-        var tooltip = document.getElementById("myTooltip");
-        tooltip.innerHTML = "Copied: " + copyText.value;
-        console.log(">>>>",copyText,copyText.value,tooltip)
-        
+        toastr.success('Copied.', {timeOut: 2500});
     }
-    function outFunc() {
-        var tooltip = document.getElementById("myTooltip");
-        tooltip.innerHTML = "Copy to clipboard";
+    else{
+        toastr.error('Something went wrong.', {timeOut: 2500})
     }
-    function showemail(){
-        document.getElementById("email").style.display="block";
-    }
+}
+
+function download(){
+    var a = document.body.appendChild(
+        document.createElement("a")
+    );
+   
+    console.log(">>>>>>>>",document.getElementById("deployedData").innerHTML);
+    a.download = "contract_details.html";
+    a.href = "data:text/html," + document.getElementById("deployedData").innerHTML;
+    a.click();
+    // var doc = new jsPDF()
+    // console.log("L>>>>",document.getElementById("deployedData").innerHTML);
+    // var variable = document.getElementById("deployedData").innerHTML;
+    // doc.text(variable,50,50);
+    // doc.save('contractDetails.pdf')
+}
+function PrintDiv() {
+            var divContents = document.getElementById("deployedData").innerHTML;
+            var printWindow = window.open('', '', 'height=200,width=400');
+            printWindow.document.write('<html><head><title>Contract Details</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+function showemail(){
+    document.getElementById("email_set").style.display="block";
+}
+function mail(){
+    var email = document.getElementById("email").value;
+    var deployData = document.getElementById("deployedData").innerHTML;
+    alert(email);
+    alert(deployData);
+
+        <?php 			
+            log_message("info","<<<<");
+            $this->load->library(array('session', 'encrypt', 'email'));
+            $config = array();
+			$config = $this->config->item('$econfig');
+            $this->email->initialize($config);
+            log_message("info","<<<<1",$config);
+            $suser = $this->manage->get_superadmin();
+			
+			$from_email = 'contact@tradefinex.org'; 
+			$to_email = $email;
+            log_message("info","<<<<2",$from_email,$to_email);
+			$message .= '<strong>Message : </strong>'.$deployData.'<br/>';
+			
+			$this->email->from($from_email, 'Support Tradefinex'); 
+			$this->email->to($to_email);
+			$this->email->bcc($from_email);
+			$this->email->set_mailtype('html');
+			$this->email->subject('Contract Details'); 
+			$this->email->message($message);
+            		
+			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
+		
+		?>
+}
 </script>
 <?php
         $this->load->view('includes/footer_commonn', $data);

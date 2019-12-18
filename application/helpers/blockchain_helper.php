@@ -65,6 +65,25 @@ if (!function_exists('sendTokens'))
     }
 }
 
+if (!function_exists('cmcModule'))
+{
+    function cmcModule()
+    {
+        $CI =& get_instance();
+		$CI->load->library('curl');
+		
+		$rcurlxdc = $CI->curl->simple_get('https://api.coinmarketcap.com/v1/ticker/xinfin-network/');
+		
+		if($rcurlxdc){
+			$rcurlxdca = json_decode(stripslashes($rcurlxdc));
+			if(strtolower($rcurlxdca->status) == 'success'){
+				$xdcpval = $rcurlxdca->todayxdcprice;
+			}
+		}
+		
+		return json_decode(stripslashes($rcurlxdc));
+    }
+}
 
 
 

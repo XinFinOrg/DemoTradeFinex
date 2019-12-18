@@ -1,10 +1,10 @@
 
 function showLoader() {
-	document.getElementById("loader").style.display = "block";
+	document.getElementById("tf-loader-wrapper").style.display = "block";
 }						
 
 function hideLoader() {
-	document.getElementById("loader").style.display = "none";
+	document.getElementById("tf-loader-wrapper").style.display = "none";
 }
 $(function () {
 	var jQueryScript = document.createElement('script');  
@@ -147,6 +147,7 @@ $(function () {
 			const formObj = formData.trim().split('&');
 			var formDataObj = {};
 			var files = document.getElementById('uploaded_file').files;
+			fileName = files[0].name.substring(0,3);
 			var dataFile;
 			var hash;
 			if (files.length > 0) {
@@ -196,7 +197,7 @@ $(function () {
 							"amount":formDataObj.amount,
 							"currencySupported":formDataObj.currency_supported,
 							"maturityDate":formDataObj.maturity_date,
-							"docRef":formDataObj.docRef,
+							"docRef":fileName.toUpperCase()+formDataObj.docRef,
 							"country":formDataObj.pcountry,
 							"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
 							"contractType":"commonInstrument"
@@ -217,7 +218,7 @@ $(function () {
 										"amount":formDataObj.amount,
 										"currencySupported":formDataObj.currency_supported,
 										"maturityDate":formDataObj.maturity_date,
-										"docRef":formDataObj.docRef,
+										"docRef":fileName.toUpperCase()+formDataObj.docRef,
 										"country":formDataObj.pcountry,
 										"contractType":"commonInstrument",
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
@@ -263,6 +264,9 @@ $(function () {
 	});
 	$("#brokers_form").validate({
 		rules: {
+			name:{
+				required:true
+			},
 			pcountry: {
 				required: true
 			},
@@ -270,6 +274,7 @@ $(function () {
 				required: true,
 				decnumberOnly : true
 			},
+			uploaded_file:"required",
 			currency_supported: {
 				required: true
 			},
@@ -289,6 +294,7 @@ $(function () {
 				required: "Please enter company name ",
 				decnumberOnly : "Enter Numbers only"
 			},
+			name : "Please enter Broker Name",
 			currency_supported: "Please choose currency supported",
 			maturity_date: "Please choose date",
 			uploaded_file: "Please upload doucment",
@@ -297,19 +303,21 @@ $(function () {
 			},
 		},
 		success: function (elem) {
-
+		
 
 		},
 		error: function (elem) {
 
 		},
 		submitHandler: function (form, e) {
-			$('#suppliers').prop('disabled', true);
+			$('#brokers').prop('disabled', true);
 			showLoader();
 			var formData = $(form).serialize();
 			const formObj = formData.trim().split('&');
 			var formDataObj = {};
 			var files = document.getElementById('uploaded_file').files;
+			fileName = files[0].name.substring(0,3);
+			// console.log(">>>",fileName);
 			var dataFile;
 			var hash;
 			if (files.length > 0) {
@@ -359,9 +367,9 @@ $(function () {
 							"amount":formDataObj.amount,
 							"currencySupported":formDataObj.currency_supported,
 							"maturityDate":formDataObj.maturity_date,
-							"docRef":formDataObj.docRef,
+							"docRef":fileName.toUpperCase()+formDataObj.docRef,
 							"country":formDataObj.pcountry,
-							"name":formDataObj.name,
+							"name":"BKR-"+formDataObj.name,
 							"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
 							"contractType":"brokerInstrument"
 							}).then(resp => {
@@ -381,9 +389,9 @@ $(function () {
 										"amount":formDataObj.amount,
 										"currencySupported":formDataObj.currency_supported,
 										"maturityDate":formDataObj.maturity_date,
-										"docRef":formDataObj.docRef,
+										"docRef":fileName.toUpperCase()+formDataObj.docRef,
 										"country":formDataObj.pcountry,
-										"name":formDataObj.name,
+										"name":"BKR-"+formDataObj.name,
 										"contractType":"brokerInstrument",
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
@@ -440,46 +448,61 @@ $(function () {
 		});
 		
 	
-
+	
 	$('#uploaded_file').change(function(){ 
-        
-        const fi = document.getElementById('uploaded_file');
-        var txt = "";
-        if ('files' in fi) {
-            if (fi.files.length == 0) {
-            txt = "Select one or more files.";
-            } else {
-            for (var i = 0; i < fi.files.length; i++) {
-                var file = fi.files[i];
-                if ('name' in file) {
-                var filename = file.name;
-                document.getElementById('uploaded_file').innerHTML = filename;
-                filextension=filename.split(".");
-			    filext="."+filextension.slice(-1)[0];
-                // /console.log(">>>>>>",file.name,filextension,filext);
-                valid=[".pdf"];
-                    if (valid.indexOf(filext.toLowerCase())==-1){
-                        document.getElementById("error").style.display = "block";
-                        if ('size' in file) {
-                            const fsize = file.size; 
-                            if(parseFloat(fsize) > 10485760) {
-                                document.getElementById("error1").style.display = "block";
-                            }
-                            else{
-                                document.getElementById("error1").style.display = "none";
-                            }
-                        }
-                    } 
-                    else{
-                        document.getElementById("error").style.display = "none";
-                    }
-                }
-                
-            }
-            }
-        }         
-        
+		
+		const fi = document.getElementById('uploaded_file');
+		if ('files' in fi) {
+			if (fi.files.length == 0) {
+			txt = "Select one or more files.";
+			} else {
+			for (var i = 0; i < fi.files.length; i++) {
+				var file = fi.files[i];
+				if ('name' in file) {
+				var filename = file.name;
+				document.getElementById('uploaded_file').innerHTML = filename;
+				filextension=filename.split(".");
+				filext="."+filextension.slice(-1)[0];
+				// /console.log(">>>>>>",file.name,filextension,filext);
+				valid=[".pdf"];
+					if (valid.indexOf(filext.toLowerCase())==-1){
+						document.getElementById("error").style.display = "block";
+						
+						document.getElementById("brokers").disabled = true;
+						
+						if ('size' in file) {
+							const fsize = file.size; 
+							if(parseFloat(fsize) > 10485760) {
+								document.getElementById("error1").style.display = "block";
+							}
+							else{
+								document.getElementById("error1").style.display = "none";
+							}
+						}
+					} 
+					else{
+						document.getElementById("error").style.display = "none";
+						document.getElementById("brokers").disabled = false;
+						if ('size' in file) {
+							const fsize = file.size; 
+							if(parseFloat(fsize) > 10485760) {
+								document.getElementById("error1").style.display = "block";
+							}
+							else{
+								document.getElementById("error1").style.display = "none";
+							}
+						}
+					}
+				}
+				
+			}
+			}
+		}         
+		
 	});
+	
+	$('#document')
+	
 	
 	
 	
