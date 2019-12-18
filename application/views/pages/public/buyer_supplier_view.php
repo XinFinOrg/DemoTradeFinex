@@ -128,7 +128,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button  id = "suppliers" name = "suppliers" type="submit" class="btn btn-blue text-uppercase">Submit</button>
+                                    <button  id = "suppliers" name = "suppliers" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
                                 </div>
                             </form>
                         </div>
