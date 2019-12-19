@@ -50,6 +50,7 @@
 	
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
 	<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet" type="text/css" />
+	<link src="https:////cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"rel="stylesheet" type="text/css" />
 	
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

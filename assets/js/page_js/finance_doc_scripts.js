@@ -96,6 +96,10 @@ $(function () {
 		return this.optional( element ) || /^[0-9]+\.?[0-9]*$/.test( value );
 	  }, 'This field allows only positive decimal numbers');
 
+	  jQuery.validator.addMethod("privateKey", function(value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional( element ) || /^[0-9a-f]{64}$/.test( value );
+	  }, 'This field allows only positive decimal numbers');
 
 	//Buyer-Supplier Form
 	$("#suppliers_form").validate({
@@ -116,21 +120,38 @@ $(function () {
 			uploaded_file: {
 				required: true
 			},
-			private_key: "required",
+			private_key: {
+				required:true,
+				privateKey : true,
+				normalizer: function(value) {
+					// Update the value of the element
+					this.value = $.trim(value);
+					check = this.value;
+					if(check.startsWith("0x")){
+						check = check.slice(2);
+					}
+					else{
+						check = this.value;
+					}
+					// Use the trimmed value for validation
+					return check;
+				}
+			}
 		},
 		messages: {
 			pcountry: {
 				required: "Please select country"
 			},
 			amount: {
-				required: "Please enter company name ",
+				required: "Please enter correct amount ",
 				decnumberOnly : "Enter Numbers only"
 			},
 			currency_supported: "Please choose currency supported",
 			maturity_date: "Please choose date",
 			uploaded_file: "Please upload doucment",
 			private_key: {
-				required: "Please enter a privateKey"
+				required: "Please enter a private key",
+				privateKey : "Enter valid private key of 64 characters"
 			},
 		},
 		success: function (elem) {
@@ -173,7 +194,7 @@ $(function () {
 						}
 					})
 					formDataObj.docRef = (new Date()).getTime();
-					console.log(">>>>",formDataObj.docRef);
+					// console.log(">>>>",formDataObj.docRef);
 					$.ajax({
 						type:"POST",
 						dataType:"json",
@@ -243,13 +264,26 @@ $(function () {
 													location.reload();
 												});
 											}
+											else if (resp.status == false){
+												hideLoader();
+												toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+												setTimeout(location.reload.bind(location), 6000);
+											}
 											
 											
+										}).fail(error =>{
+											hideLoader();
+											toastr.error('Something went wrong./'+error, {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+											setTimeout(location.reload.bind(location), 6000);
 										})
 									})
 								}
 								
 								
+							}).fail(error =>{
+								hideLoader();
+								toastr.error('Something went wrong./'+error, {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+								setTimeout(location.reload.bind(location), 6000);
 							})
 						}
 					
@@ -284,14 +318,30 @@ $(function () {
 			uploaded_file: {
 				required: true
 			},
-			private_key: "required",
+			private_key: {
+				required:true,
+				privateKey : true,
+				normalizer: function(value) {
+					// Update the value of the element
+					this.value = $.trim(value);
+					check = this.value;
+					if(check.startsWith("0x")){
+						check = check.slice(2);
+					}
+					else{
+						check = this.value;
+					}
+					// Use the trimmed value for validation
+					return check;
+				}
+			}
 		},
 		messages: {
 			pcountry: {
 				required: "Please select country"
 			},
 			amount: {
-				required: "Please enter company name ",
+				required: "Please enter correct amount ",
 				decnumberOnly : "Enter Numbers only"
 			},
 			name : "Please enter Broker Name",
@@ -299,7 +349,8 @@ $(function () {
 			maturity_date: "Please choose date",
 			uploaded_file: "Please upload doucment",
 			private_key: {
-				required: "Please enter a privateKey"
+				required: "Please enter a private key",
+				privateKey : "Enter valid private key of 64 characters"
 			},
 		},
 		success: function (elem) {
@@ -415,13 +466,25 @@ $(function () {
 													location.reload();
 												});
 											}
+											else if (resp.status == false){
+												hideLoader();
+												toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+												setTimeout(location.reload.bind(location), 6000);
+											}
 											
-											
+										}).fail(error =>{
+											hideLoader();
+											toastr.error('Something went wrong./'+error, {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+											setTimeout(location.reload.bind(location), 6000);
 										})
 									})
 								}
 								
 								
+							}).fail(error =>{
+								hideLoader();
+								toastr.error('Something went wrong./'+error, {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+								setTimeout(location.reload.bind(location), 6000);
 							})
 						}
 					
