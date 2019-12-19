@@ -121,13 +121,13 @@
                                         <span class="form-control"></span>
                                     </div>
                                     <p>* Origination & deal distribution fees 0.001% of instrument value. This document will be encrypted & stored on Blockchain Network. Viewable to funder only after owner's permission.</p>
-                                    <label for="supporting-document" style="display:none" id="error">Please upload correct file format.</label>
-                                    <label for="supporting-document" style="display:none" id="error1">Please file less than 5MB</label>
+                                    <label for="supporting-document" style="display:none" class ="error"id="error">Please upload correct file format.</label>
+                                    <label for="supporting-document" style="display:none" class="error"id="error1">Please file less than 5MB</label>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
-                                    <input type="text" class="form-control" id="private_key" name="private_key" placeholder="Enter Private Key">
+                                    <input type="text" class="form-control" id="private_key" name="private_key" autocomplete= "off" placeholder="Enter Private Key">
                                 </div>
 
                                 <div class="form-group">
