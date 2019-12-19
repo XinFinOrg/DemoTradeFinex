@@ -96,10 +96,15 @@ $(function () {
 		return this.optional( element ) || /^[0-9]+\.?[0-9]*$/.test( value );
 	  }, 'This field allows only positive decimal numbers');
 
-	  jQuery.validator.addMethod("privateKey", function(value, element) {
+	jQuery.validator.addMethod("privateKey", function(value, element) {
 		// allow any non-whitespace characters as the host part
 		return this.optional( element ) || /^[0-9a-f]{64}$/.test( value );
-	  }, 'This field allows only positive decimal numbers');
+	  }, 'This field allows only number from 0-9 and alphabets from a-f');
+
+	jQuery.validator.addMethod("contractAddress", function(value, element) {
+		// allow any non-whitespace characters as the host part
+		return this.optional( element ) || /^[0-9a-z]{40}$/.test( value );
+	  }, 'This field allows only number from 0-9 and alphabets from a-z');
 
 	//Buyer-Supplier Form
 	$("#suppliers_form").validate({
@@ -115,7 +120,7 @@ $(function () {
 			amount: {
 				required: true,
 				decnumberOnly : true,
-				min : 1
+				min : 0.1
 			},
 			currency_supported: {
 				required: true
@@ -152,7 +157,7 @@ $(function () {
 			amount: {
 				required: "Please enter correct amount ",
 				decnumberOnly : "Enter Numbers only",
-				min : "Amount should be greater than 0"
+				min : "Amount should be greater than 0.1"
 			},
 			currency_supported: "Please choose currency supported",
 			maturity_date: "Please choose date",
@@ -166,16 +171,8 @@ $(function () {
 
 
 		},
-		errorPlacement: function (error,element) {
+		error: function (elem) {
 			
-			if ( element.is(":radio") ) 
-			{
-				error.appendTo( element.parents('.container') );
-			}
-			else 
-			{ // This is the default behavior 
-				error.insertAfter( element );
-			}
 			 
 		},
 		submitHandler: function (form, e) {
@@ -268,7 +265,7 @@ $(function () {
 												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
 												const tHtml = `
 																<p>
-																	<span>Contact Address:</span><br>${resp.receipt.contractAddress.toLowerCase()}</p>
+																	<span>Contract Address:</span><br>${resp.receipt.contractAddress.toLowerCase()}</p>
 																	<span><p>Transaction Hash:</span><br><a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a>
 																</p>
 																`
@@ -324,7 +321,7 @@ $(function () {
 			amount: {
 				required: true,
 				decnumberOnly : true,
-				min:1
+				min:0.1
 			},
 			uploaded_file:"required",
 			currency_supported: {
@@ -361,7 +358,7 @@ $(function () {
 			amount: {
 				required: "Please enter correct amount ",
 				decnumberOnly : "Enter Numbers only",
-				min : "Amount should be greater than 0"
+				min : "Amount should be greater than 0.1"
 			},
 			name : "Please enter Broker Name",
 			currency_supported: "Please choose currency supported",
@@ -549,8 +546,8 @@ $(function () {
 				valid=[".pdf"];
 					if (valid.indexOf(filext.toLowerCase())==-1){
 						document.getElementById("error").style.display = "block";
-						document.getElementById("suppliers").disabled = true;
-						document.getElementById("brokers").disabled = true;
+						document.getElementById("instru").disabled = true;
+						// document.getElementById("brokers").disabled = true;
 						
 						if ('size' in file) {
 							const fsize = file.size; 
@@ -564,8 +561,8 @@ $(function () {
 					} 
 					else{
 						document.getElementById("error").style.display = "none";
-						document.getElementById("suppliers").disabled = false;
-						document.getElementById("brokers").disabled = false;
+						document.getElementById("instru").disabled = false;
+						// document.getElementById("brokers").disabled = false;
 						if ('size' in file) {
 							const fsize = file.size; 
 							if(parseFloat(fsize) > 10485760) {
@@ -584,9 +581,257 @@ $(function () {
 		
 	});
 	
-	$('#document')
+	$('#contractdoc_form').validate({
+		rules: {
+			contract_address: {
+				required: true,
+				contractAddress :true,
+				normalizer: function(value) {
+					// Update the value of the element
+					this.value = $.trim(value);
+					check = this.value;
+					if(check.startsWith("0x")){
+						check = check.slice(2);
+					}
+					else if(check.startsWith("xdc")){
+						check = check.slice(3);
+					}
+					else{
+						check = this.value;
+					}
+					// Use the trimmed value for validation
+					return check;
+				}
+			},
+			private_key: {
+				required:true,
+				privateKey : true,
+				normalizer: function(value) {
+					// Update the value of the element
+					this.value = $.trim(value);
+					check = this.value;
+					if(check.startsWith("0x")){
+						check = check.slice(2);
+					}
+					else{
+						check = this.value;
+					}
+					// Use the trimmed value for validation
+					return check;
+				}
+			}
+		},
+		messages: {
+			contract_address:{
+				required : "Please enter valid contract address",
+				contractAddress : "Contract address is a combination of alphabets and numbers starting with xdc/0x"
+			},
+			private_key: {
+				required: "Please enter a private key",
+				privateKey : "Enter valid private key of 64 characters"
+			},
+		},
+		success: function (elem) {
+
+
+		},
+		error: function (elem) {
+			
+			 
+		},
+		submitHandler: function (form, e) {
+			// $('#contractdoc').prop('disabled', true);
+			e.preventDefault();
+			showLoader();
+			var formData = $(form).serialize();
+			const formObj = formData.trim().split('&');
+			var formDataObj = {};
+			
+			// after getting value of datafile name make the ajax call
+					$.each(formObj, function (k, v) {
+						v = v.split('=');
+						if(v[0] === "fsdate" || v[0] === "maturitydate" || v[0] === "firstdate") {
+							var date = v[1].split('-');
+							date = date[2] + `/` + date[1] + '/' + date[0];
+							formDataObj[v[0]] = date;
+						} else {
+							formDataObj[v[0]] = v[1];
+						}
+					})
+					// formDataObj.docRef = (new Date()).getTime();
+					console.log(">>>>",formDataObj);
+					$.ajax({
+						type:"POST",
+						dataType:"json",
+						url:"http://62.233.65.6:3110/api/getDocHash",
+						data:{"contractAddr":formDataObj.contract_address,
+							  "privKey": formDataObj.privateKey.toString().startsWith("0x") ? formDataObj.privateKey : "0x"+formDataObj.privateKey,
+							  "contractType" : "commonInstrument"
+						},
+						success: resp => {
+							// console.log("response success: ",resp)
+						},
+						error: err =>{
+							console.log("response error: ",err)
+						}
+					}).done(resp => {
+					// .then(resp => {
+						// console.log("response : ",resp);
+						console.log('formDataObj>>>>>>>', resp);
+						e.preventDefault();
+						if(resp.status == true){
+							const hashUrl = `https://ipfs-gateway.xinfin.network/${resp.ipfsHash}`;
+							const tHtml = `
+											<p>
+												<br><a href="${hashUrl}"target="_blank">${resp.ipfsHash}</a>
+											</p>
+											`
+							hideLoader();
+							$("#hash").modal("show");
+							$('#hash').css('opacity', '1');
+							$('#hashData').html(tHtml);
+							$('#okBtn').click(function() {
+								$("#hash").modal("hide");
+								location.reload();
+							});
+						}
+								
+								
+					}).fail(error =>{
+						hideLoader();
+						toastr.error('Something went wrong.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+						setTimeout(location.reload.bind(location), 6000);
+					})
+		}
+					
+			
+	});
 	
-	
+	$('#contractdocc_form').validate({
+		rules: {
+			contract_address: {
+				required: true,
+				contractAddress :true,
+				normalizer: function(value) {
+					// Update the value of the element
+					this.value = $.trim(value);
+					check = this.value;
+					if(check.startsWith("0x")){
+						check = check.slice(2);
+					}
+					else if(check.startsWith("xdc")){
+						check = check.slice(3);
+					}
+					else{
+						check = this.value;
+					}
+					// Use the trimmed value for validation
+					return check;
+				}
+			},
+			private_key: {
+				required:true,
+				privateKey : true,
+				normalizer: function(value) {
+					// Update the value of the element
+					this.value = $.trim(value);
+					check = this.value;
+					if(check.startsWith("0x")){
+						check = check.slice(2);
+					}
+					else{
+						check = this.value;
+					}
+					// Use the trimmed value for validation
+					return check;
+				}
+			}
+		},
+		messages: {
+			contract_address:{
+				required : "Please enter valid contract address",
+				contractAddress : "Contract address is a combination of alphabets and numbers starting with xdc/0x"
+			},
+			private_key: {
+				required: "Please enter a private key",
+				privateKey : "Enter valid private key of 64 characters"
+			},
+		},
+		success: function (elem) {
+
+
+		},
+		error: function (elem) {
+			
+			 
+		},
+		submitHandler: function (form, e) {
+			// $('#contractdoc').prop('disabled', true);
+			e.preventDefault();
+			showLoader();
+			var formData = $(form).serialize();
+			const formObj = formData.trim().split('&');
+			var formDataObj = {};
+			
+			// after getting value of datafile name make the ajax call
+					$.each(formObj, function (k, v) {
+						v = v.split('=');
+						if(v[0] === "fsdate" || v[0] === "maturitydate" || v[0] === "firstdate") {
+							var date = v[1].split('-');
+							date = date[2] + `/` + date[1] + '/' + date[0];
+							formDataObj[v[0]] = date;
+						} else {
+							formDataObj[v[0]] = v[1];
+						}
+					})
+					// formDataObj.docRef = (new Date()).getTime();
+					console.log(">>>>",formDataObj);
+					$.ajax({
+						type:"POST",
+						dataType:"json",
+						url:"http://62.233.65.6:3110/api/getDocHash",
+						data:{"contractAddr":formDataObj.contract_address,
+							  "privKey": formDataObj.privateKey.toString().startsWith("0x") ? formDataObj.privateKey : "0x"+formDataObj.privateKey,
+							  "contractType" : "brokerInstrument"
+						},
+						success: resp => {
+							// console.log("response success: ",resp)
+						},
+						error: err =>{
+							console.log("response error: ",err)
+						}
+					}).done(resp => {
+					// .then(resp => {
+						// console.log("response : ",resp);
+						console.log('formDataObj>>>>>>>', resp);
+						e.preventDefault();
+						if(resp.status == true){
+							const hashUrl = `https://ipfs-gateway.xinfin.network/${resp.ipfsHash}`;
+							const tHtml = `
+											<p>
+												<br><a href="${hashUrl}"target="_blank">${resp.ipfsHash}</a>
+											</p>
+											`
+							hideLoader();
+							$("#hash").modal("show");
+							$('#hash').css('opacity', '1');
+							$('#hashData').html(tHtml);
+							$('#okBtn').click(function() {
+								$("#hash").modal("hide");
+								location.reload();
+							});
+						}
+								
+								
+					}).fail(error =>{
+						hideLoader();
+						toastr.error('Something went wrong.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+						setTimeout(location.reload.bind(location), 6000);
+					})
+		}
+					
+			
+	});
 	
 	
 });

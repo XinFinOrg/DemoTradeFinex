@@ -129,9 +129,48 @@
                                     <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
                                     <input type="text" class="form-control" id="private_key" name="private_key" autocomplete= "off" placeholder="Enter Private Key">
                                 </div>
+                                <input type="hidden" name="action" value="adddetail" />
+                                <div class="form-group">
+                                    <button  id = "instru" name = "instru" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
+                                </div>
+                                <div class="form-group right">
+                                    <a id="getDoc" onclick="docShow()">Access Document</a></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container"id="getdochash"style="display:none;">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="section-title text-center pb-30">
+                            <h2 class="mb-0">Get Document Hash</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="tf-buyer-supplier_form-block">
+                            <form id="contractdocc_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post">
+                            
+                                <div class="form-group">
+                                    <label for="private-key">Enter Contract Address </label>
+                                    <input type="text" class="form-control" id="contract_address" name="contract_address" autocomplete= "off"placeholder="Enter Contract Address">
+                                </div>
+                                
 
                                 <div class="form-group">
-                                    <button  id = "brokers" name = "suppliers" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
+                                    <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
+                                    <input type="text" class="form-control" id="privateKey" name="privateKey" autocomplete= "off"placeholder="Enter Private Key">
+                                </div>
+
+                                <div class="form-group">
+                                    <button  id = "contractdoc" name = "suppliers" type="submit" class="btn btn-blue text-uppercase" >Submit</button>
+                                </div>
+                                <div class="form-group right">
+                                    <a id="getDoc" onclick="hideShow()"target="_blank">Go Back</a></span>
                                 </div>
                             </form>
                         </div>
@@ -195,7 +234,7 @@
                 </div>
 				<div class="modal-body text-center">
                         <div class="deployedData_modal_block">
-							<h1>Contract Deployment Successfully.</h1>
+							<h1>Contract Deployed Successfully.</h1>
 							<p>Please save the contract address for further use.</p>
                             <!--<p id="deployedData" style="word-break: break-all;"></p>-->
                             
@@ -220,6 +259,41 @@
 			</div>
 	 	</div>
 </div>
+<div id="tf-loader-wrapper" style="display: none;"><div id="tf-loader"></div></div>
+<div class="modal fade" id="hash" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog" style="">
+		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
+			<div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="location.reload()" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
+                        <div class="deployedData_modal_block">
+							<p>Document Hash.</p>
+							<!--<p id="deployedData" style="word-break: break-all;"></p>-->
+							
+							<div id="hashData" style="word-break: break-all;">
+								
+								
+                            </div>
+                            <div class="form-group">
+								<button id="okBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">OK</button>
+							</div>							
+						</div>
+				</div>
+			</div>
+	 	</div>
+</div>
+
+<script type="text/javascript">
+function docShow(){
+    document.getElementById("getdochash").style.display="block";
+    document.getElementById("createinstrument").style.display="none";
+}
+function hideShow(){
+    document.getElementById("createinstrument").style.display="block";
+    document.getElementById("getdochash").style.display="none";
+}
 <script type="text/javascript">
 
 
