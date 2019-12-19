@@ -294,8 +294,6 @@ function hideShow(){
     document.getElementById("createinstrument").style.display="block";
     document.getElementById("getdochash").style.display="none";
 }
-<script type="text/javascript">
-
 
 
 function copy(containerid) {
