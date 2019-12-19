@@ -472,7 +472,7 @@ $(function () {
 												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
 												const tHtml = `
 																<p>
-																	<span>Contact Address:</span><br>${resp.receipt.contractAddress.toLowerCase()}</p>
+																	<span>Contract Address:</span><br>${resp.receipt.contractAddress.toLowerCase()}</p>
 																	<span><p>Transaction Hash:</span><br><a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a>
 																</p>
 																`
