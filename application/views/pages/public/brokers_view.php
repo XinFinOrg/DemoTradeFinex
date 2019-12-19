@@ -24,7 +24,7 @@
                         <div class="tf-buyer-supplier_form-block">
                             <form id="brokers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post">
                                 <div class="form-group">
-                                    <label for="instrument-type">Type of Instrument</label>
+                                    <label for="instrument-type" id = "instrument">Type of Instrument</label>
 
                                     <div id="tab" class="tf-form-tabs" data-toggle="buttons">
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">

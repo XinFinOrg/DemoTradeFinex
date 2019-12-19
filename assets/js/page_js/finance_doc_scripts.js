@@ -104,6 +104,11 @@ $(function () {
 	//Buyer-Supplier Form
 	$("#suppliers_form").validate({
 		rules: {
+			instrument: {
+				required:function() {
+					return $('[name="instrument"]:checked').length === 0; 
+				}
+			},
 			pcountry: {
 				required: true
 			},
@@ -139,6 +144,7 @@ $(function () {
 			}
 		},
 		messages: {
+			instrument:"Please select instrument",
 			pcountry: {
 				required: "Please select country"
 			},
@@ -158,8 +164,17 @@ $(function () {
 
 
 		},
-		error: function (elem) {
-
+		errorPlacement: function (error,element) {
+			
+			if ( element.is(":radio") ) 
+			{
+				error.appendTo( element.parents('.container') );
+			}
+			else 
+			{ // This is the default behavior 
+				error.insertAfter( element );
+			}
+			 
 		},
 		submitHandler: function (form, e) {
 			$('#suppliers').prop('disabled', true);
@@ -273,7 +288,7 @@ $(function () {
 											
 										}).fail(error =>{
 											hideLoader();
-											toastr.error('Something went wrong./'+error, {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+											toastr.error('Something went wrong.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
 											setTimeout(location.reload.bind(location), 6000);
 										})
 									})
@@ -282,7 +297,7 @@ $(function () {
 								
 							}).fail(error =>{
 								hideLoader();
-								toastr.error('Something went wrong./'+error, {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+								toastr.error('Something went wrong.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
 								setTimeout(location.reload.bind(location), 6000);
 							})
 						}
@@ -474,7 +489,7 @@ $(function () {
 											
 										}).fail(error =>{
 											hideLoader();
-											toastr.error('Something went wrong./'+error, {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+											toastr.error('Something went wrong./', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
 											setTimeout(location.reload.bind(location), 6000);
 										})
 									})
@@ -483,7 +498,7 @@ $(function () {
 								
 							}).fail(error =>{
 								hideLoader();
-								toastr.error('Something went wrong./'+error, {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+								toastr.error('Something went wrong./', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
 								setTimeout(location.reload.bind(location), 6000);
 							})
 						}
