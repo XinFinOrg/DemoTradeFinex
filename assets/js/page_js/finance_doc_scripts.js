@@ -114,7 +114,8 @@ $(function () {
 			},
 			amount: {
 				required: true,
-				decnumberOnly : true
+				decnumberOnly : true,
+				min : 1
 			},
 			currency_supported: {
 				required: true
@@ -150,7 +151,8 @@ $(function () {
 			},
 			amount: {
 				required: "Please enter correct amount ",
-				decnumberOnly : "Enter Numbers only"
+				decnumberOnly : "Enter Numbers only",
+				min : "Amount should be greater than 0"
 			},
 			currency_supported: "Please choose currency supported",
 			maturity_date: "Please choose date",
@@ -321,7 +323,8 @@ $(function () {
 			},
 			amount: {
 				required: true,
-				decnumberOnly : true
+				decnumberOnly : true,
+				min:1
 			},
 			uploaded_file:"required",
 			currency_supported: {
@@ -357,7 +360,8 @@ $(function () {
 			},
 			amount: {
 				required: "Please enter correct amount ",
-				decnumberOnly : "Enter Numbers only"
+				decnumberOnly : "Enter Numbers only",
+				min : "Amount should be greater than 0"
 			},
 			name : "Please enter Broker Name",
 			currency_supported: "Please choose currency supported",
