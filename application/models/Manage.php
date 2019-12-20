@@ -1303,7 +1303,7 @@ $data1 = [
 		public function add_instrument($data_add){
 
 			$data = array();
-			if($data_add['name'] != ""){
+			if(isset($data_add['name'])){
 				$data['tfi_instrument'] = $data_add['instrument'];
 				$data['tfi_name'] = $data_add['name'];
 				$data['tfi_country'] = $data_add['country'];

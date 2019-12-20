@@ -681,6 +681,9 @@ class Publicv extends CI_Controller {
 		$action = $this->input->post('action');
 		$data['instrument'] = $this->input->post('instrument');
 		$data['country'] = $this->input->post('pcountry');
+		if($this->input->post('name') != " " ){
+			$data['name'] = $this->input->post('name');
+		}
 		$data['currency_supported'] = $this->input->post('currency_supported');
 		$data['amount'] = $this->input->post('amount');
 		$data['maturity_date'] = $this->input->post('maturity_date');
@@ -3515,7 +3518,7 @@ class Publicv extends CI_Controller {
 		
 		$data['page'] = 'brokers';
 		$data['pcountry'] = 0;
-		
+
 		$action = $this->input->post('action');
 		$data['instrument'] = $this->input->post('instrument');
 		$data['name'] = $this->input->post('name');
@@ -3524,7 +3527,7 @@ class Publicv extends CI_Controller {
 		$data['amount'] = $this->input->post('amount');
 		$data['maturity_date'] = $this->input->post('maturity_date');
 		$data['docRef'] = $this->input->post('docRef');
-				
+
 		$data['csrf'] = array();
 		
 		$csrf = array(
@@ -3540,9 +3543,9 @@ class Publicv extends CI_Controller {
 			$data['pcountries'] = $ccountries;			
 		}
 		
-		if($action == 'adddetail'){
+
+		if($action == 'bkrdetail'){
 			$result = $this->manage->add_instrument($data);
-			log_message("info","data added");
 		}
 	
 		$this->load->view('includes/headern', $data);

@@ -22,7 +22,11 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="tf-buyer-supplier_form-block">
-                            <form id="brokers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post">
+                            <!-- <form id="brokers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post"> -->
+                            <?php
+                                $attributes = array('id' => 'brokers_form', 'class' => 'tf-suppliers-form', 'method' => 'post', 'role' => 'form');
+                                echo form_open_multipart(base_url().'publicv/brokers', $attributes);
+                            ?>
                                 <div class="form-group">
                                     <label for="instrument-type" id = "instrument">Type of Instrument</label>
 
@@ -129,8 +133,8 @@
                                     <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
                                     <input type="text" class="form-control" id="private_key" name="private_key" autocomplete= "off" placeholder="Enter Private Key">
                                 </div>
-                                <input type="hidden" name="action" value="adddetail" />
                                 <div class="form-group">
+                                    <input type="hidden" name="action" value="adddetail" />
                                     <button  id = "instru" name = "instru" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
                                 </div>
                                 <div class="form-group right">

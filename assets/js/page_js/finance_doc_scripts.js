@@ -213,7 +213,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://90.0.0.84:3110/api/uploadDoc",
+						url:"http://62.233.65.6:3110/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
@@ -232,7 +232,7 @@ $(function () {
 					// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
 						if(resp.status == true){
 							hash = resp.hash;
-							$.post("http://90.0.0.84:3110/api/generateContract",{
+							$.post("http://62.233.65.6:3110/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -253,7 +253,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("http://90.0.0.84:3110/api/deployContract",{
+										$.post("http://62.233.65.6:3110/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -431,11 +431,11 @@ $(function () {
 						}
 					})
 					formDataObj.docRef = (new Date()).getTime();
-					console.log(">>>>",formDataObj.docRef);
+					// console.log(">>>>",formDataObj.docRef);
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://90.0.0.84:3110/api/uploadDoc",
+						url:"http://62.233.65.6:3110/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
@@ -449,7 +449,7 @@ $(function () {
 					// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
 						if(resp.status == true){
 							hash = resp.hash;
-							$.post("http://90.0.0.84:3110/api/generateContract",{
+							$.post("http://62.233.65.6:3110/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -471,7 +471,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("http://90.0.0.84:3110/api/deployContract",{
+										$.post("http://62.233.65.6:3110/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -483,11 +483,11 @@ $(function () {
 										"contractType":"brokerInstrument",
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
-											console.log("response : ",resp);
+											// console.log("response : ",resp);
 											
 											
 											if(resp.status == true){
-												$.post("brokers",{
+												$.post("buyer_supplier",{
 													'action':"adddetail",
 													'instrument': formDataObj.instrument,
 													'amount':formDataObj.amount,
@@ -502,6 +502,7 @@ $(function () {
 												}).fail(err => {
 													console.log("response1 : ",err);
 												})
+
 												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
 												const tHtml = `
 																<p>
@@ -708,7 +709,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://90.0.0.84:3110/api/getDocHash",
+						url:"http://62.233.65.6:3110/api/getDocHash",
 						data:{"contractAddr":formDataObj.contract_address,
 							  "privKey": formDataObj.privateKey.toString().startsWith("0x") ? formDataObj.privateKey : "0x"+formDataObj.privateKey,
 							  "contractType" : "commonInstrument"
@@ -834,7 +835,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://90.0.0.84:3110/api/getDocHash",
+						url:"http://62.233.65.6:3110/api/getDocHash",
 						data:{"contractAddr":formDataObj.contract_address,
 							  "privKey": formDataObj.privateKey.toString().startsWith("0x") ? formDataObj.privateKey : "0x"+formDataObj.privateKey,
 							  "contractType" : "brokerInstrument"
