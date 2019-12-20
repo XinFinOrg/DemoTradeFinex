@@ -1299,4 +1299,37 @@ $data1 = [
 				$this->db->update('{PRE}register_otp', $data_add);
 			}
 		}
+
+		public function add_instrument($data_add){
+
+			$data = array();
+			if($data_add['name'] != ""){
+				$data['tfi_instrument'] = $data_add['instrument'];
+				$data['tfi_name'] = $data_add['name'];
+				$data['tfi_country'] = $data_add['country'];
+				$data['tfi_currency'] = $data_add['currency_supported'];
+				$data['tfi_amount'] = $data_add['amount'];
+				$data['tfi_maturityDate'] = $data_add['maturity_date'];
+				$data['tfi_docRef'] = $data_add['docRef'];
+			}
+			else{
+				$data['tfi_instrument'] = $data_add['instrument'];
+				$data['tfi_country'] = $data_add['country'];
+				$data['tfi_currency'] = $data_add['currency_supported'];
+				$data['tfi_amount'] = $data_add['amount'];
+				$data['tfi_maturityDate'] = $data_add['maturity_date'];
+				$data['tfi_docRef'] = $data_add['docRef'];
+			}
+			
+
+
+			$this->db->insert('{PRE}instrument', $data);
+			$id = $this->db->insert_id();
+
+			$data = array();
+
+		
+			return 1;
+			// }
+		}
 	}

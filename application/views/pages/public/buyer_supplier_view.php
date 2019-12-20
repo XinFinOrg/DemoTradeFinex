@@ -22,7 +22,11 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="tf-buyer-supplier_form-block">
-                            <form id="suppliers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post">
+                            <!-- <form id="suppliers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post"> -->
+                            <?php
+                                $attributes = array('id' => 'suppliers_form', 'class' => 'tf-suppliers-form', 'method' => 'post', 'role' => 'form');
+                                echo form_open_multipart(base_url().'publicv/buyer_supplier', $attributes);
+                            ?>
                                 <div class="form-group">
                                     <label for="instrument-type" id="instrument">Type of Instrument</label>
 
@@ -40,7 +44,7 @@
                                             <input type="radio" class="" name="instrument" value="sblc" id="SBLC" />SBLC
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="instrument" value="warehouse receipt" id="Warehouse-Receipt" />Warehouse Receipt
+                                            <input type="radio" class="" name="instrument" value="warehouse_receipt" id="Warehouse-Receipt" />Warehouse Receipt
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
                                             <input type="radio" class="" name="instrument" value="payable" id="Payable" />Payable
@@ -128,6 +132,7 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <input type="hidden" name="action" value="adddetail" />
                                     <button  id = "instru" name = "instru" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
                                 </div>
                                 <div class="form-group right">
@@ -343,37 +348,37 @@ function PrintDiv() {
 function showemail(){
     document.getElementById("email_set").style.display="block";
 }
-function mail(){
-    var email = document.getElementById("email").value;
-    var deployData = document.getElementById("deployedData").innerHTML;
-    alert(email);
-    alert(deployData);
+// function mail(){
+//     var email = document.getElementById("email").value;
+//     var deployData = document.getElementById("deployedData").innerHTML;
+//     alert(email);
+//     alert(deployData);
 
-        <?php 			
-            log_message("info","<<<<");
-            $this->load->library(array('session', 'encrypt', 'email'));
-            $config = array();
-			$config = $this->config->item('$econfig');
-            $this->email->initialize($config);
-            log_message("info","<<<<1",$config);
-            $suser = $this->manage->get_superadmin();
+//         <?php 			
+//             log_message("info","<<<<");
+//             $this->load->library(array('session', 'encrypt', 'email'));
+//             $config = array();
+// 			$config = $this->config->item('$econfig');
+//             $this->email->initialize($config);
+//             log_message("info","<<<<1",$config);
+//             $suser = $this->manage->get_superadmin();
 			
-			$from_email = 'contact@tradefinex.org'; 
-			$to_email = $email;
-            log_message("info","<<<<2",$from_email,$to_email);
-			$message .= '<strong>Message : </strong>'.$deployData.'<br/>';
+// 			$from_email = 'contact@tradefinex.org'; 
+// 			$to_email = $email;
+//             log_message("info","<<<<2",$from_email,$to_email);
+// 			$message .= '<strong>Message : </strong>'.$deployData.'<br/>';
 			
-			$this->email->from($from_email, 'Support Tradefinex'); 
-			$this->email->to($to_email);
-			$this->email->bcc($from_email);
-			$this->email->set_mailtype('html');
-			$this->email->subject('Contract Details'); 
-			$this->email->message($message);
+// 			$this->email->from($from_email, 'Support Tradefinex'); 
+// 			$this->email->to($to_email);
+// 			$this->email->bcc($from_email);
+// 			$this->email->set_mailtype('html');
+// 			$this->email->subject('Contract Details'); 
+// 			$this->email->message($message);
             		
-			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
+// 			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
 		
-		?>
-}
+// 		?>
+// }
 </script>
 <?php
         $this->load->view('includes/footer_commonn', $data);

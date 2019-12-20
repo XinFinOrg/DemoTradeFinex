@@ -185,6 +185,7 @@ $(function () {
 			fileName = files[0].name.substring(0,3);
 			var dataFile;
 			var hash;
+			
 			if (files.length > 0) {
 				getBase64(files[0]);
 			}
@@ -212,13 +213,18 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://62.233.65.6:3110/api/uploadDoc",
+						url:"http://90.0.0.84:3110/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
 						},
 						error: err =>{
-							console.log("response error: ",err)
+							console.log("response error: ",err);
+							
+							hideLoader();
+							toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+							setTimeout(location.reload.bind(location), 6000);
+							
 						}
 					}).done(resp => {
 					// .then(resp => {
@@ -226,7 +232,7 @@ $(function () {
 					// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
 						if(resp.status == true){
 							hash = resp.hash;
-							$.post("http://62.233.65.6:3110/api/generateContract",{
+							$.post("http://90.0.0.84:3110/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -247,7 +253,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("http://62.233.65.6:3110/api/deployContract",{
+										$.post("http://90.0.0.84:3110/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -258,10 +264,25 @@ $(function () {
 										"contractType":"commonInstrument",
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
-											console.log("response : ",resp);
+											// console.log("response : ",resp);
 											
 											
 											if(resp.status == true){
+												$.post("buyer_supplier",{
+													'action':"adddetail",
+													'instrument': formDataObj.instrument,
+													'amount':formDataObj.amount,
+													"currency_supported":formDataObj.currency_supported,
+													"maturity_date":formDataObj.maturity_date,
+													"pcountry":formDataObj.pcountry,
+													"docRef":fileName.toUpperCase()+formDataObj.docRef,
+													csrf_name: csrf_value
+												}).then(resp => {
+													// console.log("response : ",resp);
+												}).fail(err => {
+													console.log("response1 : ",err);
+												})
+												
 												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
 												const tHtml = `
 																<p>
@@ -280,14 +301,14 @@ $(function () {
 											}
 											else if (resp.status == false){
 												hideLoader();
-												toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+												toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 												setTimeout(location.reload.bind(location), 6000);
 											}
 											
 											
 										}).fail(error =>{
 											hideLoader();
-											toastr.error('Something went wrong.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+											toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 											setTimeout(location.reload.bind(location), 6000);
 										})
 									})
@@ -296,7 +317,7 @@ $(function () {
 								
 							}).fail(error =>{
 								hideLoader();
-								toastr.error('Something went wrong.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+								toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 								setTimeout(location.reload.bind(location), 6000);
 							})
 						}
@@ -414,7 +435,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://62.233.65.6:3110/api/uploadDoc",
+						url:"http://90.0.0.84:3110/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
@@ -428,7 +449,7 @@ $(function () {
 					// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
 						if(resp.status == true){
 							hash = resp.hash;
-							$.post("http://62.233.65.6:3110/api/generateContract",{
+							$.post("http://90.0.0.84:3110/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -450,7 +471,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("http://62.233.65.6:3110/api/deployContract",{
+										$.post("http://90.0.0.84:3110/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -466,6 +487,21 @@ $(function () {
 											
 											
 											if(resp.status == true){
+												$.post("brokers",{
+													'action':"adddetail",
+													'instrument': formDataObj.instrument,
+													'amount':formDataObj.amount,
+													"currency_supported":formDataObj.currency_supported,
+													"maturity_date":formDataObj.maturity_date,
+													"pcountry":formDataObj.pcountry,
+													"name":"BKR-"+formDataObj.name,
+													"docRef":fileName.toUpperCase()+formDataObj.docRef,
+													csrf_name: csrf_value
+												}).then(resp => {
+													// console.log("response : ",resp);
+												}).fail(err => {
+													console.log("response1 : ",err);
+												})
 												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
 												const tHtml = `
 																<p>
@@ -484,13 +520,13 @@ $(function () {
 											}
 											else if (resp.status == false){
 												hideLoader();
-												toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+												toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 												setTimeout(location.reload.bind(location), 6000);
 											}
 											
 										}).fail(error =>{
 											hideLoader();
-											toastr.error('Something went wrong./', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+											toastr.error('Something went wrong./', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 											setTimeout(location.reload.bind(location), 6000);
 										})
 									})
@@ -499,11 +535,20 @@ $(function () {
 								
 							}).fail(error =>{
 								hideLoader();
-								toastr.error('Something went wrong./', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+								toastr.error('Something went wrong./', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 								setTimeout(location.reload.bind(location), 6000);
 							})
 						}
+						else if (resp.status == false){
+							hideLoader();
+							toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+							setTimeout(location.reload.bind(location), 6000);
+						}
 					
+					}).fail(error =>{
+						hideLoader();
+						toastr.error('Something went wrong./', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+						setTimeout(location.reload.bind(location), 6000);
 					})
 				};
 				reader.onerror = function (error) {
@@ -663,7 +708,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://62.233.65.6:3110/api/getDocHash",
+						url:"http://90.0.0.84:3110/api/getDocHash",
 						data:{"contractAddr":formDataObj.contract_address,
 							  "privKey": formDataObj.privateKey.toString().startsWith("0x") ? formDataObj.privateKey : "0x"+formDataObj.privateKey,
 							  "contractType" : "commonInstrument"
@@ -699,7 +744,7 @@ $(function () {
 								
 					}).fail(error =>{
 						hideLoader();
-						toastr.error('Something went wrong.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+						toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 						setTimeout(location.reload.bind(location), 6000);
 					})
 		}
@@ -789,7 +834,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://62.233.65.6:3110/api/getDocHash",
+						url:"http://90.0.0.84:3110/api/getDocHash",
 						data:{"contractAddr":formDataObj.contract_address,
 							  "privKey": formDataObj.privateKey.toString().startsWith("0x") ? formDataObj.privateKey : "0x"+formDataObj.privateKey,
 							  "contractType" : "brokerInstrument"
@@ -825,7 +870,7 @@ $(function () {
 								
 					}).fail(error =>{
 						hideLoader();
-						toastr.error('Something went wrong.', {timeOut: 50000}).css({"word-break":"break-all","width":"auto"});
+						toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 						setTimeout(location.reload.bind(location), 6000);
 					})
 		}
