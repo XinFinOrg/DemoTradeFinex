@@ -133,9 +133,9 @@
                                     <input type="hidden" name="action" value="adddetail" />
                                     <button  id = "instru" name = "instru" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
                                 </div>
-                                <div class="form-group right">
-                                    <a id="getDoc" onclick="docShow()">Access Document</a></span>
-                                </div>
+                                <div class="form-group col-md-6 col-xs-6 text-right">
+										<a id="getDoc" onclick="docShow()" class="btn btn-white btn-small">Access Document <i class="fa fa fa-angle-double-right"></i></a></span>
+								</div>
                             </form>
                         </div>
                     </div>
