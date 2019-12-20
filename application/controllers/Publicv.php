@@ -677,8 +677,15 @@ class Publicv extends CI_Controller {
 		
 		$data['page'] = 'buyer_supplier';
 		$data['pcountry'] = 0;
-		
-				
+
+		$action = $this->input->post('action');
+		$data['instrument'] = $this->input->post('instrument');
+		$data['country'] = $this->input->post('pcountry');
+		$data['currency_supported'] = $this->input->post('currency_supported');
+		$data['amount'] = $this->input->post('amount');
+		$data['maturity_date'] = $this->input->post('maturity_date');
+		$data['docRef'] = $this->input->post('docRef');
+
 		$data['csrf'] = array();
 		
 		$csrf = array(
@@ -695,13 +702,13 @@ class Publicv extends CI_Controller {
 		}
 		
 
+		if($action == 'adddetail'){
+			$result = $this->manage->add_instrument($data);
+		}
 	
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
 		$this->load->view('pages/public/buyer_supplier_view', $data);
-		
-		
-
 		
 		
 	}
@@ -876,8 +883,8 @@ class Publicv extends CI_Controller {
 			$message .= '<strong>Email : </strong>'.$this->input->post('memail').'<br/>';
 			$message .= '<strong>Contact : </strong>'.$this->input->post('mmob').'<br/>';
 			$message .= '<strong>Company : </strong>'.$this->input->post('mcomp').'<br/>';
-			$message .= '<strong>User Type : </strong>'.$this->input->post('musertype').'<br/>';
-			$message .= '<strong>Service Type : </strong>'.$this->input->post('menquiry').'<br/>';
+			// $message .= '<strong>User Type : </strong>'.$this->input->post('musertype').'<br/>';
+			// $message .= '<strong>Service Type : </strong>'.$this->input->post('menquiry').'<br/>';
 			$message .= '<strong>Message : </strong>'.$this->input->post('mmsg').'<br/>';
 			
 			$this->email->from($from_email, 'Support Tradefinex'); 
@@ -3509,6 +3516,14 @@ class Publicv extends CI_Controller {
 		$data['page'] = 'brokers';
 		$data['pcountry'] = 0;
 		
+		$action = $this->input->post('action');
+		$data['instrument'] = $this->input->post('instrument');
+		$data['name'] = $this->input->post('name');
+		$data['country'] = $this->input->post('pcountry');
+		$data['currency_supported'] = $this->input->post('currency_supported');
+		$data['amount'] = $this->input->post('amount');
+		$data['maturity_date'] = $this->input->post('maturity_date');
+		$data['docRef'] = $this->input->post('docRef');
 				
 		$data['csrf'] = array();
 		
@@ -3525,7 +3540,10 @@ class Publicv extends CI_Controller {
 			$data['pcountries'] = $ccountries;			
 		}
 		
-
+		if($action == 'adddetail'){
+			$result = $this->manage->add_instrument($data);
+			log_message("info","data added");
+		}
 	
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
@@ -3882,8 +3900,6 @@ class Publicv extends CI_Controller {
         
         $data['csrf'] = array();
         
-		$data['csrf'] = array();
-		
 		$csrf = array(
 			'name' => $this->security->get_csrf_token_name(),
 			'hash' => $this->security->get_csrf_hash()
@@ -3892,6 +3908,8 @@ class Publicv extends CI_Controller {
 		$data['csrf'] = $csrf;
 				
 		$user = $this->session->userdata('logged_in');
+		
+		$action = $this->input->post('action');
 		
 		if($user && !empty($user) && sizeof($user) <> 0){
 			$data['full_name'] = $user['user_full_name'];
@@ -3962,12 +3980,51 @@ class Publicv extends CI_Controller {
 			$this->load->view('includes/header_publicn', $data);
 		}
                 
-        $show = cmcModule();
-		foreach($show as $sh) {
+			// $show = cmcModule();
+			// foreach($show as $sh) {
 			
-			log_message("info",$sh->price_usd) ;
-			$data['price'] = $sh->price_usd;
+			// log_message("info",$sh->price_usd) ;
+			// $data['price'] = $sh->price_usd;
 			
+			// }
+
+		if($action == 'send_mail'){
+		log_message("info",">>>>>>mail send");
+			$config = array();
+			$config = $this->config->item('$econfig');
+						
+			$this->email->initialize($config);
+			// $this->email->cc('another@another-example.com');
+			// $this->email->bcc('them@their-example.com');
+			
+			$suser = $this->manage->get_superadmin();
+			
+			$from_email = 'info@tradefinex.org'; 
+			$to_email = $this->input->post('memail'); 
+					
+			$message .= '<strong>Email : </strong>'.$this->input->post('memail').'<br/>';
+			$message .= '<strong>Contact : </strong>'.$this->input->post('mmob').'<br/>';
+			
+			$this->email->from($from_email, 'Support Tradefinex'); 
+			$this->email->to($to_email);
+			$this->email->bcc($from_email);
+			$this->email->set_mailtype('html');
+			$this->email->subject('Tradefinex Case Study Request'); 
+			$this->email->message($message);
+					
+			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
+			if($this->email->send()){ 
+				$this->session->set_flashdata('msg_type', 'success');
+				$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Sent</h4>"); 
+				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Thank you for your interest in Case Study . NDA will be sent on your mail, after signing the NDA, you can access to TradeFinex Case Study.</h3>"); 
+			}	
+			else{ 
+				$this->session->set_flashdata('msg_type', 'error');
+				$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Can't be Sent</h4>"); 
+				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Error in sending Email. Please try again.</h3>");
+			}
+			
+			redirect(base_url().'thankyouc');
 		}
         $this->load->view('pages/public/case_study_view', $data);
         $this->load->view('includes/footer_commonn', $data);
@@ -4057,5 +4114,6 @@ class Publicv extends CI_Controller {
 		}
 		
 	}
+
 }
 	
