@@ -57,7 +57,7 @@
                                             <div class="table-cell" style="width: 17%;"><span><?php echo $instru->tfi_country ?></span></div>
                                         </div>
                                         <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 15%;"><span><?php echo $instru->tfi_amount ?></span></div>
+                                            <div class="table-cell bold" style="width: 15%;"><span><?php echo rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></span></div>
                                         </div>
                                         <div class="cell-wrapper">
                                             <div class="table-cell" style="width: 16%;"><span><?php echo $instru->tfi_maturityDate ?></span></div>
