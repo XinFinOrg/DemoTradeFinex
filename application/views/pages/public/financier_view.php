@@ -43,152 +43,30 @@
                                     </div>
                                 </div>
                                 <div>
+                                    <?php
+                                // if ($instrumnent && !empty($instrumnent) && is_array($instrumnent) && sizeof($instrumnent) <> 0) {
+                                    foreach ($instrument as $instru) { ?>
                                     <div class="table-row collapsed">
                                         <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 16%;"><span>Receivable</span></div>
+                                            <div class="table-cell bold" style="width: 16%;"><span><?php echo $instru->tfi_instrument ?></span></div>
                                         </div>
 										<div class="cell-wrapper">
-                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
+                                            <div class="table-cell bold small" style="width: 16%;"><?php echo $instru->tfi_docRef ?></div>
                                         </div>
                                         <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
+                                            <div class="table-cell" style="width: 17%;"><span><?php echo $instru->tfi_country ?></span></div>
                                         </div>
                                         <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
+                                            <div class="table-cell bold" style="width: 15%;"><span><?php echo $instru->tfi_amount ?></span></div>
                                         </div>
                                         <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
+                                            <div class="table-cell" style="width: 16%;"><span><?php echo $instru->tfi_maturityDate ?></span></div>
                                         </div>
                                         <div class="table-cell" style="width: 16%;">
-											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
+											<a class="btn btn-blue" href="#" disabled><span>Get Document Access</span></a>
 										</div>
                                     </div>
-									
-                                    <div class="table-row collapsed">
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 16%;"><span>Letter of Credit</span></div>
-                                        </div>
-										<div class="cell-wrapper">
-                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 17%;"><span>London</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 15%;"><span>$ 900 K</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 16%;"><span>22-09-2020</span></div>
-                                        </div>
-                                        <div class="table-cell" style="width: 16%;">
-											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
-										</div>
-                                    </div>
-									
-									<div class="table-row collapsed">
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 16%;"><span>Bank Guarantees</span></div>
-                                        </div>
-										<div class="cell-wrapper">
-                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 17%;"><span>Hongkong</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 15%;"><span>$ 100 K</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 16%;"><span>22-06-2020</span></div>
-                                        </div>
-                                        <div class="table-cell" style="width: 16%;">
-											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
-										</div>
-                                    </div>
-									
-									<div class="table-row collapsed">
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 16%;"><span>SBLC</span></div>
-                                        </div>
-										<div class="cell-wrapper">
-                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
-                                        </div>
-                                        <div class="table-cell" style="width: 16%;">
-											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
-										</div>
-                                    </div>
-									
-									<div class="table-row collapsed">
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 16%;"><span>Warehouse Receipt</span></div>
-                                        </div>
-										<div class="cell-wrapper">
-                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
-                                        </div>
-                                        <div class="table-cell" style="width: 16%;">
-											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
-										</div>
-                                    </div>
-									
-									<div class="table-row collapsed">
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 16%;"><span>Payable</span></div>
-                                        </div>
-										<div class="cell-wrapper">
-                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
-                                        </div>
-                                        <div class="table-cell" style="width: 16%;">
-											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
-										</div>
-                                    </div>
-									
-									<div class="table-row collapsed">
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 16%;"><span>Other</span></div>
-                                        </div>
-										<div class="cell-wrapper">
-                                            <div class="table-cell bold small" style="width: 16%;"><a href="#">ABC-USD</a></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 17%;"><span>Dubai</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 15%;"><span>$ 500 K</span></div>
-                                        </div>
-                                        <div class="cell-wrapper">
-                                            <div class="table-cell" style="width: 16%;"><span>22-07-2020</span></div>
-                                        </div>
-                                        <div class="table-cell" style="width: 16%;">
-											<a class="btn btn-blue" href="#"><span>Get Document Access</span></a>
-										</div>
-                                    </div>
+                                    <?php }?>
                                     
                                 </div>
                             </div>

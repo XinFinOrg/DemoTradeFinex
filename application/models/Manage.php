@@ -1332,4 +1332,12 @@ $data1 = [
 			return 1;
 			// }
 		}
+		public function get_instrument(){
+
+			$this->db->select('*');
+			$this->db->from('{PRE}instrument');
+			$query = $this->db->get();
+
+			return $result = $query->result();
+		}
 	}

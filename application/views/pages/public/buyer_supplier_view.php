@@ -32,25 +32,25 @@
 
                                     <div id="tab" class="tf-form-tabs" data-toggle="buttons">
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="instrument" value="receivable" id="Receivable" />Receivable
+                                            <input type="radio" class="" name="instrument" value="Receivable" id="Receivable" />Receivable
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="instrument" value="loc" id="Letter-of-Credit" />Letter of Credit
+                                            <input type="radio" class="" name="instrument" value="Letter_of_Credit" id="Letter-of-Credit" />Letter of Credit
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="instrument" value="bg" id="Bank-Guarantees" />Bank Guarantees
+                                            <input type="radio" class="" name="instrument" value="Bank_Guarantee" id="Bank-Guarantees" />Bank Guarantees
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="instrument" value="sblc" id="SBLC" />SBLC
+                                            <input type="radio" class="" name="instrument" value="SBLC" id="SBLC" />SBLC
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="instrument" value="warehouse_receipt" id="Warehouse-Receipt" />Warehouse Receipt
+                                            <input type="radio" class="" name="instrument" value="Warehouse_Receipt" id="Warehouse-Receipt" />Warehouse Receipt
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="instrument" value="payable" id="Payable" />Payable
+                                            <input type="radio" class="" name="instrument" value="Payable" id="Payable" />Payable
                                         </a>
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
-                                            <input type="radio" class="" name="instrument" value="other" id="Other" />Other
+                                            <input type="radio" class="" name="instrument" value="Other" id="Other" />Other
                                         </a>
                                     </div>
                                 </div>
