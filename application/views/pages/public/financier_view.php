@@ -48,7 +48,30 @@
                                     foreach ($instrument as $instru) { ?>
                                     <div class="table-row collapsed">
                                         <div class="cell-wrapper">
-                                            <div class="table-cell bold" style="width: 16%;"><span><?php echo $instru->tfi_instrument ?></span></div>
+                                            <div class="table-cell bold" style="width: 16%;"><span><?php 
+                                            if($instru->tfi_instrument == "SBLC")
+                                            {  echo 'SBLC'; 
+                                            }
+                                            else if($instru->tfi_instrument == "REC")
+                                            {  echo 'Receivable'; 
+                                            }
+                                            else if($instru->tfi_instrument == "LC")
+                                            {  echo 'Letter Of Credit'; 
+                                            }
+                                            else if($instru->tfi_instrument == "BG")
+                                            {  echo 'Bank Guarantees'; 
+                                            }
+                                            else if($instru->tfi_instrument == "PAY")
+                                            {  echo 'Payable'; 
+                                            }
+                                            else if($instru->tfi_instrument == "OTH")
+                                            {  echo 'Other'; 
+                                            }
+                                            else if($instru->tfi_instrument == "WR")
+                                            {  echo 'Warehouse Receipt'; 
+                                            }
+                                            
+                                            ?></span></div>
                                         </div>
 										<div class="cell-wrapper">
                                             <div class="table-cell bold small" style="width: 16%;"><?php echo $instru->tfi_docRef ?></div>
@@ -63,7 +86,7 @@
                                             <div class="table-cell" style="width: 16%;"><span><?php echo $instru->tfi_maturityDate ?></span></div>
                                         </div>
                                         <div class="table-cell" style="width: 16%;">
-											<a class="btn btn-blue" href="#" disabled><span>Get Document Access</span></a>
+											<a class="btn btn-blue" href="#" ><span>Get Document Access</span></a>
 										</div>
                                     </div>
                                     <?php }?>

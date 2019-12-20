@@ -182,7 +182,7 @@ $(function () {
 			const formObj = formData.trim().split('&');
 			var formDataObj = {};
 			var files = document.getElementById('uploaded_file').files;
-			fileName = files[0].name.substring(0,3);
+			// fileName = files[0].name.substring(0,3);
 			var dataFile;
 			var hash;
 			
@@ -238,8 +238,8 @@ $(function () {
 							"amount":formDataObj.amount,
 							"currencySupported":formDataObj.currency_supported,
 							"maturityDate":formDataObj.maturity_date,
-							"docRef":fileName.toUpperCase()+formDataObj.docRef,
-							"country":formDataObj.pcountry,
+							"docRef":formDataObj.instrument+formDataObj.docRef,
+							"country":formDataObj.pcountry.replace(/[+]/g," "),
 							"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
 							"contractType":"commonInstrument"
 							}).then(resp => {
@@ -259,8 +259,8 @@ $(function () {
 										"amount":formDataObj.amount,
 										"currencySupported":formDataObj.currency_supported,
 										"maturityDate":formDataObj.maturity_date,
-										"docRef":fileName.toUpperCase()+formDataObj.docRef,
-										"country":formDataObj.pcountry,
+										"docRef":formDataObj.instrument+formDataObj.docRef,
+										"country":formDataObj.pcountry.replace(/[+]/g," "),
 										"contractType":"commonInstrument",
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
@@ -274,8 +274,8 @@ $(function () {
 													'amount':formDataObj.amount,
 													"currency_supported":formDataObj.currency_supported,
 													"maturity_date":formDataObj.maturity_date,
-													"pcountry":formDataObj.pcountry,
-													"docRef":fileName.toUpperCase()+formDataObj.docRef,
+													"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
+													"docRef":formDataObj.instrument+formDataObj.docRef,
 													csrf_name: csrf_value
 												}).then(resp => {
 													// console.log("response : ",resp);
@@ -404,7 +404,7 @@ $(function () {
 			const formObj = formData.trim().split('&');
 			var formDataObj = {};
 			var files = document.getElementById('uploaded_file').files;
-			fileName = files[0].name.substring(0,3);
+			// fileName = files[0].name.substring(0,3);
 			// console.log(">>>",fileName);
 			var dataFile;
 			var hash;
@@ -431,7 +431,7 @@ $(function () {
 						}
 					})
 					formDataObj.docRef = (new Date()).getTime();
-					// console.log(">>>>",formDataObj.docRef);
+					// console.log(">>>>",formDataObj.pcountry.replace(/[+]/g," "));
 					$.ajax({
 						type:"POST",
 						dataType:"json",
@@ -455,9 +455,9 @@ $(function () {
 							"amount":formDataObj.amount,
 							"currencySupported":formDataObj.currency_supported,
 							"maturityDate":formDataObj.maturity_date,
-							"docRef":fileName.toUpperCase()+formDataObj.docRef,
-							"country":formDataObj.pcountry,
-							"name":"BKR-"+formDataObj.name,
+							"docRef":formDataObj.instrument+formDataObj.docRef,
+							"country":formDataObj.pcountry.replace(/[+]/g," "),
+							"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
 							"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
 							"contractType":"brokerInstrument"
 							}).then(resp => {
@@ -477,9 +477,9 @@ $(function () {
 										"amount":formDataObj.amount,
 										"currencySupported":formDataObj.currency_supported,
 										"maturityDate":formDataObj.maturity_date,
-										"docRef":fileName.toUpperCase()+formDataObj.docRef,
-										"country":formDataObj.pcountry,
-										"name":"BKR-"+formDataObj.name,
+										"docRef":formDataObj.instrument+formDataObj.docRef,
+										"country":formDataObj.pcountry.replace(/[+]/g," "),
+										"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
 										"contractType":"brokerInstrument",
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
@@ -493,9 +493,9 @@ $(function () {
 													'amount':formDataObj.amount,
 													"currency_supported":formDataObj.currency_supported,
 													"maturity_date":formDataObj.maturity_date,
-													"pcountry":formDataObj.pcountry,
-													"name":"BKR-"+formDataObj.name,
-													"docRef":fileName.toUpperCase()+formDataObj.docRef,
+													"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
+													"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
+													"docRef":formDataObj.instrument+formDataObj.docRef,
 													csrf_name: csrf_value
 												}).then(resp => {
 													// console.log("response : ",resp);
