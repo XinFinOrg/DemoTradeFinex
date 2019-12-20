@@ -76,7 +76,7 @@
                                             <p></p>
                                         </div>
                                         <div class="tf-bottom-col-2">
-                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/financier">Get Started</a></div>
+                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/financier">Start Investing</a></div>
                                         </div>
                                     </div>
                                 </div>
