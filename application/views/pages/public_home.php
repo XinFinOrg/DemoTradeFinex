@@ -240,7 +240,7 @@
                 <div class="col-md-6 col-sm-6 tf-settlement-box">
                     <h2>About XDC Liquidity</h2>
                     <p>Explore XDC as a protocol for instant global settlement and counterparty risk mitigation for Trade Finance.</p>
-                    <a class="btn border blue text-uppercase" href="xdc-liquidity.html">Learn More</a>
+					<a href="<?=base_url();?>publicv/xdc_liquidity" class="btn border blue text-uppercase">Learn More</a>
                 </div>
             </div>
         </div>

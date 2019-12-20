@@ -39,10 +39,10 @@
                                     </li>
                                     <li>Interoperability with major systems
                                         <ul style="margin-top:10px;">
-                                            <li>API Access and Documents - <a href="https://xinfinorg.github.io/TradeFinex_API/" target="_blank" style="color:#FFFFFF;text-decoration:underline!important;">https://xinfinorg.github.io/TradeFinex_API/</a></li>
-                                            <li>API to connect XDC Tools - <a href="https://apidocs.xinfin.network/docs" target="_blank" style="color:#FFFFFF;text-decoration:underline!important;">https://apidocs.xinfin.network/docs</a></li>
-                                            <li>Get Transaction or Ledger Account detail & Send Transaction - <a href="https://apidocs.xinfin.network/" target="_blank" style="color:#FFFFFF;text-decoration:underline!important;">https://apidocs.xinfin.network/</a></li>
-                                            <li>Explorer API - <a href="https://explorer.xinfin.network/publicAPIDoc" target="_blank" style="color:#FFFFFF;text-decoration:underline!important;">https://explorer.xinfin.network/publicAPIDoc</a></li>
+                                            <li class="link-break-out">API Access and Documents - <a href="https://xinfinorg.github.io/TradeFinex_API/" target="_blank" style="color:#FFFFFF;text-decoration:underline!important;">https://xinfinorg.github.io/TradeFinex_API/</a></li>
+                                            <li class="link-break-out">API to connect XDC Tools - <a href="https://apidocs.xinfin.network/docs" target="_blank" style="color:#FFFFFF;text-decoration:underline!important;">https://apidocs.xinfin.network/docs</a></li>
+                                            <li class="link-break-out">Get Transaction or Ledger Account detail & Send Transaction - <a href="https://apidocs.xinfin.network/" target="_blank" style="color:#FFFFFF;text-decoration:underline!important;">https://apidocs.xinfin.network/</a></li>
+                                            <li class="link-break-out">Explorer API - <a href="https://explorer.xinfin.network/publicAPIDoc" target="_blank" style="color:#FFFFFF;text-decoration:underline!important;">https://explorer.xinfin.network/publicAPIDoc</a></li>
                                         </ul>
                                     </li>
                                     <li>Part of ITFA, BAFT, ICC Fintech community (Proposed)</li>
@@ -70,15 +70,15 @@
                                             <li>Liquidity of XRP can be used by remittance companies across corridors to process faster retail payments</li>
                                             <li>XRP Built its liquidity from USD 250,000 per day to approx USD 2 Billion per day
                                                 <ul style="margin-top:10px;">
-                                                    <li>Historical - <a href="https://coinmarketcap.com/historical/20170226/"target="_blank">https://coinmarketcap.com/historical/20170226/</a></li>
-                                                    <li>Present Day - <a href="https://coinmarketcap.com/currencies/ripple/"target="_blank">https://coinmarketcap.com/currencies/ripple/</a></li>
+                                                    <li class="link-break-out">Historical - <a href="https://coinmarketcap.com/historical/20170226/"target="_blank">https://coinmarketcap.com/historical/20170226/</a></li>
+                                                    <li class="link-break-out">Present Day - <a href="https://coinmarketcap.com/currencies/ripple/"target="_blank">https://coinmarketcap.com/currencies/ripple/</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>XDC, Digital Asset on XinFin Network (stands for XinFin Digital Contract)
                                         <ul style="margin-top:10px;">
-                                            <li>Currently traded across 18 global markets - <a href="https://coinmarketcap.com/currencies/xinfin-network/"target="_blank">https://coinmarketcap.com/currencies/xinfin-network/</a></li>
+                                            <li class="link-break-out">Currently traded across 18 global markets - <a href="https://coinmarketcap.com/currencies/xinfin-network/"target="_blank">https://coinmarketcap.com/currencies/xinfin-network/</a></li>
                                             <li>XDC has demonstrated ability to be liquid asset against multiple fiat currencies across different jurisdictions</li>
                                             <li>Liquidity against fiat currencies enables instant settlement and mitigates counterparty risk</li>
                                             <li>XDC was more liquid than XRP against Indonesian FX markets of IDR (Indonesian Rupiah)</li>

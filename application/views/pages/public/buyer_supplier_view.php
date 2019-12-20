@@ -131,13 +131,15 @@
                                     <input type="text" class="form-control" id="private_key" name="private_key" autocomplete= "off"placeholder="Enter Private Key">
                                 </div>
 
-                                <div class="form-group">
-                                    <input type="hidden" name="action" value="adddetail" />
-                                    <button  id = "instru" name = "instru" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
-                                </div>
-                                <div class="form-group right">
-                                    <a id="getDoc" onclick="docShow()">Access Document</a></span>
-                                </div>
+                                <div class="row">
+									<div class="form-group col-md-6 col-xs-6">
+										<input type="hidden" name="action" value="adddetail" />
+										<button  id="instru" name="instru" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
+									</div>
+									<div class="form-group col-md-6 col-xs-6 text-right">
+										<a id="getDoc" onclick="docShow()" class="btn btn-white btn-small">Access Document <i class="fa fa fa-angle-double-right"></i></a></span>
+									</div>
+								</div>
                             </form>
                         </div>
                     </div>
@@ -168,12 +170,14 @@
                                     <input type="text" class="form-control" id="privateKey" name="privateKey" autocomplete= "off"placeholder="Enter Private Key">
                                 </div>
 
-                                <div class="form-group">
-                                    <button  id = "contractdoc" name = "suppliers" type="submit" class="btn btn-blue text-uppercase" >Submit</button>
-                                </div>
-                                <div class="form-group right">
-                                    <a id="getDoc" onclick="hideShow()"target="_blank">Go Back</a></span>
-                                </div>
+                                <div class="row">
+									<div class="form-group col-md-6 col-xs-6">
+										<button  id = "contractdoc" name = "suppliers" type="submit" class="btn btn-blue text-uppercase" >Submit</button>
+									</div>
+									<div class="form-group col-md-6 col-xs-6 text-right">
+										<a id="getDoc" onclick="hideShow()"target="_blank" class="btn btn-white btn-small"><i class="fa fa-angle-double-left"></i> Go Back</a></span>
+									</div>
+								</div>
                             </form>
                         </div>
                     </div>
