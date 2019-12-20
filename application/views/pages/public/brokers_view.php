@@ -27,7 +27,10 @@
                                 $attributes = array('id' => 'brokers_form', 'class' => 'tf-suppliers-form', 'method' => 'post', 'role' => 'form');
                                 echo form_open_multipart(base_url().'publicv/brokers', $attributes);
                             ?>
-                               <div id="tab" class="tf-form-tabs" data-toggle="buttons">
+                                <div class="form-group">
+                                    <label for="instrument-type" id="instrument">Type of Instrument</label>
+
+                                    <div id="tab" class="tf-form-tabs" data-toggle="buttons">
                                         <a href="#select-country" class="btn btn-default" data-toggle="tab">
                                             <input type="radio" class="" name="instrument" value="REC" id="Receivable" />Receivable
                                         </a>
@@ -51,6 +54,7 @@
                                         </a>
                                     </div>
                                 </div>
+                                
                                 <div id="broker-name" class="form-group">
                                     <label for="broker-name">Broker Name</label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Broker Name">
