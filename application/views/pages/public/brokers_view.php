@@ -50,6 +50,7 @@
                                             <input type="radio" class="" name="instrument" value="OTH" id="Other" />Other
                                         </a>
                                     </div>
+                                </div>
                                 <div id="broker-name" class="form-group">
                                     <label for="broker-name">Broker Name</label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Broker Name">
