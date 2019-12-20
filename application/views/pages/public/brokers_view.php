@@ -180,9 +180,9 @@
                                 <div class="form-group">
                                     <button  id = "contractdoc" name = "suppliers" type="submit" class="btn btn-blue text-uppercase" >Submit</button>
                                 </div>
-                                <div class="form-group right">
-                                    <a id="getDoc" onclick="hideShow()"target="_blank">Go Back</a></span>
-                                </div>
+                                <div class="form-group col-md-6 col-xs-6 text-right">
+										<a id="getDoc" onclick="hideShow()"target="_blank" class="btn btn-white btn-small"><i class="fa fa-angle-double-left"></i> Go Back</a></span>
+								</div>
                             </form>
                         </div>
                     </div>
