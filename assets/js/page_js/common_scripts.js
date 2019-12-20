@@ -730,7 +730,55 @@ $(function () {
 		}
 	});
 
-	
+	$("#casestudy-form").validate({
+		rules: {
+			memail: {
+				EmailGeneral: true,
+				required: true
+			},
+			mmob: {
+				required: true,
+				mobilenumberOnly: true
+
+			},
+			defaultReal: {
+				equalTo: '#captcha_val'
+			}
+		},
+		messages: {
+			memail: "Please enter a valid email",
+			mmob: {
+				required: "Please enter a valid mobile number",
+				mobilenumberOnly : "Please enter numbers only"
+			},
+			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
+		},
+		onkeyup: function (elem) {
+
+			var element_id = $(elem).attr('id');
+
+			if (element_id == 'mname' || element_id == 'mmsg' || element_id == 'mcomp') {
+
+				var strv = $('#' + element_id).val();
+
+				$('#' + element_id).val(strv.charAt(0).toUpperCase() + strv.slice(1));
+
+			}
+
+			if (element_id == 'mmob') {
+
+				var tval = $('#' + element_id).val();
+				tvala = tval.split(' ');
+			}
+		},
+		success: function (elem) {
+
+
+		},
+		error: function (elem) {
+
+		}
+	});	
 
 	function bondList(data) {
 		var discoverBondTable = "";
