@@ -688,6 +688,7 @@ class Publicv extends CI_Controller {
 		$data['amount'] = $this->input->post('amount');
 		$data['maturity_date'] = $this->input->post('maturity_date');
 		$data['docRef'] = $this->input->post('docRef');
+		$data['contractAddr'] = $this->input->post('contractAddr');
 
 		$data['csrf'] = array();
 		

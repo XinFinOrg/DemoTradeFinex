@@ -275,6 +275,7 @@ $(function () {
 													"currency_supported":formDataObj.currency_supported,
 													"maturity_date":formDataObj.maturity_date,
 													"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
+													"contractAddr":resp.receipt.contractAddress,
 													"docRef":formDataObj.instrument+formDataObj.docRef,
 													csrf_name: csrf_value
 												}).then(resp => {
@@ -449,6 +450,10 @@ $(function () {
 					// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
 						if(resp.status == true){
 							hash = resp.hash;
+							key = resp.key;
+							
+							console.log(">>>>>>",ciphertext,"????????",originalText);
+
 							$.post("http://62.233.65.6:3110/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
@@ -496,6 +501,7 @@ $(function () {
 													"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
 													"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
 													"docRef":formDataObj.instrument+formDataObj.docRef,
+													"contractAddr":resp.receipt.contractAddress,
 													csrf_name: csrf_value
 												}).then(resp => {
 													// console.log("response : ",resp);

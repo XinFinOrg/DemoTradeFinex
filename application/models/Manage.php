@@ -1311,6 +1311,7 @@ $data1 = [
 				$data['tfi_amount'] = $data_add['amount'];
 				$data['tfi_maturityDate'] = $data_add['maturity_date'];
 				$data['tfi_docRef'] = $data_add['docRef'];
+				$data['tfi_contractAddr'] = $data_add['contractAddr'];
 			}
 			else{
 				$data['tfi_instrument'] = $data_add['instrument'];
@@ -1319,6 +1320,7 @@ $data1 = [
 				$data['tfi_amount'] = $data_add['amount'];
 				$data['tfi_maturityDate'] = $data_add['maturity_date'];
 				$data['tfi_docRef'] = $data_add['docRef'];
+				$data['tfi_contractAddr'] = $data_add['contractAddr'];
 			}
 			
 
