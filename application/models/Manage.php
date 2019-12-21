@@ -1312,6 +1312,8 @@ $data1 = [
 				$data['tfi_maturityDate'] = $data_add['maturity_date'];
 				$data['tfi_docRef'] = $data_add['docRef'];
 				$data['tfi_contractAddr'] = $data_add['contractAddr'];
+				$data['tfi_deployerAddr'] = $data_add['deployerAddr'];
+				$data['tfi_secretKey'] = $data_add['secretKey'];
 			}
 			else{
 				$data['tfi_instrument'] = $data_add['instrument'];
@@ -1321,6 +1323,8 @@ $data1 = [
 				$data['tfi_maturityDate'] = $data_add['maturity_date'];
 				$data['tfi_docRef'] = $data_add['docRef'];
 				$data['tfi_contractAddr'] = $data_add['contractAddr'];
+				$data['tfi_deployerAddr'] = $data_add['deployerAddr'];
+				$data['tfi_secretKey'] = $data_add['secretKey'];
 			}
 			
 
@@ -1334,10 +1338,21 @@ $data1 = [
 			return 1;
 			// }
 		}
+		
 		public function get_instrument(){
 
 			$this->db->select('*');
 			$this->db->from('{PRE}instrument');
+			$query = $this->db->get();
+
+			return $result = $query->result();
+		}
+		public function get_secretkey($contractAddr){
+
+			$this->db->select('*');
+			$this->db->from('{PRE}instrument');
+			$where = "tfi_contractAddr = '$contractAddr'";
+			$this->db->where($where);
 			$query = $this->db->get();
 
 			return $result = $query->result();

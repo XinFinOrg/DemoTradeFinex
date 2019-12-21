@@ -689,6 +689,10 @@ class Publicv extends CI_Controller {
 		$data['maturity_date'] = $this->input->post('maturity_date');
 		$data['docRef'] = $this->input->post('docRef');
 		$data['contractAddr'] = $this->input->post('contractAddr');
+		$data['deployerAddr'] = $this->input->post('deployerAddr');
+		$data['secretKey'] = $this->input->post('secretKey');
+
+		
 
 		$data['csrf'] = array();
 		
@@ -709,6 +713,9 @@ class Publicv extends CI_Controller {
 		if($action == 'adddetail'){
 			$result = $this->manage->add_instrument($data);
 		}
+		if($action == 'getpasskey'){
+			$key = $this->manage->get_secretkey($contractAddr);
+		}
 	
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
@@ -717,6 +724,35 @@ class Publicv extends CI_Controller {
 		
 	}
 	
+	public function get_passkey(){
+		
+		$data = array();
+
+		
+		if ($this->input->is_ajax_request()){
+			$pass = $this->input->post('pass');
+			$contractAddr = $this->input->post('contractAddr');
+		}
+
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+		
+		if($pass == 'getpasskey'){
+			$key = $this->manage->get_secretkey($contractAddr);
+			// log_message("info",json_encode($key));
+		}
+		foreach($key as $k){
+			$data['key'] = $k->tfi_secretKey;
+		}
+		echo json_encode($data);
+	}
+
 	public function financier(){
 		
 		$data = array();

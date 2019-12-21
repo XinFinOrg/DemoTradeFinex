@@ -125,7 +125,7 @@
                                         </span>
                                         <span class="form-control"></span>
                                     </div>
-                                    <p>* Origination & deal distribution fees 0.001% of instrument value. This document will be encrypted & stored on Blockchain Network. Viewable to funder only after owner's permission.</p>
+                                    <p>* Origination & deal distribution fees 0.001% of instrument value. This document will be encrypted & stored on Blockchain Network. Viewable to Financier's only</p>
                                     <label for="supporting-document" style="display:none" class ="error"id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" class="error"id="error1">Please file less than 5MB</label>
                                 </div>
@@ -170,13 +170,6 @@
                                     <label for="private-key">Enter Contract Address </label>
                                     <input type="text" class="form-control" id="contract_address" name="contract_address" autocomplete= "off"placeholder="Enter Contract Address">
                                 </div>
-                                
-
-                                <div class="form-group">
-                                    <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
-                                    <input type="text" class="form-control" id="privateKey" name="privateKey" autocomplete= "off"placeholder="Enter Private Key">
-                                </div>
-
                                 <div class="row">
 									<div class="form-group col-md-6 col-xs-6">
 										<button  id = "contractdoc" name = "suppliers" type="submit" class="btn btn-blue text-uppercase" >Submit</button>

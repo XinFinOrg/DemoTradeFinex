@@ -10,6 +10,9 @@ $(function () {
 	var jQueryScript = document.createElement('script');  
 	// jQueryScript.setAttribute('src','http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js');
 	document.head.appendChild(jQueryScript);
+	var site_url = $('#site_url').val();
+	var csrf_name = $('#csrf_tokens').attr('name');
+	var csrf_value = $('#csrf_tokens').val();
 
 	jQuery.validator.addMethod("LetterOnly", function (value, element) {
 		// allow any non-whitespace characters as the host part
@@ -246,6 +249,7 @@ $(function () {
 								// console.log("response : ",resp);
 								if(resp.status == true){
 									// console.log(">>>>",document.getElementById("createinstrument"))
+									passkey = resp.passKey,
 									hideLoader();
 									document.getElementById("createinstrument").style.display = "none";
 									document.getElementById("deploy").style.display = "block";
@@ -262,6 +266,7 @@ $(function () {
 										"docRef":formDataObj.instrument+formDataObj.docRef,
 										"country":formDataObj.pcountry.replace(/[+]/g," "),
 										"contractType":"commonInstrument",
+										"passKey" :passkey,
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
 											// console.log("response : ",resp);
@@ -275,9 +280,11 @@ $(function () {
 													"currency_supported":formDataObj.currency_supported,
 													"maturity_date":formDataObj.maturity_date,
 													"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
-													"contractAddr":resp.receipt.contractAddress,
+													"contractAddr":resp.receipt.contractAddress.toLowerCase(),
+													"deployerAddr":resp.deployerAddr.toLowerCase(),
+													"secretKey" : passkey,
 													"docRef":formDataObj.instrument+formDataObj.docRef,
-													csrf_name: csrf_value
+													"csrf_name": csrf_value
 												}).then(resp => {
 													// console.log("response : ",resp);
 												}).fail(err => {
@@ -450,9 +457,9 @@ $(function () {
 					// console.log('formDataObj>>>>>>>', JSON.stringify(coinData));
 						if(resp.status == true){
 							hash = resp.hash;
-							key = resp.key;
+							// key = resp.key;
 							
-							console.log(">>>>>>",ciphertext,"????????",originalText);
+							// console.log(">>>>>>",ciphertext,"????????",originalText);
 
 							$.post("http://62.233.65.6:3110/api/generateContract",{
 							"ipfsHash":hash,
@@ -469,6 +476,7 @@ $(function () {
 								// console.log("response : ",resp);
 								if(resp.status == true){
 									// console.log(">>>>",document.getElementById("createinstrument"))
+									passkey = resp.passKey,
 									hideLoader();
 									document.getElementById("createinstrument").style.display = "none";
 									document.getElementById("deploy").style.display = "block";
@@ -486,6 +494,7 @@ $(function () {
 										"country":formDataObj.pcountry.replace(/[+]/g," "),
 										"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
 										"contractType":"brokerInstrument",
+										"passKey" :passkey,
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
 											// console.log("response : ",resp);
@@ -501,8 +510,10 @@ $(function () {
 													"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
 													"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
 													"docRef":formDataObj.instrument+formDataObj.docRef,
-													"contractAddr":resp.receipt.contractAddress,
-													csrf_name: csrf_value
+													"contractAddr":resp.receipt.contractAddress.toLowerCase(),
+													"deployerAddr":resp.deployerAddr.toLowerCase(),
+													"secretKey" : passkey,
+													"csrf_name": csrf_value
 												}).then(resp => {
 													// console.log("response : ",resp);
 												}).fail(err => {
@@ -654,34 +665,13 @@ $(function () {
 					// Use the trimmed value for validation
 					return check;
 				}
-			},
-			private_key: {
-				required:true,
-				privateKey : true,
-				normalizer: function(value) {
-					// Update the value of the element
-					this.value = $.trim(value);
-					check = this.value;
-					if(check.startsWith("0x")){
-						check = check.slice(2);
-					}
-					else{
-						check = this.value;
-					}
-					// Use the trimmed value for validation
-					return check;
-				}
 			}
 		},
 		messages: {
 			contract_address:{
 				required : "Please enter valid contract address",
 				contractAddress : "Contract address is a combination of alphabets and numbers starting with xdc/0x"
-			},
-			private_key: {
-				required: "Please enter a private key",
-				privateKey : "Enter valid private key of 64 characters"
-			},
+			}
 		},
 		success: function (elem) {
 
@@ -711,49 +701,62 @@ $(function () {
 						}
 					})
 					// formDataObj.docRef = (new Date()).getTime();
-					console.log(">>>>",formDataObj);
+					// console.log(">>>>",formDataObj);
 					$.ajax({
-						type:"POST",
+						type: 'POST',
+						url: "get_passkey",
 						dataType:"json",
-						url:"http://62.233.65.6:3110/api/getDocHash",
-						data:{"contractAddr":formDataObj.contract_address,
-							  "privKey": formDataObj.privateKey.toString().startsWith("0x") ? formDataObj.privateKey : "0x"+formDataObj.privateKey,
-							  "contractType" : "commonInstrument"
-						},
-						success: resp => {
-							// console.log("response success: ",resp)
-						},
-						error: err =>{
-							console.log("response error: ",err)
+						data: { 'pass': 'getpasskey', 'contractAddr': formDataObj.contract_address,csrf_name:csrf_value},
+						success: function(result){
+							// var jsona = $.parseJSON(result);
+						//    console.log(result);
 						}
-					}).done(resp => {
-					// .then(resp => {
-						// console.log("response : ",resp);
-						console.log('formDataObj>>>>>>>', resp);
-						e.preventDefault();
-						if(resp.status == true){
-							const hashUrl = `https://ipfs-gateway.xinfin.network/${resp.ipfsHash}`;
-							const tHtml = `
-											<p>
-												<br><a href="${hashUrl}"target="_blank">${resp.ipfsHash}</a>
-											</p>
-											`
+					  }).done(resp => {
+						// console.log(resp);
+						$.ajax({
+							type:"POST",
+							dataType:"json",
+							url:"http://62.233.65.6:3110/api/getDocHash",
+							data:{"contractAddr":formDataObj.contract_address,
+								  "passKey": resp.key,
+								  "contractType" : "commonInstrument"
+							},
+							success: resp => {
+								// console.log("response success: ",resp)
+							},
+							error: err =>{
+								console.log("response error: ",err)
+							}
+						}).done(resp => {
+						// .then(resp => {
+							// console.log("response : ",resp);
+							// console.log('formDataObj>>>>>>>', resp);
+							e.preventDefault();
+							if(resp.status == true){
+								const hashUrl = `https://ipfs-gateway.xinfin.network/${resp.ipfsHash}`;
+								const tHtml = `
+												<p>
+													<br><a href="${hashUrl}"target="_blank">${resp.ipfsHash}</a>
+												</p>
+												`
+								hideLoader();
+								$("#hash").modal("show");
+								$('#hash').css('opacity', '1');
+								$('#hashData').html(tHtml);
+								$('#okBtn').click(function() {
+									$("#hash").modal("hide");
+									location.reload();
+								});
+							}
+									
+									
+						}).fail(error =>{
 							hideLoader();
-							$("#hash").modal("show");
-							$('#hash').css('opacity', '1');
-							$('#hashData').html(tHtml);
-							$('#okBtn').click(function() {
-								$("#hash").modal("hide");
-								location.reload();
-							});
-						}
-								
-								
-					}).fail(error =>{
-						hideLoader();
-						toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
-						setTimeout(location.reload.bind(location), 6000);
-					})
+							toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+							setTimeout(location.reload.bind(location), 6000);
+						})
+					  })
+					
 		}
 					
 			
@@ -780,34 +783,13 @@ $(function () {
 					// Use the trimmed value for validation
 					return check;
 				}
-			},
-			private_key: {
-				required:true,
-				privateKey : true,
-				normalizer: function(value) {
-					// Update the value of the element
-					this.value = $.trim(value);
-					check = this.value;
-					if(check.startsWith("0x")){
-						check = check.slice(2);
-					}
-					else{
-						check = this.value;
-					}
-					// Use the trimmed value for validation
-					return check;
-				}
 			}
 		},
 		messages: {
 			contract_address:{
 				required : "Please enter valid contract address",
 				contractAddress : "Contract address is a combination of alphabets and numbers starting with xdc/0x"
-			},
-			private_key: {
-				required: "Please enter a private key",
-				privateKey : "Enter valid private key of 64 characters"
-			},
+			}
 		},
 		success: function (elem) {
 
@@ -837,13 +819,24 @@ $(function () {
 						}
 					})
 					// formDataObj.docRef = (new Date()).getTime();
-					console.log(">>>>",formDataObj);
+					// console.log(">>>>",formDataObj);
 					$.ajax({
+						type: 'POST',
+						url: "get_passkey",
+						dataType:"json",
+						data: { 'pass': 'getpasskey', 'contractAddr': formDataObj.contract_address,csrf_name:csrf_value},
+						success: function(result){
+							// var jsona = $.parseJSON(result);
+						//    console.log(result);
+						}
+					  }).done(resp => {
+						// console.log(resp);
+						$.ajax({
 						type:"POST",
 						dataType:"json",
 						url:"http://62.233.65.6:3110/api/getDocHash",
 						data:{"contractAddr":formDataObj.contract_address,
-							  "privKey": formDataObj.privateKey.toString().startsWith("0x") ? formDataObj.privateKey : "0x"+formDataObj.privateKey,
+							  "passKey": resp.key,
 							  "contractType" : "brokerInstrument"
 						},
 						success: resp => {
@@ -852,34 +845,35 @@ $(function () {
 						error: err =>{
 							console.log("response error: ",err)
 						}
-					}).done(resp => {
-					// .then(resp => {
-						// console.log("response : ",resp);
-						console.log('formDataObj>>>>>>>', resp);
-						e.preventDefault();
-						if(resp.status == true){
-							const hashUrl = `https://ipfs-gateway.xinfin.network/${resp.ipfsHash}`;
-							const tHtml = `
-											<p>
-												<br><a href="${hashUrl}"target="_blank">${resp.ipfsHash}</a>
-											</p>
-											`
-							hideLoader();
-							$("#hash").modal("show");
-							$('#hash').css('opacity', '1');
-							$('#hashData').html(tHtml);
-							$('#okBtn').click(function() {
-								$("#hash").modal("hide");
-								location.reload();
-							});
-						}
-								
-								
-					}).fail(error =>{
-						hideLoader();
-						toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
-						setTimeout(location.reload.bind(location), 6000);
-					})
+							}).done(resp => {
+							// .then(resp => {
+								// console.log("response : ",resp);
+								console.log('formDataObj>>>>>>>', resp);
+								e.preventDefault();
+								if(resp.status == true){
+									const hashUrl = `https://ipfs-gateway.xinfin.network/${resp.ipfsHash}`;
+									const tHtml = `
+													<p>
+														<br><a href="${hashUrl}"target="_blank">${resp.ipfsHash}</a>
+													</p>
+													`
+									hideLoader();
+									$("#hash").modal("show");
+									$('#hash').css('opacity', '1');
+									$('#hashData').html(tHtml);
+									$('#okBtn').click(function() {
+										$("#hash").modal("hide");
+										location.reload();
+									});
+								}
+										
+										
+							}).fail(error =>{
+								hideLoader();
+								toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+								setTimeout(location.reload.bind(location), 6000);
+							})
+						})
 		}
 					
 			
