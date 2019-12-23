@@ -117,7 +117,7 @@
                                 </div> -->
 
                                 <div class="form-group">
-                                    <label for="supporting-document">Upload All Supporting Documents as one PDF file, Max 10 MB * </label>
+                                    <label for="supporting-document">Upload All Supporting Documents like Credit Report, KYC, Business Profile, as one PDF file, Max 10 MB *</label>
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                         <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
@@ -125,7 +125,7 @@
                                         </span>
                                         <span class="form-control"></span>
                                     </div>
-                                    <p>* Origination & deal distribution fees 0.001% of instrument value. This document will be encrypted & stored on Blockchain Network. Viewable to Financier's only</p>
+                                    <p>* Origination & deal distribution fees USD 10 worth XDC /Per instrument. This document will be encrypted & stored on Blockchain Network. Viewable to financier's only.</p>
                                     <label for="supporting-document" style="display:none" class ="error"id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" class="error"id="error1">Please file less than 5MB</label>
                                 </div>
