@@ -85,5 +85,24 @@ if (!function_exists('cmcModule'))
     }
 }
 
+if (!function_exists('getFinancier'))
+{
+    function getFinancier($key)
+    {
+        try{
+            $output = array();
+            $node = exec('cd && node index.js --privKey='.$key,$output);
+            // var_dump($output);
+            log_message('info','private key exist'.$node);
+            return $node;
+        
+        }
+        catch (Exception $e) {
+            log_message("error".$e->getMessage());
+            return '0';
+        }
+        
+    }
+}
 
 

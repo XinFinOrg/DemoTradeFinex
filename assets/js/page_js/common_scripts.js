@@ -5,6 +5,13 @@ function showLoader() {
 function hideLoader() {
 	document.getElementById("loader").style.display = "none";
 }
+function showLoader1() {
+	document.getElementById("tf-loader-wrapper").style.display = "block";
+}						
+
+function hideLoader1() {
+	document.getElementById("tf-loader-wrapper").style.display = "none";
+}
 
 // Split the array into halves and merge them recursively 
 function mergeSort (arr) {

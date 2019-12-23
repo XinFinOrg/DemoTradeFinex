@@ -1357,4 +1357,14 @@ $data1 = [
 
 			return $result = $query->result();
 		}
+		public function get_secretkey_by_docRef($docRef){
+
+			$this->db->select('*');
+			$this->db->from('{PRE}instrument');
+			$where = "tfi_docRef = '$docRef'";
+			$this->db->where($where);
+			$query = $this->db->get();
+
+			return $result = $query->result();
+		}
 	}

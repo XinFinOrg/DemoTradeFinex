@@ -758,6 +758,10 @@ class Publicv extends CI_Controller {
 		$data = array();
 		
 		$data['page'] = 'financier';
+
+		$action = $this->input->post('action');
+		$docRef = $this->input->post('docRef');
+
 		
 			
 		$data['csrf'] = array();
@@ -771,14 +775,13 @@ class Publicv extends CI_Controller {
 		
 		$instrument = $this->manage->get_instrument();
 		if($instrument && !empty($instrument) && is_array($instrument) && sizeof($instrument) <> 0){
-			$data['instrument'] = $instrument;	
-			log_message("info",json_encode($data['instrument']));
-			// foreach($instrument as $instru){
-			// 	echo $instru->tfi_instrument;
-			// 	die;
-			// }
-					
+			$data['instrument'] = $instrument;						
 		}
+
+		if($action == 'getaccess'){
+			log_message("info",">>>>",$docRef);
+		}
+
 				
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
@@ -786,6 +789,36 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/footer_commonn', $data);
 		$this->load->view('pages_scripts/common_scripts', $data);
 		$this->load->view('includes/footern');
+	}
+	public function get_access(){
+		
+		$data = array();
+		
+		$action = $this->input->post('action');
+		$docRef = $this->input->post('docRef');
+		$privkey = $this->input->post('privkey');
+		
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+		
+		if($action == 'getaccess'){
+			$data['privatekey'] = getFinancier($privkey);
+			$key = $this->manage->get_secretkey_by_docRef($docRef);
+			log_message("info",">>>>1".$result);
+		}
+		foreach($key as $k){
+			$data['key'] = $k->tfi_secretKey;
+			$data['contractAddr'] = $k->tfi_contractAddr;
+			log_message("info",">>>>".$data['contractAddr']);
+		}
+		echo json_encode($data);
+				
 	}
 	
 	public function contact(){
