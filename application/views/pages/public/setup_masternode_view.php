@@ -53,6 +53,13 @@
 <section id="videos" class="section tf-grey-bg">
     <div class="container">
         <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <p>Setting up masternode of XInFIn needs you to stake 10M of XDC coins that makes you trusted validator, so that our network of originators or funders can work with you and exchange the information.</p>
+                <p>You can at anytime resign the node and get your 10M XDc back to sell in secondary market and get the money back as per market rate of XDC at that time.</P>
+                <p>For more details, Click <a href="<?php echo base_url()?>publicv/xdc_liquidity">here.</p>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="section-title text-center">
                     <h2 class="mb-0">Video to Setup Masternode with just one Click</h2>
