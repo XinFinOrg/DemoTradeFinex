@@ -243,11 +243,11 @@ function passData(docRef){
                 dataType:"json",
                 data: {"action":"getaccess","docRef":docRef,"privkey":privkey}, // serializes the form's elements.
                 success: (resp =>{
-                    console.log(resp);
+                    // console.log(resp);
                 })// show response from the php script.
                 }).done(resp => {
-                                // console.log(resp);
-                    if(resp.privatekey == true){
+                                console.log(resp);
+                    if(resp.privatekey == "true"){
                         $.ajax({
                         type:"POST",
                         dataType:"json",
