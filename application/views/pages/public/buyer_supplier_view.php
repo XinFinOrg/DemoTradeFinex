@@ -113,7 +113,7 @@
                                 </div> -->
 
                                 <div class="form-group">
-                                    <label for="supporting-document">Upload All Supporting Documents like Credit Report, KYC, Business Profile, as one PDF file, Max 10 MB *</label>
+                                    <label for="supporting-document">Upload all supporting documents like Credit Report, KYC, and Business Profile as one PDF file.**Max file size 10 MB</label>
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                         <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
@@ -121,7 +121,7 @@
                                         </span>
                                         <span class="form-control"></span>
                                     </div>
-                                    <p>* Origination & deal distribution fees USD 10 worth XDC /Per instrument. This document will be encrypted & stored on Blockchain Network. Viewable to financier's only.</p>
+                                    <p>*Origination & deal distribution fee is USD 10 worth of XDC per instrument. This document will be encrypted & stored on our Blockchain Network and will be viewable to financiers only</p>
                                     <label for="supporting-document" style="display:none" class="error" id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" id="error1" class="error">Please file less than 5MB</label>
                                 </div>
@@ -130,9 +130,9 @@
                                     <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
                                     <input type="text" class="form-control" id="private_key" name="private_key" autocomplete= "off"placeholder="Enter Private Key">
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                  <span><a href="http://faucet.apothem.network/" target="_blank">Get Test XDC Tokens</a></span>
-                                </div>
+                                </div> -->
                                 <div class="row">
 									<div class="form-group col-md-6 col-xs-6">
 										<input type="hidden" name="action" value="adddetail" />
