@@ -217,7 +217,7 @@ $(function () {
 						var _custom = document.getElementById("custom");
 						// console.log(">>",$(_custom).val());
 						$.post("test2",{
-							'addr':resp.privatekey
+							'addr':resp.privatekey.toLowerCase()
 						}).then(resp => {
 							var jsona = $.parseJSON(resp);
 							// console.log("response : ",resp,jsona);
