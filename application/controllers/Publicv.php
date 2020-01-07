@@ -791,18 +791,7 @@ class Publicv extends CI_Controller {
 		);
 		
 		$data['csrf'] = $csrf;
-		$d;
-		$sum=0;
 		$instrument = $this->manage->get_instrument();
-		$data['count'] = $this->manage->get_instrument_count();
-		$receivable = $this->manage->get_receivable_instrument_sum();
-		foreach($receivable as $k){
-			$sum = floatval($sum) + floatval($k->tfi_amount);
-			
-		}
-		// echo $sum;
-		// die;
-		
 		if($instrument && !empty($instrument) && is_array($instrument) && sizeof($instrument) <> 0){
 			$data['instrument'] = $instrument;						
 		}
