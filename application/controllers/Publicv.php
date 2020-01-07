@@ -791,8 +791,18 @@ class Publicv extends CI_Controller {
 		);
 		
 		$data['csrf'] = $csrf;
-		
+		$d;
+		$sum=0;
 		$instrument = $this->manage->get_instrument();
+		$data['count'] = $this->manage->get_instrument_count();
+		$receivable = $this->manage->get_receivable_instrument_sum();
+		foreach($receivable as $k){
+			$sum = floatval($sum) + floatval($k->tfi_amount);
+			
+		}
+		// echo $sum;
+		// die;
+		
 		if($instrument && !empty($instrument) && is_array($instrument) && sizeof($instrument) <> 0){
 			$data['instrument'] = $instrument;						
 		}
@@ -3604,6 +3614,21 @@ class Publicv extends CI_Controller {
 		
 		$data['page'] = 'brokers';
 		$data['pcountry'] = 0;
+
+		if(!empty($_GET['item_number']) && !empty($_GET['tx']) && !empty($_GET['amt']) && !empty($_GET['cm']) && !empty($_GET['cc']) && !empty($_GET['st'])){ 
+			$dbdata = $this->manage->get_paypal_paymentby_tx($_GET['tx']);
+			$db = json_encode($dbdata);
+			if(sizeof($dbdata) > 0 ){
+				$this->session->set_flashdata('msg_type', 'error');
+				// redirect($this->uri->uri_string());
+				redirect(current_url());
+			}
+			else{
+				$result = $this->manage->add_paypal_details($_GET);
+				
+			}
+			
+		}
 
 		$action = $this->input->post('action');
 		$data['instrument'] = $this->input->post('instrument');
