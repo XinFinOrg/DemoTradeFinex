@@ -132,7 +132,7 @@
                                         </span>
                                         <span class="form-control"></span>
                                     </div>
-                                    <p>*Origination & deal distribution fee is USD 10 worth of XDC per instrument. This document will be encrypted & stored on our Blockchain Network and will be viewable to financiers only</p>
+                                    <p>*Origination & deal distribution fee is USD 10 worth of XDC per instrument (20% fees in XDC will be burn automatically). This document will be encrypted & stored on our Blockchain Network and will be viewable to financiers only</p>
                                     <label for="supporting-document" style="display:none" class="error" id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" id="error1" class="error">Please file less than 5MB</label>
                                 </div>
@@ -300,7 +300,7 @@
 		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
 			<div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" onclick="<?php echo base_url()?>/publicv/buyer_supplier" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                    <button type="button" class="close" onclick="location.reload()" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
                 </div>
 				<div class="modal-body text-center">
                         <div class="deployedData_modal_block">
