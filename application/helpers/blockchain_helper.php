@@ -93,7 +93,7 @@ if (!function_exists('getFinancier'))
             $output = array();
             $node = exec('cd && node index.js --privKey='.$key,$output);
             // var_dump($output);
-            log_message('info','private key exist'.$node);
+            // log_message('info','private key exist'.$node);
             return $node;
         
         }
@@ -113,7 +113,7 @@ if (!function_exists('getAddress'))
             $output = array();
             $node = exec('cd && node paypal.js --privKey='.$key,$output);
             // var_dump($output);
-            log_message('info','private key exist'.$node);
+            // log_message('info','private key exist'.$node);
             return $node;
         
         }

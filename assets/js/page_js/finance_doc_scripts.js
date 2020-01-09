@@ -193,12 +193,13 @@ $(function () {
 						var _custom = document.getElementById("custom");
 						// console.log(">>",$(_custom).val());
 						$.post("test2",{
-							'addr':resp.privatekey.toLowerCase()
+							'addr':resp.privatekey
 						}).then(resp => {
 							var jsona = $.parseJSON(resp);
 							// console.log("response : ",resp,jsona);
 							if(jsona.length > 0){
 								if(parseFloat(jsona[0].tfpp_doc_redem) < 1){
+									// console.log("response1 : ",jsona);
 									hideLoader();
 									$("#paypal").modal("show");
 									$('#paypal').css('opacity', '1');
