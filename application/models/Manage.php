@@ -1416,20 +1416,18 @@ $data1 = [
 			];
 			$addr = $data_add['cm'];
 			if($query->num_rows() > 0) {
-				foreach($result as $res){
-					if($res->tfpp_address == $addr){
-						// log_message("info","check1");
+				if($result->tfpp_address == $addr){
+						log_message("info","check1");
 						$where = "tfpp_address = '$addr'";
 						$this->db->where($where);
 						$res = $this->db->update('{PRE}paypal_payment', $data2);
 					}
 					else{
-						// log_message("info","check");
+						log_message("info","check");
 						$this->db->insert('{PRE}paypal_payment', $data1);
 						$id = $this->db->insert_id();
 					}
-				}
-			} else {
+				} else {
 				$this->db->insert('{PRE}paypal_payment', $data1);
 				$id = $this->db->insert_id();
 			}
