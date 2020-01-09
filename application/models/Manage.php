@@ -1416,14 +1416,16 @@ $data1 = [
 			$this->db->where($where);
 			$query = $this->db->get();
 			$result = $query->result();
-			log_message("info","getresult".json_encode($result)."////".$query->result());
+			// log_message("info","getresult".json_encode($result)."////".$query->result());
 			
 			if($query->num_rows() > 0) {
-				log_message("info","check1");
+				// log_message("info","check1");
+				$where = "tfpp_address = '$addr'";
+				$this->db->where($where);
 				$res = $this->db->update('{PRE}paypal_payment', $data2);
 			}
 			else{
-				log_message("info","check");
+				// log_message("info","check");
 				$this->db->insert('{PRE}paypal_payment', $data1);
 				$id = $this->db->insert_id();
 			}
