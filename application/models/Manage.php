@@ -1462,5 +1462,65 @@ $data1 = [
 			// log_message("info","<<2.".json_encode($query->result()));
 			return $result = $query->result();
 		}
+		public function get_sblc_instrument_sum(){
+
+			$this->db->select('tfi_amount,tfi_currency');
+			$this->db->from('{PRE}instrument');
+			$where = "tfi_instrument = 'SBLC'";
+			$this->db->where($where);
+			$query = $this->db->get();
+			// log_message("info","<<2.".json_encode($query->result()));
+			return $result = $query->result();
+		}
+		public function get_loc_instrument_sum(){
+
+			$this->db->select('tfi_amount,tfi_currency');
+			$this->db->from('{PRE}instrument');
+			$where = "tfi_instrument = 'LC'";
+			$this->db->where($where);
+			$query = $this->db->get();
+			// log_message("info","<<2.".json_encode($query->result()));
+			return $result = $query->result();
+		}
+		public function get_oth_instrument_sum(){
+
+			$this->db->select('tfi_amount,tfi_currency');
+			$this->db->from('{PRE}instrument');
+			$where = "tfi_instrument = 'OTH'";
+			$this->db->where($where);
+			$query = $this->db->get();
+			// log_message("info","<<2.".json_encode($query->result()));
+			return $result = $query->result();
+		}
+		public function get_wr_instrument_sum(){
+
+			$this->db->select('tfi_amount,tfi_currency');
+			$this->db->from('{PRE}instrument');
+			$where = "tfi_instrument = 'WR'";
+			$this->db->where($where);
+			$query = $this->db->get();
+			// log_message("info","<<2.".json_encode($query->result()));
+			return $result = $query->result();
+		}
+		public function get_pay_instrument_sum(){
+
+			$this->db->select('tfi_amount,tfi_currency');
+			$this->db->from('{PRE}instrument');
+			$where = "tfi_instrument = 'PAY'";
+			$this->db->where($where);
+			$query = $this->db->get();
+			// log_message("info","<<2.".json_encode($query->result()));
+			return $result = $query->result();
+		}
+		public function get_bg_instrument_sum(){
+
+			$this->db->select('tfi_amount,tfi_currency');
+			$this->db->from('{PRE}instrument');
+			$where = "tfi_instrument = 'BG'";
+			$this->db->where($where);
+			$query = $this->db->get();
+			// log_message("info","<<2.".json_encode($query->result()));
+			return $result = $query->result();
+		}
 		
 	}

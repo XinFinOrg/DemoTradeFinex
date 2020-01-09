@@ -125,3 +125,30 @@ if (!function_exists('getAddress'))
     }
 }
 
+if (!function_exists('getConversion'))
+{
+    function getConversion($currency)
+    {
+        try{
+            $CI =& get_instance();
+            $CI->load->library('curl');
+            
+            $rcurlxdc = $CI->curl->simple_get('https://free.currconv.com/api/v7/convert?q='. $currency .'_USD&compact=ultra&apiKey=d1688fd33c2d3d944d5d');
+            
+            if($rcurlxdc){
+                $rcurlxdca = json_decode($rcurlxdc);
+                // log_message("info","Currency conversion".$rcurlxdca);
+            }
+		
+		return $rcurlxdca;
+    
+        
+        }
+        catch (Exception $e) {
+            log_message("error".$e->getMessage());
+            return '0';
+        }
+        
+    }
+}
+

@@ -18,6 +18,37 @@
 				</div>
 			</div>
 		</div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group col-md-3">
+                <div class="section-title text-center">
+                    <h3 class="mb-20">Total active Instruments for Funding</h3><h4 class="mb-20"><?php echo $count ?></h4>
+                </div>
+                </div>
+                <div class="form-group col-md-9">
+                <h3 class="mb-20">Total Value of Trade Instruments Live worth USD</h3>
+                <div class="form-group col-md-4">
+                    <div class="section-title text-left">
+                    <h4 class="mb-20">Receviables<br><?php echo $rec_sum ?></h4>
+                    <h4 class="mb-20">Letter of Credit<br><?php echo $loc_sum ?></h4>
+                    <h4 class="mb-20">Bank Guarantees<br><?php echo $bg_sum ?></h4>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <div class="section-title text-left">
+                    <h4 class="mb-20">SBLC<br><?php echo $sblc_sum ?></h4>
+                    <h4 class="mb-20">Warehouse Receipt<br><?php echo $wr_sum ?></h4>
+                    <h4 class="mb-20">Payable<br><?php echo $pay_sum ?></h4>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <div class="section-title text-left">
+                    <h4 class="mb-20">Other<br><?php echo $oth_sum ?></h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
 
 		<div class="row">
                     <div class="col-md-12">
