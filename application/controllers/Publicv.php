@@ -799,6 +799,7 @@ class Publicv extends CI_Controller {
 		$data['wr_sum']=0;
 		$data['bg_sum']=0;
 		$data['oth_sum']=0;
+		$data['tot_sum']=0;
 		$usd_amount = 0;
 		$date = date('Y-m-d');
 		$instrument = $this->manage->get_instrument($date);
@@ -1210,7 +1211,8 @@ class Publicv extends CI_Controller {
 			
 			
 		}
-		// echo $data['loc_sum'];
+		$data['tot_sum'] = floatval($data['rec_sum'] + $data['wr_sum'] + $data['oth_sum'] + $data['loc_sum'] + $data['sblc_sum'] + $data['pay_sum'] + $data['bg_sum']);
+		// echo $data['tot_sum'] = $data['rec_sum'] + $data['wr_sum'] + $data['oth_sum'] + $data['loc_sum'] + $data['sblc_sum'] + $data['pay_sum'] + $data['bg_sum'];
 		// die;
 		
 		if($instrument && !empty($instrument) && is_array($instrument) && sizeof($instrument) <> 0){
