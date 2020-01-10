@@ -22,6 +22,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="form-group col-md-3">
                 <div class="section-title text-center">
+                    <h3 class="mb-20">Total Instruments for Funding</h3><h4 class="mb-20"><?php echo $total_count ?></h4>
                     <h3 class="mb-20">Total active Instruments for Funding</h3><h4 class="mb-20"><?php echo $count ?></h4>
                 </div>
                 </div>
@@ -337,4 +338,11 @@ function passData(docRef){
     });
 
 }
+$("#invoice_listing").DataTable({
+		"bSort": false,
+		"dom": "Bfrtip",
+		"bDestroy": true,
+		"pageLength": 10
+		
+	});
 </script>

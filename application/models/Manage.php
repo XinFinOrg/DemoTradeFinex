@@ -1339,10 +1339,10 @@ $data1 = [
 			// }
 		}
 		
-		public function get_instrument(){
+		public function get_instrument($date){
 
 			$this->db->select('*');
-			$this->db->from('{PRE}instrument')->order_by('tfi_createdAt', 'desc');
+			$this->db->from('{PRE}instrument')->where('tfi_maturityDate >=',$date)->order_by('tfi_createdAt', 'desc');
 			$query = $this->db->get();
 
 			return $result = $query->result();
@@ -1448,6 +1448,16 @@ $data1 = [
 
 			$this->db->select('*');
 			$this->db->from('{PRE}instrument');
+			$query = $this->db->get();
+
+			return $result = $query->num_rows();
+		}
+		public function get_instrument_active_count($date){
+			
+			$this->db->select('tfi_maturityDate');
+			$this->db->from('{PRE}instrument');
+			$where = "tfi_maturityDate >='$date'";
+			$this->db->where($where);
 			$query = $this->db->get();
 
 			return $result = $query->num_rows();

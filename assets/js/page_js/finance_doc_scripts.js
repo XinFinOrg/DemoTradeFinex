@@ -716,7 +716,7 @@ $(function () {
 	});
 
 	$('#maturity_date').datepicker({
-			format: "dd-mm-yyyy",
+			format: "yyyy-mm-dd",
 			minDate:0,
 			autoclose: true,
 			// todayHighlight: true,

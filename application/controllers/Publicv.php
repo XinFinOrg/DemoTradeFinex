@@ -800,8 +800,10 @@ class Publicv extends CI_Controller {
 		$data['bg_sum']=0;
 		$data['oth_sum']=0;
 		$usd_amount = 0;
-		$instrument = $this->manage->get_instrument();
-		$data['count'] = $this->manage->get_instrument_count();
+		$date = date('Y-m-d');
+		$instrument = $this->manage->get_instrument($date);
+		$data['count'] = $this->manage->get_instrument_active_count($date);
+		$data['total_count'] = $this->manage->get_instrument_count();
 		$receivable = $this->manage->get_receivable_instrument_sum();
 		foreach($receivable as $k){
 			if($k->tfi_currency == "USD"){

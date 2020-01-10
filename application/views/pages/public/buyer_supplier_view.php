@@ -105,8 +105,8 @@
                                     <!--<label for="maturity-date">Instrument Maturity Date</label>
                                     <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">-->
                                     <label for="maturity-date">Instrument Maturity Date</label>
-                                    <div id="date" data-date-format="dd-mm-yyyy">
-                                    <input  type="text" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd-mm-yyyy"autocomplete="off">
+                                    <div id="date" data-date-format="yyyy-mm-dd">
+                                    <input  type="text" class="form-control" id="maturity_date" name="maturity_date" placeholder="yyyy-mm-dd"autocomplete="off">
                                     <div class="input-group-addon" style="display:none"><span class="fa fa-calendar"></span></div>
                                     </div>
                                 </div>
