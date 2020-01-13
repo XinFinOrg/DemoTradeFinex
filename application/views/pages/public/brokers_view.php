@@ -132,7 +132,7 @@
                                         </span>
                                         <span class="form-control"></span>
                                     </div>
-                                    <p>*Apply for Finance & deal distribution fee is USD 10 worth of XDC per instrument (20% fees in XDC will be burn automatically). This document will be encrypted & stored on our Blockchain Network and will be viewable to financiers only.</p>
+                                    <p>*Application & deal distribution fee is USD 10 worth of XDC per instrument (20% fees in XDC will burn automatically). This document will be encrypted & stored on XinFin Blockchain Network and will be viewable to financiers only.</p>
                                     <label for="supporting-document" style="display:none" class ="error"id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" class="error"id="error1">Please file less than 5MB</label>
                                 </div>
