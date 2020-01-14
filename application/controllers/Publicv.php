@@ -777,6 +777,7 @@ class Publicv extends CI_Controller {
 		
 		
 		if($action == 'send_mail'){
+			$data['result'] = add_funding_details($data);
 			// echo json_encode($data);
 			// die;
 			$config = array();
@@ -788,7 +789,7 @@ class Publicv extends CI_Controller {
 			
 			$suser = $this->manage->get_superadmin();
 			
-			$from_email = 'mansi.vora@tradefinex.org'; 
+			$from_email = 'mansi@xinfin.org'; 
 			$to_email = $this->input->post('memail'); 
 					
 			$this->email->from($from_email, 'Admin Tradefinex'); 
@@ -796,7 +797,7 @@ class Publicv extends CI_Controller {
 			$this->email->bcc($from_email);
 			$this->email->set_mailtype('html');
 			$this->email->set_newline("\r\n");
-			$this->email->subject('Account Activation by Tradefinex'); 
+			$this->email->subject('Apply for Funding'); 
 			$mail_body = $this->load->view('templates/mails/funding_mail_body', $data, TRUE);
 			$this->email->message($mail_body);
 		
@@ -805,7 +806,7 @@ class Publicv extends CI_Controller {
 			if($this->email->send()){ 
 				$this->session->set_flashdata('msg_type', 'success');
 				$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Sent</h4>"); 
-				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Thank you for your query. Your query has been received. Our customer support team will respond to your query as soon as possible.</h3>"); 
+				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Thank you for your requirement. Your requirement has been received. Our team will respond to your requirement as soon as possible.</h3>"); 
 			}	
 			else{ 
 				$this->session->set_flashdata('msg_type', 'error');

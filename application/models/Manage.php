@@ -1532,5 +1532,23 @@ $data1 = [
 			// log_message("info","<<2.".json_encode($query->result()));
 			return $result = $query->result();
 		}
+		public function add_funding_details($data_add){
+
+			$data = array();
+			
+			$data['tfbs_email'] = $data_add['email'];
+			$data['tfbs_fullName'] = $data_add['name'];
+			$data['tfbs_mobileNo'] = $data_add['mobile'];
+			$data['tfbs_companyName'] = $data_add['compN'];
+			$data['tfbs_loanp'] = $data_add['loanp'];
+			$data['tfbs_amount'] = $data_add['amount'];
+			$data['tfbs_currency'] = $data_add['currency'];
+			
+			
+			$this->db->insert('{PRE}funding', $data);
+			$id = $this->db->insert_id();
+		
+			return 1;
+		}
 		
 	}

@@ -12,11 +12,11 @@
 				<div class="mail_template_header">
 					<div class="mail_template_header_logo"> <img src="<?=base_url()?>assets/images/icon/logo.png" alt="logo"> </div>
 				</div>
-				<div class="mail_template_banner"> <img src="<?=base_url()?>assets/images/img/welcome_mail.jpg" alt="img"> </div>
+				<div class="mail_template_banner"> <img src="<?=base_url()?>assets/images/img/explore_back.jpg" alt="img"> </div>
 				<div class="mail_template_body">
 					<p>Hi <?=ucwords($name);?>,</p>
 					<p>Thank you for applying for financing at TradeFinex. Your requirement is created and we will share your details with financiers.</p>
-					<p>We will notify you, as soon as financier is ready to invest.</p>
+					<p>We will notify you, as soon as possible.</p>
 				</div>
 				<div class="mail_template_footer">
 					<div class="mail_template_footer_content">
