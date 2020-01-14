@@ -89,7 +89,7 @@
 									</div>
 									
 									<div id="currency_supported" class="form-group col-md-6">
-                                        <label for="currency">Currency</label>
+                                        <label for="currency">Currency<sup>*</sup></label>
                                         <select class="form-control" id="currency" name="currency">
                                             <option value="" disabled="" selected="">Select Currency</option>
                                             <option value="USD">USD</option>
@@ -107,8 +107,7 @@
                                             <div class="help-block col-xs-12 col-sm-reset inline"><font color="red" style="margin-left: -10px;">Enter Letters Shown Above.</font>
                                             </div>
 									    </div>
-								</div>
-                                <div class="form-group">
+								
 									<input type="hidden" name="action" value="send_mail" /><input type="hidden" id="captcha_val" />
 									<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
 								</div>
