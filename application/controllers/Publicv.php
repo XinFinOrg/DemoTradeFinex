@@ -789,7 +789,7 @@ class Publicv extends CI_Controller {
 			
 			$suser = $this->manage->get_superadmin();
 			
-			$from_email = 'mansi@xinfin.org'; 
+			$from_email = 'info@tradefinex.org'; 
 			$to_email = $this->input->post('memail'); 
 					
 			$this->email->from($from_email, 'Admin Tradefinex'); 
