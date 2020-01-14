@@ -671,7 +671,7 @@ class Publicv extends CI_Controller {
 	
 	}
 	
-	public function buyer_supplier_new(){
+	public function buyer_supplier(){
 		
 		$data = array();
 		
@@ -750,7 +750,7 @@ class Publicv extends CI_Controller {
 		
 	}
 
-	public function buyer_supplier(){
+	public function buyersupplier(){
 		
 		$data = array();
 		

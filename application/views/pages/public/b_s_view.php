@@ -96,6 +96,7 @@
                                             <option value="GBP">GBP</option>
                                             <option value="JPY">JPY</option>
                                             <option value="EUR">EUR</option>
+                                            <option value="SGD">SGD</option>
                                             <option value="XDC">XDC</option>
                                         </select>
                                     </div>
@@ -136,7 +137,7 @@
 <script>
 function subcontact() {
 
-    var myurl = '<?php echo base_url()?>publicv/buyer_supplier';// the script where you handle the form input.
+    var myurl = '<?php echo base_url()?>publicv/buyersupplier';// the script where you handle the form input.
 
     // alert(myurl);
 

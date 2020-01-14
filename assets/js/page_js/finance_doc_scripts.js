@@ -111,6 +111,18 @@ $(function () {
 		return this.optional( element ) || /^[0-9a-z]{40}$/.test( value );
 	  }, 'This field allows only number from 0-9 and alphabets from a-z');
 
+	//Captcha
+	var captchav = $('#defaultReal').attr('captchav');
+
+	if (typeof captchav === "undefined") {
+		// ...
+	} else {
+
+		var decryptval = CryptoJS.AES.decrypt($('#defaultReal').attr('captchav'), "/" + 5381).toString(CryptoJS.enc.Utf8);
+		$('#captcha_val').val(decryptval);
+	}
+
+
 	//Buyer-Supplier Form
 	$("#suppliers_form").validate({
 		rules: {
