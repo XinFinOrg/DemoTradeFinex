@@ -1,6 +1,6 @@
 const Web3 = require("web3");
 const axios = require("axios");
-const config = require("./config");
+const config = require("./config_burn_demo");
 const argv = require("yargs").argv;
 const _ = require("lodash");
 

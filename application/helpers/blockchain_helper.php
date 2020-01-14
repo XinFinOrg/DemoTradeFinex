@@ -91,7 +91,7 @@ if (!function_exists('getFinancier'))
     {
         try{
             $output = array();
-            $node = exec('cd && node index.js --privKey='.$key,$output);
+            $node = exec('cd node_scripts && node index.js --privKey='.$key,$output);
             // var_dump($output);
             // log_message('info','private key exist'.$node);
             return $node;
@@ -111,7 +111,7 @@ if (!function_exists('getAddress'))
     {
         try{
             $output = array();
-            $node = exec('cd && node paypal.js --privKey='.$key,$output);
+            $node = exec('cd node_scripts && node paypal.js --privKey='.$key,$output);
             // var_dump($output);
             // log_message('info','private key exist'.$node);
             return $node;
@@ -142,6 +142,26 @@ if (!function_exists('getConversion'))
 		
 		return $rcurlxdca;
     
+        
+        }
+        catch (Exception $e) {
+            log_message("error".$e->getMessage());
+            return '0';
+        }
+        
+    }
+}
+
+if (!function_exists('burnXDC'))
+{
+    function burnXDC($amount)
+    {
+        try{
+            $output = array();
+            $node = exec('cd node_scripts && node paypal_burn.js --amnt='.$amount,$output);
+            // var_dump($output);
+            log_message('info','Burn'.$output.json_encode($output));
+            return $output;
         
         }
         catch (Exception $e) {

@@ -671,7 +671,7 @@ class Publicv extends CI_Controller {
 	
 	}
 	
-	public function buyer_supplier(){
+	public function buyer_supplier_new(){
 		
 		$data = array();
 		
@@ -687,8 +687,15 @@ class Publicv extends CI_Controller {
 				redirect(current_url());
 			}
 			else{
+				$_GET['amt'] = 1;
 				$result = $this->manage->add_paypal_details($_GET);
-				
+				$burn = burnXDC($_GET['amt']);
+				foreach($burn as $b){
+					echo $b;
+					die;
+					log_message("info","burning percent".$b->status);
+				}
+				log_message("info","::::::".$burn.$_GET['amt']);
 			}
 			
 		}
@@ -739,6 +746,81 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
 		$this->load->view('pages/public/buyer_supplier_view', $data);
+		
+		
+	}
+
+	public function buyer_supplier(){
+		
+		$data = array();
+		
+		$data['page'] = 'b_s';
+				
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+		
+		$action = $this->input->post('action');
+		$data['email'] = $this->input->post('memail');
+		$data['name'] = $this->input->post('mname');
+		$data['mobile'] = $this->input->post('mmob');
+		$data['compN'] = $this->input->post('mcomp');
+		$data['loanp'] = $this->input->post('loanp');
+		$data['amount'] = $this->input->post('amount');
+		$data['currency'] = $this->input->post('currency');
+
+		
+		
+		if($action == 'send_mail'){
+			// echo json_encode($data);
+			// die;
+			$config = array();
+			$config = $this->config->item('$econfig');
+						
+			$this->email->initialize($config);
+			// $this->email->cc('another@another-example.com');
+			// $this->email->bcc('them@their-example.com');
+			
+			$suser = $this->manage->get_superadmin();
+			
+			$from_email = 'mansi.vora@tradefinex.org'; 
+			$to_email = $this->input->post('memail'); 
+					
+			$this->email->from($from_email, 'Admin Tradefinex'); 
+			$this->email->to($to_email);
+			$this->email->bcc($from_email);
+			$this->email->set_mailtype('html');
+			$this->email->set_newline("\r\n");
+			$this->email->subject('Account Activation by Tradefinex'); 
+			$mail_body = $this->load->view('templates/mails/funding_mail_body', $data, TRUE);
+			$this->email->message($mail_body);
+		
+            		
+			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
+			if($this->email->send()){ 
+				$this->session->set_flashdata('msg_type', 'success');
+				$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Sent</h4>"); 
+				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Thank you for your query. Your query has been received. Our customer support team will respond to your query as soon as possible.</h3>"); 
+			}	
+			else{ 
+				$this->session->set_flashdata('msg_type', 'error');
+				$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Can't be Sent</h4>"); 
+				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Error in sending Email. Please try again.</h3>");
+			}
+			
+			redirect(base_url().'thankyouc');
+		}
+		$this->load->view('includes/headern', $data);
+		$this->load->view('includes/header_publicn', $data);
+		$this->load->view('pages/public/b_s_view', $data);
+		$this->load->view('includes/footer_commonn', $data);
+		$this->load->view('pages_scripts/finance_doc_scripts', $data);
+		$this->load->view('includes/footern');
 		
 		
 	}
