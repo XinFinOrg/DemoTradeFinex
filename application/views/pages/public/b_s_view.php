@@ -3,8 +3,8 @@
 
 <section class="tf-inner-banner">
     <div class="container">
-        <h3>Contact TradeFinex</h3>
-        <h4>Empowering Trade Finance Ecosystem.</h4>
+    <h3>Buyers / Suppliers</h3>
+    <h4>Improve cash flow. Easy Access to Trade Financing.</h4>
     </div>
 </section>
 
