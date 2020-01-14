@@ -82,13 +82,7 @@
                                     </div>
                                 </div>
 								<div class="row">
-									<div class="form-group col-md-6">
-										<label for="amount">Loan Amount Required<sup>*</sup></label>
-											<input class="form-control" id="amount" name="amount"placeholder="Loan Amount" type="text" tabindex="6" autocomplete="off"required data-required-error=""  aria-required="true" />
-										</label>
-									</div>
-									
-									<div id="currency_supported" class="form-group col-md-6">
+                                <div id="currency_supported" class="form-group col-md-6">
                                         <label for="currency">Currency<sup>*</sup></label>
                                         <select class="form-control" id="currency" name="currency">
                                             <option value="" disabled="" selected="">Select Currency</option>
@@ -100,6 +94,13 @@
                                             <option value="XDC">XDC</option>
                                         </select>
                                     </div>
+									<div class="form-group col-md-6">
+										<label for="amount">Loan Amount Required<sup>*</sup></label>
+											<input class="form-control" id="amount" name="amount"placeholder="Loan Amount" type="text" tabindex="6" autocomplete="off"required data-required-error=""  aria-required="true" />
+										</label>
+									</div>
+									
+									
                                     </div>
 								<div class="form-group">
                                     <label for="defaultReal">Enter Captcha <sup>*</sup></label>
