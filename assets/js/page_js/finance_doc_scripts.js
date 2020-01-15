@@ -18,7 +18,7 @@ $(function () {
 
 	jQuery.validator.addMethod("LetterOnly", function (value, element) {
 		// allow any non-whitespace characters as the host part
-		return this.optional(element) || /^([a-zA-Z]+\s)*([a-zA-Z])+$/.test(value);
+		return this.optional(element) || /^([a-zA-Z]+\s)*[a-zA-Z0-9]+$/.test(value);
 	}, 'The text must start with a letter and should not contain special characters.');
 
 	jQuery.validator.addMethod("LettersWithDotHiphen", function (value, element) {
@@ -30,7 +30,6 @@ $(function () {
 		// allow any non-whitespace characters as the host part
 		return this.optional(element) || /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$#!&*%])[0-9a-zA-Z@$#!&*%]{8,}$/.test(value);
 	}, 'The text must start with a letter and should contain 1 uppercase,1 number and 1 special character');
-
 
 	jQuery.validator.addMethod("EmailGeneral", function (value, element) {
 		var re = /^([a-zA-Z])(.*[a-z])(.*[a-z0-9_\+-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*\.([a-z]{2,})$/;
@@ -56,7 +55,7 @@ $(function () {
 
 	jQuery.validator.addMethod("alphanumericOnly", function (value, element) {
 		// allow any non-whitespace characters as the host part
-		return this.optional(element) || /^([a-zA-Z])([a-zA-Z0-9\s])+$/i.test(value);
+		return this.optional(element) || /^([a-zA-Z]+\s)*[a-zA-Z0-9]+$/i.test(value);
 	}, 'The text must combination of letter and numbers; Not started with number; should not contain special characters');
 
 	jQuery.validator.addMethod("signedDecNumberOnly", function (value, element) {
