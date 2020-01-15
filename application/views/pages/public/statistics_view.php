@@ -3,8 +3,8 @@
 
 <section class="tf-inner-banner">
 	<div class="container">
-		<h3>Financiers</h3>
-		<h4>Expand your trade finance portfolio.</h4>
+		<h3>Statistics</h3>
+		<h4>Real time, Trade and Finance FUnding Data</h4>
 	</div>
 </section>
 
@@ -32,19 +32,19 @@
                 <p id="number1" class="counter"><?php echo $total_count ?></p>
                 <span></span>
                 <p>Total Instruments For Funding</p>
-				<p class="small">(Amount in USD)</p>
+				<!-- <p class="small">(Amount in USD)</p> -->
             </div>
 			<div class="item single">
                 <p id="number2" class="counter"><?php echo $count ?></p>
                 <span></span>
                 <p>Active Instruments For Funding</p>
-				<p class="small">(Amount in USD)</p>
+				<!-- <p class="small">(Amount in USD)</p> -->
             </div>
 			<div class="item single">
                 <p id="number3" class="counter"><?php echo $tot_sum ?></p>
                 <span></span>
                 <p>Total Value of Trade Instruments</p>
-				<p class="small">(Amount in USD)</p>
+				<!-- <p class="small">(Amount in USD)</p> -->
             </div>
         </div>
     </div>
