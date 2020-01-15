@@ -794,8 +794,8 @@ class Publicv extends CI_Controller {
 		// die;
 		
 		if($action == 'send_mail'){
-			echo (">>>".$data['country'].$split[1]);
-			die;
+			// echo (">>>".$data['country'].$split[1]);
+			// die;
 			$data['result'] = $this->manage->add_funding_details($data);
 			// echo json_encode($data);
 			// die;
