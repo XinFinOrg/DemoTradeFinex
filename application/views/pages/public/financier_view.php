@@ -211,7 +211,7 @@
                                                                         <tr>
                                                                     <?php
                                                                     foreach ($buyersupplier as $bs) { 
-                                                                        if($bs->tfbs_loanp == "REC"){?>
+                                                                        ?>
                                                                     <td class="bold"><?php 
                                                                     if($bs->tfbs_loanp == "SBLC")
                                                                     {  echo 'SBLC'; 
@@ -242,7 +242,7 @@
                                                                     <td><?php echo $bs->tfbs_maturityDate ?></td>
                                                                     <td><button class="btn btn-blue" onclick="passData('<?php echo $bs->tfbs_docRef ?>')"><span>Get Document Access</span></button></td>
                                                                     </tr>
-                                                                    <?php }}?>
+                                                                    <?php }?>
                                                             </tbody>
                                                         </table>
                                                     </div>
