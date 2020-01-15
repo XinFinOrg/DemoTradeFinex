@@ -1551,6 +1551,7 @@ $data1 = [
 			$data['tfbs_docRef'] = $data_add['docRef'];
 			$data['tfbs_loanp'] = $data_add['loanp'];
 			$data['tfbs_amount'] = $data_add['amount'];
+			$data['tfbs_country'] = $data_add['country'];
 			$data['tfbs_currency'] = $data_add['currency'];
 			$data['tfbs_maturityDate'] = $data_add['maturityDate'];
 			
