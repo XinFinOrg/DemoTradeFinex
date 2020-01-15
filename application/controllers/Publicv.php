@@ -766,7 +766,7 @@ class Publicv extends CI_Controller {
 		$data['csrf'] = $csrf;
 		
 		$action = $this->input->post('action');
-		$data['email'] = $this->input->post('memail');
+		$data['email'] = strtolower($this->input->post('memail'));
 		$data['name'] = $this->input->post('mname');
 		$data['mobile'] = $this->input->post('mmob');
 		$data['compN'] = $this->input->post('mcomp');
@@ -1310,6 +1310,458 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
 		$this->load->view('pages/public/financier_view', $data);
+		$this->load->view('includes/footer_commonn', $data);
+		$this->load->view('pages_scripts/common_scripts', $data);
+		$this->load->view('includes/footern');
+	}
+	public function statistics(){
+		
+		$data = array();
+		
+		$data['page'] = 'statistics';
+
+			
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+		$d;
+		$data['rec_sum']=0;
+		$data['loc_sum']=0;
+		$data['pay_sum']=0;
+		$data['sblc_sum']=0;
+		$data['wr_sum']=0;
+		$data['bg_sum']=0;
+		$data['oth_sum']=0;
+		$data['tot_sum']=0;
+		$usd_amount = 0;
+		$date = date('Y-m-d');
+		// $instrument = $this->manage->get_instrument($date);
+		$data['count'] = $this->manage->get_instrument_active_count($date);
+		$data['total_count'] = $this->manage->get_instrument_count();
+		$receivable = $this->manage->get_receivable_instrument_sum();
+		foreach($receivable as $k){
+			if($k->tfi_currency == "USD"){
+				$data['rec_sum'] = floatval($data['rec_sum']) + floatval($k->tfi_amount);
+			}
+			elseif($k->tfi_currency == "XDC"){
+				$show = cmcModule();
+				foreach($show as $sh) {
+				
+				log_message("info","XDC_USD".$sh->price_usd) ;
+				$data['price'] = $sh->price_usd;
+				
+				}
+				$usd_amount = floatval($data['price']) * floatval($k->tfi_amount);
+				$data['rec_sum'] = floatval($data['rec_sum']) + floatval($usd_amount);
+				
+				
+			}
+			elseif($k->tfi_currency == "GBP"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","GBP_USD".$sh) ;
+				$data['price'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price']) * floatval($k->tfi_amount);
+				$data['rec_sum'] = floatval($data['rec_sum']) + floatval($usd_amount);
+				
+			}
+			elseif($k->tfi_currency == "EUR"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","EUR_USD".$sh) ;
+				$data['price'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price']) * floatval($k->tfi_amount);
+				$data['rec_sum'] = floatval($data['rec_sum']) + floatval($usd_amount);
+				
+			}
+			elseif($k->tfi_currency == "JPY"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","JPY_USD".$sh) ;
+				$data['price'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price']) * floatval($k->tfi_amount);
+				$data['rec_sum'] = floatval($data['rec_sum']) + floatval($usd_amount);
+				
+			}
+
+			
+			
+		}
+		$sblc = $this->manage->get_sblc_instrument_sum();
+		foreach($sblc as $k){
+			if($k->tfi_currency == "USD"){
+				$data['sblc_sum'] = floatval($data['sblc_sum']) + floatval($k->tfi_amount);
+			}
+			elseif($k->tfi_currency == "XDC"){
+				$show = cmcModule();
+				foreach($show as $sh) {
+				
+				log_message("info","XDC_USD".$sh->price_usd) ;
+				$data['price_sblc'] = $sh->price_usd;
+				
+				}
+				$usd_amount = floatval($data['price_sblc']) * floatval($k->tfi_amount);
+				$data['sblc_sum'] = floatval($data['sblc_sum']) + floatval($usd_amount);
+				
+				
+			}
+			elseif($k->tfi_currency == "GBP"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","GBP_USD".$sh) ;
+				$data['price_sblc'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_sblc']) * floatval($k->tfi_amount);
+				$data['sblc_sum'] = floatval($data['sblc_sum']) + floatval($usd_amount);
+				
+			}
+			elseif($k->tfi_currency == "EUR"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","EUR_USD".$sh) ;
+				$data['price_sblc'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_sblc']) * floatval($k->tfi_amount);
+				$data['sblc_sum'] = floatval($data['sblc_sum']) + floatval($usd_amount);
+				
+			}
+			elseif($k->tfi_currency == "JPY"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","JPY_USD".$sh) ;
+				$data['price_sblc'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_sblc']) * floatval($k->tfi_amount);
+				$data['sblc_sum'] = floatval($data['sblc_sum']) + floatval($usd_amount);
+				
+			}
+
+			
+			
+		}
+		$loc = $this->manage->get_loc_instrument_sum();
+		foreach($loc as $k){
+			if($k->tfi_currency == "USD"){
+				$data['loc_sum'] = floatval($data['loc_sum']) + floatval($k->tfi_amount);
+			}
+			elseif($k->tfi_currency == "XDC"){
+				$show = cmcModule();
+				foreach($show as $sh) {
+				
+				log_message("info","XDC_USD".$sh->price_usd) ;
+				$data['price_loc'] = $sh->price_usd;
+				
+				}
+				$usd_amount = floatval($data['price_loc']) * floatval($k->tfi_amount);
+				$data['loc_sum'] = floatval($data['loc_sum']) + floatval($usd_amount);
+				
+				
+			}
+			elseif($k->tfi_currency == "GBP"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","GBP_USD".$sh) ;
+				$data['price_loc'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_loc']) * floatval($k->tfi_amount);
+				$data['loc_sum'] = floatval($data['loc_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "EUR"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","EUR_USD".$sh) ;
+				$data['price_loc'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_loc']) * floatval($k->tfi_amount);
+				$data['loc_sum'] = floatval($data['loc_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "JPY"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","JPY_USD".$sh) ;
+				$data['price_loc'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_loc']) * floatval($k->tfi_amount);
+				$data['loc_sum'] = floatval($data['loc_sum']) + floatval($usd_amount);
+				
+			}
+
+			
+			
+		}
+		$bg = $this->manage->get_bg_instrument_sum();
+		foreach($bg as $k){
+			if($k->tfi_currency == "USD"){
+				$data['bg_sum'] = floatval($data['bg_sum']) + floatval($k->tfi_amount);
+			}
+			elseif($k->tfi_currency == "XDC"){
+				$show = cmcModule();
+				foreach($show as $sh) {
+				
+				log_message("info","XDC_USD".$sh->price_usd) ;
+				$data['price_bg'] = $sh->price_usd;
+				
+				}
+				$usd_amount = floatval($data['price_bg']) * floatval($k->tfi_amount);
+				$data['bg_sum'] = floatval($data['bg_sum']) + floatval($usd_amount);
+				
+				
+			}
+			elseif($k->tfi_currency == "GBP"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","GBP_USD".$sh) ;
+				$data['price_bg'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_bg']) * floatval($k->tfi_amount);
+				$data['bg_sum'] = floatval($data['bg_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "EUR"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","EUR_USD".$sh) ;
+				$data['price_bg'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_bg']) * floatval($k->tfi_amount);
+				$data['bg_sum'] = floatval($data['bg_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "JPY"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","JPY_USD".$sh) ;
+				$data['price_bg'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_bg']) * floatval($k->tfi_amount);
+				$data['bg_sum'] = floatval($data['bg_sum']) + floatval($usd_amount);
+				
+			}
+
+			
+			
+		}
+		$pay = $this->manage->get_pay_instrument_sum();
+		foreach($pay as $k){
+			if($k->tfi_currency == "USD"){
+				$data['pay_sum'] = floatval($data['pay_sum']) + floatval($k->tfi_amount);
+			}
+			elseif($k->tfi_currency == "XDC"){
+				$show = cmcModule();
+				foreach($show as $sh) {
+				
+				log_message("info","XDC_USD".$sh->price_usd) ;
+				$data['price_pay'] = $sh->price_usd;
+				
+				}
+				$usd_amount = floatval($data['price_pay']) * floatval($k->tfi_amount);
+				$data['pay_sum'] = floatval($data['pay_sum']) + floatval($usd_amount);
+				
+				
+			}
+			elseif($k->tfi_currency == "GBP"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","GBP_USD".$sh) ;
+				$data['price_pay'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_pay']) * floatval($k->tfi_amount);
+				$data['pay_sum'] = floatval($data['pay_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "EUR"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","EUR_USD".$sh) ;
+				$data['price_pay'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_pay']) * floatval($k->tfi_amount);
+				$data['pay_sum'] = floatval($data['pay_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "JPY"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","JPY_USD".$sh) ;
+				$data['price_pay'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_pay']) * floatval($k->tfi_amount);
+				$data['pay_sum'] = floatval($data['pay_sum']) + floatval($usd_amount);
+				
+			}
+
+			
+			
+		}
+		$oth = $this->manage->get_oth_instrument_sum();
+		foreach($oth as $k){
+			if($k->tfi_currency == "USD"){
+				$data['oth_sum'] = floatval($data['oth_sum']) + floatval($k->tfi_amount);
+			}
+			elseif($k->tfi_currency == "XDC"){
+				$show = cmcModule();
+				foreach($show as $sh) {
+				
+				log_message("info","XDC_USD".$sh->price_usd) ;
+				$data['price_oth'] = $sh->price_usd;
+				
+				}
+				$usd_amount = floatval($data['price_oth']) * floatval($k->tfi_amount);
+				$data['oth_sum'] = floatval($data['oth_sum']) + floatval($usd_amount);
+				
+				
+			}
+			elseif($k->tfi_currency == "GBP"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","GBP_USD".$sh) ;
+				$data['price_oth'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_oth']) * floatval($k->tfi_amount);
+				$data['oth_sum'] = floatval($data['oth_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "EUR"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","EUR_USD".$sh) ;
+				$data['price_oth'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_oth']) * floatval($k->tfi_amount);
+				$data['oth_sum'] = floatval($data['oth_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "JPY"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","JPY_USD".$sh) ;
+				$data['price_oth'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_oth']) * floatval($k->tfi_amount);
+				$data['oth_sum'] = floatval($data['oth_sum']) + floatval($usd_amount);
+				
+			}
+
+			
+			
+		}
+		$wr = $this->manage->get_wr_instrument_sum();
+		foreach($wr as $k){
+			if($k->tfi_currency == "USD"){
+				$data['wr_sum'] = floatval($data['wr_sum']) + floatval($k->tfi_amount);
+			}
+			elseif($k->tfi_currency == "XDC"){
+				$show = cmcModule();
+				foreach($show as $sh) {
+				
+				log_message("info","XDC_USD".$sh->price_usd) ;
+				$data['price_wr'] = $sh->price_usd;
+				
+				}
+				$usd_amount = floatval($data['price_wr']) * floatval($k->tfi_amount);
+				$data['wr_sum'] = floatval($data['wr_sum']) + floatval($usd_amount);
+				
+				
+			}
+			elseif($k->tfi_currency == "GBP"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","GBP_USD".$sh) ;
+				$data['price_wr'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_wr']) * floatval($k->tfi_amount);
+				$data['wr_sum'] = floatval($data['wr_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "EUR"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","EUR_USD".$sh) ;
+				$data['price_wr'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_wr']) * floatval($k->tfi_amount);
+				$data['wr_sum'] = floatval($data['wr_sum']) + floatval($usd_amount);
+			
+			}
+			elseif($k->tfi_currency == "JPY"){
+				$show = getConversion($k->tfi_currency);
+				foreach($show as $sh) {
+				
+				log_message("info","JPY_USD".$sh) ;
+				$data['price_wr'] = $sh;
+				
+				}
+				$usd_amount = floatval($data['price_wr']) * floatval($k->tfi_amount);
+				$data['wr_sum'] = floatval($data['wr_sum']) + floatval($usd_amount);
+				
+			}
+
+			
+			
+		}
+		$data['tot_sum'] = floatval($data['rec_sum'] + $data['wr_sum'] + $data['oth_sum'] + $data['loc_sum'] + $data['sblc_sum'] + $data['pay_sum'] + $data['bg_sum']);
+		// echo $data['tot_sum'] = $data['rec_sum'] + $data['wr_sum'] + $data['oth_sum'] + $data['loc_sum'] + $data['sblc_sum'] + $data['pay_sum'] + $data['bg_sum'];
+		// die;
+		
+		if($instrument && !empty($instrument) && is_array($instrument) && sizeof($instrument) <> 0){
+			$data['instrument'] = $instrument;						
+		}
+
+
+				
+		$this->load->view('includes/headern', $data);
+		$this->load->view('includes/header_publicn', $data);
+		$this->load->view('pages/public/statistics_view', $data);
 		$this->load->view('includes/footer_commonn', $data);
 		$this->load->view('pages_scripts/common_scripts', $data);
 		$this->load->view('includes/footern');
