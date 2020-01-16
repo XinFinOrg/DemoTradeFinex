@@ -4,7 +4,7 @@
 <section class="tf-inner-banner">
 	<div class="container">
 		<h3>Statistics</h3>
-		<h4>Real time, Trade and Finance FUnding Data</h4>
+		<h4>Real time, Trade and Finance Funding Data</h4>
 	</div>
 </section>
 
