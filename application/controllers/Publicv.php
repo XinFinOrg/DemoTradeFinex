@@ -1403,9 +1403,9 @@ class Publicv extends CI_Controller {
 				$data['contractAddr'] = $k->tfi_contractAddr;
 			}
 		}
-		
+		$data['docRef'] = $docRef;
+			
 		if($action == 'getdetails'){
-			$data['docRef'] = $docRef;
 			$data['privatekey'] = getFinancier($privkey);
 			$data['address'] = getAddress($privkey);
 			if($data['privatekey'] == "false"){
@@ -1445,6 +1445,44 @@ class Publicv extends CI_Controller {
 			
 
 			}
+			
+		}
+		if($action == 'sendmail'){
+			$data['address'] = getAddress($privkey);
+			
+			$config = array();
+			$config = $this->config->item('$econfig');
+						
+			$this->email->initialize($config);
+			// $this->email->cc('another@another-example.com');
+			// $this->email->bcc('them@their-example.com');
+			
+			$suser = $this->manage->get_superadmin();
+			
+			$from_email = 'info@tradefinex.org'; 
+			$to_email ="mansi@xinfin.org";
+					
+			$this->email->from($from_email, 'Admin Tradefinex'); 
+			$this->email->to($to_email);
+			$this->email->bcc($from_email);
+			$this->email->set_mailtype('html');
+			$this->email->set_newline("\r\n");
+			$this->email->subject('Access for Buyer/Supplier Details'); 
+			$mail_body = $this->load->view('templates/mails/req_doc_mail_body', $data, TRUE);
+			$this->email->message($mail_body);
+		
+            		
+			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
+			if($this->email->send()){ 
+				log_message("info","Email Sent successfully");
+			}	
+			else{ 
+				log_message("error","Error in sending email");
+			}
+			
+			
+
+			
 			
 		}
 		echo json_encode($data);
