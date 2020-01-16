@@ -1405,6 +1405,7 @@ class Publicv extends CI_Controller {
 		}
 		
 		if($action == 'getdetails'){
+			$data['docRef'] = $docRef;
 			$data['privatekey'] = getFinancier($privkey);
 			$data['address'] = getAddress($privkey);
 			if($data['privatekey'] == "false"){
