@@ -1429,7 +1429,7 @@ class Publicv extends CI_Controller {
 			$this->email->set_mailtype('html');
 			$this->email->set_newline("\r\n");
 			$this->email->subject('Access for Buyer/Supplier Details'); 
-			$mail_body = $this->load->view('templates/mails/funding_mail_body', $data, TRUE);
+			$mail_body = $this->load->view('templates/mails/req_doc_mail_body', $data, TRUE);
 			$this->email->message($mail_body);
 		
             		
