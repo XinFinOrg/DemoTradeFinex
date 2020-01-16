@@ -833,7 +833,7 @@ function passData(docRef){
                         $.ajax({
                         type:"POST",
                         dataType:"json",
-                        url:"http://62.233.65.6:3110/api/getDocHash",
+                        url:"https://demoapi.tradefinex.org//api/getDocHash",
                         data:{"contractAddr":resp.contractAddr,
                                 "passKey": resp.key,
                                 "contractType" : "brokerInstrument"
