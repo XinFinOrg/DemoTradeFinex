@@ -943,7 +943,7 @@ function passData_bs(docRef){
                 })// show response from the php script.
                 }).done(resp => {
                                 
-                    if(resp.privatekey == "true"){
+                    if(resp.privatekey == "false"){
                         // console.log(resp);
                         
                         const tHtml = `

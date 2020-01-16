@@ -1407,7 +1407,7 @@ class Publicv extends CI_Controller {
 		if($action == 'getdetails'){
 			$data['privatekey'] = getFinancier($privkey);
 			$data['address'] = getAddress($privkey);
-			if($data['privatekey'] == "true"){
+			if($data['privatekey'] == "false"){
 				$data['contact'] = $this->manage->get_contact_details($docRef);
 				$data['result'] = $this->manage->add_funding_details($data);
 			// echo json_encode($data);
