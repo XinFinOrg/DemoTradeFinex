@@ -450,9 +450,7 @@ $(function () {
 				min : 0.1
 			},
 			loanp: {
-				required:function() {
-					return $('[name="loanp"]:checked').length === 0; 
-				}
+				required:true,
 			},
 			defaultReal: {
 				equalTo: '#captcha_val'
@@ -480,7 +478,7 @@ $(function () {
 				min : "Amount should be greater than 0.1"
 			},
 			loanp: {
-				required: "Please select your purpose of loan",
+				required: "Please select your type of instrument",
 			},
 			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
 		},
@@ -501,6 +499,7 @@ $(function () {
 				var tval = $('#' + element_id).val();
 				tvala = tval.split(' ');
 			}
+		
 		},
 		success: function (elem) {
 
