@@ -205,7 +205,7 @@
                                                                         <td><?php echo $instru->tfi_country ?></td>
                                                                         <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                                         <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                        <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Document Access</span></button></td>
+                                                                        <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                                         </tr>
                                                                         <?php } ?>
                                                                         <tr>
@@ -282,7 +282,7 @@
                                                                     <td><?php echo $instru->tfi_country ?></td>
                                                                     <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                                     <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Document Access</span></button></td>
+                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                                                 </tr>
                                                                     <?php }}?>
                                                                     <tr>
@@ -340,7 +340,7 @@
                                                 <td><?php echo $instru->tfi_country ?></td>
                                                 <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                 <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Document Access</span></button></td>
+                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                 </tr>
                                                         <?php }}?>
                                                 <tr>
@@ -393,7 +393,7 @@
                                                                     <td><?php echo $instru->tfi_country ?></td>
                                                                     <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                                     <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Document Access</span></button></td>
+                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                                 </tr>
                                                                                 <?php }}?>
                                                                     <tr>
@@ -448,7 +448,7 @@
                                                             <td><?php echo $instru->tfi_country ?></td>
                                                             <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                             <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                            <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Document Access</span></button></td>
+                                                            <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                             </tr>
                                                                                 <?php }}?>
                                                             <tr>
@@ -503,7 +503,7 @@
                                                                 <td><?php echo $instru->tfi_country ?></td>
                                                                 <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                                 <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Document Access</span></button></td>
+                                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                                 </tr>
                                                                                 <?php }}?>
                                                                                 <tr>
@@ -558,7 +558,7 @@
                                                                 <td><?php echo $instru->tfi_country ?></td>
                                                                 <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                                 <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Document Access</span></button></td>
+                                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                                 </tr>
                                                                                 <?php }}?>
                                                                                 <tr>
@@ -612,7 +612,7 @@
                                                                 <td><?php echo $instru->tfi_country ?></td>
                                                                 <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                                 <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Document Access</span></button></td>
+                                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                                 </tr>
                                                                                 <?php }}?>
 
@@ -749,6 +749,9 @@
 								
                             </div>
                             <div class="form-group">
+								<button id="financeBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Finance Project</button>
+							</div>	
+                            <div class="form-group">
 								<button id="doneBtn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">OK</button>
 							</div>							
 						</div>
@@ -830,7 +833,7 @@ function passData(docRef){
                         $.ajax({
                         type:"POST",
                         dataType:"json",
-                        url:"https://tfd.xinfin.net/api/getDocHash",
+                        url:"https://demoapi.tradefinex.org//api/getDocHash",
                         data:{"contractAddr":resp.contractAddr,
                                 "passKey": resp.key,
                                 "contractType" : "brokerInstrument"
@@ -943,15 +946,13 @@ function passData_bs(docRef){
                 })// show response from the php script.
                 }).done(resp => {
                                 
-                    if(resp.privatekey == "false"){
+                    if(resp.privatekey == "true"){
                         // console.log(resp);
                         
                         const tHtml = `
                                     <div class="text-center">
                                         <p>
-                                            <br><label><strong>Email:</strong>${resp.contact[0].tfbs_email}</label>
                                             <br><label><strong>Full Name:</strong>${resp.contact[0].tfbs_fullName}</label>
-                                            <br><label><strong>Mobile no:</strong>${resp.contact[0].tfbs_mobileNo}</label>
                                             <br><label><strong>Company Name:</strong>${resp.contact[0].tfbs_companyName}</label>
                                         </p>
                                     </div>
@@ -964,6 +965,20 @@ function passData_bs(docRef){
                         $('#doneBtn').click(function() {
                             $("#contact").modal("hide");
                             location.reload();
+                        });
+                        $('#financeBtn').click(function() {
+                            $("#contact").modal("hide");
+                            $.ajax({
+                            type: "POST",
+                            url: myurl,
+                            dataType:"json",
+                            data: {"action":"sendmail","docRef":docRef,"privkey":privkey}, // serializes the form's elements.
+                            success: (resp =>{
+                                console.log(resp);
+                            })// show response from the php script.
+                            }).done(resp => {
+                                toastr.success('Successfully notfied to admin', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+                            })
                         });
                             
                     }     
