@@ -9,56 +9,88 @@
     </section>
 
     <!-- Statistics -->
-    <section id="Financiers" class="section pb-40">
+    <section id="financiers" class="section pb-40">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <div class="section-title text-center">
+                    <div class="section-title text-center pb-15">
                         <h2 class="mb-0">Statistics</h2>
                     </div>
                 </div>
             </div>
 			
-			<div class="row flex-row">
-                <div class="col-md-4 col-sm-4">
+			<div class="row">
+                <div class="col-md-4 col-sm-12">
 					<div class="row">
-					<div class="col-md-12">
-					<div class="section-title text-center">
-						<h3 class="mb-0">Number of Trade Instruments Live</h3>
+						<div class="col-md-12">
+							<div class="section-title text-center pb-25">
+								<h3 class="mb-0 mt-20">Number of Trade Instruments Live</h3>
+							</div>
+						</div>
 					</div>
-					<div class="counterFact bgOffWhite">
-                        <div class="factTitle"><span class="counter">5</span></div>
-                    	<p>Trade Instruments Live</p>
-                	</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-6 col-xs-6">
+						<div class="counterFact bgLightBlue">
+							<div class="factTitle"><span class="counter">19</span></div>
+							<p>Total Trade Instruments</p>
+						</div>
+						</div>
+						<div class="col-md-12 col-sm-6 col-xs-6">
+						<div class="counterFact bgLightBlue">
+							<div class="factTitle"><span class="counter">7</span></div>
+							<p>Trade Instruments Live</p>
+						</div>
+						</div>
 					</div>
+                </div>
+				<div class="col-md-8 col-sm-12">
+					<div class="section-title text-center pb-25">
+						<h3 class="mb-0 mt-20">Total Value of Trade Instruments Live worth USD 50 Million</h3>
 					</div>
-                </div>
-				<div class="col-md-8 col-sm-8">
-				<div class="row">
-				<div class="col-md-12">
-				<div class="section-title text-center">
-					<h3 class="mb-0">Total Value of Trade Instruments Live worth USD 50 Million</h3>
-				</div>
-				</div>
-				<div class="col-md-4 col-sm-4">
-					<div class="counterFact bgOffWhite">
-                        <div class="factTitle">$ <span class="counter">15</span> Million</div>
-                    	<p>Receivables</p>
-                	</div>
-                </div>
-				<div class="col-md-4 col-sm-4">
-					<div class="counterFact bgOffWhite">
-                        <div class="factTitle">$ <span class="counter">15</span> Million</div>
-                    	<p>Letter of Credits</p>
-                	</div>
-                </div>
-				<div class="col-md-4 col-sm-4">
-					<div class="counterFact bgOffWhite">
-                        <div class="factTitle">$ <span class="counter">20</span> Million</div>
-                    	<p>Other</p>
-                	</div>
-                </div>
-				</div>
+					<div class="row flex-row">
+						<div class="col-md-4 col-sm-4 col-xs-6">
+							<div class="counterFact bgOffWhite">
+								<div class="factTitle">$ <span class="counter">15</span> Million</div>
+								<p>Receivables</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6">
+							<div class="counterFact bgOffWhite">
+								<div class="factTitle">$ <span class="counter">15</span> Million</div>
+								<p>Letter of Credits</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6">
+							<div class="counterFact bgOffWhite">
+								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<p>Bank Guarantees</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6">
+							<div class="counterFact bgOffWhite">
+								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<p>SBLC</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6">
+							<div class="counterFact bgOffWhite">
+								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<p>Warehouse Receipt</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6">
+							<div class="counterFact bgOffWhite">
+								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<p>Payable</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6">
+							<div class="counterFact bgOffWhite">
+								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<p>Other</p>
+							</div>
+						</div>
+					</div>
 				</div>
             </div>
 
@@ -104,14 +136,14 @@
                         </div>
                     </div>
                 </div>
-            </div>-->		
+            </div>-->
 			
         </div>
     </section>
 
 	
 	
-	<section class="section tf-grey-bg">
+	<section id="financiers" class="section tf-grey-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -122,19 +154,19 @@
 			</div>
 			
 			<div class="row flex-row">
-                <div class="col-md-4 col-sm-4">
+                <div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgWhite">
                         <div class="factTitle">$ <span class="counter">5</span></div>
                     	<p>Legacy Fiat Channels</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgWhite">
                         <div class="factTitle">$ <span class="counter">300,000</span></div>
                     	<p>Digital Asset based channel through XDC Protocol</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgWhite">
                         <div class="factTitle">$ <span class="counter">500,000</span></div>
                     	<p>Digital Asset based channel through Fiat backed Stablecoins</p>
@@ -144,70 +176,70 @@
 		</div>
 	</section>
 	
-	<section class="section">
+	<section id="financiers" class="section">
 		<div class="container">			
 			<div class="row flex-row">                
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle"><span class="counter">5,000,000</span> XDC</div>
                     	<p>Utility Fees Paid in XDC Protocol for Peer to Peer Trade Assets Distribution</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle"><span class="counter">5</span> Million</div>
                     	<p>XDC Protocol tokens sent to burning contract for Fee processing</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle">$ <span class="counter">0.001</span></div>
                     	<p>Current Price of XDC Protocol Token</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle"><span class="counter">37.5</span> Million</div>
                     	<p>Fully diluted Market Cap of XDC Protocol Tokens</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle"><span class="counter">62</span></div>
                     	<p>Number of Live Masternodes in XDC Network</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle"><span class="counter">620</span> Million XDC</div>
                     	<p>Total capital locked in XDC Masternodes</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle">$ <span class="counter">620,000</span></div>
                     	<p>Fiat Value of Total Capital locked in XDC Masternodes</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle"><span class="counter">5</span> Million</div>
-                    	<p>Monthly masternode rewards generated for XDC Masternodes</p>
+                    	<p>Monthly Masternode rewards generated for XDC Masternodes</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle">$ <span class="counter">3500</span></div>
                     	<p>Fiat Value of rewards generated by XDC Masternodes</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle"><span class="counter">0.90</span> % Per Month</div>
                     	<p>Approx Return on Peer to Peer XDC Masternodes</p>
                 	</div>
                 </div>
-				<div class="col-md-4 col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle">$ <span class="counter">308,238</span></div>
                     	<p>Daily Volume of XDC Tokens</p>
