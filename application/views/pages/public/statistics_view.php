@@ -31,13 +31,13 @@
 					<div class="row">
 						<div class="col-md-12 col-sm-6 col-xs-6">
 						<div class="counterFact bgLightBlue">
-							<div class="factTitle"><span class="counter">19</span></div>
+							<div class="factTitle"><span class="counter"><?php echo $total_count?></span></div>
 							<p>Total Trade Instruments</p>
 						</div>
 						</div>
 						<div class="col-md-12 col-sm-6 col-xs-6">
 						<div class="counterFact bgLightBlue">
-							<div class="factTitle"><span class="counter">7</span></div>
+							<div class="factTitle"><span class="counter"><?php echo $count?></span></div>
 							<p>Trade Instruments Live</p>
 						</div>
 						</div>
@@ -45,48 +45,48 @@
                 </div>
 				<div class="col-md-8 col-sm-12">
 					<div class="section-title text-center pb-25">
-						<h3 class="mb-0 mt-20">Total Value of Trade Instruments Live worth USD 50 Million</h3>
+						<h3 class="mb-0 mt-20">Total Value of Trade Instruments Live </h3>
 					</div>
 					<div class="row flex-row">
 						<div class="col-md-4 col-sm-4 col-xs-6">
 							<div class="counterFact bgOffWhite">
-								<div class="factTitle">$ <span class="counter">15</span> Million</div>
+								<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$loc_sum),'0'),'.')?></span></div>
 								<p>Receivables</p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-6">
 							<div class="counterFact bgOffWhite">
-								<div class="factTitle">$ <span class="counter">15</span> Million</div>
+								<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$loc_sum),'0'),'.')?></span></div>
 								<p>Letter of Credits</p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-6">
 							<div class="counterFact bgOffWhite">
-								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$bg_sum),'0'),'.')?></span> </div>
 								<p>Bank Guarantees</p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-6">
 							<div class="counterFact bgOffWhite">
-								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$sblc_sum),'0'),'.')?></span></div>
 								<p>SBLC</p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-6">
 							<div class="counterFact bgOffWhite">
-								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$wr_sum),'0'),'.')?></span> </div>
 								<p>Warehouse Receipt</p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-6">
 							<div class="counterFact bgOffWhite">
-								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$pay_sum),'0'),'.')?></span></div>
 								<p>Payable</p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-6">
 							<div class="counterFact bgOffWhite">
-								<div class="factTitle">$ <span class="counter">20</span> Million</div>
+								<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$oth_sum),'0'),'.')?></span></div>
 								<p>Other</p>
 							</div>
 						</div>
@@ -156,7 +156,8 @@
 			<div class="row flex-row">
                 <div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgWhite">
-                        <div class="factTitle">$ <span class="counter">5</span></div>
+                        <div class="factTitle"><span class="counter">3 </span></div>
+                        <p>(SGD, IDR, USD)</p>
                     	<p>Legacy Fiat Channels</p>
                 	</div>
                 </div>
@@ -187,37 +188,37 @@
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
-                        <div class="factTitle"><span class="counter">5</span> Million</div>
+                        <div class="factTitle"><?php echo $xdc_burnt?> </div>
                     	<p>XDC Protocol tokens sent to burning contract for Fee processing</p>
                 	</div>
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
-                        <div class="factTitle">$ <span class="counter">0.001</span></div>
+                        <div class="factTitle">$ <span class="counter"><?php echo $xdc_usd?></span></div>
                     	<p>Current Price of XDC Protocol Token</p>
                 	</div>
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
-                        <div class="factTitle"><span class="counter">37.5</span> Million</div>
+                        <div class="factTitle"><span class="counter"><?php echo $marketCap?></span></div>
                     	<p>Fully diluted Market Cap of XDC Protocol Tokens</p>
                 	</div>
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
-                        <div class="factTitle"><span class="counter">62</span></div>
+                        <div class="factTitle"><span class="counter"><?php echo $xdcMasternode ?></span></div>
                     	<p>Number of Live Masternodes in XDC Network</p>
                 	</div>
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
-                        <div class="factTitle"><span class="counter">620</span> Million XDC</div>
+                        <div class="factTitle"><span class="counter"><?php echo $stakedXDC ?></span> Million XDC</div>
                     	<p>Total capital locked in XDC Masternodes</p>
                 	</div>
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
-                        <div class="factTitle">$ <span class="counter">620,000</span></div>
+                        <div class="factTitle">$ <span class="counter"><?php echo $stakedXDCUSD?></span></div>
                     	<p>Fiat Value of Total Capital locked in XDC Masternodes</p>
                 	</div>
                 </div>
@@ -236,12 +237,13 @@
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
                         <div class="factTitle"><span class="counter">0.90</span> % Per Month</div>
+                        <p><span class="counter">10.8</span> % Per Year</p>
                     	<p>Approx Return on Peer to Peer XDC Masternodes</p>
                 	</div>
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
-                        <div class="factTitle">$ <span class="counter">308,238</span></div>
+                        <div class="factTitle">$ <span class="counter"><?php echo $xdvolume?></span></div>
                     	<p>Daily Volume of XDC Tokens</p>
                 	</div>
                 </div>
