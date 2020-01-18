@@ -5228,7 +5228,9 @@ class Publicv extends CI_Controller {
 			// }
 
 		if($action == 'send_mail'){
-		// log_message("info",">>>>>>mail send");
+		log_message("info",">>>>>".base_url('assets\project_agreements\NDA TradeFinex Tech Ltd AD.pdf'));
+		echo base_url('assets\project_agreements\NDA TradeFinex Tech Ltd AD.pdf');
+		die;
 			$config = array();
 			$config = $this->config->item('$econfig');
 						
