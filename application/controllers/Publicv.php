@@ -5228,8 +5228,8 @@ class Publicv extends CI_Controller {
 			// }
 
 		if($action == 'send_mail'){
-		log_message("info",">>>>>".base_url('assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf'));
-		
+		log_message("info",">>>>>".$_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf');
+			$atch = $_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf';
 			$config = array();
 			$config = $this->config->item('$econfig');
 						
@@ -5254,7 +5254,8 @@ class Publicv extends CI_Controller {
 			$this->email->subject('Tradefinex Case Study Request');
 			$mail_body = $this->load->view('templates/mails/case_study_mail_body', $data, TRUE);
 			$this->email->message($mail_body); 
-			$this->email->attach(base_url('assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf'));
+			$this->email->attach($atch, array(
+        'mime' => 'application/pdf'));
 					
 			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
 			if($this->email->send()){ 
