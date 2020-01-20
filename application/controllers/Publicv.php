@@ -4816,6 +4816,8 @@ class Publicv extends CI_Controller {
 			}
 			else{
 				$burn = burnXDC($_GET['amt']);
+				echo var_dump($burn);
+				die;
 				$status = explode(': ',$burn[9]);
 				$status = $status[1];
 				$status = str_replace(",","", $status);
