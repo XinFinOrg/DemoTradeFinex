@@ -1909,9 +1909,9 @@ class Publicv extends CI_Controller {
 			
 		}
 		$data['tot_sum'] = floatval($data['rec_sum'] + $data['wr_sum'] + $data['oth_sum'] + $data['loc_sum'] + $data['sblc_sum'] + $data['pay_sum'] + $data['bg_sum']);
-		$show = cmcModule();
 		$totalXDC = totalXDC();
 		$data['totalXDC'] = $totalXDC->result;
+		$show = cmcModule();
 				
 		foreach($show as $sh) {
 	
