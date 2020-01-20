@@ -691,11 +691,9 @@ class Publicv extends CI_Controller {
 				$status = explode(': ',$burn[10]);
 				$status = $status[1];
 				$status = str_replace(",","", $status);
-				$transactionHash = explode(': ',$burn[12]);
-				$transactionHash = $transactionHash[1];
 				if($status == true){
 					$_GET['burnStatus'] = $status;
-					$transactionHash = explode(': ',$burn[11]);
+					$transactionHash = explode(': ',$burn[12]);
 					$transactionHash = $transactionHash[1];
 					$transactionHash = str_replace(array("'",","),"", $transactionHash);
 					$_GET['transactionHash'] = $transactionHash;
@@ -4819,11 +4817,9 @@ class Publicv extends CI_Controller {
 				$status = explode(': ',$burn[10]);
 				$status = $status[1];
 				$status = str_replace(",","", $status);
-				$transactionHash = explode(': ',$burn[12]);
-				$transactionHash = $transactionHash[1];
 				if($status == true){
 					$_GET['burnStatus'] = $status;
-					$transactionHash = explode(': ',$burn[11]);
+					$transactionHash = explode(': ',$burn[12]);
 					$transactionHash = $transactionHash[1];
 					$transactionHash = str_replace(array("'",","),"", $transactionHash);
 					$_GET['transactionHash'] = $transactionHash;
