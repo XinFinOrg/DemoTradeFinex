@@ -1910,14 +1910,16 @@ class Publicv extends CI_Controller {
 		}
 		$data['tot_sum'] = floatval($data['rec_sum'] + $data['wr_sum'] + $data['oth_sum'] + $data['loc_sum'] + $data['sblc_sum'] + $data['pay_sum'] + $data['bg_sum']);
 		$show = cmcModule();
-			
+		$totalXDC = totalXDC();
+		$data['totalXDC'] = $totalXDC->result;
+				
 		foreach($show as $sh) {
 	
 		$data['xdc_usd'] = $sh->price_usd;
-		$data['marketCap'] = $sh->market_cap_usd;
 		$data['xdvolume'] = $sh->{'24h_volume_usd'};
 		
 		}
+		$data['marketCap'] = floatval( $data['totalXDC'] * $data['xdc_usd']);
 		$data['xdc_burnt'] = getXDCburntValue();
 		$data['xdcMasternode'] = getmasternode();
 		$stakedXDC = stakedXDC();

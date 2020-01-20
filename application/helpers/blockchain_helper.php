@@ -160,8 +160,8 @@ if (!function_exists('burnXDC'))
             $output = array();
             $node = exec('cd node_scripts && node paypal_burn.js --amnt='.$amount,$output);
             // var_dump($output);
-            log_message('info','Burn'.$output.json_encode($output));
-            return $output;
+            log_message('info','Burn'.$output.json_encode($node));
+            return $node;
         
         }
         catch (Exception $e) {
@@ -242,6 +242,33 @@ if (!function_exists('stakedXDC'))
             }
 		
 		return $rcurlxdc;
+    
+        
+        }
+        catch (Exception $e) {
+            log_message("error".$e->getMessage());
+            return '0';
+        }
+        
+    }
+}
+
+if (!function_exists('totalXDC'))
+{
+    function totalXDC()
+    {
+        try{
+            $CI =& get_instance();
+            $CI->load->library('curl');
+            
+            $rcurlxdc = $CI->curl->simple_post('https://explorerapi.xinfin.network/publicAPI?module=balance&action=totalXDC&apikey=YourApiKeyToken');
+            
+            if($rcurlxdc){
+                $rcurlxdca = json_decode($rcurlxdc);
+                log_message("info","Total XDC".$rcurlxdc);
+            }
+		
+		return $rcurlxdca;
     
         
         }

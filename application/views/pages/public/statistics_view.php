@@ -156,7 +156,7 @@
 			<div class="row flex-row">
                 <div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgWhite">
-                        <div class="factTitle"><span class="counter">3 </span></div>
+                        <div class="factTitle"><span class="counter">0 </span></div>
                         <p>(SGD, IDR, USD)</p>
                     	<p>Legacy Fiat Channels</p>
                 	</div>
@@ -200,7 +200,7 @@
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
-                        <div class="factTitle"><span class="counter"><?php echo $marketCap?></span></div>
+                        <div class="factTitle">$ <span class="counter"><?php echo $marketCap?></span></div>
                     	<p>Fully diluted Market Cap of XDC Protocol Tokens</p>
                 	</div>
                 </div>
