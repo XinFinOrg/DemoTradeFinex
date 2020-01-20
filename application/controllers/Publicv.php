@@ -688,6 +688,8 @@ class Publicv extends CI_Controller {
 			}
 			else{
 				$burn = burnXDC($_GET['amt']);
+				echo json_encode($burn);
+				die;
 				$status = explode(': ',$burn[9]);
 				$status = $status[1];
 				$status = str_replace(",","", $status);
@@ -4816,7 +4818,7 @@ class Publicv extends CI_Controller {
 			}
 			else{
 				$burn = burnXDC($_GET['amt']);
-				echo var_dump($burn);
+				echo json_encode($burn);
 				die;
 				$status = explode(': ',$burn[9]);
 				$status = $status[1];
