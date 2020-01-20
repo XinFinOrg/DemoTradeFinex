@@ -157,19 +157,19 @@
                 <div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgWhite">
                         <div class="factTitle"><span class="counter">0 </span></div>
-                        <p>(SGD, IDR, USD)</p>
+                        <!-- <p>(SGD, IDR, USD)</p> -->
                     	<p>Legacy Fiat Channels</p>
                 	</div>
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgWhite">
-                        <div class="factTitle">$ <span class="counter">300,000</span></div>
+                        <div class="factTitle">$ <span class="counter">0</span></div>
                     	<p>Digital Asset based channel through XDC Protocol</p>
                 	</div>
                 </div>
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgWhite">
-                        <div class="factTitle">$ <span class="counter">500,000</span></div>
+                        <div class="factTitle">$ <span class="counter">0</span></div>
                     	<p>Digital Asset based channel through Fiat backed Stablecoins</p>
                 	</div>
                 </div>
@@ -182,7 +182,7 @@
 			<div class="row flex-row">                
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="counterFact bgOffWhite">
-                        <div class="factTitle"><span class="counter">5,000,000</span> XDC</div>
+                        <div class="factTitle"><span class="counter">0</span> XDC</div>
                     	<p>Utility Fees Paid in XDC Protocol for Peer to Peer Trade Assets Distribution</p>
                 	</div>
                 </div>
