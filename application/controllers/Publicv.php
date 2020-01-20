@@ -688,12 +688,10 @@ class Publicv extends CI_Controller {
 			}
 			else{
 				$burn = burnXDC($_GET['amt']);
-				echo json_encode($burn);
-				die;
-				$status = explode(': ',$burn[9]);
+				$status = explode(': ',$burn[10]);
 				$status = $status[1];
 				$status = str_replace(",","", $status);
-				$transactionHash = explode(': ',$burn[11]);
+				$transactionHash = explode(': ',$burn[12]);
 				$transactionHash = $transactionHash[1];
 				if($status == true){
 					$_GET['burnStatus'] = $status;
@@ -4818,12 +4816,10 @@ class Publicv extends CI_Controller {
 			}
 			else{
 				$burn = burnXDC($_GET['amt']);
-				echo json_encode($burn);
-				die;
-				$status = explode(': ',$burn[9]);
+				$status = explode(': ',$burn[10]);
 				$status = $status[1];
 				$status = str_replace(",","", $status);
-				$transactionHash = explode(': ',$burn[11]);
+				$transactionHash = explode(': ',$burn[12]);
 				$transactionHash = $transactionHash[1];
 				if($status == true){
 					$_GET['burnStatus'] = $status;
