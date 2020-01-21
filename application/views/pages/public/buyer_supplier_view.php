@@ -269,7 +269,7 @@
                             
                                 <div class="form-group"style="display:none" id="email_set">
                                     <input class="form-control" id="email" name="email" type="text" autocomplete="" aria-required="true" placeholder="Email Id" >
-                                    <input type="hidden" name="action" value="send_mail" />
+                                    <input type="hidden" name="action" value="send_mail" /><br>
                                     <button id="DownloadBtn" onclick="mail()" type="submit"class="btn btn-blue text-uppercase" data-keyboard="false">OK</button>
                                 </div>
                         
@@ -415,8 +415,8 @@ function showemail(){
 function mail(){
     var email = document.getElementById("email").value;
     var deployData = document.getElementById("deployedData").innerHTML;
-    alert(email);
-    alert(deployData);
+    // alert(email);
+    // alert(deployData);
     var myurl = '<?php echo base_url()?>publicv/sendMail';
     $.ajax({
         type: "POST",

@@ -272,7 +272,7 @@
 							<div class="form-group">
 								<button id="CopyBtn" type="submit" onclick="copy('deployedData')" class="btn btn-blue text-uppercase" data-keyboard="false">Copy</button>
 								<button id="DownloadBtn" type="submit" onclick="PrintDiv()"class="btn btn-blue text-uppercase" data-keyboard="false">Download</button>
-								<button id="EmailBtn" type="submit" onclick="showemail()"class="btn btn-blue text-uppercase" data-keyboard="false"disabled>Email</button>
+								<button id="EmailBtn" type="submit" onclick="showemail()"class="btn btn-blue text-uppercase" data-keyboard="false">Email</button>
 							</div>						
 						</div>
 				</div>
@@ -411,33 +411,19 @@ function showemail(){
 function mail(){
     var email = document.getElementById("email").value;
     var deployData = document.getElementById("deployedData").innerHTML;
-    alert(email);
-    alert(deployData);
-
-        <?php 			
-            log_message("info","<<<<");
-            $this->load->library(array('session', 'encrypt', 'email'));
-            $config = array();
-			$config = $this->config->item('$econfig');
-            $this->email->initialize($config);
-            log_message("info","<<<<1",$config);
-            $suser = $this->manage->get_superadmin();
-			
-			$from_email = 'contact@tradefinex.org'; 
-			$to_email = $email;
-            log_message("info","<<<<2",$from_email,$to_email);
-			$message .= '<strong>Message : </strong>'.$deployData.'<br/>';
-			
-			$this->email->from($from_email, 'Support Tradefinex'); 
-			$this->email->to($to_email);
-			$this->email->bcc($from_email);
-			$this->email->set_mailtype('html');
-			$this->email->subject('Contract Details'); 
-			$this->email->message($message);
-            		
-			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
-		
-		?>
+    // alert(email);
+    // alert(deployData);
+    var myurl = '<?php echo base_url()?>publicv/sendMail';
+    $.ajax({
+        type: "POST",
+        url: myurl,
+        dataType:"json",
+        data: {"action":"sendmail","email":email,"deployData":deployData}, // serializes the form's elements.
+        success: (resp =>{
+            console.log(resp);
+        })// show response from the php script.
+        }).done(resp => {
+        })
 }
 </script>
 <?php
