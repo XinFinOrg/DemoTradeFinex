@@ -967,7 +967,7 @@ Footer
 
 
 
-<!-- New Statistics page css -->
+
 .counterFact {height:100%;padding:30px 20px;text-align:center;border-radius:4px;margin-bottom:30px;}
 .counterFact.bgWhite {background:#FFFFFF;}
 .counterFact.bgOffWhite {border:1px solid rgb(0,123,255,0.1);box-shadow:0 0px 10px 0px rgba(0, 0, 0, 0.01);}
@@ -997,10 +997,7 @@ Footer
   #statistics .section-title h3 {font-size:20px;}
   .counterFact .factTitle {font-size:20px;margin-bottom:0px;}
 }
-<!-- New Statistics page css -->
 
-
-<!-- Fees page css -->
 .tf-fees-bordered .tf-fees-view {border: 1px solid #e8e8e8;}
 .tf-fees-view {width: 100%;overflow: hidden;border-radius: 1px;border: 1px solid #e8e8e8;}
 .tf-fees-bordered .tf-fees-view > table {table-layout: auto;}
@@ -1022,4 +1019,3 @@ Footer
 	.tf-fees-item-content h3 {font-size: 1.17em;}
 	.tf-fees-item-content p {font-size: 14px;}
 }
-<!-- Fees page css -->
