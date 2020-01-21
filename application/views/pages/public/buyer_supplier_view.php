@@ -7,7 +7,7 @@
                 <h4>Improve cash flow. Easy Access to Trade Financing.</h4>
             </div>
         </section>
-        <section class="section" >
+        <!-- <section class="section" >
         <div class="col-md-3 col-xs-12 col-sm-4 funding_video" >
 				<div class="row">
                     <div class="col-md-6 col-xs-5">
@@ -20,14 +20,16 @@
 					</div>	
 				</div>
 			</div> 
-</section>
+</section> -->
         <!-- Buyers / Suppliers Form -->
         <section id="xdc-protocol-features-benefits" class="section" >
             <div class="container"id="createinstrument"style="display:block;">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="section-title text-center pb-30">
-                            <h2 class="mb-0">Apply for Funding</h2>
+                            <h2 class="mb-0">Apply for Funding</h2><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            ( <a href="https://www.youtube.com/embed/4bK1CrfaFf4?feature=oembed" target="_blank"  allowfullscreen>How to apply for funding?
+                        </a>)
                         </div>
                     </div>
                 </div>

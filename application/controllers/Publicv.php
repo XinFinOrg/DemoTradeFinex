@@ -2009,6 +2009,9 @@ class Publicv extends CI_Controller {
 
 		$utility = $this->manage->get_instrument_value();
 		$data['utility'] = floatval(10 * $utility);
+
+		$data['percent'] = floatval(($data['rewards'] / 10000000) * 100);
+		$data['percent_year'] = floatval($data['percent'] * 12); 
 		// echo  $data['utility'] ;
 		// die;
 		
