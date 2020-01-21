@@ -269,7 +269,7 @@
                             
                                 <div class="form-group"style="display:none" id="email_set">
                                     <input class="form-control" id="email" name="email" type="text" autocomplete="" aria-required="true" placeholder="Email Id" >
-                                    <input type="hidden" name="action" value="send_mail" /><br>
+                                    <input type="hidden" name="action" value="send_mail" /><br><br><br>
                                     <button id="DownloadBtn" onclick="mail()" type="submit"class="btn btn-blue text-uppercase" data-keyboard="false">OK</button>
                                 </div>
                         
@@ -425,8 +425,9 @@ function mail(){
         data: {"action":"sendmail","email":email,"deployData":deployData}, // serializes the form's elements.
         success: (resp =>{
             console.log(resp);
+            toastr.success('Mail sent successfully', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+			setTimeout(location.reload.bind(location), 6000);
         })// show response from the php script.
-        }).done(resp => {
         })
 }
 </script>

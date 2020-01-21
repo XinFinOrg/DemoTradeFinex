@@ -5322,7 +5322,7 @@ class Publicv extends CI_Controller {
 		$encryption_key = $this->config->item('encryption_key');
 					
 		$action = $this->input->post('action');
-		$email = $this->input->post('email');
+		$data['email'] = $this->input->post('email');
 		$data['deployData'] = $this->input->post('deployData');
 		// log_message("info",">>>>1",gettype($email));
 		// log_message("info",">>>>2",gettype($deployData));
@@ -5349,7 +5349,7 @@ class Publicv extends CI_Controller {
 			$suser = $this->manage->get_superadmin();
 			
 			$from_email = 'info@tradefinex.org'; 
-			$to_email =$email;
+			$to_email =$data['email'];
 					
 			$this->email->from($from_email, 'Admin Tradefinex'); 
 			$this->email->to($to_email);
