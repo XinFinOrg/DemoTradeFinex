@@ -11,7 +11,7 @@
         <div class="col-md-3 col-xs-12 col-sm-4 funding_video" >
 				<div class="row">
                     <div class="col-md-6 col-xs-5">
-                        <img class="img-responsive" src="<?php echo base_url() ?>assets/images/page/media/media_46.png" > 
+                        <img class="img-responsive" src="../assets/images/page/media/media_46.png" > 
 					</div>
                 </div>
                 <div class="row">
