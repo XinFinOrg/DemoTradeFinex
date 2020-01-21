@@ -5338,7 +5338,6 @@ class Publicv extends CI_Controller {
 		
 				
 		if($action == 'sendmail'){
-			$data['address'] = getAddress($privkey);
 			
 			$config = array();
 			$config = $this->config->item('$econfig');
@@ -5358,7 +5357,7 @@ class Publicv extends CI_Controller {
 			$this->email->set_mailtype('html');
 			$this->email->set_newline("\r\n");
 			$this->email->subject('Contract Details'); 
-			$mail_body = $data;
+			$mail_body = $this->load->view('templates/mails/contract_details_mail_body', $data, TRUE);
 			$this->email->message($mail_body);
 		
             		
