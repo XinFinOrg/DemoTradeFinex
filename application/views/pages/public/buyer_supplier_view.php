@@ -425,8 +425,15 @@ function mail(){
         data: {"action":"sendmail","email":email,"deployData":deployData}, // serializes the form's elements.
         success: (resp =>{
             console.log(resp);
-            toastr.success('Mail sent successfully', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
-			setTimeout(location.reload.bind(location), 6000);
+            if(resp.status == 1){
+                toastr.success('Mail sent successfully', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+			    setTimeout(location.reload.bind(location), 6000);
+            }
+            else{
+                toastr.error('Mail can not be sent', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+			    setTimeout(location.reload.bind(location), 6000);
+            }
+            
         })// show response from the php script.
         })
 }

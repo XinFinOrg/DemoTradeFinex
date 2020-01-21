@@ -5364,11 +5364,13 @@ class Publicv extends CI_Controller {
 			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
 			if($this->email->send()){ 
 				log_message("info","Email Sent successfully");
-				return 1;
+				$data['status'] = 1;
+				return $data;
 			}	
 			else{ 
 				log_message("error","Error in sending email");
-				return 0;
+				$data['status'] = 0;
+				return $data;
 			}	
 			
 		}
