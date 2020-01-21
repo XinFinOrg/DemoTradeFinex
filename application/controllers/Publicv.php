@@ -5318,8 +5318,6 @@ class Publicv extends CI_Controller {
 	{
 		// log_message("info",">>>>");
 	    $data = array();
-		
-		$encryption_key = $this->config->item('encryption_key');
 					
 		$action = $this->input->post('action');
 		$data['email'] = $this->input->post('email');
