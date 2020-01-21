@@ -424,7 +424,7 @@ function mail(){
         dataType:"json",
         data: {"action":"sendmail","email":email,"deployData":deployData}, // serializes the form's elements.
         success: (resp =>{
-            console.log(resp);
+            // console.log(resp);
             if(resp.status == 1){
                 toastr.success('Mail sent successfully', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 			    setTimeout(location.reload.bind(location), 6000);
