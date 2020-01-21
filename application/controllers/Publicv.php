@@ -693,8 +693,8 @@ class Publicv extends CI_Controller {
 				$status = str_replace(",","", $status);
 				if($status == true){
 					$_GET['burnStatus'] = $status;
-					$transactionHash = explode(': ',$burn[13]);
-					$transactionHash = $transactionHash[1];
+					// $transactionHash = explode(': ',$burn[13]);
+					$transactionHash = $burn[13];
 					$transactionHash = str_replace(array("'",","),"", $transactionHash);
 					$_GET['transactionHash'] = $transactionHash;
 					$result = $this->manage->add_paypal_details($_GET);
@@ -4819,8 +4819,8 @@ class Publicv extends CI_Controller {
 				$status = str_replace(",","", $status);
 				if($status == true){
 					$_GET['burnStatus'] = $status;
-					$transactionHash = explode(': ',$burn[13]);
-					$transactionHash = $transactionHash[1];
+					// $transactionHash = explode(': ',$burn[13]);
+					$transactionHash = $burn[13];
 					$transactionHash = str_replace(array("'",","),"", $transactionHash);
 					$_GET['transactionHash'] = $transactionHash;
 					$result = $this->manage->add_paypal_details($_GET);
