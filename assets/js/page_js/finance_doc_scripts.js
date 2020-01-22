@@ -480,7 +480,7 @@ $(function () {
 			loanp: {
 				required: "Please select your type of instrument",
 			},
-			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
+			// defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
 		},
 		onkeyup: function (elem) {
 

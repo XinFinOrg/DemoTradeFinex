@@ -709,7 +709,7 @@ $(function () {
 				minlength: "Characters length should be atleast 15.",
 				maxlength: "Characters length should not exceeded than 300"
 			},
-			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
+			// defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
 		},
 		onkeyup: function (elem) {
 
@@ -759,7 +759,7 @@ $(function () {
 				required: "Please enter a valid mobile number",
 				mobilenumberOnly : "Please enter numbers only"
 			},
-			defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
+			// defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
 		},
 		onkeyup: function (elem) {
 
