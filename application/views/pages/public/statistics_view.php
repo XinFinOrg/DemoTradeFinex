@@ -465,14 +465,14 @@
 	
 	
 	
-	<!--Animated counters script start -->
+	<!--Animated counters script start 
     <script>
         $(document).ready(function() {
             $('.counter').each(function() {
                 $(this).prop('Counter', 0).animate({
                     Counter: $(this).text()
                 }, {
-                    duration: 1500,
+                    duration: 1000,
                     easing: 'swing',
                     step: function(now) {
                         //$(this).text(Math.ceil(now));
@@ -502,7 +502,17 @@
         jQuery(document).ready(function($) {
             $('.counter').counterUp({
                 delay: 10,
-                time: 1500,
+                time: 1000,
             });
-        });
+        });	
+		
+		
+		function numberWithCommas(x) {
+    		return x.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+		}
+		$('.counter').each(function(){
+			var v_pound = $(this).html();
+			v_pound = numberWithCommas(v_pound);
+		$(this).html(v_pound)
+		})
     </script>
