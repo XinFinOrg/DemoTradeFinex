@@ -332,7 +332,7 @@
                 </div>
 				<div class="modal-body text-center">
                         <div class="deployedData_modal_block">
-							<p>Pay for your document through Paypal</p>
+							<p>Pay 10 USD for your document through Paypal</p><br>
 							<!--<p id="deployedData" style="word-break: break-all;"></p>-->
 						<form action="<?php echo PAYPAL_URL; ?>" method="post">
 							<!-- Identify your business so that you can collect the payments. -->
@@ -389,7 +389,7 @@ function copy(containerid) {
     else if (window.getSelection) {
         var range = document.createRange();
         range.selectNode(document.getElementById(containerid));
-        window.getSelection().addRange(range);
+        // window.getSelection().addRange(range);
         document.execCommand("copy");
         toastr.success('Copied.', {timeOut: 2500});
     }
