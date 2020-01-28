@@ -91,7 +91,7 @@
     <!-- /. Powering The Trade Finance Banner -->
 
     <!-- Ledger Solution -->
-    <section class="tf-ledger-solutions-row">
+    <!-- <section class="tf-ledger-solutions-row">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- /. Ledger Solution -->
 
     <!-- Instrument Support -->
@@ -276,17 +276,17 @@
             <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="video-frame">
                         <div class="embed-container">
-                            <iframe src="https://www.youtube.com/embed/4bK1CrfaFf4?feature=oembed" frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/xA34M-D25rM?feature=oembed" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <p>Apply for Trade Finance Funding on TradeFinex Network</p>
+                        <p>Become an Financier on TradeFinex Network | Explained</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="video-frame">
                         <div class="embed-container">
-                            <iframe src="https://www.youtube.com/embed/TUiYU_6EuPo?feature=oembed" frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/4bK1CrfaFf4?feature=oembed" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <p>Presenting TradeFinex BOSS 101</p>
+                        <p>Apply for Trade Finance Funding on TradeFinex Network</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
