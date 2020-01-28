@@ -89,8 +89,32 @@
         </div>
     </section>
     <!-- /. Powering The Trade Finance Banner -->
+	
+	
+	<!-- What is TradeFinex -->
+	<section id="what-is-tradefinex" class="section tf-grey-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="section-title text-center">
+                        <h2 class="mb-20">What is TradeFinex</h2>
+						<p>TradeFinex is a peer to peer decentralized platform for Trade Finance originators to distribute deals to wide range of bank or non-bank funders.</p>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Ledger Solution -->
+            <div class="row">
+                <div class="col-md-12 tf-what-is-tradefinex">
+                    <img src="assets/banner-assets/images/what-is-tradefinex.png" class="img-responsive desktop-view" />
+					<img src="assets/banner-assets/images/what-is-tradefinex_mobileview.png" class="img-responsive mobile-view" />
+                </div>                
+            </div>
+        </div>
+    </section>
+	<!-- What is TradeFinex -->
+	
+
+    <!-- Ledger Solution 
     <section class="tf-ledger-solutions-row">
         <div class="container">
             <div class="row">
