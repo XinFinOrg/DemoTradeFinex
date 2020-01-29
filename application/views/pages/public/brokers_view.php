@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id = "brokers">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="tf-buyer-supplier_form-block">
                             <!-- <form id="brokers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post"> -->
@@ -181,7 +181,158 @@
                     </div>
                     <div class="row" >
                             <div class="form-group col-md-4 col-xs-4" style="float:right">
-                                <button  id="bulk" name="bulk" type="submit" class="btn btn-blue text-uppercase" disabled>Bulk Upload</button><p> (Coming Soon)</p>
+                                <button  id="bulk" name="bulk" type="submit" class="btn btn-blue text-uppercase" onclick="showBulk()">Bulk Upload</button><p> (Coming Soon)</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="row" id = "bulkBrokers" style="display:none;">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="tf-buyer-supplier_form-block">
+                            <!-- <form id="brokers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post"> -->
+                            <?php
+                                $attributes = array('id' => 'bulkBrokers_form', 'class' => 'tf-suppliers-form', 'method' => 'post', 'role' => 'form');
+                                echo form_open_multipart(base_url().'publicv/brokers', $attributes);
+                            ?>
+                                <div class="form-group">
+                                    <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
+                                    <input type="text" class="form-control" id="privateKey" name="private_key" autocomplete= "off" placeholder="Enter Private Key">
+                                </div>
+                                 <div class="form-group">
+                                 <span><a href="http://faucet.apothem.network/" target="_blank">Get Test XDC Tokens</a></span>
+                                </div>
+                                <div class="form-group">
+									<label for="instrument-type" id="instrument">Type of Instrument<sup>*</sup></label>
+									<div class="radiobtn">
+										<input type="radio" name="instrument" id="Receivable" value="REC" />
+										<label for="Receivable">Receivable</label>
+									</div>									
+								
+									<div class="radiobtn">
+										<input type="radio" name="instrument" id="Letter-of-Credit" value="LC" />
+										<label for="Letter-of-Credit">Letter of Credit</label>
+									</div>
+								
+									<div class="radiobtn">
+										<input type="radio" name="instrument" id="Bank-Guarantees" value="BG" />
+										<label for="Bank-Guarantees">Bank Guarantees</label>
+									</div>
+								
+									<div class="radiobtn">
+										<input type="radio" name="instrument" id="SBLC" value="SBLC" />
+										<label for="SBLC">SBLC</label>
+									</div>
+									
+									<div class="radiobtn">
+										<input type="radio" name="instrument" id="Warehouse-Receipt" value="WR" />
+										<label for="Warehouse-Receipt">Warehouse Receipt</label>
+									</div>
+									
+									<div class="radiobtn">
+										<input type="radio" name="instrument" id="Payable" value="PAY" />
+										<label for="Payable">Payable</label>
+									</div>
+									
+									<div class="radiobtn">
+										<input type="radio" name="instrument" id="Other" value="OTH" />
+										<label for="Other">Other</label>
+									</div>
+									
+									<label id="instrument-error" class="error" for="instrument"></label>
+								</div>
+                                
+                                <div id="broker-name" class="form-group">
+                                    <label for="broker-name">Broker Name</label>
+                                    <input type="text" class="form-control" id="bname" name="name" placeholder="Broker Name">
+                                </div>
+                                <div id="select-country" class="form-group">
+                                    <label for="country-origination">Country of Origination</label>
+                                    <select class="form-control" id="pcountryy" name="pcountry">
+                                        <option value="" disabled="" selected="">Select Country</option>
+                                            <?php
+                                                if ($pcountries && !empty($pcountries) && is_array($pcountries) && sizeof($pcountries) <> 0) {
+
+                                                    foreach ($pcountries as $prow) {
+
+                                                        echo '<option value="' . $prow->tfc_name . '" ' . ($prow->tfc_id == $pcountry ? 'selected' : '') . '>' . $prow->tfc_name . '</option>';
+                                                        
+                                                    }
+                                                }
+                                                ?>
+                                        
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                <div id="currency_supported" class="form-group col-md-6">
+                                        <label for="currency_supported">Currency</label>
+                                        <select class="form-control" id="currency" name="currency_supported">
+                                            <option value="" disabled="" selected="">Select Currency</option>
+                                            <option value="USD">USD</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="SGD">SGD</option>
+                                            <option value="XDC">XDC</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="amount">Instrument Value</label>
+                                        <input type="text" class="form-control" id="amountt" name="amount" placeholder="Amount">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <!--<label for="maturity-date">Instrument Maturity Date</label>
+                                    <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">-->
+                                    <label for="maturity-date">Instrument Maturity Date</label>
+                                    <div id="date" data-date-format="yyyy-mm-dd">
+                                    <input  type="text" class="form-control" id="maturityDate" name="maturity_date" placeholder="yyyy-mm-dd"autocomplete="off">
+                                    <div class="input-group-addon" style="display:none"><span class="fa fa-calendar"></span></div>
+                                    </div>
+                                </div>
+                                    
+                                
+                                <div class="form-group col-md-6"style="display:none">
+                                        <label for="Name">Document Ref No.</label>
+                                        <input type="text" class="form-control" id="docRefe" name="docRef" placeholder="Instrument Ref/Name" >
+                                    </div>
+
+                                <!-- <div class="tf-notice">
+                                    <div class="tf-notice_content">
+                                        <p>Origination and deal distribution fees 0.001% of instrument value.</p>
+                                    </div>
+                                </div> -->
+
+                                <div class="form-group">
+                                    <label for="supporting-document">Upload all supporting documents like Credit Report, KYC, and Business Profile as one PDF file. **Max file size 10 MB</label>
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                        <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
+                                        <input name="uploaded_file" id = "uploaded_files"onchange="showName()" accept=".pdf" style="display: none;" type="file" value="no file"multiple>
+                                        </span>
+                                        <span class="form-control"></span>
+                                    </div>
+                                    <p>*Application & deal distribution fee is USD 10 worth of XDC per instrument (20% fees in XDC will burn automatically). This document will be encrypted & stored on XinFin Blockchain Network and will be viewable to financiers only.</p>
+                                    <label for="supporting-document" style="display:none" class ="error"id="error">Please upload correct file format.</label>
+                                    <label for="supporting-document" style="display:none" class="error"id="error1">Please file less than 5MB</label>
+                                </div>
+
+                                
+                                 <div class="row">
+									<div class="form-group col-md-6 col-xs-6">
+										<input type="hidden" name="action" value="adddetail" />
+										<button  id="bulkinstru" name="instru" type="submit" class="btn btn-blue text-uppercase" disabled>Submit</button>
+									</div>
+									<div class="form-group col-md-6 col-xs-6 text-right">
+										<a id="getDoc" onclick="docShow()" class="btn btn-white btn-small">Access Document <i class="fa fa fa-angle-double-right"></i></a></span>
+									</div>
+								</div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row" >
+                            <div class="form-group col-md-4 col-xs-4" style="float:right">
+                                <button  id="single" name="single" type="submit" class="btn btn-blue text-uppercase" onclick="location.reload()" >Single Upload</button>
                             </div>
                         </div>
                 </div>
@@ -366,6 +517,52 @@
 			</div>
 	 	</div>
 </div>
+<div class="modal fade" id="bulkPaypal" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog" style="">
+		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
+			<div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="location.reload()" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
+                        <div class="deployedData_modal_block">
+                        <p>Pay 10 USD for your document through Paypal</p><br>
+				
+						<form action="<?php echo PAYPAL_URL; ?>" method="post">
+							<!-- Identify your business so that you can collect the payments. -->
+                            <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>">
+
+                            <div class="form-group" id="email_set">
+                                    <input class="form-control" id="numberDoc" onchange="docNumber()" name="numberDoc" type="text" autocomplete="off" placeholder="Number of Documents" >
+                                    
+                            </div>
+                            <!-- Specify a Buy Now button. -->
+                            <input type="hidden" name="cmd" value="_xclick">
+
+                            <!-- Specify details about the item that buyers will purchase. -->
+                            <input type="hidden" name="item_name" value="Document">
+                            <input type="hidden" name="item_number" value="1">
+                            <input type="hidden" id="bulkAmount" name="amount" value="10">
+                            <input type="hidden" id="customm"name="custom" value="0">
+                            <input type="hidden" name="currency_code" value="USD">
+
+                            <!-- Specify URLs -->
+                            <input type='hidden' name='cancel_return' value='<?php echo PAYPAL_CANCEL_URL; ?>'>
+                            <input type='hidden' name='return' value='<?php echo base_url() ?>publicv/brokers'>
+                            <input type='hidden' name='rm' value='2'>
+
+                            
+								
+                            </div>
+                            <div class="form-group">
+								<button id="bulkMembership_payment" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Pay Now</button>
+							</div>	
+                            </form>							
+						</div>
+				</div>
+			</div>
+	 	</div>
+</div>
 
 <script type="text/javascript">
 function docShow(){
@@ -452,6 +649,30 @@ function mail(){
         })// show response from the php script.
         })
 }
+
+function showBulk(){
+    document.getElementById("bulkBrokers").style.display="block";
+    document.getElementById("brokers").style.display="none";
+}
+
+function showName(){
+    var files = $('#uploaded_files').prop('files');
+    var names = $.map(files, function (val) { return val.name; });
+    console.log("<<<",names);
+    // var files = document.getElementById('uploaded_files').files;
+    // for(var i=0; i< files.length;i++){
+    // fileName = files[i].name;
+    // document.getElementById('uploaded_files').innerHTML += fileName; 
+     
+// }
+// console.log(">>>",document.getElementById('uploaded_files').innerHTML);
+}
+function docNumber(){
+    var amountt = document.getElementById("numberDoc").value;
+    document.getElementById("bulkAmount").value = amountt*10;
+    // console.log("??1",document.getElementById("bulkAmount").value);
+}
+
 </script>
 <?php
         $this->load->view('includes/footer_commonn', $data);

@@ -821,6 +821,325 @@ $(function () {
 
 		}
 	});
+	$("#bulkBrokers_form").validate({
+		rules: {
+			instrumentt: {
+				required:function() {
+					return $('[name="instrumentt"]:checked').length === 0; 
+				}
+			},
+			name:{
+				required:true,
+				LetterOnly:true
+			},
+			pcountry: {
+				required: true
+			},
+			amount: {
+				required: true,
+				decnumberOnly : true,
+				min:0.1
+			},
+			uploaded_file:"required",
+			currency_supported: {
+				required: true
+			},
+			maturity_date: {
+				required: true
+			},
+			uploaded_file: {
+				required: true
+			},
+			private_key: {
+				required:true,
+				privateKey : true,
+				normalizer: function(value) {
+					// Update the value of the element
+					this.value = $.trim(value);
+					check = this.value;
+					if(check.startsWith("0x")){
+						check = check.slice(2);
+					}
+					else{
+						check = this.value;
+					}
+					// Use the trimmed value for validation
+					return check;
+				}
+			}
+		},
+		messages: {
+			instrumentt:"Please select instrument",
+			pcountry: {
+				required: "Please select country"
+			},
+			amount: {
+				required: "Please enter correct amount ",
+				decnumberOnly : "Enter Numbers only",
+				min : "Amount should be greater than 0.1"
+			},
+			name : {
+				required:"Please enter Broker Name",
+				LetterOnly:"Check spaces between name"
+			},
+			currency_supported: "Please choose currency supported",
+			maturity_date: "Please choose date",
+			uploaded_file: "Please upload doucment",
+			private_key: {
+				required: "Please enter a private key",
+				privateKey : "Enter valid private key of 64 characters"
+			},
+		},
+		onkeyup: function (elem) {
+			
+			var element_id = $(elem).attr('id');
+			if (element_id == 'privateKey') {
+				var _addr = document.getElementById("privateKey");
+				var addrKey = $(_addr).val();
+				if(addrKey.startsWith("0x")){
+					addrKey = addrKey.slice(2);
+				}
+				else{
+					addrKey = addrKey;
+				}
+				if(addrKey.length == 64){
+					var myurl = 'get_address';
+					showLoader();
+					$.ajax({
+						type: "POST",
+						url: myurl,
+						dataType:"json",
+						data: {"action":"getaddress","privkey":$(_addr).val()}, // serializes the form's elements.
+						success: (resp =>{
+							// console.log(resp);
+						})// show response from the php script.
+					}).done(resp => {
+						// console.log(resp);
+						document.getElementById("customm").value = resp.privatekey;
+						var _custom = document.getElementById("customm");
+						// console.log(">>",$(_custom).val());
+						$.post("test2",{
+							'addr':resp.privatekey
+						}).then(resp => {
+							var jsona = $.parseJSON(resp);
+							// console.log("response : ",resp,jsona);
+							if(jsona.length > 0){
+								if(parseFloat(jsona[0].tfpp_doc_redem) < 1){
+									// console.log("response1 : ",jsona);
+									hideLoader();
+									$("#bulkPaypal").modal("show");
+									$('#bulkPaypal').css('opacity', '1');
+								}
+								else{
+									//all ok
+									hideLoader();
+									paypal_addr = jsona[0].tfpp_address;
+									paypal_doc_redem = parseFloat(jsona[0].tfpp_doc_redem);
+								}
+							}
+							else{
+								hideLoader();
+								$("#paypal").modal("show");
+								$('#paypal').css('opacity', '1');
+							}
+							
+							
+						}).fail(err => {
+							console.log("response1 : ",err);
+						})
+						
+					})
+				}
+
+			}
+		},
+		success: function (elem) {
+		
+
+		},
+		error: function (elem) {
+
+		},
+		submitHandler: function (form, e) {
+			$('#brokers').prop('disabled', true);
+			showLoader();
+			var formData = $(form).serialize();
+			const formObj = formData.trim().split('&');
+			var formDataObj = {};
+			var files = document.getElementById('uploaded_files').files;
+			// for(var i=0; i<= files.length -1; i++){
+			// 	sum = files.length;
+				
+			// }
+			console.log(">>>",files.length);
+			// fileName = files[0].name.substring(0,3);
+			// console.log(">>>",fileName);
+			var dataFile;
+			var hash;
+			// const filearr = [];
+			if (files.length > 0) {
+				for(var i=0; i< files.length; i++){
+					var reader = new FileReader();
+					reader.readAsDataURL(files[i]);
+					reader.onloadend  = function () {
+						dataFile = reader.result;
+						dataFile = dataFile.split("base64,");
+						// filearr.push(dataFile[1]);
+						console.log("inside file reader");
+						console.log(">>>>",dataFile[1]);
+					window.stop();
+					// after getting value of datafile name make the ajax call
+					$.each(formObj, function (k, v) {
+						v = v.split('=');
+						if(v[0] === "fsdate" || v[0] === "maturitydate" || v[0] === "firstdate") {
+							var date = v[1].split('-');
+							date = date[2] + `/` + date[1] + '/' + date[0];
+							formDataObj[v[0]] = date;
+						} else {
+							formDataObj[v[0]] = v[1];
+						}
+					});
+					formDataObj.docRef = (new Date()).getTime();
+					$.ajax({
+						type:"POST",
+						dataType:"json",
+						url:"https://demoapi.tradefinex.org/api/uploadDoc",
+						data:{"data":dataFile[1]},
+						success: resp => {
+							console.log("response success: ",resp)
+						},
+						error: err =>{
+							console.log("response error: ",err)
+						}
+					}).done(resp => {
+						window.stop();
+						e.preventDefault();
+						if(resp.status == true){
+							hash = resp.hash;
+							// key = resp.key;
+							
+							// console.log(">>>>>>",ciphertext,"????????",originalText);
+
+							$.post("https://demoapi.tradefinex.org/api/generateContract",{
+							"ipfsHash":hash,
+							"instrumentType":formDataObj.instrument,
+							"amount":formDataObj.amount,
+							"currencySupported":formDataObj.currency_supported,
+							"maturityDate":formDataObj.maturity_date,
+							"docRef":formDataObj.instrument+formDataObj.docRef,
+							"country":formDataObj.pcountry.replace(/[+]/g," "),
+							"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
+							"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
+							"contractType":"brokerInstrument"
+							}).then(resp => {
+								// console.log("response : ",resp);
+								if(resp.status == true){
+									// console.log(">>>>",document.getElementById("createinstrument"))
+									passkey = resp.passKey,
+									hideLoader();
+									document.getElementById("createinstrument").style.display = "none";
+									document.getElementById("deploy").style.display = "block";
+									$('#contractData').html('<p>'+resp.contract+'</p>');
+									$("#deploy_contract").on('click', function (e) {
+										showLoader();
+										$('#deploy_contract').prop('disabled', true);
+										$.post("https://demoapi.tradefinex.org/api/deployContract",{
+										"ipfsHash":hash,
+										"instrumentType":formDataObj.instrument,
+										"amount":formDataObj.amount,
+										"currencySupported":formDataObj.currency_supported,
+										"maturityDate":formDataObj.maturity_date,
+										"docRef":formDataObj.instrument+formDataObj.docRef,
+										"country":formDataObj.pcountry.replace(/[+]/g," "),
+										"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
+										"contractType":"brokerInstrument",
+										"passKey" :passkey,
+										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
+										}).then(resp => {
+											// console.log("response : ",resp);
+											
+											
+											if(resp.status == true){
+												$.post("buyer_supplier",{
+													'action':"adddetail",
+													'instrument': formDataObj.instrument,
+													'amount':formDataObj.amount,
+													"currency_supported":formDataObj.currency_supported,
+													"maturity_date":formDataObj.maturity_date,
+													"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
+													"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
+													"docRef":formDataObj.instrument+formDataObj.docRef,
+													"contractAddr":resp.receipt.contractAddress.toLowerCase(),
+													"deployerAddr":resp.deployerAddr.toLowerCase(),
+													"secretKey" : passkey,
+													"addr" :paypal_addr,
+													"doc":paypal_doc_redem,
+													"csrf_name": csrf_value
+												}).then(resp => {
+													// console.log("response : ",resp);
+												}).fail(err => {
+													console.log("response1 : ",err);
+												})
+
+												const hashUrl = `http://explorer.apothem.network/tx/${resp.receipt.transactionHash}`;
+												const tHtml = `
+																<p>
+																	<span>Contract Address:</span><br>${resp.receipt.contractAddress.toLowerCase()}</p>
+																	<span><p>Transaction Hash:</span><br><a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a>
+																</p>
+																`
+												hideLoader();
+												$("#thankyou").modal("show");
+												$('#thankyou').css('opacity', '1');
+												$('#deployedData').html(tHtml);
+												$('#DeployBtn').click(function() {
+													$("#thankyou").modal("hide");
+													location.reload();
+												});
+											}
+											else if (resp.status == false){
+												hideLoader();
+												toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+												setTimeout(location.reload.bind(location), 6000);
+											}
+											
+										}).fail(error =>{
+											hideLoader();
+											toastr.error('Something went wrong./', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+											setTimeout(location.reload.bind(location), 6000);
+										})
+									})
+								}
+								
+								
+							}).fail(error =>{
+								hideLoader();
+								toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+								setTimeout(location.reload.bind(location), 6000);
+							})
+						}
+						else if (resp.status == false){
+							hideLoader();
+							toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+							setTimeout(location.reload.bind(location), 6000);
+						}
+					
+					}).fail(error =>{
+						hideLoader();
+						toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+						// setTimeout(location.reload.bind(location), 6000);
+					})
+					};
+					
+				}	
+				
+			}
+			
+				
+					
+		}
+			
+	});
 
 	$('#maturity_date').datepicker({
 			format: "yyyy-mm-dd",
@@ -889,6 +1208,59 @@ $(function () {
 		
 	});
 	
+	$('#uploaded_files').change(function(){ 
+		
+		const fi = document.getElementById('uploaded_files');
+		if ('files' in fi) {
+			if (fi.files.length == 0) {
+			txt = "Select one or more files.";
+			} else {
+			for (var i = 0; i < fi.files.length; i++) {
+				var file = fi.files[i];
+				if ('name' in file) {
+				var filename = file.name;
+				document.getElementById('uploaded_files').innerHTML = filename;
+				filextension=filename.split(".");
+				filext="."+filextension.slice(-1)[0];
+				// /console.log(">>>>>>",file.name,filextension,filext);
+				valid=[".pdf"];
+					if (valid.indexOf(filext.toLowerCase())==-1){
+						document.getElementById("error").style.display = "block";
+						document.getElementById("bulkinstru").disabled = true;
+						// document.getElementById("brokers").disabled = true;
+						
+						if ('size' in file) {
+							const fsize = file.size; 
+							if(parseFloat(fsize) > 10485760) {
+								document.getElementById("error1").style.display = "block";
+							}
+							else{
+								document.getElementById("error1").style.display = "none";
+							}
+						}
+					} 
+					else{
+						document.getElementById("error").style.display = "none";
+						document.getElementById("bulkinstru").disabled = false;
+						// document.getElementById("brokers").disabled = false;
+						if ('size' in file) {
+							const fsize = file.size; 
+							if(parseFloat(fsize) > 10485760) {
+								document.getElementById("error1").style.display = "block";
+							}
+							else{
+								document.getElementById("error1").style.display = "none";
+							}
+						}
+					}
+				}
+				
+			}
+			}
+		}         
+		
+	});
+
 	$('#contractdoc_form').validate({
 		rules: {
 			contract_address: {

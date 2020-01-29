@@ -1429,7 +1429,7 @@ $data1 = [
 
 			$addr = $data_add['cm'];
 			$data2 = [
-				'tfpp_doc_redem' => 1,
+				'tfpp_doc_redem' => floatval($data_add['amt']) / 10,
 			];
 			$this->db->select('*');
 			$this->db->from('{PRE}paypal_payment');
