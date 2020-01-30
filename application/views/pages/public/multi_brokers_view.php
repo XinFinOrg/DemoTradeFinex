@@ -34,13 +34,13 @@
                     </div>
                 </div>
 
-                <div class="row" id = "brokers">
+                <div class="row" id = "bulkBrokers" >
                     <div class="col-md-8 col-md-offset-2">
                         <div class="tf-buyer-supplier_form-block">
                             <!-- <form id="brokers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post"> -->
                             <?php
-                                $attributes = array('id' => 'brokers_form', 'class' => 'tf-suppliers-form', 'method' => 'post', 'role' => 'form');
-                                echo form_open_multipart(base_url().'publicv/brokers', $attributes);
+                                $attributes = array('id' => 'bulkBrokers_form', 'class' => 'tf-suppliers-form', 'method' => 'post', 'role' => 'form');
+                                echo form_open_multipart(base_url().'publicv/multi_brokers', $attributes);
                             ?>
                                 <div class="form-group">
                                     <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
@@ -126,7 +126,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="amount">Instrument Value</label>
-                                        <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount">
+                                        <input type="text" class="form-control" id="amountt" name="amount" placeholder="Amount">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -153,13 +153,17 @@
 
                                 <div class="form-group">
                                     <label for="supporting-document">Upload all supporting documents like Credit Report, KYC, and Business Profile as one PDF file. **Max file size 10 MB</label>
-                                    <div class="input-group">
+                                    <div class="tf-bulkUpload-inputBox">
+										<input type="file" name="uploaded_file" id="uploaded_file" class="inputfile" onchange = "showName()" data-multiple-caption="{count} files selected" multiple />
+										<label for="uploaded_file"><figure><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg></figure> <span>Choose files</span></label>
+									</div>
+									<!--<div class="input-group">
                                         <span class="input-group-btn">
                                         <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                                        <input name="uploaded_file" id = "uploaded_file"onChange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" accept=".pdf" style="display: none;" type="file">
+                                        <input name="uploaded_file" id = "uploaded_files"onchange="showName()" accept=".pdf" style="display: none;" type="file" value="no file"multiple>
                                         </span>
                                         <span class="form-control"></span>
-                                    </div>
+                                    </div>-->
                                     <p>*Application & deal distribution fee is USD 10 worth of XDC per instrument (20% fees in XDC will burn automatically). This document will be encrypted & stored on XinFin Blockchain Network and will be viewable to financiers only.</p>
                                     <label for="supporting-document" style="display:none" class ="error"id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" class="error"id="error1">Please file less than 5MB</label>
@@ -181,11 +185,10 @@
                     </div>
                     <div class="row" >
                             <div class="form-group col-md-4 col-xs-4" style="float:right">
-                                <button  id="bulk" name="bulk" type="submit" class="btn btn-blue text-uppercase" onclick="showBulk()">Bulk Upload</button><p> (Coming Soon)</p>
+                                <button  id="single" name="single" type="submit" class="btn btn-blue text-uppercase" onclick="window.location='<?php echo base_url()?>publicv/multi_brokers'" >Single Upload</button>
                             </div>
                         </div>
                 </div>
-                
             </div>
             <div class="container"id="getdochash"style="display:none;">
                 <div class="row">
@@ -325,48 +328,6 @@
 			</div>
 	 	</div>
 </div>
-<div class="modal fade" id="paypal" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog" style="">
-		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
-			<div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" onclick="location.reload()" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
-                </div>
-				<div class="modal-body text-center">
-                        <div class="deployedData_modal_block">
-                        <p>Pay 10 USD for your document through Paypal</p><br>
-							<!--<p id="deployedData" style="word-break: break-all;"></p>-->
-						<form action="<?php echo PAYPAL_URL; ?>" method="post">
-							<!-- Identify your business so that you can collect the payments. -->
-                            <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>">
-
-                            <!-- Specify a Buy Now button. -->
-                            <input type="hidden" name="cmd" value="_xclick">
-
-                            <!-- Specify details about the item that buyers will purchase. -->
-                            <input type="hidden" name="item_name" value="Document">
-                            <input type="hidden" name="item_number" value="1">
-                            <input type="hidden" name="amount" value="10">
-                            <input type="hidden" id="custom"name="custom" value="0">
-                            <input type="hidden" name="currency_code" value="USD">
-
-                            <!-- Specify URLs -->
-                            <input type='hidden' name='cancel_return' value='<?php echo PAYPAL_CANCEL_URL; ?>'>
-                            <input type='hidden' name='return' value='<?php echo base_url() ?>publicv/brokers'>
-                            <input type='hidden' name='rm' value='2'>
-
-                            
-								
-                            </div>
-                            <div class="form-group">
-								<button id="membership_payment" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Pay Now</button>
-							</div>	
-                            </form>							
-						</div>
-				</div>
-			</div>
-	 	</div>
-</div>
 <div class="modal fade" id="bulkPaypal" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog" style="">
 		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
@@ -398,7 +359,7 @@
 
                             <!-- Specify URLs -->
                             <input type='hidden' name='cancel_return' value='<?php echo PAYPAL_CANCEL_URL; ?>'>
-                            <input type='hidden' name='return' value='<?php echo base_url() ?>publicv/brokers'>
+                            <input type='hidden' name='return' value='<?php echo base_url() ?>publicv/multi_brokers'>
                             <input type='hidden' name='rm' value='2'>
 
                             
@@ -407,12 +368,31 @@
                             <div class="form-group">
 								<button id="bulkMembership_payment" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">Pay Now</button>
 							</div>	
-                            </form>							
+                        </form>							
 						</div>
 				</div>
 			</div>
 	 	</div>
 </div>
+<div class="modal fade" id="checkprivKey" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog" style="">
+		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
+			<div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="location.reload()" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
+                        <div class="deployedData_modal_block">
+                            <p>Please add your Private Key</p><br>
+                            <div class="form-group">
+                                    <button id="okbtnn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">OK</button>
+                            </div>							
+						</div>
+				</div>
+			</div>
+	 	</div>
+</div>
+
 
 <script type="text/javascript">
 function docShow(){
@@ -470,7 +450,7 @@ function PrintDiv() {
             printWindow.document.write('</body></html>');
             printWindow.document.close();
             printWindow.print();
-        }
+}
 
 function showemail(){
     document.getElementById("email_set").style.display="block";
@@ -500,12 +480,77 @@ function mail(){
         })
 }
 
-function showBulk(){
-    document.getElementById("bulkBrokers").style.display="block";
-    document.getElementById("brokers").style.display="none";
+function showName(){
+    var files = $('#uploaded_file').prop('files');
+    var names = $.map(files, function (val) { return val.name; });
+    var count = names.length;
+  
+    var _addr = document.getElementById('private_key');
+    var addrKey = $(_addr).val();
+    console.log(">>>>",addrKey);
+    if (addrKey != '') {
+        if(addrKey.startsWith("0x")){
+            addrKey = addrKey.slice(2);
+        }
+        else{
+            addrKey = addrKey;
+        }
+        if(addrKey.length == 64){
+            var myurl = 'get_address';
+            showLoader();
+            $.ajax({
+                type: "POST",
+                url: myurl,
+                dataType:"json",
+                data: {"action":"getaddress","privkey":$(_addr).val()}, // serializes the form's elements.
+                success: (resp =>{
+                    // console.log(resp);
+                })// show response from the php script.
+            }).done(resp => {
+                // console.log(resp);
+                document.getElementById("customm").value = resp.privatekey;
+                var _custom = document.getElementById("customm");
+                $.post("test2",{
+                    'addr':resp.privatekey
+                }).then(resp => {
+                    var jsona = $.parseJSON(resp);
+                    console.log("response : ",resp,jsona);
+                    if(jsona.length > 0){
+                        if(count > parseFloat(jsona[0].tfpp_doc_redem)){
+                            console.log("response1 : ",jsona);
+                            hideLoader();
+                            $("#bulkPaypal").modal("show");
+                            $('#bulkPaypal').css('opacity', '1');
+                        }
+                        else{
+                            //all ok
+                            hideLoader();
+                            paypal_addr = jsona[0].tfpp_address;
+                            paypal_doc_redem = parseFloat(jsona[0].tfpp_doc_redem);
+                        }
+                    }
+                    else{
+                        hideLoader();
+                        $("#paypal").modal("show");
+                        $('#paypal').css('opacity', '1');
+                    }
+                    
+                    
+                }).fail(err => {
+                    console.log("response1 : ",err);
+                })
+            })
+        }
+    }
+    else{
+        $("#checkprivKey").modal("show");
+        $('#checkprivKey').css('opacity', '1');
+        $('#okbtnn').click(function() {
+            $("#checkprivKey").modal("hide");
+            location.reload();
+        });
+    }
 }
-
-
 function docNumber(){
     var amountt = document.getElementById("numberDoc").value;
     document.getElementById("bulkAmount").value = amountt*10;

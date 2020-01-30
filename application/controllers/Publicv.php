@@ -4940,6 +4940,81 @@ class Publicv extends CI_Controller {
 		
 		
 	}
+
+	public function multi_brokers(){
+		
+		$data = array();
+		
+		$data['page'] = 'multi_brokers';
+		$data['pcountry'] = 0;
+
+		if(!empty($_GET['item_number']) && !empty($_GET['tx']) && !empty($_GET['amt']) && !empty($_GET['cm']) && !empty($_GET['cc']) && !empty($_GET['st'])){ 
+			$dbdata = $this->manage->get_paypal_paymentby_tx($_GET['tx']);
+			$db = json_encode($dbdata);
+			if(sizeof($dbdata) > 0 ){
+				$this->session->set_flashdata('msg_type', 'error');
+				// redirect($this->uri->uri_string());
+				redirect(current_url());
+			}
+			else{
+				$burn = burnXDC($_GET['amt']);
+				$status = explode(': ',$burn[9]);
+				$status = $status[1];
+				$status = str_replace(",","", $status);
+				if($status == true){
+					$_GET['burnStatus'] = $status;
+					// $transactionHash = explode(': ',$burn[13]);
+					$transactionHash = $burn[11];
+					$transactionHash = str_replace(array("'",","),"", $transactionHash);
+					$_GET['transactionHash'] = $transactionHash;
+					$result = $this->manage->add_paypal_details($_GET);
+					
+				}
+				else{
+					$_GET['burnStatus'] = false;
+					$_GET['transactionHash'] = '0x';
+					$result = $this->manage->add_paypal_details($_GET);
+				}
+				
+			}
+			
+		}
+
+		$action = $this->input->post('action');
+		$data['instrument'] = $this->input->post('instrument');
+		$data['name'] = $this->input->post('name');
+		$data['country'] = $this->input->post('pcountry');
+		$data['currency_supported'] = $this->input->post('currency_supported');
+		$data['amount'] = $this->input->post('amount');
+		$data['maturity_date'] = $this->input->post('maturity_date');
+		$data['docRef'] = $this->input->post('docRef');
+
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+		
+		$ccountries = $this->plisting->get_country();
+		
+		if($ccountries && !empty($ccountries) && is_array($ccountries) && sizeof($ccountries) <> 0){
+			$data['pcountries'] = $ccountries;			
+		}
+		
+
+		if($action == 'bkrdetail'){
+			$result = $this->manage->add_instrument($data);
+		}
+	
+		$this->load->view('includes/headern', $data);
+		$this->load->view('includes/header_publicn', $data);
+		$this->load->view('pages/public/multi_brokers_view', $data);
+		
+		
+	}
 	
 	public function rollout(){
         

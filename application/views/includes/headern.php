@@ -6,7 +6,7 @@
 <!--<marquee>The website is under Maintenence. Please ignore if you face any technical issue.</marquee>-->
 <head>
     <meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="TradeFinex" content="TradeFinex is a decentralized peer to peer global Trade & Infrastructure Finance platform built on open standards and it provides seamless connectivity between global public investors, contract authority, project company, regulators and other key project finance stakeholders" />
 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 	
