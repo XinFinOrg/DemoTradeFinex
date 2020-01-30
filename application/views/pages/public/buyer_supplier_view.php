@@ -153,7 +153,7 @@
 
                                 <div class="form-group">
                                     <label for="supporting-document">Upload all supporting documents like Credit Report, KYC, and Business Profile as one PDF file.**Max file size 10 MB</label>
-                                    <div class="input-group">
+									 <div class="input-group">
                                         <span class="input-group-btn">
                                         <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
                                         <input name="uploaded_file" id = "uploaded_file"onChange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" accept=",.pdf" style="display: none;" type="file">

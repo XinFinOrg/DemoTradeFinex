@@ -304,13 +304,17 @@
 
                                 <div class="form-group">
                                     <label for="supporting-document">Upload all supporting documents like Credit Report, KYC, and Business Profile as one PDF file. **Max file size 10 MB</label>
-                                    <div class="input-group">
+                                    <div class="tf-bulkUpload-inputBox">
+										<input type="file" name="file-6[]" id="file-6" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+										<label for="file-6"><figure><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg></figure> <span>Choose files</span></label>
+									</div>
+									<!--<div class="input-group">
                                         <span class="input-group-btn">
                                         <span class="btn btn-primary" onClick="$(this).parent().find('input[type=file]').click();">Browse</span>
                                         <input name="uploaded_file" id = "uploaded_files"onchange="showName()" accept=".pdf" style="display: none;" type="file" value="no file"multiple>
                                         </span>
                                         <span class="form-control"></span>
-                                    </div>
+                                    </div>-->
                                     <p>*Application & deal distribution fee is USD 10 worth of XDC per instrument (20% fees in XDC will burn automatically). This document will be encrypted & stored on XinFin Blockchain Network and will be viewable to financiers only.</p>
                                     <label for="supporting-document" style="display:none" class ="error"id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" class="error"id="error1">Please file less than 5MB</label>
