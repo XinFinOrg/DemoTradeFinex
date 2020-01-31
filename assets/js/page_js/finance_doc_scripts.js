@@ -291,7 +291,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://localhost:3110/api/uploadDoc",
+						url:"https://demoapi.tradefinex.org/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
@@ -310,7 +310,7 @@ $(function () {
 					
 						if(resp.status == true){
 							hash = resp.hash;
-							$.post("http://localhost:3110/api/generateContract",{
+							$.post("https://demoapi.tradefinex.org/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -332,7 +332,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("http://localhost:3110/api/deployContract",{
+										$.post("https://demoapi.tradefinex.org/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -341,6 +341,7 @@ $(function () {
 										"docRef":formDataObj.instrument+formDataObj.docRef,
 										"country":formDataObj.pcountry.replace(/[+]/g," "),
 										"contractType":"commonInstrument",
+										"nonceAdder":0,
 										"passKey" :passkey,
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
@@ -687,7 +688,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://localhost:3110/api/uploadDoc",
+						url:"https://demoapi.tradefinex.org/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
@@ -703,7 +704,7 @@ $(function () {
 							hash = resp.hash;
 							
 
-							$.post("http://localhost:3110/api/generateContract",{
+							$.post("https://demoapi.tradefinex.org/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -726,7 +727,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("http://localhost:3110/api/deployContract",{
+										$.post("https://demoapi.tradefinex.org/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -736,6 +737,7 @@ $(function () {
 										"country":formDataObj.pcountry.replace(/[+]/g," "),
 										"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
 										"contractType":"brokerInstrument",
+										"nonceAdder":0,
 										"passKey" :passkey,
 										"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 										}).then(resp => {
@@ -962,19 +964,12 @@ $(function () {
 
 		},
 		submitHandler: function (form, e) {
-			$('#brokers').prop('disabled', true);
+			
 			showLoader();
 			var formData = $(form).serialize();
 			const formObj = formData.trim().split('&');
 			var formDataObj = {};
 			var files = document.getElementById('uploaded_file').files;
-			// for(var i=0; i<= files.length -1; i++){
-			// 	sum = files.length;
-				
-			// }
-			console.log(">>>0",files.length,typeof(files));
-			// fileName = files[0].name.substring(0,3);
-			// console.log(">>>",fileName);
 			var dataFile;
 			var hash;
 			const filearr = [];
@@ -986,7 +981,6 @@ $(function () {
 						dataFile = reader.result;
 						dataFile = dataFile.split("base64,");
 						filearr.push(dataFile[1]);
-						console.log("inside file reader");
 					// after getting value of datafile name make the ajax call
 					$.each(formObj, function (k, v) {
 						v = v.split('=');
@@ -999,88 +993,7 @@ $(function () {
 						}
 					});
 					formDataObj.docRef = (new Date()).getTime();
-					// let resp = $.ajax({
-					// 	type:"POST",
-					// 	dataType:"json",
-					// 	async:false, 
-					// 	url:"http://localhost:3110/api/uploadDoc",
-					// 	data:{"data":dataFile[1]}						
-					// }).responseJSON;
-
-
-					// console.log("success",resp.status);
-					// 		if(resp.status == true){
-					// 			hash = resp.hash;
-	
-					// 			const response = await $.post("http://localhost:3110/api/generateContract",{
-					// 			"ipfsHash":hash,
-					// 			"instrumentType":formDataObj.instrument,
-					// 			"amount":formDataObj.amount,
-					// 			"currencySupported":formDataObj.currency_supported,
-					// 			"maturityDate":formDataObj.maturity_date,
-					// 			"docRef":formDataObj.instrument+formDataObj.docRef,
-					// 			"country":formDataObj.pcountry.replace(/[+]/g," "),
-					// 			"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
-					// 			"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
-					// 			"contractType":"brokerInstrument"
-					// 			})
-					// 				console.log("Generate Contract : ",response);
-					// 				if(response.status == true){
-					// 					passkey = response.passKey
-					// 						const respond = await $.post("http://localhost:3110/api/deployContract",{
-					// 						"ipfsHash":hash,
-					// 						"instrumentType":formDataObj.instrument,
-					// 						"amount":formDataObj.amount,
-					// 						"currencySupported":formDataObj.currency_supported,
-					// 						"maturityDate":formDataObj.maturity_date,
-					// 						"docRef":formDataObj.instrument+formDataObj.docRef,
-					// 						"country":formDataObj.pcountry.replace(/[+]/g," "),
-					// 						"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
-					// 						"contractType":"brokerInstrument",
-					// 						"passKey" :passkey,
-					// 						"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
-					// 						});
-					// 							console.log(" Deploy Contract : ",respond);
-												
-												
-					// 							if(respond.status == true){
-					// 								$.post("buyer_supplier",{
-					// 									'action':"adddetail",
-					// 									'instrument': formDataObj.instrument,
-					// 									'amount':formDataObj.amount,
-					// 									"currency_supported":formDataObj.currency_supported,
-					// 									"maturity_date":formDataObj.maturity_date,
-					// 									"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
-					// 									"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
-					// 									"docRef":formDataObj.instrument+formDataObj.docRef,
-					// 									"contractAddr":respond.receipt.contractAddress.toLowerCase(),
-					// 									"deployerAddr":respond.deployerAddr.toLowerCase(),
-					// 									"secretKey" : passkey,
-					// 									"addr" :paypal_addr,
-					// 									"doc":paypal_doc_redem,
-					// 									"csrf_name": csrf_value
-					// 								})
-	
-													
-					// 							}
-					// 							else if (resp.status == false){
-					// 								hideLoader();
-					// 								toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
-					// 								setTimeout(location.reload.bind(location), 6000);
-					// 							}										
-					// 				}
-									
-									
-									
-								
-					// 		}
-					// 		else if (resp.status == false){
-					// 			hideLoader();
-					// 			toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
-					// 			setTimeout(location.reload.bind(location), 6000);
-					// 		}
-
-
+					
 					};
 					
 				});	
@@ -1088,26 +1001,23 @@ $(function () {
 			}
 
 			const fileReaderInterval = setInterval(() => {
-				console.log("file length check :", files.length);
 				if (filearr.length === files.length) {
 					// read complete
 					clearInterval(fileReaderInterval);
-					console.log(filearr);
 					
 					for(var i = 0; i < filearr.length; i++ ){
 						const childd = i;
-						console.log("nonce",childd)
 						let resp = $.ajax({
 							type:"POST",
 							dataType:"json",
-							url:"http://90.0.0.84:3110/api/uploadDoc",
+							url:"https://demoapi.tradefinex.org/api/uploadDoc",
 							data:{"data":dataFile[1]},
 							success: (resp =>{
 								// console.log(resp);
 								if(resp.status == true){
 									hash = resp.hash;
 		
-									$.post("http://90.0.0.84:3110/api/generateContract",{
+									$.post("https://demoapi.tradefinex.org/api/generateContract",{
 									"ipfsHash":hash,
 									"instrumentType":formDataObj.instrument,
 									"amount":formDataObj.amount,
@@ -1119,56 +1029,76 @@ $(function () {
 									"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
 									"contractType":"brokerInstrument"
 									}).then(respond => {
-										console.log("Generate Contract : ",respond.status,childd);
+										// console.log("Generate Contract : ",respond.status,childd);
 										if(respond.status == true){
-											passkey = respond.passKey
-												$.post("http://90.0.0.84:3110/api/deployContract",{
-												"ipfsHash":hash,
-												"instrumentType":formDataObj.instrument,
-												"amount":formDataObj.amount,
-												"currencySupported":formDataObj.currency_supported,
-												"maturityDate":formDataObj.maturity_date,
-												"docRef":formDataObj.instrument+formDataObj.docRef,
-												"country":formDataObj.pcountry.replace(/[+]/g," "),
-												"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
-												"contractType":"brokerInstrument",
-												"nonceAdder":childd,
-												"passKey" :passkey,
-												"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
-												}).then(respondd => {;
-													console.log(" Deploy Contract : ",respondd);
-													
-													
-													if(respondd.status == true){
-														$.post("buyer_supplier",{
-															'action':"adddetail",
-															'instrument': formDataObj.instrument,
-															'amount':formDataObj.amount,
-															"currency_supported":formDataObj.currency_supported,
-															"maturity_date":formDataObj.maturity_date,
-															"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
-															"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
-															"docRef":formDataObj.instrument+formDataObj.docRef,
-															"contractAddr":respondd.receipt.contractAddress.toLowerCase(),
-															"deployerAddr":respondd.deployerAddr.toLowerCase(),
-															"secretKey" : passkey,
-															"addr" :paypal_addr,
-															"doc":paypal_doc_redem,
-															"csrf_name": csrf_value
-														})
-		
-														
-													}
-													else if (resp.status == false){
+											var deploy=[];
+											// var txHash=[];
+											passkey = respond.passKey,
+											$.post("https://demoapi.tradefinex.org/api/deployContract",{
+											"ipfsHash":hash,
+											"instrumentType":formDataObj.instrument,
+											"amount":formDataObj.amount,
+											"currencySupported":formDataObj.currency_supported,
+											"maturityDate":formDataObj.maturity_date,
+											"docRef":formDataObj.instrument+formDataObj.docRef,
+											"country":formDataObj.pcountry.replace(/[+]/g," "),
+											"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
+											"contractType":"brokerInstrument",
+											"nonceAdder":childd,
+											"passKey" :passkey,
+											"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
+											}).then(respondd => {
+												// console.log(" Deploy Contract : ",respondd);
+												
+												deploy.push({contract_address:respondd.receipt.contractAddress.toLowerCase(),txHash:respondd.receipt.transactionHash});
+												// txHash.push(resp.receipt.transactionHash);
+												if(respondd.status == true){
+													$.post("buyer_supplier",{
+													'action':"adddetail",
+													'instrument': formDataObj.instrument,
+													'amount':formDataObj.amount,
+													"currency_supported":formDataObj.currency_supported,
+													"maturity_date":formDataObj.maturity_date,
+													"pcountry":formDataObj.pcountry.replace(/[+]/g," "),
+													"name":"BKR-"+formDataObj.name.replace(/[+]/g," "),
+													"docRef":formDataObj.instrument+formDataObj.docRef,
+													"contractAddr":respondd.receipt.contractAddress.toLowerCase(),
+													"deployerAddr":respondd.deployerAddr.toLowerCase(),
+													"secretKey" : passkey,
+													"addr" :paypal_addr,
+													"doc":paypal_doc_redem,
+													"csrf_name": csrf_value
+													}).then(res =>{
+														console.log("contract details",deploy);
 														hideLoader();
-														toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+														toastr.success('Successfully added document', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 														setTimeout(location.reload.bind(location), 6000);
-													}	
-												});									
+													}).fail(error =>{
+														hideLoader();
+														toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+														setTimeout(location.reload.bind(location), 6000);
+													})
+														
+													
+												}
+												else if (respondd.status == false){
+													hideLoader();
+													toastr.error('Invalid Private Key/Insufficient balance.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+													setTimeout(location.reload.bind(location), 6000);
+												}	
+											});									
 										}
-									});
-										
-										
+										else if(respond.status == false){
+												hideLoader();
+												toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+												setTimeout(location.reload.bind(location), 6000);
+											
+										}
+									}).fail(error =>{
+										hideLoader();
+										toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+										setTimeout(location.reload.bind(location), 6000);
+									});		
 									
 								}
 								else if (resp.status == false){
@@ -1331,7 +1261,7 @@ $(function () {
 						$.ajax({
 							type:"POST",
 							dataType:"json",
-							url:"http://localhost:3110/api/getDocHash",
+							url:"https://demoapi.tradefinex.org/api/getDocHash",
 							data:{"contractAddr":formDataObj.contract_address,
 								  "passKey": resp.key,
 								  "contractType" : "commonInstrument"
@@ -1447,7 +1377,7 @@ $(function () {
 						$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://localhost:3110/api/getDocHash",
+						url:"https://demoapi.tradefinex.org/api/getDocHash",
 						data:{"contractAddr":formDataObj.contract_address,
 							  "passKey": resp.key,
 							  "contractType" : "brokerInstrument"

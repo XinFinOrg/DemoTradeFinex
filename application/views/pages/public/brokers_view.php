@@ -181,7 +181,7 @@
                     </div>
                     <div class="row" >
                             <div class="form-group col-md-4 col-xs-4" style="float:right">
-                                <button  id="bulk" name="bulk" type="submit" class="btn btn-blue text-uppercase" onclick="showBulk()">Bulk Upload</button><p> (Coming Soon)</p>
+                                <button  id="bulk" name="bulk" type="submit" class="btn btn-blue text-uppercase" onclick="location.href='<?php echo base_url() ?>publicv/multi_brokers'">Bulk Upload</button><p> (Coming Soon)</p>
                             </div>
                         </div>
                 </div>
@@ -500,10 +500,6 @@ function mail(){
         })
 }
 
-function showBulk(){
-    document.getElementById("bulkBrokers").style.display="block";
-    document.getElementById("brokers").style.display="none";
-}
 
 
 function docNumber(){

@@ -1456,6 +1456,19 @@ $data1 = [
 		}
 		public function update_paypalpayment_by_txn($addr, $doc){
 
+			$this->db->select('tfpp_doc_redem');
+			$this->db->from('{PRE}paypal_payment');
+			$where = "tfpp_address ='$addr'";
+			$this->db->where($where);
+			$query = $this->db->get();
+
+			$document = $query->result();
+
+			foreach($document as $docu){
+				$doc = $docu->tfpp_doc_redem;
+			}
+
+			log_message("info","address redem".$doc);
 			$datan = array();
 			$data1 = [
 				'tfpp_doc_redem' => floatval($doc) - 1,

@@ -487,7 +487,6 @@ function showName(){
   
     var _addr = document.getElementById('private_key');
     var addrKey = $(_addr).val();
-    console.log(">>>>",addrKey);
     if (addrKey != '') {
         if(addrKey.startsWith("0x")){
             addrKey = addrKey.slice(2);
@@ -514,7 +513,7 @@ function showName(){
                     'addr':resp.privatekey
                 }).then(resp => {
                     var jsona = $.parseJSON(resp);
-                    console.log("response : ",resp,jsona);
+                    // console.log("response : ",resp,jsona);
                     if(jsona.length > 0){
                         if(count > parseFloat(jsona[0].tfpp_doc_redem)){
                             console.log("response1 : ",jsona);
