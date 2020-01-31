@@ -291,7 +291,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"https://demoapi.tradefinex.org/api/uploadDoc",
+						url:"http://localhost:3110/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
@@ -310,7 +310,7 @@ $(function () {
 					
 						if(resp.status == true){
 							hash = resp.hash;
-							$.post("https://demoapi.tradefinex.org/api/generateContract",{
+							$.post("http://localhost:3110/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -332,7 +332,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("https://demoapi.tradefinex.org/api/deployContract",{
+										$.post("http://localhost:3110/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -688,7 +688,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"https://demoapi.tradefinex.org/api/uploadDoc",
+						url:"http://localhost:3110/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
@@ -704,7 +704,7 @@ $(function () {
 							hash = resp.hash;
 							
 
-							$.post("https://demoapi.tradefinex.org/api/generateContract",{
+							$.post("http://localhost:3110/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -727,7 +727,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("https://demoapi.tradefinex.org/api/deployContract",{
+										$.post("http://localhost:3110/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -1004,20 +1004,20 @@ $(function () {
 				if (filearr.length === files.length) {
 					// read complete
 					clearInterval(fileReaderInterval);
-					
+					var deploy = [];
 					for(var i = 0; i < filearr.length; i++ ){
 						const childd = i;
 						let resp = $.ajax({
 							type:"POST",
 							dataType:"json",
-							url:"https://demoapi.tradefinex.org/api/uploadDoc",
+							url:"http://localhost:3110/api/uploadDoc",
 							data:{"data":dataFile[1]},
 							success: (resp =>{
 								// console.log(resp);
 								if(resp.status == true){
 									hash = resp.hash;
 		
-									$.post("https://demoapi.tradefinex.org/api/generateContract",{
+									$.post("http://localhost:3110/api/generateContract",{
 									"ipfsHash":hash,
 									"instrumentType":formDataObj.instrument,
 									"amount":formDataObj.amount,
@@ -1031,10 +1031,8 @@ $(function () {
 									}).then(respond => {
 										// console.log("Generate Contract : ",respond.status,childd);
 										if(respond.status == true){
-											var deploy=[];
-											// var txHash=[];
 											passkey = respond.passKey,
-											$.post("https://demoapi.tradefinex.org/api/deployContract",{
+											$.post("http://localhost:3110/api/deployContract",{
 											"ipfsHash":hash,
 											"instrumentType":formDataObj.instrument,
 											"amount":formDataObj.amount,
@@ -1050,7 +1048,7 @@ $(function () {
 											}).then(respondd => {
 												// console.log(" Deploy Contract : ",respondd);
 												
-												deploy.push({contract_address:respondd.receipt.contractAddress.toLowerCase(),txHash:respondd.receipt.transactionHash});
+												deploy.push({File_No:childd,contract_address:respondd.receipt.contractAddress.toLowerCase(),txHash:respondd.receipt.transactionHash});
 												// txHash.push(resp.receipt.transactionHash);
 												if(respondd.status == true){
 													$.post("buyer_supplier",{
@@ -1069,10 +1067,18 @@ $(function () {
 													"doc":paypal_doc_redem,
 													"csrf_name": csrf_value
 													}).then(res =>{
-														console.log("contract details",deploy);
-														hideLoader();
-														toastr.success('Successfully added document', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
-														setTimeout(location.reload.bind(location), 6000);
+														if(i === filearr.length){
+															hideLoader();
+															document.getElementById("createinstrument").style.display = "none";
+															document.getElementById("showTransactions").style.display = "block";
+															$('#deployedData').html('<p>'+deploy+'</p>');
+															console.log("contract details",deploy,i);
+															toastr.success('Successfully added document', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+															$("#okTx").on('click', function (e) {
+																setTimeout(location.reload.bind(location), 6000);
+															})
+														}
+														
 													}).fail(error =>{
 														hideLoader();
 														toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
@@ -1113,7 +1119,7 @@ $(function () {
 						
 						
 					}
-
+					
 				}
 			})
 			
@@ -1261,7 +1267,7 @@ $(function () {
 						$.ajax({
 							type:"POST",
 							dataType:"json",
-							url:"https://demoapi.tradefinex.org/api/getDocHash",
+							url:"http://localhost:3110/api/getDocHash",
 							data:{"contractAddr":formDataObj.contract_address,
 								  "passKey": resp.key,
 								  "contractType" : "commonInstrument"
@@ -1377,7 +1383,7 @@ $(function () {
 						$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"https://demoapi.tradefinex.org/api/getDocHash",
+						url:"http://localhost:3110/api/getDocHash",
 						data:{"contractAddr":formDataObj.contract_address,
 							  "passKey": resp.key,
 							  "contractType" : "brokerInstrument"
