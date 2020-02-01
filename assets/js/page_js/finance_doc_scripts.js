@@ -1048,7 +1048,7 @@ $(function () {
 											}).then(respondd => {
 												// console.log(" Deploy Contract : ",respondd);
 												
-												deploy.push({fileNo:childd+1,contract_address:respondd.receipt.contractAddress.toLowerCase(),txHash:respondd.receipt.transactionHash});
+												deploy.push({fileNo:childd,contract_address:respondd.receipt.contractAddress.toLowerCase(),txHash:respondd.receipt.transactionHash});
 												// txHash.push(resp.receipt.transactionHash);
 												if(respondd.status == true){
 													$.post("buyer_supplier",{
@@ -1068,25 +1068,15 @@ $(function () {
 													"csrf_name": csrf_value
 													}).then(res =>{
 														if(i === filearr.length){
-															
-															// var deployed = JSON.stringify(deploy);
-															// $('#deployedData').html('<p>'+deployed+'</p>');
-															// var el_down = document.getElementById("deployedData"); 
-															// el_down.innerHTML = JSON.stringify(deploy);	
-															// var ress =Object.entries(deploy);		
-															// for(var j =0; j < ress.length ; j++){
-															// 	document.getElementById("fileNo").innerHTML = deploy[j].fileNo;
-															// 	document.getElementById("contractAdress").innerHTML = deploy[j].contract_address;
-															// 	document.getElementById("txHash").innerHTML = deploy[j].txHash;
-															// }				
+																			
 															var ress =Object.entries(deploy);			
 															let rows = "";
-															
+															const hashUrl = `https://ipfs-gateway.xinfin.network/${resp.ipfsHash}`
 															for (var j = 0; j < ress.length; j++) { 
 																rows += `<tr>
-																<td>${deploy[j].fileNo}</td>
+																<td>${deploy[j].fileNo +1}</td>
 																<td>${deploy[j].contract_address}</td>
-																<td>${deploy[j].txHash}</td>
+																<td><a href="${hashUrl}" target="_blank">${deploy[j].txHash}</a></td>
 																</tr>`
 														
 															 } 
