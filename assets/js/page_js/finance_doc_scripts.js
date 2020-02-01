@@ -291,7 +291,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://localhost:3110/api/uploadDoc",
+						url:"https://demoapi.tradefinex.org/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
@@ -310,7 +310,7 @@ $(function () {
 					
 						if(resp.status == true){
 							hash = resp.hash;
-							$.post("http://localhost:3110/api/generateContract",{
+							$.post("https://demoapi.tradefinex.org/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -332,7 +332,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("http://localhost:3110/api/deployContract",{
+										$.post("https://demoapi.tradefinex.org/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -688,7 +688,7 @@ $(function () {
 					$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://localhost:3110/api/uploadDoc",
+						url:"https://demoapi.tradefinex.org/api/uploadDoc",
 						data:{"data":dataFile[1]},
 						success: resp => {
 							// console.log("response success: ",resp)
@@ -704,7 +704,7 @@ $(function () {
 							hash = resp.hash;
 							
 
-							$.post("http://localhost:3110/api/generateContract",{
+							$.post("https://demoapi.tradefinex.org/api/generateContract",{
 							"ipfsHash":hash,
 							"instrumentType":formDataObj.instrument,
 							"amount":formDataObj.amount,
@@ -727,7 +727,7 @@ $(function () {
 									$("#deploy_contract").on('click', function (e) {
 										showLoader();
 										$('#deploy_contract').prop('disabled', true);
-										$.post("http://localhost:3110/api/deployContract",{
+										$.post("https://demoapi.tradefinex.org/api/deployContract",{
 										"ipfsHash":hash,
 										"instrumentType":formDataObj.instrument,
 										"amount":formDataObj.amount,
@@ -1010,14 +1010,14 @@ $(function () {
 						let resp = $.ajax({
 							type:"POST",
 							dataType:"json",
-							url:"http://localhost:3110/api/uploadDoc",
+							url:"https://demoapi.tradefinex.org/api/uploadDoc",
 							data:{"data":dataFile[1]},
 							success: (resp =>{
 								// console.log(resp);
 								if(resp.status == true){
 									hash = resp.hash;
 		
-									$.post("http://localhost:3110/api/generateContract",{
+									$.post("https://demoapi.tradefinex.org/api/generateContract",{
 									"ipfsHash":hash,
 									"instrumentType":formDataObj.instrument,
 									"amount":formDataObj.amount,
@@ -1032,7 +1032,7 @@ $(function () {
 										// console.log("Generate Contract : ",respond.status,childd);
 										if(respond.status == true){
 											passkey = respond.passKey,
-											$.post("http://localhost:3110/api/deployContract",{
+											$.post("https://demoapi.tradefinex.org/api/deployContract",{
 											"ipfsHash":hash,
 											"instrumentType":formDataObj.instrument,
 											"amount":formDataObj.amount,
@@ -1300,7 +1300,7 @@ $(function () {
 						$.ajax({
 							type:"POST",
 							dataType:"json",
-							url:"http://localhost:3110/api/getDocHash",
+							url:"https://demoapi.tradefinex.org/api/getDocHash",
 							data:{"contractAddr":formDataObj.contract_address,
 								  "passKey": resp.key,
 								  "contractType" : "commonInstrument"
@@ -1416,7 +1416,7 @@ $(function () {
 						$.ajax({
 						type:"POST",
 						dataType:"json",
-						url:"http://localhost:3110/api/getDocHash",
+						url:"https://demoapi.tradefinex.org/api/getDocHash",
 						data:{"contractAddr":formDataObj.contract_address,
 							  "passKey": resp.key,
 							  "contractType" : "brokerInstrument"
