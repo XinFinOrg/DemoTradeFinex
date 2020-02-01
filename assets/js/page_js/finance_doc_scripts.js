@@ -1071,7 +1071,7 @@ $(function () {
 																			
 															var ress =Object.entries(deploy);			
 															let rows = "";
-															const hashUrl = `https://ipfs-gateway.xinfin.network/${resp.ipfsHash}`
+															const hashUrl = `https://ipfs-gateway.xinfin.network/${deploy[j].txHash}`
 															for (var j = 0; j < ress.length; j++) { 
 																rows += `<tr>
 																<td>${deploy[j].fileNo +1}</td>
