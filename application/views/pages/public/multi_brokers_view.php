@@ -397,6 +397,26 @@
 	 	</div>
 </div>
 
+<div class="modal fade" id="extraDoc" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog" style="">
+		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
+			<div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="location.reload()" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
+                        <div class="deployedData_modal_block">
+                            <p>You do not have sufficient Balance to add the document.</p><br>
+                            <p>Your Balance is $<span id="balance"></span>.</p>
+                            <div class="form-group">
+                                    <button id="okkbtnn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">OK</button>
+                            </div>							
+						</div>
+				</div>
+			</div>
+	 	</div>
+</div>
+
 
 <script type="text/javascript">
 function docShow(){
@@ -500,8 +520,13 @@ function showName(){
                         if(count > parseFloat(jsona[0].tfpp_doc_redem)){
                             // console.log("response1 : ",jsona);
                             hideLoader();
-                            $("#bulkPaypal").modal("show");
-                            $('#bulkPaypal').css('opacity', '1');
+                            $("#extraDoc").modal("show");
+                            $('#extraDoc').css('opacity', '1');
+                            document.getElementById("balance").innerText = parseFloat(parseFloat(jsona[0].tfpp_doc_redem)*10);
+                            $('#okkbtnn').click(function(){
+                                $('#extraDoc').modal("hide");
+                                location.reload();
+                            });
                         }
                         else{
                             //all ok
