@@ -406,7 +406,7 @@
                 </div>
 				<div class="modal-body text-center">
                         <div class="deployedData_modal_block">
-                            <p>You do not have sufficient Balance to add the document.</p><br>
+                            <p>You do not have sufficient Balance to add extra document.</p><br>
                             <p>Your Balance is $<span id="balance"></span>.</p>
                             <div class="form-group">
                                     <button id="okkbtnn" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">OK</button>
