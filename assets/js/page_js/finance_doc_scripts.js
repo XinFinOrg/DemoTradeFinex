@@ -1013,7 +1013,7 @@ $(function () {
 							url:"https://demoapi.tradefinex.org/api/uploadDoc",
 							data:{"data":dataFile[1]},
 							success: (resp =>{
-								// console.log(resp);
+								console.log(resp);
 								if(resp.status == true){
 									hash = resp.hash;
 		
@@ -1029,7 +1029,7 @@ $(function () {
 									"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key,
 									"contractType":"brokerInstrument"
 									}).then(respond => {
-										// console.log("Generate Contract : ",respond.status,childd);
+										console.log("Generate Contract : ",respond.status,childd);
 										if(respond.status == true){
 											passkey = respond.passKey,
 											$.post("https://demoapi.tradefinex.org/api/deployContract",{
@@ -1046,7 +1046,7 @@ $(function () {
 											"passKey" :passkey,
 											"privKey":formDataObj.private_key.toString().startsWith("0x") ? formDataObj.private_key : "0x"+formDataObj.private_key
 											}).then(respondd => {
-												// console.log(" Deploy Contract : ",respondd);
+												console.log(" Deploy Contract : ",respondd);
 												
 												deploy.push({fileNo:childd,contract_address:respondd.receipt.contractAddress.toLowerCase(),txHash:respondd.receipt.transactionHash});
 												// txHash.push(resp.receipt.transactionHash);
@@ -1071,8 +1071,8 @@ $(function () {
 																			
 															var ress =Object.entries(deploy);			
 															let rows = "";
-															const hashUrl = `https://ipfs-gateway.xinfin.network/${deploy[j].txHash}`
 															for (var j = 0; j < ress.length; j++) { 
+																const hashUrl = `https://ipfs-gateway.xinfin.network/${deploy[j].txHash}`;
 																rows += `<tr>
 																<td>${deploy[j].fileNo +1}</td>
 																<td>${deploy[j].contract_address}</td>
