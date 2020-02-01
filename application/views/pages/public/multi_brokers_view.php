@@ -270,7 +270,7 @@
                                     <h1>Contract Deployed Successfully.</h1>
                                     <p>Please save the contract address for further use.</p>
                                         <pre id="deployedData" class="language-markup scrollable" disabled>
-                                        
+                                            
 									    </pre>
                                 </div>
 
@@ -282,7 +282,6 @@
                                 </div>
                         
 							<div class="form-group">
-								<button id="CopyBtn" type="submit" onclick="copy('deployedData')" class="btn btn-blue text-uppercase" data-keyboard="false">Copy</button>
 								<button id="DownloadBtn" type="submit" onclick="PrintDiv()"class="btn btn-blue text-uppercase" data-keyboard="false">Download</button>
 								<button id="EmailBtn" type="submit" onclick="showemail()"class="btn btn-blue text-uppercase" data-keyboard="false">Email</button>
                                 <button id="okTx" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false">OK</button>
@@ -407,28 +406,6 @@ function docShow(){
 function hideShow(){
     document.getElementById("createinstrument").style.display="block";
     document.getElementById("getdochash").style.display="none";
-}
-
-
-function copy(containerid) {
-    if (document.selection) { 
-    var range = document.body.createTextRange();
-    range.moveToElementText(document.getElementById(containerid));
-    range.select().createTextRange();
-    document.execCommand("copy"); 
-    toastr.success('Copied.', {timeOut: 2500});
-
-    } 
-    else if (window.getSelection) {
-        var range = document.createRange();
-        range.selectNode(document.getElementById(containerid));
-        window.getSelection().addRange(range);
-        document.execCommand("copy");
-        toastr.success('Copied.', {timeOut: 2500});
-    }
-    else{
-        toastr.error('Something went wrong.', {timeOut: 2500})
-    }
 }
 
 function download(){

@@ -973,6 +973,7 @@ $(function () {
 			var dataFile;
 			var hash;
 			const filearr = [];
+			const deploy = [];
 			if (files.length > 0) {
 				Array.prototype.forEach.call(files,  child => {
 					var reader = new FileReader();
@@ -1004,7 +1005,6 @@ $(function () {
 				if (filearr.length === files.length) {
 					// read complete
 					clearInterval(fileReaderInterval);
-					var deploy = [];
 					for(var i = 0; i < filearr.length; i++ ){
 						const childd = i;
 						let resp = $.ajax({
@@ -1048,7 +1048,7 @@ $(function () {
 											}).then(respondd => {
 												// console.log(" Deploy Contract : ",respondd);
 												
-												deploy.push({File_No:childd,contract_address:respondd.receipt.contractAddress.toLowerCase(),txHash:respondd.receipt.transactionHash});
+												deploy.push({fileNo:childd+1,contract_address:respondd.receipt.contractAddress.toLowerCase(),txHash:respondd.receipt.transactionHash});
 												// txHash.push(resp.receipt.transactionHash);
 												if(respondd.status == true){
 													$.post("buyer_supplier",{
@@ -1068,14 +1068,48 @@ $(function () {
 													"csrf_name": csrf_value
 													}).then(res =>{
 														if(i === filearr.length){
+															
+															// var deployed = JSON.stringify(deploy);
+															// $('#deployedData').html('<p>'+deployed+'</p>');
+															// var el_down = document.getElementById("deployedData"); 
+															// el_down.innerHTML = JSON.stringify(deploy);	
+															// var ress =Object.entries(deploy);		
+															// for(var j =0; j < ress.length ; j++){
+															// 	document.getElementById("fileNo").innerHTML = deploy[j].fileNo;
+															// 	document.getElementById("contractAdress").innerHTML = deploy[j].contract_address;
+															// 	document.getElementById("txHash").innerHTML = deploy[j].txHash;
+															// }				
+															var ress =Object.entries(deploy);			
+															let rows = "";
+															
+															for (var j = 0; j < ress.length; j++) { 
+																rows += `<tr>
+																<td>${deploy[j].fileNo}</td>
+																<td>${deploy[j].contract_address}</td>
+																<td>${deploy[j].txHash}</td>
+																</tr>`
+														
+															 } 
+															const html = `<table id="admin-table" class="table table-striped jambo_table bulk_action" cellspacing="0" width="100%"
+																			<thead>
+																				<tr>
+																					<td>File No</td>
+																					<td>Contract Address</td>
+																					<td>Transaction Hash</td>
+																				</tr>
+																			</thead>
+																			<tbody>`
+																			+rows+
+																			`</tbody>
+																		</table>`
 															hideLoader();
 															document.getElementById("createinstrument").style.display = "none";
 															document.getElementById("showTransactions").style.display = "block";
-															$('#deployedData').html('<p>'+deploy+'</p>');
-															console.log("contract details",deploy,i);
+															$("#deployedData").html(html);
+															
 															toastr.success('Successfully added document', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
 															$("#okTx").on('click', function (e) {
-																setTimeout(location.reload.bind(location), 6000);
+																setTimeout(location.reload.bind(location));
 															})
 														}
 														
@@ -1122,7 +1156,6 @@ $(function () {
 					
 				}
 			})
-			
 				
 					
 		}
