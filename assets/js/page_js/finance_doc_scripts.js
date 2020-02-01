@@ -1072,7 +1072,7 @@ $(function () {
 															var ress =Object.entries(deploy);			
 															let rows = "";
 															for (var j = 0; j < ress.length; j++) { 
-																const hashUrl = `https://explorer.apothem.network/tx${deploy[j].txHash}`;
+																const hashUrl = `https://explorer.apothem.network/tx/${deploy[j].txHash}`;
 																rows += `<tr>
 																<td>${deploy[j].fileNo +1}</td>
 																<td>${deploy[j].contract_address}</td>
