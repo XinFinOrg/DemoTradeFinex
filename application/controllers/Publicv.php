@@ -2001,7 +2001,7 @@ class Publicv extends CI_Controller {
 		$stakedXDC = stakedXDC();
 		$split  = explode(' ',$stakedXDC);
 		$data['stakedXDC'] = $split[0];
-		$data['stakedXDCUSD'] = floatval(600000000 * $data['xdc_usd']);
+		$data['stakedXDCUSD'] = floatval($data['stakedXDC'] * 1000000 * $data['xdc_usd']);
 		
 		$rewards = todayRewards();
 		$data['rewards'] = floatval(31 * $rewards);
@@ -5531,25 +5531,14 @@ class Publicv extends CI_Controller {
 		}
 		
 	}
-	public function gitpull(){
+	public function git_pull() {
 		
-		$data = array();
-		
-		$data['csrf'] = array();
-		
-		$csrf = array(
-			'name' => $this->security->get_csrf_token_name(),
-			'hash' => $this->security->get_csrf_hash()
-		);
-		
-		$data['csrf'] = $csrf;
-		
-		$curl = curl_init();
+	//make sure to make the shell file executeable first before running the shell_exec function
+	$output = shell_exec('git pull origin master');
+	echo $output;
 
-		
-		echo json_encode($data);
-				
 	}
+
 	public function test(){
 		
 		$data = array();
