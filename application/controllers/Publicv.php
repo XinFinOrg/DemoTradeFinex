@@ -2183,7 +2183,7 @@ class Publicv extends CI_Controller {
 		 }	
 
 		if($action == 'send_mail'){
-			$config = array();
+				$config = array();
 				$config = $this->config->item('$econfig');
 							
 				$this->email->initialize($config);
@@ -2224,10 +2224,9 @@ class Publicv extends CI_Controller {
 					$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Error in sending Email. Please try again.</h3>");
 				}
 				
-				redirect(base_url().'thankyouc');
-		
+				redirect('thankyouc');
 		}	
-			
+		
 		
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);

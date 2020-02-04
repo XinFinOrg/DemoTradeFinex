@@ -126,32 +126,11 @@ function subcontact() {
 
 $('#contact-form').on('submit', function(event){
 	var myurl = '<?php echo base_url()?>publicv/contact';
- event.preventDefault();
- $.ajax({
-  url:myurl,
-  method:"POST",
-  data:$(this).serialize(),
-  dataType:"json",
-  beforeSend:function()
-  {
-	document.getElementById("contact").disabled = true;
-  },
-  success:function(data)
-  {
-	  console.log(">>>>",data);
-	  document.getElementById("contact").disabled = false;
-   if(data.success)
-   {
-	$('#contact-form')[0].reset();
-	$('#captcha_error').text('');
-	grecaptcha.reset();
-	alert('Form Successfully validated');
-   }
-   else
-   {
-	$('#captcha_error').text('Captcha is required');
-   }
-  }
+	$.ajax({
+	url:myurl,
+	method:"POST",
+	data:$(this).serialize(),
+	dataType:"json",
  })
 });
 
