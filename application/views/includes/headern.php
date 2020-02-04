@@ -12,7 +12,7 @@
 	
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>TradeFinex</title>
+	<title>TradeFinex: Trade Finance Distribution powered by XinFin[XDC] Network</title>
 	
 	<!-- Favicon -->
 	<link rel="icon" href="<?php echo base_url() ?>assets/images/icon/favicon.png" />
