@@ -60,11 +60,15 @@
 									<textarea class="form-control" id="mmsg" name="mmsg"></textarea>
 								</div>
 								
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label for="defaultReal">Enter Captcha <sup>*</sup></label>
-										<input class="form-control" id="defaultReal" name="defaultReal" captchav="" autocomplete="off" maxlength="50" required data-required-error="" tabindex="5" aria-required="true" type="text">
+										<input class="form-control" id="defaultReal" name="defaultReal" captchav="" autocomplete="off" maxlength="50" required data-required-error="" tabindex="5" aria-required="true" type="text" onchange="grecaptcha.execute()">
 										<div class="captcha-error has-error" style="display:none"><div class="help-block col-xs-12 col-sm-reset inline"><font color="red" style="margin-left: -10px;">Please enter correct captcha (Letters are Case sensitive).</font></div>
-									</div><!-- Invalid Captcha ! -->
+									</div> Invalid Captcha ! -->
+								<!-- </div>  -->
+								<div class="form-group">
+									<div class="g-recaptcha" data-sitekey="6Lemh9UUAAAAALGe9oWNyImFTL8qN6sYhZxKpyJy"></div>
+									<span id="captcha_error" class="captcha-error has-error"></span>
 								</div>
 								
 								<div class="form-group">
@@ -73,7 +77,7 @@
 								</div>
 								
 								<div class="form-group">
-									<button type="submit" class="btn btn-blue text-uppercase" onclick="return subcontact()"> Submit</button>
+									<input type="submit" class="btn btn-blue text-uppercase" id="contact" name="contact" ></input>
 								</div>
 								
                             </form>
@@ -110,8 +114,46 @@ function subcontact() {
 
     // e.preventDefault(); // avoid to execute the actual submit of the form.
 }
-</script>
 
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</script>
+<script type="text/javascript">
+ $(document).ready(function(){
+
+$('#contact-form').on('submit', function(event){
+	var myurl = '<?php echo base_url()?>publicv/contact';
+ event.preventDefault();
+ $.ajax({
+  url:myurl,
+  method:"POST",
+  data:$(this).serialize(),
+  dataType:"json",
+  beforeSend:function()
+  {
+	document.getElementById("contact").disabled = true;
+  },
+  success:function(data)
+  {
+	  console.log(">>>>",data);
+	  document.getElementById("contact").disabled = false;
+   if(data.success)
+   {
+	$('#contact-form')[0].reset();
+	$('#captcha_error').text('');
+	grecaptcha.reset();
+	alert('Form Successfully validated');
+   }
+   else
+   {
+	$('#captcha_error').text('Captcha is required');
+   }
+  }
+ })
+});
+
+});
+</script>
 
 <?php
 	//$this->load->view('includes/block_features');	
