@@ -67,12 +67,15 @@
 									</div> Invalid Captcha ! -->
 								<!-- </div>  -->
 								<div class="form-group">
-									<div class="g-recaptcha" data-sitekey="6Lemh9UUAAAAALGe9oWNyImFTL8qN6sYhZxKpyJy"></div>
-									<span id="captcha_error" class="captcha-error has-error"></span>
+									<div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('recaptcha_site_key'); ?>" id="captcha_id" name="captcha_id"></div>
 								</div>
-								
+								<?php  if(empty($this->session->flashdata('flashError'))){ ?>
+									<div class="form-group">
+										<?php echo $this->session->flashdata('flashError');?>
+									</div>
+								<?php } ?>
 								<div class="form-group">
-									<input type="hidden" name="action" value="send_mail" /><input type="hidden" id="captcha_val" />
+									<input type="hidden" name="action" value="send_mail" />
 									<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
 								</div>
 								
