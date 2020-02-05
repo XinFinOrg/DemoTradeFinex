@@ -84,8 +84,8 @@ class Verify extends CI_Controller {
 				
 			}else{
 				$datan = array();
-				$datan['tfu_active'] = 1;
-				$this->manage->update_base_user_info_by_id($result[0]->tfu_id, $datan);
+				$data['tfu_active'] = 1;
+				$this->manage->update_base_user_info_by_id($result[0]->tfu_id, $data);
 				$data['msg'] = 'success';
 				$data['msg_extra'] = "<h3>Email Verified</h3> <p>Thank You ! Your account has been successfully activated. Click <a href='".base_url()."'>here</a> to go home.</p>";
 			}
