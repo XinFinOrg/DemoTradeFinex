@@ -72,8 +72,8 @@ class Verify extends CI_Controller {
 		$hash = $req_string_2a[1];
 		$expired = $req_string_3a[1]; 
 		
-		$result = $this->manage->verify_user($email, $hash, $data);
-		
+		$result1 = $this->manage->verify_user($email, $hash, $data);
+		$result = json_decode($result1);
 		if(!empty($result) && is_array($result) && sizeof($result) <> 0){
 								
 			$time_now = strtotime(date('Y-m-d H:i:s'));
