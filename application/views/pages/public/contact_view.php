@@ -57,7 +57,7 @@
 								
 								<div class="form-group">
 									<label for="mmsg">Message <sup>*</sup></label>
-									<textarea class="form-control" id="mmsg" name="mmsg"></textarea>
+									<textarea class="form-control" id="mmsg" name="mmsg" tabindex="5"></textarea>
 								</div>
 								
 								<!-- <div class="form-group">
@@ -67,13 +67,9 @@
 									</div> Invalid Captcha ! -->
 								<!-- </div>  -->
 								<div class="form-group">
-									<div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('recaptcha_site_key'); ?>" id="captcha_id" name="captcha_id"></div>
+									<div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('recaptcha_site_key'); ?>" ></div>
+									<label style="display:none;color:#ea212d;font-size: 12px;" id="captcha_id" name="captcha_id">Please verify the captcha.</label>
 								</div>
-								<?php  if(empty($this->session->flashdata('flashError'))){ ?>
-									<div class="form-group">
-										<?php echo $this->session->flashdata('flashError');?>
-									</div>
-								<?php } ?>
 								<div class="form-group">
 									<input type="hidden" name="action" value="send_mail" />
 									<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
@@ -126,12 +122,27 @@ function subcontact() {
 
 $('#contact-form').on('submit', function(event){
 	var myurl = '<?php echo base_url()?>publicv/contact';
-	$.ajax({
-	url:myurl,
-	method:"POST",
-	data:$(this).serialize(),
-	dataType:"json",
- })
+	var response = grecaptcha.getResponse();
+	if(response.length != 0){
+		document.getElementById('captcha_id').style.display = 'none';
+		$.ajax({
+			url:myurl,
+			method:"POST",
+			data:$(this).serialize(),
+			dataType:"json",
+			success: function(data)
+				{
+					// alert(data); // show response from the php script.
+				}
+		})
+	}
+	else{
+		// alert("please verify you are humann!"); 
+		document.getElementById('captcha_id').style.display = 'block';
+		event.preventDefault();
+		return false;
+	}
+			
 });
 
 });

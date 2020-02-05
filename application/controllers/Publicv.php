@@ -2155,9 +2155,7 @@ class Publicv extends CI_Controller {
 		{
 			$captcha_error = 'Captcha is required';
 			log_message("error","empty g-reacptcha-response".$captcha_error);
-			$this->session->set_flashdata('flashError', 'Sorry Google Recaptcha Unsuccessful!!');
 			$data['flash_error'] = $this->session->flashdata('flashError');
-			log_message("error",">>>>>".$data['flash_error']);
 		}
 		else
 		{
@@ -2171,9 +2169,8 @@ class Publicv extends CI_Controller {
 
 			if(!$response_data->success)
 			{
-			$captcha_error = 'Captcha verification failed';
-			$this->session->set_flashdata('flashError', 'Sorry Google Recaptcha Unsuccessful!!');
-			log_message("error","Captcha Verification failed".$response_data->success.$captcha_error);
+				$captcha_error = 'Captcha verification failed';
+				log_message("error","Captcha Verification failed".$response_data->success.$captcha_error);
 			}
 			else{
 				$data['response'] = $response_data->success;
@@ -2223,7 +2220,7 @@ class Publicv extends CI_Controller {
 			}
 			}
 				
-		 }	
+		}	
 
 			
 		

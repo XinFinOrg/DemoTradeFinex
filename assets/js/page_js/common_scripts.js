@@ -662,12 +662,12 @@ $(function () {
 				EmailGeneral: true,
 				required: true
 			},
-			mmob: {
-				required: false,
-				//numberOnly: true,
-				mobilenumberOnly: true
+			// mmob: {
+			// 	required: false,
+			// 	//numberOnly: true,
+			// 	mobilenumberOnly: true
 
-			},
+			// },
 			mcomp: {
 				required: true,
 				minlength: 3,
@@ -688,26 +688,26 @@ $(function () {
 		},
 		messages: {
 			mname: {
-				required: "Please enter Your full name",
-				minlength: "Characters length should be atleast 2",
-				maxlength: "Characters length should not exceeded than 30",
-				LetterOnly : "Check spaces between names"
+				required: "Please enter Your full name.",
+				minlength: "Characters length should be atleast 2.",
+				maxlength: "Characters length should not exceeded than 30.",
+				LetterOnly : "Check spaces between names."
 			},
-			memail: "Please enter a valid email",
+			memail: "Please enter a valid email.",
 			mcomp: {
-				required: "Please enter company name ",
-				minlength: "Company name should be atleast 3 charcters long",
-				maxlength: "Characters length should not exceeded than 40"
+				required: "Please enter company name. ",
+				minlength: "Company name should be atleast 3 charcters long.",
+				maxlength: "Characters length should not exceeded than 40."
 			},
 			// musertype: "Please choose a user type",
-			menquiry: "Please choose Your enquiry type",
+			// menquiry: "Please choose Your enquiry type.",
 			// mmob: {
 			// 	required: "Please enter a valid mobile number"
 			// },
 			mmsg: {
-				required: "Please type your message",
+				required: "Please type your message.",
 				minlength: "Characters length should be atleast 15.",
-				maxlength: "Characters length should not exceeded than 300"
+				maxlength: "Characters length should not exceeded than 300."
 			}
 			// defaultReal: "Please enter correct captcha (Letters are Case sensitive)."
 		},
