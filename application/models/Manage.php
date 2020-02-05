@@ -125,9 +125,12 @@
 		}
 
 		public function update_base_user_info_by_id($id, $data){
-$data1 = [
-            'tfu_passwd' => $data,
-        ];
+			$data1 = [
+				'tfu_passwd' => $data,
+			];
+			$data1 = [
+				'tfu_active' => $data,
+			];
 			$where = "tfu_id = '$id'";
 			$this->db->where($where);
 			$res = $this->db->update('{PRE}user', $data1);
