@@ -61,7 +61,7 @@
 						</div>
 						
 						<div class="form-group">
-							<button type="submit" class="btn btn-blue text-uppercase"> Submit</button>
+							<button type="submit" class="btn btn-blue text-uppercase" id="contact" name="contact" > Submit</button>
 						</div>
 						
 					</form>
