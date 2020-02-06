@@ -996,6 +996,7 @@ Footer
 
 /*-- 404 Page --*/
 .notfound-404 h1 {font-family: 'Libre Baskerville', serif;font-size: 175px;font-weight: 700;margin: 0px;color: #ea212d;text-transform: uppercase;letter-spacing: 5px;text-shadow: 5px 5px #D5D5D5;}
+.notfound-404 img {margin: 0 auto;}
 @media (max-width: 576px){.notfound-404 h1 {font-size: 100px;} }
 /*-- 404 Page --*/
 
