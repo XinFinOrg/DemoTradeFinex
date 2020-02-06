@@ -5340,7 +5340,7 @@ class Publicv extends CI_Controller {
 			$this->load->view('includes/headern', $data);
 			$this->load->view('includes/header_publicn', $data);
 		}
-        if($action == 'send_mail'){        
+
 			if(empty($_POST['g-recaptcha-response']))
 			{
 				$captcha_error = 'Captcha is required';
@@ -5366,7 +5366,11 @@ class Publicv extends CI_Controller {
 					$data['response'] = $response_data->success;
 					log_message("info","Captcha Verified".$response_data->success);
 					
-					log_message("info",">>>>>".$_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf');
+				}
+					
+			}
+        if($action == 'send_mail'){        
+			log_message("info",">>>>>".$_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf');
 					$atch = $_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf';
 					$config = array();
 					$config = $this->config->item('$econfig');
@@ -5408,10 +5412,6 @@ class Publicv extends CI_Controller {
 					}
 					
 					redirect(base_url().'thankyouc');
-					
-				}
-					
-			}
 		}
         $this->load->view('pages/public/case_study_view', $data);
         $this->load->view('includes/footer_commonn', $data);
