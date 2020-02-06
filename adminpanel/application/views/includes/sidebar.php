@@ -48,7 +48,7 @@
 						<ul class="nav side-menu">
 							<li class="<?php echo ($page == 'pages' ? 'active' : '') ?>"><a><i class="fa fa-tasks"></i> Pages <span class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu" style="<?php echo ($page == 'pages' ? 'display:block' : '') ?>">
-									<li class="view_user <?php echo ($sub == 'media_center' ? 'current-page' : '') ?>"><a href="<?php echo base_url() ?>pages/media_center">Media Center</a></li>
+									<li class="view_user <?php echo ($sub == 'media_center' ? 'current-page' : '') ?>"><a href="<?php echo base_url() ?>pages/mediaCenter">Media Center</a></li>
 									
 								</ul>
 							</li>

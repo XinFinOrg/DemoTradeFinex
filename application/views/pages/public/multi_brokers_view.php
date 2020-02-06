@@ -40,7 +40,7 @@
                             <!-- <form id="brokers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post"> -->
                             <?php
                                 $attributes = array('id' => 'bulkBrokers_form', 'class' => 'tf-suppliers-form', 'method' => 'post', 'role' => 'form');
-                                echo form_open_multipart(base_url().'publicv/multi_brokers', $attributes);
+                                echo form_open_multipart(base_url().'publicv/multiBrokers', $attributes);
                             ?>
                                 <div class="form-group">
                                     <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
@@ -185,7 +185,7 @@
                     </div>
                     <div class="row" >
                             <div class="form-group col-md-4 col-xs-4" style="float:right">
-                                <button  id="single" name="single" type="submit" class="btn btn-blue text-uppercase" onclick="window.location='<?php echo base_url()?>publicv/multi_brokers'" >Single Upload</button>
+                                <button  id="single" name="single" type="submit" class="btn btn-blue text-uppercase" onclick="window.location='<?php echo base_url()?>publicv/multiBrokers'" >Single Upload</button>
                             </div>
                         </div>
                 </div>
@@ -363,7 +363,7 @@
 
                             <!-- Specify URLs -->
                             <input type='hidden' name='cancel_return' value='<?php echo PAYPAL_CANCEL_URL; ?>'>
-                            <input type='hidden' name='return' value='<?php echo base_url() ?>publicv/multi_brokers'>
+                            <input type='hidden' name='return' value='<?php echo base_url() ?>publicv/multiBrokers'>
                             <input type='hidden' name='rm' value='2'>
 
                             
@@ -497,7 +497,7 @@ function showName(){
             addrKey = addrKey;
         }
         if(addrKey.length == 64){
-            var myurl = 'get_address';
+            var myurl = 'getAddress';
             showLoader();
             $.ajax({
                 type: "POST",

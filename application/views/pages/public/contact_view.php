@@ -93,57 +93,35 @@
 
 
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-
-<script>
-function subcontact() {
-
-    var myurl = '<?php echo base_url()?>publicv/contact';// the script where you handle the form input.
-
-    // alert(myurl);
-
-    $.ajax({
-           type: "POST",
-           url: myurl,
-           data: $("form").serialize(), // serializes the form's elements.
-           success: function(data)
-           {
-               // alert(data); // show response from the php script.
-           }
-         });
-
-    // e.preventDefault(); // avoid to execute the actual submit of the form.
-}
-
-</script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </script>
 <script type="text/javascript">
  $(document).ready(function(){
 
-$('#contact-form').on('submit', function(event){
-	var myurl = '<?php echo base_url()?>publicv/contact';
-	var response = grecaptcha.getResponse();
-	if(response.length != 0){
-		document.getElementById('captcha_id').style.display = 'none';
-		$.ajax({
-			url:myurl,
-			method:"POST",
-			data:$(this).serialize(),
-			dataType:"json",
-			success: function(data)
-				{
-					// alert(data); // show response from the php script.
-				}
-		})
-	}
-	else{
-		// alert("please verify you are humann!"); 
-		document.getElementById('captcha_id').style.display = 'block';
-		event.preventDefault();
-		return false;
-	}
-			
-});
+	$('#contact-form').on('submit', function(event){
+		var myurl = '<?php echo base_url()?>publicv/contact';
+		var response = grecaptcha.getResponse();
+		if(response.length != 0){
+			document.getElementById('captcha_id').style.display = 'none';
+			$.ajax({
+				url:myurl,
+				method:"POST",
+				data:$(this).serialize(),
+				dataType:"json",
+				success: function(data)
+					{
+						// alert(data); // show response from the php script.
+					}
+			})
+		}
+		else{
+			// alert("please verify you are humann!"); 
+			document.getElementById('captcha_id').style.display = 'block';
+			event.preventDefault();
+			return false;
+		}
+				
+	});
 
 });
 </script>

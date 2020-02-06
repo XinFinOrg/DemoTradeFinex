@@ -16,7 +16,7 @@
                         </ul>
                     </div>
 
-                    <div class="tf-get-started-btn mt-30"><a href="<?=base_url();?>publicv/setup_masternode" class="btn btn-red text-uppercase tf-block">Join The Network</a></div>
+                    <div class="tf-get-started-btn mt-30"><a href="<?=base_url();?>publicv/setupMasternode" class="btn btn-red text-uppercase tf-block">Join The Network</a></div>
 
                     <div class="hero-tabs-mobile-container">
                         <ul class="nav nav-pills">                            
@@ -40,7 +40,7 @@
                                             <p></p>
                                         </div>
                                         <div class="tf-bottom-col-2">
-                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/buyer_supplier">Apply for Finance</a></div>
+                                            <div class="tabs-container"> <a class="btn border blue tf-block text-uppercase" href="<?=base_url();?>publicv/buyersupplier">Apply for Finance</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -125,13 +125,13 @@
                     <div class="tf-private-dls-bg">
                         <h1 class="title">Private Distributed Ledger Solution</h1>
                         <p>TradeFinex lets you access a wide range of alternative assets on a decentralized cloud node.</p>
-                        <a class="btn border white text-uppercase" href="<?=base_url();?>publicv/private_distributed_ledger_solution">Learn More</a>
+                        <a class="btn border white text-uppercase" href="<?=base_url();?>publicv/privateDistributedLedgerSolution">Learn More</a>
                     </div>
 
                     <div class="tf-hybrid-dls-bg">
                         <h1 class="title">Hybrid Distributed Ledger Solution</h1>
                         <p>Fully digital access to origination, distribution, custody and settlement of Trade Finance assets powered by XDC Protocol.</p>
-                        <a class="btn border white text-uppercase" href="<?=base_url();?>publicv/hybrid_distributed_ledger_solution">Learn More</a>
+                        <a class="btn border white text-uppercase" href="<?=base_url();?>publicv/hybridDistributedLedgerSolution">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                             <p>TradeFinex Network enables organizations to create and manage guarantees and bonds from multiple financial institutions with full control and visibility. This reduces the risk of potential fraud, errors and cost of credit and administration.</p>
                         </div>
                         <div class="info-button-block">
-                            <a class="btn info-button btn-block" href="<?=base_url();?>publicv/boss_101">Explore Bonds</a>
+                            <a class="btn info-button btn-block" href="<?=base_url();?>publicv/boss101">Explore Bonds</a>
                         </div>
                     </div>
                 </div>
@@ -267,7 +267,7 @@
                 <div class="col-md-6 col-sm-6 tf-settlement-box">
                     <h2>About XDC Liquidity</h2>
                     <p>Explore XDC as a protocol for an instant global settlement and counterparty risk mitigation for Trade Finance.</p>
-					<a href="<?=base_url();?>publicv/xdc_liquidity" class="btn border blue text-uppercase">Learn More</a>
+					<a href="<?=base_url();?>publicv/xdcLiquidity" class="btn border blue text-uppercase">Learn More</a>
                 </div>
             </div>
         </div>

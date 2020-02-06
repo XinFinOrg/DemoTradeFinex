@@ -40,7 +40,7 @@
                             <!-- <form id="suppliers_form" class="tf-suppliers-form" enctype="multipart/form-data" method="post"> -->
                             <?php
                                 $attributes = array('id' => 'suppliers_form', 'class' => 'tf-suppliers-form', 'method' => 'post', 'role' => 'form');
-                                echo form_open_multipart(base_url().'publicv/buyer_supplier', $attributes);
+                                echo form_open_multipart(base_url().'publicv/buyersupplier', $attributes);
                             ?>
                                 <!-- <div class="form-group">
                                     <label for="private-key">Enter Address </label>

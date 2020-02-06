@@ -88,9 +88,9 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define('PAYPAL_ID', 'info-facilitator@tradechainlabs.com'); 
 define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE 
  
-define('PAYPAL_RETURN_URL', 'http://demo.tradefinex.org/publicv/buyer_supplier'); 
-define('PAYPAL_CANCEL_URL', 'http://demo.tradefinex.org/publicv/test1'); 
-define('PAYPAL_NOTIFY_URL', 'http://www.example.com/ipn.php'); 
+define('PAYPAL_RETURN_URL', 'https://demo.tradefinex.org/publicv/buyersupplier'); 
+define('PAYPAL_CANCEL_URL', 'https://demo.tradefinex.org/publicv/test1'); 
+define('PAYPAL_NOTIFY_URL', 'https://www.example.com/ipn.php'); 
 define('PAYPAL_CURRENCY', 'USD'); 
 
 define('PAYPAL_URL', (PAYPAL_SANDBOX == true)?"https://www.sandbox.paypal.com/cgi-bin/webscr":"https://www.paypal.com/cgi-bin/webscr");

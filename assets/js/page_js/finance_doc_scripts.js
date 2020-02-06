@@ -196,7 +196,7 @@ $(function () {
 					addrKey = addrKey;
 				}
 				if(addrKey.length == 64){
-					var myurl = 'get_address';
+					var myurl = 'getAddress';
 					showLoader();
 					$.ajax({
 						type: "POST",
@@ -349,7 +349,7 @@ $(function () {
 											
 											
 											if(resp.status == true){
-												$.post("buyer_supplier",{
+												$.post("buyersupplier",{
 													'action':"adddetail",
 													'instrument': formDataObj.instrument,
 													'amount':formDataObj.amount,
@@ -595,7 +595,7 @@ $(function () {
 					addrKey = addrKey;
 				}
 				if(addrKey.length == 64){
-					var myurl = 'get_address';
+					var myurl = 'getAddress';
 					showLoader();
 					$.ajax({
 						type: "POST",
@@ -745,7 +745,7 @@ $(function () {
 											
 											
 											if(resp.status == true){
-												$.post("buyer_supplier",{
+												$.post("buyersupplier",{
 													'action':"adddetail",
 													'instrument': formDataObj.instrument,
 													'amount':formDataObj.amount,
@@ -906,7 +906,7 @@ $(function () {
 					addrKey = addrKey;
 				}
 				if(addrKey.length == 64){
-					var myurl = 'get_address';
+					var myurl = 'getAddress';
 					showLoader();
 					$.ajax({
 						type: "POST",
@@ -1051,7 +1051,7 @@ $(function () {
 												deploy.push({fileNo:childd,contract_address:respondd.receipt.contractAddress.toLowerCase(),txHash:respondd.receipt.transactionHash});
 												// txHash.push(resp.receipt.transactionHash);
 												if(respondd.status == true){
-													$.post("buyer_supplier",{
+													$.post("buyersupplier",{
 													'action':"adddetail",
 													'instrument': formDataObj.instrument,
 													'amount':formDataObj.amount,
@@ -1278,7 +1278,7 @@ $(function () {
 					
 					$.ajax({
 						type: 'POST',
-						url: "get_passkey",
+						url: "getPasskey",
 						dataType:"json",
 						data: { 'pass': 'getpasskey', 'contractAddr': formDataObj.contract_address,csrf_name:csrf_value},
 						success: function(result){
@@ -1394,7 +1394,7 @@ $(function () {
 					
 					$.ajax({
 						type: 'POST',
-						url: "get_passkey",
+						url: "getPasskey",
 						dataType:"json",
 						data: { 'pass': 'getpasskey', 'contractAddr': formDataObj.contract_address,csrf_name:csrf_value},
 						success: function(result){

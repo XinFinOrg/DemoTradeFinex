@@ -67,7 +67,7 @@
                         <div class="col-md-12">
                             <div class="card" style="">
                                 <?php $attributes = array('id' => 'bond_create-form', 'class' => '', 'method' => 'post', 'role' => 'form');
-                            echo form_open_multipart(base_url().'publicv/bond_create/', $attributes); ?>
+                            echo form_open_multipart(base_url().'publicv/bondCreate/', $attributes); ?>
                                     <div class="card-body">
 
                                         <div class="form-row">

@@ -18,7 +18,7 @@
 	<div class="col-md-12 custom_pages">
 		<?php 
 			$attributes = array('id' => 'mediaForm', 'class' => '', 'method' => 'post', 'role' => 'form');
-			echo form_open_multipart(base_url().'pages/media_center/', $attributes); 
+			echo form_open_multipart(base_url().'pages/mediaCenter/', $attributes); 
 		?>
 		<div class="row">
 			<h3>Media Room Top</h3>

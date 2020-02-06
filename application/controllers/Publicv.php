@@ -118,11 +118,11 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/footern');
 	}
 
-	public function bond_create(){
+	public function bondCreate(){
 		
 		$data = array();
 		
-		$data['page'] = 'bond_create';
+		$data['page'] = 'bond-create';
 		$data['msg'] = '';
 		$data['user_id'] = 0;
 		$data['user_type'] = '';
@@ -169,7 +169,7 @@ class Publicv extends CI_Controller {
 	}
 	
 	
-	public function boss_101(){
+	public function boss101(){
         
         $data = array();
         
@@ -278,7 +278,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
     }
 	
-	public function corda_bridge(){
+	public function cordaBridge(){
         
         $data = array();
         
@@ -384,8 +384,6 @@ class Publicv extends CI_Controller {
         $this->load->view('pages_scripts/common_scripts', $data);
         $this->load->view('includes/footern');
     }
-	
-	
 	
 	
 	public function projects(){
@@ -495,11 +493,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
     }
 	
-	
-	
-	
-	
-	public function projects_detail(){
+	public function projectsDetail(){
         
         $data = array();
         
@@ -606,8 +600,6 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
     }
 	
-	
-	
 	public function beneficiary(){
 		
 		$data = array();
@@ -671,11 +663,11 @@ class Publicv extends CI_Controller {
 	
 	}
 	
-	public function buyer_supplier(){
+	public function buyersupplier(){
 		
 		$data = array();
 		
-		$data['page'] = 'buyer_supplier';
+		$data['page'] = 'buyersupplier';
 		$data['pcountry'] = 0;
 
 		if(!empty($_GET['item_number']) && !empty($_GET['tx']) && !empty($_GET['amt']) && !empty($_GET['cm']) && !empty($_GET['cc']) && !empty($_GET['st'])){ 
@@ -760,7 +752,7 @@ class Publicv extends CI_Controller {
 		
 	}
 
-	public function buyersupplier(){
+	public function buyerssupplier(){
 		
 		$data = array();
 		
@@ -855,8 +847,6 @@ class Publicv extends CI_Controller {
 		
 	}
 	
-	
-	
 	public function fees(){
 		
 		$data = array();
@@ -920,8 +910,7 @@ class Publicv extends CI_Controller {
 	
 	}
 	
-	
-	public function get_passkey(){
+	public function getPasskey(){
 		
 		$data = array();
 
@@ -2029,7 +2018,7 @@ class Publicv extends CI_Controller {
 		$this->load->view('pages_scripts/common_scripts', $data);
 		$this->load->view('includes/footern');
 	}
-	public function get_access(){
+	public function getAccess(){
 		
 		$data = array();
 		
@@ -2120,7 +2109,6 @@ class Publicv extends CI_Controller {
 		echo json_encode($data);
 				
 	}
-	
 	
 	public function contact(){
 		
@@ -2221,10 +2209,7 @@ class Publicv extends CI_Controller {
 				}
 			}
 				
-		}	
-
-			
-		
+		}		
 		
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
@@ -2985,7 +2970,7 @@ class Publicv extends CI_Controller {
 	}
 	
 	
-	public function finance_solutions(){
+	public function financeSolutions(){
 		
 		$data = array();
 		
@@ -3089,7 +3074,7 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/footern');
 	}
 	
-	public function trade_solutions(){
+	public function tradeSolutions(){
 		
 		$data = array();
 		
@@ -3402,9 +3387,8 @@ class Publicv extends CI_Controller {
 		$this->load->view('pages_scripts/common_scripts', $data);
 		$this->load->view('includes/footern');
 	}
-	
 
-	public function invoice_factoring(){
+	public function invoiceFactoring(){
 		
 		$data = array();
 		
@@ -3454,7 +3438,6 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/footern');
 	}
 	
-
 	public function news(){
 		
 		$data = array();
@@ -3551,7 +3534,7 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/footer');
 	}
 	
-	public function media_center(){
+	public function mediaCenter(){
 		
 		$data = array();
 		
@@ -3762,7 +3745,7 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/footern');
 	}
 	
-	public function privacy_policy(){
+	public function privacyPolicy(){
 		
 		$data = array();
 		
@@ -3865,7 +3848,7 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/footern');
 	}
 	
-	public function terms_condition(){
+	public function termsCondition(){
 		
 		$data = array();
 		
@@ -4065,7 +4048,7 @@ class Publicv extends CI_Controller {
 		$this->load->view('includes/footer');
 	}
 
-	public function setup_masternode(){
+	public function setupMasternode(){
         
         $data = array();
         
@@ -4174,7 +4157,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
 	}
 	
-	public function xdc_liquidity(){
+	public function xdcLiquidity(){
         
         $data = array();
         
@@ -4392,7 +4375,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
 	}
 	
-	public function about_xinfin_masternode(){
+	public function aboutXinfinMasternode(){
         
         $data = array();
         
@@ -4501,7 +4484,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
 	}
 	
-	public function masternode_faqs(){
+	public function masternodeFaqs(){
         
         $data = array();
         
@@ -4610,7 +4593,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
 	}
 	
-	public function private_distributed_ledger_solution(){
+	public function privateDistributedLedgerSolution(){
         
         $data = array();
         
@@ -4719,7 +4702,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
 	}
 	
-	public function hybrid_distributed_ledger_solution(){
+	public function hybridDistributedLedgerSolution(){
         
         $data = array();
         
@@ -4903,7 +4886,7 @@ class Publicv extends CI_Controller {
 		
 	}
 
-	public function multi_brokers(){
+	public function multiBrokers(){
 		
 		$data = array();
 		
@@ -5087,7 +5070,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
 	}
 	
-	public function smart_contract($data_add){
+	public function smartContract($data_add){
         
         $data = array();
         
@@ -5197,8 +5180,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
 	}
 	
-	
-	public function supply_chain(){
+	public function supplyChain(){
         
         $data = array();
         
@@ -5305,8 +5287,7 @@ class Publicv extends CI_Controller {
         $this->load->view('includes/footern');
 	}
 	
-	
-	public function case_study(){
+	public function caseStudy(){
         
         $data = array();
         
@@ -5360,65 +5341,128 @@ class Publicv extends CI_Controller {
 			$this->load->view('includes/header_publicn', $data);
 		}
                 
-			// $show = cmcModule();
-			// foreach($show as $sh) {
-			
-			// log_message("info",$sh->price_usd) ;
-			// $data['price'] = $sh->price_usd;
-			
-			// }
-
-		if($action == 'send_mail'){
-		log_message("info",">>>>>".$_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf');
-			$atch = $_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf';
-			$config = array();
-			$config = $this->config->item('$econfig');
-						
-			$this->email->initialize($config);
-			// $this->email->cc('another@another-example.com');
-			// $this->email->bcc('them@their-example.com');
-			
-			$suser = $this->manage->get_superadmin();
-			
-			$from_email = 'info@tradefinex.org'; 
-			$to_email = $this->input->post('memail'); 
-			$data['email'] = $this->input->post('memail');
-			$data['mmob'] = $this->input->post('mmob');
-
-			$message .= '<strong>Email : </strong>'.$this->input->post('memail').'<br/>';
-			$message .= '<strong>Contact : </strong>'.$this->input->post('mmob').'<br/>';
-			
-			$this->email->from($from_email, 'Support Tradefinex'); 
-			$this->email->to($to_email);
-			$this->email->bcc('mansi@xinfin.org');
-			$this->email->set_mailtype('html');
-			$this->email->subject('Tradefinex Case Study Request');
-			$mail_body = $this->load->view('templates/mails/case_study_mail_body', $data, TRUE);
-			$this->email->message($mail_body); 
-			$this->email->attach($atch, array(
-        'mime' => 'application/pdf'));
-					
-			// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
-			if($this->email->send()){ 
-				$this->session->set_flashdata('msg_type', 'success');
-				$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Sent</h4>"); 
-				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Thank you for your interest in Case Study . NDA will be sent on your mail, after signing the NDA, you can access to TradeFinex Case Study.</h3>"); 
-			}	
-			else{ 
-				$this->session->set_flashdata('msg_type', 'error');
-				$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Can't be Sent</h4>"); 
-				$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Error in sending Email. Please try again.</h3>");
-			}
-			
-			redirect(base_url().'thankyouc');
+		if(empty($_POST['g-recaptcha-response']))
+		{
+			$captcha_error = 'Captcha is required';
+			log_message("error","empty g-reacptcha-response".$captcha_error);
+			$data['flash_error'] = $this->session->flashdata('flashError');
 		}
+		else
+		{
+			$secret_key = $this->config->item('recaptcha_secret_key');
+		
+			$response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
+		
+			$response_data = json_decode($response);
+				
+			log_message("info","g-reacptcha-response".$_POST['g-recaptcha-response']);
+
+			if(!$response_data->success)
+			{
+				$captcha_error = 'Captcha verification failed';
+				log_message("error","Captcha Verification failed".$response_data->success.$captcha_error);
+			}
+			else{
+				$data['response'] = $response_data->success;
+				log_message("info","Captcha Verified".$response_data->success);
+				
+				if($action == 'send_mail'){
+					log_message("info",">>>>>".$_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf');
+					$atch = $_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf';
+					$config = array();
+					$config = $this->config->item('$econfig');
+								
+					$this->email->initialize($config);
+					// $this->email->cc('another@another-example.com');
+					// $this->email->bcc('them@their-example.com');
+					
+					$suser = $this->manage->get_superadmin();
+					
+					$from_email = 'info@tradefinex.org'; 
+					$to_email = $this->input->post('memail'); 
+					$data['email'] = $this->input->post('memail');
+					$data['mmob'] = $this->input->post('mmob');
+
+					$message .= '<strong>Email : </strong>'.$this->input->post('memail').'<br/>';
+					$message .= '<strong>Contact : </strong>'.$this->input->post('mmob').'<br/>';
+					
+					$this->email->from($from_email, 'Support Tradefinex'); 
+					$this->email->to($to_email);
+					$this->email->bcc('mansi@xinfin.org');
+					$this->email->set_mailtype('html');
+					$this->email->subject('Tradefinex Case Study Request');
+					$mail_body = $this->load->view('templates/mails/case_study_mail_body', $data, TRUE);
+					$this->email->message($mail_body); 
+					$this->email->attach($atch, array(
+					'mime' => 'application/pdf'));
+							
+					// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
+					if($this->email->send()){ 
+						$this->session->set_flashdata('msg_type', 'success');
+						$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Sent</h4>"); 
+						$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Thank you for your interest in Case Study . NDA will be sent on your mail, after signing the NDA, you can access to TradeFinex Case Study.</h3>"); 
+					}	
+					else{ 
+						$this->session->set_flashdata('msg_type', 'error');
+						$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Can't be Sent</h4>"); 
+						$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Error in sending Email. Please try again.</h3>");
+					}
+					
+					redirect(base_url().'thankyouc');
+				}
+			}
+				
+		}
+
+			if($action == 'send_mail'){
+				log_message("info",">>>>>".$_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf');
+				$atch = $_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf';
+				$config = array();
+				$config = $this->config->item('$econfig');
+							
+				$this->email->initialize($config);
+				// $this->email->cc('another@another-example.com');
+				// $this->email->bcc('them@their-example.com');
+				
+				$suser = $this->manage->get_superadmin();
+				
+				$from_email = 'info@tradefinex.org'; 
+				$to_email = $this->input->post('memail'); 
+				$data['email'] = $this->input->post('memail');
+				$data['mmob'] = $this->input->post('mmob');
+
+				$message .= '<strong>Email : </strong>'.$this->input->post('memail').'<br/>';
+				$message .= '<strong>Contact : </strong>'.$this->input->post('mmob').'<br/>';
+				
+				$this->email->from($from_email, 'Support Tradefinex'); 
+				$this->email->to($to_email);
+				$this->email->bcc('mansi@xinfin.org');
+				$this->email->set_mailtype('html');
+				$this->email->subject('Tradefinex Case Study Request');
+				$mail_body = $this->load->view('templates/mails/case_study_mail_body', $data, TRUE);
+				$this->email->message($mail_body); 
+				$this->email->attach($atch, array(
+				'mime' => 'application/pdf'));
+						
+				// Send mail ** Our customer support team will respond to your query as soon as possible. Please find below the details of the query submitted.
+				if($this->email->send()){ 
+					$this->session->set_flashdata('msg_type', 'success');
+					$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Sent</h4>"); 
+					$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Thank you for your interest in Case Study . NDA will be sent on your mail, after signing the NDA, you can access to TradeFinex Case Study.</h3>"); 
+				}	
+				else{ 
+					$this->session->set_flashdata('msg_type', 'error');
+					$this->session->set_flashdata("email_sent_common", "<h4 class='text-center' style='font-size:20px;color:#000;font-weight:700;'>Email Can't be Sent</h4>"); 
+					$this->session->set_flashdata("popup_desc", "<h3 class='text-center' style='font-size:16px;line-height:20px;color:#000;padding-left:8px;padding-right:8px;'>Error in sending Email. Please try again.</h3>");
+				}
+				
+				redirect(base_url().'thankyouc');
+			}
         $this->load->view('pages/public/case_study_view', $data);
         $this->load->view('includes/footer_commonn', $data);
         $this->load->view('pages_scripts/common_scripts', $data);
         $this->load->view('includes/footern');
 	}
-	
-	
 	
 	public function sendMail()
 	{
@@ -5493,11 +5537,12 @@ class Publicv extends CI_Controller {
 		}
 		
 	}
-	public function git_pull() {
+
+	public function gitPull() {
 		
-	//make sure to make the shell file executeable first before running the shell_exec function
-	$output = shell_exec('git pull origin devnew');
-	echo $output;
+		//make sure to make the shell file executeable first before running the shell_exec function
+		$output = shell_exec('git pull origin devnew');
+		echo $output;
 
 	}
 
@@ -5507,6 +5552,7 @@ class Publicv extends CI_Controller {
 		
 		echo (">>>3".json_encode($_GET));
 	}
+
 	public function test1(){
 		
 		$data = array();
@@ -5525,6 +5571,7 @@ class Publicv extends CI_Controller {
 	
 				
 	}
+
 	public function test2(){
 		
 		$data = array();
@@ -5546,7 +5593,7 @@ class Publicv extends CI_Controller {
 				
 	}
 
-	public function get_address(){
+	public function getAddress(){
 		
 		$data = array();
 		

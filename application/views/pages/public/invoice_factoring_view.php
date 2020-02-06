@@ -210,7 +210,7 @@
                         <div class="col-md-12">
                             <div class="card" style="">
                                 <?php $attributes = array('id' => 'invoice_factoring-form', 'class' => '', 'method' => 'post', 'role' => 'form');
-                                echo form_open_multipart(base_url().'publicv/invoice_factoring/', $attributes); ?>
+                                echo form_open_multipart(base_url().'publicv/invoiceFactoring/', $attributes); ?>
                                     <div class="card-body">
 
                                     <div class="form-row">
