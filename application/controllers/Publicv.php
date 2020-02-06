@@ -1988,11 +1988,12 @@ class Publicv extends CI_Controller {
 		$totalXDC = totalXDC();
 		$data['totalXDC'] = $totalXDC->result;
 		$show = cmcModule();
-				
+		$alphaXDCVolume = xdcVolume();	
+
 		foreach($show as $sh) {
 	
-		$data['xdc_usd'] = $sh->price_usd;
-		$data['xdvolume'] = $sh->{'24h_volume_usd'};
+			$data['xdc_usd'] = $sh->price_usd;
+			$data['xdvolume'] = floatval($sh->{'24h_volume_usd'} + $alphaXDCVolume->xdcVolume) ;
 		
 		}
 		$data['marketCap'] = floatval( $data['totalXDC'] * $data['xdc_usd']);
