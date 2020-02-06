@@ -28,8 +28,7 @@
                     <div class="col-md-8 col-md-offset-2">
                         <div class="section-title text-center pb-30">
                             <h2 class="mb-0">Apply for Funding</h2><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                            ( <a href="https://www.youtube.com/embed/4bK1CrfaFf4?feature=oembed" target="_blank"  allowfullscreen>How to apply for funding?
-                        </a>)
+                            ( <a class="video-popup" href="https://www.youtube.com/watch?v=4bK1CrfaFf4">How to apply for funding?</a> )
                         </div>
                     </div>
                 </div>
@@ -471,6 +470,19 @@ function mail(){
 </script>
 <!-- Form Skip to next Heading -->
 
+<!-- Video Link Lightbox -->
+<script type = "text/javascript" >
+$('.video-popup').magnificPopup({
+  type: 'iframe',
+  iframe: {
+    patterns: {
+      youtube: {
+        index: 'youtube.com',
+        src: 'https://www.youtube.com/embed/4bK1CrfaFf4'
 
-
-
+      }
+    }
+  }
+});
+</script>
+<!-- Video Link Lightbox -->
