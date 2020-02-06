@@ -5343,34 +5343,35 @@ class Publicv extends CI_Controller {
 			$this->load->view('includes/header_publicn', $data);
 		}
 
-			if(empty($_POST['g-recaptcha-response']))
-			{
-				$captcha_error = 'Captcha is required';
-				log_message("error","empty g-reacptcha-response".$captcha_error);
-				$data['flash_error'] = $this->session->flashdata('flashError');
-			}
-			else
-			{
-				$secret_key = $this->config->item('recaptcha_secret_key');
-			
-				$response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
-			
-				$response_data = json_decode($response);
-					
-				log_message("info","g-reacptcha-response".$_POST['g-recaptcha-response']);
+		if(empty($_POST['g-recaptcha-response']))
+		{
+			$captcha_error = 'Captcha is required';
+			log_message("error","empty g-reacptcha-response".$captcha_error);
+			$data['flash_error'] = $this->session->flashdata('flashError');
+		}
+		else
+		{
+			$secret_key = $this->config->item('recaptcha_secret_key');
+		
+			$response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
+		
+			$response_data = json_decode($response);
+				
+			log_message("info","g-reacptcha-response".$_POST['g-recaptcha-response']);
 
-				if(!$response_data->success)
-				{
-					$captcha_error = 'Captcha verification failed';
-					log_message("error","Captcha Verification failed".$response_data->success.$captcha_error);
-				}
-				else{
-					$data['response'] = $response_data->success;
-					log_message("info","Captcha Verified".$response_data->success);
-					
-				}
-					
+			if(!$response_data->success)
+			{
+				$captcha_error = 'Captcha verification failed';
+				log_message("error","Captcha Verification failed".$response_data->success.$captcha_error);
 			}
+			else{
+				$data['response'] = $response_data->success;
+				log_message("info","Captcha Verified".$response_data->success);
+				
+			}
+				
+		}
+
         if($action == 'send_mail'){        
 			log_message("info",">>>>>".$_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf');
 					$atch = $_SERVER['DOCUMENT_ROOT'].'/assets/project_agreements/NDA_TradeFinex_Tech_Ltd_AD.pdf';
