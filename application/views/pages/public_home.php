@@ -105,8 +105,8 @@
 
             <div class="row">
                 <div class="col-md-12 tf-what-is-tradefinex">
-                    <img src="assets/banner-assets/images/what-is-tradefinex.png" alt="Trade Finance Distribution Blockchain Network Diagram" class="img-responsive desktop-view" />
-					<img src="assets/banner-assets/images/what-is-tradefinex_mobileview.png" alt="Trade Finance Distribution Blockchain Network Diagram" class="img-responsive mobile-view" />
+                    <img src="assets/banner-assets/images/what-is-tradefinex.jpg" alt="Trade Finance Distribution Blockchain Network Diagram" class="img-responsive desktop-view" />
+					<img src="assets/banner-assets/images/what-is-tradefinex_mobileview.jpg" alt="Trade Finance Distribution Blockchain Network Diagram" class="img-responsive mobile-view" />
                 </div>                
             </div>
         </div>
