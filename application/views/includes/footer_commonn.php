@@ -206,12 +206,6 @@
 		<!-- Form Validations -->
 		
 		<script src="<?=base_url('assets/js/intlTelInput.min.js');?>"></script> 
-				
-		<!-- captha -->
-		<script src="<?=base_url('assets/js/captcha/jquery.plugin.min.js');?>"></script>
-		<script src="<?=base_url('assets/js/captcha/jquery.realperson.min.js');?>"></script>
-		<script src="<?=base_url('assets/js/captcha/md5.min.js');?>"></script>
-		<script src="<?=base_url('assets/js/captcha/aes.min.js');?>"></script>
 		
 		<script src="<?=base_url('assets/js/bootstrap/bootstrap-confirmation.min.js');?>"></script>
 		<script src="<?=base_url('assets/js/bootstrap/bootstrap-multiselect.min.js');?>"></script>
@@ -275,69 +269,69 @@
 									
 		</script>
 
-<!-- Partnership and Alliances Logo Slider-->
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.customer-logos').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 1500,
-            arrows: false,
-            dots: false,
-            pauseOnHover: false,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4
-                }
-            }, {
-                breakpoint: 520,
-                settings: {
-                    slidesToShow: 3
-                }
-            }, {
-                breakpoint: 420,
-                settings: {
-                    slidesToShow: 2
-                }
-            }]
-        });
-    });
-</script>
+		<!-- Partnership and Alliances Logo Slider-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.customer-logos').slick({
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					autoplay: true,
+					autoplaySpeed: 1500,
+					arrows: false,
+					dots: false,
+					pauseOnHover: false,
+					responsive: [{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 4
+						}
+					}, {
+						breakpoint: 520,
+						settings: {
+							slidesToShow: 3
+						}
+					}, {
+						breakpoint: 420,
+						settings: {
+							slidesToShow: 2
+						}
+					}]
+				});
+			});
+		</script>
 
 
-<!-- Script for Multiupload Input btn -->
-<script type="text/javascript">
-'use strict';
-;( function ( document, window, index )
-{
-	var inputs = document.querySelectorAll( '.inputfile' );
-	Array.prototype.forEach.call( inputs, function( input )
-	{
-		var label	 = input.nextElementSibling,
-			labelVal = label.innerHTML;
-		input.addEventListener( 'change', function( e )
+		<!-- Script for Multiupload Input btn -->
+		<script type="text/javascript">
+		'use strict';
+		;( function ( document, window, index )
 		{
-			var fileName = '';
-			if( this.files && this.files.length > 1 )
-				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-			else
-				fileName = e.target.value.split( '\\' ).pop();
-			if( fileName )
-				label.querySelector( 'span' ).innerHTML = fileName;
-			else
-				label.innerHTML = labelVal;
-		});
-		// Firefox bug fix
-		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
-		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
-	});
-}( document, window, 0 ));
-</script>
-<!-- Script for Multiupload Input btn -->
+			var inputs = document.querySelectorAll( '.inputfile' );
+			Array.prototype.forEach.call( inputs, function( input )
+			{
+				var label	 = input.nextElementSibling,
+					labelVal = label.innerHTML;
+				input.addEventListener( 'change', function( e )
+				{
+					var fileName = '';
+					if( this.files && this.files.length > 1 )
+						fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+					else
+						fileName = e.target.value.split( '\\' ).pop();
+					if( fileName )
+						label.querySelector( 'span' ).innerHTML = fileName;
+					else
+						label.innerHTML = labelVal;
+				});
+				// Firefox bug fix
+				input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+				input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+			});
+		}( document, window, 0 ));
+		</script>
+		<!-- Script for Multiupload Input btn -->
 
-<!-- Partnership and Alliances Logo Slider-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+		<!-- Partnership and Alliances Logo Slider-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
