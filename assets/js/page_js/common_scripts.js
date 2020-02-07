@@ -1490,7 +1490,7 @@ $(function () {
 				}
 				
 					$.ajax(invoice).done(function (response) {
-						console.log('response>>>>', response);
+						// console.log('response>>>>', response);
 						fileHash = response.hash;
 
 
