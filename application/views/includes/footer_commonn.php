@@ -263,8 +263,6 @@
 				
 				$('#mmob').intlTelInput();
 				
-				$('#defaultReal').realperson();
-				
 			<?php } ?>	
 									
 		</script>

@@ -50,9 +50,11 @@
 							</div>
 						</div> -->
 
-						<div class="form-group">
+						<div class="form-group ">
+							<label for="captcha">Enter Captcha <sup>*</sup></label>
 							<div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('recaptcha_site_key'); ?>" ></div>
 							<label style="display:none;color:#ea212d;font-size: 12px;" id="captcha_id" name="captcha_id">Please verify the captcha.</label>
+							</div>
 						</div>
 						
 						<div class="form-group">

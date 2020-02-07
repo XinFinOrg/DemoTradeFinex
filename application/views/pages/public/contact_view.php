@@ -60,15 +60,11 @@
 									<textarea class="form-control" id="mmsg" name="mmsg" tabindex="5"></textarea>
 								</div>
 								
-								<!-- <div class="form-group">
-									<label for="defaultReal">Enter Captcha <sup>*</sup></label>
-										<input class="form-control" id="defaultReal" name="defaultReal" captchav="" autocomplete="off" maxlength="50" required data-required-error="" tabindex="5" aria-required="true" type="text" onchange="grecaptcha.execute()">
-										<div class="captcha-error has-error" style="display:none"><div class="help-block col-xs-12 col-sm-reset inline"><font color="red" style="margin-left: -10px;">Please enter correct captcha (Letters are Case sensitive).</font></div>
-									</div> Invalid Captcha ! -->
-								<!-- </div>  -->
-								<div class="form-group">
+								<div class="form-group ">
+									<label for="captcha">Enter Captcha <sup>*</sup></label>
 									<div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('recaptcha_site_key'); ?>" ></div>
 									<label style="display:none;color:#ea212d;font-size: 12px;" id="captcha_id" name="captcha_id">Please verify the captcha.</label>
+									</div>
 								</div>
 								<div class="form-group">
 									<input type="hidden" name="action" value="send_mail" />

@@ -159,6 +159,35 @@ class Publicv extends CI_Controller {
 			$data['notifications'] = get_notification_status($options);
 		}
 		
+		if(empty($_POST['g-recaptcha-response']))
+		{
+			$captcha_error = 'Captcha is required';
+			log_message("error","empty g-reacptcha-response".$captcha_error);
+			$data['flash_error'] = $this->session->flashdata('flashError');
+		}
+		else
+		{
+			$secret_key = $this->config->item('recaptcha_secret_key');
+		
+			$response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
+		
+			$response_data = json_decode($response);
+				
+			log_message("info","g-reacptcha-response".$_POST['g-recaptcha-response']);
+
+			if(!$response_data->success)
+			{
+				$captcha_error = 'Captcha verification failed';
+				log_message("error","Captcha Verification failed".$response_data->success.$captcha_error);
+			}
+			else{
+				$data['response'] = $response_data->success;
+				log_message("info","Captcha Verified".$response_data->success);
+				
+			}
+				
+		}
+
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
 		
@@ -3430,6 +3459,35 @@ class Publicv extends CI_Controller {
 			$options['user_type'] = $data['user_type_ref'];
 			
 			$data['notifications'] = get_notification_status($options);
+		}
+
+		if(empty($_POST['g-recaptcha-response']))
+		{
+			$captcha_error = 'Captcha is required';
+			log_message("error","empty g-reacptcha-response".$captcha_error);
+			$data['flash_error'] = $this->session->flashdata('flashError');
+		}
+		else
+		{
+			$secret_key = $this->config->item('recaptcha_secret_key');
+		
+			$response = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
+		
+			$response_data = json_decode($response);
+				
+			log_message("info","g-reacptcha-response".$_POST['g-recaptcha-response']);
+
+			if(!$response_data->success)
+			{
+				$captcha_error = 'Captcha verification failed';
+				log_message("error","Captcha Verification failed".$response_data->success.$captcha_error);
+			}
+			else{
+				$data['response'] = $response_data->success;
+				log_message("info","Captcha Verified".$response_data->success);
+				
+			}
+				
 		}
 		
 		$this->load->view('includes/headern', $data);
