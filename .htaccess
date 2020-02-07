@@ -10,3 +10,5 @@ RewriteCond $1 !^(index\.php|(.*)\.swf|assets|system|robots\.txt|favicon\.ico|fa
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ ./index.php?$1 [L,QSA]
+
+ErrorDocument 404 /error404
