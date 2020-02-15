@@ -555,6 +555,37 @@
 			}
 		}
 
+		public function add_ext_user($data_add, $type){
+
+			$data = array();
+			$data['tfu_usern'] = $data_add['usern'];
+			$data['tfu_passwd'] = $data_add['upasswd'];
+			$data['tfu_hash'] = $data_add['hash'];
+			$data['tfu_domain_type'] = $data_add['user_access_domain_type'];
+			$data['tfu_domain_name'] = $data_add['user_access_domain_name'];
+			$data['tfu_active'] = $data_add['verification'];
+			// $data['tfu_active'] = 1;
+
+			$this->db->select('*');
+			$this->db->from('{PRE}user');
+			$where = "tfu_usern = '".$data_add['usern']."' AND tfu_domain_type = '".$data_add['user_access_domain_type']."' AND tfu_domain_name = '".$data_add['user_access_domain_name']."'";
+			$this->db->where($where);
+			$query = $this->db->get();
+
+			$uresult = $query->result();
+
+			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
+
+				return false;
+
+			}else{
+				$this->db->insert('{PRE}user', $data);
+				$id = $this->db->insert_id();
+
+				return $result = $this->get_user_info_by_id_and_type($id, $type);
+			}
+		}
+
 		public function update_user_base_info_by_id_and_type($id, $type_id, $data_add){
 
 			$this->db->select('*');
@@ -697,6 +728,31 @@
 				$this->db->where($where);
 				$this->db->update('{PRE}user', $datan);
 
+			}else{
+				$result['error'] = 1;
+			}
+
+			return $result;
+		}
+
+		public function fetch_extuser($data){
+
+			$result = array();
+
+			$result['error'] = 0;
+			
+			$this->db->select('*');
+			$this->db->from('{PRE}user');
+			$where = "tfu_usern = '".$data['user_name']."' AND tfu_passwd = '".$data['user_password']."' AND tfu_domain_type = '".$data['user_access_domain_type']."' AND tfu_domain_name = '".$data['user_access_domain_name']."' AND tfu_active = 1";
+			$this->db->where($where);
+			$query = $this->db->get();
+
+			$uresult = $query->result();
+
+			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
+
+				$result['user_detail'] = $uresult;
+				
 			}else{
 				$result['error'] = 1;
 			}
