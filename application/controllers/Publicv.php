@@ -709,13 +709,13 @@ class Publicv extends CI_Controller {
 			}
 			else{
 				$burn = burnXDC($_GET['amt']);
-				$status = explode(': ',$burn[9]);
+				$status = explode(': ',$burn[10]);
 				$status = $status[1];
 				$status = str_replace(",","", $status);
 				if($status == true){
 					$_GET['burnStatus'] = $status;
 					// $transactionHash = explode(': ',$burn[13]);
-					$transactionHash = $burn[11];
+					$transactionHash = $burn[13];
 					$transactionHash = str_replace(array("'",","),"", $transactionHash);
 					$_GET['transactionHash'] = $transactionHash;
 					$result = $this->manage->add_paypal_details($_GET);
@@ -4687,13 +4687,13 @@ class Publicv extends CI_Controller {
 			}
 			else{
 				$burn = burnXDC($_GET['amt']);
-				$status = explode(': ',$burn[9]);
+				$status = explode(': ',$burn[10]);
 				$status = $status[1];
 				$status = str_replace(",","", $status);
 				if($status == true){
 					$_GET['burnStatus'] = $status;
 					// $transactionHash = explode(': ',$burn[13]);
-					$transactionHash = $burn[11];
+					$transactionHash = $burn[13];
 					$transactionHash = str_replace(array("'",","),"", $transactionHash);
 					$_GET['transactionHash'] = $transactionHash;
 					$result = $this->manage->add_paypal_details($_GET);
@@ -4762,13 +4762,13 @@ class Publicv extends CI_Controller {
 			}
 			else{
 				$burn = burnXDC($_GET['amt']);
-				$status = explode(': ',$burn[9]);
+				$status = explode(': ',$burn[10]);
 				$status = $status[1];
 				$status = str_replace(",","", $status);
 				if($status == true){
 					$_GET['burnStatus'] = $status;
 					// $transactionHash = explode(': ',$burn[13]);
-					$transactionHash = $burn[11];
+					$transactionHash = $burn[13];
 					$transactionHash = str_replace(array("'",","),"", $transactionHash);
 					$_GET['transactionHash'] = $transactionHash;
 					$result = $this->manage->add_paypal_details($_GET);
