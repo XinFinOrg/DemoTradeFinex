@@ -137,6 +137,9 @@
 									<li class="nav-item">
                                         <a class="nav-link" href="#tab8" role="tab" data-toggle="tab" aria-selected="false">Other</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tab9" role="tab" data-toggle="tab" aria-selected="false">Demo Login</a>
+                                    </li>
                                 </ul>
                                 <div class="tf-ticker-nav-mobile">
                                     <select class="form-control" id="tab_selector">
@@ -148,6 +151,7 @@
                                         <option value="5">Warehousing Receipt</option>
 										<option value="6">Payable</option>
 										<option value="7">Other</option>
+                                        <option value="8">Demo Login</option>
                                     </select>
                                 </div>
                             </div>
@@ -472,14 +476,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                <!-- End SBLC Data -->
+                                    <!-- End SBLC Data -->
+
 									
-									<!-- Start Warehousing Receipt Data -->
+                                    <!-- Start Warehousing Receipt Data -->
                                     <div role="tabpanel" class="tab-pane fade" id="tab6">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="tf-financier-table tf-element">
-						 
+                            
                                                     <div class="table-responsive">
                                                         <table class="table table-hover">
                                                             <thead>
@@ -583,6 +588,7 @@
                                         </div>
                                     </div>
                                     <!-- End Payable Data -->
+
                                     <!-- Start OTHER Data -->
                                     <div role="tabpanel" class="tab-pane fade" id="tab8">
                                         <div class="row">
@@ -638,6 +644,43 @@
                                         </div>
                                     </div>
                                     <!-- End OTHER Data -->
+
+                                    <!-- Login Modal -->
+                                    <div role="tabpanel" class="tab-pane fade in active" id="tab9">
+                                        <div class="row">
+                                            <div class="col-md-6 col-md-offset-4">          
+                                                <h3>Your Keys Await</h3>
+                                                <p>We connect global Buyer/Supplier or Brokers and Financiers</p>
+                                                <?php 
+                                                    $attributes = array('id' => 'demo_login', 'class' => 'tf-suppliers-form', 'method' => 'post','role' => 'form');
+                                                    echo form_open_multipart(base_url().'login/demo_login', $attributes); 
+                                                ?>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="user_email">Email <sup>*</sup></label>
+                                                            <input type="text" class="form-control" id="user_email" name="user_email" autocomplete= "off"placeholder="Email" tabindex="1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="user_password">Password<sup>*</sup> </label>
+                                                            <input type="text" class="form-control" id="user_password" name="user_password" autocomplete= "off"placeholder="Password" tabindex="2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <?php echo $this->session->flashdata('error_logged_in'); ?>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-6 col-xs-6">
+                                                            <input type="hidden" name="action" value="adddetail" />
+                                                            <button type="submit"   class="btn btn-blue text-uppercase">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Login Modal -->
                                 </div>
                             </div>
                         </div>
