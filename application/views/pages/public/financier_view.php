@@ -15,10 +15,15 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div class="section-title text-center">
 					<h2 class="mb-0">Instrument Currently Active for Funding</h2>
+                    <h4 class="mb-0" onclick="show_login()">Financier Login</h4>
+                    
 				</div>
+                
 			</div>
+            <?php if($this->session->flashdata('error')){  
+                        echo $this->session->flashdata('error'); 
+                            } ?>
 		</div>		
-		
 		
 		<!-- <div class="row projectFactsWrapColumns">
                 <div class="col-md-12"> -->
@@ -48,7 +53,7 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 					
                 </div> -->
 				
@@ -106,67 +111,164 @@
 	
 		
 
-		<div class="row">
+		        <div class="row">
                     <div class="col-md-12">
 					
-					<div class="tf-assets-table-area">
-                        <div class="tf-filters">
-                            <div class="tf-ticker-head">
-                                <ul class="nav tf-nav-tabs tf-ticker-nav tf-ticker-nav-desktop form-tabs" role="tablist">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#tab1" role="tab" data-toggle="tab" aria-selected="true">All</a>
-                                    </li>
-									<li class="nav-item">
-                                        <a class="nav-link" href="#tab2" role="tab" data-toggle="tab" aria-selected="true">Receivables</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#tab3" role="tab" data-toggle="tab" aria-selected="false">Letters of Credit</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#tab4" role="tab" data-toggle="tab" aria-selected="false">Bank Guarantees</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#tab5" role="tab" data-toggle="tab" aria-selected="false">SBLC</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#tab6" role="tab" data-toggle="tab" aria-selected="false">Warehousing Receipt</a>
-                                    </li>
-									<li class="nav-item">
-                                        <a class="nav-link" href="#tab7" role="tab" data-toggle="tab" aria-selected="false">Payable</a>
-                                    </li>
-									<li class="nav-item">
-                                        <a class="nav-link" href="#tab8" role="tab" data-toggle="tab" aria-selected="false">Other</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#tab9" role="tab" data-toggle="tab" aria-selected="false">Demo Login</a>
-                                    </li>
-                                </ul>
-                                <div class="tf-ticker-nav-mobile">
-                                    <select class="form-control" id="tab_selector">
-                                        <option value="0">All</option>
-										<option value="1">Receivables</option>
-                                        <option value="2">Letters of Credit</option>
-                                        <option value="3">Bank Guarantees</option>
-                                        <option value="4">SBLC</option>
-                                        <option value="5">Warehousing Receipt</option>
-										<option value="6">Payable</option>
-										<option value="7">Other</option>
-                                        <option value="8">Demo Login</option>
-                                    </select>
+                        <div class="tf-assets-table-area">
+                            <div class="tf-filters">
+                                <div class="tf-ticker-head">
+                                    <ul class="nav tf-nav-tabs tf-ticker-nav tf-ticker-nav-desktop form-tabs" role="tablist">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#tab1" role="tab" data-toggle="tab" aria-selected="true">All</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tab2" role="tab" data-toggle="tab" aria-selected="true">Receivables</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tab3" role="tab" data-toggle="tab" aria-selected="false">Letters of Credit</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tab4" role="tab" data-toggle="tab" aria-selected="false">Bank Guarantees</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tab5" role="tab" data-toggle="tab" aria-selected="false">SBLC</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tab6" role="tab" data-toggle="tab" aria-selected="false">Warehousing Receipt</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tab7" role="tab" data-toggle="tab" aria-selected="false">Payable</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tab8" role="tab" data-toggle="tab" aria-selected="false">Other</a>
+                                        </li>
+                                        <!-- <li class="nav-item">
+                                            <a class="nav-link" href="#tab9" role="tab" data-toggle="tab" aria-selected="false">Demo Login</a>
+                                        </li> -->
+                                    </ul>
+                                    <div class="tf-ticker-nav-mobile">
+                                        <select class="form-control" id="tab_selector">
+                                            <option value="0">All</option>
+                                            <option value="1">Receivables</option>
+                                            <option value="2">Letters of Credit</option>
+                                            <option value="3">Bank Guarantees</option>
+                                            <option value="4">SBLC</option>
+                                            <option value="5">Warehousing Receipt</option>
+                                            <option value="6">Payable</option>
+                                            <option value="7">Other</option>
+                                            <!-- <option value="8">Demo Login</option> -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="tf-assets-table-block">
-                            <div class="tf-assets-table-block-inner">
-                                <div class="tab-content">
-                                    <!-- Start All Data -->
-                                    <div role="tabpanel" class="tab-pane fade in active" id="tab1">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="tf-financier-table tf-element">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover">
+                            <div class="tf-assets-table-block">
+                                <div class="tf-assets-table-block-inner">
+                                    <div class="tab-content">
+                                        <!-- Start All Data -->
+                                        <div role="tabpanel" class="tab-pane fade in active" id="tab1">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="tf-financier-table tf-element">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                    <th scope="col">INSTRUMENT TYPE</th>
+                                                                    <th scope="col">INSTRUMENT REF</th>
+                                                                    <th scope="col">COUNTRY OF ORIGINATION</th>
+                                                                    <th scope="col">AMOUNT</th>
+                                                                    <th scope="col">DATE OF MATURITY</th>
+                                                                    <th scope="col">&nbsp;</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <?php
+                                                                    foreach ($instrument as $instru) { ?>
+                                                                    <td class="bold"><?php 
+                                                                        if($instru->tfi_instrument == "SBLC")
+                                                                        {  echo 'SBLC'; 
+                                                                        }
+                                                                        else if($instru->tfi_instrument == "REC")
+                                                                        {  echo 'Receivable'; 
+                                                                        }
+                                                                        else if($instru->tfi_instrument == "LC")
+                                                                        {  echo 'Letter Of Credit'; 
+                                                                        }
+                                                                        else if($instru->tfi_instrument == "BG")
+                                                                        {  echo 'Bank Guarantees'; 
+                                                                        }
+                                                                        else if($instru->tfi_instrument == "PAY")
+                                                                        {  echo 'Payable'; 
+                                                                        }
+                                                                        else if($instru->tfi_instrument == "OTH")
+                                                                        {  echo 'Other'; 
+                                                                        }
+                                                                        else if($instru->tfi_instrument == "WR")
+                                                                        {  echo 'Warehouse Receipt'; 
+                                                                        }
+                                                                        
+                                                                        ?></td>
+                                                                            <td><?php echo $instru->tfi_docRef ?></td>
+                                                                            <td><?php echo $instru->tfi_country ?></td>
+                                                                            <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
+                                                                            <td><?php echo $instru->tfi_maturityDate ?></td>
+                                                                            <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
+                                                                            </tr>
+                                                                            <?php } ?>
+                                                                            <tr>
+                                                                        <?php
+                                                                        foreach ($buyersupplier as $bs) { 
+                                                                            ?>
+                                                                        <td class="bold"><?php 
+                                                                        if($bs->tfbs_loanp == "SBLC")
+                                                                        {  echo 'SBLC'; 
+                                                                        }
+                                                                        else if($bs->tfbs_loanp == "REC")
+                                                                        {  echo 'Receivable'; 
+                                                                        }
+                                                                        else if($bs->tfbs_loanp == "LC")
+                                                                        {  echo 'Letter Of Credit'; 
+                                                                        }
+                                                                        else if($bs->tfbs_loanp == "BG")
+                                                                        {  echo 'Bank Guarantees'; 
+                                                                        }
+                                                                        else if($bs->tfbs_loanp == "PAY")
+                                                                        {  echo 'Payable'; 
+                                                                        }
+                                                                        else if($bs->tfbs_loanp == "OTH")
+                                                                        {  echo 'Other'; 
+                                                                        }
+                                                                        else if($bs->tfbs_loanp == "WR")
+                                                                        {  echo 'Warehouse Receipt'; 
+                                                                        }
+                                                                        
+                                                                        ?></td>
+                                                                        <td><?php echo $bs->tfbs_docRef?></td>
+                                                                        <td><?php echo $bs->tfbs_country ?></td>
+                                                                        <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
+                                                                        <td><?php echo $bs->tfbs_maturityDate ?></td>
+                                                                        <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                        </tr>
+                                                                        <?php }?>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End All Data -->
+
+                                        <!-- Start Receivables Data -->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab2">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="tf-financier-table tf-element">
+                            
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
                                                             <thead>
                                                                 <tr>
                                                                 <th scope="col">INSTRUMENT TYPE</th>
@@ -180,313 +282,160 @@
                                                             <tbody>
                                                                 <tr>
                                                                 <?php
-                                                                foreach ($instrument as $instru) { ?>
-                                                                <td class="bold"><?php 
-                                                                    if($instru->tfi_instrument == "SBLC")
-                                                                    {  echo 'SBLC'; 
-                                                                    }
-                                                                    else if($instru->tfi_instrument == "REC")
-                                                                    {  echo 'Receivable'; 
-                                                                    }
-                                                                    else if($instru->tfi_instrument == "LC")
-                                                                    {  echo 'Letter Of Credit'; 
-                                                                    }
-                                                                    else if($instru->tfi_instrument == "BG")
-                                                                    {  echo 'Bank Guarantees'; 
-                                                                    }
-                                                                    else if($instru->tfi_instrument == "PAY")
-                                                                    {  echo 'Payable'; 
-                                                                    }
-                                                                    else if($instru->tfi_instrument == "OTH")
-                                                                    {  echo 'Other'; 
-                                                                    }
-                                                                    else if($instru->tfi_instrument == "WR")
-                                                                    {  echo 'Warehouse Receipt'; 
-                                                                    }
-                                                                    
-                                                                    ?></td>
+                                                                foreach ($instrument as $instru) { 
+                                                                    if($instru->tfi_instrument == "REC"){?>
+                                                                        <td class="bold"><?php if($instru->tfi_instrument == "REC")
+                                                                                        {  echo 'Receivable'; 
+                                                                                        }?></td>
                                                                         <td><?php echo $instru->tfi_docRef ?></td>
                                                                         <td><?php echo $instru->tfi_country ?></td>
                                                                         <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                                         <td><?php echo $instru->tfi_maturityDate ?></td>
                                                                         <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
-                                                                        </tr>
-                                                                        <?php } ?>
+                                                                                    </tr>
+                                                                        <?php }}?>
                                                                         <tr>
-                                                                    <?php
-                                                                    foreach ($buyersupplier as $bs) { 
-                                                                        ?>
-                                                                    <td class="bold"><?php 
-                                                                    if($bs->tfbs_loanp == "SBLC")
-                                                                    {  echo 'SBLC'; 
-                                                                    }
-                                                                    else if($bs->tfbs_loanp == "REC")
-                                                                    {  echo 'Receivable'; 
-                                                                    }
-                                                                    else if($bs->tfbs_loanp == "LC")
-                                                                    {  echo 'Letter Of Credit'; 
-                                                                    }
-                                                                    else if($bs->tfbs_loanp == "BG")
-                                                                    {  echo 'Bank Guarantees'; 
-                                                                    }
-                                                                    else if($bs->tfbs_loanp == "PAY")
-                                                                    {  echo 'Payable'; 
-                                                                    }
-                                                                    else if($bs->tfbs_loanp == "OTH")
-                                                                    {  echo 'Other'; 
-                                                                    }
-                                                                    else if($bs->tfbs_loanp == "WR")
-                                                                    {  echo 'Warehouse Receipt'; 
-                                                                    }
-                                                                    
-                                                                    ?></td>
-                                                                    <td><?php echo $bs->tfbs_docRef?></td>
-                                                                    <td><?php echo $bs->tfbs_country ?></td>
-                                                                    <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
-                                                                    <td><?php echo $bs->tfbs_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
-                                                                    </tr>
-                                                                    <?php }?>
+                                                                        <?php
+                                                                        foreach ($buyersupplier as $bs) { 
+                                                                            if($bs->tfbs_loanp == "REC"){?>
+                                                                        <td class="bold"><?php if($bs->tfbs_loanp == "REC")
+                                                                                        {  echo 'Receivable'; 
+                                                                                        }?></td>
+                                                                        <td><?php echo $bs->tfbs_docRef?></td>
+                                                                        <td><?php echo $bs->tfbs_country ?></td>
+                                                                        <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
+                                                                        <td><?php echo $bs->tfbs_maturityDate ?></td>
+                                                                        <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                        </tr>
+                                                                        <?php }}?>
+                                                                
+                                                                
+                                                                
                                                             </tbody>
-                                                        </table>
+                                                            </table>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- End All Data -->
+                                        <!-- End Receivables Data -->
 
-                                    <!-- Start Receivables Data -->
-                                    <div role="tabpanel" class="tab-pane fade" id="tab2">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="tf-financier-table tf-element">
-						 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover">
-                                                        <thead>
-                                                            <tr>
-                                                            <th scope="col">INSTRUMENT TYPE</th>
-                                                            <th scope="col">INSTRUMENT REF</th>
-                                                            <th scope="col">COUNTRY OF ORIGINATION</th>
-                                                            <th scope="col">AMOUNT</th>
-                                                            <th scope="col">DATE OF MATURITY</th>
-                                                            <th scope="col">&nbsp;</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                            <?php
-                                                            foreach ($instrument as $instru) { 
-                                                                if($instru->tfi_instrument == "REC"){?>
-                                                                    <td class="bold"><?php if($instru->tfi_instrument == "REC")
-                                                                                    {  echo 'Receivable'; 
-                                                                                    }?></td>
-                                                                    <td><?php echo $instru->tfi_docRef ?></td>
-                                                                    <td><?php echo $instru->tfi_country ?></td>
-                                                                    <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
-                                                                    <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
-                                                                                </tr>
-                                                                    <?php }}?>
-                                                                    <tr>
-                                                                    <?php
-                                                                    foreach ($buyersupplier as $bs) { 
-                                                                        if($bs->tfbs_loanp == "REC"){?>
-                                                                    <td class="bold"><?php if($bs->tfbs_loanp == "REC")
-                                                                                    {  echo 'Receivable'; 
-                                                                                    }?></td>
-                                                                    <td><?php echo $bs->tfbs_docRef?></td>
-                                                                    <td><?php echo $bs->tfbs_country ?></td>
-                                                                    <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
-                                                                    <td><?php echo $bs->tfbs_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
-                                                                    </tr>
-                                                                    <?php }}?>
-                                                            
-                                                            
-                                                            
-                                                        </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Receivables Data -->
-
-                                    <!-- Start Letter of Credit Data -->
-                                    <div role="tabpanel" class="tab-pane fade" id="tab3">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="tf-financier-table tf-element">
-						 
-                                            <div class="table-responsive">
-                                            <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                <th scope="col">INSTRUMENT TYPE</th>
-                                                <th scope="col">INSTRUMENT REF</th>
-                                                <th scope="col">COUNTRY OF ORIGINATION</th>
-                                                <th scope="col">AMOUNT</th>
-                                                <th scope="col">DATE OF MATURITY</th>
-                                                <th scope="col">&nbsp;</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr><?php
-                                                    foreach ($instrument as $instru) { 
-                                                        if($instru->tfi_instrument == "LC"){?>
-                                                <td class="bold"><?php if($instru->tfi_instrument == "LC")
-                                                            {  echo 'Letter of Credit'; 
-                                                            } ?></td>
-                                                <td><?php echo $instru->tfi_docRef ?></td>
-                                                <td><?php echo $instru->tfi_country ?></td>
-                                                <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
-                                                <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
-                                                </tr>
-                                                        <?php }}?>
-                                                <tr>
-                                                            <?php
-                                                            foreach ($buyersupplier as $bs) { 
-                                                                if($bs->tfbs_loanp == "LC"){?>
-                                                            <td class="bold"><?php if($bs->tfbs_loanp == "LC")
-                                                                            {  echo 'Letter of Credit'; 
-                                                                            }?></td>
-                                                            <td><?php echo $bs->tfbs_docRef?></td>
-                                                            <td><?php echo $bs->tfbs_country ?></td>
-                                                            <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
-                                                            <td><?php echo $bs->tfbs_maturityDate ?></td>
-                                                            <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
-                                                            </tr>
-                                                            <?php }}?>
-                                            </tbody>
-                                            </table></div></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Letter of Credit Data -->
-
-                                    <!-- Start Bank Gurantees Data -->
-                                    <div role="tabpanel" class="tab-pane fade" id="tab4">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="tf-financier-table tf-element">
-						 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th scope="col">INSTRUMENT TYPE</th>
-                                                                    <th scope="col">INSTRUMENT REF</th>
-                                                                    <th scope="col">COUNTRY OF ORIGINATION</th>
-                                                                    <th scope="col">AMOUNT</th>
-                                                                    <th scope="col">DATE OF MATURITY</th>
-                                                                    <th scope="col">&nbsp;</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr><?php
-                                                                    foreach ($instrument as $instru) { 
-                                                                        if($instru->tfi_instrument == "BG"){?>
-                                                                    <td class="bold"><?php if($instru->tfi_instrument == "BG")
-                                                                                    {  echo 'Bank Gurantee'; 
-                                                                                    }?></td>
-                                                                    <td><?php echo $instru->tfi_docRef ?></td>
-                                                                    <td><?php echo $instru->tfi_country ?></td>
-                                                                    <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
-                                                                    <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
-                                                                </tr>
-                                                                                <?php }}?>
-                                                                    <tr>
-                                                                    <?php
-                                                                    foreach ($buyersupplier as $bs) { 
-                                                                        if($bs->tfbs_loanp == "BG"){?>
-                                                                    <td class="bold"><?php if($bs->tfbs_loanp == "BG")
-                                                                                    {  echo 'Bank Gurantee'; 
-                                                                                    }?></td>
-                                                                    <td><?php echo $bs->tfbs_docRef?></td>
-                                                                    <td><?php echo $bs->tfbs_country ?></td>
-                                                                    <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
-                                                                    <td><?php echo $bs->tfbs_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
-                                                                    </tr>
-                                                                    <?php }}?>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Bank Gurantees Data -->
-
-                                    <!-- Start SBLC Data -->
-                                    <div role="tabpanel" class="tab-pane fade" id="tab5">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="tf-financier-table tf-element">
-						 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover">
-                                                        <thead>
-                                                            <tr>
-                                                            <th scope="col">INSTRUMENT TYPE</th>
-                                                            <th scope="col">INSTRUMENT REF</th>
-                                                            <th scope="col">COUNTRY OF ORIGINATION</th>
-                                                            <th scope="col">AMOUNT</th>
-                                                            <th scope="col">DATE OF MATURITY</th>
-                                                            <th scope="col">&nbsp;</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr><?php
-                                                                    foreach ($instrument as $instru) { 
-                                                                        if($instru->tfi_instrument == "SBLC"){?>
-                                                            <td class="bold"><?php if($instru->tfi_instrument == "SBLC")
-                                                                                    {  echo 'SBLC'; 
-                                                                                    }?></td>
-                                                            <td><?php echo $instru->tfi_docRef ?></td>
-                                                            <td><?php echo $instru->tfi_country ?></td>
-                                                            <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
-                                                            <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                            <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
-                                                            </tr>
-                                                                                <?php }}?>
-                                                            <tr>
-                                                            <?php
-                                                            foreach ($buyersupplier as $bs) { 
-                                                                if($bs->tfbs_loanp == "SBLC"){?>
-                                                            <td class="bold"><?php if($bs->tfbs_loanp == "SBLC")
-                                                                            {  echo 'SBLC'; 
-                                                                            }?></td>
-                                                            <td><?php echo $bs->tfbs_docRef?></td>
-                                                            <td><?php echo $bs->tfbs_country ?></td>
-                                                            <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
-                                                            <td><?php echo $bs->tfbs_maturityDate ?></td>
-                                                            <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
-                                                            </tr>
-                                                            <?php }}?>
-                                                        </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End SBLC Data -->
-
-									
-                                    <!-- Start Warehousing Receipt Data -->
-                                    <div role="tabpanel" class="tab-pane fade" id="tab6">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="tf-financier-table tf-element">
+                                        <!-- Start Letter of Credit Data -->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab3">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="tf-financier-table tf-element">
                             
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover">
+                                                <div class="table-responsive">
+                                                <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                    <th scope="col">INSTRUMENT TYPE</th>
+                                                    <th scope="col">INSTRUMENT REF</th>
+                                                    <th scope="col">COUNTRY OF ORIGINATION</th>
+                                                    <th scope="col">AMOUNT</th>
+                                                    <th scope="col">DATE OF MATURITY</th>
+                                                    <th scope="col">&nbsp;</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><?php
+                                                        foreach ($instrument as $instru) { 
+                                                            if($instru->tfi_instrument == "LC"){?>
+                                                    <td class="bold"><?php if($instru->tfi_instrument == "LC")
+                                                                {  echo 'Letter of Credit'; 
+                                                                } ?></td>
+                                                    <td><?php echo $instru->tfi_docRef ?></td>
+                                                    <td><?php echo $instru->tfi_country ?></td>
+                                                    <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
+                                                    <td><?php echo $instru->tfi_maturityDate ?></td>
+                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
+                                                    </tr>
+                                                            <?php }}?>
+                                                    <tr>
+                                                                <?php
+                                                                foreach ($buyersupplier as $bs) { 
+                                                                    if($bs->tfbs_loanp == "LC"){?>
+                                                                <td class="bold"><?php if($bs->tfbs_loanp == "LC")
+                                                                                {  echo 'Letter of Credit'; 
+                                                                                }?></td>
+                                                                <td><?php echo $bs->tfbs_docRef?></td>
+                                                                <td><?php echo $bs->tfbs_country ?></td>
+                                                                <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
+                                                                <td><?php echo $bs->tfbs_maturityDate ?></td>
+                                                                <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                </tr>
+                                                                <?php }}?>
+                                                </tbody>
+                                                </table></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Letter of Credit Data -->
+
+                                        <!-- Start Bank Gurantees Data -->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab4">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="tf-financier-table tf-element">
+                            
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">INSTRUMENT TYPE</th>
+                                                                        <th scope="col">INSTRUMENT REF</th>
+                                                                        <th scope="col">COUNTRY OF ORIGINATION</th>
+                                                                        <th scope="col">AMOUNT</th>
+                                                                        <th scope="col">DATE OF MATURITY</th>
+                                                                        <th scope="col">&nbsp;</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr><?php
+                                                                        foreach ($instrument as $instru) { 
+                                                                            if($instru->tfi_instrument == "BG"){?>
+                                                                        <td class="bold"><?php if($instru->tfi_instrument == "BG")
+                                                                                        {  echo 'Bank Gurantee'; 
+                                                                                        }?></td>
+                                                                        <td><?php echo $instru->tfi_docRef ?></td>
+                                                                        <td><?php echo $instru->tfi_country ?></td>
+                                                                        <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
+                                                                        <td><?php echo $instru->tfi_maturityDate ?></td>
+                                                                        <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
+                                                                    </tr>
+                                                                                    <?php }}?>
+                                                                        <tr>
+                                                                        <?php
+                                                                        foreach ($buyersupplier as $bs) { 
+                                                                            if($bs->tfbs_loanp == "BG"){?>
+                                                                        <td class="bold"><?php if($bs->tfbs_loanp == "BG")
+                                                                                        {  echo 'Bank Gurantee'; 
+                                                                                        }?></td>
+                                                                        <td><?php echo $bs->tfbs_docRef?></td>
+                                                                        <td><?php echo $bs->tfbs_country ?></td>
+                                                                        <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
+                                                                        <td><?php echo $bs->tfbs_maturityDate ?></td>
+                                                                        <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                        </tr>
+                                                                        <?php }}?>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Bank Gurantees Data -->
+
+                                        <!-- Start SBLC Data -->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab5">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="tf-financier-table tf-element">
+                            
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
                                                             <thead>
                                                                 <tr>
                                                                 <th scope="col">INSTRUMENT TYPE</th>
@@ -499,195 +448,213 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr><?php
-                                                                    foreach ($instrument as $instru) { 
-                                                                        if($instru->tfi_instrument == "WR"){?>
-                                                                <td class="bold"><?php if($instru->tfi_instrument == "WR")
-                                                                                    {  echo 'Warehouse Receipt'; 
-                                                                                    }?></td>
+                                                                        foreach ($instrument as $instru) { 
+                                                                            if($instru->tfi_instrument == "SBLC"){?>
+                                                                <td class="bold"><?php if($instru->tfi_instrument == "SBLC")
+                                                                                        {  echo 'SBLC'; 
+                                                                                        }?></td>
                                                                 <td><?php echo $instru->tfi_docRef ?></td>
                                                                 <td><?php echo $instru->tfi_country ?></td>
                                                                 <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
                                                                 <td><?php echo $instru->tfi_maturityDate ?></td>
                                                                 <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                                 </tr>
-                                                                                <?php }}?>
-                                                                                <tr>
-                                                                    <?php
-                                                                    foreach ($buyersupplier as $bs) { 
-                                                                        if($bs->tfbs_loanp == "WR"){?>
-                                                                    <td class="bold"><?php if($bs->tfbs_loanp == "WR")
-                                                                                    {  echo 'Warehouse Receipt'; 
-                                                                                    }?></td>
-                                                                    <td><?php echo $bs->tfbs_docRef?></td>
-                                                                    <td><?php echo $bs->tfbs_country ?></td>
-                                                                    <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
-                                                                    <td><?php echo $bs->tfbs_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
-                                                                    </tr>
-                                                                    <?php }}?>
+                                                                                    <?php }}?>
+                                                                <tr>
+                                                                <?php
+                                                                foreach ($buyersupplier as $bs) { 
+                                                                    if($bs->tfbs_loanp == "SBLC"){?>
+                                                                <td class="bold"><?php if($bs->tfbs_loanp == "SBLC")
+                                                                                {  echo 'SBLC'; 
+                                                                                }?></td>
+                                                                <td><?php echo $bs->tfbs_docRef?></td>
+                                                                <td><?php echo $bs->tfbs_country ?></td>
+                                                                <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
+                                                                <td><?php echo $bs->tfbs_maturityDate ?></td>
+                                                                <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                </tr>
+                                                                <?php }}?>
                                                             </tbody>
                                                             </table>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- End Warehousing Receipt Data -->
-									
-									<!-- Start Payable Data -->
-                                    <div role="tabpanel" class="tab-pane fade" id="tab7">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="tf-financier-table tf-element">
-						 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover">
-                                                        <thead>
-                                                            <tr>
-                                                            <th scope="col">INSTRUMENT TYPE</th>
-                                                            <th scope="col">INSTRUMENT REF</th>
-                                                            <th scope="col">COUNTRY OF ORIGINATION</th>
-                                                            <th scope="col">AMOUNT</th>
-                                                            <th scope="col">DATE OF MATURITY</th>
-                                                            <th scope="col">&nbsp;</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                                <tr><?php
-                                                                    foreach ($instrument as $instru) { 
-                                                                        if($instru->tfi_instrument == "PAY"){?>
-                                                                <td class="bold"><?php if($instru->tfi_instrument == "PAY")
-                                                                                    {  echo 'Payable'; 
-                                                                                    }?></td>
-                                                                <td><?php echo $instru->tfi_docRef ?></td>
-                                                                <td><?php echo $instru->tfi_country ?></td>
-                                                                <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
-                                                                <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
-                                                                </tr>
-                                                                                <?php }}?>
-                                                                                <tr>
-                                                                    <?php
-                                                                    foreach ($buyersupplier as $bs) { 
-                                                                        if($bs->tfbs_loanp == "PAY"){?>
-                                                                    <td class="bold"><?php if($bs->tfbs_loanp == "PAY")
-                                                                                    {  echo 'Payable'; 
-                                                                                    }?></td>
-                                                                    <td><?php echo $bs->tfbs_docRef?></td>
-                                                                    <td><?php echo $bs->tfbs_country ?></td>
-                                                                    <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
-                                                                    <td><?php echo $bs->tfbs_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                        <!-- End SBLC Data -->
+
+                                        
+                                        <!-- Start Warehousing Receipt Data -->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab6">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="tf-financier-table tf-element">
+                                
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                    <th scope="col">INSTRUMENT TYPE</th>
+                                                                    <th scope="col">INSTRUMENT REF</th>
+                                                                    <th scope="col">COUNTRY OF ORIGINATION</th>
+                                                                    <th scope="col">AMOUNT</th>
+                                                                    <th scope="col">DATE OF MATURITY</th>
+                                                                    <th scope="col">&nbsp;</th>
                                                                     </tr>
-                                                                    <?php }}?>             
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Payable Data -->
-
-                                    <!-- Start OTHER Data -->
-                                    <div role="tabpanel" class="tab-pane fade" id="tab8">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="tf-financier-table tf-element">
-						 
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover">
-                                                        <thead>
-                                                            <tr>
-                                                            <th scope="col">INSTRUMENT TYPE</th>
-                                                            <th scope="col">INSTRUMENT REF</th>
-                                                            <th scope="col">COUNTRY OF ORIGINATION</th>
-                                                            <th scope="col">AMOUNT</th>
-                                                            <th scope="col">DATE OF MATURITY</th>
-                                                            <th scope="col">&nbsp;</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                                <tr><?php
-                                                                    foreach ($instrument as $instru) { 
-                                                                        if($instru->tfi_instrument == "OTH"){?>
-                                                                <td class="bold"><?php if($instru->tfi_instrument == "OTH")
-                                                                                    {  echo 'Other'; 
-                                                                                    }?></td>
-                                                                <td><?php echo $instru->tfi_docRef ?></td>
-                                                                <td><?php echo $instru->tfi_country ?></td>
-                                                                <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
-                                                                <td><?php echo $instru->tfi_maturityDate ?></td>
-                                                                <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
-                                                                </tr>
-                                                                                <?php }}?>
-
-                                                                                <tr>
-                                                                    <?php
-                                                                    foreach ($buyersupplier as $bs) { 
-                                                                        if($bs->tfbs_loanp == "OTH"){?>
-                                                                    <td class="bold"><?php if($bs->tfbs_loanp == "OTH")
-                                                                                    {  echo 'Other'; 
-                                                                                    }?></td>
-                                                                    <td><?php echo $bs->tfbs_docRef?></td>
-                                                                    <td><?php echo $bs->tfbs_country ?></td>
-                                                                    <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
-                                                                    <td><?php echo $bs->tfbs_maturityDate ?></td>
-                                                                    <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr><?php
+                                                                        foreach ($instrument as $instru) { 
+                                                                            if($instru->tfi_instrument == "WR"){?>
+                                                                    <td class="bold"><?php if($instru->tfi_instrument == "WR")
+                                                                                        {  echo 'Warehouse Receipt'; 
+                                                                                        }?></td>
+                                                                    <td><?php echo $instru->tfi_docRef ?></td>
+                                                                    <td><?php echo $instru->tfi_country ?></td>
+                                                                    <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
+                                                                    <td><?php echo $instru->tfi_maturityDate ?></td>
+                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
                                                                     </tr>
-                                                                    <?php }}?>
-                                                            </tbody>
-                                                        </table>
+                                                                                    <?php }}?>
+                                                                                    <tr>
+                                                                        <?php
+                                                                        foreach ($buyersupplier as $bs) { 
+                                                                            if($bs->tfbs_loanp == "WR"){?>
+                                                                        <td class="bold"><?php if($bs->tfbs_loanp == "WR")
+                                                                                        {  echo 'Warehouse Receipt'; 
+                                                                                        }?></td>
+                                                                        <td><?php echo $bs->tfbs_docRef?></td>
+                                                                        <td><?php echo $bs->tfbs_country ?></td>
+                                                                        <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
+                                                                        <td><?php echo $bs->tfbs_maturityDate ?></td>
+                                                                        <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                        </tr>
+                                                                        <?php }}?>
+                                                                </tbody>
+                                                                </table>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- End OTHER Data -->
-
-                                    <!-- Login Modal -->
-                                    <div role="tabpanel" class="tab-pane fade in active" id="tab9">
-                                        <div class="row">
-                                            <div class="col-md-6 col-md-offset-4">          
-                                                <h3>Your Keys Await</h3>
-                                                <p>We connect global Buyer/Supplier or Brokers and Financiers</p>
-                                                <?php 
-                                                    $attributes = array('id' => 'demo_login', 'class' => 'tf-suppliers-form', 'method' => 'post','role' => 'form');
-                                                    echo form_open_multipart(base_url().'login/demo_login', $attributes); 
-                                                ?>
-                                                    <div class="row">
-                                                        <div class="form-group col-md-6">
-                                                            <label for="user_email">Email <sup>*</sup></label>
-                                                            <input type="text" class="form-control" id="user_email" name="user_email" autocomplete= "off"placeholder="Email" tabindex="1">
+                                        <!-- End Warehousing Receipt Data -->
+                                        
+                                        <!-- Start Payable Data -->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab7">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="tf-financier-table tf-element">
+                            
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                <th scope="col">INSTRUMENT TYPE</th>
+                                                                <th scope="col">INSTRUMENT REF</th>
+                                                                <th scope="col">COUNTRY OF ORIGINATION</th>
+                                                                <th scope="col">AMOUNT</th>
+                                                                <th scope="col">DATE OF MATURITY</th>
+                                                                <th scope="col">&nbsp;</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                    <tr><?php
+                                                                        foreach ($instrument as $instru) { 
+                                                                            if($instru->tfi_instrument == "PAY"){?>
+                                                                    <td class="bold"><?php if($instru->tfi_instrument == "PAY")
+                                                                                        {  echo 'Payable'; 
+                                                                                        }?></td>
+                                                                    <td><?php echo $instru->tfi_docRef ?></td>
+                                                                    <td><?php echo $instru->tfi_country ?></td>
+                                                                    <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
+                                                                    <td><?php echo $instru->tfi_maturityDate ?></td>
+                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
+                                                                    </tr>
+                                                                                    <?php }}?>
+                                                                                    <tr>
+                                                                        <?php
+                                                                        foreach ($buyersupplier as $bs) { 
+                                                                            if($bs->tfbs_loanp == "PAY"){?>
+                                                                        <td class="bold"><?php if($bs->tfbs_loanp == "PAY")
+                                                                                        {  echo 'Payable'; 
+                                                                                        }?></td>
+                                                                        <td><?php echo $bs->tfbs_docRef?></td>
+                                                                        <td><?php echo $bs->tfbs_country ?></td>
+                                                                        <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
+                                                                        <td><?php echo $bs->tfbs_maturityDate ?></td>
+                                                                        <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                        </tr>
+                                                                        <?php }}?>             
+                                                                </tbody>
+                                                            </table>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="form-group col-md-6">
-                                                            <label for="user_password">Password<sup>*</sup> </label>
-                                                            <input type="text" class="form-control" id="user_password" name="user_password" autocomplete= "off"placeholder="Password" tabindex="2">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <?php echo $this->session->flashdata('error_logged_in'); ?>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="form-group col-md-6 col-xs-6">
-                                                            <input type="hidden" name="action" value="adddetail" />
-                                                            <button type="submit"   class="btn btn-blue text-uppercase">Submit</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!-- End Payable Data -->
+
+                                        <!-- Start OTHER Data -->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab8">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="tf-financier-table tf-element">
+                            
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                <th scope="col">INSTRUMENT TYPE</th>
+                                                                <th scope="col">INSTRUMENT REF</th>
+                                                                <th scope="col">COUNTRY OF ORIGINATION</th>
+                                                                <th scope="col">AMOUNT</th>
+                                                                <th scope="col">DATE OF MATURITY</th>
+                                                                <th scope="col">&nbsp;</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                    <tr><?php
+                                                                        foreach ($instrument as $instru) { 
+                                                                            if($instru->tfi_instrument == "OTH"){?>
+                                                                    <td class="bold"><?php if($instru->tfi_instrument == "OTH")
+                                                                                        {  echo 'Other'; 
+                                                                                        }?></td>
+                                                                    <td><?php echo $instru->tfi_docRef ?></td>
+                                                                    <td><?php echo $instru->tfi_country ?></td>
+                                                                    <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
+                                                                    <td><?php echo $instru->tfi_maturityDate ?></td>
+                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
+                                                                    </tr>
+                                                                                    <?php }}?>
+
+                                                                                    <tr>
+                                                                        <?php
+                                                                        foreach ($buyersupplier as $bs) { 
+                                                                            if($bs->tfbs_loanp == "OTH"){?>
+                                                                        <td class="bold"><?php if($bs->tfbs_loanp == "OTH")
+                                                                                        {  echo 'Other'; 
+                                                                                        }?></td>
+                                                                        <td><?php echo $bs->tfbs_docRef?></td>
+                                                                        <td><?php echo $bs->tfbs_country ?></td>
+                                                                        <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
+                                                                        <td><?php echo $bs->tfbs_maturityDate ?></td>
+                                                                        <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                        </tr>
+                                                                        <?php }}?>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End OTHER Data -->
+
+                                        
                                     </div>
-                                    <!-- End Login Modal -->
                                 </div>
                             </div>
                         </div>
-                    </div>
-						
-						
-						
 						
 						
                     </div>
@@ -695,6 +662,58 @@
 	</div>
 </section>
 <!-- /. Financiers -->
+<!-- /. Login -->
+<section id="login_crad" class="section pb-40"style="display:none;">
+    <div class="container">
+        <div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="section-title text-center">
+					<h2 class="mb-0">Demonstration</h2>
+				</div>
+			</div>
+		</div>	
+        <div class="tf-assets-table-area">
+            <!-- Login Modal -->
+            <div role="tabpanel" class="tab-pane fade in active"id="login">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-4">          
+                        <h3>Your Keys Await</h3>
+                        <p>We connect global Buyer/Supplier or Brokers and Financiers</p>
+                        <?php 
+                            $attributes = array('id' => 'demo_loginForm', 'class' => 'tf-suppliers-form', 'method' => 'post','role' => 'form');
+                            echo form_open_multipart(base_url().'login/demo_login', $attributes); 
+                        ?>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="user_email">Email <sup>*</sup></label>
+                                    <input type="text" class="form-control" id="user_name" name="user_name" autocomplete= "off"placeholder="Email" tabindex="1">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="user_password">Password<sup>*</sup> </label>
+                                    <input type="password" class="form-control" id="user_password" name="user_password" autocomplete= "off"placeholder="Password" tabindex="2">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <?php echo $this->session->flashdata('error_logged_in'); ?>
+                               
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <input type="hidden" name="action" value="login" />
+                                    <button type="submit"   class="btn btn-blue text-uppercase">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End Login Modal -->		
+        </div>
+    </div>
+</section>
+<!-- /. Login -->
 
 </div>
 <!-- /. Inside Page Financiers -->
@@ -1044,6 +1063,10 @@ function passData_bs(docRef){
         })
     });
 
+}
+function show_login(){
+    document.getElementById("login_crad").style.display="block";
+    document.getElementById("Financiers").style.display="none";
 }
 </script>
 

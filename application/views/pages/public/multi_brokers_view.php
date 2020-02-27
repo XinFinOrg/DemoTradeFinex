@@ -1,4 +1,4 @@
-    <!-- Inside Page Buyers / Suppliers -->
+    <!-- Inside Page Multi Brokers -->
     <div class="sub_page_wraper">
 
         <section class="tf-inner-banner">
@@ -7,21 +7,8 @@
                 <h4>Digitize and Automate Document Distribution with Financiers.</h4>
             </div>
         </section>
-        <!-- <section class="section" >
-        <div class="col-md-3 col-xs-12 col-sm-4 funding_video" >
-				<div class="row">
-                    <div class="col-md-6 col-xs-5">
-                        <img class="img-responsive" src="../assets/images/img/media_46.png" alt="logo" > 
-					</div>
-                </div>
-                <div class="row">
-					<div class="col-md-8 col-xs-7"> 
-						<a href="https://www.youtube.com/embed/4bK1CrfaFf4?feature=oembed" target="_blank"  allowfullscreen><strong>How to apply for funding?</strong></a>
-					</div>	
-				</div>
-			</div> 
-    </section> -->
-        <!-- Buyers / Suppliers Form -->
+        
+        <!-- Multi Brokers Form -->
         <section id="xdc-protocol-features-benefits" class="section" >
             <div class="container"id="createinstrument"style="display:block;">
                 <div class="row">
@@ -111,30 +98,30 @@
                                 </div>
 
                                 <div class="row">
-                                <div id="currency_supported" class="form-group col-md-6">
-                                        <label for="currency_supported">Currency</label>
-                                        <select class="form-control" id="currency_supported" name="currency_supported">
-                                            <option value="" disabled="" selected="">Select Currency</option>
-                                            <option value="USD">USD</option>
-                                            <option value="GBP">GBP</option>
-                                            <option value="JPY">JPY</option>
-                                            <option value="EUR">EUR</option>
-                                            <option value="SGD">SGD</option>
-                                            <option value="XDC">XDC</option>
-                                        </select>
+                                    <div id="currency_supported" class="form-group col-md-6">
+                                            <label for="currency_supported">Currency</label>
+                                            <select class="form-control" id="currency_supported" name="currency_supported">
+                                                <option value="" disabled="" selected="">Select Currency</option>
+                                                <option value="USD">USD</option>
+                                                <option value="GBP">GBP</option>
+                                                <option value="JPY">JPY</option>
+                                                <option value="EUR">EUR</option>
+                                                <option value="SGD">SGD</option>
+                                                <option value="XDC">XDC</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="amount">Instrument Value</label>
+                                            <input type="text" class="form-control" id="amountt" name="amount" placeholder="Amount">
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="amount">Instrument Value</label>
-                                        <input type="text" class="form-control" id="amountt" name="amount" placeholder="Amount">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <!--<label for="maturity-date">Instrument Maturity Date</label>
-                                    <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">-->
-                                    <label for="maturity-date">Instrument Maturity Date</label>
-                                    <div id="date" data-date-format="yyyy-mm-dd">
-                                    <input  type="text" class="form-control" id="maturity_date" name="maturity_date" placeholder="yyyy-mm-dd"autocomplete="off">
-                                    <div class="input-group-addon" style="display:none"><span class="fa fa-calendar"></span></div>
+                                    <div class="form-group">
+                                        <!--<label for="maturity-date">Instrument Maturity Date</label>
+                                        <input type="date" class="form-control" id="maturity_date" name="maturity_date" placeholder="dd/mm/yyyy">-->
+                                        <label for="maturity-date">Instrument Maturity Date</label>
+                                        <div id="date" data-date-format="yyyy-mm-dd">
+                                        <input  type="text" class="form-control" id="maturity_date" name="maturity_date" placeholder="yyyy-mm-dd"autocomplete="off">
+                                        <div class="input-group-addon" style="display:none"><span class="fa fa-calendar"></span></div>
                                     </div>
                                 </div>
                                     
@@ -293,12 +280,12 @@
                 </div>
             </div>
         </section>
-        <!-- /. Buyers /Suppliers Form -->
+        <!-- /. Multi Brokers Form -->
 
     </div>
 
    
-    <!-- /. Inside Page Buyers / Suppliers Detail -->
+    <!-- /. Inside Page Multi Brokers Detail -->
     
 
 <?php

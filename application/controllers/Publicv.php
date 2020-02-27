@@ -2076,6 +2076,14 @@ class Publicv extends CI_Controller {
 				$data['contractAddr'] = $k->tfi_contractAddr;
 			}
 		}
+
+		if($action == 'getaccessint'){
+			$key = $this->manage->get_secretkey_by_docRef($docRef);
+			foreach($key as $k){
+				$data['key'] = $k->tfi_secretKey;
+				$data['contractAddr'] = $k->tfi_contractAddr;
+			}
+		}
 		$data['docRef'] = $docRef;
 			
 		if($action == 'getdetails'){

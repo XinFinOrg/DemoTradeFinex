@@ -2072,6 +2072,31 @@ $(function () {
 	$('#alphaexok').click(function() {
 		location.reload();
 	});
+
+	$("#demo_loginForm").validate({
+		rules: {
+			user_email: {
+				required: true,
+				EmailGeneral: true
+			},
+			user_password: {
+				required: true,
+				minlength: 8,
+				maxlength: 25
+			}
+		},
+		messages: {
+			user_password: {
+				required: "Please enter a valid password",
+				minlength: "Your password must be atleast 8 characters long",
+				maxlength: "Your password must be atmost 25 characters long"
+			},
+			user_email: {
+				required: "Please enter a valid email",
+				EmailGeneral: "Please enter a valid email address"
+			}
+		}
+	});
 });
 
 
