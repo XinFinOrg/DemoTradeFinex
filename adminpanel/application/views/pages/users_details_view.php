@@ -235,7 +235,6 @@
 				<div class="form-actions">
 					<div class="col-md-12" style="text-align:right">
 						<button class="btn btn-default" type="submit"><i class="fa fa-chevron-left"></i> Back</button>
-						<a href="<?php echo base_url() ?>users/manage	" class="btn btn-default" type="button"><i class="fa fa-chevron-left"></i> Back</a>
 					</div>
 				</div>
 				<input type="hidden" name="user_type" value="<?php echo $type_id?>" />
