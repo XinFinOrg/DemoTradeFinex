@@ -1062,3 +1062,16 @@ Footer
 	.tf-fees-item-content h3 {font-size: 1.17em;}
 	.tf-fees-item-content p {font-size: 14px;}
 }
+
+
+
+
+
+.tf-host-mn {height:100%;padding:30px 15px;text-align:left;border-radius:4px;margin-bottom:30px;}
+.tf-host-mn.bgWhite {background:#FFFFFF;}
+.tf-host-mn.bgOffWhiteShadow {box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px 0px;border: none !important;background-color: rgb(255, 255, 255) !important;}
+.tf-host-mn .mn-icon {display: inline-block;}
+.tf-host-mn .mn-icon img {width:50px;height:auto;}
+.tf-host-mn .mn-desc {display: inline-block;margin-left: 10px;vertical-align: middle;}
+.tf-host-mn .factTitle {font-size:20px;font-weight:400;color:#1f2151;line-height:24px;font-family: 'Libre Baskerville', serif;}
+.tf-host-mn p {font-size:14px;font-weight:400;color: rgb(123, 123, 123, 0.85) !important;line-height:20px;margin-bottom:5px;}
