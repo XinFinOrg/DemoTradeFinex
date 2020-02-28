@@ -73,7 +73,7 @@ class Users extends CI_Controller {
 				$data['sub'] = 'b';
 				$data['breadcumb'] = 'Beneficiary';
 			}
-			else{
+			elseif($type_id == 0){
 				$data['sub'] = 'a';
 				$data['breadcumb'] = 'All Users';
 			}
