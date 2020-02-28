@@ -3,33 +3,33 @@
 		<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<div class="tile-stats">
 				<div class="icon"><i class="fa fa-caret-square-o-right"></i></div>
-				<div class="count">179</div>
-				<h3>New Sign ups</h3>
-				<p>Lorem ipsum psdea itgum rixt.</p>
+				<div class="count"><?php echo $total_users?></div>
+				<h3>Total Users</h3>
+				<p>Total number of users on the Platform.</p>
 			</div>
 		</div>
 		<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<div class="tile-stats">
 				<div class="icon"><i class="fa fa-comments-o"></i></div>
-				<div class="count">179</div>
-				<h3>New Sign ups</h3>
-				<p>Lorem ipsum psdea itgum rixt.</p>
+				<div class="count"><?php echo $total_beneficiary?></div>
+				<h3>Total Beneficiaries</h3>
+				<p>Total number of beneficiaries on the Platform.</p>
 			</div>
 		</div>
 		<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<div class="tile-stats">
 				<div class="icon"><i class="fa fa-sort-amount-desc"></i></div>
-				<div class="count">179</div>
-				<h3>New Sign ups</h3>
-				<p>Lorem ipsum psdea itgum rixt.</p>
+				<div class="count"><?php echo $total_supplier?></div>
+				<h3>Total Suppliers</h3>
+				<p>Total number of suppliers on the Platform.</p>
 			</div>
 		</div>
 		<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<div class="tile-stats">
 				<div class="icon"><i class="fa fa-check-square-o"></i></div>
-				<div class="count">179</div>
-				<h3>New Sign ups</h3>
-				<p>Lorem ipsum psdea itgum rixt.</p>
+				<div class="count"><?php echo $total_financier?></div>
+				<h3>Total Financiers</h3>
+				<p>Total number of financiers on the Platform.</p>
 			</div>
 		</div>
 	</div>

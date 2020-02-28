@@ -10,8 +10,11 @@
 		<li class="active">
 			<strong><?php echo $breadcumb ?></strong>
 		</li>
+		<?php } else{ ?>
+			<li class="active">
+			<strong><?php echo "All Users" ?></strong>
+		</li>
 		<?php } ?>
-
 	</ul>
 	<hr/>
 	<span class=""><?php echo $this->session->flashdata('op_msg'); ?></span>
@@ -39,7 +42,7 @@
 							</div>
 							<div id="user_details" class="collapse in panel-body">
 								<div class="form-group">
-									<label for="first name" class="col-sm-4 control-label">First Name</label>
+									<label for="first name" class="col-sm-4 control-label">First Name :</label>
 									<div class="col-sm-8">
 									   <?php 
 										
@@ -50,14 +53,14 @@
 												echo $urow->tff_fname; 
 											}
 											if($type_id == 3){
-												echo $urow->tfb_fname; 
+												echo "John"; 
 											}
 									   ?>
 									</div>
 								</div>
 								
 								<div class="form-group">
-									<label for="last name" class="col-sm-4 control-label">Last Name</label>
+									<label for="last name" class="col-sm-4 control-label">Last Name :</label>
 									<div class="col-sm-8">
 									 <?php 
 											if($type_id == 1){
@@ -74,7 +77,7 @@
 								</div>
 								
 								<div class="form-group">
-									<label for="email" class="col-sm-4 control-label">Email</label>
+									<label for="email" class="col-sm-4 control-label">Email :</label>
 									<div class="col-sm-8">
 										<?php 
 											if($type_id == 1){
@@ -91,7 +94,7 @@
 								</div>
 								
 								<div class="form-group">
-									<label class="col-sm-4 control-label">Address</label>
+									<label class="col-sm-4 control-label">Address :</label>
 									<div class="col-sm-8">
 										<?php 
 											if($type_id == 1){
@@ -108,7 +111,7 @@
 								</div>
 								
 								<div class="form-group">
-									<label for="contact" class="col-sm-4 control-label">Contcat No</label>
+									<label for="contact" class="col-sm-4 control-label">Contact No :</label>
 									<div class="col-sm-8">
 										<?php 
 											if($type_id == 1){
@@ -124,25 +127,28 @@
 									</div>
 								</div>
 								<div class="form-group">
-								<?php 
-									
-									if($type_id == 1 && $urow->tfsp_pic_file)
-									{
-										echo '<label for="user pic" class="col-sm-4 control-label">&nbsp;</label><img style="width: 80px; height: auto; display: block;" src="'.BASE_FRONT_URL.'public/user_profile_image/'.$urow->tfsp_pic_file.'" alt="User Pic" />';
-									}
-									else if($type_id == 2 && $urow->tff_pic_file)
-									{
-										echo '<label for="user pic" class="col-sm-4 control-label">&nbsp;</label><img style="width: 80px; height: auto; display: block;" src="'.BASE_FRONT_URL.'public/user_profile_image/'.$urow->tff_pic_file.'" alt="User Pic" />';
-									}
-									else if($type_id == 3 && $urow->tfb_pic_file)
-									{
-										echo '<label for="user pic" class="col-sm-4 control-label">&nbsp;</label><img style="width: 80px; height: auto; display: block;" src="'.BASE_FRONT_URL.'public/user_profile_image/'.$urow->tfb_pic_file.'" alt="User Pic" />';
-									}
-									else
-									{
-										echo '<label for="user pic" class="col-sm-4 control-label">&nbsp;</label><img style="width: 80px; height: auto; display: block;" src="'.base_url().'public/images/user_pic_no.png" />';	
-									}
-								?>		
+									<label for="pic" class="col-sm-4 control-label">Profile Pic :</label>
+									<div class="col-sm-2">
+										<?php 
+											
+											if($type_id == 1 && $urow->tfsp_pic_file)
+											{
+												echo '<label for="user pic" class="col-sm-4 control-label">&nbsp;</label><img style="width: 80px; height: auto; display: block;" src="'.BASE_FRONT_URL.'assets/user_profile_image/'.$urow->tfsp_pic_file.'" alt="User Pic" />';
+											}
+											else if($type_id == 2 && $urow->tff_pic_file)
+											{
+												echo '<label for="user pic" class="col-sm-4 control-label">&nbsp;</label><img style="width: 80px; height: auto; display: block;" src="'.BASE_FRONT_URL.'assets/user_profile_image/'.$urow->tff_pic_file.'" alt="User Pic" />';
+											}
+											else if($type_id == 3 && $urow->tfb_pic_file)
+											{
+												echo '<label for="user pic" class="col-sm-4 control-label">&nbsp;</label><img style="width: 80px; height: auto; display: block;" src="'.BASE_FRONT_URL.'assets/user_profile_image/'.$urow->tfb_pic_file.'" alt="User Pic" />';
+											}
+											else
+											{
+												echo '<label for="user pic" class="col-sm-4 control-label">&nbsp;</label><img style="width: 80px; height: auto; display: block;" src="'.base_url().'public/images/user_pic_no.png" />';	
+											}
+										?>
+									</div>		
 								</div>
 							</div>
 						</div>
@@ -167,7 +173,7 @@
 										<?php 
 											if($urow->tfcom_logo_file)
 											{
-												echo '<img style="width: 80px; height: auto; display: block;" src="'.BASE_FRONT_URL.'public/user_company_logo/'.$urow->tfcom_logo_file.'" alt="Company logo" />';
+												echo '<img style="width: 80px; height: auto; display: block;" src="'.BASE_FRONT_URL.'assets/user_company_logo/'.$urow->tfcom_logo_file.'" alt="Company logo" />';
 											}
 											else
 											{
@@ -229,9 +235,10 @@
 				<div class="form-actions">
 					<div class="col-md-12" style="text-align:right">
 						<button class="btn btn-default" type="submit"><i class="fa fa-chevron-left"></i> Back</button>
+						<a href="<?php echo base_url() ?>users/manage	" class="btn btn-default" type="button"><i class="fa fa-chevron-left"></i> Back</a>
 					</div>
 				</div>
-				<input type="hidden" name="user_type" value="<?php echo $type_id ?>" />
+				<input type="hidden" name="user_type" value="<?php echo $type_id?>" />
 			</form>
 				<!-- </div>
 			</div> -->

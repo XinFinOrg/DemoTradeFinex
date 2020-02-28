@@ -1,6 +1,7 @@
 application/logs/*
 node_modules
 application/config/session/*
+adminpanel/application/config/session/*
 package.json
 package-lock.json
 dummy.txt

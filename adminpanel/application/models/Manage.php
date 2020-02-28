@@ -172,7 +172,7 @@
 				$this->db->join('{PRE}company tfcop', 'tfcop.tfcom_user_ref = tfu.tfu_id');
 				$this->db->join('{PRE}country tfct', 'tfct.tfc_id = tfcop.tfcom_country_ref');
 			}
-						
+	   		
 			$query = $this->db->get();
 			
 			return $result = $query->result();	
@@ -598,5 +598,41 @@
 			$query = $this->db->get();
 			return $result = $query->result();
 			
+		}
+
+		public function get_all_usersof_platform(){
+
+			$this->db->select('*');
+			$this->db->from('{PRE}user');
+			
+			$query = $this->db->get();
+			return $result = $query->num_rows();
+		}
+
+		public function get_all_beneficiaries_platform(){
+
+			$this->db->select('*');
+			$this->db->from('{PRE}beneficiary');
+			
+			$query = $this->db->get();
+			return $result = $query->num_rows();
+		}
+
+		public function get_all_suppliers_platform(){
+
+			$this->db->select('*');
+			$this->db->from('{PRE}service_provider');
+			
+			$query = $this->db->get();
+			return $result = $query->num_rows();
+		}
+
+		public function get_all_financiers_platform(){
+
+			$this->db->select('*');
+			$this->db->from('{PRE}financier');
+			
+			$query = $this->db->get();
+			return $result = $query->num_rows();
 		}
 	}

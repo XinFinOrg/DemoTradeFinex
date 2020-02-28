@@ -33,6 +33,7 @@
 									<li class="view_user <?php echo ($sub == 'sp' ? 'current-page' : '') ?>" uval="1"><a href="javascript:void(0)">Supplier </a></li>
 									<li class="view_user <?php echo ($sub == 'f' ? 'current-page' : '') ?>" uval="2"><a href="javascript:void(0)">Financier</a></li>
 									<li class="view_user <?php echo ($sub == 'b' ? 'current-page' : '') ?>" uval="3"><a href="javascript:void(0)">Beneficary</a></li>
+									<li class="view_user <?php echo ($sub == 'a' ? 'current-page' : '') ?>" uval="0"><a href="javascript:void(0)">All Users</a></li>
 								</ul>
 							</li>
 							<li class="<?php echo ($page == 'admin' ? 'active' : '') ?>"><a><i class="fa fa-group"></i> Backend Users <span class="fa fa-chevron-down"></span></a>

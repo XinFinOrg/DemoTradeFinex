@@ -65,6 +65,12 @@ class Dashboard extends CI_Controller {
 			
 			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
 				$data['upic'] = $uresult[0]->tfa_pic;
+
+				$data['total_users'] = $this->manage->get_all_usersof_platform();
+				$data['total_beneficiary'] = $this->manage->get_all_beneficiaries_platform();
+				$data['total_supplier'] = $this->manage->get_all_suppliers_platform();
+				$data['total_financier'] = $this->manage->get_all_financiers_platform();
+				
 			}
 		}
 				

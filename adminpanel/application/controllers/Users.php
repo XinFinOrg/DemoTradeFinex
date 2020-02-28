@@ -73,6 +73,10 @@ class Users extends CI_Controller {
 				$data['sub'] = 'b';
 				$data['breadcumb'] = 'Beneficiary';
 			}
+			else{
+				$data['sub'] = 'a';
+				$data['breadcumb'] = 'All Users';
+			}
 			
 			$data['users'] = $this->manage->get_user_info_by_type($type_id);
 		}
@@ -266,9 +270,10 @@ class Users extends CI_Controller {
 			
 			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
 				$data['upic'] = $uresult[0]->tfa_pic;
-				$data['type_id'] = $uresult[0]->tfa_utype;
+				$data['utype_id'] = $uresult[0]->tfa_utype;
 			}
 		}
+		
 		
 		$this->load->view('includes/header_common', $data);
 		$this->load->view('includes/sidebar', $data);
