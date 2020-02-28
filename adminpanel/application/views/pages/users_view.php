@@ -10,11 +10,7 @@
 		<li class="active">
 			<strong><?php echo $breadcumb ?></strong>
 		</li>
-		<?php } else{ ?>
-			<li class="active">
-			<strong><?php echo "All Users" ?></strong>
-		</li>
-		<?php } ?>
+		<?php }  ?>
 
 	</ul>
 	<hr/>	
