@@ -199,6 +199,27 @@
 			
 			return $result = $query->result();
 		}
+
+		public function get_all_projects_by_id($postDate){
+			
+			$data = array();
+			$this->db->select('tpp.*, tcom.*, tfb.*, tc.*, tcu.*, tca.ID as cat_id, tca.cName as cat_name, tct.ID as cont_id, tct.cName as cont_name');
+			$this->db->from('{PRE}project_posts tpp');
+			$this->db->join('{PRE}company tcom', 'tcom.tfcom_user_ref = tpp.userID', 'left');
+			$this->db->join('{PRE}industry_categories tca', 'tca.ID = tpp.mainCategoryId', 'left');
+			$this->db->join('{PRE}beneficiary tfb', 'tfb.tfb_user_ref = tpp.userID', 'left');
+			$this->db->join('{PRE}contracts tct', 'tct.ID = tpp.contractID', 'left');
+			$this->db->join('{PRE}country tc', 'tc.tfc_id = tpp.countryID', 'left');
+			$this->db->join('{PRE}currency tcu', 'tcu.tfcu_id = tpp.currency_ref', 'left');
+						
+			$where = "tpp.postDate = '$postDate' AND tpp.row_deleted = '0' AND tpp.isDraft = '0'";
+			
+			$this->db->where($where);
+			
+			$query = $this->db->get();
+			
+			return $result = $query->result();
+		}
 		
 		public function update_project_by_id($id, $data)
 		{

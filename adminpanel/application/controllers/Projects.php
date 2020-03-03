@@ -64,6 +64,56 @@ class Projects extends CI_Controller {
 		
 	}
 	
+	public function project_info(){
+		$data = array();
+		$result = array();
+		
+		$data['page'] = 'projects';
+		$data['sub'] = 'project_info';
+		$data['msg'] = '';
+		$data['full_name'] = '';
+		$data['breadcumb'] = 'Listing Details';
+		$data['type_id'] = 0;
+		$data['page_head'] = ''; 
+		$data['upic'] = '';
+					
+		$data['projects'] = array();
+
+		$user = $this->session->userdata('alogged_in');
+
+		
+		
+		if($user && !empty($user) && sizeof($user) <> 0){
+			
+			$data['full_name'] = ucwords($user['user_full_name']);
+			$data['user_id'] = $user['user_id'];
+			$data['user_typer'] = $user['user_type'];
+			$data['user_type'] = str_replace('-', ' ', $user['user_type']);
+			$data['user_type_ref'] = $user['user_type_ref'];
+			
+		}else{
+			redirect(base_url().'log/out');
+		}
+
+		if($data['user_id'] <> 0){
+			$use = $this->input->post('postDate');
+			$uresult = $this->manage->get_profile_by_id($data['user_id']);
+			$data['projects'] = $this->manage->get_all_projects_by_id($use);
+			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
+				$data['upic'] = $uresult[0]->tfa_pic;
+				$data['type_id'] = $uresult[0]->tfa_utype;
+			}
+		}
+		
+		$this->load->view('includes/header_common', $data);
+		$this->load->view('includes/sidebar', $data);
+		$this->load->view('includes/header_top_nav', $data);
+		$this->load->view('pages/project_detail_view', $data);
+		$this->load->view('includes/footer_after_login', $data);
+		$this->load->view('pages_scripts/projects_scripts', $data);
+		$this->load->view('includes/footer_common', $data);
+	}
+
 	public function listing_approve(){
 		
 		$data = array();
@@ -97,6 +147,7 @@ class Projects extends CI_Controller {
 			
 			$uresult = $this->manage->get_profile_by_id($data['user_id']);
 			$data['projects'] = $this->manage->get_all_projects_public(1);
+			
 			
 			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
 				$data['upic'] = $uresult[0]->tfa_pic;
@@ -595,7 +646,6 @@ class Projects extends CI_Controller {
 		if($project_ref <> 0 && trim($email_bodym) != ''){
 			
 			$user_project_info = $this->manage->get_project_info_by_id($project_ref);
-			
 			$config['protocol'] = 'smtp';
 			$config['charset'] = 'utf-8';
 			$config['wordwrap'] = TRUE;

@@ -14,7 +14,7 @@ class Pages extends CI_Controller {
 		$data_add = array();
 	}
 	
-	public function media_center(){
+	public function mediaCenter(){
 		
 		$data = array();
 		$result = array();

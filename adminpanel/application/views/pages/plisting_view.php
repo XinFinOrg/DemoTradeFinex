@@ -55,9 +55,9 @@
 					<?php echo (($prow->admin_approval == 1) ? '<span class="btn pstatus btn-success">Approved</span>' : (($prow->admin_approval == 2) ? '<span class="btn pstatus btn-danger">Rejected</span>&nbsp;<a href="javascript:void(0)" class="tooltipa rejected_info"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="tooltipatext">'.ucfirst($prow->rejection_reason).'</span></a>' : '')) ?>
 				</td>
 				<td>
-					<form class="form-horizontal" action="<?php echo BASE_FRONT_URL;?>listingv/project_info" method="post" target="_blank">	
+					<form class="form-horizontal" action="<?php echo base_url();?>projects/project_info" method="post" target="_blank">	
 						<button class="btn btn-xs btn-primary btn-psmall" type="submit"><i class="ace-icon fa fa-eye bigger-120"></i> Details</button>
-						<input type="hidden" value="<?php echo $prow->ID ?>" name="row_id"  />
+						<input type="hidden" value="<?php echo $prow->postDate ?>" name="postDate"  />
 						<input type="hidden" name="action" value="project_info" />
 					</form> 
 				</td>
@@ -109,10 +109,9 @@
                 <td><input type="checkbox" name="papprove" id="papprove" class="papprove" pid="<?php echo $prow->ID ?>" <?php echo (($prow->admin_approval == 2) ? 'disabled' : (($prow->admin_approval == 1) ? 'checked disabled' : '')) ?> /><div id="confirm-papprove" class="bconfirm confirm-papprove" data-toggle="confirmation" data-title="Are You want to do this?"></div></td>
 				<td><input type="checkbox" name="preject" id="preject" class="preject" pid="<?php echo $prow->ID ?>" <?php echo (($prow->admin_approval == 1) ? 'disabled' : (($prow->admin_approval == 2) ? 'checked disabled' : '')) ?> /><div id="confirm-preject" class="bconfirm confirm-preject" data-toggle="confirmation" data-title="Are You want to do this?"></div></td>
 				<td>
-					<form class="form-horizontal" action="<?php echo BASE_FRONT_URL;?>listingv/project_info" method="post" target="_blank">	
+					<form class="form-horizontal" action="<?php echo base_url();?>projects/project_info" method="post" target="_blank">	
+						<input type="hidden" value="<?php echo $prow->postDate ?>" name="postDate" />
 						<button class="btn btn-xs btn-primary btn-psmall" type="submit"><i class="ace-icon fa fa-eye bigger-120"></i> Details</button>
-						<input type="hidden" value="<?php echo $prow->ID ?>" name="row_id"  />
-						<input type="hidden" name="action" value="project_info" />
 					</form> 
 				</td>
 			</tr>
