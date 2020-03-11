@@ -146,7 +146,12 @@
                                     <label for="supporting-document" style="display:none" class ="error"id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" class="error"id="error1">Please file less than 5MB</label>
                                 </div>
-      </div>
+      <div class="form-group col-12">
+			<button id="" name="instru" type="submit" class="btn btn-blue text-uppercase">Submit</button>
+	</div>
+	  </div>
+	  
+	  
       
     </div>
   </div>
