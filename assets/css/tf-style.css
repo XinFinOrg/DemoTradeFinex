@@ -16,6 +16,7 @@ p {font-size: 15px;color: #687377;line-height: 1.5;margin-bottom: 15px;}
 .row-eq-height {flex: unset;display: block;}
 }
 
+
 /* Text colors */
 .text-white {color:white!important;}
 
@@ -1075,6 +1076,11 @@ Footer
 .tf-host-mn .mn-desc {float:left;margin-left:10px;vertical-align: middle;width: 100%;}
 .tf-host-mn .factTitle {font-size:19px;font-weight:400;color:#1f2151;line-height:24px;font-family: 'Libre Baskerville', serif;}
 .tf-host-mn p {font-size:14px;font-weight:600;color: rgb(123, 123, 123, 0.85)!important;line-height:18px;margin-bottom:10px;}
+
+.kyc-upload-modal .modal-body {padding-top:0px;}
+.kyc-upload-modal .modal-title {font-size: 18px;font-weight: 600;margin-bottom: 15px;}
+.kyc-upload-modal .form-group label {width: 100%;font-size: 15px;font-weight: 600;color: #687377;line-height: 18px;margin-bottom: 6px;}
+.kyc-upload-modal .modal-footer {padding-bottom:0px;}
 
 .ukb-mobile {display:none;}
 @media (max-width: 1199px) and (min-width: 992px) {.tf-host-mn .mn-desc {margin-left:20px;}.tf-host-mn .factTitle {font-size:22px;}.tf-host-mn p {font-size:18px;}}
