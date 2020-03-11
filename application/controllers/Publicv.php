@@ -5512,5 +5512,29 @@ class Publicv extends CI_Controller {
 				
 	}
 
+	public function strategy(){
+
+		$data = array();
+		$data['page'] = 'strategy';       
+        
+		$data['csrf'] = array();
+		
+		$csrf = array(
+			'name' => $this->security->get_csrf_token_name(),
+			'hash' => $this->security->get_csrf_hash()
+		);
+		
+		$data['csrf'] = $csrf;
+        
+        
+        $this->load->view('includes/headern', $data);
+		$this->load->view('includes/header_publicn', $data);
+        $this->load->view('pages/public/viral_strategy', $data);
+        $this->load->view('includes/footer_commonn', $data);
+        $this->load->view('pages_scripts/common_scripts', $data);
+        $this->load->view('includes/footern');
+
+	}
+
 }
 	
