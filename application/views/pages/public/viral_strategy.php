@@ -3,21 +3,14 @@
 
 <section class="tf-inner-banner">
     <div class="container">
-        <h3>Viral Strategy</h3>
+        <h3>Is Your business affected by coronavirus or external crisis ?</h3>
+        <h4>TradeFinex lets you connect with funding sources that provide easy credit facilities.</h4>
     </div>
 </section>
 
 <!-- About XinFin Masternode -->
 <section id="tf-setup-masternode" class="section">
     <div class="container">
-    <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="section-title text-center">
-                <h3>Is Your business affected by coronavirus or external crisis affecting your business?</h3>
-                <h4>TradeFinex lets you connect with funding sources that provide easy credit facilities.</h4>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="section-title text-center">
@@ -28,22 +21,21 @@
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="orderList">
-                    <ol>
-                        <li>Start Business, Register and create identity on TradeFinex (need Business Registration document)</li>
-                        <div class="bulletList">
+                <!-- <div class="orderList"> -->
+                    <!-- <ol> -->
+                        <p>Step 1: Start <strong><a href="<?php echo base_url();?>/publicv/buyersupplier" target="_blank">Business Registration</a> </strong>and create identity on TradeFinex (need Business Registration document)</p>
+                        <!-- <div class="bulletList">
                             <ul>
                                 <li>After the buyer/Supplier uploads the instrument, a tokenised certificate is generated of the instrument.</li>
                             </ul>
-                        </div>
-                        <li>Start Request for the funding:</li>
+                        </div> -->
+                        <p> Step 2: Start Request for the funding:</li>
                         <div class="bulletList">
                             <ul>
-                                <li>Businesses can share this certificate over LinkedIn, tag major local Bank and Non-Bank funders.</li>
-                                <li>Businesses can invite funders</li>
+                                <li>Businesses can share this certificate over LinkedIn or other social medias, tag major local Bank and Non-Bank funders.</li>
                             </ul>
                         </div>
-                        <li>Funder sees the document and starts communication for the funding.</li> 
+                        <p> Step 3: Funder sees the document and starts communication for the funding.</p> 
                     </ol>
                 </div>
             </div>
