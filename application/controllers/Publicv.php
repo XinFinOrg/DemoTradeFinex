@@ -944,10 +944,7 @@ class Publicv extends CI_Controller {
 		$data = array();
 		
 		$data['page'] = 'host_masternode';
-		$data['msg'] = '';
-		$data['user_id'] = 0;
-		$data['user_type'] = '';
-		$data['full_name'] = '';
+		
 				
 		$data['csrf'] = array();
 		
@@ -958,40 +955,21 @@ class Publicv extends CI_Controller {
 		
 		$data['csrf'] = $csrf;
 		
-		$user = $this->session->userdata('logged_in');
+		$act = $this->input->post('action');
+		$number = $this->input->post('nummasternode');
+
+		$allStats = getXinFinStats();
 		
-		if($user && !empty($user) && sizeof($user) <> 0){
-			$data['full_name'] = $user['user_full_name'];
-			$data['user_id'] = $user['user_id'];
-			$data['user_type_ref'] = $user['user_type_ref'];
-			redirect(base_url().'dashboard');
-		}else{
-			// redirect(base_url().'log/out');
-		}
+		$data['xdc_usd'] = $allStats->priceUsd;
+
+		$data['total_price'] = floatval($data['xdc_usd'] * 10000000);
+
 		
-		$data['notifications'] = array();
-		$data['notifications'] = get_initial_notification_status();
+		$data['amount'] =  floatval(800 + $data['total_price']);
 		
-		if($data['user_id'] <> 0){
-			
-			$options = array();
-			$options['user_id'] = $data['user_id'];
-			$options['user_type'] = $data['user_type_ref'];
-			
-			$data['notifications'] = get_notification_status($options);
-		}
+
 		
-		$data['notifications'] = array();
-		$data['notifications'] = get_initial_notification_status();
 		
-		if($data['user_id'] <> 0){
-			
-			$options = array();
-			$options['user_id'] = $data['user_id'];
-			$options['user_type'] = $data['user_type_ref'];
-			
-			$data['notifications'] = get_notification_status($options);
-		}
 		
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
