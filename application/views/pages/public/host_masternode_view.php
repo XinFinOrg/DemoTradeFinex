@@ -27,13 +27,14 @@
 							<div class="start-now-block">
 								<h2 class="mb-20">Setup Masternode</h2>
 								<!-- <p class="mb-30">Fast, Reliable and Affordable Masternode Hosting.</p> -->
-								<p><a href="https://docs.google.com/document/d/1Us9chjXEDYrDOpfuwWITxaQOSEYxYIpJpwWuYK0TyXY" target="_blank"> Format for Individual</a> | <a href="https://docs.google.com/document/d/1eyjFp3DXhrpLscngELocmXFwJ_Y8H9si6n8Z2SLADhg
-									"target="_blank">Format for Corporate</a></p>
+								
 								<p>To Become a network member, upload the Know Your Community (KYC) certificate in PDF format.
 
 								<p>This KYC certificate needs to be signed by one of the following personnel:</p>
 
 								<p>Company Secretary, A Notary Public, Chartered Secretary, Consulate, or A lawyer with Seal.</p>
+								<p><a href="https://docs.google.com/document/d/1Us9chjXEDYrDOpfuwWITxaQOSEYxYIpJpwWuYK0TyXY" target="_blank"> Format for Individual</a> | <a href="https://docs.google.com/document/d/1eyjFp3DXhrpLscngELocmXFwJ_Y8H9si6n8Z2SLADhg
+									"target="_blank">Format for Corporate</a></p>
 								<div class="upload-kyc-btn ukb-desktop">
 									<a data-toggle="modal" id = "kycModal"data-target="#mnKycUploader" class="btn btn-blue text-uppercase"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp; UPLOAD KYC</a>
 								</div>
@@ -95,13 +96,13 @@
 									<option value="Azure" disabled>Azure (coming soon)</option>
 									
                                 </select>
-								<div class="factTitle">USD 800/annum </div>
+								<div class="factTitle">USD 800/Annum </div>
 							</div>
 						</div>
 						</div>
 						<div class="row center">
 							<div class="mn-input col-md-8"> 
-								<input class=" form-control" type="number" onchange="docNumber()"id = "nummasternode" name ="nummasternode" placeholder="Number of Masternode">
+								<input class=" form-control" type="number" onchange="docNumber()"id = "nummasternode" name ="nummasternode" placeholder="1" value = "1">
 							</div>
 							<div class="form-group col-md-4"> 
 								<form action="<?php echo PAYPAL_URL; ?>" method="post">
