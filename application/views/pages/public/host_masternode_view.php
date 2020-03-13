@@ -140,8 +140,6 @@
 									
 										
 									</div>
-									
-											<input type='hidden' name="action" value="masternode">
 											<button id="masternode_payment" type="submit" class="btn btn-blue text-uppercase" data-keyboard="false" disabled>Pay Now</button>
 										
 									

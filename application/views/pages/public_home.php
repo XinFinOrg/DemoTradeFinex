@@ -1,4 +1,7 @@
 <!-- Powering The Trade Finance Banner -->
+<!-- <section class="section tf-home-banner">
+<marquee style="font-size:50px;font-weight:600;line-height:45px;font-family: sans-serif;color: #ea212d;height:100%">Is Your business affected by coronavirus or external crisis ?</marquee>
+</section> -->
 <section class="section tf-home-banner">
         <div class="container">
             <div class="row tf-vertical-align">
@@ -16,7 +19,7 @@
                         </ul>
                     </div>
 
-                    <div class="tf-get-started-btn mt-30"><a href="<?=base_url();?>publicv/setupMasternode" class="btn btn-red text-uppercase tf-block">Join The Network</a></div>
+                    <div class="tf-get-started-btn mt-30"><a href="<?=base_url();?>publicv/hostMasternode" class="btn btn-red text-uppercase tf-block">Join The Network</a></div>
 
                     <div class="hero-tabs-mobile-container">
                         <ul class="nav nav-pills">                            
