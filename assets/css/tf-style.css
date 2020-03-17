@@ -804,7 +804,7 @@ input.error, textarea.error, select.error, label.error {border-color: #ea212d!im
 .tf-financier-table .table-responsive th {text-align:center!important;font-size: 11px!important;letter-spacing: .05em;text-transform: uppercase;}
 
 .tf-assets-table-area {margin-top:15px;}
-.tf-filters {background-color: #512aef;padding: 15px 5px 15px 5px;border-radius: 5px;-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);}
+.tf-filters {background-color: #0055d9;padding: 15px 5px 15px 5px;border-radius: 5px;-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);}
 .tf-ticker-head {text-align: center;}
 .tf-nav-tabs {display: inline-block;border-bottom:none;}
 .tf-nav-tabs .nav-item {margin:0 1px 0 1px;float: left;}

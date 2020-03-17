@@ -142,9 +142,9 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="#tab8" role="tab" data-toggle="tab" aria-selected="false">Other</a>
                                         </li>
-                                        <!-- <li class="nav-item">
-                                            <a class="nav-link" href="#tab9" role="tab" data-toggle="tab" aria-selected="false">Demo Login</a>
-                                        </li> -->
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tab9" role="tab" data-toggle="tab" aria-selected="false">Country</a>
+                                        </li>
                                     </ul>
                                     <div class="tf-ticker-nav-mobile">
                                         <select class="form-control" id="tab_selector">
@@ -156,7 +156,7 @@
                                             <option value="5">Warehousing Receipt</option>
                                             <option value="6">Payable</option>
                                             <option value="7">Other</option>
-                                            <!-- <option value="8">Demo Login</option> -->
+                                            <option value="8">Country</option>
                                         </select>
                                     </div>
                                 </div>
@@ -649,6 +649,62 @@
                                             </div>
                                         </div>
                                         <!-- End OTHER Data -->
+										
+										<!-- Start Country Data -->
+                                        <div role="tabpanel" class="tab-pane fade" id="tab9">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="tf-financier-table tf-element">
+                            
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                <th scope="col">INSTRUMENT TYPE</th>
+                                                                <th scope="col">INSTRUMENT REF</th>
+                                                                <th scope="col">COUNTRY OF ORIGINATION</th>
+                                                                <th scope="col">AMOUNT</th>
+                                                                <th scope="col">DATE OF MATURITY</th>
+                                                                <th scope="col">&nbsp;</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                    <tr><?php
+                                                                        foreach ($instrument as $instru) { 
+                                                                            if($instru->tfi_instrument == "OTH"){?>
+                                                                    <td class="bold"><?php if($instru->tfi_instrument == "OTH")
+                                                                                        {  echo 'Other'; 
+                                                                                        }?></td>
+                                                                    <td><?php echo $instru->tfi_docRef ?></td>
+                                                                    <td><?php echo $instru->tfi_country ?></td>
+                                                                    <td><?php echo $instru->tfi_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$instru->tfi_amount),'0'),'.') ?></td>
+                                                                    <td><?php echo $instru->tfi_maturityDate ?></td>
+                                                                    <td><button class="btn btn-blue" onclick="passData('<?php echo $instru->tfi_docRef ?>')"><span>Get Access</span></button></td>
+                                                                    </tr>
+                                                                                    <?php }}?>
+
+                                                                                    <tr>
+                                                                        <?php
+                                                                        foreach ($buyersupplier as $bs) { 
+                                                                            if($bs->tfbs_loanp == "OTH"){?>
+                                                                        <td class="bold"><?php if($bs->tfbs_loanp == "OTH")
+                                                                                        {  echo 'Other'; 
+                                                                                        }?></td>
+                                                                        <td><?php echo $bs->tfbs_docRef?></td>
+                                                                        <td><?php echo $bs->tfbs_country ?></td>
+                                                                        <td><?php echo $bs->tfbs_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',$bs->tfbs_amount),'0'),'.') ?></td>
+                                                                        <td><?php echo $bs->tfbs_maturityDate ?></td>
+                                                                        <td><button class="btn btn-blue" onclick="passData_bs('<?php echo $bs->tfbs_docRef ?>')"><span>Get Access</span></button></td>
+                                                                        </tr>
+                                                                        <?php }}?>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Country Data -->
 
                                         
                                     </div>
