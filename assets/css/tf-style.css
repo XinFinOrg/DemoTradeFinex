@@ -801,7 +801,7 @@ input.error, textarea.error, select.error, label.error {border-color: #ea212d!im
 .tf-financier-table .table-responsive th, .tf-financier-table .table-responsive td {font-size: 13px!important;}
 .tf-financier-table .table-responsive tr:hover {background:#f5f8fc;}
 .tf-financier-table.tf-element .bold {font-weight: 600;}
-.tf-financier-table .table-responsive th {text-align:center!important;font-size: 11px!important;letter-spacing: .05em;text-transform: uppercase;}
+.tf-financier-table .table-responsive th {text-align:center!important;font-size: 11px!important;letter-spacing: .05em;text-transform: uppercase;font-weight: 800;}
 
 .tf-assets-table-area {margin-top:15px;}
 .tf-filters {background-color: #0055d9;padding: 15px 5px 15px 5px;border-radius: 5px;-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);}
