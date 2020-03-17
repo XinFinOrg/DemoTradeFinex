@@ -830,7 +830,7 @@ input.error, textarea.error, select.error, label.error {border-color: #ea212d!im
 .tf-filters {padding: 10px;}
 }
 
-.country-filter {padding: 20px;background: #f7f7f7;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.05), 0 4px 15px 0 rgba(0,0,0,0.05);box-shadow: 0 5px 11px 0 rgba(0,0,0,0.08), 0 4px 15px 0 rgba(0,0,0,0.05);}
+.country-filter {padding: 20px 10px;background: #f7f7f7;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.05), 0 4px 15px 0 rgba(0,0,0,0.05);box-shadow: 0 5px 11px 0 rgba(0,0,0,0.08), 0 4px 15px 0 rgba(0,0,0,0.05);}
 .country-filter .form-horizontal {width:50%;margin: 0 auto;}
 .country-filter .form-group {height: 50px;display: flex;align-items: center;margin-bottom:0px;}
 .country-filter .form-group label {font-size:16px;line-height:18px;padding-top:0px;}
@@ -838,6 +838,7 @@ input.error, textarea.error, select.error, label.error {border-color: #ea212d!im
 .country-filter .form-control select, option {width: 250px!important;}
 .country-filter .form-control option {overflow: hidden;white-sapce: no-wrap;text-overflow: ellipsis!important;}
 @media (max-width: 768px) {.country-filter .form-horizontal {width:100%;}}
+@media (max-width: 576px) {.country-filter .form-control{font-size:0.85rem;}}
 
 
 
