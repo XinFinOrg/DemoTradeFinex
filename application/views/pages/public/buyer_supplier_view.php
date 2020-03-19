@@ -261,7 +261,7 @@
 ?>	
 
 <div id="tf-loader-wrapper" style="display: none;"><div id="tf-loader"></div></div>
-<div class="modal fade" id="thankyou" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+<!--<div class="modal fade" id="thankyou" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">-->
 		<div class="modal-dialog" style="">
 		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
 			<div class="modal-content">
@@ -286,38 +286,38 @@
                                 </div>
                         
 							<div class="form-group">
-								<button id="CopyBtn" type="submit" onclick="copy('deployedData')" class="btn btn-blue text-uppercase" data-keyboard="false">Copy</button>
-								<button id="DownloadBtn" type="submit" onclick="PrintDiv()"class="btn btn-blue text-uppercase" data-keyboard="false">Download</button>
-								<button id="EmailBtn" type="submit" onclick="showemail()"class="btn btn-blue text-uppercase" data-keyboard="false" >Email</button>
+								<button id="CopyBtn" type="submit" onclick="copy('deployedData')" class="btn btn-blue text-uppercase mb-5" data-keyboard="false">Copy</button>
+								<button id="DownloadBtn" type="submit" onclick="PrintDiv()"class="btn btn-blue text-uppercase mb-5" data-keyboard="false">Download</button>
+								<button id="EmailBtn" type="submit" onclick="showemail()"class="btn btn-blue text-uppercase mb-5" data-keyboard="false" >Email</button>
 							</div>
                             
                             
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
-                                    <div class="widget widget-contact">
-                                        <h4 class="widget-title">Connect Financiers via Social Media</h4>
-                                        <ul class="tf-social-ft mb-30">
+                                    <div class="widget widget-contact mt-5">
+                                        <h4 class="widget-title mb-10">Connect Financiers via Social Media</h4>
+                                        <ul class="tf-social-bs">
                                         <?php
                                             $summary=rawurlencode('Our business is affected by “Coronavirus Emergency” and we are looking for Short term funding. 
                                             Here is How to access my funding requirement:[Link-Diverts to hyperlink-How to be a financier].
                                             Potential Funders can securely access our business profile and funding requirement by becoming part of the TradeFinex Network. https://www.tradefinex.org/publicv/financier.
                                             Even your business is affected by coronavirus? Create your digital identity and Start sending requests for funding support.');
                                         ?>
-                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $summary ?>')"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://twitter.com/share?text=Our business is affected by “Coronavirus Emergency” and we are looking for Short term funding. %0D%0A%0D%0AHere is How to access my funding requirement:%0D%0A[Link-Diverts to hyperlink-How to be a financier]%0D%0A%0D%0APotential Funders can securely access our business profile and funding requirement by becoming part of the TradeFinex Network. https://www.tradefinex.org/publicv/financier %0D%0A%0D%0AEven your business is affected by coronavirus? Create your digital identity and Start sending requests for funding support.&url=[URL]')"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://www.facebook.com/sharer.php?u=<?php echo $summary ?>')"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('whatsapp://send?text=Our business is affected by “Coronavirus Emergency” and we are looking for Short term funding. %0D%0A%0D%0AHere is How to access my funding requirement:%0D%0A[Link-Diverts to hyperlink-How to be a financier]%0D%0A%0D%0APotential Funders can securely access our business profile and funding requirement by becoming part of the TradeFinex Network. https://www.tradefinex.org/publicv/financier %0D%0A%0D%0AEven your business is affected by coronavirus? Create your digital identity and Start sending requests for funding support.')" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i></a></li>
+                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $summary ?>')" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://twitter.com/share?text=Our business is affected by “Coronavirus Emergency” and we are looking for Short term funding. %0D%0A%0D%0AHere is How to access my funding requirement:%0D%0A[Link-Diverts to hyperlink-How to be a financier]%0D%0A%0D%0APotential Funders can securely access our business profile and funding requirement by becoming part of the TradeFinex Network. https://www.tradefinex.org/publicv/financier %0D%0A%0D%0AEven your business is affected by coronavirus? Create your digital identity and Start sending requests for funding support.&url=[URL]')" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://www.facebook.com/sharer.php?u=<?php echo $summary ?>')" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('whatsapp://send?text=Our business is affected by “Coronavirus Emergency” and we are looking for Short term funding. %0D%0A%0D%0AHere is How to access my funding requirement:%0D%0A[Link-Diverts to hyperlink-How to be a financier]%0D%0A%0D%0APotential Funders can securely access our business profile and funding requirement by becoming part of the TradeFinex Network. https://www.tradefinex.org/publicv/financier %0D%0A%0D%0AEven your business is affected by coronavirus? Create your digital identity and Start sending requests for funding support.')" data-action="share/whatsapp/share" class="whatsapp"><i class="fa fa-whatsapp"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                            
-                                           							
+                            </div>                                           							
 						</div>
 				</div>
 			</div>
 	 	</div>
-</div>
+<!--</div>-->
+
+
 <div id="tf-loader-wrapper" style="display: none;"><div id="tf-loader"></div></div>
 <div class="modal fade" id="hash" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog" style="">
