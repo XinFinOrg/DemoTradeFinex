@@ -165,9 +165,7 @@
                                 </div>
 
                                 
-                                <br><br>
-											
-                                    
+                                <br><br>                       
 											
                                     <div class="row">
                                         <div class="form-group col-md-6 col-xs-6">
@@ -291,7 +289,30 @@
 								<button id="CopyBtn" type="submit" onclick="copy('deployedData')" class="btn btn-blue text-uppercase" data-keyboard="false">Copy</button>
 								<button id="DownloadBtn" type="submit" onclick="PrintDiv()"class="btn btn-blue text-uppercase" data-keyboard="false">Download</button>
 								<button id="EmailBtn" type="submit" onclick="showemail()"class="btn btn-blue text-uppercase" data-keyboard="false" >Email</button>
-							</div>							
+							</div>
+                            
+                            
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="widget widget-contact">
+                                        <h4 class="widget-title">Connect Financiers via Social Media</h4>
+                                        <ul class="tf-social-ft mb-30">
+                                        <?php
+                                            $summary=rawurlencode('Our business is affected by “Coronavirus Emergency” and we are looking for Short term funding. 
+                                            Here is How to access my funding requirement:[Link-Diverts to hyperlink-How to be a financier].
+                                            Potential Funders can securely access our business profile and funding requirement by becoming part of the TradeFinex Network. https://www.tradefinex.org/publicv/financier.
+                                            Even your business is affected by coronavirus? Create your digital identity and Start sending requests for funding support.');
+                                        ?>
+                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $summary ?>')"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://twitter.com/share?text=Our business is affected by “Coronavirus Emergency” and we are looking for Short term funding. %0D%0A%0D%0AHere is How to access my funding requirement:%0D%0A[Link-Diverts to hyperlink-How to be a financier]%0D%0A%0D%0APotential Funders can securely access our business profile and funding requirement by becoming part of the TradeFinex Network. https://www.tradefinex.org/publicv/financier %0D%0A%0D%0AEven your business is affected by coronavirus? Create your digital identity and Start sending requests for funding support.&url=[URL]')"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('http://www.facebook.com/sharer.php?u=<?php echo $summary ?>')"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="javascript:void(0)" onclick="javascript:genericSocialShare('whatsapp://send?text=Our business is affected by “Coronavirus Emergency” and we are looking for Short term funding. %0D%0A%0D%0AHere is How to access my funding requirement:%0D%0A[Link-Diverts to hyperlink-How to be a financier]%0D%0A%0D%0APotential Funders can securely access our business profile and funding requirement by becoming part of the TradeFinex Network. https://www.tradefinex.org/publicv/financier %0D%0A%0D%0AEven your business is affected by coronavirus? Create your digital identity and Start sending requests for funding support.')" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                           							
 						</div>
 				</div>
 			</div>
@@ -450,6 +471,46 @@ function mail(){
             
         })// show response from the php script.
         })
+}
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    var isMobile = {
+    Android: function() {
+    return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+    return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+    return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+    return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+$(document).on("click", '.whatsapp', function() {
+if( isMobile.any() ) {
+var text = $(this).attr("data-text");
+var url = $(this).attr("data-link");
+var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
+var whatsapp_url = "whatsapp://send?text=" + message;
+window.location.href = whatsapp_url;
+} else {
+alert("Please share this article in mobile device");
+}
+});
+});
+function genericSocialShare(url){
+    window.open(url,'sharer','toolbar=0,status=0,width=648,height=395');
+    return true;
 }
 </script>
 <?php

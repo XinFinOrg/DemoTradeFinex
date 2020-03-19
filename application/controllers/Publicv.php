@@ -1066,6 +1066,11 @@ class Publicv extends CI_Controller {
 			$data['buyersupplier'] = $buyersupplier;					
 		}
 				
+		$ccountries = $this->plisting->get_country();
+		
+		if($ccountries && !empty($ccountries) && is_array($ccountries) && sizeof($ccountries) <> 0){
+			$data['pcountries'] = $ccountries;			
+		}
 		$this->load->view('includes/headern', $data);
 		$this->load->view('includes/header_publicn', $data);
 		$this->load->view('pages/public/financier_view', $data);
