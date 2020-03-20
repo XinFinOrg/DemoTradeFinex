@@ -659,7 +659,7 @@ $(function () {
 												const tHtml = `
 																<p>
 																	<span>Contract Address:</span><br>${resp.receipt.contractAddress.toLowerCase()}</p>
-																	<span><p>Transaction Hash:</span><br><a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a>
+																	<p><span>Transaction Hash:</span><br><a href="${hashUrl}"target="_blank">${resp.receipt.transactionHash}</a>
 																</p>
 																`
 												hideLoader();
