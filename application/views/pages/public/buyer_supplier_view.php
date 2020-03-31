@@ -45,13 +45,8 @@
                                     <label for="private-key">Enter Address </label>
                                     <input type="text" class="form-control" id="address" name="address" onchange="addr()" autocomplete= "off"placeholder="Enter Address">
                                 </div> -->
-                                <div class="form-group">
-                                    <label for="private-key">Enter Private Key <span><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to Create PrivateKey?</a></span></label>
-                                    <input type="text" class="form-control" id="private_key" name="private_key" autocomplete= "off"placeholder="Enter Private Key">
-                                </div>
-                                <div class="form-group">
-                                 <span><a href="http://faucet.apothem.network/" target="_blank">Get Test XDC Tokens</a></span>
-                                </div>
+                                
+                                
                                 <div class="form-group">
 									<label for="instrument-type" id="instrument">Type of Instrument<sup>*</sup></label>
 									<div class="radiobtn">
@@ -164,8 +159,13 @@
                                     <label for="supporting-document" style="display:none" class="error" id="error">Please upload correct file format.</label>
                                     <label for="supporting-document" style="display:none" id="error1" class="error">Please file less than 5MB</label>
                                 </div>
-
-                                
+                                <div class="form-group">
+                                    <label for="private-key">Enter Private Key <span><a href="#" data-toggle='modal' data-target='#howto'data-backdrop="static" data-keyboard="false">How to Create PrivateKey?</a></span></label>
+                                    <input type="text" class="form-control" id="private_key" name="private_key" autocomplete= "off"placeholder="Enter Private Key">
+                                </div>
+                                <div class="form-group">
+                                 <span><a href="http://faucet.apothem.network/" target="_blank">Get Test XDC Tokens</a></span>
+                                </div>
                                 <br><br>                       
 											
                                     <div class="row">
@@ -307,7 +307,7 @@
 										<div class="col-md-6 mb-15">
 											<div class="column-two text-center">
 												<h3 class="mb-20">Send Funding Request Email to Your Funder Network</h3>
-												<p><a class="btn btn-blue text-uppercase" href="#">Email Now <i class="fa fa-envelope"></i></a></p>
+												<p><a class="btn btn-blue text-uppercase" href="javascript:void(0)"onclick="javascript:genericSocialShare('mailto:?subject=Is your business affected by corona virus?&body=My trade affected by #coronavirus & need urgent #finance support, check my funding request on @TradeFinex : https://bit.ly/2Wwh45Q %0D%0A%0D%0A%0D%0A%0D%0AEven your #business is affected by #CoronavirusOutbreak? Create your digital identity & Start sending #Funding requests: https://bit.ly/33zOlP2')">Email Now <i class="fa fa-envelope"></i></a></p>
 											</div>
 										</div>
 									</div>
@@ -380,7 +380,25 @@
 	
 ?>	
 
-
+<div class="modal fade" id="howto" role="dialog" tabindex="-1" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog" style="">
+		<!--<div class="modal-dialog" style="width:1500px; ; margin-left  25%;max-height:60%;max-width: 30%">-->
+			<div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"> <span class="hidden-xs">&times;</span> <span class="hidden-md hidden-lg"> <img src="<?php echo base_url() ?>assets/images/icon/log_arrow.png"  alt="icon" /></span> </button>
+                </div>
+				<div class="modal-body text-center">
+                        <div class="deployedData_modal_block">
+							<p>Create wallet to get XDC</p>
+							
+                            <p> <a href="https://howto.xinfin.org/XinFinAndWallet/features/" target="_blank">How to create Android Wallet?</a></p>
+                            <p><a href="https://howto.xinfin.org/XinFinWallet/features/" target="_blank">How to create web Wallet?</a></p>
+														
+						</div>
+				</div>
+			</div>
+	 	</div>
+</div>
 
 
 <div id="tf-loader-wrapper" style="display: none;"><div id="tf-loader"></div></div>
