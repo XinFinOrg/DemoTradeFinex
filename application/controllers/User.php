@@ -233,7 +233,7 @@ class User extends CI_Controller {
 				
 				$data_add = array();
 				
-				$data_add['tfscom_contact_linkedin'] = $this->input->post('ulinkedin');
+				$data_add['tfscom_contact_linkedin'] = $this->input->post('com_linkedin');
 				$data_add['tfscom_user_ref'] = $data['user_id'];
 				$crow = $this->input->post('c_row');
 					
