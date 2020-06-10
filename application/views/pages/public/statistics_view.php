@@ -248,7 +248,14 @@
 						<div class="counterFact bgOffWhiteShadow">
 							<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$tot_sum),'0'),'.')?></span></div>
 							<div class="tf-divider"><hr /></div>
-							<p>Trade Instruments worth</p>
+							<p>Total Trade Instruments worth</p>
+						</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6">
+						<div class="counterFact bgOffWhiteShadow">
+							<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$tot_act_sum),'0'),'.')?></span></div>
+							<div class="tf-divider"><hr /></div>
+							<p>Active Trade Instruments worth <span class="live">Live</span></p>
 						</div>
 						</div>
 					</div>
@@ -309,6 +316,13 @@
 								<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$oth_sum),'0'),'.')?></span></div>
 								<div class="tf-divider"><hr /></div>
 								<p>Other</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-6">
+							<div class="counterFact bgOffWhiteShadow">
+								<div class="factTitle">$ <span class="counter"><?php echo rtrim(rtrim(sprintf('%.3f',$fund_design_sum),'0'),'.')?></span></div>
+								<div class="tf-divider"><hr /></div>
+								<p>Fund My Design</p>
 							</div>
 						</div>
 					</div>
@@ -507,8 +521,16 @@
         });	
 		
 		
-		function numberWithCommas(x) {
-    		return x.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+		function numberWithCommas(nStr){
+			nStr += '';
+			var x = nStr.split('.');
+			var x1 = x[0];
+			var x2 = x.length > 1 ? '.' + x[1] : '';
+			var rgx = /(\d+)(\d{3})/;
+			while (rgx.test(x1)) {
+			x1 = x1.replace(rgx, '$1' + ',' + '$2');
+			}
+			return x1 + x2;
 		}
 		$('.counter').each(function(){
 			var v_pound = $(this).html();

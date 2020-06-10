@@ -2052,27 +2052,6 @@ $(function () {
 
 	});
 
-	
-
-	$('#createBondHeader').click(function() {
-		//console.log('alert')
-		location.reload();
-	});
-	$('#uploadinvoiceHeader').click(function() {
-		//console.log('alert')
-		location.reload();
-	});
-	$('#QuickbookHeader').click(function() {
-		//console.log('alert')
-		location.reload();
-	});
-	$('#sorry').click(function() {
-		location.reload();
-	});
-	$('#alphaexok').click(function() {
-		location.reload();
-	});
-
 	$("#demo_loginForm").validate({
 		rules: {
 			user_email: {
@@ -2096,6 +2075,26 @@ $(function () {
 				EmailGeneral: "Please enter a valid email address"
 			}
 		}
+	});
+	
+
+	$('#createBondHeader').click(function() {
+		//console.log('alert')
+		location.reload();
+	});
+	$('#uploadinvoiceHeader').click(function() {
+		//console.log('alert')
+		location.reload();
+	});
+	$('#QuickbookHeader').click(function() {
+		//console.log('alert')
+		location.reload();
+	});
+	$('#sorry').click(function() {
+		location.reload();
+	});
+	$('#alphaexok').click(function() {
+		location.reload();
 	});
 });
 

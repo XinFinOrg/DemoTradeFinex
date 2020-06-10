@@ -1,7 +1,4 @@
 <!-- Powering The Trade Finance Banner -->
-<!-- <section class="section tf-home-banner">
-<marquee style="font-size:50px;font-weight:600;line-height:45px;font-family: sans-serif;color: #ea212d;height:100%">Is Your business affected by coronavirus or external crisis ?</marquee>
-</section> -->
 <section class="section tf-home-banner">
         <div class="container">
             <div class="row tf-vertical-align">

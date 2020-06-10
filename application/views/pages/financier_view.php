@@ -141,7 +141,10 @@
                                         <a class="nav-link" href="#tab8" role="tab" data-toggle="tab" aria-selected="false">Other</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#tab9" role="tab" data-toggle="tab" aria-selected="false">Demo Logout</a>
+                                        <a class="nav-link" href="#tab9" role="tab" data-toggle="tab" aria-selected="false">Fund Design</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tab10" role="tab" data-toggle="tab" aria-selected="false">Logout</a>
                                     </li>
                                 </ul>
                                 <div class="tf-ticker-nav-mobile">
@@ -154,7 +157,8 @@
                                         <option value="5">Warehousing Receipt</option>
 										<option value="6">Payable</option>
 										<option value="7">Other</option>
-                                        <option value="8">Demo Logout</option>
+                                        <option value="8">Fund Design</option>
+                                        <option value="9">Logout</option>
                                     </select>
                                 </div>
                             </div>
@@ -647,9 +651,51 @@
                                         </div>
                                     </div>
                                     <!-- End OTHER Data -->
+                                    <!-- Start Fund Design Data -->
+                                    <div role="tabpanel" class="tab-pane fade" id="tab9">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="tf-financier-table tf-element">
+                        
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                            <th scope="col">Design Ref</th>
+                                                            <th scope="col">Designer Name</th>
+                                                            <!-- <th scope="col">Mobile Number</th> -->
+                                                            <th scope="col">COUNTRY OF ORIGINATION</th>
+                                                            <th scope="col">AMOUNT</th>
+                                                            <th scope="col">Manufacturing Method</th>
+                                                            <th scope="col">Material Type</th>
+                                                            <th scope="col">&nbsp;</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                <tr>
+                                                                <?php
+                                                                    foreach ($design as $instru) {
+                                                                        ?>
+                                                                <td><?php echo $instru->tffd_docRef ?></td>
+                                                                <td><?php echo $instru->tffd_fundName ?></td>
+                                                                <td><?php echo $instru->tffd_country ?></td>
+                                                                <td><?php echo $instru->tffd_currency.'&nbsp;'. rtrim(rtrim(sprintf('%.10f',($instru->tffd_quantity * $instru->tffd_amount)),'0'),'.') ?></td>
+                                                                <td class="bold"><?php echo $instru->tffd_manuMethod ?></td>
+                                                                <td><?php echo $instru->tffd_materialType ?></td>
+                                                                <td><button class="btn btn-blue" onclick="passfundData('<?php echo $instru->tffd_docRef ?>')"><span>Get Access</span></button></td>
+                                                                </tr>
+                                                                <?php }?>             
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Fund Design Data -->
 
                                     <!-- Logout Modal -->
-                                    <div role="tabpanel" class="tab-pane fade in active" id="tab9">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="tab10">
                                         <div class="row">
                                             <div class="col-md-6 col-md-offset-4">          
                                                 <p>Are you sure you want to logout?</p>
@@ -800,6 +846,7 @@
 function passData(docRef){
     var myurl = '<?php echo base_url()?>publicv/getAccess';
     
+    showLoader1(); 
         $.ajax({
         type: "POST",
         url: myurl,
@@ -860,66 +907,86 @@ function passData(docRef){
 
 
 }
+function passfundData(docRef){
+    var myurl = '<?php echo base_url()?>publicv/getAccess';
+    
+    showLoader1(); 
+        $.ajax({
+        type: "POST",
+        url: myurl,
+        dataType:"json",
+        data: {"action":"getaccessdesign","docRef":docRef}, // serializes the form's elements.
+        success: (resp =>{
+            // console.log(resp);
+        })// show response from the php script.
+        }).done(resp => {
+            console.log(resp);
+            
+            $.ajax({
+            type:"POST",
+            dataType:"json",
+            url:"https://demoapi.tradefinex.org/api/getDocHash",
+            data:{"contractAddr":resp.contractAddr,
+                    "passKey": resp.key,
+                    "contractType" : "brokerInstrument"
+            },
+            success: resp => {
+                // console.log("response success: ",resp)
+            },
+            error: err =>{
+                console.log("response error: ",err)
+            }
+            }).done(resp => {
+            // .then(resp => {
+                // console.log("response : ",resp);
+                hideLoader1();
+                // console.log('formDataObj>>>>>>>', resp);
+                if(resp.status == true){
+                    const hashUrl = `https://ipfs-gateway.xinfin.network/${resp.ipfsHash}`;
+                    const tHtml = `
+                                    <p>
+                                        <br><a href="${hashUrl}"target="_blank">${resp.ipfsHash}</a>
+                                    </p>
+                                    `
+                    // hideLoader();
+                    $("#hash").modal("show");
+                    $('#hash').css('opacity', '1');
+                    $('#hashData').html(tHtml);
+                    $('#okBtn').click(function() {
+                        $("#hash").modal("hide");
+                        location.reload();
+                    });
+                }
+                                        
+                                        
+            }).fail(error =>{
+                // hideLoader();
+                toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
+                setTimeout(location.reload.bind(location), 6000);
+            })
+            
+        })
+    
+        
+
+
+}
 function passData_bs(docRef){
     var myurl = '<?php echo base_url()?>publicv/getAccess';
-    $("#privkey").modal("show");
-    $('#privkey').css('opacity', '1');
-    $('#checkprivkey').click(function(e) {
-        var privkey = document.getElementById("privateKey").value;
-        jQuery.validator.addMethod("privateKey", function(value, element) {
-		// allow any non-whitespace characters as the host part
-            return this.optional( element ) || /^[0-9a-f]{64}$/.test( value );
-        }, 'This field allows only number from 0-9 and alphabets from a-f');
-        $('#checkprivatekey_form').validate({
-            rules: {
-                privateKey: {
-                    required:true,
-                    privateKey : true,
-                    normalizer: function(value) {
-                        // Update the value of the element
-                        this.value = $.trim(value);
-                        check = this.value;
-                        if(check.startsWith("0x")){
-                            check = check.slice(2);
-                        }
-                        else{
-                            check = this.value;
-                        }
-                        // Use the trimmed value for validation
-                        return check;
-                    }
-                }
-            },
-            messages: {
-                privateKey:{
-                    required: "Please enter a private key",
-                    privateKey : "Enter valid private key of 64 characters"
-                }
-            },
-            success: function (elem) {
-
-
-            },
-            error: function (elem) {
-                
-                
-            },
-            submitHandler: function (form, e) {
-                // console.log(privkey,docRef);
-                e.preventDefault();
-                $("#privkey").modal("hide"); 
+    
+                 
                 showLoader1();   
                 $.ajax({
                 type: "POST",
                 url: myurl,
                 dataType:"json",
-                data: {"action":"getdetails","docRef":docRef,"privkey":privkey}, // serializes the form's elements.
+                data: {"action":"getdetailsinternal","docRef":docRef}, // serializes the form's elements.
                 success: (resp =>{
                     // console.log(resp);
                 })// show response from the php script.
                 }).done(resp => {
                                 
-                    if(resp.privatekey == "true"){
+                    
                         // console.log(resp);
                         
                         const tHtml = `
@@ -954,25 +1021,13 @@ function passData_bs(docRef){
                             })
                         });
                             
-                    }     
-                    else{
-                        hideLoader1();
-                        $("#wrngprivkey").modal("show");
-                        $('#wrngprivkey').css('opacity', '1');
-                        $('#ok').click(function(e) {
-                            location.reload();
-                        })
-                    }                      
+                                     
                                                     
                 }).fail(error =>{
                     // hideLoader();
                     toastr.error('Something went wrong.', {timeOut: 70000}).css({"word-break":"break-all","width":"auto"});
                     setTimeout(location.reload.bind(location), 6000);
                 })
-                
-            }
-        })
-    });
 
 }
 </script>
