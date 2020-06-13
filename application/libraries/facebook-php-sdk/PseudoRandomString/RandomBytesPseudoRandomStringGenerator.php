@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2014 Facebook, Inc.
+ * Copyright 2017 Facebook, Inc.
  *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to
  * use, copy, modify, and distribute this software in source code or binary
@@ -21,13 +21,39 @@
  * DEALINGS IN THE SOFTWARE.
  *
  */
-namespace Facebook\Exceptions;
+namespace Facebook\PseudoRandomString;
 
-/**
- * Class FacebookServerException
- *
- * @package Facebook
- */
-class FacebookServerException extends FacebookSDKException
+use Facebook\Exceptions\FacebookSDKException;
+
+class RandomBytesPseudoRandomStringGenerator implements PseudoRandomStringGeneratorInterface
 {
+    use PseudoRandomStringGeneratorTrait;
+
+    /**
+     * @const string The error message when generating the string fails.
+     */
+    const ERROR_MESSAGE = 'Unable to generate a cryptographically secure pseudo-random string from random_bytes(). ';
+
+    /**
+     * @throws FacebookSDKException
+     */
+    public function __construct()
+    {
+        if (!function_exists('random_bytes')) {
+            throw new FacebookSDKException(
+                static::ERROR_MESSAGE .
+                'The function random_bytes() does not exist.'
+            );
+        }
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getPseudoRandomString($length)
+    {
+        $this->validateLength($length);
+
+        return $this->binToHex(random_bytes($length), $length);
+    }
 }

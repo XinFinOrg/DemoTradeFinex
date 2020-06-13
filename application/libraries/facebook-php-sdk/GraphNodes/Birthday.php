@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2014 Facebook, Inc.
+ * Copyright 2017 Facebook, Inc.
  *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to
  * use, copy, modify, and distribute this software in source code or binary
@@ -23,80 +23,63 @@
  */
 namespace Facebook\GraphNodes;
 
+use DateTime;
+
 /**
- * Class GraphLocation
+ * Birthday object to handle various Graph return formats
  *
  * @package Facebook
  */
-class GraphLocation extends GraphNode
+class Birthday extends DateTime
 {
     /**
-     * Returns the street component of the location
-     *
-     * @return string|null
+     * @var bool
      */
-    public function getStreet()
+    private $hasDate = false;
+
+    /**
+     * @var bool
+     */
+    private $hasYear = false;
+
+    /**
+     * Parses Graph birthday format to set indication flags, possible values:
+     *
+     *  MM/DD/YYYY
+     *  MM/DD
+     *  YYYY
+     *
+     * @link https://developers.facebook.com/docs/graph-api/reference/user
+     *
+     * @param string $date
+     */
+    public function __construct($date)
     {
-        return $this->getField('street');
+        $parts = explode('/', $date);
+
+        $this->hasYear = count($parts) === 3 || count($parts) === 1;
+        $this->hasDate = count($parts) === 3 || count($parts) === 2;
+
+        parent::__construct($date);
     }
 
     /**
-     * Returns the city component of the location
+     * Returns whether date object contains birth day and month
      *
-     * @return string|null
+     * @return bool
      */
-    public function getCity()
+    public function hasDate()
     {
-        return $this->getField('city');
+        return $this->hasDate;
     }
 
     /**
-     * Returns the state component of the location
+     * Returns whether date object contains birth year
      *
-     * @return string|null
+     * @return bool
      */
-    public function getState()
+    public function hasYear()
     {
-        return $this->getField('state');
-    }
-
-    /**
-     * Returns the country component of the location
-     *
-     * @return string|null
-     */
-    public function getCountry()
-    {
-        return $this->getField('country');
-    }
-
-    /**
-     * Returns the zipcode component of the location
-     *
-     * @return string|null
-     */
-    public function getZip()
-    {
-        return $this->getField('zip');
-    }
-
-    /**
-     * Returns the latitude component of the location
-     *
-     * @return float|null
-     */
-    public function getLatitude()
-    {
-        return $this->getField('latitude');
-    }
-
-    /**
-     * Returns the street component of the location
-     *
-     * @return float|null
-     */
-    public function getLongitude()
-    {
-        return $this->getField('longitude');
+        return $this->hasYear;
     }
 }

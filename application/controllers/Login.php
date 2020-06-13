@@ -7,6 +7,7 @@ class Login extends CI_Controller {
 		parent::__construct();
 		require_once APPPATH.'third_party/src/Google_Client.php';
 		require_once APPPATH.'third_party/src/contrib/Google_Oauth2Service.php';
+
         $this->load->helper(array('form', 'url', 'date', 'xdcapi'));
 		$this->load->library(array('session', 'encrypt', 'email','facebook'));
 		$this->load->model(array('manage','suser'));
@@ -557,12 +558,13 @@ class Login extends CI_Controller {
 		$permissions = ['email']; 
 		// For more permissions like user location etc you need to send your application for review
 		
+		// $loginUrl = $helper->getLoginUrl('http://localhost/DemoTradeFinex/login/fbcallback', $permissions);
 		$loginUrl = $helper->getLoginUrl('https://demo.tradefinex.org/login/fbcallback', $permissions);
 		header("location: ".$loginUrl);
 	}	
 
 	public function fbcallback(){
-		$fb = new \Facebook\Facebook([ 'app_id' => '2080555445396680', 'app_secret' => 'e169cd179a489dfc3901a69f9771d29e', 'default_graph_version' => 'v3.2', 'persistent_data_handler' => 'session' ]);
+		$fb = new \Facebook\Facebook([ 'app_id' => '2080555445396680', 'app_secret' => 'e169cd179a489dfc3901a69f9771d29e', 'default_graph_version' => 'v2.4', 'persistent_data_handler' => 'session' ]);
 		$helper = $fb->getRedirectLoginHelper(); if (isset($_GET['state'])) { $helper->getPersistentDataHandler()->set('state', $_GET['state']); }
 			
 			// $helper = $fb->getRedirectLoginHelper();  
@@ -570,6 +572,7 @@ class Login extends CI_Controller {
 				if(isset($session)) {
 					$accessToken = $session->getToken();
 				} else {
+					// $accessToken = $helper->getAccessToken('http://localhost/DemoTradeFinex/login/fbcallback');
 					$accessToken = $helper->getAccessToken('https://demo.tradefinex.org/login/fbcallback');
 				}	
 			}catch(FacebookResponseException $e){
@@ -594,108 +597,105 @@ class Login extends CI_Controller {
 					echo 'Bad request';
 				}
 				exit;
-			}
-				 
+			}else{
+				$_SESSION['token'] = (string)$accessToken;
+					 
 				
-			  $_SESSION['token'] = $accessToken;
-				// echo ("token".$_SESSION['token']);
-				// die;
-			  $response = $fb->get('/me?fields=id,name,email,first_name,last_name,birthday,location,gender', $accessToken);
-			//   echo ("token".print_r($response));
-			//   die;
-			// User Information Retrival begins................................................
-			$me = $response->getGraphUser();
-			$userData['oauth_provider'] = 'facebook';
-			$userData['oauth_uid']      = $me->getProperty('id');
-			$userData['first_name']     = $me->getProperty('first_name');
-			$userData['last_name']      = $me->getProperty('last_name');
-			$userData['email']          = !empty($me->getProperty('email'))? $me->getProperty('email') : ' ';
-			// $userData['gender']         = !empty($me->getProperty('gender'))? $me->getProperty('gender') : ' ';
-			// $userData['locale']         = !empty($me->getProperty('locale'))? $me->getProperty('locale') : ' ';
-			// $userData['link']           = !empty($me->getProperty('link'))? $me->getProperty('link') : ' ';
-			// $userData['picture']        = !empty($me->getProperty('picture'))? $me->getProperty('picture') : ' ';
-			
-			if(isset($userData)){
-				$userID = $this->suser->checkSocialUser($userData);
-			}
+				$response = $fb->get('/me?fields=id,name,email,first_name,last_name,birthday,location,gender', $accessToken);
+				//   echo ("token".print_r($response));
+				//   die;
+				// User Information Retrival begins................................................
+				$me = $response->getGraphUser();
+				$userData['oauth_provider'] = 'facebook';
+				$userData['oauth_uid']      = $me->getProperty('id');
+				$userData['first_name']     = $me->getProperty('first_name');
+				$userData['last_name']      = $me->getProperty('last_name');
+				$userData['email']          = !empty($me->getProperty('email'))? $me->getProperty('email') : ' ';
+				// $userData['gender']         = !empty($me->getProperty('gender'))? $me->getProperty('gender') : ' ';
+				// $userData['locale']         = !empty($me->getProperty('locale'))? $me->getProperty('locale') : ' ';
+				// $userData['link']           = !empty($me->getProperty('link'))? $me->getProperty('link') : ' ';
+				// $userData['picture']        = !empty($me->getProperty('picture'))? $me->getProperty('picture') : ' ';
 				
-            
-            // Check user data insert or update status
-            if(!empty($userID) && is_array($userID) && sizeof($userID) <> 0){
-				if($userID['error'] == 1){
-					log_message("info","User Added successfully");
-					$user = $this->suser->add_social_user($userData);
-					foreach($user as $userr){
-						
-						$user_name = $userr->tfs_first_name.' '.$userr->tfs_last_name;
-						$session_data = array(
-							'user_id' => $userr->tfs_id,
-							'user_full_name' => $user_name,
-						);
-					}
-					$this->session->set_userdata('logged_in', $session_data);
-					$data['msg'] = 'success';
-					log_message("info","Session Set".$data['msg']);
-					redirect(base_url().'dashboard');
-				}	
-				elseif($userID['error'] == 0){
-					log_message("info","User Exsist");
-				
-					$user_name = $userID['user_detail']->tfs_first_name.' '.$userID['user_detail']->tfs_last_name;
-					$session_data = array(
-						'user_id' => $userID['user_detail']->tfs_id,
-						'user_full_name' => $user_name,
-					);
-					
-					$this->session->set_userdata('logged_in', $session_data);
-					$data['msg'] = 'success';
-					log_message("info","Session Set".json_encode($userID));
-					redirect(base_url().'dashboard');
+				if(isset($userData)){
+					$userID = $this->suser->checkSocialUser($userData);
 				}
-				$user = $this->session->userdata('logged_in');
-
-				if($user && !empty($user) && sizeof($user) <> 0){
-					$data['full_name'] = $user['user_full_name'];
-					$data['user_id'] = $user['user_id'];
 					
-					log_message("info","User loggedIn");
-					$user_profile = $this->suser->get_social_user_info_by_id($data['user_id']);
-					$wallet_id = $user_profile[0]->tfs_xdc_wallet;
-					
-					if(trim($wallet_id) <> ''){
-					
-						$options = array('address' => $wallet_id);
-						
-						// $rcurlf = get_xdc_balance($options);
-					
-						// if($rcurlf){
-						// 	$rcurlfa = json_decode(stripslashes($rcurlf));
-						// }
-						
-						// $balance = ((isset($rcurlfa->balance)) ? $rcurlfa->balance : '');
-						// $status = ((isset($rcurlfa->status)) ? $rcurlfa->status : ''); 
-									
-						// $data_add = array();
-						// // $data_add['tfu_xdc_walletID'] = $wallet_id;
-						// $data_add['tfu_xdc_balance'] = $balance;
-						
-						// if(strtolower($status) == 'success' && trim($wallet_id) <> '' && trim($balance) <> ''){
-						// 	$result = $this->manage->update_user_base_info_all_by_id_and_type($data['user_id'], $data['user_type_ref'], $data_add);
-						// }
+				
+				// Check user data insert or update status
+				if(!empty($userID) && is_array($userID) && sizeof($userID) <> 0){
+					if($userID['error'] == 1){
+						log_message("info","User Added successfully");
+						$user = $this->suser->add_social_user($userData);
+						foreach($user as $userr){
+							
+							$user_name = $userr->tfs_first_name.' '.$userr->tfs_last_name;
+							$session_data = array(
+								'user_id' => $userr->tfs_id,
+								'user_full_name' => $user_name,
+								'media'=>'facebook'
+							);
+						}
+						$this->session->set_userdata('logged_in', $session_data);
+						$data['msg'] = 'success';
+						log_message("info","Session Set".$data['msg']);
+						redirect(base_url().'dashboard');
 					}	
+					elseif($userID['error'] == 0){
+						log_message("info","User Exsist");
 					
-					redirect(base_url().'dashboard');
-				}else{
-					if($action <> 'login'){
-						redirect(base_url().'log/out');
+						$user_name = $userID['user_detail']->tfs_first_name.' '.$userID['user_detail']->tfs_last_name;
+						$session_data = array(
+							'user_id' => $userID['user_detail']->tfs_id,
+							'user_full_name' => $user_name,
+							'media'=>'facebook'
+						);
+						
+						$this->session->set_userdata('logged_in', $session_data);
+						$data['msg'] = 'success';
+						log_message("info","Session Set".json_encode($userID));
+						redirect(base_url().'dashboard');
+					}
+					$user = $this->session->userdata('logged_in');
+	
+					if($user && !empty($user) && sizeof($user) <> 0){
+						$data['full_name'] = $user['user_full_name'];
+						$data['user_id'] = $user['user_id'];
+						
+						log_message("info","User loggedIn");
+						$user_profile = $this->suser->get_social_user_info_by_id($data['user_id']);
+						$wallet_id = $user_profile[0]->tfs_xdc_wallet;
+						
+						if(trim($wallet_id) <> ''){
+						
+							$options = array('address' => $wallet_id);
+							
+							// $rcurlf = get_xdc_balance($options);
+						
+							// if($rcurlf){
+							// 	$rcurlfa = json_decode(stripslashes($rcurlf));
+							// }
+							
+							// $balance = ((isset($rcurlfa->balance)) ? $rcurlfa->balance : '');
+							// $status = ((isset($rcurlfa->status)) ? $rcurlfa->status : ''); 
+										
+							// $data_add = array();
+							// // $data_add['tfu_xdc_walletID'] = $wallet_id;
+							// $data_add['tfu_xdc_balance'] = $balance;
+							
+							// if(strtolower($status) == 'success' && trim($wallet_id) <> '' && trim($balance) <> ''){
+							// 	$result = $this->manage->update_user_base_info_all_by_id_and_type($data['user_id'], $data['user_type_ref'], $data_add);
+							// }
+						}	
+						
+						redirect(base_url().'dashboard');
+					}else{
+						if($action <> 'login'){
+							redirect(base_url().'log/out');
+						}
 					}
 				}
 			}
 			
-
-        
-		
-    
 	}
 	
 	public function glogin()
@@ -703,8 +703,8 @@ class Login extends CI_Controller {
 		
 		$clientId = '974340167294-4tm547181uu7v0gtqj4d1bv4gp1ffugq.apps.googleusercontent.com'; //Google client ID
 		$clientSecret = 's1gEY7eIayJBjcYHbsvnA8Ha'; //Google client secret
-		// $redirectURL = base_url().'login/glogin';
-		$redirectURL = "http://localhost/TradeFinexLive/login/glogin";
+		$redirectURL = base_url().'login/glogin';
+		// $redirectURL = "http://localhost/DemoTradeFinex/login/glogin";
 		//Call Google API
 		$gClient = new Google_Client();
 		$gClient->setApplicationName('Glogin');
@@ -754,6 +754,7 @@ class Login extends CI_Controller {
 						$session_data = array(
 							'user_id' => $userr->tfs_id,
 							'user_full_name' => $user_name,
+							'media'=>"google"
 						);
 					}
 					$this->session->set_userdata('logged_in', $session_data);
@@ -768,6 +769,7 @@ class Login extends CI_Controller {
 					$session_data = array(
 						'user_id' => $userID['user_detail']->tfs_id,
 						'user_full_name' => $user_name,
+						'media'=>"google"
 					);
 					
 					$this->session->set_userdata('logged_in', $session_data);
@@ -825,6 +827,161 @@ class Login extends CI_Controller {
 		
 		
 	}
+
+	public function tlogin(){
+		$userData = array();
+		
+		//Twitter API Configuration
+        $consumerKey = 'Insert_Twitter_API_Key';
+        $consumerSecret = 'Insert_Twitter_API_Secret';
+        $oauthCallback = base_url().'user_authentication/';
+        
+        // Get existing token and token secret from session
+        $sessToken = $this->session->userdata('token');
+        $sessTokenSecret = $this->session->userdata('token_secret');
+        
+        // Get status and user info from session
+        $sessStatus = $this->session->userdata('status');
+        $sessUserData = $this->session->userdata('userData');
+        
+        if(!empty($sessStatus) && $sessStatus == 'verified'){
+            // Connect and get latest tweets
+            $twitteroauth = $this->twitteroauth->authenticate($sessUserData['accessToken']['oauth_token'], $sessUserData['accessToken']['oauth_token_secret']);
+            
+            $data['tweets'] = $twitteroauth->get('statuses/user_timeline', array('screen_name' => $sessUserData['username'], 'count' => 5));
+
+            // User info from session
+            $userData = $sessUserData;
+            
+        }elseif(isset($_REQUEST['oauth_token']) && $sessToken == $_REQUEST['oauth_token']){
+            // Successful response returns oauth_token, oauth_token_secret, user_id, and screen_name
+            $twitteroauth = $this->twitteroauth->authenticate($sessToken, $sessTokenSecret);
+            $accessToken = $twitteroauth->getAccessToken($_REQUEST['oauth_verifier']);
+            
+            if($twitteroauth->http_code == '200'){
+                // Get the user's twitter profile info
+                $userInfo = $twitteroauth->get('account/verify_credentials');
+                
+                // Preparing data for database insertion
+                $name = explode(" ",$userInfo->name);
+                $first_name = isset($name[0])?$name[0]:'';
+                $last_name = isset($name[1])?$name[1]:'';
+                
+                $userData = array(
+                    'oauth_provider' => 'twitter',
+                    'oauth_uid' => $userInfo->id,
+                    'username' => $userInfo->screen_name,
+                    'first_name' => $first_name,
+                    'last_name' => $last_name,
+                    'locale' => $userInfo->lang,
+                    'profile_url' => 'https://twitter.com/'.$userInfo->screen_name,
+                    'picture_url' => $userInfo->profile_image_url
+                );
+                
+                // Insert or update user data
+                $userID = $this->user->checkUser($userData);
+                
+                // Get latest tweets
+                $data['tweets'] = $twitteroauth->get('statuses/user_timeline', array('screen_name' => $userInfo->screen_name, 'count' => 5));
+                
+                // Store the status and user profile info into session
+                $userData['accessToken'] = $accessToken;
+                $this->session->set_userdata('status', 'verified');
+                $this->session->set_userdata('userData', $userData);
+            }else{
+                $data['error_msg'] = 'Authentication failed, please try again later!';
+            }
+        }else{
+            // Unset token and token secret from the session
+            $this->session->unset_userdata('token');
+            $this->session->unset_userdata('token_secret');
+            
+            // Fresh authentication
+            $twitteroauth = $this->twitteroauth->authenticate($sessToken, $sessTokenSecret);
+            $requestToken = $twitteroauth->getRequestToken();
+            
+            // Get token info from Twitter and store into the session
+            $this->session->set_userdata('token', $requestToken['oauth_token']);
+            $this->session->set_userdata('token_secret', $requestToken['oauth_token_secret']);
+            
+            // If authentication is successful (http code is 200)
+            if($twitteroauth->http_code == '200'){
+                // Twitter authentication url
+                $twitterUrl = $twitteroauth->getAuthorizeURL($requestToken['oauth_token']);
+                $data['oauthURL'] = $twitterUrl;
+            }else{
+                // Internal authentication url
+                $data['oauthURL'] = base_url().'user_authentication/';
+                $data['error_msg'] = 'Error connecting to twitter! try again later!';
+            }
+        }
+
+        $data['userData'] = $userData;
+        
+	}
+	
+	// public function linkedin($REFERRED_BY=0) { 
+	// 	$this->load->library('linkedin', array(
+    //         'access' => "7704svpiklbckw",//"<your Consumer Key / API Key goes here>",
+    //         'secret' => "a2tv44QlHyqlurCj",//"<your Consumer Secret / Secret Key goes here>",
+    //         'callback' => "http://localhost/DemoTradeFinex/login/lLogin"//"<write here your site name>/receiver" 
+    //     ));
+	// 	$this->linkedin->getRequestToken();
+    //     $requestToken = serialize($this->linkedin->request_token);
+    //     $this->session->set_userdata(array(
+    //         'requestToken' => $requestToken
+    //     ));
+	// 	header("Location: " . $this->linkedin->generateAuthorizeUrl());
+
+    // }
+	public function lLogin(){ 
+        $provider = new League\OAuth2\Client\Provider\LinkedIn([
+			'clientId'          => '7704svpiklbckw',
+			'clientSecret'      => 'a2tv44QlHyqlurCj',
+			'redirectUri'       => 'http://localhost/DemoTradeFinex/login/lLogin',
+		]);
+		
+		if (!isset($_GET['code'])) {
+		
+			// If we don't have an authorization code then get one
+			$authUrl = $provider->getAuthorizationUrl();
+			$_SESSION['oauth2state'] = $provider->getState();
+			header('Location: '.$authUrl);
+			exit;
+		
+		// Check given state against previously stored one to mitigate CSRF attack
+		} elseif (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
+		
+			unset($_SESSION['oauth2state']);
+			exit('Invalid state');
+		
+		} else {
+		
+			// Try to get an access token (using the authorization code grant)
+			$token = $provider->getAccessToken('authorization_code', [
+				'code' => $_GET['code']
+			]);
+		
+			// Optional: Now you have a token you can look up a users profile data
+			try {
+		
+				// We got an access token, let's now get the user's details
+				$user = $provider->getResourceOwner($token);
+		
+				// Use these details to create a new profile
+				printf('Hello %s!', $user->getFirstName());
+		
+			} catch (Exception $e) {
+		
+				// Failed to get user details
+				exit('Oh dear...');
+			}
+		
+			// Use this to interact with an API on the users behalf
+			echo $token->getToken();
+		}
+	}
+
 }
 
 ?>

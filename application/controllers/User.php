@@ -6,7 +6,7 @@ class User extends CI_Controller {
 	function __construct(){
 		parent::__construct();
         $this->load->helper(array('form', 'url', 'date', 'xdcapi', 'file', 'blockchain', 'notification'));
-		$this->load->library('session');
+		$this->load->library(array('session', 'encrypt'));
 		$this->load->model(array('manage','plisting','suser'));
 		// $this->is_logged_in();
 		$this->output->delete_cache();
@@ -156,12 +156,25 @@ class User extends CI_Controller {
         // $config['max_height']           = 1024;
 	
 		if($action == 'edit_profile_base_bank' && $data['user_id'] <> 0){
-			$addr = generateAddress();
-			$data_add = array();
-			$data_add['tfs_xdc_wallet'] = $addr->address;
-			$data_add['tfs_bank_acc_number'] = $this->input->post('ubank_num');
-			$data_add['tfs_bank_name'] = $this->input->post('ubank_name');
-			
+
+			$getUser = $this->suser->get_user_base_info_by_id_and_type($data['user_id']);
+
+			if(!empty($getUser)&& is_array($getUser) && sizeof($getUser) <> 0){
+				$walletAddress = $getUser[0]->tfs_xdc_wallet;
+				if($walletAddress != "" || $walletAddress != NULL){
+					$data_add['tfs_bank_acc_number'] = $this->input->post('ubank_num');
+					$data_add['tfs_bank_name'] = $this->input->post('ubank_name');
+				}
+				else{
+					$addr = generateAddress();
+					$data_add = array();
+					
+					$data_add['tfs_xdc_wallet'] = $addr->address;					
+					$data_add['tfs_xdc_wallet_privateKey'] = openssl_encrypt($addr->privateKey,"AES-128-ECB",$encryption_key);
+					$data_add['tfs_bank_acc_number'] = $this->input->post('ubank_num');
+					$data_add['tfs_bank_name'] = $this->input->post('ubank_name');
+				}
+			}
 			$this->suser->update_user_base_info_all_by_id($data['user_id'], $data_add);
 		}
 		
