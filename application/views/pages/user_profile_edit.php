@@ -545,23 +545,11 @@
 											<label class="form-label">
 												<input id="xwallet_id" name="xwallet_id" class="form-input input-focus input-readonly" value="<?=$uxwallet;?>" type="text" autocomplete="" data-required-error="" />
 												<span class="form-name floating-label">XDC Wallet Address</span>
-												<span id="link_wallet" data-dismiss="modal" data-toggle="modal" data-target="#xinfin_usign_in"  data-backdrop="static" data-keyboard="false" class="append_icon_image" data-dismiss="modal"><a href="javascript:void(0)"></a></span>
+												<!-- <span id="link_wallet" data-dismiss="modal" data-toggle="modal" data-target="#xinfin_usign_in"  data-backdrop="static" data-keyboard="false" class="append_icon_image" data-dismiss="modal"><a href="javascript:void(0)"></a></span> -->
 											</label>
 										</div>
 									</div>
-									<!-- <div class="col-md-4 col-sm-4 col-xs-12">
-										<div class="form-group">
-											<label class="form-label">
-												<input id="xwallet_balance" name="xwallet_balance" class="form-input input-focus input-readonly" value="<?=$uxbalance.' XDC Tokens';?>" type="text" autocomplete="" data-required-error="" />
-												<span class="form-name floating-label">XDC Wallet Balance</span>
-												<?=(trim($uxwallet) == '' ? '' : '<span id="update_wallet" class="append_icon_text"><a href="javascript:void(0)">REFRESH</a></span>');?>
-												<img class="update_wallet_action_loader" style="width:20px;border:0px;display:none;" src="<?=base_url();?>assets/images/icon/loading_icon.gif" alt="Loading..." />
-											</label>
-											<span class="update_wallet_action_message" style="display:none;font-size:12px;"><font color="green">Updated !</font></span>
-											&nbsp; &nbsp;<a class="update_wallet_action_message"  data-toggle="modal" href="#select_exchange"  style="font-size:13px"> Top Up XDC  </a>
-
-										</div>
-									</div> -->
+									
 								</div>
 
 							</form>
@@ -569,9 +557,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12 accordian_additional_details">
-							<button type="button" id="accord_btnb" class="accordion" onclick="trigger_slideb()">Bank & Exchange Information</button>
-							<div id="Sliderb" class="panel slide-up">
-								<?php
+							<?php
 									$attributes = array('id' => 'form_user_bank_profile', 'class' => '', 'method' => 'post', 'role' => 'form');
 									echo form_open_multipart(base_url().'user/edit/', $attributes);
 								?>
@@ -595,7 +581,7 @@
 									</div>
 								</div>
 								
-							</div>
+							
 								<div class="col-md-3 btn-more">
 									<!-- <button id="link_wallet" type="button" class="submit_contact" data-toggle="modal" data-target="#xinfin_usign_in" data-backdrop="static" data-keyboard="false"> <?=(trim($uxwallet) == '' ? 'Submit' : 'Submit');?></button> -->
 									<button type="submit" class="submit_contact"> Submit</button>

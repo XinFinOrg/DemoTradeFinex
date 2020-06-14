@@ -261,7 +261,7 @@ $(function () {
 				reader.onload = function () {
 					dataFile = reader.result;
 					dataFile = dataFile.split("base64,");
-					console.log(">>>>",window.location.search)
+					
 					
 					// after getting value of datafile name make the ajax call
 					$.each(formObj, function (k, v) {
@@ -275,7 +275,8 @@ $(function () {
 						}
 					})
 					formDataObj.docRef = (new Date()).getTime();
-					
+					formDataObj.private_key = document.getElementById("private_key").value;
+					// console.log(">>>>",formDataObj.private_key);
 					$.ajax({
 						type:"POST",
 						dataType:"json",

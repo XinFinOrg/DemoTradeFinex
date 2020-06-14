@@ -70,19 +70,21 @@ class Dashboard extends CI_Controller {
 			
 			// $data['notifications'] = get_notification_status($options);
 		}
-				
+		$encryption_key = $this->config->item('encryption_key');
 		if(isset($data['user_id'])){
 			
 			if($data['user_id'] <> 0){
 							
 				$uresult = $this->suser->get_social_user_company_info_by_id($data['user_id']);
 				$data['check_company'] = $this->suser->get_company_info_by_uid($data['user_id']);
-							
+						
+
 				if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
 				
 					log_message("info","user is present");
 					$data['pcountry'] = 0;
-
+					$data['privateKey'] = openssl_decrypt($uresult[0]->tfs_xdc_wallet_privateKey,"AES-128-ECB",$encryption_key);
+					
 					if(!empty($_GET['item_number']) && !empty($_GET['tx']) && !empty($_GET['amt']) && !empty($_GET['cm']) && !empty($_GET['cc']) && !empty($_GET['st'])){ 
 						$dbdata = $this->manage->get_paypal_paymentby_tx($_GET['tx']);
 						$db = json_encode($dbdata);

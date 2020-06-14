@@ -121,8 +121,8 @@
 					<ul class="menu">
 						<li> <a href="javascript:void(0)" title="" >Dashboard</a>
 							<ul class="submenu">
-								<li> <a href="<?=base_url();?>" title=""><i class="fa fa-product-hunt"></i> Project Dashboard</a> </li>
-								<li> <a href="<?=base_url();?>dashboard/smart_contract" title=""><i class="fa fa-dashcube"></i> Contract Dashboard</a> </li>
+								<li> <a href="<?=base_url();?>" title=""><i class="fa fa-product-hunt"></i> Funding Requests</a> </li>
+								<!-- <li> <a href="<?=base_url();?>dashboard/smart_contract" title=""><i class="fa fa-dashcube"></i> Contract Dashboard</a> </li> -->
 							</ul>
 						</li>
 						<li class="hidden-xs hidden-sm"> | </li>
