@@ -155,7 +155,7 @@
 								<img src="<?=((isset($uprofpics) && $uprofpics && $uprofpics != '' && $uprofpics) ? base_url().'assets/user_profile_image/'.$uprof_pic : base_url().'assets/images/img/contact_profile_photo.png');?>" alt="uimg" class="user-img hidden-xs hidden-sm avatar img-circle">
 								<span class="hidden-md hidden-lg">Account</span> <i class="fa fa-caret-down"></i>
 							</a>
-							<ul class="submenu">
+							<ul class="submenu tf-right-0">
 								<li>
 									<h5>Hi, <?=$full_name;?></h5>
 								</li>
