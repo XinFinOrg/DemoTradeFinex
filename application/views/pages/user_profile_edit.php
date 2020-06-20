@@ -70,7 +70,7 @@
 									<input type="text" name="first_name" id="first_name" class="form-control <?=(trim($ufname) <> '' ? 'input-focus' : 'input-focus-notr')?>" value="<?=$ufname;?>">
 								</div>
 								<div class="form-group col-md-6">
-									<label for="last_name">Instrument Value</label>
+									<label for="last_name">Last Name<sup>*</sup></label>
 									<input type="text" name="last_name" id="last_name" class="form-control <?=(trim($ulname) <> '' ? 'input-focus' : 'input-focus-notr')?>" value="<?=$ulname;?>">
 								</div>
 							</div>
@@ -428,7 +428,8 @@
 									<div class="col-md-12 col-sm-12 col-xs-12">
 										<div class="form-group">
 											<label for="xwallet_id">XDC Wallet Address</label>
-												<input id="xwallet_id" name="xwallet_id" class="form-control input-focus input-readonly" value="<?=$uxwallet;?>" type="text" autocomplete="" data-required-error="" />
+												<input id="xwallet_id" name="xwallet_id" class="form-control input-focus input-readonly" value="<?=$uxwallet;?>" type="text" autocomplete="" placeholder="On submit address will be created automatically." disabled/>
+												
 												<!--<span class="form-name floating-label">XDC Wallet Address</span>
 												<span id="link_wallet" data-dismiss="modal" data-toggle="modal" data-target="#xinfin_usign_in"  data-backdrop="static" data-keyboard="false" class="append_icon_image" data-dismiss="modal"><a href="javascript:void(0)"></a></span>-->
 										</div>
@@ -459,7 +460,7 @@
 								<div class="row">
 									<div class="col-md-3 btn-more">
 										<!-- <button id="link_wallet" type="button" class="submit_contact" data-toggle="modal" data-target="#xinfin_usign_in" data-backdrop="static" data-keyboard="false"> <?=(trim($uxwallet) == '' ? 'Submit' : 'Submit');?></button> -->
-										<button type="submit" class="submit_contact"> Submit</button>
+										<button type="submit" class="submit_contact" onclick="this.disabled=true;this.form.submit(); "data-required-error=""> Submit</button>
 										<input type="hidden" name="c_row" value="<?=$crow;?>" />
 										<input type="hidden" name="action" value="edit_profile_base_bank" />
 										<input type="hidden" name="uaction" value="user_edit_profile" />

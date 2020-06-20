@@ -22,7 +22,7 @@
 					<div class="text-center social-btn">
 						<a class="button button-social-login facebook" href="<?php echo base_url("login/fblogin")?>"><i class="icon fa fa-facebook"></i>Login With Facebook</a>
 						<a class="button button-social-login twitter" href="<?php echo base_url("login/tlogin")?>"><i class="icon fa fa-twitter"></i>Login With Twitter</a>
-						<a class="button button-social-login linkedin" href="<?php echo base_url("login/lLogin")?>"><i class="icon fa fa-linkedin"></i>Login With LinkedIn</a>
+						<a class="button button-social-login linkedin disabled" href="<?php echo base_url("login/lLogin")?>" ><i class="icon fa fa-linkedin"></i>Login With LinkedIn (coming soon)</a>
 						<a class="button button-social-login google" href="<?php echo base_url("login/glogin")?>"><i class="icon fa fa-google"></i>Login With Google</a>
 					</div>
 					
@@ -30,11 +30,11 @@
 						<?php echo $this->session->flashdata('error_logged_in'); ?>
 					</div>
 					
-					<div class="or-seperator"><span>or</span></div>
+					<!-- <div class="or-seperator"><span>or</span></div> -->
 					
 					<input type="hidden" name="action" value="login" />
 					<!--<div class="btn-more"> <button type="submit">Sign In </button> </div>-->
-					<div class="btn-more mt-0"> <button type="submit" class="mr-0"><i class="icon fa fa-key"></i> Login Using Private Key</button> </div>
+					<!-- <div class="btn-more mt-0"> <button type="submit" class="mr-0"><i class="icon fa fa-key"></i> Login Using Private Key</button> </div> -->
 					<!--<ul class="log_bottom_sec mt-20">
 						<li> <a href="<?php echo base_url() ?>registration">New User? Register Now</a> </li>
 					</ul>-->

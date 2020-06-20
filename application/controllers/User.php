@@ -246,7 +246,7 @@ class User extends CI_Controller {
 				
 				$data_add = array();
 				
-				$data_add['tfscom_contact_linkedin'] = $this->input->post('com_linkedin');
+				// $data_add['tfscom_contact_linkedin'] = $this->input->post('com_linkedin');
 				$data_add['tfscom_user_ref'] = $data['user_id'];
 				$crow = $this->input->post('c_row');
 					
@@ -258,54 +258,55 @@ class User extends CI_Controller {
 				}
 				
 			}
-			elseif(!empty($uresult) && sizeof($uresult) <> 0){
-				$file_name = time().str_replace(" ", "-", $_FILES["user_pic"]['name']);
-				$config['file_name'] = $file_name;
-				$file_namea = explode('.', $file_name);
-				$this->load->library('upload', $config);
+			// elseif(!empty($uresult) && sizeof($uresult) <> 0){
+			// 	$file_name = time().str_replace(" ", "-", $_FILES["user_pic"]['name']);
+			// 	$config['file_name'] = $file_name;
+			// 	$file_namea = explode('.', $file_name);
+			// 	$this->load->library('upload', $config);
 				
-				if(isset($_FILES["user_pic"]['name']) && trim($_FILES["user_pic"]['name']) <> ''){
+			// 	if(isset($_FILES["user_pic"]['name']) && trim($_FILES["user_pic"]['name']) <> ''){
 					
-					if(!$this->upload->do_upload('user_pic'))
-					{
-					   $data['msg'] = 'error';
-					   $data['msg_extra'] = 'Error occurred during profile picture update. <br/>'.$this->upload->display_errors();
-					}
-					else
-					{
-						$data_add = array();
-						$data_add['tfs_pic_file'] = $uresult.'_profimg.'.end($file_namea);
+			// 		if(!$this->upload->do_upload('user_pic'))
+			// 		{
+			// 		   $data['msg'] = 'error';
+			// 		   $data['msg_extra'] = 'Error occurred during profile picture update. <br/>'.$this->upload->display_errors();
+			// 		}
+			// 		else
+			// 		{
+			// 			$data_add = array();
+			// 			$data_add['tfs_pic_file'] = $uresult.'_profimg.'.end($file_namea);
 						
 						
-						$this->suser->update_profile_details_by_id_type($data['user_id'], $data_add);
+			// 			$this->suser->update_profile_details_by_id_type($data['user_id'], $data_add);
 							
-						rename(FCPATH.'assets/social_user_profile_image/'.$file_name, FCPATH.'assets/social_user_profile_image/'.$uresult.'_profimg.'.end($file_namea));
-						$success_data = $this->upload->data();
+			// 			rename(FCPATH.'assets/social_user_profile_image/'.$file_name, FCPATH.'assets/social_user_profile_image/'.$uresult.'_profimg.'.end($file_namea));
+			// 			$success_data = $this->upload->data();
 						
-						if(file_exists(FCPATH.'assets/social_user_profile_image/'.$uresult.'_profimg.'.end($file_namea))){
+			// 			if(file_exists(FCPATH.'assets/social_user_profile_image/'.$uresult.'_profimg.'.end($file_namea))){
 						
-							$this->thumb(FCPATH.'assets/social_user_profile_image/'.$uresult.'_profimg.'.end($file_namea),100,true);  
-						}
+			// 				$this->thumb(FCPATH.'assets/social_user_profile_image/'.$uresult.'_profimg.'.end($file_namea),100,true);  
+			// 			}
 						
-						$data['msg'] = 'success';
-					}
-				}else{
-					$data['msg'] = 'success';
-				}
+			// 			$data['msg'] = 'success';
+			// 		}
+			// 	}else{
+			// 		$data['msg'] = 'success';
+			// 	}
 				
-				$data_add = array();
+			// 	$data_add = array();
 				
-				$data_add['tfscom_contact_linkedin'] = $this->input->post('c2_linkedin');
-				$data_add['tfscom_user_ref'] = $data['user_id'];
-				$crow = $this->input->post('c_row');
+			// 	$data_add['tfscom_contact_linkedin'] = $this->input->post('com_linkedin');
+			// 	$data_add['tfscom_user_ref'] = $data['user_id'];
+			// 	$crow = $this->input->post('c_row');
 					
-				if($crow > 0){
-					$data_add['tfscom_updated_at'] = date('Y-m-d H:i:s');
-					$cresult = $this->suser->update_company_info($data['user_id'], $data_add);	
-				}else{
-					$cresult = $this->suser->add_company_info($data_add);	
-				}
-			}else{
+			// 	if($crow > 0){
+			// 		$data_add['tfscom_updated_at'] = date('Y-m-d H:i:s');
+			// 		$cresult = $this->suser->update_company_info($data['user_id'], $data_add);	
+			// 	}else{
+			// 		$cresult = $this->suser->add_company_info($data_add);	
+			// 	}
+			// }
+			else{
 				$data['msg'] = 'success';
 			}
 		}
@@ -690,7 +691,7 @@ class User extends CI_Controller {
 				$data['c1email'] = $ucresult[0]->tfscom_contact1_email;
 				$data['c1contact'] = $ucresult[0]->tfscom_contact1_number;
 				$data['c1linkedin'] = $ucresult[0]->tfscom_contact_linkedin;
-				$data['c1desgination'] = $ucresult[0]->tfscom_designation;
+				// $data['c1desgination'] = $ucresult[0]->tfscom_designation;
 				$data['comname'] = $ucresult[0]->tfscom_name;
 				$data['cregno'] = $ucresult[0]->tfscom_regno;
 				
@@ -724,7 +725,7 @@ class User extends CI_Controller {
 					$data['ufname'] = $uresult[0]->tfs_first_name;
 					$data['ulname'] = $uresult[0]->tfs_last_name;
 					$data['uemail'] = $uresult[0]->tfs_email;
-					$data['ucontact'] = $uresult[0]->tfscom_contact1_number;
+					$data['ucontact'] = $uresult[0]->tfs_contact_number;
 					$data['uaddress'] = $uresult[0]->tfscom_address;
 					// $data['uprofpic'] = $uresult[0]->tfb_pic_file;
 					$data['uname'] = $data['ufname']." ".$data['ulname'];
@@ -734,8 +735,8 @@ class User extends CI_Controller {
 					$data['uwalleta'] = $uresult[0]->tfs_xdc_wallet;
 					$data['ubankaccno'] = $uresult[0]->tfs_bank_acc_number;
 					$data['ubankaccname'] = $uresult[0]->tfs_bank_name;
-					// $data['ulinkedin'] = $uresult[0]->tfs_linkedin;
-					// $data['udesignation'] = $uresult[0]->tfs_designation;
+					$data['ulinkedin'] = $uresult[0]->tfs_linkedin;
+					$data['udesignation'] = $uresult[0]->tfs_designation;
 			}	
 		}
 		
