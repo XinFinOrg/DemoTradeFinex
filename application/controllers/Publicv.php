@@ -2709,8 +2709,8 @@ class Publicv extends CI_Controller {
 			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
 				
 				
-				$data['ufname'] = $uresult[0]->tfs_fname;
-				$data['ulname'] = $uresult[0]->tfs_lname;
+				$data['ufname'] = $uresult[0]->tfs_first_name;
+				$data['ulname'] = $uresult[0]->tfs_last_name;
 				$data['uemail'] = $uresult[0]->tfs_email;
 				$data['ucontact'] = $uresult[0]->tfs_contact_number;
 				$data['uprofpic'] = $uresult[0]->tfs_pic_file;
@@ -2718,11 +2718,11 @@ class Publicv extends CI_Controller {
 			}else if(!empty($uresult)  && sizeof($uresult) <> 0){
 				$uresulta = $this->suser->get_user_base_info_by_id_and_type($data['user_id']);
 				if(!empty($uresulta) && is_array($uresulta) && sizeof($uresulta) <> 0){
-					$data['ufname'] = $uresulta[0]->tfs_fname;
-					$data['ulname'] = $uresulta[0]->tfs_lname;
-					$data['uemail'] = $uresulta[0]->tfs_email;
-					$data['ucontact'] = $uresulta[0]->tfs_contact_number;
-					$data['uprofpic'] = $uresulta[0]->tfs_pic_file;
+					$data['ufname'] = $uresult[0]->tfs_first_name;
+					$data['ulname'] = $uresult[0]->tfs_last_name;
+					$data['uemail'] = $uresult[0]->tfs_email;
+					$data['ucontact'] = $uresult[0]->tfs_contact_number;
+					$data['uprofpic'] = $uresult[0]->tfs_pic_file;
 				}
 					
 			}	

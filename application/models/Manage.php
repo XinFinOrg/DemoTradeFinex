@@ -1046,14 +1046,27 @@
 			}
 		}
 
-		public function get_notification_setting($user_id){
+		public function get_notification_setting($user_id, $user_type_ref){
 
 			$result = array();
 
+			if($user_type_ref == 1){
 				$this->db->select('*');
-				$this->db->from('{PRE}social_user');
-				$where = "tfs_id = '".$user_id."'";
-			
+				$this->db->from('{PRE}service_provider');
+				$where = "tfsp_user_ref = '".$user_id."'";
+			}
+
+			if($user_type_ref == 2){
+				$this->db->select('*');
+				$this->db->from('{PRE}financier');
+				$where = "tff_user_ref = '".$user_id."'";
+			}
+
+			if($user_type_ref == 3){
+				$this->db->select('*');
+				$this->db->from('{PRE}beneficiary');
+				$where = "tfb_user_ref = '".$user_id."'";
+			}
 
 			$this->db->where($where);
 			$query = $this->db->get();
