@@ -2695,8 +2695,6 @@ class Publicv extends CI_Controller {
 			$this->load->view('includes/header_publicn', $data);
 		}
 
-		$data['notifications'] = array();
-		$data['notifications'] = get_initial_notification_status();
 		
 		if($data['user_id'] <> 0){
 			
