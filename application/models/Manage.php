@@ -1046,32 +1046,32 @@
 			}
 		}
 
-		public function get_notification_setting($user_id, $user_type_ref){
+		// public function get_notification_setting($user_id, $user_type_ref){
 
-			$result = array();
+		// 	$result = array();
 
-			if($user_type_ref == 1){
-				$this->db->select('*');
-				$this->db->from('{PRE}service_provider');
-				$where = "tfsp_user_ref = '".$user_id."'";
-			}
+		// 	if($user_type_ref == 1){
+		// 		$this->db->select('*');
+		// 		$this->db->from('{PRE}service_provider');
+		// 		$where = "tfsp_user_ref = '".$user_id."'";
+		// 	}
 
-			if($user_type_ref == 2){
-				$this->db->select('*');
-				$this->db->from('{PRE}financier');
-				$where = "tff_user_ref = '".$user_id."'";
-			}
+		// 	if($user_type_ref == 2){
+		// 		$this->db->select('*');
+		// 		$this->db->from('{PRE}financier');
+		// 		$where = "tff_user_ref = '".$user_id."'";
+		// 	}
 
-			if($user_type_ref == 3){
-				$this->db->select('*');
-				$this->db->from('{PRE}beneficiary');
-				$where = "tfb_user_ref = '".$user_id."'";
-			}
+		// 	if($user_type_ref == 3){
+		// 		$this->db->select('*');
+		// 		$this->db->from('{PRE}beneficiary');
+		// 		$where = "tfb_user_ref = '".$user_id."'";
+		// 	}
 
-			$this->db->where($where);
-			$query = $this->db->get();
-			return $result = $query->result();
-		}
+		// 	$this->db->where($where);
+		// 	$query = $this->db->get();
+		// 	return $result = $query->result();
+		// }
 
 		public function get_blocked_product_by_name($productn){
 
