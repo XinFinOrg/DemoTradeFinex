@@ -3660,40 +3660,40 @@ to {
 	margin-bottom: 0px;
 }
 #submit_popup .modal-dialog {
-	width: 470px;
-	margin-top: 80px;
-	min-height: 290px;
+	width: 470px!important;
+	margin-top: 80px!important;
+	min-height: 290px!important;
 }
 #submit_popup .modal-dialog .modal-content {
-	border-radius: 0px;
-	padding: 0px 40px 30px 40px;
+	border-radius: 0px!important;
+	padding: 0px 40px 30px 40px!important;
 }
 #submit_popup .modal-dialog .modal-content h3 {
-	color: #282c3f;
-	font-size: 20px;
-	text-transform: capitalize;
-	font-family: 'open_sansregular';
-	margin-bottom: 10px;
-	margin-top: 5px;
-	letter-spacing: 1px;
+	color: #282c3f!important;
+	font-size: 20px!important;
+	text-transform: capitalize!important;
+	font-family: 'open_sansregular'!important;
+	margin-bottom: 10px!important;
+	margin-top: 5px!important;
+	letter-spacing: 1px!important;
 }
 #submit_popup .modal-dialog .modal-content P {
-	color: #c5c5c5;
-	font-family: 'open_sansregular';
-	font-size: 15px;
-	margin-bottom: 10px;
-	line-height: 22px;
+	color: #c5c5c5!important;
+	font-family: 'open_sansregular'!important;
+	font-size: 15px!important;
+	margin-bottom: 10px!important;
+	line-height: 22px!important;
 }
 #submit_popup .modal-dialog .modal-content .modal-header {
-	padding: 0px;
-	border-bottom: none;
+	padding: 0px!important;
+	border-bottom: none!important;
 }
 #submit_popup .modal-dialog .modal-content .modal-body {
-	padding-top: 0px;
-	clear: both;
+	padding-top: 0px!important;
+	clear: both!important;
 }
 #submit_popup .modal-dialog .modal-content .modal-body span img {
-	padding-bottom: 12px;
+	padding-bottom: 12px!important;
 }
 .pexpired {
 	background: #e81923;
