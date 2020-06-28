@@ -7,7 +7,7 @@ class Thankyouc extends CI_Controller {
 		parent::__construct();
         $this->load->helper(array('form', 'url', 'date'));
 		$this->load->library('session');
-		$this->load->model('manage','suser');
+		$this->load->model(array('manage','suser'));
 		
 		$data = array();
 	}
