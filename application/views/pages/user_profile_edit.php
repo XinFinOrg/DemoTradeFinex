@@ -4,7 +4,7 @@
 	<div class="col-lg-12">
 	<div class="profile_tab_sec">
 		<div class="tab_sec_header">
-			<h2><img src="../assets/images/icon/user-dashboard.png" width="40" height="40" /> Welcome! Let's start</h2>
+			<h2><img src="<?php echo base_url();?>assets/images/icon/user-dashboard.png" width="40" height="40" /> Welcome! Let's start</h2>
 		</div>
 		<div class="tab_group">		
 			

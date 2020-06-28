@@ -8,23 +8,32 @@
 				</a>
 			</div>
 			<?php
-			$users = $this->session->userdata('logged_in');
-		
-		if($users && !empty($users) && sizeof($users) <> 0){
-			$data['full_name'] = $users['user_full_name'];
-			$user_ids = $users['user_id'];
+				$users = $this->session->userdata('logged_in');
 			
-		}else{
-			// redirect(base_url().'log/out');
-		}
-		// $uresults = $this->suser->get_social_user_company_info_by_id($user_ids);
+				if($users && !empty($users) && sizeof($users) <> 0){
+					$data['full_name'] = $users['user_full_name'];
+					$user_ids = $users['user_id'];
+	
+				}else{
+					// redirect(base_url().'log/out');
+				}
+				if($user_ids <> 0){
+					$uresults = $this->suser->get_user_base_info_by_id_and_type($user_ids);
 			
-		// 	if(!empty($uresults) && is_array($uresults) && sizeof($uresults) <> 0){
+					if(!empty($uresults) && is_array($uresults) && sizeof($uresults) <> 0){
+						
+						log_message("info","inpic");
+						$uprofpics = $uresults[0]->tfs_pic_file;
+						
+					}elseif(!empty($uresults) && sizeof($uresults) <> 0){
+						
+						log_message("info","inpic");
+						$uprofpics = $uresults[0]->tfs_pic_file;
+						
+					}
+				}
 				
-		// 		log_message("info","inpic");
-				
-				
-		// 	}	
+			
 
 
 			?>
@@ -111,7 +120,7 @@
 					$uprof_pic = $uprofpica[0].'_thumb.'.$uprofpica[1];
 				}
 				
-				if(!file_exists(FCPATH.'assets/user_profile_image/'.$uprof_pic)){
+				if(!file_exists(FCPATH.'assets/social_user_profile_image/'.$uprof_pic)){
 					$uprof_pic = $uprofpics;
 				}
 			
@@ -152,7 +161,7 @@
 						<li class="hidden-md hidden-lg"> <a href="javascript:void(0)" title="Setting"> Setting</a> </li>
 						<li>
 							<a href="javascript:void(0)" title="">
-								<img src="<?=((isset($uprofpics) && $uprofpics && $uprofpics != '' && $uprofpics) ? base_url().'assets/user_profile_image/'.$uprof_pic : base_url().'assets/images/img/contact_profile_photo.png');?>" alt="uimg" class="user-img hidden-xs hidden-sm avatar img-circle">
+								<img src="<?=((isset($uprofpics) && $uprofpics && $uprofpics != '' && $uprofpics) ? base_url().'assets/social_user_profile_image/'.$uprof_pic : base_url().'assets/images/img/contact_profile_photo.png');?>" alt="uimg" class="user-img hidden-xs hidden-sm avatar img-circle">
 								<span class="hidden-md hidden-lg">Account</span> <i class="fa fa-caret-down"></i>
 							</a>
 							<ul class="submenu tf-right-0">

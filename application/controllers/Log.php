@@ -5,7 +5,7 @@ class Log extends CI_Controller {
 	
 	function __construct(){
 		parent::__construct();
-        $this->load->helper(array('form', 'url', 'date'));
+		$this->load->helper(array('form', 'url', 'date'));
 		$this->load->library(array('session', 'encrypt','facebook'));
 		$this->load->model(array('manage', 'plisting','suser'));
 		
@@ -57,11 +57,11 @@ class Log extends CI_Controller {
 				$this->session->sess_destroy();
 			} elseif($data['media'] == "google"){
 				// Reset OAuth access token 
-				$this->google->revokeToken(); 
+				// $this->google->revokeToken(); 
          
-				// Remove token and user data from the session 
-				$this->session->unset_userdata('loggedIn'); 
-				$this->session->unset_userdata('userData'); 
+				// // Remove token and user data from the session 
+				$this->session->unset_userdata('logged_in'); 
+				// $this->session->unset_userdata('userData'); 
 				 
 				// Destroy entire session data 
 				$this->session->sess_destroy(); 

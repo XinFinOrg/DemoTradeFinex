@@ -9,11 +9,12 @@ class Login extends CI_Controller {
 		require_once APPPATH.'third_party/src/contrib/Google_Oauth2Service.php';
 		
         $this->load->helper(array('form', 'url', 'date', 'xdcapi'));
-		$this->load->library(array('session', 'encrypt', 'email','facebook','twitteroauth'));
+		$this->load->library(array('session', 'encrypt', 'email','facebook','twitteroauth','linkedin'));
 		$this->load->model(array('manage','suser'));
 		// $this->output->delete_cache();
 		$this->config->load('emailc');
 		$this->config->load('twitter');
+		$this->config->load('linkedin');
 		$data = array();
 		$data_add = array();
 	}
@@ -553,7 +554,6 @@ class Login extends CI_Controller {
 	public function fblogin()
 	{
 	  
-		
 		$fb = new \Facebook\Facebook([ 'app_id' => '2080555445396680', 'app_secret' => 'e169cd179a489dfc3901a69f9771d29e', 'default_graph_version' => 'v3.2', 'persistent_data_handler' => 'session' ]);
 		$helper = $fb->getRedirectLoginHelper(); if (isset($_GET['state'])) { $helper->getPersistentDataHandler()->set('state', $_GET['state']); }
 		$permissions = ['email']; 
@@ -986,6 +986,73 @@ class Login extends CI_Controller {
 			}
 		}
 	}
+
+	public function liLogin(){
+		$userData = array();
+		
+		// Get status and user info from session
+        // $oauthStatus = $this->session->userdata('oauth_status');
+		// $sessUserData = $this->session->userdata('userData');
+		
+		// $data['userData'] = $userData;
+		$data['oauthURL'] = $this->config->item('linkedin_redirect_url').'?oauth_init=1';
+		
+		// Load login & profile view
+        header("location: ".$data['oauthURL']);
+	}
+	public function lLogin(){
+		$userData = array();
+		
+		// Get status and user info from session
+        $oauthStatus = $this->session->userdata('oauth_status');
+        $sessUserData = $this->session->userdata('userData');
+		
+		if(isset($oauthStatus) && $oauthStatus == 'verified'){
+			// Get the user info from session
+            $userData = $sessUserData;
+		}elseif((isset($_GET["oauth_init"]) && $_GET["oauth_init"] == 1) || (isset($_GET['oauth_token']) && isset($_GET['oauth_verifier'])) || (isset($_GET['code']) && isset($_GET['state']))){
+			
+			// Authenticate with LinkedIn
+			if($this->linkedin->authenticate()){
+				
+				// Get the user account info
+				$userInfo = $this->linkedin->getUserInfo();
+				
+				// Preparing data for database insertion
+				$userData = array();
+				$userData['oauth_uid']  = !empty($userInfo['account']->id)?$userInfo['account']->id:'';
+				$userData['first_name'] = !empty($userInfo['account']->firstName->localized->en_US)?$userInfo['account']->firstName->localized->en_US:'';
+				$userData['last_name']  = !empty($userInfo['account']->lastName->localized->en_US)?$userInfo['account']->lastName->localized->en_US:'';
+				$userData['email']      = !empty($userInfo['email']->elements[0]->{'handle~'}->emailAddress)?$userInfo['email']->elements[0]->{'handle~'}->emailAddress:'';
+				$userData['picture']    = !empty($userInfo['account']->profilePicture->{'displayImage~'}->elements[0]->identifiers[0]->identifier)?$userInfo['account']->profilePicture->{'displayImage~'}->elements[0]->identifiers[0]->identifier:'';
+				$userData['link']       = 'https://www.linkedin.com/';
+		
+				echo json_encode($userData,true);
+				die;
+				// Insert or update user data to the database
+				$userData['oauth_provider'] = 'linkedin';
+                $userID = $this->suser->checkUser($userData);
+				
+				// Store status and user profile info into session
+                $this->session->set_userdata('oauth_status','verified');
+                $this->session->set_userdata('userData',$userData);
+				
+				// Redirect the user back to the same page
+				redirect('/user_authentication');
+
+			}else{
+				 $data['error_msg'] = 'Error connecting to LinkedIn! try again later! <br/>'.$this->linkedin->client->error;
+			}
+		}elseif(isset($_REQUEST["oauth_problem"]) && $_REQUEST["oauth_problem"] <> ""){
+			$data['error_msg'] = $_GET["oauth_problem"];
+		}
+		$data['userData'] = $userData;
+		$data['oauthURL'] = $this->config->item('linkedin_redirect_url').'?oauth_init=1';
+		
+		// Load login & profile view
+        header("location: ".$data['oauthURL']);
+			
+    }
 
 }
 

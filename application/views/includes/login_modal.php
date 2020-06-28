@@ -22,7 +22,7 @@
 					<div class="text-center social-btn">
 						<a class="button button-social-login facebook" href="<?php echo base_url("login/fblogin")?>"><i class="icon fa fa-facebook"></i>Login With Facebook</a>
 						<a class="button button-social-login twitter" href="<?php echo base_url("login/tlogin")?>"><i class="icon fa fa-twitter"></i>Login With Twitter</a>
-						<a class="button button-social-login linkedin disabled" href="<?php echo base_url("login/lLogin")?>" ><i class="icon fa fa-linkedin"></i>Login With LinkedIn (coming soon)</a>
+						<a class="button button-social-login linkedin " href="<?php echo base_url("login/liLogin")?>" ><i class="icon fa fa-linkedin"></i>Login With LinkedIn (coming soon)</a>
 						<a class="button button-social-login google" href="<?php echo base_url("login/glogin")?>"><i class="icon fa fa-google"></i>Login With Google</a>
 					</div>
 					

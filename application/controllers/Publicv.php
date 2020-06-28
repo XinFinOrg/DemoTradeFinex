@@ -7,7 +7,7 @@ class Publicv extends CI_Controller {
 		parent::__construct();
         $this->load->helper(array('form', 'url', 'date','blockchain','notification'));
 		$this->load->library(array('session', 'encrypt', 'email'));
-		$this->load->model(array('plisting', 'manage'));
+		$this->load->model(array('plisting', 'manage','suser'));
 		// $this->output->cache(0.5);
 		$this->config->load('emailc');
 		$data = array();
@@ -2682,6 +2682,59 @@ class Publicv extends CI_Controller {
 		$user = $this->session->userdata('logged_in');
 		
 		$action = $this->input->post('action');
+		
+		if($user && !empty($user) && sizeof($user) <> 0){
+			$data['full_name'] = $user['user_full_name'];
+			$data['user_id'] = $user['user_id'];
+			
+			// redirect(base_url().'dashboard');
+			
+		}else{
+			// redirect(base_url().'log/out');
+			$this->load->view('includes/headern', $data);
+			$this->load->view('includes/header_publicn', $data);
+		}
+
+		$data['notifications'] = array();
+		$data['notifications'] = get_initial_notification_status();
+		
+		if($data['user_id'] <> 0){
+			
+			$options = array();
+			$options['user_id'] = $data['user_id'];
+		}
+
+		if($data['user_id'] <> 0){
+		
+			$uresult = $this->suser->get_social_user_company_info_by_id($data['user_id']);
+	
+			if(!empty($uresult) && is_array($uresult) && sizeof($uresult) <> 0){
+				
+				
+				$data['ufname'] = $uresult[0]->tfs_fname;
+				$data['ulname'] = $uresult[0]->tfs_lname;
+				$data['uemail'] = $uresult[0]->tfs_email;
+				$data['ucontact'] = $uresult[0]->tfs_contact_number;
+				$data['uprofpic'] = $uresult[0]->tfs_pic_file;
+				
+			}else if(!empty($uresult)  && sizeof($uresult) <> 0){
+				$uresulta = $this->suser->get_user_base_info_by_id_and_type($data['user_id']);
+				if(!empty($uresulta) && is_array($uresulta) && sizeof($uresulta) <> 0){
+					$data['ufname'] = $uresulta[0]->tfs_fname;
+					$data['ulname'] = $uresulta[0]->tfs_lname;
+					$data['uemail'] = $uresulta[0]->tfs_email;
+					$data['ucontact'] = $uresulta[0]->tfs_contact_number;
+					$data['uprofpic'] = $uresulta[0]->tfs_pic_file;
+				}
+					
+			}	
+		
+			
+			$this->load->view('includes/headern', $data);
+			$this->load->view('includes/header_publicn', $data);
+			
+		}
+
 		if(empty($_POST['g-recaptcha-response']))
 		{
 			$captcha_error = 'Captcha is required';
@@ -2710,7 +2763,7 @@ class Publicv extends CI_Controller {
 			}
 				
 		}
-		
+	
 		if($action == 'send_mail'){
 			$config = array();
 			$config = $this->config->item('$econfig');
@@ -2755,8 +2808,8 @@ class Publicv extends CI_Controller {
 			redirect(base_url().'thankyouc');
 		}
 		
-		$this->load->view('includes/headern', $data);
-		$this->load->view('includes/header_publicn', $data);
+		// $this->load->view('includes/headern', $data);
+		// $this->load->view('includes/header_publicn', $data);
 		$this->load->view('pages/public/contact_view', $data);
 		$this->load->view('includes/footer_commonn', $data);
 		$this->load->view('pages_scripts/common_scripts', $data);

@@ -92,9 +92,10 @@ class Suser extends CI_Model {
             }
             else
             {
-                
+
                 $udetail = $uresult[0]->tfs_id;
                 $result['user_detail'] = $uresult[0];
+                
             }
 
             $datan = array();
@@ -305,7 +306,7 @@ class Suser extends CI_Model {
         $where = "tfs.tfs_id = '$id'";
         $this->db->where($where);
         $query = $this->db->get();
-
+        
         return $result = $query->result();
     }
 }
