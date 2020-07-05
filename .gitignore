@@ -7,6 +7,8 @@ package-lock.json
 dummy.txt
 newpages/*
 assets/instrument_files/*
+assets/social_user_profile_image/*
+assets/social_user_company_logo/*
 application/config/config.php
 application/config/database.php
 /nbproject/private/

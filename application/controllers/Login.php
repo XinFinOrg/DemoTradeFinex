@@ -9,7 +9,7 @@ class Login extends CI_Controller {
 		require_once APPPATH.'third_party/src/contrib/Google_Oauth2Service.php';
 		
         $this->load->helper(array('form', 'url', 'date', 'xdcapi'));
-		$this->load->library(array('session', 'encrypt', 'email','facebook','twitteroauth','linkedin'));
+		$this->load->library(array('session', 'encrypt', 'email','linkedin','facebook','twitteroauth'));
 		$this->load->model(array('manage','suser'));
 		// $this->output->delete_cache();
 		$this->config->load('emailc');
@@ -987,20 +987,6 @@ class Login extends CI_Controller {
 		}
 	}
 
-	public function liLogin(){
-		$userData = array();
-		
-		// Get status and user info from session
-        // $oauthStatus = $this->session->userdata('oauth_status');
-		// $sessUserData = $this->session->userdata('userData');
-		
-		// $data['userData'] = $userData;
-		$data['oauthURL'] = $this->config->item('linkedin_redirect_url').'?oauth_init=1';
-		
-		// Load login & profile view
-		// header('Location:http://localhost/DemoTradeFinex'.$data['oauthURL']);
-		header('Location:https://demo.tradefinex.org'.$data['oauthURL']);
-	}
 	public function lLogin(){
 		$userData = array();
 		
@@ -1028,18 +1014,90 @@ class Login extends CI_Controller {
 				$userData['picture']    = !empty($userInfo['account']->profilePicture->{'displayImage~'}->elements[0]->identifiers[0]->identifier)?$userInfo['account']->profilePicture->{'displayImage~'}->elements[0]->identifiers[0]->identifier:'';
 				$userData['link']       = 'https://www.linkedin.com/';
 		
-				echo json_encode($userData,true);
-				die;
-				// Insert or update user data to the database
-				$userData['oauth_provider'] = 'linkedin';
-                $userID = $this->suser->checkUser($userData);
+				if(isset($userData)){
+					$userID = $this->suser->checkSocialUser($userData);
+				}
+					
 				
-				// Store status and user profile info into session
-                $this->session->set_userdata('oauth_status','verified');
-                $this->session->set_userdata('userData',$userData);
+				// Check user data insert or update status
+				if(!empty($userID) && is_array($userID) && sizeof($userID) <> 0){
+					// //Unset no longer needed request tokens
+					// unset($_SESSION['token']);
+					// unset($_SESSION['token_secret']);
 				
-				// Redirect the user back to the same page
-				redirect('/user_authentication');
+					if($userID['error'] == 1){
+						log_message("info","User Added successfully");
+						$user = $this->suser->add_social_user($userData);
+						
+						foreach($user as $userr){
+							
+							$user_name = $userr->tfs_first_name.' '.$userr->tfs_last_name;
+				
+							$session_data = array(
+								'user_id' => $userr->tfs_id,
+								'user_full_name' => $user_name,
+								'media'=>"twitter"
+							);
+						}
+						$this->session->set_userdata('logged_in', $session_data);
+						$data['msg'] = 'success';
+						log_message("info","Session Set".json_encode($session_data));
+						redirect(base_url().'dashboard');
+					}	
+					elseif($userID['error'] == 0){
+						log_message("info","User Exsist");
+					
+						$user_name = $userID['user_detail']->tfs_first_name.' '.$userID['user_detail']->tfs_last_name;
+						$session_data = array(
+							'user_id' => $userID['user_detail']->tfs_id,
+							'user_full_name' => $user_name,
+							'media'=>"twitter"
+						);
+						
+						$this->session->set_userdata('logged_in', $session_data);
+						$data['msg'] = 'success';
+						log_message("info","Session Set".json_encode($userID));
+						redirect(base_url().'dashboard');
+					}
+					$user = $this->session->userdata('logged_in');
+	
+					if($user && !empty($user) && sizeof($user) <> 0){
+						$data['full_name'] = $user['user_full_name'];
+						$data['user_id'] = $user['user_id'];
+						
+						log_message("info","User loggedIn");
+						$user_profile = $this->suser->get_social_user_info_by_id($data['user_id']);
+						$wallet_id = $user_profile[0]->tfs_xdc_wallet;
+						
+						// if(trim($wallet_id) <> ''){
+						
+						// 	$options = array('address' => $wallet_id);
+							
+						// 	$rcurlf = get_xdc_balance($options);
+						
+						// 	if($rcurlf){
+						// 		$rcurlfa = json_decode(stripslashes($rcurlf));
+						// 	}
+							
+						// 	$balance = ((isset($rcurlfa->balance)) ? $rcurlfa->balance : '');
+						// 	$status = ((isset($rcurlfa->status)) ? $rcurlfa->status : ''); 
+										
+						// 	$data_add = array();
+						// 	// $data_add['tfu_xdc_walletID'] = $wallet_id;
+						// 	$data_add['tfu_xdc_balance'] = $balance;
+							
+						// 	if(strtolower($status) == 'success' && trim($wallet_id) <> '' && trim($balance) <> ''){
+						// 		$result = $this->manage->update_user_base_info_all_by_id_and_type($data['user_id'], $data['user_type_ref'], $data_add);
+						// 	}
+						// }	
+						
+						redirect(base_url().'dashboard');
+					}else{
+						
+							redirect(base_url().'log/out');
+						
+					}
+				}
 
 			}else{
 				 $data['error_msg'] = 'Error connecting to LinkedIn! try again later! <br/>'.$this->linkedin->client->error;
@@ -1054,7 +1112,7 @@ class Login extends CI_Controller {
 		// header('Location:http://localhost/DemoTradeFinex'.$data['oauthURL']);
 		header('Location:https://demo.tradefinex.org'.$data['oauthURL']);
 			
-    }
+	}
 
 }
 

@@ -80,7 +80,7 @@
 									<input type="text" name="email" id="email" class="form-control <?=(trim($uemail) <> '' ? 'input-focus' : 'input-focus-notr')?>" value="<?=$uemail;?>" type="text" ="falreadonlyse" />
 								</div>
 								<div class="form-group col-md-6">
-									<label for="contactn">Mobile Number</label>
+									<label for="contactn">Mobile Number<sup>*</sup></label>
 									<input type="text" name="contactn" id="contactn" class="form-control <?=(trim($ucontact) <> '' ? 'input-focus' : 'input-focus-notr')?>" value="<?=$ucontact;?>">
 								</div>
 							</div>							
