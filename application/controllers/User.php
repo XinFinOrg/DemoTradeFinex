@@ -244,18 +244,18 @@ class User extends CI_Controller {
 					$data['msg'] = 'success';
 				}
 				
-				$data_add = array();
+				// $data_add = array();
 				
-				// $data_add['tfscom_contact_linkedin'] = $this->input->post('com_linkedin');
-				$data_add['tfscom_user_ref'] = $data['user_id'];
-				$crow = $this->input->post('c_row');
+				// // $data_add['tfscom_contact_linkedin'] = $this->input->post('com_linkedin');
+				// $data_add['tfscom_user_ref'] = $data['user_id'];
+				// $crow = $this->input->post('c_row');
 					
-				if($crow > 0){
-					$data_add['tfscom_updated_at'] = date('Y-m-d H:i:s');
-					$cresult = $this->suser->update_company_info($data['user_id'], $data_add);	
-				}else{
-					$cresult = $this->suser->add_company_info($data_add);	
-				}
+				// if($crow > 0){
+				// 	$data_add['tfscom_updated_at'] = date('Y-m-d H:i:s');
+				// 	$cresult = $this->suser->update_company_info($data['user_id'], $data_add);	
+				// }else{
+				// 	$cresult = $this->suser->add_company_info($data_add);	
+				// }
 				
 			}
 			elseif(!empty($uresult) && sizeof($uresult) <> 0){
@@ -293,18 +293,18 @@ class User extends CI_Controller {
 					$data['msg'] = 'success';
 				}
 				
-				$data_add = array();
+				// $data_add = array();
 				
-				// $data_add['tfscom_contact_linkedin'] = $this->input->post('com_linkedin');
-				$data_add['tfscom_user_ref'] = $data['user_id'];
-				$crow = $this->input->post('c_row');
+				// // $data_add['tfscom_contact_linkedin'] = $this->input->post('com_linkedin');
+				// $data_add['tfscom_user_ref'] = $data['user_id'];
+				// $crow = $this->input->post('c_row');
 					
-				if($crow > 0){
-					$data_add['tfscom_updated_at'] = date('Y-m-d H:i:s');
-					$cresult = $this->suser->update_company_info($data['user_id'], $data_add);	
-				}else{
-					$cresult = $this->suser->add_company_info($data_add);	
-				}
+				// if($crow > 0){
+				// 	$data_add['tfscom_updated_at'] = date('Y-m-d H:i:s');
+				// 	$cresult = $this->suser->update_company_info($data['user_id'], $data_add);	
+				// }else{
+				// 	$cresult = $this->suser->add_company_info($data_add);	
+				// }
 			}
 			else{
 				$data['msg'] = 'success';
@@ -727,7 +727,8 @@ class User extends CI_Controller {
 					$data['uemail'] = $uresult[0]->tfs_email;
 					$data['ucontact'] = $uresult[0]->tfs_contact_number;
 					$data['uaddress'] = $uresult[0]->tfscom_address;
-					// $data['uprofpic'] = $uresult[0]->tfb_pic_file;
+					$data['uprofpic'] = $uresult[0]->tfs_pic_file;
+					
 					$data['uname'] = $data['ufname']." ".$data['ulname'];
 					$data['ccountryn'] = $uresult[0]->tfc_name;
 					$data['cdeptn'] = $uresult[0]->cName;				

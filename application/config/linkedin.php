@@ -15,6 +15,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['linkedin_api_key']       = '7704svpiklbckw';
 $config['linkedin_api_secret']    = 'a2tv44QlHyqlurCj';
-// $config['linkedin_redirect_url']  = 'http://localhost:80/DemoTradeFinex/login/lLogin';
-$config['linkedin_redirect_url']  = 'https://demo.tradefinex.org/login/lLogin';
-$config['linkedin_scope']         = 'r_liteprofile r_emailaddress';
+$config['linkedin_redirect_url']  = '/login/lLogin';
+$config['linkedin_scope']         = 'r_emailaddress r_liteprofile';

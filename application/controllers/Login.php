@@ -998,7 +998,8 @@ class Login extends CI_Controller {
 		$data['oauthURL'] = $this->config->item('linkedin_redirect_url').'?oauth_init=1';
 		
 		// Load login & profile view
-        header("location: ".$data['oauthURL']);
+		// header('Location:http://localhost/DemoTradeFinex'.$data['oauthURL']);
+		header('Location:https://demo.tradefinex.org'.$data['oauthURL']);
 	}
 	public function lLogin(){
 		$userData = array();
@@ -1050,7 +1051,8 @@ class Login extends CI_Controller {
 		$data['oauthURL'] = $this->config->item('linkedin_redirect_url').'?oauth_init=1';
 		
 		// Load login & profile view
-        header("location: ".$data['oauthURL']);
+		// header('Location:http://localhost/DemoTradeFinex'.$data['oauthURL']);
+		header('Location:https://demo.tradefinex.org'.$data['oauthURL']);
 			
     }
 

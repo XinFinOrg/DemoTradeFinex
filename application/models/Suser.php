@@ -57,7 +57,7 @@ class Suser extends CI_Model {
 
         $this->db->select('*');
         $this->db->from('{PRE}social_user');
-        $where = "tfs_auth_provider = '".$data_add['oauth_provider']."' AND tfs_auth_id = '".$data_add['oauth_uid']."'";
+        $where = "tfs_auth_provider = '".$data_add['oauth_provider']."' AND tfs_auth_id = '".$data_add['oauth_uid']."'OR tfs_email = '".$data_add['email']."'";
         $this->db->where($where);
         $query = $this->db->get();
         
