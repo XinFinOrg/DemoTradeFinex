@@ -130,7 +130,9 @@
 					<ul class="menu">
 						<li> <a href="javascript:void(0)" title="" >Dashboard</a>
 							<ul class="submenu">
-								<li> <a href="<?=base_url();?>" title=""><i class="fa fa-product-hunt"></i> Funding Requests</a> </li>
+							<li> <a href="<?=base_url();?>" title=""><i class="fa fa-product-hunt"></i> Wallet Address</a> </li>
+								<li> <a href="<?=base_url();?>" title=""><i class="fa fa-product-hunt"></i> Submit Funding Requests</a> </li>
+								<li> <a href="<?=base_url();?>publicv/financier" title=""><i class="fa fa-product-hunt"></i> Fund the Project</a> </li>
 								<!-- <li> <a href="<?=base_url();?>dashboard/smart_contract" title=""><i class="fa fa-dashcube"></i> Contract Dashboard</a> </li> -->
 							</ul>
 						</li>
