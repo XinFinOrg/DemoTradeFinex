@@ -1207,11 +1207,12 @@ input.error, textarea.error, select.error, label.error {border-color: #ea212d!im
 .table-scroll thead th{background:#FFFFFF;position:-webkit-sticky;position:sticky;padding-top:15px;padding-bottom:15px;top:0;vertical-align:bottom;}.table-scroll tfoot,.table-scroll tfoot td,.table-scroll tfoot th{position:-webkit-sticky;position:sticky;bottom:0;background:#666;color:#fff;z-index:4}a:focus{background:red}th:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:2;background:#FFFFFF;text-align:left;}tfoot th:first-child, thead th:first-child{z-index:5}.table-scroll table thead tr:nth-child(2) th {top:75px;}
 .table-scroll tbody th {border-bottom:none;}
 .table-scroll tr:nth-child(even) {background-color:#f5f7f8;}
-.table-scroll tr:nth-child(even) th {background-color:#f5f7f8;}
+/*.table-scroll tr:nth-child(even) th {background-color:#f5f7f8;}*/
+.table-scroll tbody tr:nth-child(even) th {background-color:#f5f7f8;}
 
 table thead .assets-raw, table thead .assets-currency-rates-raw {height:75px;}
 table tr th:first-child {font-size:14px;font-weight:700;color:#414a5f;min-width:110px;max-width:110px;border-right:1px solid rgba(36,53,82,.12);}
-table thead .assets-currency-rates-raw th {background-color:#FFFFFF!important}
+table thead .assets-currency-rates-raw th {background-color:#FFFFFF;}
 
 .token-cell {display:block;text-align:center;}
 .token-cell .icon {vertical-align:bottom;width:24px;margin-bottom:8px!important;display:block;margin:0 auto;}
