@@ -100,3 +100,26 @@
     });
 
 })(jQuery);
+
+
+
+
+
+
+
+
+/***************************
+     Table column hover
+ ***************************/
+$(document).ready(function(){
+	$("td").mouseover(function(){
+		var targetIndex, elements;
+		targetIndex = $(this).index() + 1;
+		elements = $("th, td");
+		elements.filter(":nth-child(" + targetIndex + ")").addClass("table-column-hover");
+		elements.not(":nth-child(" + targetIndex + ")").removeClass("table-column-hover");
+	});
+	$("table").mouseleave(function(){
+		$("th, td").removeClass("table-column-hover");
+	});
+});
