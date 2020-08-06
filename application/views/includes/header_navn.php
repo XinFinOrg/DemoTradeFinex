@@ -53,7 +53,11 @@
 						</li>
 						
 						<li class="hidden-xs hidden-sm"> | </li>
-						<li> <a href="http://exchange.tradefinex.org/" target="_blank" title="">Electronic Trading Platform</a> </li>
+						<!--<li> <a href="http://exchange.tradefinex.org/" target="_blank" title="">Electronic Trading Platform</a> </li>-->
+                        <li> <a href="http://exchange.tradefinex.org/" target="_blank" title="">Exchange</a> </li>
+                        
+                        <li class="hidden-xs hidden-sm"> | </li>
+						<li> <a href="<?=base_url();?>publicv/markets" title="">Markets</a></li>
 						
 						<li class="hidden-xs hidden-sm"> | </li>				
 						<li class="hassubs"> <a href="javascript:void(0)" title="">Origination Tools</a>

@@ -505,6 +505,21 @@ footer {
 	font-size: 15px;
 }
 
+
+
+#mainnav-mobi ul > li > a:link,
+#mainnav ul li a:link {
+    background-color: transparent!important;
+}
+#mainnav-mobi ul > li > a:visited,
+#mainnav ul li a:visited {
+    background-color: transparent!important;
+}
+#mainnav-mobi ul > li > a:active,
+#mainnav ul li a:active {
+    background-color: transparent!important;
+}
+
   .subs {
 	opacity: 1;
 	z-index: 9999;

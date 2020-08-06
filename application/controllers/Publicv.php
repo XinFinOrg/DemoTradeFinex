@@ -1138,11 +1138,11 @@ class Publicv extends CI_Controller {
 	
 	
 	
-	public function market(){
+	public function markets(){
         
         $data = array();
         
-        $data['page'] = 'market';
+        $data['page'] = 'markets';
         $data['msg'] = '';
         $data['user_id'] = 0;
         $data['user_type'] = '';
@@ -1241,7 +1241,7 @@ class Publicv extends CI_Controller {
         
         
         
-        $this->load->view('pages/public/market_view', $data);
+        $this->load->view('pages/public/markets_view', $data);
         $this->load->view('includes/footer_commonn', $data);
         $this->load->view('pages_scripts/common_scripts', $data);
         $this->load->view('includes/footern');
