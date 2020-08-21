@@ -505,7 +505,9 @@ footer {
 	font-size: 15px;
 }
 
-
+#mainnav-mobi ul > li > a:visited, #mainnav ul li .submenu a:visited, #mainnav-mobi ul > li > a:visited, #mainnav ul li .submenu a:hover {
+    background-color:#57bce2;
+}
 
 #mainnav-mobi ul > li > a:link,
 #mainnav ul li a:link {
@@ -703,6 +705,11 @@ footer {
 }
 #mainnav .menu > li > .submenu > li > a > i {
 	margin-right: 10px;
+}
+
+#mainnav .menu > li > .submenu > a:hover {
+	background-color: #57bce2!important;
+	color: #FFFFFF;
 }
 
 /* Mobile navigation */
@@ -975,7 +982,7 @@ footer {
 	padding-top: 0px;
 	margin-top: -7px;
 }
-.footer-bottom .copyright a {margin-left:7px;margin-right:7px;}
+.footer-bottom .copyright a {margin-left:7px;margin-right:7px;background-color:transparent!important;}
 
 .footer-bottom .copyright a:not(:hover) {
 	color: #c2c2c2;

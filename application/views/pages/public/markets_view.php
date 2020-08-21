@@ -31,7 +31,7 @@
                                             <div class="token-cell"><img src="../assets/images/market/usd.svg" alt="USD" class="icon" /><span class="name">USD</span></div>
                                         </th>
                                         <th scope="col">
-                                            <div class="token-cell"><img src="../assets/images/market/usdc.svg" alt="USDC" class="icon" /><span class="name">USDC</span></div>
+                                            <div class="token-cell"><img src="../assets/images/market/sgd.svg" alt="SGD" class="icon" /><span class="name">SGD</span></div>
                                         </th>
                                         <th scope="col">
                                             <div class="token-cell"><img src="../assets/images/market/dai.svg" alt="DAI" class="icon" /><span class="name">DAI</span></div>
@@ -40,19 +40,10 @@
                                             <div class="token-cell"><img src="../assets/images/market/usdt.svg" alt="USDT" class="icon" /><span class="name">USDT</span></div>
                                         </th>
                                         <th scope="col">
-                                            <div class="token-cell"><img src="../assets/images/market/susd.svg" alt="sUSD" class="icon" /><span class="name">sUSD</span></div>
-                                        </th>
-                                        <th scope="col">
-                                            <div class="token-cell"><img src="../assets/images/market/busd.svg" alt="BUSD" class="icon" /><span class="name">BUSD</span></div>
-                                        </th>
-                                        <th scope="col">
-                                            <div class="token-cell"><img src="../assets/images/market/tusd.svg" alt="TUSD" class="icon" /><span class="name">TUSD</span></div>
+                                            <div class="token-cell"><img src="../assets/images/market/usdc.svg" alt="USDC" class="icon" /><span class="name">USDC</span></div>
                                         </th>
                                         <th scope="col">
                                             <div class="token-cell"><img src="../assets/images/market/pax.svg" alt="PAX" class="icon" /><span class="name">PAX</span></div>
-                                        </th>
-                                        <th scope="col">
-                                            <div class="token-cell"><img src="../assets/images/market/gusd.svg" alt="GUSD" class="icon" /><span class="name">GUSD</span></div>
                                         </th>
                                     </tr>
                                     <tr class="assets-currency-rates-raw">
@@ -98,56 +89,30 @@
                                                 <div class="difference red"><span class="dash"></span></div>
                                             </div>
                                         </th>
-                                        <th scope="col">
-                                            <div class="price-cell">
-                                                <div class="value">$1.00</div>
-                                                <div class="difference red"><span class="dash"></span></div>
-                                            </div>
-                                        </th>
-                                        <th scope="col">
-                                            <div class="price-cell">
-                                                <div class="value">$1.00</div>
-                                                <div class="difference red"><span class="dash"></span></div>
-                                            </div>
-                                        </th>
-                                        <th scope="col">
-                                            <div class="price-cell">
-                                                <div class="value">$1.01</div>
-                                                <div class="difference red"><span class="dash"></span></div>
-                                            </div>
-                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th>Company 1</th>
+                                        <th>
+                                        	<div class="provider-cell">
+                                            	<a href="<?=base_url('publicv/marketsValidus');?>" class="provider-content">
+                                            	<div class="icon-container"><img src="../assets/images/market/validus-ico.png" class="icon" alt="Validus"></div>
+                                            	<span class="name">Validus</span></a>
+                                            </div>
+                                        </th>
                                         <td><div class="no-value">-</div></td>
                                         <td>2.34%</td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
                                     </tr>
                                     <tr>
-                                        <th>Company 2</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>2.34%</td>
-                                        <td>3.70%</td>
-                                        <td>2.68%</td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Company 3</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>6.41%</td>
-                                        <td>2.66%</td>
+                                        <th>
+                                        	<div class="provider-cell">
+                                            	<span class="name">Coming Soon</span>
+                                            </div>
+                                        </th>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
@@ -156,34 +121,11 @@
                                         <td><div class="no-value">-</div></td>
                                     </tr>
                                     <tr>
-                                        <th>Company 4</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>0.00%</td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Company 5</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>0.98%</td>
-                                        <td>4.62%</td>
-                                        <td>2.24%</td>
-                                        <td>3.00%</td>
-                                        <td>13.89%</td>
-                                        <td>13.89%</td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Company 6</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>2.34%</td>
-                                        <td><div class="no-value">-</div></td>
+                                        <th>
+                                        	<div class="provider-cell">
+                                            	<span class="name">Coming Soon</span>
+                                            </div>
+                                        </th>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
@@ -192,73 +134,27 @@
                                         <td><div class="no-value">-</div></td>
                                     </tr>
                                     <tr>
-                                        <th>Company 7</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>4.60%</td>
-                                        <td>4.60%</td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
+                                        <th>
+                                        	<div class="provider-cell">
+                                            	<span class="name">Coming Soon</span>
+                                            </div>
+                                        </th>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Company 8</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>3.03%</td>
-                                        <td>3.03%</td>
-                                        <td>3.03%</td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>3.03%</td>
-                                        <td><div class="no-value">-</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Company 9</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>2.56%</td>
-                                        <td>2.56%</td>
-                                        <td>2.56%</td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>2.56%</td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Company 10</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>6.93%</td>
-                                        <td>6.93%</td>
-                                        <td>6.93%</td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>6.93%</td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                        <td><div class="no-value">-</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Company 11</th>
-                                        <td><div class="no-value">-</div></td>
-                                        <td>5.60%</td>
-                                        <td>5.60%</td>
-                                        <td>5.60%</td>
-                                        <td>5.60%</td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                     </tr>
                                     <tr>
-                                        <th>Company 12</th>
+                                        <th>
+                                        	<div class="provider-cell">
+                                            	<span class="name">Coming Soon</span>
+                                            </div>
+                                        </th>
                                         <td><div class="no-value">-</div></td>
-                                        <td>3.39%</td>
-                                        <td>0.10%</td>
-                                        <td>26.47%</td>
                                         <td><div class="no-value">-</div></td>
-                                        <td>0.00%</td>
+                                        <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
