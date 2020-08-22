@@ -101,7 +101,7 @@
                                             </div>
                                         </th>
                                         <td><div class="no-value">-</div></td>
-                                        <td>2.34%</td>
+                                        <td><a href="<?=base_url('publicv/marketsValidus');?>" class="provider-content">5.50%</a></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>
                                         <td><div class="no-value">-</div></td>

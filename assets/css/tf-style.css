@@ -1233,6 +1233,11 @@ table thead .assets-currency-rates-raw th {background-color:#FFFFFF;}
 .provider-cell a:hover {color:#414a5f;text-decoration:none;background-color:transparent;}/* A link that is hovered on */
 .provider-cell a:active {color:#414a5f;background-color:transparent;}/* A link that is selected */
 
+.table-scroll a:link {color:#414a5f;background-color:transparent;}/* A link that has not been visited */
+.table-scroll a:visited {color:#414a5f;background-color:transparent;}/* A link that has been visited */
+.table-scroll a:hover {color:#414a5f;text-decoration:none;background-color:transparent;}/* A link that is hovered on */
+.table-scroll a:active {color:#414a5f;background-color:transparent;}/* A link that is selected */
+
 .provider-cell .provider-content {display: flex;flex-direction: row;align-items: center;}
 .provider-cell .provider-content .icon-container {width: 30px;height: auto;}
 .provider-cell .provider-content .icon-container .icon {vertical-align: bottom;width: 25px;padding: 0px 5px 0px 0px;}
@@ -1247,13 +1252,12 @@ table thead .assets-currency-rates-raw th {background-color:#FFFFFF;}
 .tf-market-details-list ul li .ico-block {width:250px;float:left;padding:15px;background-color:#FFFFFF;border-radius:5px;position:relative;}
 .tf-market-details-list ul li .cnt-block {margin-left:290px;}
 .tf-market-details-list ul li h3 {color:#494949;display: block;padding-bottom:15px;font-size:22px;font-weight:500;line-height:26px;}
+.tf-market-details-list .cnt-block h5 {color:#687377;padding-bottom:25px;font-size:20px;font-weight:500;line-height:24px;}
 .tf-market-details-list ul li .funding-details {color:#494949;display: block;padding-bottom:10px;font-size: 22px;font-weight: 400;line-height: 28px;border-radius:5px;border:1px solid #FFFFFF;background-color:rgba(255,255,255,0.2);padding:20px;}
 .tf-market-details-list ul li .funding-details h4{font-size:30px;font-weight:600;color:#687377;}
 .tf-market-details-list ul li .funding-details h4 span{font-size:18px;font-weight:500;line-height:15px;}
 .tf-market-details-list ul li p {color:#687377;margin-top:0px;margin-bottom:15px;}
 .tf-market-details-list ul li p:last-child {margin-bottom:0px!important;}
-.tf-market-details-list ul li a {position: absolute;right: 25px;top: 50px;font-size: 26px;color: #e2e2e2;}
-.tf-market-details-list ul li a:hover {color: #ea212d;}
 @media (max-width: 991px){
 .tf-market-details-list ul li:nth-child(3) {margin-bottom: 30px;}
 }
