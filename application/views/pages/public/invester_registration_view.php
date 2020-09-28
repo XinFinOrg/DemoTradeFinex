@@ -83,7 +83,7 @@
 
 					<div class="checkbox">
 						<input type="checkbox" id="agree" data-keyboard="false" />
-						<label class="form-label"> We/I agree to qualify as invester and having $500k worth network.</label>
+						<label class="form-label"> We/I agree to qualify as investor and having 500k $ worth network.</label>
 					</div>
 					<input type="hidden" name="action" value="signup" />
 					<input type="hidden" name="<?=$csrf['name'];?>" value="<?=$csrf['hash'];?>" />
